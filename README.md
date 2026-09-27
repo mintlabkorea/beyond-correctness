@@ -9,7 +9,7 @@ Semantic-content sensitivity and predictive utility answer different questions. 
 Python 3 and Make are sufficient for the frozen-result checks. No data download, GPU, API key, or model training is needed.
 
 ```sh
-git clone https://github.com/sheemsy/beyond-correctness.git
+git clone https://github.com/mintlabkorea/beyond-correctness.git
 cd beyond-correctness
 make verify
 make scan
