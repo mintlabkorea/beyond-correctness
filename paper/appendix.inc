@@ -70,7 +70,7 @@ Beyond Correctness: Evaluating Semantic Knowledge in Cross-Table Transfer}
 
 This appendix provides additional experimental details, extended results, and robustness analyses for the experiments in the main paper.
 Unless stated otherwise, the reported results are specific to the evaluated datasets, learners, interventions, and references.
-The accompanying artifact contains code, frozen semantic records and reference libraries, prompt and generation records for the LLM-based construction step, analysis manifests, environment information, and mappings from reported tables and figures to their generating scripts and outputs.
+The public repository contains code, frozen semantic records and reference libraries, prompt and generation records for the LLM-based construction step, analysis manifests, environment information, and mappings from reported tables and figures to their generating scripts and outputs.
 
 \subsection{Common experimental and inference settings}
 \label{sec:app-experimental-details}
@@ -232,7 +232,7 @@ We distinguish analyses by when their design was fixed relative to the results t
 \emph{post-result} analyses were developed after relevant earlier results were known; and
 \emph{retrospective} analyses operate on previously published or released results.
 Replication and exploratory labels describe analysis scope rather than timing.
-The complete analysis ledger, including construction dates and decision records, is retained in the accompanying artifact.
+The complete analysis ledger, including construction dates and decision records, is retained in the public repository.
 
 \begin{table}[h]
 \caption{
@@ -2124,10 +2124,10 @@ A second planned HRS measurement--correspondence interaction experiment was not 
 
 \subsection{Supplementary artifact map}
 
-\begin{table}[h]
-\caption{Map of supplementary artifacts included with this submission.}
+\begin{table}[H]
+\caption{Map of reproducibility artifacts available in the public repository.}
 \label{tab:app-artifact-map}
-\centering\small
+\centering\scriptsize
 \setlength{\tabcolsep}{4pt}
 \begin{tabular}{P{0.30\linewidth}P{0.62\linewidth}}
 \toprule

@@ -74,7 +74,7 @@ Semantic knowledge is increasingly used to bridge heterogeneous schemas in tabul
 Studies in tabular learning commonly answer this question through semantic ablations that modify or suppress the supplied semantic knowledge.
 We show that these ablations can lead to misleading conclusions about predictive benefit: poor performance under altered semantics may be taken as evidence that the intended knowledge is beneficial.
 Across real and controlled experiments, altering semantic content can produce large performance differences even when the model gains little predictive benefit from having that semantic knowledge in the first place.
-To separate these effects, we distinguish two quantities : content sensitivity and predictive utility. 
+To separate these effects, we distinguish two quantities: content sensitivity and predictive utility. 
 Content sensitivity measures the change in performance when semantic content is altered, whereas predictive utility measures the benefit of the intended semantic knowledge relative to a suitable reference without that knowledge.
 This distinction motivates an evaluation framework in which the control is chosen according to the question being asked: altered controls assess sensitivity to semantic content, whereas claims that semantic knowledge improves prediction require a suitable reference.
 Even then, predictive utility is not fixed; it varies across suitable references and decreases when the reference can more easily recover the tested knowledge from other inputs or labeled examples.
@@ -618,7 +618,7 @@ These results support claim-matched evaluation: controls should be chosen for th
 \section*{Reproducibility Statement}
 
 The supplementary material provides the experimental settings, inference procedures, analysis provenance, reference constructions, and robustness analyses required to reproduce the reported comparisons.
-The accompanying artifact contains code, frozen semantic records and reference libraries, analysis manifests, environment information, and mappings from reported tables and figures to their generating scripts and outputs.
+The public repository contains code, frozen semantic records and reference libraries, analysis manifests, environment information, and mappings from reported tables and figures to their generating scripts and outputs.
 Public datasets can be obtained from their original sources; data requiring registration or license, including KNHANES and HRS, are not redistributed, and their access boundaries and reproducible derived outputs are documented in the supplement.
 
 \section*{AI Use Statement}
