@@ -22,7 +22,7 @@ The preserved artifact has **1,175 passing numerical and source-record checks**,
 
 | Path | Contents |
 |---|---|
-| [paper/main.tex](paper/main.tex) | Author-supplied arXiv manuscript dated September 27, 2026, with the code-availability link added to the abstract |
+| [paper/main.tex](paper/main.tex) | Author-supplied arXiv manuscript dated September 27, 2026, with the code-availability link added to the abstract and Figure A6 placement adjusted |
 | [paper/appendix.inc](paper/appendix.inc) | Appendix included by main.tex |
 | [artifact/scripts/](artifact/scripts/) | Experiment, preprocessing, and analysis scripts |
 | [artifact/code/](artifact/code/) | Indexes of executable roles |

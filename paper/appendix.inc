@@ -1673,7 +1673,7 @@ support and decreases as an increasing fraction of the source labels is changed 
 The initial real-data probes make the same change to the source labels but do not show the same decrease
 (Figure~\ref{fig:app-interaction-controlled-real}).
 
-\begin{figure}[h]
+\begin{figure}[H]
 \centering
 \includegraphics[width=\linewidth]
 {appendix_figure_controlled_real_mechanism.png}
