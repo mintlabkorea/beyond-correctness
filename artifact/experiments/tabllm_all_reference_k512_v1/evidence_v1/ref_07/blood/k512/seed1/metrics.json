@@ -1,0 +1,99 @@
+{
+  "analysis_status": "frozen_all_reference_k512_evidence",
+  "arm": "ref_07",
+  "base_runner_sha256": "796d0bb0d17950a771c5e18fe732f955a4307956192e7329de23683e411f9447",
+  "dataset": "blood",
+  "execution_device": "cuda:2",
+  "execution_num_shards": 3,
+  "execution_shard_index": 2,
+  "final_trainable_state_sha256": "643f4ad3f221aebdfc26fc277ae8ae2d1c7bb8236394a5faba0d3d8688fe64b9",
+  "ia3_checkpoint_sha256": "8fe7a00fb425dd331c7a021c9468d50a14ec2ca1998007e7ead5ce3111405729",
+  "initial_trainable_state_sha256": "2b3e0be8998a1d12a84a7b358726205cce0c83973fb198a1c37bdac6aa3fbd0b",
+  "metrics": {
+    "accuracy": 0.76,
+    "auc": 0.6976799808658216
+  },
+  "model_audit": {
+    "checkpoint_key_count": 192,
+    "checkpoint_parameter_count": 1081344,
+    "frozen_parameter_count": 11136118784,
+    "initial_trainable_state_sha256": "2b3e0be8998a1d12a84a7b358726205cce0c83973fb198a1c37bdac6aa3fbd0b",
+    "missing_base_model_key_count": 752,
+    "parameter_dtype": "torch.bfloat16",
+    "precision_layout": "frozen=bfloat16, trainable_ia3=float32",
+    "trainable_parameter_count": 1081344,
+    "trainable_parameter_dtype": "torch.float32",
+    "trainable_tensor_count": 192
+  },
+  "model_path": "external/.cache/huggingface/hub/models--bigscience--T0/snapshots/1cfa27271f8085c29323c94bd659004b210f20b5",
+  "n_test": 150,
+  "n_train": 512,
+  "n_train_unique": 324,
+  "prior_wrapper_sha256": "62a7d917cd5450bba2af3ff548c62f4a60790f1dfdf45048fb5088017e14182d",
+  "protobuf_python_implementation": "python",
+  "protocol_sha256": "5fee5e02c870da5205e59d8f53aeb834ae374ccb5ea28f30b8b2f68f036022b0",
+  "raw_and_serialization_tree_sha256": "383519d4b1efffe01c414c1f7b12db9c7abc04aefbde0e9957c44c5eaf038763",
+  "reference_id": "ref_07",
+  "reference_manifest_sha256": "7fe208e544a954ebd2c15e273473d604107a22e49230631101466ab97097d8da",
+  "reference_permutation": [
+    0,
+    2,
+    1,
+    3
+  ],
+  "reference_selection_role": "exhaustive_remaining_21",
+  "reference_template_sha256": "7490a5e19f68d43c51013e3a8aab6b92508749f4a84bfb72c07b3c242888df84",
+  "runner_sha256": "b8e659230269249a502122b44aa58f402366660ea55ea644025d29c62759fd9b",
+  "seed": 1,
+  "shot": 512,
+  "tabllm_commit": "71f6647c523aa6fd35df94ad76207c4377248c49",
+  "test_prompt_sha256": "6d6aea35b21e2c80934c50ace3b2939de71c15a99280a94c21f43e905d228427",
+  "tfew_execution_commit": "114deced63ae722a368e06cb08ea956b20c393a6",
+  "train_membership_with_replacement": true,
+  "train_prompt_sha256": "52432addf07193e45fc30876c5e6e1162153f52cce131669f9a976bb8110bd73",
+  "trained_checkpoint_sha256": "3e52a34e51e95ba3184e40d387269572906b1a55588456ff670bc9c5231c7d66",
+  "training": {
+    "batch_order_sha256": "23b3da8c42578b1b23c7b94b7c910ccb55ff7f3aa3613fe4b28b54eb96e8d048",
+    "executed_steps": 3840,
+    "loss_first": {
+      "gradient_norm_pre_clip": 1.5168631076812744,
+      "lm_loss": 0.6984027624130249,
+      "loss": 4.6018476486206055,
+      "lr": 1.3020833333333334e-05,
+      "mc_loss": 0.9985775947570801,
+      "unlikely_loss": 2.90486741065979
+    },
+    "loss_last": {
+      "gradient_norm_pre_clip": 3.048192024230957,
+      "lm_loss": 0.360931396484375,
+      "loss": 1.0775740146636963,
+      "lr": 0.0,
+      "mc_loss": 0.32239705324172974,
+      "unlikely_loss": 0.39424562454223633
+    },
+    "planned_steps": 3840
+  },
+  "training_contract": {
+    "batch_size": 4,
+    "compute_dtype": "bfloat16 base and autocast with FP32 IA3 master parameters; temporary bfloat16 IA3 evaluation copy",
+    "epochs": 30,
+    "gradient_clip": 1.0,
+    "length_norm": 1,
+    "loss": "lm + multiple_choice + unlikely",
+    "lr": 0.003,
+    "max_length": 1024,
+    "optimizer": "Adafactor(scale_parameter=True, relative_step=False)",
+    "scheduler": "linear_decay_with_warmup",
+    "warmup_ratio": 0.06
+  },
+  "versions": {
+    "datasets": "2.14.7",
+    "numpy": "2.2.6",
+    "pandas": "2.3.3",
+    "python": "3.10.20",
+    "scikit_learn": "1.7.2",
+    "torch": "2.12.0.dev20260408+cu128",
+    "transformers": "4.30.0"
+  },
+  "wall_seconds": 889.192
+}

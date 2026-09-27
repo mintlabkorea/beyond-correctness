@@ -1,0 +1,76 @@
+{
+ "arms": [
+  "a00_base",
+  "a01_columns",
+  "a10_stage",
+  "a11_stage_columns"
+ ],
+ "auroc": {
+  "256": {
+   "a00_base": 0.7668267980090528,
+   "a01_columns": 0.7635639970927255,
+   "a10_stage": 0.7093419059045739,
+   "a11_stage_columns": 0.712438374133454
+  }
+ },
+ "backbone": "xgboost_hist_d6_n300_regression_ranked",
+ "benchmark_id": "std_cross_nh2kn_shared_anchorreset_fewshot_v1",
+ "feature_set": "stage_factorial_all_v1",
+ "m_axis": "source_only_fork_v1",
+ "metric": "auroc_vs_documented_target_binary (higher is better)",
+ "n_eval": 5267,
+ "n_pool": 11224,
+ "n_source": 38021,
+ "pl_columns_permutation": {
+  "dbp": "sbp",
+  "glucose": "triglycerides",
+  "hba1c": "height_cm",
+  "height_cm": "weight_kg",
+  "sbp": "waist_cm",
+  "total_cholesterol": "hba1c",
+  "triglycerides": "glucose",
+  "waist_cm": "total_cholesterol",
+  "weight_kg": "dbp"
+ },
+ "pl_relation_pairs": [
+  [
+   "total_cholesterol",
+   "hypertension_history"
+  ],
+  [
+   "sbp",
+   "sex"
+  ],
+  [
+   "total_cholesterol",
+   "diabetes_history"
+  ],
+  [
+   "diabetes_history",
+   "current_smoking_status"
+  ],
+  [
+   "diabetes_history",
+   "hypertension_history"
+  ],
+  [
+   "waist_cm",
+   "hba1c"
+  ]
+ ],
+ "primary_k": 256,
+ "seed": 58,
+ "target": "angina_history",
+ "target_cohort": "knhanes",
+ "wall_seconds": 27.3,
+ "wrong_label_maps": {
+  "source": {
+   "2.0": 0.0,
+   "7.0": 1.0
+  },
+  "target": {
+   "1.0": 1.0,
+   "9.0": 0.0
+  }
+ }
+}

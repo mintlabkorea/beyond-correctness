@@ -1,0 +1,813 @@
+[
+  {
+    "comparison_id": "C07-A",
+    "windows": [
+      {
+        "source_path": "iclr_latex_v3/design_audit/sources/C07_main.txt",
+        "start_line": 513,
+        "end_line": 520,
+        "pdf_page": 8,
+        "role": "explicitly_ablation_linked_main_result_context",
+        "text": "    Impact of Informative Column Headers: As shown in Figure 4, while TABU L A -8B generally has\n    higher accuracy than the baselines, this accuracy gap varies across benchmarks and the number of\n    shots. For instance, for the UniPredict benchmark – which was specifically constructed to include\n    datasets with semantically-meaningful column headers [59] – the gap to supervised baselines is\n    much larger than in the OpenML benchmarks, which tend to have less semantically-meaningful\n    column names. If meaningful column headers are absent, the model still performs well (matching or\n    outperforming XGBoost at shots k ≤ 8), but its advantage over these strong baselines is lessened.\n    We investigate this effect in further detail with a controlled experiment in Section F.2."
+      },
+      {
+        "source_path": "iclr_latex_v3/design_audit/sources/C07_main.txt",
+        "start_line": 540,
+        "end_line": 546,
+        "pdf_page": 9,
+        "role": "explicitly_ablation_linked_main_summary",
+        "text": "Robustness to Column Header Removal. Another potential risk of tabular language models is that,\nwhile these models are able to utilize the semantic information in column names, the model may\nalso be overly reliant on the presence of informative column names. In Appendix F.2 we conduct an\nablation study to assess this. The results in Appendix F.2 demonstrate that there is a small decline\nin performance when column headers are removed (replaced with uninformative headers), but that\nTABU L A -8B still outperforms baselines across all numbers of shots. We believe that this drop in\nperformance is commensurate to the loss in information when column headers are eliminated."
+      },
+      {
+        "source_path": "iclr_latex_v3/design_audit/sources/C07_main.txt",
+        "start_line": 1641,
+        "end_line": 1649,
+        "pdf_page": 26,
+        "role": "subsection_heading_and_introductory_rationale",
+        "text": "F.2   Robustness Evaluation: Informative Header Removal\n\nA potential disadvantage of a language modeling approach to tabular data prediction is that language\nmodels may be particularly reliant on semantically-informative column “headers” (column names, the\nkeys in the tabular key-value structure), in contrast to traditional supervised learning methods which\ndo not utilize the headers at all. This risk has been noted in previous work; for example, UniPredict\n[59] suggests an approach that uses a commercial LLM to “rewrite” the headers of a table to make\nthem more informative. In this work, however, we seek to avoid expensive preprocessing and use\nonly the provided headers from our training data."
+      },
+      {
+        "source_path": "iclr_latex_v3/design_audit/sources/C07_main.txt",
+        "start_line": 1650,
+        "end_line": 1654,
+        "pdf_page": 26,
+        "role": "introducing_paragraph",
+        "text": "To understand this sensitivity to the semantic quality of the headers, we conduct a controlled\nexperiment to test the effect of removing informative column headers from a dataset. Specifically, we\ndo the following: starting from a benchmark with high-quality headers (UniPredict), we replace the\noriginal headers with “X1”, “X2”, . . . and the target with “Y”. Then, we evaluate TABU L A -8B on the\ndata. We do not alter the data itself; only the feature names are replaced."
+      },
+      {
+        "source_path": "iclr_latex_v3/design_audit/sources/C07_main.txt",
+        "start_line": 1655,
+        "end_line": 1666,
+        "pdf_page": 26,
+        "role": "interpretive_paragraph",
+        "text": "The results of this study are shown in Figure 12. We highlight a few key findings from these results.\nFirst, for small number of shots, the semantically-meaningful headers provide a performance benefit:\nfor instance, in the 16-shot subset of Figure 12, semantically-meaningful headers provide a consistent\naccuracy gain of 3-5pp. Second, TABU L A -8B can still outperform supervised baselines even without\nthese headers: for example, Figure 12 shows that TABU L A -8B still outperforms all baselines on\nthe benchmark even without semantically-meaningful headers. This finding is further supported by\nour results on the OpenML benchmarks (CC18, CTR23) in Figure 4; these datasets also tend to\nhave uninformative headers. Third, we observe that the utility of semantically-meaningful headers\ndecreases as the number of shots increase. For example, at 32 shots, the performance with and\nwithout the original headers is effectively identical. We hypothesize that, as the number of shots\ngrows, the model is increasingly utilizing the values provided in the shots (and their distribution) and\nis less reliant on the keys for providing information about the task."
+      },
+      {
+        "source_path": "iclr_latex_v3/design_audit/sources/C07_main.txt",
+        "start_line": 1667,
+        "end_line": 1669,
+        "pdf_page": 26,
+        "role": "subsection_conclusion",
+        "text": "Collectively, the results of this ablation study suggest that TABU L A -8B is robust to the semantic\ncontent of the headers, and that TABU L A -8B is capable of providing effective tabular data predictions\neven in the absence of rich column headers."
+      },
+      {
+        "source_path": "iclr_latex_v3/design_audit/sources/C07_main.txt",
+        "start_line": 1705,
+        "end_line": 1707,
+        "pdf_page": 27,
+        "role": "figure_12_caption",
+        "text": "Figure 12: Results of column header ablation study described in Section F.2. For low numbers of\nshots, there tends to be a positive effect from informative headers. However, as the number of shots\nincreases, the utility of the headers decreases."
+      }
+    ],
+    "coverage_notes": "Coverage: Figure 12 caption; complete F.2 rationale, intervention paragraph, result interpretation, and separate closing paragraph; main §5.4 paragraph explicitly pointing to F.2; and §5.5 header-removal summary. Linkage: explicit_comparison throughout F.2/Figure 12 and its main summary. The main §5.4 paragraph begins with a between-benchmark observation and explicitly points to the controlled F.2 experiment; do not substitute that observation for the controlled comparison. Absence inventory: no separate prose following the Figure 12 caption before F.3 starts (lines 1712 onward); the complete interpretation and conclusion precede the floated figure. Abstract/introduction and §6 discussion contain no explicit link to this header-removal ablation, so general model claims are excluded. Low-shot, increased-shot and robustness conditions are preserved. Numeric figure axes and outcomes are excluded.",
+    "source_version_caveat": "Archived local main PDF/text used; pagination refers to this archived PDF. No new source or version substituted.",
+    "source_pdf_path": "iclr_latex_v3/design_audit/sources/C07_main.pdf",
+    "source_pdf_sha256": "4e9b40ee35a231b469cecf04aeb37313700f7e5083046535cba5e5ff8ad6e5dc"
+  },
+  {
+    "comparison_id": "C08-A",
+    "windows": [
+      {
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 470,
+        "end_line": 470,
+        "pdf_page": 8,
+        "role": "table_2_introducing_paragraph",
+        "text": "In the following, we discuss several experiments ablating aspects of our model as reported in Table 2."
+      },
+      {
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 471,
+        "end_line": 479,
+        "pdf_page": 8,
+        "role": "feature_encoding_introduction_and_interpretation",
+        "text": "Semantics: Being our core contribution, we investigate the efficacy of the semantic cell and column\nheader encoding used by ConTextTab. As we expect the results to be most pronounced in the presence\nof semantic features, we perform this ablation on CARTE exclusively. To this end, we replace\ncategorical and string features by ordinal encodings, as well as encodings via MinHashEncoder and\nGapEncoder (provided by the skrub library), and the AutoGluon feature encoder for comparison.\nAs expected, we observe a significant drop in performance when discarding semantics completely or\nwhen using the conventional string encoders from the skrub library. Hence, ConTextTab successfully\nleverages the semantic content of features. We refer to Appendix A.4 for win ratio comparisons and\np-value results to demonstrate statistical significance of our claim."
+      },
+      {
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 480,
+        "end_line": 489,
+        "pdf_page": 8,
+        "role": "column_name_introduction_and_interpretation",
+        "text": "Secondly, we ablate the use of column header semantics in two ways: one, by replacing the column\nnames with col1, ..., colN, effectively eliminating semantic content; as well as two, semantically\nenriching the column names by creating contextualized column descriptions using an LLM and\nreplacing the column names with <name>:<description>. To this end, we used gemma3-12b and\npresented it with 5 randomly sampled rows, serialized as JSON, and prompting for contextualized\ndescriptions of each column. Dropping column name semantics indeed results in a performance loss\nof about 1% in accuracy and 2% in R2 score. This difference is significant with a win rate of 92% of\nthe base model and a vanishinlgy small p-value as shown in Appendix A.4. Further enriching column\nheader semantics slightly boosts performance, resulting in a slightly better rank, however with a win\nrate of 57% at a p-value of 0.4 this is not statistically significant."
+      },
+      {
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 490,
+        "end_line": 491,
+        "pdf_page": 8,
+        "role": "semantic_subsection_conclusion",
+        "text": "Overall, ConTextTab successfully integrated and leverages semantics, both present in the table’s\nfeatures as well as those potentially contained in the table column names."
+      },
+      {
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 503,
+        "end_line": 507,
+        "pdf_page": 9,
+        "role": "table_2_caption",
+        "text": "\fTable 2: Relative performance across three ablation groups compared to the base model: (Top) Model\nsize, language model, and other factors, using the base model with binning; (Middle) Clipping,\ncontext size, and fine-tuning, using the base model with one-dimensional embedding; (Bottom)\nSemantic analysis, using the base model with one-dimensional embedding. Improvements over the\nbase model are highlighted in bold."
+      },
+      {
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 2171,
+        "end_line": 2173,
+        "pdf_page": 26,
+        "role": "appendix_subsection_introduction",
+        "text": "A.4                          Further ablations\n\nIn the following, we discuss in more detail the ablations as presented in Table 2."
+      },
+      {
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 2244,
+        "end_line": 2246,
+        "pdf_page": 27,
+        "role": "figure_9_caption_including_panel_captions",
+        "text": "          (a) Win ratios with Model A wins over Model B.                                                                                       (b) P-values of two-sided Wilcoxon signed-rank test.\n Figure 9: Detailed results of the semantic feature ablation, comparing the use of different non-\n semantic or conventional encoders to the base model using LLM embeddings."
+      },
+      {
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 2268,
+        "end_line": 2270,
+        "pdf_page": 27,
+        "role": "appendix_semantic_ablation_introduction_and_conclusion",
+        "text": " Semantic embeddings ablation: In addition to the ablation results previously shown in Section 5.1,\n we depict the win ratios and p-values of a two-sided Wilcoxon signed-rank test for the cell value and\n column name semantic ablations in the Figure 9 and Figure 10."
+      },
+      {
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 2344,
+        "end_line": 2347,
+        "pdf_page": 28,
+        "role": "figure_10_caption_including_panel_captions",
+        "text": "          (a) Win ratios with Model A wins over Model B.                                              (b) P-values of two-sided Wilcoxon signed-rank test.\n Figure 10: Detailed results of the semantic column name ablation, comparing the base model\n (“column names”) to variations where column names are replaced with non-semantic ones (“no\n column names”) or enriched with additional column descriptions (“column names” + description)."
+      }
+    ],
+    "coverage_notes": "Coverage: Table 2 full caption and introduction; both complete semantic paragraphs and the shared semantic closing paragraph in §5.1; Appendix A.4 introduction, complete semantic-embeddings paragraph, and Figure 9/10 captions with panel captions. Linkage: explicit_group to Table 2 semantic block; lines 471–479 specifically address the feature-encoding variants (C08-A/B/C/D), lines 480–489 address column removal and enrichment (C08-E/F), and lines 490–491 close both groups. Shared context does not transfer feature-encoding interpretations to column enrichment or vice versa. Absence inventory: no additional immediately following interpretive prose is supplied for Figure 9 or 10; nearby A.4 paragraphs concern different ablations (text-embedding model, curriculum, clipping, fine-tuning). A.4 ends its semantic discussion at line 2270. No abstract/introduction/conclusion passage explicitly links these six fixed interventions; general model claims excluded. All CARTE-only and statistical-qualification language is retained. Numeric table cells and figure matrices excluded.",
+    "source_version_caveat": "Archived local main PDF/text used; pagination refers to this archived PDF. No new source or version substituted.",
+    "source_pdf_path": "iclr_latex_v3/design_audit/sources/C08_main.pdf",
+    "source_pdf_sha256": "03ffb094bc6232cb21eda47517693e63cc172de9f2b86201251259a257c172d2"
+  },
+  {
+    "comparison_id": "C08-B",
+    "windows": [
+      {
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 470,
+        "end_line": 470,
+        "pdf_page": 8,
+        "role": "table_2_introducing_paragraph",
+        "text": "In the following, we discuss several experiments ablating aspects of our model as reported in Table 2."
+      },
+      {
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 471,
+        "end_line": 479,
+        "pdf_page": 8,
+        "role": "feature_encoding_introduction_and_interpretation",
+        "text": "Semantics: Being our core contribution, we investigate the efficacy of the semantic cell and column\nheader encoding used by ConTextTab. As we expect the results to be most pronounced in the presence\nof semantic features, we perform this ablation on CARTE exclusively. To this end, we replace\ncategorical and string features by ordinal encodings, as well as encodings via MinHashEncoder and\nGapEncoder (provided by the skrub library), and the AutoGluon feature encoder for comparison.\nAs expected, we observe a significant drop in performance when discarding semantics completely or\nwhen using the conventional string encoders from the skrub library. Hence, ConTextTab successfully\nleverages the semantic content of features. We refer to Appendix A.4 for win ratio comparisons and\np-value results to demonstrate statistical significance of our claim."
+      },
+      {
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 480,
+        "end_line": 489,
+        "pdf_page": 8,
+        "role": "column_name_introduction_and_interpretation",
+        "text": "Secondly, we ablate the use of column header semantics in two ways: one, by replacing the column\nnames with col1, ..., colN, effectively eliminating semantic content; as well as two, semantically\nenriching the column names by creating contextualized column descriptions using an LLM and\nreplacing the column names with <name>:<description>. To this end, we used gemma3-12b and\npresented it with 5 randomly sampled rows, serialized as JSON, and prompting for contextualized\ndescriptions of each column. Dropping column name semantics indeed results in a performance loss\nof about 1% in accuracy and 2% in R2 score. This difference is significant with a win rate of 92% of\nthe base model and a vanishinlgy small p-value as shown in Appendix A.4. Further enriching column\nheader semantics slightly boosts performance, resulting in a slightly better rank, however with a win\nrate of 57% at a p-value of 0.4 this is not statistically significant."
+      },
+      {
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 490,
+        "end_line": 491,
+        "pdf_page": 8,
+        "role": "semantic_subsection_conclusion",
+        "text": "Overall, ConTextTab successfully integrated and leverages semantics, both present in the table’s\nfeatures as well as those potentially contained in the table column names."
+      },
+      {
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 503,
+        "end_line": 507,
+        "pdf_page": 9,
+        "role": "table_2_caption",
+        "text": "\fTable 2: Relative performance across three ablation groups compared to the base model: (Top) Model\nsize, language model, and other factors, using the base model with binning; (Middle) Clipping,\ncontext size, and fine-tuning, using the base model with one-dimensional embedding; (Bottom)\nSemantic analysis, using the base model with one-dimensional embedding. Improvements over the\nbase model are highlighted in bold."
+      },
+      {
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 2171,
+        "end_line": 2173,
+        "pdf_page": 26,
+        "role": "appendix_subsection_introduction",
+        "text": "A.4                          Further ablations\n\nIn the following, we discuss in more detail the ablations as presented in Table 2."
+      },
+      {
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 2244,
+        "end_line": 2246,
+        "pdf_page": 27,
+        "role": "figure_9_caption_including_panel_captions",
+        "text": "          (a) Win ratios with Model A wins over Model B.                                                                                       (b) P-values of two-sided Wilcoxon signed-rank test.\n Figure 9: Detailed results of the semantic feature ablation, comparing the use of different non-\n semantic or conventional encoders to the base model using LLM embeddings."
+      },
+      {
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 2268,
+        "end_line": 2270,
+        "pdf_page": 27,
+        "role": "appendix_semantic_ablation_introduction_and_conclusion",
+        "text": " Semantic embeddings ablation: In addition to the ablation results previously shown in Section 5.1,\n we depict the win ratios and p-values of a two-sided Wilcoxon signed-rank test for the cell value and\n column name semantic ablations in the Figure 9 and Figure 10."
+      },
+      {
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 2344,
+        "end_line": 2347,
+        "pdf_page": 28,
+        "role": "figure_10_caption_including_panel_captions",
+        "text": "          (a) Win ratios with Model A wins over Model B.                                              (b) P-values of two-sided Wilcoxon signed-rank test.\n Figure 10: Detailed results of the semantic column name ablation, comparing the base model\n (“column names”) to variations where column names are replaced with non-semantic ones (“no\n column names”) or enriched with additional column descriptions (“column names” + description)."
+      }
+    ],
+    "coverage_notes": "Coverage: Table 2 full caption and introduction; both complete semantic paragraphs and the shared semantic closing paragraph in §5.1; Appendix A.4 introduction, complete semantic-embeddings paragraph, and Figure 9/10 captions with panel captions. Linkage: explicit_group to Table 2 semantic block; lines 471–479 specifically address the feature-encoding variants (C08-A/B/C/D), lines 480–489 address column removal and enrichment (C08-E/F), and lines 490–491 close both groups. Shared context does not transfer feature-encoding interpretations to column enrichment or vice versa. Absence inventory: no additional immediately following interpretive prose is supplied for Figure 9 or 10; nearby A.4 paragraphs concern different ablations (text-embedding model, curriculum, clipping, fine-tuning). A.4 ends its semantic discussion at line 2270. No abstract/introduction/conclusion passage explicitly links these six fixed interventions; general model claims excluded. All CARTE-only and statistical-qualification language is retained. Numeric table cells and figure matrices excluded.",
+    "source_version_caveat": "Archived local main PDF/text used; pagination refers to this archived PDF. No new source or version substituted.",
+    "source_pdf_path": "iclr_latex_v3/design_audit/sources/C08_main.pdf",
+    "source_pdf_sha256": "03ffb094bc6232cb21eda47517693e63cc172de9f2b86201251259a257c172d2"
+  },
+  {
+    "comparison_id": "C08-C",
+    "windows": [
+      {
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 470,
+        "end_line": 470,
+        "pdf_page": 8,
+        "role": "table_2_introducing_paragraph",
+        "text": "In the following, we discuss several experiments ablating aspects of our model as reported in Table 2."
+      },
+      {
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 471,
+        "end_line": 479,
+        "pdf_page": 8,
+        "role": "feature_encoding_introduction_and_interpretation",
+        "text": "Semantics: Being our core contribution, we investigate the efficacy of the semantic cell and column\nheader encoding used by ConTextTab. As we expect the results to be most pronounced in the presence\nof semantic features, we perform this ablation on CARTE exclusively. To this end, we replace\ncategorical and string features by ordinal encodings, as well as encodings via MinHashEncoder and\nGapEncoder (provided by the skrub library), and the AutoGluon feature encoder for comparison.\nAs expected, we observe a significant drop in performance when discarding semantics completely or\nwhen using the conventional string encoders from the skrub library. Hence, ConTextTab successfully\nleverages the semantic content of features. We refer to Appendix A.4 for win ratio comparisons and\np-value results to demonstrate statistical significance of our claim."
+      },
+      {
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 480,
+        "end_line": 489,
+        "pdf_page": 8,
+        "role": "column_name_introduction_and_interpretation",
+        "text": "Secondly, we ablate the use of column header semantics in two ways: one, by replacing the column\nnames with col1, ..., colN, effectively eliminating semantic content; as well as two, semantically\nenriching the column names by creating contextualized column descriptions using an LLM and\nreplacing the column names with <name>:<description>. To this end, we used gemma3-12b and\npresented it with 5 randomly sampled rows, serialized as JSON, and prompting for contextualized\ndescriptions of each column. Dropping column name semantics indeed results in a performance loss\nof about 1% in accuracy and 2% in R2 score. This difference is significant with a win rate of 92% of\nthe base model and a vanishinlgy small p-value as shown in Appendix A.4. Further enriching column\nheader semantics slightly boosts performance, resulting in a slightly better rank, however with a win\nrate of 57% at a p-value of 0.4 this is not statistically significant."
+      },
+      {
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 490,
+        "end_line": 491,
+        "pdf_page": 8,
+        "role": "semantic_subsection_conclusion",
+        "text": "Overall, ConTextTab successfully integrated and leverages semantics, both present in the table’s\nfeatures as well as those potentially contained in the table column names."
+      },
+      {
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 503,
+        "end_line": 507,
+        "pdf_page": 9,
+        "role": "table_2_caption",
+        "text": "\fTable 2: Relative performance across three ablation groups compared to the base model: (Top) Model\nsize, language model, and other factors, using the base model with binning; (Middle) Clipping,\ncontext size, and fine-tuning, using the base model with one-dimensional embedding; (Bottom)\nSemantic analysis, using the base model with one-dimensional embedding. Improvements over the\nbase model are highlighted in bold."
+      },
+      {
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 2171,
+        "end_line": 2173,
+        "pdf_page": 26,
+        "role": "appendix_subsection_introduction",
+        "text": "A.4                          Further ablations\n\nIn the following, we discuss in more detail the ablations as presented in Table 2."
+      },
+      {
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 2244,
+        "end_line": 2246,
+        "pdf_page": 27,
+        "role": "figure_9_caption_including_panel_captions",
+        "text": "          (a) Win ratios with Model A wins over Model B.                                                                                       (b) P-values of two-sided Wilcoxon signed-rank test.\n Figure 9: Detailed results of the semantic feature ablation, comparing the use of different non-\n semantic or conventional encoders to the base model using LLM embeddings."
+      },
+      {
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 2268,
+        "end_line": 2270,
+        "pdf_page": 27,
+        "role": "appendix_semantic_ablation_introduction_and_conclusion",
+        "text": " Semantic embeddings ablation: In addition to the ablation results previously shown in Section 5.1,\n we depict the win ratios and p-values of a two-sided Wilcoxon signed-rank test for the cell value and\n column name semantic ablations in the Figure 9 and Figure 10."
+      },
+      {
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 2344,
+        "end_line": 2347,
+        "pdf_page": 28,
+        "role": "figure_10_caption_including_panel_captions",
+        "text": "          (a) Win ratios with Model A wins over Model B.                                              (b) P-values of two-sided Wilcoxon signed-rank test.\n Figure 10: Detailed results of the semantic column name ablation, comparing the base model\n (“column names”) to variations where column names are replaced with non-semantic ones (“no\n column names”) or enriched with additional column descriptions (“column names” + description)."
+      }
+    ],
+    "coverage_notes": "Coverage: Table 2 full caption and introduction; both complete semantic paragraphs and the shared semantic closing paragraph in §5.1; Appendix A.4 introduction, complete semantic-embeddings paragraph, and Figure 9/10 captions with panel captions. Linkage: explicit_group to Table 2 semantic block; lines 471–479 specifically address the feature-encoding variants (C08-A/B/C/D), lines 480–489 address column removal and enrichment (C08-E/F), and lines 490–491 close both groups. Shared context does not transfer feature-encoding interpretations to column enrichment or vice versa. Absence inventory: no additional immediately following interpretive prose is supplied for Figure 9 or 10; nearby A.4 paragraphs concern different ablations (text-embedding model, curriculum, clipping, fine-tuning). A.4 ends its semantic discussion at line 2270. No abstract/introduction/conclusion passage explicitly links these six fixed interventions; general model claims excluded. All CARTE-only and statistical-qualification language is retained. Numeric table cells and figure matrices excluded.",
+    "source_version_caveat": "Archived local main PDF/text used; pagination refers to this archived PDF. No new source or version substituted.",
+    "source_pdf_path": "iclr_latex_v3/design_audit/sources/C08_main.pdf",
+    "source_pdf_sha256": "03ffb094bc6232cb21eda47517693e63cc172de9f2b86201251259a257c172d2"
+  },
+  {
+    "comparison_id": "C08-D",
+    "windows": [
+      {
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 470,
+        "end_line": 470,
+        "pdf_page": 8,
+        "role": "table_2_introducing_paragraph",
+        "text": "In the following, we discuss several experiments ablating aspects of our model as reported in Table 2."
+      },
+      {
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 471,
+        "end_line": 479,
+        "pdf_page": 8,
+        "role": "feature_encoding_introduction_and_interpretation",
+        "text": "Semantics: Being our core contribution, we investigate the efficacy of the semantic cell and column\nheader encoding used by ConTextTab. As we expect the results to be most pronounced in the presence\nof semantic features, we perform this ablation on CARTE exclusively. To this end, we replace\ncategorical and string features by ordinal encodings, as well as encodings via MinHashEncoder and\nGapEncoder (provided by the skrub library), and the AutoGluon feature encoder for comparison.\nAs expected, we observe a significant drop in performance when discarding semantics completely or\nwhen using the conventional string encoders from the skrub library. Hence, ConTextTab successfully\nleverages the semantic content of features. We refer to Appendix A.4 for win ratio comparisons and\np-value results to demonstrate statistical significance of our claim."
+      },
+      {
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 480,
+        "end_line": 489,
+        "pdf_page": 8,
+        "role": "column_name_introduction_and_interpretation",
+        "text": "Secondly, we ablate the use of column header semantics in two ways: one, by replacing the column\nnames with col1, ..., colN, effectively eliminating semantic content; as well as two, semantically\nenriching the column names by creating contextualized column descriptions using an LLM and\nreplacing the column names with <name>:<description>. To this end, we used gemma3-12b and\npresented it with 5 randomly sampled rows, serialized as JSON, and prompting for contextualized\ndescriptions of each column. Dropping column name semantics indeed results in a performance loss\nof about 1% in accuracy and 2% in R2 score. This difference is significant with a win rate of 92% of\nthe base model and a vanishinlgy small p-value as shown in Appendix A.4. Further enriching column\nheader semantics slightly boosts performance, resulting in a slightly better rank, however with a win\nrate of 57% at a p-value of 0.4 this is not statistically significant."
+      },
+      {
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 490,
+        "end_line": 491,
+        "pdf_page": 8,
+        "role": "semantic_subsection_conclusion",
+        "text": "Overall, ConTextTab successfully integrated and leverages semantics, both present in the table’s\nfeatures as well as those potentially contained in the table column names."
+      },
+      {
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 503,
+        "end_line": 507,
+        "pdf_page": 9,
+        "role": "table_2_caption",
+        "text": "\fTable 2: Relative performance across three ablation groups compared to the base model: (Top) Model\nsize, language model, and other factors, using the base model with binning; (Middle) Clipping,\ncontext size, and fine-tuning, using the base model with one-dimensional embedding; (Bottom)\nSemantic analysis, using the base model with one-dimensional embedding. Improvements over the\nbase model are highlighted in bold."
+      },
+      {
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 2171,
+        "end_line": 2173,
+        "pdf_page": 26,
+        "role": "appendix_subsection_introduction",
+        "text": "A.4                          Further ablations\n\nIn the following, we discuss in more detail the ablations as presented in Table 2."
+      },
+      {
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 2244,
+        "end_line": 2246,
+        "pdf_page": 27,
+        "role": "figure_9_caption_including_panel_captions",
+        "text": "          (a) Win ratios with Model A wins over Model B.                                                                                       (b) P-values of two-sided Wilcoxon signed-rank test.\n Figure 9: Detailed results of the semantic feature ablation, comparing the use of different non-\n semantic or conventional encoders to the base model using LLM embeddings."
+      },
+      {
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 2268,
+        "end_line": 2270,
+        "pdf_page": 27,
+        "role": "appendix_semantic_ablation_introduction_and_conclusion",
+        "text": " Semantic embeddings ablation: In addition to the ablation results previously shown in Section 5.1,\n we depict the win ratios and p-values of a two-sided Wilcoxon signed-rank test for the cell value and\n column name semantic ablations in the Figure 9 and Figure 10."
+      },
+      {
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 2344,
+        "end_line": 2347,
+        "pdf_page": 28,
+        "role": "figure_10_caption_including_panel_captions",
+        "text": "          (a) Win ratios with Model A wins over Model B.                                              (b) P-values of two-sided Wilcoxon signed-rank test.\n Figure 10: Detailed results of the semantic column name ablation, comparing the base model\n (“column names”) to variations where column names are replaced with non-semantic ones (“no\n column names”) or enriched with additional column descriptions (“column names” + description)."
+      }
+    ],
+    "coverage_notes": "Coverage: Table 2 full caption and introduction; both complete semantic paragraphs and the shared semantic closing paragraph in §5.1; Appendix A.4 introduction, complete semantic-embeddings paragraph, and Figure 9/10 captions with panel captions. Linkage: explicit_group to Table 2 semantic block; lines 471–479 specifically address the feature-encoding variants (C08-A/B/C/D), lines 480–489 address column removal and enrichment (C08-E/F), and lines 490–491 close both groups. Shared context does not transfer feature-encoding interpretations to column enrichment or vice versa. Absence inventory: no additional immediately following interpretive prose is supplied for Figure 9 or 10; nearby A.4 paragraphs concern different ablations (text-embedding model, curriculum, clipping, fine-tuning). A.4 ends its semantic discussion at line 2270. No abstract/introduction/conclusion passage explicitly links these six fixed interventions; general model claims excluded. All CARTE-only and statistical-qualification language is retained. Numeric table cells and figure matrices excluded.",
+    "source_version_caveat": "Archived local main PDF/text used; pagination refers to this archived PDF. No new source or version substituted.",
+    "source_pdf_path": "iclr_latex_v3/design_audit/sources/C08_main.pdf",
+    "source_pdf_sha256": "03ffb094bc6232cb21eda47517693e63cc172de9f2b86201251259a257c172d2"
+  },
+  {
+    "comparison_id": "C08-E",
+    "windows": [
+      {
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 470,
+        "end_line": 470,
+        "pdf_page": 8,
+        "role": "table_2_introducing_paragraph",
+        "text": "In the following, we discuss several experiments ablating aspects of our model as reported in Table 2."
+      },
+      {
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 471,
+        "end_line": 479,
+        "pdf_page": 8,
+        "role": "feature_encoding_introduction_and_interpretation",
+        "text": "Semantics: Being our core contribution, we investigate the efficacy of the semantic cell and column\nheader encoding used by ConTextTab. As we expect the results to be most pronounced in the presence\nof semantic features, we perform this ablation on CARTE exclusively. To this end, we replace\ncategorical and string features by ordinal encodings, as well as encodings via MinHashEncoder and\nGapEncoder (provided by the skrub library), and the AutoGluon feature encoder for comparison.\nAs expected, we observe a significant drop in performance when discarding semantics completely or\nwhen using the conventional string encoders from the skrub library. Hence, ConTextTab successfully\nleverages the semantic content of features. We refer to Appendix A.4 for win ratio comparisons and\np-value results to demonstrate statistical significance of our claim."
+      },
+      {
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 480,
+        "end_line": 489,
+        "pdf_page": 8,
+        "role": "column_name_introduction_and_interpretation",
+        "text": "Secondly, we ablate the use of column header semantics in two ways: one, by replacing the column\nnames with col1, ..., colN, effectively eliminating semantic content; as well as two, semantically\nenriching the column names by creating contextualized column descriptions using an LLM and\nreplacing the column names with <name>:<description>. To this end, we used gemma3-12b and\npresented it with 5 randomly sampled rows, serialized as JSON, and prompting for contextualized\ndescriptions of each column. Dropping column name semantics indeed results in a performance loss\nof about 1% in accuracy and 2% in R2 score. This difference is significant with a win rate of 92% of\nthe base model and a vanishinlgy small p-value as shown in Appendix A.4. Further enriching column\nheader semantics slightly boosts performance, resulting in a slightly better rank, however with a win\nrate of 57% at a p-value of 0.4 this is not statistically significant."
+      },
+      {
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 490,
+        "end_line": 491,
+        "pdf_page": 8,
+        "role": "semantic_subsection_conclusion",
+        "text": "Overall, ConTextTab successfully integrated and leverages semantics, both present in the table’s\nfeatures as well as those potentially contained in the table column names."
+      },
+      {
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 503,
+        "end_line": 507,
+        "pdf_page": 9,
+        "role": "table_2_caption",
+        "text": "\fTable 2: Relative performance across three ablation groups compared to the base model: (Top) Model\nsize, language model, and other factors, using the base model with binning; (Middle) Clipping,\ncontext size, and fine-tuning, using the base model with one-dimensional embedding; (Bottom)\nSemantic analysis, using the base model with one-dimensional embedding. Improvements over the\nbase model are highlighted in bold."
+      },
+      {
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 2171,
+        "end_line": 2173,
+        "pdf_page": 26,
+        "role": "appendix_subsection_introduction",
+        "text": "A.4                          Further ablations\n\nIn the following, we discuss in more detail the ablations as presented in Table 2."
+      },
+      {
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 2244,
+        "end_line": 2246,
+        "pdf_page": 27,
+        "role": "figure_9_caption_including_panel_captions",
+        "text": "          (a) Win ratios with Model A wins over Model B.                                                                                       (b) P-values of two-sided Wilcoxon signed-rank test.\n Figure 9: Detailed results of the semantic feature ablation, comparing the use of different non-\n semantic or conventional encoders to the base model using LLM embeddings."
+      },
+      {
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 2268,
+        "end_line": 2270,
+        "pdf_page": 27,
+        "role": "appendix_semantic_ablation_introduction_and_conclusion",
+        "text": " Semantic embeddings ablation: In addition to the ablation results previously shown in Section 5.1,\n we depict the win ratios and p-values of a two-sided Wilcoxon signed-rank test for the cell value and\n column name semantic ablations in the Figure 9 and Figure 10."
+      },
+      {
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 2344,
+        "end_line": 2347,
+        "pdf_page": 28,
+        "role": "figure_10_caption_including_panel_captions",
+        "text": "          (a) Win ratios with Model A wins over Model B.                                              (b) P-values of two-sided Wilcoxon signed-rank test.\n Figure 10: Detailed results of the semantic column name ablation, comparing the base model\n (“column names”) to variations where column names are replaced with non-semantic ones (“no\n column names”) or enriched with additional column descriptions (“column names” + description)."
+      }
+    ],
+    "coverage_notes": "Coverage: Table 2 full caption and introduction; both complete semantic paragraphs and the shared semantic closing paragraph in §5.1; Appendix A.4 introduction, complete semantic-embeddings paragraph, and Figure 9/10 captions with panel captions. Linkage: explicit_group to Table 2 semantic block; lines 471–479 specifically address the feature-encoding variants (C08-A/B/C/D), lines 480–489 address column removal and enrichment (C08-E/F), and lines 490–491 close both groups. Shared context does not transfer feature-encoding interpretations to column enrichment or vice versa. Absence inventory: no additional immediately following interpretive prose is supplied for Figure 9 or 10; nearby A.4 paragraphs concern different ablations (text-embedding model, curriculum, clipping, fine-tuning). A.4 ends its semantic discussion at line 2270. No abstract/introduction/conclusion passage explicitly links these six fixed interventions; general model claims excluded. All CARTE-only and statistical-qualification language is retained. Numeric table cells and figure matrices excluded.",
+    "source_version_caveat": "Archived local main PDF/text used; pagination refers to this archived PDF. No new source or version substituted.",
+    "source_pdf_path": "iclr_latex_v3/design_audit/sources/C08_main.pdf",
+    "source_pdf_sha256": "03ffb094bc6232cb21eda47517693e63cc172de9f2b86201251259a257c172d2"
+  },
+  {
+    "comparison_id": "C08-F",
+    "windows": [
+      {
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 470,
+        "end_line": 470,
+        "pdf_page": 8,
+        "role": "table_2_introducing_paragraph",
+        "text": "In the following, we discuss several experiments ablating aspects of our model as reported in Table 2."
+      },
+      {
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 471,
+        "end_line": 479,
+        "pdf_page": 8,
+        "role": "feature_encoding_introduction_and_interpretation",
+        "text": "Semantics: Being our core contribution, we investigate the efficacy of the semantic cell and column\nheader encoding used by ConTextTab. As we expect the results to be most pronounced in the presence\nof semantic features, we perform this ablation on CARTE exclusively. To this end, we replace\ncategorical and string features by ordinal encodings, as well as encodings via MinHashEncoder and\nGapEncoder (provided by the skrub library), and the AutoGluon feature encoder for comparison.\nAs expected, we observe a significant drop in performance when discarding semantics completely or\nwhen using the conventional string encoders from the skrub library. Hence, ConTextTab successfully\nleverages the semantic content of features. We refer to Appendix A.4 for win ratio comparisons and\np-value results to demonstrate statistical significance of our claim."
+      },
+      {
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 480,
+        "end_line": 489,
+        "pdf_page": 8,
+        "role": "column_name_introduction_and_interpretation",
+        "text": "Secondly, we ablate the use of column header semantics in two ways: one, by replacing the column\nnames with col1, ..., colN, effectively eliminating semantic content; as well as two, semantically\nenriching the column names by creating contextualized column descriptions using an LLM and\nreplacing the column names with <name>:<description>. To this end, we used gemma3-12b and\npresented it with 5 randomly sampled rows, serialized as JSON, and prompting for contextualized\ndescriptions of each column. Dropping column name semantics indeed results in a performance loss\nof about 1% in accuracy and 2% in R2 score. This difference is significant with a win rate of 92% of\nthe base model and a vanishinlgy small p-value as shown in Appendix A.4. Further enriching column\nheader semantics slightly boosts performance, resulting in a slightly better rank, however with a win\nrate of 57% at a p-value of 0.4 this is not statistically significant."
+      },
+      {
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 490,
+        "end_line": 491,
+        "pdf_page": 8,
+        "role": "semantic_subsection_conclusion",
+        "text": "Overall, ConTextTab successfully integrated and leverages semantics, both present in the table’s\nfeatures as well as those potentially contained in the table column names."
+      },
+      {
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 503,
+        "end_line": 507,
+        "pdf_page": 9,
+        "role": "table_2_caption",
+        "text": "\fTable 2: Relative performance across three ablation groups compared to the base model: (Top) Model\nsize, language model, and other factors, using the base model with binning; (Middle) Clipping,\ncontext size, and fine-tuning, using the base model with one-dimensional embedding; (Bottom)\nSemantic analysis, using the base model with one-dimensional embedding. Improvements over the\nbase model are highlighted in bold."
+      },
+      {
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 2171,
+        "end_line": 2173,
+        "pdf_page": 26,
+        "role": "appendix_subsection_introduction",
+        "text": "A.4                          Further ablations\n\nIn the following, we discuss in more detail the ablations as presented in Table 2."
+      },
+      {
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 2244,
+        "end_line": 2246,
+        "pdf_page": 27,
+        "role": "figure_9_caption_including_panel_captions",
+        "text": "          (a) Win ratios with Model A wins over Model B.                                                                                       (b) P-values of two-sided Wilcoxon signed-rank test.\n Figure 9: Detailed results of the semantic feature ablation, comparing the use of different non-\n semantic or conventional encoders to the base model using LLM embeddings."
+      },
+      {
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 2268,
+        "end_line": 2270,
+        "pdf_page": 27,
+        "role": "appendix_semantic_ablation_introduction_and_conclusion",
+        "text": " Semantic embeddings ablation: In addition to the ablation results previously shown in Section 5.1,\n we depict the win ratios and p-values of a two-sided Wilcoxon signed-rank test for the cell value and\n column name semantic ablations in the Figure 9 and Figure 10."
+      },
+      {
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 2344,
+        "end_line": 2347,
+        "pdf_page": 28,
+        "role": "figure_10_caption_including_panel_captions",
+        "text": "          (a) Win ratios with Model A wins over Model B.                                              (b) P-values of two-sided Wilcoxon signed-rank test.\n Figure 10: Detailed results of the semantic column name ablation, comparing the base model\n (“column names”) to variations where column names are replaced with non-semantic ones (“no\n column names”) or enriched with additional column descriptions (“column names” + description)."
+      }
+    ],
+    "coverage_notes": "Coverage: Table 2 full caption and introduction; both complete semantic paragraphs and the shared semantic closing paragraph in §5.1; Appendix A.4 introduction, complete semantic-embeddings paragraph, and Figure 9/10 captions with panel captions. Linkage: explicit_group to Table 2 semantic block; lines 471–479 specifically address the feature-encoding variants (C08-A/B/C/D), lines 480–489 address column removal and enrichment (C08-E/F), and lines 490–491 close both groups. Shared context does not transfer feature-encoding interpretations to column enrichment or vice versa. Absence inventory: no additional immediately following interpretive prose is supplied for Figure 9 or 10; nearby A.4 paragraphs concern different ablations (text-embedding model, curriculum, clipping, fine-tuning). A.4 ends its semantic discussion at line 2270. No abstract/introduction/conclusion passage explicitly links these six fixed interventions; general model claims excluded. All CARTE-only and statistical-qualification language is retained. Numeric table cells and figure matrices excluded.",
+    "source_version_caveat": "Archived local main PDF/text used; pagination refers to this archived PDF. No new source or version substituted.",
+    "source_pdf_path": "iclr_latex_v3/design_audit/sources/C08_main.pdf",
+    "source_pdf_sha256": "03ffb094bc6232cb21eda47517693e63cc172de9f2b86201251259a257c172d2"
+  },
+  {
+    "comparison_id": "C09-A",
+    "windows": [
+      {
+        "source_path": "iclr_latex_v3/design_audit/sources/C09_main.txt",
+        "start_line": 542,
+        "end_line": 553,
+        "pdf_page": 9,
+        "role": "q3_introduction_interpretation_and_subsection_conclusion",
+        "text": "   Q3: Numerical Verbalization A key challenge in integrating language models with numerical\n   data is determining how to best represent numerical values within a linguistic framework. While\n   some semantic tabular methods omit numerical features from the verbalization [83, 86], TP-BERTa\n   [84] introduced Relative Magnitude Tokenization [84], which encodes numerical information through\n   non-semantic special bin tokens. In contrast, TabSTAR injects semantic numerical information\n   into the verbalization of numerical features, as illustrated in Table 2. To quantify the effect of our\n   novel verbalization, we explore two thinner variants: (1) Name + Bin, which excludes the quantile\n   information, and (2) Name, which omits numeric information entirely and verbalizes the feature\n   name only. Appendix G.4 shows an illustrative example for each variant and presents the full\n   results. As demonstrated in Table 4, our findings reveal that incorporating numerical information\n   significantly enhances performance, highlighting the importance of balancing numerical precision\n   with a representation format that aligns with the language model’s parametric knowledge."
+      },
+      {
+        "source_path": "iclr_latex_v3/design_audit/sources/C09_main.txt",
+        "start_line": 559,
+        "end_line": 559,
+        "pdf_page": 10,
+        "role": "table_4_caption",
+        "text": "\f         Table 4: Normalized score with 95% CIs by the numerical verbalization method."
+      },
+      {
+        "source_path": "iclr_latex_v3/design_audit/sources/C09_main.txt",
+        "start_line": 3068,
+        "end_line": 3073,
+        "pdf_page": 51,
+        "role": "appendix_g4_heading_and_interpretive_paragraph_part_1",
+        "text": "G.4   Numerical Verbalization (Q3)\n\nWe show the full results for the experiment in §6, with Table 31 illustrating the verbalizations in each\nvariant. Note that we do not include an exact value verbalization, since it would increase the number\nof unique text inputs and place extra memory demands. The two variants which integrate numerical\ninformation into the verbalization dominate the experiment, although the improvement seems to be"
+      },
+      {
+        "source_path": "iclr_latex_v3/design_audit/sources/C09_main.txt",
+        "start_line": 3103,
+        "end_line": 3107,
+        "pdf_page": 52,
+        "role": "appendix_g4_interpretive_paragraph_part_2_and_conclusion",
+        "text": "marginal for some datasets. Interestingly, some datasets significantly underperform, with the R27\ndataset completely failing the task. The addition of the quantile information on top of the bin seems\nto have limited impact, although marginally winning on the average performance. Figure 8 presents\na comparison with baseline models, highlighting the importance of incorporating richer numerical\nverbalizations beyond relying solely on the column name."
+      },
+      {
+        "source_path": "iclr_latex_v3/design_audit/sources/C09_main.txt",
+        "start_line": 3124,
+        "end_line": 3125,
+        "pdf_page": 52,
+        "role": "figure_8_caption",
+        "text": "Figure 8: Comparison of normalized scores with 95% CIs for the numerical verbalization experiment,\ncomparing TabSTAR variants against baseline models in classification tasks."
+      },
+      {
+        "source_path": "iclr_latex_v3/design_audit/sources/C09_main.txt",
+        "start_line": 3159,
+        "end_line": 3160,
+        "pdf_page": 53,
+        "role": "table_31_illustrative_caption",
+        "text": "Table 31: Illustrative verbalization of a numerical feature (Age) for the Q3: Numerical Verbalization\nexperiment."
+      },
+      {
+        "source_path": "iclr_latex_v3/design_audit/sources/C09_main.txt",
+        "start_line": 3180,
+        "end_line": 3182,
+        "pdf_page": 54,
+        "role": "table_32_caption",
+        "text": "\fTable 32: Downstream performance for Q3: Numerical Verbalization. Results for 20 datasets with\n95% CI, for different verbalizations. The top performance score is bolded first, and then all scores\nare rounded. We report AUROC for classification and R2 for regression."
+      }
+    ],
+    "coverage_notes": "Coverage: complete §6 Q3 paragraph with variant definitions, main Table 4 caption, complete Appendix G.4 interpretive paragraph and conclusion, Figure 8 caption, illustrative Table 31 caption, and full-results Table 32 caption. Linkage: explicit_group to the numerical-verbalization experiment. The quantile-addition statement explicitly concerns C09-A; the two variants that integrate numerical information is group wording spanning Name+Bin and TabSTAR relative to Name, so preserve the distinction between C09-A and C09-B. G.4 paragraph spans source lines 3070–3073 and 3103–3107, separated only by a floated Table 29/Figure 7 for a different experiment; both verbatim fragments are included in order, without that unrelated float. Absence inventory: §6 Q3 ends with the interpretation, without another separate closing paragraph; Table 4 is followed by §7; no further G.4 prose follows Figure 8 or Tables 31/32, and Table 32 ends the PDF. Abstract/introduction have no explicit link to these ablations; §7 numerical-binning discussion is a future-research proposal without a link to this ablation and is excluded. All dataset and limited-quantile-impact qualifiers are retained. Numeric performance tables/plots and illustrative table body excluded.",
+    "source_version_caveat": "Archived local main PDF/text used; pagination refers to this archived PDF. No new source or version substituted.",
+    "source_pdf_path": "iclr_latex_v3/design_audit/sources/C09_main.pdf",
+    "source_pdf_sha256": "162618dd4c001a530eefd1fed720083ed56fc41ac38c14ed359a975787a1f5e6"
+  },
+  {
+    "comparison_id": "C09-B",
+    "windows": [
+      {
+        "source_path": "iclr_latex_v3/design_audit/sources/C09_main.txt",
+        "start_line": 542,
+        "end_line": 553,
+        "pdf_page": 9,
+        "role": "q3_introduction_interpretation_and_subsection_conclusion",
+        "text": "   Q3: Numerical Verbalization A key challenge in integrating language models with numerical\n   data is determining how to best represent numerical values within a linguistic framework. While\n   some semantic tabular methods omit numerical features from the verbalization [83, 86], TP-BERTa\n   [84] introduced Relative Magnitude Tokenization [84], which encodes numerical information through\n   non-semantic special bin tokens. In contrast, TabSTAR injects semantic numerical information\n   into the verbalization of numerical features, as illustrated in Table 2. To quantify the effect of our\n   novel verbalization, we explore two thinner variants: (1) Name + Bin, which excludes the quantile\n   information, and (2) Name, which omits numeric information entirely and verbalizes the feature\n   name only. Appendix G.4 shows an illustrative example for each variant and presents the full\n   results. As demonstrated in Table 4, our findings reveal that incorporating numerical information\n   significantly enhances performance, highlighting the importance of balancing numerical precision\n   with a representation format that aligns with the language model’s parametric knowledge."
+      },
+      {
+        "source_path": "iclr_latex_v3/design_audit/sources/C09_main.txt",
+        "start_line": 559,
+        "end_line": 559,
+        "pdf_page": 10,
+        "role": "table_4_caption",
+        "text": "\f         Table 4: Normalized score with 95% CIs by the numerical verbalization method."
+      },
+      {
+        "source_path": "iclr_latex_v3/design_audit/sources/C09_main.txt",
+        "start_line": 3068,
+        "end_line": 3073,
+        "pdf_page": 51,
+        "role": "appendix_g4_heading_and_interpretive_paragraph_part_1",
+        "text": "G.4   Numerical Verbalization (Q3)\n\nWe show the full results for the experiment in §6, with Table 31 illustrating the verbalizations in each\nvariant. Note that we do not include an exact value verbalization, since it would increase the number\nof unique text inputs and place extra memory demands. The two variants which integrate numerical\ninformation into the verbalization dominate the experiment, although the improvement seems to be"
+      },
+      {
+        "source_path": "iclr_latex_v3/design_audit/sources/C09_main.txt",
+        "start_line": 3103,
+        "end_line": 3107,
+        "pdf_page": 52,
+        "role": "appendix_g4_interpretive_paragraph_part_2_and_conclusion",
+        "text": "marginal for some datasets. Interestingly, some datasets significantly underperform, with the R27\ndataset completely failing the task. The addition of the quantile information on top of the bin seems\nto have limited impact, although marginally winning on the average performance. Figure 8 presents\na comparison with baseline models, highlighting the importance of incorporating richer numerical\nverbalizations beyond relying solely on the column name."
+      },
+      {
+        "source_path": "iclr_latex_v3/design_audit/sources/C09_main.txt",
+        "start_line": 3124,
+        "end_line": 3125,
+        "pdf_page": 52,
+        "role": "figure_8_caption",
+        "text": "Figure 8: Comparison of normalized scores with 95% CIs for the numerical verbalization experiment,\ncomparing TabSTAR variants against baseline models in classification tasks."
+      },
+      {
+        "source_path": "iclr_latex_v3/design_audit/sources/C09_main.txt",
+        "start_line": 3159,
+        "end_line": 3160,
+        "pdf_page": 53,
+        "role": "table_31_illustrative_caption",
+        "text": "Table 31: Illustrative verbalization of a numerical feature (Age) for the Q3: Numerical Verbalization\nexperiment."
+      },
+      {
+        "source_path": "iclr_latex_v3/design_audit/sources/C09_main.txt",
+        "start_line": 3180,
+        "end_line": 3182,
+        "pdf_page": 54,
+        "role": "table_32_caption",
+        "text": "\fTable 32: Downstream performance for Q3: Numerical Verbalization. Results for 20 datasets with\n95% CI, for different verbalizations. The top performance score is bolded first, and then all scores\nare rounded. We report AUROC for classification and R2 for regression."
+      }
+    ],
+    "coverage_notes": "Coverage: complete §6 Q3 paragraph with variant definitions, main Table 4 caption, complete Appendix G.4 interpretive paragraph and conclusion, Figure 8 caption, illustrative Table 31 caption, and full-results Table 32 caption. Linkage: explicit_group to the numerical-verbalization experiment. The quantile-addition statement explicitly concerns C09-A; the two variants that integrate numerical information is group wording spanning Name+Bin and TabSTAR relative to Name, so preserve the distinction between C09-A and C09-B. G.4 paragraph spans source lines 3070–3073 and 3103–3107, separated only by a floated Table 29/Figure 7 for a different experiment; both verbatim fragments are included in order, without that unrelated float. Absence inventory: §6 Q3 ends with the interpretation, without another separate closing paragraph; Table 4 is followed by §7; no further G.4 prose follows Figure 8 or Tables 31/32, and Table 32 ends the PDF. Abstract/introduction have no explicit link to these ablations; §7 numerical-binning discussion is a future-research proposal without a link to this ablation and is excluded. All dataset and limited-quantile-impact qualifiers are retained. Numeric performance tables/plots and illustrative table body excluded.",
+    "source_version_caveat": "Archived local main PDF/text used; pagination refers to this archived PDF. No new source or version substituted.",
+    "source_pdf_path": "iclr_latex_v3/design_audit/sources/C09_main.pdf",
+    "source_pdf_sha256": "162618dd4c001a530eefd1fed720083ed56fc41ac38c14ed359a975787a1f5e6"
+  },
+  {
+    "comparison_id": "C10-A",
+    "windows": [
+      {
+        "source_path": "iclr_latex_v3/design_audit/sources/C10_author_mirror.txt",
+        "start_line": 581,
+        "end_line": 581,
+        "pdf_page": 9,
+        "role": "subsection_heading",
+        "text": " 4.3               Good knowledge pre-training, adapted to downstream tasks, is important"
+      },
+      {
+        "source_path": "iclr_latex_v3/design_audit/sources/C10_author_mirror.txt",
+        "start_line": 583,
+        "end_line": 589,
+        "pdf_page": 9,
+        "role": "figure_6_introducing_paragraph",
+        "text": " Better knowledge pre-training, better performance TARTE embeddedings boost prediction. But what\n drives this boost? Is it the inductive bias of the architecture, or is the pre-training on the knowledge base\n actually important? To answer this question, we investigate TARTE pre-training on small tables (n = 32 to\n 1 024), where the effect of TARTE is most eminent. Figure 6 presents the critical difference diagram for Ridge\n fitted with embeddings from different schemes. Here, CARTE with “New sampling” corresponds to CARTE\n architecture with TARTE pre-training schemes, and “MinHash” replaces FastText by MinHash encoding, that\n only captures morphological similarities of strings (Cerda and Varoquaux, 2020)."
+      },
+      {
+        "source_path": "iclr_latex_v3/design_audit/sources/C10_author_mirror.txt",
+        "start_line": 590,
+        "end_line": 593,
+        "pdf_page": 9,
+        "role": "first_interpretive_paragraph",
+        "text": " First, comparing MinHash to TARTE reveals the importance of FastText. A simple use of FastText with random\n (non pre-trained) weights already exhibit relatively strong performances. As FastText captures semantic simi-\n larities, its combination with a suitable transformer architecture (subsection 3.1 or CARTE) forms an inductive\n bias of smoothness: similar tables have similar representations."
+      },
+      {
+        "source_path": "iclr_latex_v3/design_audit/sources/C10_author_mirror.txt",
+        "start_line": 605,
+        "end_line": 608,
+        "pdf_page": 10,
+        "role": "figure_6_caption",
+        "text": "Figure 6: Ablating architecture, pre-training, and preprocessing components. A ridge is fitted with em-\nbeddings from different schemes: random weights (no pre-training); replacement of FastText with skrub’s\n“MinHash” encoder; TARTE and CARTE pre-trained with YAGO3 and Enriched YAGO4.5; CARTE with\nTARTE pre-training schemes (New sampling); TARTE without datetime detection or column information."
+      },
+      {
+        "source_path": "iclr_latex_v3/design_audit/sources/C10_author_mirror.txt",
+        "start_line": 622,
+        "end_line": 629,
+        "pdf_page": 10,
+        "role": "following_interpretive_paragraph_and_ablation_subsection_conclusion",
+        "text": "Going further, a proper combination of pre-train data and procedures, the architecture, and preprocessing of\ntables improves knowledge pre-training (TARTE with Enriched YAGO4.5). For CARTE representations used\nwithout fine-tuning, pre-trained representations perform less well compared to random weights, regardless\nof the pre-train data: these representations lack out-of-the-box re-usability. TARTE pre-training schemes on\nCARTE (New sampling) helps but the performance does not match that of TARTE, highlighting the various\nsources of improvements through TARTE (see subsection 3.2). In addition, without datetime detection or\ncolumn information, properly pre-trained weights still provide competitive representations. This suggests that\nTARTE can perform well even on tables without meaningful column names."
+      },
+      {
+        "source_path": "iclr_latex_v3/design_audit/sources/C10_author_mirror.txt",
+        "start_line": 748,
+        "end_line": 758,
+        "pdf_page": 12,
+        "role": "explicitly_figure_6_linked_discussion_summary",
+        "text": "Knowledge pre-training that helps tabular learning Our study shows the value of pre-training to acquire\nworld knowledge for tabular learning (Figure 6). Current table understanding models clearly leverage world\nknowledge, but it is less visible in tabular learning ones. Table understanding models are typically variants\nof LLMs, generative, pre-trained an large textual corpora, and often used via prompting and thus in context\nlearning. For tabular learning, however, post-training for the downstream tasks is typically further away from\nthe next-token prediction used to inject world knowledge in LLMs. Indeed, for tables with many rows, a\ngood tabular learner often needs to aggregate information across these rows, as opposed to retrieval of a few\nrows which suffices for typical table-understanding tasks. But language models do not leverage long contexts\nuniformly (Liu et al., 2024). By matching pre-training tasks to downstream tasks, the TabPFN literature has\nmanaged to train suitable in-context models, valuable for tabular learning. However, this has required synthetic\ndatasets that do not bring world knowledge."
+      },
+      {
+        "source_path": "iclr_latex_v3/design_audit/sources/C10_author_mirror.txt",
+        "start_line": 759,
+        "end_line": 765,
+        "pdf_page": 12,
+        "role": "following_explicitly_figure_6_linked_discussion_paragraph",
+        "text": "Powerful post-training used for tabular learning can compensate for suboptimal pre-training. In fact, models\nwithout pre-training (such as XGBoost) are very strong baselines. Also, our results (Figure 6) show that\nCARTE, a pretrained model for tabular learning, achieved its good performance thanks to post-training, namely\nfine-tuning. A drawback of requiring sophisticated post-training is the compute cost. Investing in pre-training,\nas with TARTE, enables to use simple downstream learners, as a Ridge, which becomes a very strong baseline\nwith TARTE (On small, but also mid-sized data: figures 3 and 4). Pre-training cost is then “amortized” by\nmaking downstream learning and inference cheap."
+      }
+    ],
+    "coverage_notes": "Coverage of available mirror: Figure 6 full caption, introducing paragraph, both interpretive paragraphs and closing header-removal sentence under §4.3, plus two complete §5 paragraphs explicitly citing Figure 6. Linkage: explicit_group for Figure 6; the first interpretation names MinHash versus TARTE, while the following paragraph includes CARTE and other interventions and explicitly addresses missing column information at its end. The §5 Figure-6-linked pretraining summary concerns the broader pretraining group; do not automatically attribute it to the column-name intervention. Absence inventory: no separate further conclusion for this ablation paragraph; the next titled paragraph at lines 631–642 is a different Table 1 meta-feature analysis, excluded along with its numerical table. Abstract/introduction contain general model/pretraining discussion but no explicit Figure 6 or particular-fixed-arm linkage. The local mirror is not established as the accepted published source, so this is coverage of that available version only, not evidence that all published-source claims are absent. Numeric figure ranks/table results excluded.",
+    "source_version_caveat": "Source-version uncertainty: local C10_author_mirror.pdf identifies itself as arXiv:2505.14415v2, 30 Jun 2025, with July 1, 2025 running date. It is corroborating mirror/preprint text, not established as the accepted published PDF. Frozen units identify the published Figure 6/§4.3, but equivalence of wording/version has not been verified. Preserve this uncertainty during coding/adjudication; do not turn source uncertainty into an absent claim.",
+    "source_pdf_path": "iclr_latex_v3/design_audit/sources/C10_author_mirror.pdf",
+    "source_pdf_sha256": "6e3330a31457ef147da53652cd271dab156caa00b41f21940c5678687ccf84cb"
+  },
+  {
+    "comparison_id": "C10-B",
+    "windows": [
+      {
+        "source_path": "iclr_latex_v3/design_audit/sources/C10_author_mirror.txt",
+        "start_line": 581,
+        "end_line": 581,
+        "pdf_page": 9,
+        "role": "subsection_heading",
+        "text": " 4.3               Good knowledge pre-training, adapted to downstream tasks, is important"
+      },
+      {
+        "source_path": "iclr_latex_v3/design_audit/sources/C10_author_mirror.txt",
+        "start_line": 583,
+        "end_line": 589,
+        "pdf_page": 9,
+        "role": "figure_6_introducing_paragraph",
+        "text": " Better knowledge pre-training, better performance TARTE embeddedings boost prediction. But what\n drives this boost? Is it the inductive bias of the architecture, or is the pre-training on the knowledge base\n actually important? To answer this question, we investigate TARTE pre-training on small tables (n = 32 to\n 1 024), where the effect of TARTE is most eminent. Figure 6 presents the critical difference diagram for Ridge\n fitted with embeddings from different schemes. Here, CARTE with “New sampling” corresponds to CARTE\n architecture with TARTE pre-training schemes, and “MinHash” replaces FastText by MinHash encoding, that\n only captures morphological similarities of strings (Cerda and Varoquaux, 2020)."
+      },
+      {
+        "source_path": "iclr_latex_v3/design_audit/sources/C10_author_mirror.txt",
+        "start_line": 590,
+        "end_line": 593,
+        "pdf_page": 9,
+        "role": "first_interpretive_paragraph",
+        "text": " First, comparing MinHash to TARTE reveals the importance of FastText. A simple use of FastText with random\n (non pre-trained) weights already exhibit relatively strong performances. As FastText captures semantic simi-\n larities, its combination with a suitable transformer architecture (subsection 3.1 or CARTE) forms an inductive\n bias of smoothness: similar tables have similar representations."
+      },
+      {
+        "source_path": "iclr_latex_v3/design_audit/sources/C10_author_mirror.txt",
+        "start_line": 605,
+        "end_line": 608,
+        "pdf_page": 10,
+        "role": "figure_6_caption",
+        "text": "Figure 6: Ablating architecture, pre-training, and preprocessing components. A ridge is fitted with em-\nbeddings from different schemes: random weights (no pre-training); replacement of FastText with skrub’s\n“MinHash” encoder; TARTE and CARTE pre-trained with YAGO3 and Enriched YAGO4.5; CARTE with\nTARTE pre-training schemes (New sampling); TARTE without datetime detection or column information."
+      },
+      {
+        "source_path": "iclr_latex_v3/design_audit/sources/C10_author_mirror.txt",
+        "start_line": 622,
+        "end_line": 629,
+        "pdf_page": 10,
+        "role": "following_interpretive_paragraph_and_ablation_subsection_conclusion",
+        "text": "Going further, a proper combination of pre-train data and procedures, the architecture, and preprocessing of\ntables improves knowledge pre-training (TARTE with Enriched YAGO4.5). For CARTE representations used\nwithout fine-tuning, pre-trained representations perform less well compared to random weights, regardless\nof the pre-train data: these representations lack out-of-the-box re-usability. TARTE pre-training schemes on\nCARTE (New sampling) helps but the performance does not match that of TARTE, highlighting the various\nsources of improvements through TARTE (see subsection 3.2). In addition, without datetime detection or\ncolumn information, properly pre-trained weights still provide competitive representations. This suggests that\nTARTE can perform well even on tables without meaningful column names."
+      },
+      {
+        "source_path": "iclr_latex_v3/design_audit/sources/C10_author_mirror.txt",
+        "start_line": 748,
+        "end_line": 758,
+        "pdf_page": 12,
+        "role": "explicitly_figure_6_linked_discussion_summary",
+        "text": "Knowledge pre-training that helps tabular learning Our study shows the value of pre-training to acquire\nworld knowledge for tabular learning (Figure 6). Current table understanding models clearly leverage world\nknowledge, but it is less visible in tabular learning ones. Table understanding models are typically variants\nof LLMs, generative, pre-trained an large textual corpora, and often used via prompting and thus in context\nlearning. For tabular learning, however, post-training for the downstream tasks is typically further away from\nthe next-token prediction used to inject world knowledge in LLMs. Indeed, for tables with many rows, a\ngood tabular learner often needs to aggregate information across these rows, as opposed to retrieval of a few\nrows which suffices for typical table-understanding tasks. But language models do not leverage long contexts\nuniformly (Liu et al., 2024). By matching pre-training tasks to downstream tasks, the TabPFN literature has\nmanaged to train suitable in-context models, valuable for tabular learning. However, this has required synthetic\ndatasets that do not bring world knowledge."
+      },
+      {
+        "source_path": "iclr_latex_v3/design_audit/sources/C10_author_mirror.txt",
+        "start_line": 759,
+        "end_line": 765,
+        "pdf_page": 12,
+        "role": "following_explicitly_figure_6_linked_discussion_paragraph",
+        "text": "Powerful post-training used for tabular learning can compensate for suboptimal pre-training. In fact, models\nwithout pre-training (such as XGBoost) are very strong baselines. Also, our results (Figure 6) show that\nCARTE, a pretrained model for tabular learning, achieved its good performance thanks to post-training, namely\nfine-tuning. A drawback of requiring sophisticated post-training is the compute cost. Investing in pre-training,\nas with TARTE, enables to use simple downstream learners, as a Ridge, which becomes a very strong baseline\nwith TARTE (On small, but also mid-sized data: figures 3 and 4). Pre-training cost is then “amortized” by\nmaking downstream learning and inference cheap."
+      }
+    ],
+    "coverage_notes": "Coverage of available mirror: Figure 6 full caption, introducing paragraph, both interpretive paragraphs and closing header-removal sentence under §4.3, plus two complete §5 paragraphs explicitly citing Figure 6. Linkage: explicit_group for Figure 6; the first interpretation names MinHash versus TARTE, while the following paragraph includes CARTE and other interventions and explicitly addresses missing column information at its end. The §5 Figure-6-linked pretraining summary concerns the broader pretraining group; do not automatically attribute it to the column-name intervention. Absence inventory: no separate further conclusion for this ablation paragraph; the next titled paragraph at lines 631–642 is a different Table 1 meta-feature analysis, excluded along with its numerical table. Abstract/introduction contain general model/pretraining discussion but no explicit Figure 6 or particular-fixed-arm linkage. The local mirror is not established as the accepted published source, so this is coverage of that available version only, not evidence that all published-source claims are absent. Numeric figure ranks/table results excluded.",
+    "source_version_caveat": "Source-version uncertainty: local C10_author_mirror.pdf identifies itself as arXiv:2505.14415v2, 30 Jun 2025, with July 1, 2025 running date. It is corroborating mirror/preprint text, not established as the accepted published PDF. Frozen units identify the published Figure 6/§4.3, but equivalence of wording/version has not been verified. Preserve this uncertainty during coding/adjudication; do not turn source uncertainty into an absent claim.",
+    "source_pdf_path": "iclr_latex_v3/design_audit/sources/C10_author_mirror.pdf",
+    "source_pdf_sha256": "6e3330a31457ef147da53652cd271dab156caa00b41f21940c5678687ccf84cb"
+  }
+]

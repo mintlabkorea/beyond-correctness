@@ -1,0 +1,76 @@
+{
+ "arms": [
+  "a00_base",
+  "a01_columns",
+  "a10_stage",
+  "a11_stage_columns"
+ ],
+ "auroc": {
+  "256": {
+   "a00_base": 0.6791747803101659,
+   "a01_columns": 0.6744363164602966,
+   "a10_stage": 0.6846402923155394,
+   "a11_stage_columns": 0.7384839258302105
+  }
+ },
+ "backbone": "xgboost_hist_d6_n300_regression_ranked",
+ "benchmark_id": "std_cross_kn2nh_shared_anchorreset_fewshot_v1",
+ "feature_set": "stage_factorial_all_v1",
+ "m_axis": "source_only_fork_v1",
+ "metric": "auroc_vs_documented_target_binary (higher is better)",
+ "n_eval": 37487,
+ "n_pool": 3314,
+ "n_source": 112235,
+ "pl_columns_permutation": {
+  "dbp": "sbp",
+  "glucose": "waist_cm",
+  "hba1c": "triglycerides",
+  "height_cm": "weight_kg",
+  "sbp": "dbp",
+  "total_cholesterol": "glucose",
+  "triglycerides": "total_cholesterol",
+  "waist_cm": "hba1c",
+  "weight_kg": "height_cm"
+ },
+ "pl_relation_pairs": [
+  [
+   "height_cm",
+   "sbp"
+  ],
+  [
+   "age",
+   "rbc"
+  ],
+  [
+   "age",
+   "total_cholesterol"
+  ],
+  [
+   "sex",
+   "hemoglobin"
+  ],
+  [
+   "wbc",
+   "total_cholesterol"
+  ],
+  [
+   "wbc",
+   "hba1c"
+  ]
+ ],
+ "primary_k": 256,
+ "seed": 51,
+ "target": "heart_attack_history",
+ "target_cohort": "nhanes",
+ "wall_seconds": 25.5,
+ "wrong_label_maps": {
+  "source": {
+   "1.0": 1.0,
+   "8.0": 0.0
+  },
+  "target": {
+   "1.0": 1.0,
+   "2.0": 0.0
+  }
+ }
+}

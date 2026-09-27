@@ -1,0 +1,181 @@
+{
+ "P1_pipeline_vs_placebo": {
+  "best_endpoint": "diabetes_history",
+  "ci95": [
+   0.18240808666115557,
+   0.3086711548182616
+  ],
+  "coverage_gate_pass": false,
+  "diabetes_excluded_mean": 0.23181635997982786,
+  "drop_best_mean": 0.23181635997982786,
+  "drop_best_two_mean": 0.22103723622029559,
+  "endpoint_rate_below_half": 1.0,
+  "endpoint_win_rate_above_zero": 1.0,
+  "mean": 0.24940841380427212,
+  "per_direction_mean": {
+   "kn2nh": 0.21391934291185113,
+   "nh2kn": 0.287006421154327
+  },
+  "per_endpoint_mean": {
+   "angina_history": 0.281281478475786,
+   "arthritis_history": 0.3180493500560863,
+   "asthma_history": 0.02195335076013302,
+   "cancer_history": 0.23689503667369943,
+   "current_smoking_status": 0.19058712773511782,
+   "diabetes_history": 0.4077368982242702,
+   "heart_attack_history": 0.27695029135673466,
+   "hypertension_history": 0.2904442767749437,
+   "kidney_disease_history": 0.2047606894283694,
+   "stroke_history": 0.2654256385575808
+  },
+  "separated": false
+ },
+ "R1_raw_absolute_reversal": {
+  "best_endpoint": "angina_history",
+  "ci95": [
+   0.4991082829352735,
+   0.6079705834862694
+  ],
+  "diabetes_excluded_mean": 0.5717082813014216,
+  "drop_best_mean": 0.5430323831067135,
+  "drop_best_two_mean": 0.5291968429714227,
+  "endpoint_rate_below_half": 0.3,
+  "endpoint_win_rate_above_zero": 1.0,
+  "mean": 0.555665826465617,
+  "per_direction_mean": {
+   "kn2nh": 0.5127469730052555,
+   "nh2kn": 0.5985846799259785
+  },
+  "per_endpoint_mean": {
+   "angina_history": 0.6693668166957478,
+   "arthritis_history": 0.5211805006766184,
+   "asthma_history": 0.5872070389506916,
+   "cancer_history": 0.5793781518898689,
+   "current_smoking_status": 0.4254514544322935,
+   "diabetes_history": 0.4112837329433766,
+   "heart_attack_history": 0.6537167041890408,
+   "hypertension_history": 0.4743883352289124,
+   "kidney_disease_history": 0.6024639352667142,
+   "stroke_history": 0.6322215943829063
+  },
+  "reversal_separated": false
+ },
+ "complete": true,
+ "construction": {
+  "added_seven_documented_equals_pipeline_exact": true,
+  "added_seven_llm_provenance": "codebook_registry_not_llm",
+  "coverage_by_endpoint_direction": {
+   "angina_history": {
+    "kn2nh": 9,
+    "nh2kn": 10
+   },
+   "arthritis_history": {
+    "kn2nh": 10,
+    "nh2kn": 10
+   },
+   "asthma_history": {
+    "kn2nh": 10,
+    "nh2kn": 10
+   },
+   "cancer_history": {
+    "kn2nh": 4,
+    "nh2kn": 9
+   },
+   "current_smoking_status": {
+    "kn2nh": 10,
+    "nh2kn": 10
+   },
+   "diabetes_history": {
+    "kn2nh": 10,
+    "nh2kn": 10
+   },
+   "heart_attack_history": {
+    "kn2nh": 8,
+    "nh2kn": 10
+   },
+   "hypertension_history": {
+    "kn2nh": 8,
+    "nh2kn": 10
+   },
+   "kidney_disease_history": {
+    "kn2nh": 9,
+    "nh2kn": 10
+   },
+   "stroke_history": {
+    "kn2nh": 10,
+    "nh2kn": 10
+   }
+  },
+  "coverage_gate_pass": false,
+  "minimum_finite_pairs_required": 8,
+  "original_three_exact_K256_reproduction": true
+ },
+ "llm_table_scope": "literal LLM only for original three; no pooled ten-endpoint LLM claim",
+ "n_cells": 200,
+ "n_direction_units": 20,
+ "n_endpoint_clusters": 10,
+ "pipeline_absolute_descriptive": {
+  "best_endpoint": "diabetes_history",
+  "ci95": [
+   0.6924968514277913,
+   0.8112240212290525
+  ],
+  "diabetes_excluded_mean": 0.7335710419100135,
+  "drop_best_mean": 0.7335710419100134,
+  "drop_best_two_mean": 0.7193307919382633,
+  "endpoint_rate_below_half": 0.0,
+  "endpoint_win_rate_above_zero": 1.0,
+  "mean": 0.7530130896321465,
+  "per_direction_mean": {
+   "kn2nh": 0.7093894358523651,
+   "nh2kn": 0.7966367434119279
+  },
+  "per_endpoint_mean": {
+   "angina_history": 0.7157680066687045,
+   "arthritis_history": 0.7910443416790011,
+   "asthma_history": 0.5684749692715778,
+   "cancer_history": 0.7093971638562588,
+   "current_smoking_status": 0.6599465513603777,
+   "diabetes_history": 0.927991519131344,
+   "heart_attack_history": 0.7641686434686186,
+   "hypertension_history": 0.847493041684015,
+   "kidney_disease_history": 0.7773146294962661,
+   "stroke_history": 0.7685320297053015
+  }
+ },
+ "primary_k": 256,
+ "prior_observation_disclosure": {
+  "new_label_panel_endpoints": 7,
+  "original_three_label_panel_observed": true,
+  "ten_endpoint_interactions_observed": true
+ },
+ "raw_minus_pipeline_descriptive": {
+  "best_endpoint": "asthma_history",
+  "ci95": [
+   -0.29390734110684597,
+   -0.11017661495081875
+  ],
+  "diabetes_excluded_mean": -0.16186276060859195,
+  "drop_best_mean": -0.2213560779271565,
+  "drop_best_two_mean": -0.24322543892143145,
+  "endpoint_rate_below_half": 1.0,
+  "endpoint_win_rate_above_zero": 0.1,
+  "mean": -0.19734726316652948,
+  "per_direction_mean": {
+   "kn2nh": -0.19664246284710937,
+   "nh2kn": -0.1980520634859495
+  },
+  "per_endpoint_mean": {
+   "angina_history": -0.0464011899729567,
+   "arthritis_history": -0.2698638410023826,
+   "asthma_history": 0.018732069679113707,
+   "cancer_history": -0.13001901196638999,
+   "current_smoking_status": -0.23449509692808412,
+   "diabetes_history": -0.5167077861879674,
+   "heart_attack_history": -0.11045193927957772,
+   "hypertension_history": -0.3731047064551026,
+   "kidney_disease_history": -0.17485069422955193,
+   "stroke_history": -0.13631043532239528
+  }
+ }
+}

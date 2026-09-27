@@ -1,0 +1,76 @@
+{
+ "arms": [
+  "a00_base",
+  "a01_columns",
+  "a10_stage",
+  "a11_stage_columns"
+ ],
+ "auroc": {
+  "256": {
+   "a00_base": 0.6446583588585312,
+   "a01_columns": 0.6444896443986139,
+   "a10_stage": 0.691884730965845,
+   "a11_stage_columns": 0.699826080358539
+  }
+ },
+ "backbone": "xgboost_hist_d6_n300_regression_ranked",
+ "benchmark_id": "std_cross_kn2nh_shared_anchorreset_fewshot_v1",
+ "feature_set": "stage_factorial_all_v1",
+ "m_axis": "source_only_fork_v1",
+ "metric": "auroc_vs_documented_target_binary (higher is better)",
+ "n_eval": 37469,
+ "n_pool": 3314,
+ "n_source": 150602,
+ "pl_columns_permutation": {
+  "dbp": "glucose",
+  "glucose": "height_cm",
+  "hba1c": "weight_kg",
+  "height_cm": "triglycerides",
+  "sbp": "total_cholesterol",
+  "total_cholesterol": "hba1c",
+  "triglycerides": "waist_cm",
+  "waist_cm": "sbp",
+  "weight_kg": "dbp"
+ },
+ "pl_relation_pairs": [
+  [
+   "current_smoking_status",
+   "hematocrit"
+  ],
+  [
+   "hypertension_history",
+   "total_cholesterol"
+  ],
+  [
+   "hematocrit",
+   "triglycerides"
+  ],
+  [
+   "education_level",
+   "triglycerides"
+  ],
+  [
+   "rbc",
+   "hypertension_history"
+  ],
+  [
+   "weight_kg",
+   "age"
+  ]
+ ],
+ "primary_k": 256,
+ "seed": 50,
+ "target": "arthritis_history",
+ "target_cohort": "nhanes",
+ "wall_seconds": 26.3,
+ "wrong_label_maps": {
+  "source": {
+   "0.0": 1.0,
+   "9.0": 0.0
+  },
+  "target": {
+   "1.0": 1.0,
+   "2.0": 0.0
+  }
+ }
+}

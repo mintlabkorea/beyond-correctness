@@ -1,0 +1,109 @@
+{
+ "arms": [
+  "a00_base",
+  "a01_columns",
+  "a10_stage",
+  "a11_stage_columns",
+  "a11r_stage_columns_relations",
+  "pl_stage_at_columns",
+  "pl_columns_at_stage",
+  "pl_relations_at_stage",
+  "is_target"
+ ],
+ "auroc": {
+  "1024": {
+   "a00_base": 0.3924574691103303,
+   "a01_columns": 0.39163913028616576,
+   "a10_stage": 0.7003167285758033,
+   "a11_stage_columns": 0.707189840863977,
+   "a11r_stage_columns_relations": 0.7004799734720436,
+   "is_target": 0.6891441879707277,
+   "pl_columns_at_stage": 0.6974740825601592,
+   "pl_relations_at_stage": 0.6864668130966631,
+   "pl_stage_at_columns": 0.6454561360170924
+  },
+  "256": {
+   "a00_base": 0.42699244228108,
+   "a01_columns": 0.4032873980578351,
+   "a10_stage": 0.7130677143001121,
+   "a11_stage_columns": 0.7003842994529841,
+   "a11r_stage_columns_relations": 0.6856195782520094,
+   "is_target": 0.7014523069419871,
+   "pl_columns_at_stage": 0.6732290880028303,
+   "pl_relations_at_stage": 0.6764395415963501,
+   "pl_stage_at_columns": 0.6569068889170018
+  },
+  "64": {
+   "a00_base": 0.42164976190736286,
+   "a01_columns": 0.4154832806568277,
+   "a10_stage": 0.7053592603464492,
+   "a11_stage_columns": 0.7202332226004938,
+   "a11r_stage_columns_relations": 0.7314528073364881,
+   "is_target": 0.6739573029582125,
+   "pl_columns_at_stage": 0.6792036926295062,
+   "pl_relations_at_stage": 0.7178115951272852,
+   "pl_stage_at_columns": 0.7199537769389318
+  }
+ },
+ "backbone": "xgboost_hist_d6_n300_regression_ranked",
+ "benchmark_id": "std_cross_nh2kn_shared_anchorreset_fewshot_v1",
+ "feature_set": "stage_factorial_all_v1",
+ "metric": "auroc_vs_documented_target_binary (higher is better)",
+ "n_eval": 4767,
+ "n_pool": 7503,
+ "n_source": 17776,
+ "pl_columns_permutation": {
+  "dbp": "total_cholesterol",
+  "glucose": "height_cm",
+  "hba1c": "waist_cm",
+  "height_cm": "weight_kg",
+  "sbp": "hba1c",
+  "total_cholesterol": "glucose",
+  "triglycerides": "dbp",
+  "waist_cm": "triglycerides",
+  "weight_kg": "sbp"
+ },
+ "pl_relation_pairs": [
+  [
+   "wbc",
+   "diabetes_history"
+  ],
+  [
+   "dbp",
+   "glucose"
+  ],
+  [
+   "education_level",
+   "hba1c"
+  ],
+  [
+   "dbp",
+   "total_cholesterol"
+  ],
+  [
+   "glucose",
+   "hematocrit"
+  ],
+  [
+   "dbp",
+   "triglycerides"
+  ]
+ ],
+ "primary_k": 256,
+ "seed": 54,
+ "target": "current_smoking_status",
+ "wall_seconds": 56.5,
+ "wrong_label_maps": {
+  "source": {
+   "1.0": 1.0,
+   "3.0": 0.0,
+   "7.0": 1.0
+  },
+  "target": {
+   "2.0": 1.0,
+   "3.0": 0.0,
+   "4.0": 1.0,
+   "9.0": 0.0
+  }
+ }
+}

@@ -1,0 +1,117 @@
+{
+ "analysis_status": "post-result implementation and capacity audit",
+ "cells_checked": 60,
+ "conclusion": "Distinct anonymous uses twice as many raw identifier strings, but shared and distinct use the same fixed tokenizer vocabulary, word-embedding shape, and parameter count.",
+ "model_construction": {
+  "additive": {
+   "distinct_anonymous": {
+    "identifier_token_ids_used": 19,
+    "raw_identifier_union": 50,
+    "tokenizer_vocab_size": 30522,
+    "total_parameters": 4189569,
+    "trainable_parameters": 4189569,
+    "word_embedding_shape": [
+     30522,
+     128
+    ]
+   },
+   "shared_anonymous": {
+    "identifier_token_ids_used": 18,
+    "raw_identifier_union": 25,
+    "tokenizer_vocab_size": 30522,
+    "total_parameters": 4189569,
+    "trainable_parameters": 4189569,
+    "word_embedding_shape": [
+     30522,
+     128
+    ]
+   }
+  },
+  "pairwise": {
+   "distinct_anonymous": {
+    "identifier_token_ids_used": 17,
+    "raw_identifier_union": 42,
+    "tokenizer_vocab_size": 30522,
+    "total_parameters": 4189569,
+    "trainable_parameters": 4189569,
+    "word_embedding_shape": [
+     30522,
+     128
+    ]
+   },
+   "shared_anonymous": {
+    "identifier_token_ids_used": 16,
+    "raw_identifier_union": 21,
+    "tokenizer_vocab_size": 30522,
+    "total_parameters": 4189569,
+    "trainable_parameters": 4189569,
+    "word_embedding_shape": [
+     30522,
+     128
+    ]
+   }
+  },
+  "sparse": {
+   "distinct_anonymous": {
+    "identifier_token_ids_used": 16,
+    "raw_identifier_union": 38,
+    "tokenizer_vocab_size": 30522,
+    "total_parameters": 4189569,
+    "trainable_parameters": 4189569,
+    "word_embedding_shape": [
+     30522,
+     128
+    ]
+   },
+   "shared_anonymous": {
+    "identifier_token_ids_used": 15,
+    "raw_identifier_union": 19,
+    "tokenizer_vocab_size": 30522,
+    "total_parameters": 4189569,
+    "trainable_parameters": 4189569,
+    "word_embedding_shape": [
+     30522,
+     128
+    ]
+   }
+  }
+ },
+ "raw_identifier_counts": {
+  "additive": [
+   {
+    "distinct_per_domain": 24,
+    "distinct_union": 48,
+    "shared_per_domain": 24,
+    "shared_union": 24
+   },
+   {
+    "distinct_per_domain": 25,
+    "distinct_union": 50,
+    "shared_per_domain": 25,
+    "shared_union": 25
+   }
+  ],
+  "pairwise": [
+   {
+    "distinct_per_domain": 21,
+    "distinct_union": 42,
+    "shared_per_domain": 21,
+    "shared_union": 21
+   }
+  ],
+  "sparse": [
+   {
+    "distinct_per_domain": 19,
+    "distinct_union": 38,
+    "shared_per_domain": 19,
+    "shared_union": 19
+   }
+  ]
+ },
+ "supports_checked": [
+  32,
+  512
+ ],
+ "transtab_commit": "fdb34cf38abda73ee6a741b802fe226cc89ba7b5",
+ "transtab_tree_sha256": "6db3ddac43009ff15e0bc6b2f34f0cc900c39c632c323413840fc1c84b83f80e"
+}

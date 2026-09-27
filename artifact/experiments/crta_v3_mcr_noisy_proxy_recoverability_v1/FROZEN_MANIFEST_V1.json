@@ -1,0 +1,84 @@
+{
+  "created_unix": 1788756388.9545155,
+  "design": {
+    "backbones": [
+      "xgb",
+      "histgb"
+    ],
+    "base_feature_count": 8,
+    "bootstrap": {
+      "namespace": "mcr_noisy_proxy_bootstrap_v1",
+      "repetitions": 10000,
+      "unit": "realization"
+    },
+    "declared_post_result_diagnostic": true,
+    "experiment": "crta_v3_mcr_noisy_proxy_recoverability_v1",
+    "families": [
+      "pairwise",
+      "sparse"
+    ],
+    "noise_namespace": "mcr_noisy_proxy_v1",
+    "noise_sigmas_source_iqr": [
+      0.0,
+      0.125,
+      0.25,
+      0.5,
+      1.0,
+      2.0,
+      4.0
+    ],
+    "pooling": "unweighted",
+    "proxy": {
+      "fit_rows": "frozen source plus target support",
+      "metric": "mean unclipped operation-level R2",
+      "score_rows": "held-out target query",
+      "sealed_before_utility": true,
+      "target": "exact clean compiled operation value"
+    },
+    "realizations": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "supports": [
+      32,
+      512
+    ],
+    "utility": "nMSE(reference) - nMSE(intended)"
+  },
+  "files": {
+    "input_panel": {
+      "path": "data/foundation/artifacts/foundation_v2/raw_adapter_source_locks_v2_3_20260724/nhanes_common_panel_source_lock_v2/nhanes_common_panel_tokens_v2.parquet",
+      "sha256": "6af2215c72a65ecc306e5c4d3d9af5b61b16a073dd5aa4c0f33b178741245a25"
+    },
+    "mcr_runner": {
+      "path": "./scripts/run_crta_v3_mcr_factorial_semisynth_v1.py",
+      "sha256": "c753e142f3af884a9f9b0d635e67465e8d8e0e20cefbb13f09006be56753e4a0"
+    },
+    "protocol": {
+      "path": "./experiments/crta_v3_mcr_noisy_proxy_recoverability_v1/PROTOCOL_V1.md",
+      "sha256": "e37f7439377620f7603513971b44c33efab2911e688a64ef2f071ec1be0d19cc"
+    },
+    "runner": {
+      "path": "./scripts/run_crta_v3_mcr_noisy_proxy_recoverability_v1.py",
+      "sha256": "463fc935966f20ad211d2cf29707681e56fe59a6212d2bf79769fa49cb5c207e"
+    }
+  }
+}

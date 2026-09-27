@@ -1,0 +1,158 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://coret.local/schemas/crta-1.0.0/proposer_input.schema.json",
+  "title": "CRTA proposer input",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "contract_version",
+    "schema_pair_id",
+    "candidate_budgets",
+    "tables",
+    "evidence_spans"
+  ],
+  "properties": {
+    "contract_version": {"const": "crta-1.0.0"},
+    "schema_pair_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 128,
+      "pattern": "^[A-Za-z0-9_.:-]+$"
+    },
+    "candidate_budgets": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["max_concepts", "max_relations"],
+      "properties": {
+        "max_concepts": {"const": 24},
+        "max_relations": {"const": 48}
+      }
+    },
+    "tables": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 2,
+      "items": {"$ref": "#/definitions/table"}
+    },
+    "evidence_spans": {
+      "type": "array",
+      "items": {"$ref": "#/definitions/evidence_span"}
+    }
+  },
+  "definitions": {
+    "unit": {
+      "type": ["object", "null"],
+      "additionalProperties": false,
+      "required": ["symbol", "dimension", "canonical_symbol", "scale_to_canonical", "offset_to_canonical"],
+      "properties": {
+        "symbol": {"type": "string", "minLength": 1, "maxLength": 64},
+        "dimension": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 64,
+          "pattern": "^[A-Za-z0-9_.:-]+$"
+        },
+        "canonical_symbol": {"type": "string", "minLength": 1, "maxLength": 64},
+        "scale_to_canonical": {"type": "number", "exclusiveMinimum": 0},
+        "offset_to_canonical": {"type": "number"}
+      }
+    },
+    "column": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "column_id",
+        "display_name",
+        "dtype",
+        "role",
+        "candidate_eligible",
+        "value_domain",
+        "unit",
+        "evidence_span_ids"
+      ],
+      "properties": {
+        "column_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[A-Za-z0-9_.:-]+$"
+        },
+        "display_name": {"type": "string", "minLength": 1, "maxLength": 256},
+        "dtype": {
+          "enum": ["numeric", "integer", "boolean", "categorical", "ordinal", "datetime", "text"]
+        },
+        "role": {
+          "enum": [
+            "feature",
+            "group_key",
+            "time_index",
+            "target",
+            "outcome_proxy",
+            "identifier",
+            "post_outcome",
+            "protected",
+            "unknown"
+          ]
+        },
+        "candidate_eligible": {"type": "boolean"},
+        "value_domain": {
+          "enum": ["real", "nonnegative", "positive", "bounded_0_1", "categorical", "datetime", "unknown"]
+        },
+        "unit": {"$ref": "#/definitions/unit"},
+        "evidence_span_ids": {
+          "type": "array",
+          "items": {"type": "string", "minLength": 1, "maxLength": 128},
+          "uniqueItems": true
+        }
+      }
+    },
+    "table": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["table_id", "schema_name", "columns"],
+      "properties": {
+        "table_id": {"enum": ["source", "target"]},
+        "schema_name": {"type": "string", "minLength": 1, "maxLength": 256},
+        "columns": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"$ref": "#/definitions/column"}
+        }
+      }
+    },
+    "evidence_span": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "span_id",
+        "document_id",
+        "applies_to",
+        "location",
+        "text",
+        "sha256",
+        "candidate_eligible",
+        "exclusion_reason"
+      ],
+      "properties": {
+        "span_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[A-Za-z0-9_.:-]+$"
+        },
+        "document_id": {"type": "string", "minLength": 1, "maxLength": 256},
+        "applies_to": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"enum": ["source", "target"]},
+          "uniqueItems": true
+        },
+        "location": {"type": "string", "minLength": 1, "maxLength": 512},
+        "text": {"type": "string", "minLength": 1, "maxLength": 12000},
+        "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+        "candidate_eligible": {"type": "boolean"},
+        "exclusion_reason": {"type": ["string", "null"], "maxLength": 512}
+      }
+    }
+  }
+}

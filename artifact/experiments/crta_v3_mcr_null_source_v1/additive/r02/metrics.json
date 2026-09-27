@@ -1,0 +1,81 @@
+{
+ "arms": [
+  "m1c1rf",
+  "m1c0rf",
+  "m0c1rf",
+  "m0c0rf"
+ ],
+ "backbones": [
+  "xgb",
+  "histgb"
+ ],
+ "base_runner_sha256": "c753e142f3af884a9f9b0d635e67465e8d8e0e20cefbb13f09006be56753e4a0",
+ "experiment": "mcr_null_source_label_derangement_v1",
+ "family": "additive",
+ "input_sha256": "6af2215c72a65ecc306e5c4d3d9af5b61b16a073dd5aa4c0f33b178741245a25",
+ "n_query": 2000,
+ "n_source": 2048,
+ "original_cell_provenance": {
+  "input_sha256": "6af2215c72a65ecc306e5c4d3d9af5b61b16a073dd5aa4c0f33b178741245a25",
+  "prereg_sha256": "c4fb8a7ab8f02ba39ad30a3e6eca486c20a92093561cca9f10f96c885fbeb1f5",
+  "runner_sha256": "657e354476fb21ac5e060cfc34b97ac5dedb5a028edf024dfa43c1cc1d31f01b"
+ },
+ "prereg_sha256": "231a025ab2fc9562c5a0300df302e766b5cc124425b3dae16924837c7ca7392a",
+ "realization": 2,
+ "results": {
+  "32": {
+   "histgb": {
+    "m0c0rf": {
+     "nmse": 0.955778471139996,
+     "nrmse": 0.9776392336337552
+    },
+    "m0c1rf": {
+     "nmse": 1.0544431906943994,
+     "nrmse": 1.026860842906379
+    },
+    "m1c0rf": {
+     "nmse": 0.9279814546100975,
+     "nrmse": 0.9633179405627705
+    },
+    "m1c1rf": {
+     "nmse": 1.145947025715696,
+     "nrmse": 1.0704891525446187
+    }
+   },
+   "xgb": {
+    "m0c0rf": {
+     "nmse": 0.9595874683812621,
+     "nrmse": 0.9795853553321743
+    },
+    "m0c1rf": {
+     "nmse": 1.0758173144955587,
+     "nrmse": 1.0372161368275943
+    },
+    "m1c0rf": {
+     "nmse": 0.9128688543418492,
+     "nrmse": 0.9554417064069629
+    },
+    "m1c1rf": {
+     "nmse": 1.1284670354151887,
+     "nrmse": 1.0622932906759737
+    }
+   }
+  }
+ },
+ "runner_sha256": "54990b8b57043a5106907bff9646799544be7d0a5dddaccb32f65ee284067304",
+ "source_label_intervention": {
+  "fixed_points": 0,
+  "label_multiset_identical": true,
+  "max_abs_true_source_feature_label_corr_after": 0.017558255792759492,
+  "max_abs_true_source_feature_label_corr_before": 0.2939704464245012,
+  "namespace": "mcr_null_source_v1",
+  "permutation_sha256": "18378ab678ff7fb0b1a391dd88dcc1b8e4ab3ed6f841e4b383e18016767b6d37"
+ },
+ "support_k": 32,
+ "versions": {
+  "numpy": "1.24.4",
+  "sklearn": "1.3.2",
+  "xgboost": "2.1.4"
+ },
+ "wall_seconds": 1.0
+}

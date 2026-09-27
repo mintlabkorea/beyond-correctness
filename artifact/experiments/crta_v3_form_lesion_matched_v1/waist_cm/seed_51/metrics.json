@@ -1,0 +1,86 @@
+{
+ "arms": [
+  "free",
+  "val_documented",
+  "val_random",
+  "val_documented_negated",
+  "sign_documented",
+  "sign_random",
+  "sign_flipped"
+ ],
+ "documented_pairs": [
+  [
+   "age",
+   "sbp"
+  ],
+  [
+   "dbp",
+   "sbp"
+  ],
+  [
+   "hba1c",
+   "glucose"
+  ],
+  [
+   "total_cholesterol",
+   "triglycerides"
+  ]
+ ],
+ "documented_signs": {
+  "weight_kg": 1
+ },
+ "metric": "query_sd_normalized_rmse (lower is better)",
+ "n_pool": 8078,
+ "n_source": 60124,
+ "nrmse": {
+  "1024": {
+   "free": 0.3160586479566499,
+   "sign_documented": 0.3126268606092962,
+   "sign_flipped": 0.6978548528542878,
+   "sign_random": 0.31606341406298516,
+   "val_documented": 0.3164884277373145,
+   "val_documented_negated": 0.3166580175920267,
+   "val_random": 0.3182500196464418
+  },
+  "256": {
+   "free": 0.33731986048280765,
+   "sign_documented": 0.33429545125344634,
+   "sign_flipped": 0.7917489943433242,
+   "sign_random": 0.3365889838999369,
+   "val_documented": 0.33614989382771293,
+   "val_documented_negated": 0.33659993733488447,
+   "val_random": 0.33532433819876334
+  },
+  "64": {
+   "free": 0.3649675438283921,
+   "sign_documented": 0.3668651213292643,
+   "sign_flipped": 0.8519259806228275,
+   "sign_random": 0.36397182783541376,
+   "val_documented": 0.3625898059599952,
+   "val_documented_negated": 0.36339037270197966,
+   "val_random": 0.3662795578644545
+  }
+ },
+ "primary_k": 256,
+ "random_pairs": [
+  [
+   "height_cm",
+   "sbp"
+  ],
+  [
+   "height_cm",
+   "total_cholesterol"
+  ],
+  [
+   "glucose",
+   "weight_kg"
+  ],
+  [
+   "dbp",
+   "glucose"
+  ]
+ ],
+ "seed": 51,
+ "target": "waist_cm",
+ "wall_seconds": 30.4
+}

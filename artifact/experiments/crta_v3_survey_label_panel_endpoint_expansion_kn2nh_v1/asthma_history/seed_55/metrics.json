@@ -1,0 +1,39 @@
+{
+ "arms": [
+  "raw",
+  "pipeline_table",
+  "llm_table",
+  "placebo_table"
+ ],
+ "auroc": {
+  "256": {
+   "llm_table": 0.5254057433999971,
+   "pipeline_table": 0.5254057433999971,
+   "placebo_table": 0.4834307005052057,
+   "raw": 0.5109708374209074
+  }
+ },
+ "backbone": "xgboost_hist_d6_n300_regression_ranked",
+ "benchmark_id": "std_cross_kn2nh_shared_anchorreset_fewshot_v1",
+ "eval_prevalence": 0.1531920460491889,
+ "feature_set": "shared_clinical_plus_survey_v1",
+ "metric": "auroc_vs_documented_target_binary (higher is better)",
+ "n_eval": 61152,
+ "n_pool": 5907,
+ "n_source": 154924,
+ "placebo_label_maps": {
+  "source": {
+   "1.0": 1.0,
+   "8.0": 0.0
+  },
+  "target": {
+   "1.0": 0.0,
+   "9.0": 1.0
+  }
+ },
+ "primary_k": 256,
+ "seed": 55,
+ "target": "asthma_history",
+ "target_set": "survey_label_panel_endpoint_expansion_v1",
+ "wall_seconds": 37.6
+}

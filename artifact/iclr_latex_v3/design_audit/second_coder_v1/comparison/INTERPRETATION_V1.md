@@ -1,0 +1,18 @@
+# Interpretation of the independent coding comparison
+
+Preservation is substantially sensitive to the independently declared protected set and evidentiary threshold: exact agreement is 14/25 (56%), with 11 disagreements. Its Fail count changes from 12 to 5. Removal agrees on 24/25 (96%), Interface on 21/25 (84%), and admissibility on 16/25 (64%). There are 13 comparisons with at least one differing gate/admissibility label, including nine whose admissibility changes. Agreement numbers alone do not imply the independently written scopes are semantically identical.
+
+The dominant admissibility transition is **No to Unclear**, not No to Yes: seven comparisons change in that direction (LIFT C01-C/D, CARTE C05-A, ConTextTab C08-A/B/C/D). The second coder treats several unestablished information-preservation properties as unresolved rather than treating the primary protected encoder/scaffold choice as definitively violated. This is an operational/scope disagreement, not a demonstrated primary factual error.
+
+Two particularly informative scope disagreements are:
+
+- **TabLLM C03-B: No to Yes.** Primary v1 protects the List Template scaffolding independently of semantic names, so removing its prefixes violates Preservation. The second coder protects ordered value slots and boundaries, but treats those prefixes as part of the removed annotation channel; Preservation therefore passes. Neither choice can be declared correct just from the observed performance gap. The primary non-admissibility conclusion must be presented as conditional on its declared format protection, with this alternative coding disclosed.
+- **FeatLLM C06-A: Unclear to No.** Primary tests the entire description package, including types/categories. The second coder tests explanatory content while protecting structural type/category metadata. Their withdrawal therefore fails secondary Preservation. A package-level scope and a prose-level scope answer different questions.
+
+Other gate disagreements include PLATO's common graph-to-predictor interface and whether embedding provenance must remain unresolved; ConTextTab AutoGluon's configured text transformations (Removal Pass to Unclear); and whether enriched-header row provenance uncertainty belongs to Interface as well as Preservation. These differences are fully disclosed, not adjudicated after observing outcomes.
+
+Headline design sensitivity is **4/25 to 5/25 admissible comparisons** and **3/9 to 4/9 studies with at least one admissible reference**. The three primary Yes studies (TabuLa-8B, ConTextTab, TabSTAR) remain Yes; TabLLM is added under the secondary scope. However, definitive No counts change markedly (16 to 9), so the exercise does not support presenting the precise primary No prevalence as coder-invariant. The study set is purposively frozen, not a random sample of the literature.
+
+The appropriate claim is limited: admissibility depends in material part on the declared estimand and protection contract; this exercise quantifies that dependence. This is not a successful demonstration of high overall reliability, nor a reason to replace primary codes with the more favorable or more conservative second codes. Primary v1 and its outcome join remain immutable. No secondary outcome claims were generated.
+
+This was a separate AI context sharing a model and factual-construction sheet, not human inter-rater validation. The primary operational addendum was not supplied, as specified by the user's packet restriction. Consequently this evaluates independently operationalized coding from the common rule and facts, rather than two coders executing every identical auxiliary instruction. See the full information-boundary and source-exposure disclosures.

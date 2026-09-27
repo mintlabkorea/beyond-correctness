@@ -1,0 +1,252 @@
+[
+  {
+    "Comparison ID": "C01-A",
+    "Study": "LIFT",
+    "Tested semantic use": "Feature-name meanings in the name/value associations of prompt format I.",
+    "Protected observations": "All observed feature values and target labels, row/sample identities, feature cardinality and missingness; reversible fixed recoding is permitted.",
+    "Protected metadata": "Feature identity/position, type and category-domain information, and target/task identity, except the explicitly tested semantic channel.",
+    "Protected representation": "A stable field/value association and distinct feature slots; numerical and missing-value information remain representable. Exact semantic token strings or semantic embedding coordinates are not protected. Retain the within-format presentation scaffold and output-label mapping outside removed names/context.",
+    "Protected predictive setup": "Same data/split/shot regime, learner and fitting recipe outside the tested channel; ordinary fitted-state changes caused by the intervention are permitted.",
+    "Scope evidence": "Official C01 main §4.1/Table 9, PDF p.8; official supplement D.2.1, printed pp.42–44 (PDF pp.20–22); supplied LIFT.pdf also contains these examples."
+  },
+  {
+    "Comparison ID": "C01-B",
+    "Study": "LIFT",
+    "Tested semantic use": "Feature-name meanings in the name/value associations of prompt format II.",
+    "Protected observations": "All observed feature values and target labels, row/sample identities, feature cardinality and missingness; reversible fixed recoding is permitted.",
+    "Protected metadata": "Feature identity/position, type and category-domain information, and target/task identity, except the explicitly tested semantic channel.",
+    "Protected representation": "A stable field/value association and distinct feature slots; numerical and missing-value information remain representable. Exact semantic token strings or semantic embedding coordinates are not protected. Retain the within-format presentation scaffold and output-label mapping outside removed names/context.",
+    "Protected predictive setup": "Same data/split/shot regime, learner and fitting recipe outside the tested channel; ordinary fitted-state changes caused by the intervention are permitted.",
+    "Scope evidence": "Official C01 main §4.1/Table 9, PDF p.8; official supplement D.2.1, printed pp.42–44 (PDF pp.20–22); supplied LIFT.pdf also contains these examples."
+  },
+  {
+    "Comparison ID": "C01-C",
+    "Study": "LIFT",
+    "Tested semantic use": "Named feature and task context in prompt format I, including informative target question; categorical observation identities remain protected even if recoded.",
+    "Protected observations": "All observed feature values and target labels, row/sample identities, feature cardinality and missingness; reversible fixed recoding is permitted.",
+    "Protected metadata": "Feature identity/position, type and category-domain information, and target/task identity, except the explicitly tested semantic channel.",
+    "Protected representation": "A stable field/value association and distinct feature slots; numerical and missing-value information remain representable. Exact semantic token strings or semantic embedding coordinates are not protected. Retain the within-format presentation scaffold and output-label mapping outside removed names/context.",
+    "Protected predictive setup": "Same data/split/shot regime, learner and fitting recipe outside the tested channel; ordinary fitted-state changes caused by the intervention are permitted.",
+    "Scope evidence": "Official C01 main §4.1/Table 9, PDF p.8; official supplement D.2.1, printed pp.42–44 (PDF pp.20–22); supplied LIFT.pdf also contains these examples."
+  },
+  {
+    "Comparison ID": "C01-D",
+    "Study": "LIFT",
+    "Tested semantic use": "Named feature and task context in prompt format II, including informative target question; categorical observation identities remain protected even if recoded.",
+    "Protected observations": "All observed feature values and target labels, row/sample identities, feature cardinality and missingness; reversible fixed recoding is permitted.",
+    "Protected metadata": "Feature identity/position, type and category-domain information, and target/task identity, except the explicitly tested semantic channel.",
+    "Protected representation": "A stable field/value association and distinct feature slots; numerical and missing-value information remain representable. Exact semantic token strings or semantic embedding coordinates are not protected. Retain the within-format presentation scaffold and output-label mapping outside removed names/context.",
+    "Protected predictive setup": "Same data/split/shot regime, learner and fitting recipe outside the tested channel; ordinary fitted-state changes caused by the intervention are permitted.",
+    "Scope evidence": "Official C01 main §4.1/Table 9, PDF p.8; official supplement D.2.1, printed pp.42–44 (PDF pp.20–22); supplied LIFT.pdf also contains these examples."
+  },
+  {
+    "Comparison ID": "C03-A",
+    "Study": "TabLLM",
+    "Tested semantic use": "Column-name meanings as supplied in the list name/value associations.",
+    "Protected observations": "All observed feature values and target labels, row/sample identities, feature cardinality and missingness; reversible fixed recoding is permitted.",
+    "Protected metadata": "Feature identity/position, type and category-domain information, and target/task identity, except the explicitly tested semantic channel.",
+    "Protected representation": "Ordered feature-value slots, value boundaries and task prompt/verbalizer; field-name text may be absent when that is the tested channel. For value permutations, continuous precision is protected as observation information.",
+    "Protected predictive setup": "Same data/split/shot regime, learner and fitting recipe outside the tested channel; ordinary fitted-state changes caused by the intervention are permitted.",
+    "Scope evidence": "Official C03 §3, PDF pp.3–4; §5.1/Figure 2, p.6; supplement Tables 12–14 and §9; supplied tabllm.pdf corroborates definitions."
+  },
+  {
+    "Comparison ID": "C03-B",
+    "Study": "TabLLM",
+    "Tested semantic use": "Column-name text as semantic annotation of a fixed ordered value list.",
+    "Protected observations": "All observed feature values and target labels, row/sample identities, feature cardinality and missingness; reversible fixed recoding is permitted.",
+    "Protected metadata": "Feature identity/position, type and category-domain information, and target/task identity, except the explicitly tested semantic channel.",
+    "Protected representation": "Ordered feature-value slots, value boundaries and task prompt/verbalizer; field-name text may be absent when that is the tested channel. For value permutations, continuous precision is protected as observation information.",
+    "Protected predictive setup": "Same data/split/shot regime, learner and fitting recipe outside the tested channel; ordinary fitted-state changes caused by the intervention are permitted.",
+    "Scope evidence": "Official C03 §3, PDF pp.3–4; §5.1/Figure 2, p.6; supplement Tables 12–14 and §9; supplied tabllm.pdf corroborates definitions."
+  },
+  {
+    "Comparison ID": "C03-C",
+    "Study": "TabLLM",
+    "Tested semantic use": "Semantic meanings of supplied feature-value tokens, including continuous-value magnitude.",
+    "Protected observations": "All observed feature values and target labels, row/sample identities, feature cardinality and missingness; reversible fixed recoding is permitted.",
+    "Protected metadata": "Feature identity/position, type and category-domain information, and target/task identity, except the explicitly tested semantic channel.",
+    "Protected representation": "Ordered feature-value slots, value boundaries and task prompt/verbalizer; field-name text may be absent when that is the tested channel. For value permutations, continuous precision is protected as observation information.",
+    "Protected predictive setup": "Same data/split/shot regime, learner and fitting recipe outside the tested channel; ordinary fitted-state changes caused by the intervention are permitted.",
+    "Scope evidence": "Official C03 §3, PDF pp.3–4; §5.1/Figure 2, p.6; supplement Tables 12–14 and §9; supplied tabllm.pdf corroborates definitions."
+  },
+  {
+    "Comparison ID": "C04-A",
+    "Study": "PLATO",
+    "Tested semantic use": "Broader-domain KG information conveyed by non-feature nodes, including through pretrained embeddings and message passing. Feature-node information is protected.",
+    "Protected observations": "All observed feature values and target labels, row/sample identities, feature cardinality and missingness; reversible fixed recoding is permitted.",
+    "Protected metadata": "Feature identity/position, type and category-domain information, and target/task identity, except the explicitly tested semantic channel.",
+    "Protected representation": "Feature-node correspondence and the PLATO first-layer weight-inference scaffold, MLP downstream layers, observed-feature routing; changing KG neighborhoods is intrinsic to the intervention. Semantic embedding coordinates may change under the same recipe.",
+    "Protected predictive setup": "Same data/split/shot regime, learner and fitting recipe outside the tested channel; ordinary fitted-state changes caused by the intervention are permitted.",
+    "Scope evidence": "Official C04 (Ruiz et al., not supplied plato.pdf): §3.1–3.2, Table 3 p.7, §4.1 p.9."
+  },
+  {
+    "Comparison ID": "C04-B",
+    "Study": "PLATO",
+    "Tested semantic use": "Auxiliary KG information used for feature embeddings and first-layer weight inference.",
+    "Protected observations": "All observed feature values and target labels, row/sample identities, feature cardinality and missingness; reversible fixed recoding is permitted.",
+    "Protected metadata": "Feature identity/position, type and category-domain information, and target/task identity, except the explicitly tested semantic channel.",
+    "Protected representation": "Feature-node correspondence and the PLATO first-layer weight-inference scaffold, MLP downstream layers, observed-feature routing; changing KG neighborhoods is intrinsic to the intervention. Semantic embedding coordinates may change under the same recipe.",
+    "Protected predictive setup": "Same data/split/shot regime, learner and fitting recipe outside the tested channel; ordinary fitted-state changes caused by the intervention are permitted.",
+    "Scope evidence": "Official C04 (Ruiz et al., not supplied plato.pdf): §3.1–3.2, Table 3 p.7, §4.1 p.9."
+  },
+  {
+    "Comparison ID": "C04-C",
+    "Study": "PLATO",
+    "Tested semantic use": "KG edge information as a whole, including its encoding in pretrained node embeddings and message passing; a 50% deletion is a partial intervention on this use.",
+    "Protected observations": "All observed feature values and target labels, row/sample identities, feature cardinality and missingness; reversible fixed recoding is permitted.",
+    "Protected metadata": "Feature identity/position, type and category-domain information, and target/task identity, except the explicitly tested semantic channel.",
+    "Protected representation": "Feature-node correspondence and the PLATO first-layer weight-inference scaffold, MLP downstream layers, observed-feature routing; changing KG neighborhoods is intrinsic to the intervention. Semantic embedding coordinates may change under the same recipe.",
+    "Protected predictive setup": "Same data/split/shot regime, learner and fitting recipe outside the tested channel; ordinary fitted-state changes caused by the intervention are permitted.",
+    "Scope evidence": "Official C04 §4.1 p.9, Table 4."
+  },
+  {
+    "Comparison ID": "C05-A",
+    "Study": "CARTE",
+    "Tested semantic use": "External pretrained linguistic meaning in string feature initialization.",
+    "Protected observations": "All observed feature values and target labels, row/sample identities, feature cardinality and missingness; reversible fixed recoding is permitted.",
+    "Protected metadata": "Feature identity/position, type and category-domain information, and target/task identity, except the explicitly tested semantic channel.",
+    "Protected representation": "Graphlet feature slots, numeric-value and missing-value representation, central readout and attention scaffold; encoder coordinates may change but nonsemantic identity/routing must survive.",
+    "Protected predictive setup": "Same data/split/shot regime, learner and fitting recipe outside the tested channel; ordinary fitted-state changes caused by the intervention are permitted.",
+    "Scope evidence": "Official C05 §3 and Appendix C.3/Figure 10, PDF p.21; supplied carte.pdf corroborates component labels. Figure arms expanded against CARTE baseline; no separate pairwise test is implied."
+  },
+  {
+    "Comparison ID": "C05-B",
+    "Study": "CARTE",
+    "Tested semantic use": "Column-name semantic information in CARTE, including edge encodings and any propagation through numerical-node initialization.",
+    "Protected observations": "All observed feature values and target labels, row/sample identities, feature cardinality and missingness; reversible fixed recoding is permitted.",
+    "Protected metadata": "Feature identity/position, type and category-domain information, and target/task identity, except the explicitly tested semantic channel.",
+    "Protected representation": "Graphlet feature slots, numeric-value and missing-value representation, central readout and attention scaffold; encoder coordinates may change but nonsemantic identity/routing must survive.",
+    "Protected predictive setup": "Same data/split/shot regime, learner and fitting recipe outside the tested channel; ordinary fitted-state changes caused by the intervention are permitted.",
+    "Scope evidence": "Official C05 §3 and Appendix C.3/Figure 10, PDF p.21; supplied carte.pdf corroborates component labels. Figure arms expanded against CARTE baseline; no separate pairwise test is implied."
+  },
+  {
+    "Comparison ID": "C05-C",
+    "Study": "CARTE",
+    "Tested semantic use": "Column-name semantic information in CARTE, including edge encodings and any propagation through numerical-node initialization.",
+    "Protected observations": "All observed feature values and target labels, row/sample identities, feature cardinality and missingness; reversible fixed recoding is permitted.",
+    "Protected metadata": "Feature identity/position, type and category-domain information, and target/task identity, except the explicitly tested semantic channel.",
+    "Protected representation": "Graphlet feature slots, numeric-value and missing-value representation, central readout and attention scaffold; encoder coordinates may change but nonsemantic identity/routing must survive.",
+    "Protected predictive setup": "Same data/split/shot regime, learner and fitting recipe outside the tested channel; ordinary fitted-state changes caused by the intervention are permitted.",
+    "Scope evidence": "Official C05 §3 and Appendix C.3/Figure 10, PDF p.21; supplied carte.pdf corroborates component labels. Figure arms expanded against CARTE baseline; no separate pairwise test is implied."
+  },
+  {
+    "Comparison ID": "C06-A",
+    "Study": "FeatLLM",
+    "Tested semantic use": "Explanatory semantic definitions in the feature-description block used to generate rules.",
+    "Protected observations": "All observed feature values and target labels, row/sample identities, feature cardinality and missingness; reversible fixed recoding is permitted.",
+    "Protected metadata": "Feature identity, explicit value types, categorical domains/examples and task/answer-class definition; these structural facts are protected separately from explanatory meaning.",
+    "Protected representation": "Generate/parse/binary-feature interface and parser rules; newly generated rules and binary features are allowed consequences.",
+    "Protected predictive setup": "Same data/split/shot regime, learner and fitting recipe outside the tested channel; ordinary fitted-state changes caused by the intervention are permitted.",
+    "Scope evidence": "Official C06 §3.1/Figure 2 pp.3–4, §4.2/Table 4 pp.7–8, Appendix A.2 and K.2/Table 18; supplied featllm.pdf corroborates prompt components."
+  },
+  {
+    "Comparison ID": "C07-A",
+    "Study": "TabuLa-8B",
+    "Tested semantic use": "Informative feature headers and informative target header jointly, as opposed to indexed headers.",
+    "Protected observations": "All observed feature values and target labels, row/sample identities, feature cardinality and missingness; reversible fixed recoding is permitted.",
+    "Protected metadata": "Feature identity/position, type and category-domain information, and target/task identity, except the explicitly tested semantic channel.",
+    "Protected representation": "A stable field/value association and distinct feature slots; numerical and missing-value information remain representable. Exact semantic token strings or semantic embedding coordinates are not protected.",
+    "Protected predictive setup": "Same data/split/shot regime, learner and fitting recipe outside the tested channel; ordinary fitted-state changes caused by the intervention are permitted.",
+    "Scope evidence": "Official C07 §5.5, Appendix F.2 p.26/Figure 12 p.27; supplied tabula.pdf has different pagination."
+  },
+  {
+    "Comparison ID": "C08-A",
+    "Study": "ConTextTab",
+    "Tested semantic use": "Pretrained linguistic meaning in categorical/string cell encodings; column-header semantic meaning remains protected.",
+    "Protected observations": "All observed feature values and target labels, row/sample identities, feature cardinality and missingness; reversible fixed recoding is permitted.",
+    "Protected metadata": "Feature identity/position, type and category-domain information, and target/task identity, except the explicitly tested semantic channel.",
+    "Protected representation": "Distinct cell/column identity, numeric/date/missingness paths and the column-plus-cell backbone interface. A compatible change of cell encoder is allowed; loss of observational distinctions is not.",
+    "Protected predictive setup": "Same data/split/shot regime, learner and fitting recipe outside the tested channel; ordinary fitted-state changes caused by the intervention are permitted.",
+    "Scope evidence": "Official C08 §5.1 p.8, Table 2 bottom semantic block p.9, Appendix A.4/Figures 9–10 pp.27–28; supplied contextab.pdf has different pagination."
+  },
+  {
+    "Comparison ID": "C08-B",
+    "Study": "ConTextTab",
+    "Tested semantic use": "Pretrained linguistic meaning in categorical/string cell encodings; column-header semantic meaning remains protected.",
+    "Protected observations": "All observed feature values and target labels, row/sample identities, feature cardinality and missingness; reversible fixed recoding is permitted.",
+    "Protected metadata": "Feature identity/position, type and category-domain information, and target/task identity, except the explicitly tested semantic channel.",
+    "Protected representation": "Distinct cell/column identity, numeric/date/missingness paths and the column-plus-cell backbone interface. A compatible change of cell encoder is allowed; loss of observational distinctions is not.",
+    "Protected predictive setup": "Same data/split/shot regime, learner and fitting recipe outside the tested channel; ordinary fitted-state changes caused by the intervention are permitted.",
+    "Scope evidence": "Official C08 §5.1 p.8, Table 2 bottom semantic block p.9, Appendix A.4/Figures 9–10 pp.27–28; supplied contextab.pdf has different pagination."
+  },
+  {
+    "Comparison ID": "C08-C",
+    "Study": "ConTextTab",
+    "Tested semantic use": "Pretrained linguistic meaning in categorical/string cell encodings; column-header semantic meaning remains protected.",
+    "Protected observations": "All observed feature values and target labels, row/sample identities, feature cardinality and missingness; reversible fixed recoding is permitted.",
+    "Protected metadata": "Feature identity/position, type and category-domain information, and target/task identity, except the explicitly tested semantic channel.",
+    "Protected representation": "Distinct cell/column identity, numeric/date/missingness paths and the column-plus-cell backbone interface. A compatible change of cell encoder is allowed; loss of observational distinctions is not.",
+    "Protected predictive setup": "Same data/split/shot regime, learner and fitting recipe outside the tested channel; ordinary fitted-state changes caused by the intervention are permitted.",
+    "Scope evidence": "Official C08 §5.1 p.8, Table 2 bottom semantic block p.9, Appendix A.4/Figures 9–10 pp.27–28; supplied contextab.pdf has different pagination."
+  },
+  {
+    "Comparison ID": "C08-D",
+    "Study": "ConTextTab",
+    "Tested semantic use": "Pretrained linguistic meaning in categorical/string cell encodings; column-header semantic meaning remains protected.",
+    "Protected observations": "All observed feature values and target labels, row/sample identities, feature cardinality and missingness; reversible fixed recoding is permitted.",
+    "Protected metadata": "Feature identity/position, type and category-domain information, and target/task identity, except the explicitly tested semantic channel.",
+    "Protected representation": "Distinct cell/column identity, numeric/date/missingness paths and the column-plus-cell backbone interface. A compatible change of cell encoder is allowed; loss of observational distinctions is not.",
+    "Protected predictive setup": "Same data/split/shot regime, learner and fitting recipe outside the tested channel; ordinary fitted-state changes caused by the intervention are permitted.",
+    "Scope evidence": "Official C08 §5.1 p.8, Table 2 bottom semantic block p.9, Appendix A.4/Figures 9–10 pp.27–28; supplied contextab.pdf has different pagination."
+  },
+  {
+    "Comparison ID": "C08-E",
+    "Study": "ConTextTab",
+    "Tested semantic use": "Informative original column-header meanings; indexed header strings are a neutral replacement.",
+    "Protected observations": "All observed feature values and target labels, row/sample identities, feature cardinality and missingness; reversible fixed recoding is permitted.",
+    "Protected metadata": "Feature identity/position, type and category-domain information, and target/task identity, except the explicitly tested semantic channel.",
+    "Protected representation": "Distinct cell/column identity, numeric/date/missingness paths and the column-plus-cell backbone interface. A compatible change of cell encoder is allowed; loss of observational distinctions is not.",
+    "Protected predictive setup": "Same data/split/shot regime, learner and fitting recipe outside the tested channel; ordinary fitted-state changes caused by the intervention are permitted.",
+    "Scope evidence": "Official C08 §5.1 p.8, Table 2 bottom semantic block p.9, Appendix A.4/Figures 9–10 pp.27–28; supplied contextab.pdf has different pagination."
+  },
+  {
+    "Comparison ID": "C08-F",
+    "Study": "ConTextTab",
+    "Tested semantic use": "Additional contextual descriptions appended to original column names, beyond the original name meaning.",
+    "Protected observations": "All observed feature values and target labels, row/sample identities, feature cardinality and missingness; reversible fixed recoding is permitted.",
+    "Protected metadata": "Feature identity/position, type and category-domain information, and target/task identity, except the explicitly tested semantic channel.",
+    "Protected representation": "Distinct cell/column identity, numeric/date/missingness paths and the column-plus-cell backbone interface. A compatible change of cell encoder is allowed; loss of observational distinctions is not.",
+    "Protected predictive setup": "Same data/split/shot regime, learner and fitting recipe outside the tested channel; ordinary fitted-state changes caused by the intervention are permitted. Description generation may transform available training observations but must not acquire additional held-out or target information relative to the comparator.",
+    "Scope evidence": "Official C08 §5.1 p.8, Table 2 bottom semantic block p.9, Appendix A.4/Figures 9–10 pp.27–28; supplied contextab.pdf has different pagination."
+  },
+  {
+    "Comparison ID": "C09-A",
+    "Study": "TabSTAR",
+    "Tested semantic use": "Explicit quantile wording in numerical-feature verbalization.",
+    "Protected observations": "All observed feature values and target labels, row/sample identities, feature cardinality and missingness; reversible fixed recoding is permitted.",
+    "Protected metadata": "Feature identity/position, type and category-domain information, and target/task identity, except the explicitly tested semantic channel.",
+    "Protected representation": "Separate standardized numerical-input branch, feature name/slot and missing-value markers, text encoder and numerical/semantic fusion scaffold. Numerical facts remain allowed through the numeric branch.",
+    "Protected predictive setup": "Same data/split/shot regime, learner and fitting recipe outside the tested channel; ordinary fitted-state changes caused by the intervention are permitted.",
+    "Scope evidence": "Official C09 §4/A.1, §6 Q3 p.9/Table 4 p.10, Appendix G.4/Tables 31–32 pp.53–54; supplied tabstar.pdf has different pagination."
+  },
+  {
+    "Comparison ID": "C09-B",
+    "Study": "TabSTAR",
+    "Tested semantic use": "Numeric bin/magnitude and quantile wording in the semantic verbalization branch only.",
+    "Protected observations": "All observed feature values and target labels, row/sample identities, feature cardinality and missingness; reversible fixed recoding is permitted.",
+    "Protected metadata": "Feature identity/position, type and category-domain information, and target/task identity, except the explicitly tested semantic channel.",
+    "Protected representation": "Separate standardized numerical-input branch, feature name/slot and missing-value markers, text encoder and numerical/semantic fusion scaffold. Numerical facts remain allowed through the numeric branch.",
+    "Protected predictive setup": "Same data/split/shot regime, learner and fitting recipe outside the tested channel; ordinary fitted-state changes caused by the intervention are permitted.",
+    "Scope evidence": "Official C09 §4/A.1, §6 Q3 p.9/Table 4 p.10, Appendix G.4/Tables 31–32 pp.53–54; supplied tabstar.pdf has different pagination."
+  },
+  {
+    "Comparison ID": "C10-A",
+    "Study": "TARTE",
+    "Tested semantic use": "Column-name semantics across table-representation paths, including any numeric initialization use.",
+    "Protected observations": "All observed feature values and target labels, row/sample identities, feature cardinality and missingness; reversible fixed recoding is permitted.",
+    "Protected metadata": "Feature identity/position, type and category-domain information, and target/task identity, except the explicitly tested semantic channel.",
+    "Protected representation": "Feature slots, numeric/date/missingness handling and fixed representation-to-Ridge interface; compatible string-encoder replacement is allowed.",
+    "Protected predictive setup": "Same data/split/shot regime, learner and fitting recipe outside the tested channel; ordinary fitted-state changes caused by the intervention are permitted. Table-model pretraining regime and downstream Ridge fitting recipe are protected independently of the tested channel.",
+    "Scope evidence": "C10 official indexed published Figure 6 p.10/§4.3 from eligibility screening; supplied tarte.pdf is arXiv v2 corroboration, not the accepted PDF. Conditions known, implementation details not fully established from published source."
+  },
+  {
+    "Comparison ID": "C10-B",
+    "Study": "TARTE",
+    "Tested semantic use": "External linguistic meaning provided by the string encoder; table-level Enriched YAGO4.5 pretraining is protected as a distinct component.",
+    "Protected observations": "All observed feature values and target labels, row/sample identities, feature cardinality and missingness; reversible fixed recoding is permitted.",
+    "Protected metadata": "Feature identity/position, type and category-domain information, and target/task identity, except the explicitly tested semantic channel.",
+    "Protected representation": "Feature slots, numeric/date/missingness handling and fixed representation-to-Ridge interface; compatible string-encoder replacement is allowed.",
+    "Protected predictive setup": "Same data/split/shot regime, learner and fitting recipe outside the tested channel; ordinary fitted-state changes caused by the intervention are permitted. Table-model pretraining regime and downstream Ridge fitting recipe are protected independently of the tested channel.",
+    "Scope evidence": "C10 official indexed published Figure 6 p.10/§4.3 from eligibility screening; supplied tarte.pdf is arXiv v2 corroboration, not the accepted PDF. Conditions known, implementation details not fully established from published source."
+  }
+]

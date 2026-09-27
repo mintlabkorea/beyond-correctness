@@ -1,0 +1,12 @@
+{
+  "excluded_paths": [
+    "scripts/verify_review_artifact_v1.py",
+    "scripts/crta_v3_m4_hrs2klosa_runtime_v1.py",
+    "scripts/build_crta_v3_klosa_measurement_extraction_prompt_v2.py",
+    "scripts/score_crta_v3_klosa_measurement_extraction_v2.py",
+    "scripts/run_crta_v3_m4_hrs2klosa_auto_c_v1.py"
+  ],
+  "reason": "Obsolete review verifier exposed private identifier patterns; four unrelated KLoSA scripts are not paper-map inputs or live imports. Runtime comment references in retained historical code are provenance, not executable dependencies.",
+  "original_repository_sources_preserved": true,
+  "excluded_source_text_or_diff_distributed": false
+}

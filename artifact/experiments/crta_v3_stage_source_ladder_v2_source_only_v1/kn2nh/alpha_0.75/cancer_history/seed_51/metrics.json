@@ -1,0 +1,76 @@
+{
+ "arms": [
+  "a00_base",
+  "a01_columns",
+  "a10_stage",
+  "a11_stage_columns"
+ ],
+ "auroc": {
+  "256": {
+   "a00_base": 0.618851225350894,
+   "a01_columns": 0.5924585587687322,
+   "a10_stage": 0.6289759353996913,
+   "a11_stage_columns": 0.672297735899454
+  }
+ },
+ "backbone": "xgboost_hist_d6_n300_regression_ranked",
+ "benchmark_id": "std_cross_kn2nh_shared_anchorreset_fewshot_v1",
+ "feature_set": "stage_factorial_all_v1",
+ "m_axis": "source_only_fork_v1",
+ "metric": "auroc_vs_documented_target_binary (higher is better)",
+ "n_eval": 37525,
+ "n_pool": 3314,
+ "n_source": 151295,
+ "pl_columns_permutation": {
+  "dbp": "weight_kg",
+  "glucose": "dbp",
+  "hba1c": "triglycerides",
+  "height_cm": "glucose",
+  "sbp": "waist_cm",
+  "total_cholesterol": "hba1c",
+  "triglycerides": "sbp",
+  "waist_cm": "height_cm",
+  "weight_kg": "total_cholesterol"
+ },
+ "pl_relation_pairs": [
+  [
+   "triglycerides",
+   "height_cm"
+  ],
+  [
+   "diabetes_history",
+   "height_cm"
+  ],
+  [
+   "hemoglobin",
+   "glucose"
+  ],
+  [
+   "hematocrit",
+   "sex"
+  ],
+  [
+   "education_level",
+   "wbc"
+  ],
+  [
+   "total_cholesterol",
+   "creatinine"
+  ]
+ ],
+ "primary_k": 256,
+ "seed": 51,
+ "target": "cancer_history",
+ "target_cohort": "nhanes",
+ "wall_seconds": 28.2,
+ "wrong_label_maps": {
+  "source": {
+   "0.0": 1.0,
+   "9.0": 0.0
+  },
+  "target": {
+   "1.0": 1.0,
+   "9.0": 0.0
+  }
+ }
+}

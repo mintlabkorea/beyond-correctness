@@ -1,0 +1,82 @@
+{
+  "status": "DESCRIPTIVE_FIDELITY_SENSITIVITY_COMPLETE",
+  "created_at_utc": "2026-09-08T00:43:46.640753+00:00",
+  "files": [
+    {
+      "path": "experiments/tabllm_fidelity_sensitivity_v1/ANALYSIS_RULE_V1.md",
+      "sha256": "73261377ae7b8fa183487d9a07818829510771b464a179bb18b0e1cc9ffb368d"
+    },
+    {
+      "path": "experiments/tabllm_fidelity_sensitivity_v1/ANALYSIS_RULE_V1.sha256",
+      "sha256": "afd00c77c1b61c07beebc637f06e213364dccc2ce7044d4b920b9f459fe50713"
+    },
+    {
+      "path": "experiments/tabllm_fidelity_sensitivity_v1/DATASET_RESULTS_V1.csv",
+      "sha256": "228618977981e741b687b95a62933a5df2bac55e15c2ab33f3fc4773854fd863"
+    },
+    {
+      "path": "experiments/tabllm_fidelity_sensitivity_v1/FIDELITY_DECISIONS_V1.csv",
+      "sha256": "0a466936dee8cb9e1bdcd411a912343181936e875209aa3da8ef720792b52bc3"
+    },
+    {
+      "path": "experiments/tabllm_fidelity_sensitivity_v1/FIDELITY_SUBSET_FREEZE_V1.json",
+      "sha256": "273acac80fc1aa111e46e8f16ac106bae3f6c5806cfdb96185d452caf0fab2d5"
+    },
+    {
+      "path": "experiments/tabllm_fidelity_sensitivity_v1/FIDELITY_SUBSET_FREEZE_V1.sha256",
+      "sha256": "7a0a3e8b8bcae73de29cacbbbfff99c710ad822a3529acfe0c95da0ed7f3cbcb"
+    },
+    {
+      "path": "experiments/tabllm_fidelity_sensitivity_v1/FILTER_INPUT_SW_RPUB_ONLY_V1.csv",
+      "sha256": "0c9388ed9d1a19cf6a80b1b191a33b1cd1af523779f8d7fc637df43d267fc4ff"
+    },
+    {
+      "path": "experiments/tabllm_fidelity_sensitivity_v1/GLOBAL_24_REFERENCE_MACROS_V1.csv",
+      "sha256": "030e49931de41a390ffaf4200b19f3ecd41944ac10bd40c7dde069eed761fe92"
+    },
+    {
+      "path": "experiments/tabllm_fidelity_sensitivity_v1/RESULTS_V1.md",
+      "sha256": "26aed0c0b7861624ef89be1c52fa859c70ed46e70484f6c3f32235794c66380b"
+    },
+    {
+      "path": "experiments/tabllm_fidelity_sensitivity_v1/SUMMARY_V1.json",
+      "sha256": "085f98764541e4ea7a7a6f351890caf1c41bf7bdd6a43f6783d19bb0af148783"
+    },
+    {
+      "path": "experiments/tabllm_fidelity_sensitivity_v1/VALIDATION_V1.json",
+      "sha256": "4afb1b0182c1934ef797761c5bc5bd301687e2a47d4b7d32f374d5982ed85202"
+    },
+    {
+      "path": "experiments/tabllm_fidelity_sensitivity_v1/analyze.py",
+      "sha256": "dd78eb754d8d79017ad948c38ce6de39422a60b7dd00dbb2ae9c64651dba5046"
+    },
+    {
+      "path": "experiments/tabllm_retrospective_audit_v1/SUMMARY_V1.json",
+      "sha256": "e6d85f64f13a122ed9e30adb0795ed1c42785b2b6729504432da76f7c52c1600"
+    },
+    {
+      "path": "experiments/tabllm_published_three_arm_v1/SUMMARY_V1.json",
+      "sha256": "320c9222aa7bbf3a34c6bffc3d0ca5f5e4144e6c8bec247b8368f6e25fb52f35"
+    },
+    {
+      "path": "experiments/tabllm_reference_space_v1/summary_v1/reference_utilities.csv",
+      "sha256": "5b1b05d95954c21f1bca5d2c6f0159c8e2505f27d4a775b7e89987e34ca5ddaf"
+    },
+    {
+      "path": "experiments/tabllm_reference_space_v1/summary_v1/SUMMARY_V1.json",
+      "sha256": "8ba6f21b3ce0e54b9030505be8a494e9f83f8b5960ced6e1fb1c0c6fbe71fc21"
+    }
+  ],
+  "validation": {
+    "status": "PASS",
+    "independent_arithmetic_check": "math.fsum on source arm means and 216 reference utilities",
+    "filter_matches_existing_published_arm_error_diagnostic": true,
+    "condition_pass_count": 21,
+    "subset_size": 4,
+    "threshold": "0.015",
+    "Ranon_excluded_from_selection": true,
+    "new_predictions": false,
+    "new_inferential_statistics": false,
+    "manuscript_edited": false
+  }
+}

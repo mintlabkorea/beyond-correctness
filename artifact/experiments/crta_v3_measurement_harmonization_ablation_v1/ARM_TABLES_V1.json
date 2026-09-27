@@ -1,0 +1,172 @@
+{
+ "llm_table": {
+  "knhanes/ALL__de1_dg": {
+   "kind": "map",
+   "map": {
+    "0.0": 0.0,
+    "1.0": 1.0
+   }
+  },
+  "knhanes/ALL__educ": {
+   "kind": "map",
+   "map": {
+    "1.0": 1.0,
+    "2.0": 2.0,
+    "3.0": 3.0,
+    "4.0": 4.0
+   }
+  },
+  "knhanes/ALL__sex": {
+   "kind": "map",
+   "map": {
+    "1.0": 1.0,
+    "2.0": 2.0
+   }
+  },
+  "nhanes/DIQ010": {
+   "kind": "map",
+   "map": {
+    "1.0": 1.0,
+    "2.0": 2.0,
+    "3.0": 3.0
+   }
+  },
+  "nhanes/DMDEDUC2": {
+   "kind": "map",
+   "map": {
+    "1.0": 1.0,
+    "2.0": 2.0,
+    "3.0": 3.0,
+    "4.0": 4.0,
+    "5.0": 5.0
+   }
+  },
+  "nhanes/RIAGENDR": {
+   "kind": "map",
+   "map": {
+    "1.0": 1.0,
+    "2.0": 2.0
+   }
+  }
+ },
+ "llm_translation_audit": {
+  "KNHANES::ALL__de1_dg": {
+   "missing_or_sentinel_codes": [
+    8,
+    9
+   ],
+   "requires_reverse_coding": false,
+   "unanimous": true,
+   "valid_codes": [
+    0.0,
+    1.0
+   ]
+  },
+  "KNHANES::ALL__educ": {
+   "missing_or_sentinel_codes": [
+    8,
+    9
+   ],
+   "requires_reverse_coding": false,
+   "unanimous": true,
+   "valid_codes": [
+    1.0,
+    2.0,
+    3.0,
+    4.0
+   ]
+  },
+  "KNHANES::ALL__sex": {
+   "missing_or_sentinel_codes": [],
+   "requires_reverse_coding": false,
+   "unanimous": true,
+   "valid_codes": [
+    1.0,
+    2.0
+   ]
+  },
+  "NHANES::DIQ010": {
+   "missing_or_sentinel_codes": [
+    7,
+    9
+   ],
+   "requires_reverse_coding": false,
+   "unanimous": true,
+   "valid_codes": [
+    1.0,
+    2.0,
+    3.0
+   ]
+  },
+  "NHANES::DMDEDUC2": {
+   "missing_or_sentinel_codes": [
+    7,
+    9
+   ],
+   "requires_reverse_coding": false,
+   "unanimous": true,
+   "valid_codes": [
+    1.0,
+    2.0,
+    3.0,
+    4.0,
+    5.0
+   ]
+  },
+  "NHANES::RIAGENDR": {
+   "missing_or_sentinel_codes": [],
+   "requires_reverse_coding": false,
+   "unanimous": true,
+   "valid_codes": [
+    1.0,
+    2.0
+   ]
+  }
+ },
+ "pipeline_table": {
+  "knhanes/ALL__de1_dg": {
+   "kind": "map",
+   "map": {
+    "0": 0,
+    "1": 1
+   }
+  },
+  "knhanes/ALL__educ": {
+   "kind": "map",
+   "map": {
+    "1": 1,
+    "2": 1,
+    "3": 2,
+    "4": 3,
+    "5": 4,
+    "6": 5,
+    "7": 5,
+    "8": 5
+   }
+  },
+  "knhanes/ALL__sex": {
+   "kind": "identity"
+  },
+  "nhanes/DIQ010": {
+   "kind": "map",
+   "map": {
+    "1": 1,
+    "2": 0
+   }
+  },
+  "nhanes/DMDEDUC2": {
+   "kind": "map",
+   "map": {
+    "1": 1,
+    "2": 2,
+    "3": 3,
+    "4": 4,
+    "5": 5
+   }
+  },
+  "nhanes/RIAGENDR": {
+   "kind": "identity"
+  }
+ },
+ "placebo": "per (target, seed); generator frozen in the preregistration"
+}

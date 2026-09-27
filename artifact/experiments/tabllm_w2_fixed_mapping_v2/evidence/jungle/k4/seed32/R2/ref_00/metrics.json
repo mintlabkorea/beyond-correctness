@@ -1,0 +1,73 @@
+{
+  "audit_sha256": "44d8155f8300b1a4b142415092942838f8537ce93a3aff3dda7acc545a5864e2",
+  "cell": [
+    "jungle",
+    4,
+    32,
+    "R2",
+    "ref_00"
+  ],
+  "checkpoint_sha256": "8fe7a00fb425dd331c7a021c9468d50a14ec2ca1998007e7ead5ce3111405729",
+  "completed_at_utc": "2026-09-10T15:34:10.142292+00:00",
+  "design_sha256": "5cdac31d67a015ebca58c1f61ac5f150b842e88eced1d18b254345199302899b",
+  "feature_to_identifier": {
+    "black piece file": "Field E",
+    "black piece rank": "Field F",
+    "black piece strength": "Field D",
+    "white piece file": "Field B",
+    "white piece rank": "Field C",
+    "white piece strength": "Field A"
+  },
+  "gpu": 2,
+  "initial_trainable_state_sha256": "2b3e0be8998a1d12a84a7b358726205cce0c83973fb198a1c37bdac6aa3fbd0b",
+  "metrics": {
+    "accuracy": 0.5177376171352075,
+    "auc": 0.5537675870632247
+  },
+  "model_audit": {
+    "checkpoint_key_count": 192,
+    "checkpoint_parameter_count": 1081344,
+    "frozen_parameter_count": 11136118784,
+    "initial_trainable_state_sha256": "2b3e0be8998a1d12a84a7b358726205cce0c83973fb198a1c37bdac6aa3fbd0b",
+    "missing_base_model_key_count": 752,
+    "parameter_dtype": "torch.bfloat16",
+    "precision_layout": "frozen=bfloat16, trainable_ia3=float32",
+    "trainable_parameter_count": 1081344,
+    "trainable_parameter_dtype": "torch.float32",
+    "trainable_tensor_count": 192
+  },
+  "model_files": {
+    ".gitattributes": "98ccb431c012ebfe976280fbd45aea4cec7409935868ccecf3954370f96732a1",
+    "README.md": "4d4029cb81f74695a450f4497dd12aa34f3e86bf98d3c480ed1231a015cebb45",
+    "config.json": "ef552104049013790961bd3624ac91cacdd8d9aabd09201f8b30e2f06693d97f",
+    "pytorch_model.bin": "806b1cfa7743d85fddc12bdba93b701c572816c7cc47108ee93fccffe4b6ee7f",
+    "special_tokens_map.json": "4720c0fddbe4c5991334f85ad7073d9bd0a294a8ba4641a2f8dab614ca825949",
+    "spiece.model": "d60acb128cf7b7f2536e8f38a5b18a05535c9e14c7a355904270e15b0945ea86",
+    "tokenizer_config.json": "b971dce1d2805c2a66da8657156e7114a30501c6ba602fc947c8bf607a3ead2d"
+  },
+  "prompt_audit_sha256": "d90c6927fc63206d277ace6ec0b5d83f2a5f6d0ef3010a9214b59fee560555b4",
+  "seconds": 33.44762803899357,
+  "split_sha256": "119e48aab7999475d82d4258dedb0875d54fa2613c8c31aae1dbda2a1942c831",
+  "trained_checkpoint_sha256": "b842f6083aaad33eb87e65375e2ab57195705e7c5f88f549451eae1d27c27a5d",
+  "training": {
+    "batch_order_sha256": "5cf9e875ae2d98e380199e610eae304c013a408c82a1df25d3ddb528d06bc48e",
+    "executed_steps": 30,
+    "loss_first": {
+      "gradient_norm_pre_clip": 1.0022295713424683,
+      "lm_loss": 0.3714677393436432,
+      "loss": 3.60202956199646,
+      "lr": 0.0016666666666666668,
+      "mc_loss": 0.6509107351303101,
+      "unlikely_loss": 2.579651117324829
+    },
+    "loss_last": {
+      "gradient_norm_pre_clip": 1.1644773483276367,
+      "lm_loss": 0.86376953125,
+      "loss": 2.6533851623535156,
+      "lr": 0.0,
+      "mc_loss": 0.8442164659500122,
+      "unlikely_loss": 0.945399284362793
+    },
+    "planned_steps": 30
+  }
+}

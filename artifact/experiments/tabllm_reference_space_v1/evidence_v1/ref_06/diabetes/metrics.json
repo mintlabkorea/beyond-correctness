@@ -1,0 +1,91 @@
+{
+  "analysis_status": "frozen_reference_space_evidence",
+  "base_runner_sha256": "58697774da35b4d2ed573045618d66f557ebf29ffadbd269539862c2dc802b9a",
+  "checkpoint_audit": {
+    "checkpoint_key_count": 192,
+    "checkpoint_parameter_count": 1081344,
+    "missing_base_model_key_count": 752
+  },
+  "checkpoint_source_tfew_commit": "114deced63ae722a368e06cb08ea956b20c393a6",
+  "choices": [
+    "No",
+    "Yes"
+  ],
+  "dataset": "diabetes",
+  "ia3_checkpoint_sha256": "8fe7a00fb425dd331c7a021c9468d50a14ec2ca1998007e7ead5ce3111405729",
+  "metrics": {
+    "0": {
+      "accuracy": 0.5454545454545454,
+      "auc": 0.39784946236559143,
+      "n_test": 154
+    },
+    "1": {
+      "accuracy": 0.6168831168831169,
+      "auc": 0.5446411574338474,
+      "n_test": 154
+    },
+    "1024": {
+      "accuracy": 0.5844155844155844,
+      "auc": 0.3643476621417798,
+      "n_test": 154
+    },
+    "32": {
+      "accuracy": 0.6038961038961039,
+      "auc": 0.5245316681534344,
+      "n_test": 154
+    },
+    "42": {
+      "accuracy": 0.525974025974026,
+      "auc": 0.48741496598639455,
+      "n_test": 154
+    },
+    "mean": {
+      "accuracy": 0.5753246753246753,
+      "auc": 0.4637569832162095,
+      "auc_sd_population": 0.07074111469010966
+    }
+  },
+  "model_path": "external/.cache/huggingface/hub/models--bigscience--T0/snapshots/1cfa27271f8085c29323c94bd659004b210f20b5",
+  "n_full": 768,
+  "n_scored_union": 513,
+  "permutation": [
+    4,
+    2,
+    1,
+    6,
+    3,
+    7,
+    0,
+    5
+  ],
+  "protocol_sha256": "2ce490262b95ed7f70781f93386083cee252c6a54c89740942fe3c95bcfd8b09",
+  "reference_id": "ref_06",
+  "reference_manifest_sha256": "7fe208e544a954ebd2c15e273473d604107a22e49230631101466ab97097d8da",
+  "runner_sha256": "b616a0bd7d1a657981078bc1938bcc0fbb7d674a30770e7feb4cd7b11ad9a48a",
+  "scoring": {
+    "batch_size": 16,
+    "device": "cuda:1",
+    "length_normalization": 1,
+    "max_input_tokens": 1024,
+    "test_fraction": 0.2,
+    "test_split_seeds": [
+      42,
+      1024,
+      0,
+      1,
+      32
+    ]
+  },
+  "tabllm_commit": "71f6647c523aa6fd35df94ad76207c4377248c49",
+  "template_sha256": "d6f78f680c4de187bc90f69f080f4c42abb7ec0cf5266b7886b1b37e97e7d3f8",
+  "tfew_execution_commit": "114deced63ae722a368e06cb08ea956b20c393a6",
+  "versions": {
+    "datasets": "2.14.7",
+    "numpy": "2.2.6",
+    "python": "3.10.20",
+    "scikit_learn": "1.7.2",
+    "torch": "2.12.0.dev20260408+cu128",
+    "transformers": "4.30.0"
+  },
+  "wall_seconds": 2.152
+}

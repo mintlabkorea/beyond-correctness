@@ -1,0 +1,87 @@
+{
+ "arms": [
+  "m0c0rf",
+  "m0c1rf",
+  "m1c0rf",
+  "m1c1rf"
+ ],
+ "backbone": "sklearn_mlp_32_relu_adam",
+ "family": "additive",
+ "input_sha256": "6af2215c72a65ecc306e5c4d3d9af5b61b16a073dd5aa4c0f33b178741245a25",
+ "mcr_runner_sha256": "c753e142f3af884a9f9b0d635e67465e8d8e0e20cefbb13f09006be56753e4a0",
+ "metric": "nmse = MSE/Var(y_query) (verdicts)",
+ "mode": "primary_mlp",
+ "prereg_sha256": "25387913d4fbc53d15360e7f54381e692e8756612833ab1a1971d96fcbb2fec4",
+ "realization": 7,
+ "recipe": {
+  "alpha": 0.01,
+  "hidden_layer_sizes": [
+   32
+  ],
+  "imputation": "mean_plus_missing_indicators",
+  "learning_rate_init": 0.001,
+  "max_iter": 500,
+  "scaling": "standard_x_and_y"
+ },
+ "results": {
+  "32": {
+   "m0c0rf": {
+    "n_features": 8,
+    "nan_fraction_fit": 0.06424278846153846,
+    "nmse": 1.1963345190604626,
+    "nrmse": 1.0937707799445286
+   },
+   "m0c1rf": {
+    "n_features": 8,
+    "nan_fraction_fit": 0.06424278846153846,
+    "nmse": 1.3314355113193868,
+    "nrmse": 1.1538784647090814
+   },
+   "m1c0rf": {
+    "n_features": 8,
+    "nan_fraction_fit": 0.3842548076923077,
+    "nmse": 1.4090408845187918,
+    "nrmse": 1.1870302795290404
+   },
+   "m1c1rf": {
+    "n_features": 8,
+    "nan_fraction_fit": 0.3842548076923077,
+    "nmse": 0.7244907954809977,
+    "nrmse": 0.8511702505850388
+   }
+  },
+  "512": {
+   "m0c0rf": {
+    "n_features": 8,
+    "nan_fraction_fit": 0.10732421875,
+    "nmse": 0.8104436803619712,
+    "nrmse": 0.9002464553454077
+   },
+   "m0c1rf": {
+    "n_features": 8,
+    "nan_fraction_fit": 0.10732421875,
+    "nmse": 0.8963746993366599,
+    "nrmse": 0.9467706688193609
+   },
+   "m1c0rf": {
+    "n_features": 8,
+    "nan_fraction_fit": 0.367333984375,
+    "nmse": 0.8728139187129162,
+    "nrmse": 0.9342451063360815
+   },
+   "m1c1rf": {
+    "n_features": 8,
+    "nan_fraction_fit": 0.367333984375,
+    "nmse": 0.7159078053498393,
+    "nrmse": 0.8461133525419862
+   }
+  }
+ },
+ "rng_namespace": "mcr_v1c",
+ "runner_sha256": "e326622548140a0d8805b788c283feae4041a3292fb31c14091f12a6f97a51c7",
+ "support_ks": [
+  32,
+  512
+ ],
+ "wall_seconds": 3.6
+}

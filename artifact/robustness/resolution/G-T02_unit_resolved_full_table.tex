@@ -1,0 +1,85 @@
+% Phase-3 archived appendix unit
+% Phase-2 Unit ID(s): G-T02
+% Original location: Robustness / unit-resolved heterogeneity
+% Original source SHA-256: 726916622e270ad0c5fd157c2a9821e84742065551d407a942ac397611d5460c
+% Provenance: Descriptive unit-level attribution
+% Original label(s): tab:app-unit-attribution; tab:app_real_units
+% Compact PDF replacement: Claim-local heterogeneity summaries in Phase-3 Sections D, E, and G
+% Content below is copied verbatim from the authoritative appendix.
+
+% Original lines 1720--1793
+\subsection{Unit-resolved heterogeneity and extended CAMELS scope}
+
+Table~\ref{tab:app-unit-attribution} reports endpoint- and basin-level means
+behind the aggregate attribution tables.  These rows are descriptive, not
+independent seed-level tests.  Content-sensitivity effects for relation knowledge have a consistent sign
+across all HRS endpoints and the original 12 CAMELS basins, whereas their
+predictive utilities fluctuate around zero.  Predictive utility for correspondence knowledge is heterogeneous
+across survey endpoints even when intended-versus-wrong content sensitivity separates.
+The 120-basin CAMELS extension is an additional analysis fixed before execution:
+content sensitivity replicates and the utility remains unresolved on its own metric
+scale (Table~\ref{tab:app-relation-full}).
+
+{\scriptsize\setlength{\tabcolsep}{2.5pt}
+\begin{longtable}{P{0.045\linewidth}P{0.27\linewidth}P{0.23\linewidth}rr}
+\caption{Unit-resolved real-data attribution. Entries are seed-averaged unit effects in each setting's native metric. Positive values favor the intended condition. Unit rows are descriptive; inferential intervals are computed on the aggregate independent units and reported in Table~\ref{tab:app-relation-full} and the main paper.}\label{tab:app-unit-attribution}\label{tab:app_real_units}\\
+\toprule
+Kind & Setting & Endpoint or basin & Content sensitivity & Predictive utility \\
+\midrule
+\endfirsthead
+\multicolumn{5}{c}{\tablename\ \thetable\ (continued)}\\
+\toprule Kind & Setting & Endpoint or basin & Content sensitivity & Predictive utility \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+$M$ & NHANES--KNHANES labels & Smoking & +.144 & +.201 \\
+$M$ & NHANES--KNHANES labels & Diabetes & +.359 & +.556 \\
+$M$ & NHANES--KNHANES labels & Hypertension & +.372 & +.396 \\
+\addlinespace[1pt]
+$C$ & Exam binding · original XGB & DBP & +.011 & n/e \\
+$C$ & Exam binding · original XGB & Glucose & +.162 & n/e \\
+$C$ & Exam binding · original XGB & SBP & +.054 & n/e \\
+$C$ & Exam binding · original XGB & Total cholesterol & +.020 & n/e \\
+$C$ & Exam binding · original XGB & Triglycerides & +.051 & n/e \\
+$C$ & Exam binding · original XGB & Waist circumference & +.090 & n/e \\
+\addlinespace[1pt]
+$C$ & Survey binding · XGB & Smoking & +.042 & -.010 \\
+$C$ & Survey binding · XGB & Diabetes & +.072 & +.076 \\
+$C$ & Survey binding · XGB & Hypertension & +.022 & +.016 \\
+\addlinespace[1pt]
+$C$ & Survey binding · HistGB & Smoking & +.025 & -.024 \\
+$C$ & Survey binding · HistGB & Diabetes & +.089 & +.073 \\
+$C$ & Survey binding · HistGB & Hypertension & +.038 & +.012 \\
+\addlinespace[1pt]
+$R$ & NHANES--KNHANES & DBP & +.183 & +.007 \\
+$R$ & NHANES--KNHANES & Glucose & +.218 & -.013 \\
+$R$ & NHANES--KNHANES & SBP & +.193 & -.002 \\
+$R$ & NHANES--KNHANES & Total cholesterol & +.010 & -.004 \\
+$R$ & NHANES--KNHANES & Triglycerides & +.051 & -.001 \\
+$R$ & NHANES--KNHANES & Waist circumference & +.445 & +.002 \\
+\addlinespace[1pt]
+$R$ & NHANES/KNHANES--HRS & BUN & +.210 & +.004 \\
+$R$ & NHANES/KNHANES--HRS & DBP & +.276 & +.002 \\
+$R$ & NHANES/KNHANES--HRS & Glucose & +.068 & +.004 \\
+$R$ & NHANES/KNHANES--HRS & HbA1c & +.177 & +.019 \\
+$R$ & NHANES/KNHANES--HRS & Hematocrit & +.531 & +.001 \\
+$R$ & NHANES/KNHANES--HRS & RBC & +.288 & +.000 \\
+$R$ & NHANES/KNHANES--HRS & SBP & +.312 & -.014 \\
+\addlinespace[1pt]
+$R$ & CAMELS-US--GB & Basin 7003 & +.155 & +.000 \\
+$R$ & CAMELS-US--GB & Basin 25006 & +.169 & -.000 \\
+$R$ & CAMELS-US--GB & Basin 33058 & +.090 & -.001 \\
+$R$ & CAMELS-US--GB & Basin 34012 & +.032 & -.001 \\
+$R$ & CAMELS-US--GB & Basin 37008 & +.094 & -.002 \\
+$R$ & CAMELS-US--GB & Basin 39054 & +.153 & +.003 \\
+$R$ & CAMELS-US--GB & Basin 52006 & +.153 & +.001 \\
+$R$ & CAMELS-US--GB & Basin 60005 & +.281 & -.001 \\
+$R$ & CAMELS-US--GB & Basin 73015 & +.193 & +.005 \\
+$R$ & CAMELS-US--GB & Basin 80006 & +.463 & +.008 \\
+$R$ & CAMELS-US--GB & Basin 82001 & +.222 & -.004 \\
+$R$ & CAMELS-US--GB & Basin 84008 & +.206 & +.001 \\
+\end{longtable}
+\noindent{\footnotesize\emph{Note.} Predictive utility is not evaluable (n/e) for the original examination condition because removing binding also removes its member columns. The post-result width-matched domain-local reference is reported separately in Table~\ref{tab:app-exam-no-bridge}.}
+ }
+

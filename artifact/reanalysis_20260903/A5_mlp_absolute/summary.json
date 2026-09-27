@@ -1,0 +1,21 @@
+{
+  "bootstrap": {
+    "reps": 10000,
+    "seed": 20260820,
+    "unit": "paired realization within stratum"
+  },
+  "interpretive_question": "Assess whether MLP intended-cell nMSE is comparable to tree learners while reference/wrong cells and derived effects differ, distinguishing replication from learner-coverage stress testing.",
+  "machine_readable_outputs": [
+    "mlp_absolute_nmse.csv",
+    "contrasts.csv",
+    "learner_comparisons.csv"
+  ],
+  "max_mlp_parent_arm_mean_error": 0.0,
+  "max_tree_parent_contrast_error": 0.0,
+  "sources": [
+    "experiments/crta_v3_mcr_factorial_semisynth_v1/primary",
+    "experiments/crta_v3_mcr_factorial_mlp_v1",
+    "scripts/summarize_crta_v3_mcr_factorial_mlp_v1.py"
+  ],
+  "status": "complete"
+}

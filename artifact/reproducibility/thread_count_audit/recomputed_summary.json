@@ -1,0 +1,38 @@
+{
+  "origin": "NEW packaging analysis of original stored aggregate metrics; no fits rerun",
+  "comparisons": [
+    {
+      "comparison": "one_thread_rerun",
+      "backbone": "histgb",
+      "n": 400,
+      "exact_unequal": 0,
+      "unequal_at_1e12": 0,
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "comparison": "one_thread_rerun",
+      "backbone": "xgb",
+      "n": 400,
+      "exact_unequal": 0,
+      "unequal_at_1e12": 0,
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "comparison": "original_value_redundancy",
+      "backbone": "histgb",
+      "n": 400,
+      "exact_unequal": 104,
+      "unequal_at_1e12": 92,
+      "maximum_absolute_difference": 0.0075280473881012
+    },
+    {
+      "comparison": "original_value_redundancy",
+      "backbone": "xgb",
+      "n": 400,
+      "exact_unequal": 16,
+      "unequal_at_1e12": 0,
+      "maximum_absolute_difference": 2.220446049250313e-16
+    }
+  ],
+  "scope": "Five common arm nMSEs only. Stored JSON numeric equality, not in-memory binary identity. Thread=1 is explicit in ladder metrics; original VR/rerun metrics omit thread field; historical prose supplies that attribution."
+}

@@ -1,0 +1,64 @@
+{
+ "arms": [
+  "S_shared_bridge",
+  "W_deranged_bridge",
+  "R_domain_local"
+ ],
+ "matrix_shapes": {
+  "R_domain_local": [
+   60380,
+   27
+  ],
+  "S_shared_bridge": [
+   60380,
+   27
+  ],
+  "W_deranged_bridge": [
+   60380,
+   27
+  ]
+ },
+ "member_slots": [
+  "height_cm",
+  "weight_kg",
+  "sbp",
+  "dbp",
+  "glucose",
+  "hba1c",
+  "total_cholesterol",
+  "triglycerides"
+ ],
+ "metric": "query_sd_normalized_rmse (lower is better)",
+ "n_pool": 8078,
+ "n_query": 15325,
+ "n_source": 60124,
+ "nrmse": {
+  "R_domain_local": 0.38725443757054023,
+  "S_shared_bridge": 0.32096350634020565,
+  "W_deranged_bridge": 0.4329497095262435
+ },
+ "seed": 57,
+ "support_rows": 256,
+ "target": "waist_cm",
+ "target_derangement": {
+  "dbp": "weight_kg",
+  "glucose": "sbp",
+  "hba1c": "total_cholesterol",
+  "height_cm": "hba1c",
+  "sbp": "dbp",
+  "total_cholesterol": "glucose",
+  "triglycerides": "height_cm",
+  "weight_kg": "triglycerides"
+ },
+ "task": "crta_v3_exam_no_bridge_reference_v1",
+ "wall_seconds": 12.6,
+ "xgb": {
+  "colsample_bytree": 1.0,
+  "learning_rate": 0.05,
+  "max_depth": 6,
+  "n_estimators": 300,
+  "reg_lambda": 1.0,
+  "subsample": 0.8,
+  "threads": 2
+ }
+}

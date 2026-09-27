@@ -1,0 +1,81 @@
+{
+ "V1_pipeline_vs_placebo": {
+  "best_target": "glucose",
+  "ci95": [
+   -0.010835111529496939,
+   0.009769169748146313
+  ],
+  "drop_best_target_mean": -0.005711346212102611,
+  "mean_gain": -0.0012680362953297792,
+  "n_pairs": 60,
+  "per_target_mean": {
+   "dbp": -0.01860886725142653,
+   "glucose": 0.020948513288534375,
+   "sbp": -0.007440671610078253,
+   "total_cholesterol": 0.0013172384611206955,
+   "triglycerides": 0.0029965608142703435,
+   "waist_cm": -0.006820991474399307
+  },
+  "separated": false,
+  "win_rate": 0.35
+ },
+ "V2_llm_vs_placebo": {
+  "best_target": "dbp",
+  "ci95": [
+   0.0009000407193860965,
+   0.01921732887549399
+  ],
+  "drop_best_target_mean": 0.004591246329762614,
+  "mean_gain": 0.009052648987239969,
+  "n_pairs": 60,
+  "per_target_mean": {
+   "dbp": 0.03135966227462674,
+   "glucose": 0.0025829543568079314,
+   "sbp": 0.005329740606776245,
+   "total_cholesterol": 0.002410728019493558,
+   "triglycerides": -0.00036189596606373,
+   "waist_cm": 0.012994704631799064
+  },
+  "separated": true,
+  "win_rate": 0.7166666666666667
+ },
+ "V3_pipeline_vs_llm_descriptive": {
+  "best_target": "glucose",
+  "ci95": [
+   -0.028468505276858812,
+   0.005889504648950468
+  ],
+  "drop_best_target_mean": -0.016057934125428986,
+  "mean_gain": -0.010320685282569745,
+  "n_pairs": 60,
+  "per_target_mean": {
+   "dbp": -0.049968529526053275,
+   "glucose": 0.018365558931726443,
+   "sbp": -0.012770412216854498,
+   "total_cholesterol": -0.001093489558372862,
+   "triglycerides": 0.0033584567803340735,
+   "waist_cm": -0.01981569610619837
+  },
+  "separated": false,
+  "win_rate": 0.35
+ },
+ "bootstrap": {
+  "hierarchy": "targets then seeds",
+  "reps": 10000,
+  "seed": 20260819
+ },
+ "experiment_root": "experiments/crta_v3_measurement_harmonization_ablation_v1",
+ "gate_pipeline_minus_raw_mean": -0.007450092094458391,
+ "gate_testbed_insensitive": false,
+ "metric": "query_sd_normalized_rmse (lower is better); gain = reference - arm",
+ "n_cells": 60,
+ "primary_k": 256,
+ "targets_present": [
+  "dbp",
+  "glucose",
+  "sbp",
+  "total_cholesterol",
+  "triglycerides",
+  "waist_cm"
+ ]
+}

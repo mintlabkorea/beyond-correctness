@@ -1,0 +1,188 @@
+{
+ "bootstrap": {
+  "reps": 10000,
+  "seed": 20260820,
+  "unit": "realization within fixed family"
+ },
+ "complete": true,
+ "construction_checks": {
+  "all_label_multisets_identical": true,
+  "all_permutations_have_zero_fixed_points": true,
+  "max_abs_feature_label_corr_after": 0.05577677125154749
+ },
+ "equivalence_margin": [
+  -0.05,
+  0.05
+ ],
+ "estimand": "Q(m1c1rf)-Q(m1c0rf)-Q(m0c1rf)+Q(m0c0rf)",
+ "metric": "Q=-MSE/Var(y_query)",
+ "n_cells": 60,
+ "original_signal_source_reference": {
+  "histgb": {
+   "additive": {
+    "ci95": [
+     0.3487575420508203,
+     0.4960532151846863
+    ],
+    "ci_contains_zero": false,
+    "mean": 0.4203166542614071,
+    "n": 20,
+    "separated": true,
+    "win": 1.0
+   },
+   "pairwise": {
+    "ci95": [
+     0.2763390726683569,
+     0.4600486919648496
+    ],
+    "ci_contains_zero": false,
+    "mean": 0.37027015474188146,
+    "n": 20,
+    "separated": true,
+    "win": 0.95
+   },
+   "sparse": {
+    "ci95": [
+     0.2890149783151885,
+     0.5272785336790003
+    ],
+    "ci_contains_zero": false,
+    "mean": 0.4040694191231543,
+    "n": 20,
+    "separated": true,
+    "win": 1.0
+   }
+  },
+  "xgb": {
+   "additive": {
+    "ci95": [
+     0.3511776474667212,
+     0.49289561068293963
+    ],
+    "ci_contains_zero": false,
+    "mean": 0.41920989230900557,
+    "n": 20,
+    "separated": true,
+    "win": 1.0
+   },
+   "pairwise": {
+    "ci95": [
+     0.2803176664562411,
+     0.45796395510702154
+    ],
+    "ci_contains_zero": false,
+    "mean": 0.36955313436740694,
+    "n": 20,
+    "separated": true,
+    "win": 0.95
+   },
+   "sparse": {
+    "ci95": [
+     0.2896734430502076,
+     0.517481569456001
+    ],
+    "ci_contains_zero": false,
+    "mean": 0.4001793488434962,
+    "n": 20,
+    "separated": true,
+    "win": 1.0
+   }
+  }
+ },
+ "provenance_variants": [
+  [
+   "54990b8b57043a5106907bff9646799544be7d0a5dddaccb32f65ee284067304",
+   "c753e142f3af884a9f9b0d635e67465e8d8e0e20cefbb13f09006be56753e4a0",
+   "231a025ab2fc9562c5a0300df302e766b5cc124425b3dae16924837c7ca7392a",
+   "6af2215c72a65ecc306e5c4d3d9af5b61b16a073dd5aa4c0f33b178741245a25"
+  ]
+ ],
+ "results": {
+  "histgb": {
+   "additive": {
+    "ci95": [
+     -0.0903793408122756,
+     0.010038625405283039
+    ],
+    "ci_contains_zero": true,
+    "ci_within_equivalence_margin": false,
+    "falsification_pass": false,
+    "mean": -0.03805599419446533,
+    "mean_within_margin": true,
+    "n": 20,
+    "win": 0.4
+   },
+   "pairwise": {
+    "ci95": [
+     -0.10436824936054308,
+     -0.026151119959342245
+    ],
+    "ci_contains_zero": false,
+    "ci_within_equivalence_margin": false,
+    "falsification_pass": false,
+    "mean": -0.06552619047791669,
+    "mean_within_margin": false,
+    "n": 20,
+    "win": 0.2
+   },
+   "sparse": {
+    "ci95": [
+     -0.107594685880364,
+     -0.029017780785337687
+    ],
+    "ci_contains_zero": false,
+    "ci_within_equivalence_margin": false,
+    "falsification_pass": false,
+    "mean": -0.06790024847159433,
+    "mean_within_margin": false,
+    "n": 20,
+    "win": 0.2
+   }
+  },
+  "xgb": {
+   "additive": {
+    "ci95": [
+     -0.09259913304584781,
+     0.005598467924153725
+    ],
+    "ci_contains_zero": true,
+    "ci_within_equivalence_margin": false,
+    "falsification_pass": false,
+    "mean": -0.043038211909293425,
+    "mean_within_margin": true,
+    "n": 20,
+    "win": 0.35
+   },
+   "pairwise": {
+    "ci95": [
+     -0.10034906913007068,
+     -0.02186375170615742
+    ],
+    "ci_contains_zero": false,
+    "ci_within_equivalence_margin": false,
+    "falsification_pass": false,
+    "mean": -0.061978943319188254,
+    "mean_within_margin": false,
+    "n": 20,
+    "win": 0.25
+   },
+   "sparse": {
+    "ci95": [
+     -0.11406360697201179,
+     -0.024441465038823395
+    ],
+    "ci_contains_zero": false,
+    "ci_within_equivalence_margin": false,
+    "falsification_pass": false,
+    "mean": -0.06957151508124722,
+    "mean_within_margin": false,
+    "n": 20,
+    "win": 0.2
+   }
+  }
+ },
+ "verdict": {
+  "NULL_SOURCE_P1_equivalent_to_zero_all_6_strata": false,
+  "status": "fail_quarantine_MCxC_mechanism_claim"
+ }
+}

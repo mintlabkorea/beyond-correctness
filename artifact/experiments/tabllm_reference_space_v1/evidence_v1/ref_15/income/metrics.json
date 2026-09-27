@@ -1,0 +1,95 @@
+{
+  "analysis_status": "frozen_reference_space_evidence",
+  "base_runner_sha256": "58697774da35b4d2ed573045618d66f557ebf29ffadbd269539862c2dc802b9a",
+  "checkpoint_audit": {
+    "checkpoint_key_count": 192,
+    "checkpoint_parameter_count": 1081344,
+    "missing_base_model_key_count": 752
+  },
+  "checkpoint_source_tfew_commit": "114deced63ae722a368e06cb08ea956b20c393a6",
+  "choices": [
+    "No",
+    "Yes"
+  ],
+  "dataset": "income",
+  "ia3_checkpoint_sha256": "8fe7a00fb425dd331c7a021c9468d50a14ec2ca1998007e7ead5ce3111405729",
+  "metrics": {
+    "0": {
+      "accuracy": 0.7797113317637424,
+      "auc": 0.7133615809339694,
+      "n_test": 9769
+    },
+    "1": {
+      "accuracy": 0.773978912887706,
+      "auc": 0.7280514059177191,
+      "n_test": 9769
+    },
+    "1024": {
+      "accuracy": 0.7753096529839287,
+      "auc": 0.7176440842665575,
+      "n_test": 9769
+    },
+    "32": {
+      "accuracy": 0.7719316204319787,
+      "auc": 0.7232675186762556,
+      "n_test": 9769
+    },
+    "42": {
+      "accuracy": 0.7767427577029379,
+      "auc": 0.733328325217989,
+      "n_test": 9769
+    },
+    "mean": {
+      "accuracy": 0.7755348551540587,
+      "auc": 0.7231305830024981,
+      "auc_sd_population": 0.007124075597994626
+    }
+  },
+  "model_path": "external/.cache/huggingface/hub/models--bigscience--T0/snapshots/1cfa27271f8085c29323c94bd659004b210f20b5",
+  "n_full": 48842,
+  "n_scored_union": 32680,
+  "permutation": [
+    6,
+    11,
+    2,
+    3,
+    7,
+    5,
+    1,
+    4,
+    9,
+    10,
+    0,
+    8
+  ],
+  "protocol_sha256": "2ce490262b95ed7f70781f93386083cee252c6a54c89740942fe3c95bcfd8b09",
+  "reference_id": "ref_15",
+  "reference_manifest_sha256": "7fe208e544a954ebd2c15e273473d604107a22e49230631101466ab97097d8da",
+  "runner_sha256": "b616a0bd7d1a657981078bc1938bcc0fbb7d674a30770e7feb4cd7b11ad9a48a",
+  "scoring": {
+    "batch_size": 16,
+    "device": "cuda:1",
+    "length_normalization": 1,
+    "max_input_tokens": 1024,
+    "test_fraction": 0.2,
+    "test_split_seeds": [
+      42,
+      1024,
+      0,
+      1,
+      32
+    ]
+  },
+  "tabllm_commit": "71f6647c523aa6fd35df94ad76207c4377248c49",
+  "template_sha256": "00e7947c5a7ffb677c08118758097e77aba546c29c885c58b9a3eea7a384c818",
+  "tfew_execution_commit": "114deced63ae722a368e06cb08ea956b20c393a6",
+  "versions": {
+    "datasets": "2.14.7",
+    "numpy": "2.2.6",
+    "python": "3.10.20",
+    "scikit_learn": "1.7.2",
+    "torch": "2.12.0.dev20260408+cu128",
+    "transformers": "4.30.0"
+  },
+  "wall_seconds": 187.242
+}

@@ -1,0 +1,279 @@
+version: v1
+
+target_sets:
+  clean_main_targets_v1:
+    description: >
+      Legacy probe-oriented benchmark targets for baseline comparison.
+      Retained as a historical reference after the downstream-aligned objective-only
+      reset moved the main benchmark focus toward metabolic and cardiometabolic anchors.
+    targets:
+      - hematocrit
+      - rbc
+      - wbc
+      - alt
+      - bun
+
+  objective_anchor_targets_v1:
+    description: >
+      Main objective-only anchor targets for the downstream-aligned baseline reset.
+      These targets are intended to reflect the real near-term modeling purpose:
+      metabolic and cardiometabolic state prediction under cross-cohort transfer.
+      This set is the primary evaluation center for the next baseline reset.
+    targets:
+      - hba1c
+      - glucose
+      - waist_cm
+      - triglycerides
+      - sbp
+      - dbp
+      - pulse_rate
+      - total_cholesterol
+
+  objective_anchor_targets_v1_safe:
+    description: >
+      First-run safe anchor subset for the objective-only baseline reset.
+      This keeps the downstream-aligned anchor focus while temporarily excluding
+      pulse_rate and hba1c until the KNHANES source mapping / scale sanity checks
+      are resolved.
+    targets:
+      - glucose
+      - waist_cm
+      - triglycerides
+      - sbp
+      - dbp
+      - total_cholesterol
+
+  objective_diversified_primary_targets_v1:
+    description: >
+      Diversified stage-1 validation panel intended to reduce over-reading of
+      relation-aware gains on tightly clustered cardiometabolic targets alone.
+      This panel keeps one main representative from each major usable family in
+      the current NHANES↔KNHANES objective benchmark slice.
+    targets:
+      - waist_cm
+      - sbp
+      - glucose
+      - total_cholesterol
+      - alt
+      - wbc
+
+  objective_broader_validation_targets_v1:
+    description: >
+      Benchmark-facing alias for the diversified primary panel. Use this set
+      when running the main stage-1 relation-aware validation comparisons so the
+      broader validation layer is named explicitly in run manifests and summary
+      outputs.
+    targets:
+      - waist_cm
+      - sbp
+      - glucose
+      - total_cholesterol
+      - alt
+      - wbc
+
+  objective_stress_deferred_targets_v1:
+    description: >
+      Stress and deferred targets for stage-1 interpretation only. These are
+      useful for diagnostics and data-quality checks, but should not dominate
+      method proceed decisions until the known mapping or stability cautions are
+      resolved.
+    targets:
+      - bun
+      - hba1c
+      - pulse_rate
+
+  objective_stress_deferred_targets_with_proxy_v1:
+    description: >
+      Deferred target slice that keeps the sparse raw pulse target and its dense
+      15-second-times-4 proxy side by side for direct comparison runs. Use this
+      set when checking whether coverage rather than concept fidelity is the main
+      limiter for pulse-rate transfer.
+    targets:
+      - bun
+      - hba1c
+      - pulse_rate
+      - pulse_rate_proxy
+
+  objective_broader_validation_targets_v2:
+    description: >
+      Expanded stage-1 relation-utility panel for mapping where relation priors
+      help, stay neutral, or harm performance across a wider set of currently
+      runnable NHANES↔KNHANES targets. This panel intentionally spans
+      anthropometry, cardiometabolic, liver, renal, and hematology targets
+      while keeping the known unstable hba1c item out of the main proceed
+      lens.
+    targets:
+      - waist_cm
+      - sbp
+      - dbp
+      - pulse_rate
+      - glucose
+      - total_cholesterol
+      - triglycerides
+      - alt
+      - bun
+      - creatinine
+      - wbc
+      - hemoglobin
+      - hematocrit
+      - rbc
+
+  objective_broader_validation_targets_v2_deferred:
+    description: >
+      Deferred add-on slice for the expanded stage-1 panel. These targets are
+      important but still carry explicit KNHANES value-quality cautions, so
+      they should be read separately from the main v2 proceed panel.
+    targets:
+      - hba1c
+      - bilirubin_total
+
+  frailty_proximal_validation_targets_v0:
+    description: >
+      Frailty-adjacent proxy panel for concept-layer method lock before full
+      NHANES/KNHANES SSL training. This set spans metabolic burden,
+      cardiometabolic state, pulse/hemodynamic state, renal stress, and
+      hematologic oxygen-carrying context so proceed decisions are not based on
+      tightly clustered lab targets alone. Use this panel to compare concept
+      granularity choices before reintroducing explicit relation modules.
+    targets:
+      - waist_cm
+      - sbp
+      - dbp
+      - pulse_rate
+      - glucose
+      - hba1c
+      - total_cholesterol
+      - triglycerides
+      - creatinine
+      - hemoglobin
+      - hematocrit
+      - rbc
+      - wbc
+
+  objective_probe_targets_v1:
+    description: >
+      Probe / anti-regression targets retained to check that the reset does not
+      silently degrade established lab-prediction behavior. These are not the
+      main downstream anchors.
+    targets:
+      - hematocrit
+      - rbc
+      - wbc
+
+  objective_reset_targets_v1:
+    description: >
+      Combined target set for the first downstream-aligned objective-only baseline
+      reset. The main interpretation should center on the anchor subset, while the
+      probe subset remains secondary anti-regression context.
+    targets:
+      - hba1c
+      - glucose
+      - waist_cm
+      - triglycerides
+      - sbp
+      - dbp
+      - pulse_rate
+      - total_cholesterol
+      - hematocrit
+      - rbc
+      - wbc
+
+  hematology_targets_v1:
+    description: Hematology family targets.
+    targets:
+      - hematocrit
+      - rbc
+      - wbc
+
+  renal_targets_v1:
+    description: Renal family targets.
+    targets:
+      - bun
+
+  liver_targets_v1:
+    description: Liver family targets currently considered stable enough for baseline.
+    targets:
+      - alt
+
+  candidate_targets_v1:
+    description: >
+      Candidate targets not included in the main standardized benchmark until mapping
+      and distribution sanity checks are fully confirmed.
+    targets:
+      - bilirubin_total
+
+  leakage_adjacent_targets_v1:
+    description: >
+      Targets that overlap with shared clinical feature candidates and are therefore
+      reserved for controlled ablation rather than the first main table.
+    targets:
+      - glucose
+      - hba1c
+      - hemoglobin
+      - creatinine
+      - waist_cm
+      - total_cholesterol
+      - triglycerides
+
+  family_expansion_targets_v1:
+    description: >
+      Expansion set used after main benchmark stabilization.
+    targets:
+      - hematocrit
+      - rbc
+      - wbc
+      - alt
+      - bun
+      - bilirubin_total
+      - glucose
+      - hba1c
+      - hemoglobin
+      - creatinine
+      - waist_cm
+      - sbp
+      - dbp
+      - pulse_rate
+      - total_cholesterol
+      - triglycerides
+
+  scenario_a_tier_a_targets_v0:
+    description: >
+      Fixed Tier-A target panel for the first official Scenario-A downstream
+      comparison. This is the exact four-target set locked in the stage-1B
+      foundation evaluation contract.
+    targets:
+      - glucose
+      - total_cholesterol
+      - sbp
+      - waist_cm
+
+  cross_cohort_primary_targets_v2:
+    description: >
+      First reviewed measurement-track cross-cohort primary panel built from
+      the harmonization registry seed v2. This keeps relation-sensitive CBC
+      targets plus hard metabolic targets, while leaving DXA on the expansion
+      path.
+    targets:
+      - wbc
+      - rbc
+      - hemoglobin
+      - hematocrit
+      - platelet
+      - glucose
+      - total_cholesterol
+      - triglycerides
+
+  cross_cohort_primary_targets_exec_v2:
+    description: >
+      Executable subset of the reviewed measurement-track primary panel under
+      the current processed NHANES/KNHANES benchmark tables. Platelet remains
+      in the reviewed harmonization seed but is excluded here because the
+      current KNHANES processed parquet lacks the platelet slot.
+    targets:
+      - wbc
+      - rbc
+      - hemoglobin
+      - hematocrit
+      - glucose
+      - total_cholesterol
+      - triglycerides

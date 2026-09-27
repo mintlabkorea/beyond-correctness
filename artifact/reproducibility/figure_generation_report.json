@@ -1,0 +1,152 @@
+{
+  "figures": [
+    {
+      "paper_item": "fig:ref_sensitivity",
+      "generator": "iclr_latex_v3/scripts/make_reference_sensitivity_figure.py",
+      "inputs": [
+        "experiments/tabllm_reference_space_v1/summary_v1/SUMMARY_V1.json",
+        "experiments/tabllm_reference_space_v1/summary_v1/reference_utilities.csv"
+      ],
+      "status": "PASS",
+      "outputs": [
+        "generated/figures/figure_reference_sensitivity.pdf",
+        "generated/figures/figure_reference_sensitivity.png"
+      ],
+      "input_sha256": {
+        "experiments/tabllm_reference_space_v1/summary_v1/SUMMARY_V1.json": "8ba6f21b3ce0e54b9030505be8a494e9f83f8b5960ced6e1fb1c0c6fbe71fc21",
+        "experiments/tabllm_reference_space_v1/summary_v1/reference_utilities.csv": "5b1b05d95954c21f1bca5d2c6f0159c8e2505f27d4a775b7e89987e34ca5ddaf"
+      }
+    },
+    {
+      "paper_item": "fig:real_support_reference",
+      "generator": "iclr_latex_v3/scripts/make_main_figures.py:make_real_support_reference_figure",
+      "inputs": [
+        "experiments/crta_v3_mcr_mismatch_support_ladder_v1/SUMMARY_V1.json",
+        "experiments/tabllm_ranon_support_ladder_v1/SUMMARY_V1.json",
+        "experiments/crta_v3_exam_support_ladder_v1/SUMMARY_V1.json"
+      ],
+      "status": "PASS",
+      "outputs": [
+        "generated/figures/figure2_real_support_reference.pdf",
+        "generated/figures/figure2_real_support_reference.png"
+      ],
+      "input_sha256": {
+        "experiments/crta_v3_mcr_mismatch_support_ladder_v1/SUMMARY_V1.json": "aa0e1f70811b12686bc5295cc7950e7071bb14c987de379cf655b317b1f5b757",
+        "experiments/tabllm_ranon_support_ladder_v1/SUMMARY_V1.json": "1522bdaffe03cad2a6574f8434882be24f8141d72914232f9f6e234c83832ad3",
+        "experiments/crta_v3_exam_support_ladder_v1/SUMMARY_V1.json": "cdf03fcb6f86d5219bbd20493ef79df26776e77ea88f37fb84b1c99e426f078f"
+      }
+    },
+    {
+      "paper_item": "fig:app-correspondence-decoy-damage",
+      "generator": "iclr_latex_v3/scripts/make_appendix_assets.py:plot_a7_decoy_damage",
+      "inputs": [
+        "experiments/crta_v3_decoy_compiler_specificity_v1/SUMMARY_V1.json"
+      ],
+      "status": "PASS",
+      "outputs": [
+        "generated/figures/appendix_figure_a7_decoy_damage.pdf",
+        "generated/figures/appendix_figure_a7_decoy_damage.png"
+      ],
+      "input_sha256": {
+        "experiments/crta_v3_decoy_compiler_specificity_v1/SUMMARY_V1.json": "2a44f3aacad1476f9b19171c4c137640c600617a9fc78ea000b130511f6d5077"
+      }
+    },
+    {
+      "paper_item": "fig:app-measurement-dose",
+      "generator": "iclr_latex_v3/scripts/make_appendix_assets.py:plot_a2_mismatch_grid",
+      "inputs": [
+        "experiments/crta_v3_mcr_mismatch_dose_v1/SUMMARY_V1.json",
+        "experiments/crta_v3_mcr_mismatch_dose_tabpfn_v1/SUMMARY_V1.json",
+        "experiments/crta_v3_mcr_mismatch_dose_k512_extension_v1/SUMMARY_V1.json"
+      ],
+      "status": "PASS",
+      "outputs": [
+        "generated/figures/appendix_figure_a2_mismatch_grid.pdf",
+        "generated/figures/appendix_figure_a2_mismatch_grid.png"
+      ],
+      "input_sha256": {
+        "experiments/crta_v3_mcr_mismatch_dose_v1/SUMMARY_V1.json": "bc95d343a64af0c3a01645a5a7f0a67b8acb7fe71361afaafdaacd6cffe1a47f",
+        "experiments/crta_v3_mcr_mismatch_dose_tabpfn_v1/SUMMARY_V1.json": "1d4ef4b7963f4f13e77ce884387aad6159d7c04cddd1bc22377b1af76e186bdb",
+        "experiments/crta_v3_mcr_mismatch_dose_k512_extension_v1/SUMMARY_V1.json": "41a3bcb6be19e03a16f332d8f40589ee1bc66cd45f4ec9ffb6f9b3c7b68428dc"
+      }
+    },
+    {
+      "paper_item": "fig:app-redundancy-ladder",
+      "generator": "iclr_latex_v3/scripts/make_appendix_assets.py:plot_redundancy_ladder",
+      "inputs": [
+        "experiments/crta_v3_mcr_redundancy_ladder_v1/SUMMARY_V1.json"
+      ],
+      "status": "PASS",
+      "outputs": [
+        "generated/figures/appendix_figure_a8_redundancy_ladder.pdf",
+        "generated/figures/appendix_figure_a8_redundancy_ladder.png"
+      ],
+      "input_sha256": {
+        "experiments/crta_v3_mcr_redundancy_ladder_v1/SUMMARY_V1.json": "248b1170c37d196330f6890052a5165012d65f924f659ceaa8c31fda33353a9b"
+      }
+    },
+    {
+      "paper_item": "fig:app-tabllm-support-by-dataset",
+      "generator": "iclr_latex_v3/scripts/make_appendix_assets.py:plot_tabllm_support_by_dataset",
+      "inputs": [
+        "experiments/tabllm_ranon_support_ladder_v1/SUMMARY_V1.json"
+      ],
+      "status": "PASS",
+      "outputs": [
+        "generated/figures/appendix_figure_tabllm_support_by_dataset.pdf",
+        "generated/figures/appendix_figure_tabllm_support_by_dataset.png"
+      ],
+      "input_sha256": {
+        "experiments/tabllm_ranon_support_ladder_v1/SUMMARY_V1.json": "1522bdaffe03cad2a6574f8434882be24f8141d72914232f9f6e234c83832ad3"
+      }
+    },
+    {
+      "paper_item": "fig:app-interaction-controlled-real",
+      "generator": "iclr_latex_v3/scripts/make_appendix_assets.py:plot_controlled_real_mechanism",
+      "inputs": [
+        "experiments/crta_v3_mcr_source_informativeness_ladder_v1/SUMMARY_V1.json",
+        "experiments/crta_v3_stage_source_informativeness_ladder_v1/SUMMARY_V1.json",
+        "experiments/crta_v3_stage_source_ladder_v2_source_only_v1/SUMMARY_V1.json"
+      ],
+      "status": "PASS",
+      "outputs": [
+        "generated/figures/appendix_figure_controlled_real_mechanism.pdf",
+        "generated/figures/appendix_figure_controlled_real_mechanism.png"
+      ],
+      "input_sha256": {
+        "experiments/crta_v3_mcr_source_informativeness_ladder_v1/SUMMARY_V1.json": "6b7f9a10206bf5a97eb0b289b4edcf74f269af6912ffdfe3b21eac60c0290c8a",
+        "experiments/crta_v3_stage_source_informativeness_ladder_v1/SUMMARY_V1.json": "ce22b4e8f0e0e081814f14247b7d369bc2ad019100fbad68e3dafb04e57f1f8a",
+        "experiments/crta_v3_stage_source_ladder_v2_source_only_v1/SUMMARY_V1.json": "339da987b6b90ae2a7ce7bc9bf0ebe524c1bf6364456459ba304a3d3e4aa8919"
+      }
+    },
+    {
+      "paper_item": "fig:app-tabllm-reference-noise",
+      "generator": "scripts/plot_tabllm_paired_reference_v1.py",
+      "inputs": [
+        "experiments/tabllm_paired_reference_decomposition_v2/SUMMARY_V1.json",
+        "experiments/tabllm_paired_reference_decomposition_v2/utility_intervals.csv"
+      ],
+      "status": "PASS",
+      "outputs": [
+        "generated/figures/paired_reference_decomposition.pdf",
+        "generated/figures/paired_reference_decomposition.png"
+      ],
+      "input_sha256": {
+        "experiments/tabllm_paired_reference_decomposition_v2/SUMMARY_V1.json": "26230ecaeaba9e7a1625c87ab8e1efae7d4093e7aaa7a774c0d821826652e690",
+        "experiments/tabllm_paired_reference_decomposition_v2/utility_intervals.csv": "e737a7b337002641e5b096754df5ab2a01097f07d8f07b024a420c15ba037ca3"
+      }
+    },
+    {
+      "paper_item": "fig:reference_construction",
+      "generator": "frozen conceptual illustration",
+      "inputs": [
+        "iclr_latex_v3/figures/reference_build.pdf"
+      ],
+      "outputs": [
+        "generated/figures/reference_build.pdf"
+      ],
+      "status": "PASS"
+    }
+  ],
+  "tables": []
+}

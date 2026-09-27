@@ -1,0 +1,101 @@
+{
+  "analysis_status": "frozen_all_reference_k512_evidence",
+  "arm": "ref_13",
+  "base_runner_sha256": "796d0bb0d17950a771c5e18fe732f955a4307956192e7329de23683e411f9447",
+  "dataset": "car",
+  "execution_device": "cuda:2",
+  "execution_num_shards": 3,
+  "execution_shard_index": 2,
+  "final_trainable_state_sha256": "dc5d45fceae1e4673f5f625409f37028751feca054aafe8ab3bae96333afc28f",
+  "ia3_checkpoint_sha256": "8fe7a00fb425dd331c7a021c9468d50a14ec2ca1998007e7ead5ce3111405729",
+  "initial_trainable_state_sha256": "2b3e0be8998a1d12a84a7b358726205cce0c83973fb198a1c37bdac6aa3fbd0b",
+  "metrics": {
+    "accuracy": 0.8872832369942196,
+    "auc": 0.9833462701515294
+  },
+  "model_audit": {
+    "checkpoint_key_count": 192,
+    "checkpoint_parameter_count": 1081344,
+    "frozen_parameter_count": 11136118784,
+    "initial_trainable_state_sha256": "2b3e0be8998a1d12a84a7b358726205cce0c83973fb198a1c37bdac6aa3fbd0b",
+    "missing_base_model_key_count": 752,
+    "parameter_dtype": "torch.bfloat16",
+    "precision_layout": "frozen=bfloat16, trainable_ia3=float32",
+    "trainable_parameter_count": 1081344,
+    "trainable_parameter_dtype": "torch.float32",
+    "trainable_tensor_count": 192
+  },
+  "model_path": "external/.cache/huggingface/hub/models--bigscience--T0/snapshots/1cfa27271f8085c29323c94bd659004b210f20b5",
+  "n_test": 346,
+  "n_train": 512,
+  "n_train_unique": 327,
+  "prior_wrapper_sha256": "62a7d917cd5450bba2af3ff548c62f4a60790f1dfdf45048fb5088017e14182d",
+  "protobuf_python_implementation": "python",
+  "protocol_sha256": "5fee5e02c870da5205e59d8f53aeb834ae374ccb5ea28f30b8b2f68f036022b0",
+  "raw_and_serialization_tree_sha256": "383519d4b1efffe01c414c1f7b12db9c7abc04aefbde0e9957c44c5eaf038763",
+  "reference_id": "ref_13",
+  "reference_manifest_sha256": "7fe208e544a954ebd2c15e273473d604107a22e49230631101466ab97097d8da",
+  "reference_permutation": [
+    5,
+    1,
+    4,
+    3,
+    0,
+    2
+  ],
+  "reference_selection_role": "exhaustive_remaining_21",
+  "reference_template_sha256": "c946747094a86668dba46e3a93e79569b34043d52b003079294716147068064a",
+  "runner_sha256": "b8e659230269249a502122b44aa58f402366660ea55ea644025d29c62759fd9b",
+  "seed": 1024,
+  "shot": 512,
+  "tabllm_commit": "71f6647c523aa6fd35df94ad76207c4377248c49",
+  "test_prompt_sha256": "503ee24f8a8f624b04ab90c4471471e4292b0b03ac5826b606ef77d8c3718478",
+  "tfew_execution_commit": "114deced63ae722a368e06cb08ea956b20c393a6",
+  "train_membership_with_replacement": true,
+  "train_prompt_sha256": "03a18231cc447ba514686622a88631786cb3d4bbf091ad9ed31972f7bed53b5e",
+  "trained_checkpoint_sha256": "7fe8c887c8f0f958828aa1abc18f6f407ea637d2ef0664891dda741ea8933de4",
+  "training": {
+    "batch_order_sha256": "d137e63883cc5f5548dcd89ed9c82bcc014c16e5df1549ab5cfbd648576dfdd9",
+    "executed_steps": 3840,
+    "loss_first": {
+      "gradient_norm_pre_clip": 1.6675552129745483,
+      "lm_loss": 2.7970545291900635,
+      "loss": 7.963963508605957,
+      "lr": 1.3020833333333334e-05,
+      "mc_loss": 2.159871816635132,
+      "unlikely_loss": 3.0070371627807617
+    },
+    "loss_last": {
+      "gradient_norm_pre_clip": 13.082618713378906,
+      "lm_loss": 0.9094344973564148,
+      "loss": 1.5194135904312134,
+      "lr": 0.0,
+      "mc_loss": 0.5636541247367859,
+      "unlikely_loss": 0.04632500559091568
+    },
+    "planned_steps": 3840
+  },
+  "training_contract": {
+    "batch_size": 4,
+    "compute_dtype": "bfloat16 base and autocast with FP32 IA3 master parameters; temporary bfloat16 IA3 evaluation copy",
+    "epochs": 30,
+    "gradient_clip": 1.0,
+    "length_norm": 1,
+    "loss": "lm + multiple_choice + unlikely",
+    "lr": 0.003,
+    "max_length": 1024,
+    "optimizer": "Adafactor(scale_parameter=True, relative_step=False)",
+    "scheduler": "linear_decay_with_warmup",
+    "warmup_ratio": 0.06
+  },
+  "versions": {
+    "datasets": "2.14.7",
+    "numpy": "2.2.6",
+    "pandas": "2.3.3",
+    "python": "3.10.20",
+    "scikit_learn": "1.7.2",
+    "torch": "2.12.0.dev20260408+cu128",
+    "transformers": "4.30.0"
+  },
+  "wall_seconds": 736.868
+}

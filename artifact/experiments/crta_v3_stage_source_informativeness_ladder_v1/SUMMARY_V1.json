@@ -1,0 +1,1102 @@
+{
+ "alphas": [
+  0.0,
+  0.25,
+  0.5,
+  0.75,
+  1.0
+ ],
+ "bootstrap": {
+  "reps": 10000,
+  "seed": 20260820,
+  "unit": "endpoint cluster (two directions averaged)"
+ },
+ "corrected": {
+  "RS_P1_spearman": {
+   "ci95": [
+    0.08499999999999999,
+    0.6549999999999998
+   ],
+   "mean": 0.37999999999999995,
+   "n": 10,
+   "pass": false,
+   "win_positive": 0.8
+  },
+  "RS_P2_decline": {
+   "ci95": [
+    -0.04495418465381558,
+    -0.00927267201976369
+   ],
+   "mean": -0.026124527764349665,
+   "n": 10,
+   "pass": false,
+   "win_positive": 0.2
+  },
+  "endpoint_cluster_rho": {
+   "angina_history": 0.8999999999999998,
+   "arthritis_history": 0.19999999999999998,
+   "asthma_history": 0.39999999999999997,
+   "cancer_history": -0.44999999999999996,
+   "current_smoking_status": 0.4999999999999999,
+   "diabetes_history": -0.35,
+   "heart_attack_history": 0.35,
+   "hypertension_history": 0.9499999999999998,
+   "kidney_disease_history": 0.39999999999999997,
+   "stroke_history": 0.8999999999999998
+  },
+  "per_direction_mean_curve": {
+   "kn2nh": [
+    0.04231959739988312,
+    0.04523666453781259,
+    0.04751696236446536,
+    0.04796442977176933,
+    0.059134992141154384
+   ],
+   "nh2kn": [
+    0.019982651444091053,
+    0.01790230874290625,
+    0.016607990272733707,
+    0.0225112795591389,
+    0.05541631223151912
+   ]
+  },
+  "per_unit_rho": {
+   "kn2nh|angina_history": 0.8999999999999998,
+   "kn2nh|arthritis_history": -0.3,
+   "kn2nh|asthma_history": 0.7,
+   "kn2nh|cancer_history": -0.09999999999999999,
+   "kn2nh|current_smoking_status": 0.8999999999999998,
+   "kn2nh|diabetes_history": -0.7,
+   "kn2nh|heart_attack_history": 0.09999999999999999,
+   "kn2nh|hypertension_history": 0.9999999999999999,
+   "kn2nh|kidney_disease_history": 0.7,
+   "kn2nh|stroke_history": 0.8999999999999998,
+   "nh2kn|angina_history": 0.8999999999999998,
+   "nh2kn|arthritis_history": 0.7,
+   "nh2kn|asthma_history": 0.09999999999999999,
+   "nh2kn|cancer_history": -0.7999999999999999,
+   "nh2kn|current_smoking_status": 0.09999999999999999,
+   "nh2kn|diabetes_history": 0.0,
+   "nh2kn|heart_attack_history": 0.6,
+   "nh2kn|hypertension_history": 0.8999999999999998,
+   "nh2kn|kidney_disease_history": 0.09999999999999999,
+   "nh2kn|stroke_history": 0.8999999999999998
+  },
+  "pooled_I_by_alpha": {
+   "0.00": {
+    "ci95": [
+     0.005065502367862285,
+     0.06835912140593357
+    ],
+    "mean": 0.031151124421987093,
+    "n": 10,
+    "win_positive": 0.8
+   },
+   "0.25": {
+    "ci95": [
+     0.00473150887625905,
+     0.07420774853446452
+    ],
+    "mean": 0.031569486640359426,
+    "n": 10,
+    "win_positive": 0.8
+   },
+   "0.50": {
+    "ci95": [
+     0.005961926149954685,
+     0.06981368874213673
+    ],
+    "mean": 0.03206247631859953,
+    "n": 10,
+    "win_positive": 0.8
+   },
+   "0.75": {
+    "ci95": [
+     0.01194481261876775,
+     0.07171904341701606
+    ],
+    "mean": 0.035237854665454114,
+    "n": 10,
+    "win_positive": 0.9
+   },
+   "1.00": {
+    "ci95": [
+     0.0329847665293867,
+     0.08756700696474586
+    ],
+    "mean": 0.05727565218633675,
+    "n": 10,
+    "win_positive": 1.0
+   }
+  }
+ },
+ "drop_diabetes_sensitivity": {
+  "RS_P1_spearman": {
+   "ci95": [
+    0.1722222222222222,
+    0.7055555555555554
+   ],
+   "mean": 0.461111111111111,
+   "n": 9,
+   "pass": false,
+   "win_positive": 0.8888888888888888
+  },
+  "RS_P2_decline": {
+   "ci95": [
+    -0.048754246954237815,
+    -0.013530971842833448
+   ],
+   "mean": -0.03026710643889962,
+   "n": 9,
+   "pass": false,
+   "win_positive": 0.1111111111111111
+  },
+  "endpoint_cluster_rho": {
+   "angina_history": 0.8999999999999998,
+   "arthritis_history": 0.19999999999999998,
+   "asthma_history": 0.39999999999999997,
+   "cancer_history": -0.44999999999999996,
+   "current_smoking_status": 0.4999999999999999,
+   "heart_attack_history": 0.35,
+   "hypertension_history": 0.9499999999999998,
+   "kidney_disease_history": 0.39999999999999997,
+   "stroke_history": 0.8999999999999998
+  },
+  "per_direction_mean_curve": {
+   "kn2nh": [
+    0.025194344101251046,
+    0.021880181555730557,
+    0.030137089383629103,
+    0.033042165141797614,
+    0.04597950825511124
+   ],
+   "nh2kn": [
+    0.004063212230802145,
+    0.0016148284991208779,
+    -0.000607440351347317,
+    0.004913320296289619,
+    0.043812260954741195
+   ]
+  },
+  "per_unit_rho": {
+   "kn2nh|angina_history": 0.8999999999999998,
+   "kn2nh|arthritis_history": -0.3,
+   "kn2nh|asthma_history": 0.7,
+   "kn2nh|cancer_history": -0.09999999999999999,
+   "kn2nh|current_smoking_status": 0.8999999999999998,
+   "kn2nh|heart_attack_history": 0.09999999999999999,
+   "kn2nh|hypertension_history": 0.9999999999999999,
+   "kn2nh|kidney_disease_history": 0.7,
+   "kn2nh|stroke_history": 0.8999999999999998,
+   "nh2kn|angina_history": 0.8999999999999998,
+   "nh2kn|arthritis_history": 0.7,
+   "nh2kn|asthma_history": 0.09999999999999999,
+   "nh2kn|cancer_history": -0.7999999999999999,
+   "nh2kn|current_smoking_status": 0.09999999999999999,
+   "nh2kn|heart_attack_history": 0.6,
+   "nh2kn|hypertension_history": 0.8999999999999998,
+   "nh2kn|kidney_disease_history": 0.09999999999999999,
+   "nh2kn|stroke_history": 0.8999999999999998
+  },
+  "pooled_I_by_alpha": {
+   "0.00": {
+    "ci95": [
+     0.0011259336204837355,
+     0.02719636690893513
+    ],
+    "mean": 0.014628778166026597,
+    "n": 9,
+    "win_positive": 0.7777777777777778
+   },
+   "0.25": {
+    "ci95": [
+     0.0016108536599337075,
+     0.021527414579974875
+    ],
+    "mean": 0.01174750502742572,
+    "n": 9,
+    "win_positive": 0.7777777777777778
+   },
+   "0.50": {
+    "ci95": [
+     0.002271691441622209,
+     0.027469381903620194
+    ],
+    "mean": 0.014764824516140893,
+    "n": 9,
+    "win_positive": 0.7777777777777778
+   },
+   "0.75": {
+    "ci95": [
+     0.00863465537675344,
+     0.029361610810479985
+    ],
+    "mean": 0.01897774271904361,
+    "n": 9,
+    "win_positive": 0.8888888888888888
+   },
+   "1.00": {
+    "ci95": [
+     0.028016113650975085,
+     0.061182035105523114
+    ],
+    "mean": 0.04489588460492622,
+    "n": 9,
+    "win_positive": 1.0
+   }
+  }
+ },
+ "expected_cells": 800,
+ "found_cells": 800,
+ "permutation_audit_check": {
+  "cells_without_audit_entry": [
+   "nh2kn|0.50|diabetes_history|50",
+   "nh2kn|0.75|diabetes_history|50",
+   "nh2kn|0.50|diabetes_history|51",
+   "nh2kn|0.75|diabetes_history|51",
+   "nh2kn|0.50|diabetes_history|52",
+   "nh2kn|0.75|diabetes_history|52",
+   "nh2kn|0.50|diabetes_history|53",
+   "nh2kn|0.75|diabetes_history|53",
+   "nh2kn|0.50|diabetes_history|54",
+   "nh2kn|0.75|diabetes_history|54",
+   "nh2kn|0.50|diabetes_history|55",
+   "nh2kn|0.75|diabetes_history|55",
+   "nh2kn|0.50|diabetes_history|56",
+   "nh2kn|0.75|diabetes_history|56",
+   "nh2kn|0.50|diabetes_history|57",
+   "nh2kn|0.75|diabetes_history|57",
+   "kn2nh|0.25|diabetes_history|50",
+   "kn2nh|0.50|diabetes_history|50",
+   "kn2nh|0.75|diabetes_history|50",
+   "kn2nh|1.00|diabetes_history|50",
+   "kn2nh|0.25|diabetes_history|51",
+   "kn2nh|0.50|diabetes_history|51",
+   "kn2nh|0.75|diabetes_history|51",
+   "kn2nh|1.00|diabetes_history|51",
+   "kn2nh|0.25|diabetes_history|52",
+   "kn2nh|0.50|diabetes_history|52",
+   "kn2nh|0.75|diabetes_history|52",
+   "kn2nh|1.00|diabetes_history|52",
+   "kn2nh|0.25|diabetes_history|53",
+   "kn2nh|1.00|diabetes_history|53",
+   "kn2nh|0.25|diabetes_history|54"
+  ],
+  "n_without_audit_entry": 31,
+  "nestedness_verified": true
+ },
+ "permutation_audits_verified": true,
+ "raw_descriptive": {
+  "RS_P1_spearman": {
+   "ci95": [
+    -0.019999999999999997,
+    0.5199999999999998
+   ],
+   "mean": 0.25499999999999995,
+   "n": 10,
+   "pass": false,
+   "win_positive": 0.8
+  },
+  "RS_P2_decline": {
+   "ci95": [
+    -0.0356535554596708,
+    0.013214711620526197
+   ],
+   "mean": -0.014029253246408515,
+   "n": 10,
+   "pass": false,
+   "win_positive": 0.3
+  },
+  "endpoint_cluster_rho": {
+   "angina_history": 0.8999999999999998,
+   "arthritis_history": 0.5,
+   "asthma_history": 0.049999999999999996,
+   "cancer_history": -0.35,
+   "current_smoking_status": 0.19999999999999996,
+   "diabetes_history": -0.49999999999999994,
+   "heart_attack_history": 0.35,
+   "hypertension_history": 0.09999999999999992,
+   "kidney_disease_history": 0.39999999999999997,
+   "stroke_history": 0.8999999999999998
+  },
+  "per_direction_mean_curve": {
+   "kn2nh": [
+    0.07442639557442944,
+    0.06067733391868242,
+    0.06385623016176105,
+    0.058783640227702896,
+    0.06806462428975166
+   ],
+   "nh2kn": [
+    0.019991995078033446,
+    0.017589784185693715,
+    0.015391980538298706,
+    0.021114308496389074,
+    0.05441227285552826
+   ]
+  },
+  "per_unit_rho": {
+   "kn2nh|angina_history": 0.8999999999999998,
+   "kn2nh|arthritis_history": 0.3,
+   "kn2nh|asthma_history": 0.0,
+   "kn2nh|cancer_history": 0.09999999999999999,
+   "kn2nh|current_smoking_status": 0.9999999999999999,
+   "kn2nh|diabetes_history": -0.9999999999999999,
+   "kn2nh|heart_attack_history": 0.09999999999999999,
+   "kn2nh|hypertension_history": -0.7,
+   "kn2nh|kidney_disease_history": 0.7,
+   "kn2nh|stroke_history": 0.8999999999999998,
+   "nh2kn|angina_history": 0.8999999999999998,
+   "nh2kn|arthritis_history": 0.7,
+   "nh2kn|asthma_history": 0.09999999999999999,
+   "nh2kn|cancer_history": -0.7999999999999999,
+   "nh2kn|current_smoking_status": -0.6,
+   "nh2kn|diabetes_history": 0.0,
+   "nh2kn|heart_attack_history": 0.6,
+   "nh2kn|hypertension_history": 0.8999999999999998,
+   "nh2kn|kidney_disease_history": 0.09999999999999999,
+   "nh2kn|stroke_history": 0.8999999999999998
+  },
+  "pooled_I_by_alpha": {
+   "0.00": {
+    "ci95": [
+     0.01679579426793606,
+     0.09598821981621557
+    ],
+    "mean": 0.04720919532623144,
+    "n": 10,
+    "win_positive": 1.0
+   },
+   "0.25": {
+    "ci95": [
+     0.012177570595655203,
+     0.08122388964701725
+    ],
+    "mean": 0.03913355905218808,
+    "n": 10,
+    "win_positive": 0.9
+   },
+   "0.50": {
+    "ci95": [
+     0.014533631463634405,
+     0.07623784166358495
+    ],
+    "mean": 0.03962410535002987,
+    "n": 10,
+    "win_positive": 0.8
+   },
+   "0.75": {
+    "ci95": [
+     0.015681321582338172,
+     0.07427165846742352
+    ],
+    "mean": 0.03994897436204599,
+    "n": 10,
+    "win_positive": 0.9
+   },
+   "1.00": {
+    "ci95": [
+     0.03558633018982245,
+     0.09183480347678294
+    ],
+    "mean": 0.06123844857263996,
+    "n": 10,
+    "win_positive": 1.0
+   }
+  }
+ },
+ "refit_verification": {
+  "cells": [
+   {
+    "alpha": "0.50",
+    "close_match_1e-9": true,
+    "direction": "nh2kn",
+    "endpoint": "diabetes_history",
+    "exact_match": true,
+    "rc": 0,
+    "refit": {
+     "a00_base": 0.7178948661503508,
+     "a01_columns": 0.6689385643620436,
+     "a10_stage": 0.8468009494941868,
+     "a11_stage_columns": 0.9488160991295078
+    },
+    "seconds": 29.3,
+    "seed": 50,
+    "stored": {
+     "a00_base": 0.7178948661503508,
+     "a01_columns": 0.6689385643620436,
+     "a10_stage": 0.8468009494941868,
+     "a11_stage_columns": 0.9488160991295078
+    }
+   },
+   {
+    "alpha": "0.50",
+    "close_match_1e-9": true,
+    "direction": "nh2kn",
+    "endpoint": "diabetes_history",
+    "exact_match": true,
+    "rc": 0,
+    "refit": {
+     "a00_base": 0.8018776196050297,
+     "a01_columns": 0.624862384151362,
+     "a10_stage": 0.8462596809224836,
+     "a11_stage_columns": 0.943960987470031
+    },
+    "seconds": 29.4,
+    "seed": 51,
+    "stored": {
+     "a00_base": 0.8018776196050297,
+     "a01_columns": 0.624862384151362,
+     "a10_stage": 0.8462596809224836,
+     "a11_stage_columns": 0.943960987470031
+    }
+   },
+   {
+    "alpha": "0.50",
+    "close_match_1e-9": true,
+    "direction": "nh2kn",
+    "endpoint": "diabetes_history",
+    "exact_match": true,
+    "rc": 0,
+    "refit": {
+     "a00_base": 0.7616136742463064,
+     "a01_columns": 0.7172915631738274,
+     "a10_stage": 0.8607703373543725,
+     "a11_stage_columns": 0.9487036770954757
+    },
+    "seconds": 29.9,
+    "seed": 52,
+    "stored": {
+     "a00_base": 0.7616136742463064,
+     "a01_columns": 0.7172915631738274,
+     "a10_stage": 0.8607703373543725,
+     "a11_stage_columns": 0.9487036770954757
+    }
+   },
+   {
+    "alpha": "0.50",
+    "close_match_1e-9": true,
+    "direction": "nh2kn",
+    "endpoint": "diabetes_history",
+    "exact_match": true,
+    "rc": 0,
+    "refit": {
+     "a00_base": 0.7660146229558683,
+     "a01_columns": 0.6612063313343379,
+     "a10_stage": 0.8651110293248647,
+     "a11_stage_columns": 0.9549418127090596
+    },
+    "seconds": 28.9,
+    "seed": 53,
+    "stored": {
+     "a00_base": 0.7660146229558683,
+     "a01_columns": 0.6612063313343379,
+     "a10_stage": 0.8651110293248647,
+     "a11_stage_columns": 0.9549418127090596
+    }
+   },
+   {
+    "alpha": "0.50",
+    "close_match_1e-9": true,
+    "direction": "nh2kn",
+    "endpoint": "diabetes_history",
+    "exact_match": true,
+    "rc": 0,
+    "refit": {
+     "a00_base": 0.7771447721179625,
+     "a01_columns": 0.6939967859803227,
+     "a10_stage": 0.832814643159959,
+     "a11_stage_columns": 0.9378550121101947
+    },
+    "seconds": 28.7,
+    "seed": 54,
+    "stored": {
+     "a00_base": 0.7771447721179625,
+     "a01_columns": 0.6939967859803227,
+     "a10_stage": 0.832814643159959,
+     "a11_stage_columns": 0.9378550121101947
+    }
+   },
+   {
+    "alpha": "0.50",
+    "close_match_1e-9": true,
+    "direction": "nh2kn",
+    "endpoint": "diabetes_history",
+    "exact_match": true,
+    "rc": 0,
+    "refit": {
+     "a00_base": 0.8280738537979031,
+     "a01_columns": 0.805422714203819,
+     "a10_stage": 0.8457664706248704,
+     "a11_stage_columns": 0.9473052058389821
+    },
+    "seconds": 28.6,
+    "seed": 55,
+    "stored": {
+     "a00_base": 0.8280738537979031,
+     "a01_columns": 0.805422714203819,
+     "a10_stage": 0.8457664706248704,
+     "a11_stage_columns": 0.9473052058389821
+    }
+   },
+   {
+    "alpha": "0.50",
+    "close_match_1e-9": true,
+    "direction": "nh2kn",
+    "endpoint": "diabetes_history",
+    "exact_match": true,
+    "rc": 0,
+    "refit": {
+     "a00_base": 0.752252731597972,
+     "a01_columns": 0.7101020698894807,
+     "a10_stage": 0.8474924001724213,
+     "a11_stage_columns": 0.9527205274052307
+    },
+    "seconds": 28.8,
+    "seed": 56,
+    "stored": {
+     "a00_base": 0.752252731597972,
+     "a01_columns": 0.7101020698894807,
+     "a10_stage": 0.8474924001724213,
+     "a11_stage_columns": 0.9527205274052307
+    }
+   },
+   {
+    "alpha": "0.50",
+    "close_match_1e-9": true,
+    "direction": "nh2kn",
+    "endpoint": "diabetes_history",
+    "exact_match": true,
+    "rc": 0,
+    "refit": {
+     "a00_base": 0.8171102535270114,
+     "a01_columns": 0.786044563751017,
+     "a10_stage": 0.8618567976221944,
+     "a11_stage_columns": 0.9491794785284948
+    },
+    "seconds": 29.5,
+    "seed": 57,
+    "stored": {
+     "a00_base": 0.8171102535270114,
+     "a01_columns": 0.786044563751017,
+     "a10_stage": 0.8618567976221944,
+     "a11_stage_columns": 0.9491794785284948
+    }
+   },
+   {
+    "alpha": "0.75",
+    "close_match_1e-9": true,
+    "direction": "nh2kn",
+    "endpoint": "diabetes_history",
+    "exact_match": true,
+    "rc": 0,
+    "refit": {
+     "a00_base": 0.7220973292840152,
+     "a01_columns": 0.6756718718354484,
+     "a10_stage": 0.7976090150456725,
+     "a11_stage_columns": 0.9275273870863494
+    },
+    "seconds": 30.0,
+    "seed": 50,
+    "stored": {
+     "a00_base": 0.7220973292840152,
+     "a01_columns": 0.6756718718354484,
+     "a10_stage": 0.7976090150456725,
+     "a11_stage_columns": 0.9275273870863494
+    }
+   },
+   {
+    "alpha": "0.75",
+    "close_match_1e-9": true,
+    "direction": "nh2kn",
+    "endpoint": "diabetes_history",
+    "exact_match": true,
+    "rc": 0,
+    "refit": {
+     "a00_base": 0.8083161410578998,
+     "a01_columns": 0.6824301892270023,
+     "a10_stage": 0.7942016588931591,
+     "a11_stage_columns": 0.9196008368024379
+    },
+    "seconds": 29.3,
+    "seed": 51,
+    "stored": {
+     "a00_base": 0.8083161410578998,
+     "a01_columns": 0.6824301892270023,
+     "a10_stage": 0.7942016588931591,
+     "a11_stage_columns": 0.9196008368024379
+    }
+   },
+   {
+    "alpha": "0.75",
+    "close_match_1e-9": true,
+    "direction": "nh2kn",
+    "endpoint": "diabetes_history",
+    "exact_match": true,
+    "rc": 0,
+    "refit": {
+     "a00_base": 0.7626750019983415,
+     "a01_columns": 0.7286239984385965,
+     "a10_stage": 0.8377293372714965,
+     "a11_stage_columns": 0.9297440749787539
+    },
+    "seconds": 28.7,
+    "seed": 52,
+    "stored": {
+     "a00_base": 0.7626750019983415,
+     "a01_columns": 0.7286239984385965,
+     "a10_stage": 0.8377293372714965,
+     "a11_stage_columns": 0.9297440749787539
+    }
+   },
+   {
+    "alpha": "0.75",
+    "close_match_1e-9": true,
+    "direction": "nh2kn",
+    "endpoint": "diabetes_history",
+    "exact_match": true,
+    "rc": 0,
+    "refit": {
+     "a00_base": 0.7702810207577417,
+     "a01_columns": 0.6799508971940343,
+     "a10_stage": 0.8046632831353219,
+     "a11_stage_columns": 0.9299502229070254
+    },
+    "seconds": 29.1,
+    "seed": 53,
+    "stored": {
+     "a00_base": 0.7702810207577417,
+     "a01_columns": 0.6799508971940343,
+     "a10_stage": 0.8046632831353219,
+     "a11_stage_columns": 0.9299502229070254
+    }
+   },
+   {
+    "alpha": "0.75",
+    "close_match_1e-9": true,
+    "direction": "nh2kn",
+    "endpoint": "diabetes_history",
+    "exact_match": true,
+    "rc": 0,
+    "refit": {
+     "a00_base": 0.7812823198023138,
+     "a01_columns": 0.7124033501520947,
+     "a10_stage": 0.7830842598854154,
+     "a11_stage_columns": 0.9110712287372787
+    },
+    "seconds": 29.0,
+    "seed": 54,
+    "stored": {
+     "a00_base": 0.7812823198023138,
+     "a01_columns": 0.7124033501520947,
+     "a10_stage": 0.7830842598854154,
+     "a11_stage_columns": 0.9110712287372787
+    }
+   },
+   {
+    "alpha": "0.75",
+    "close_match_1e-9": true,
+    "direction": "nh2kn",
+    "endpoint": "diabetes_history",
+    "exact_match": true,
+    "rc": 0,
+    "refit": {
+     "a00_base": 0.8304323871574562,
+     "a01_columns": 0.8093424058854713,
+     "a10_stage": 0.8055371590988779,
+     "a11_stage_columns": 0.908937784641066
+    },
+    "seconds": 29.2,
+    "seed": 55,
+    "stored": {
+     "a00_base": 0.8304323871574562,
+     "a01_columns": 0.8093424058854713,
+     "a10_stage": 0.8055371590988779,
+     "a11_stage_columns": 0.908937784641066
+    }
+   },
+   {
+    "alpha": "0.75",
+    "close_match_1e-9": true,
+    "direction": "nh2kn",
+    "endpoint": "diabetes_history",
+    "exact_match": true,
+    "rc": 0,
+    "refit": {
+     "a00_base": 0.7518453396469483,
+     "a01_columns": 0.7214067980880653,
+     "a10_stage": 0.7969268817879247,
+     "a11_stage_columns": 0.9277403391835292
+    },
+    "seconds": 29.5,
+    "seed": 56,
+    "stored": {
+     "a00_base": 0.7518453396469483,
+     "a01_columns": 0.7214067980880653,
+     "a10_stage": 0.7969268817879247,
+     "a11_stage_columns": 0.9277403391835292
+    }
+   },
+   {
+    "alpha": "0.75",
+    "close_match_1e-9": true,
+    "direction": "nh2kn",
+    "endpoint": "diabetes_history",
+    "exact_match": true,
+    "rc": 0,
+    "refit": {
+     "a00_base": 0.8195180711370342,
+     "a01_columns": 0.802490423898497,
+     "a10_stage": 0.8087970302928956,
+     "a11_stage_columns": 0.9281168365297807
+    },
+    "seconds": 29.5,
+    "seed": 57,
+    "stored": {
+     "a00_base": 0.8195180711370342,
+     "a01_columns": 0.802490423898497,
+     "a10_stage": 0.8087970302928956,
+     "a11_stage_columns": 0.9281168365297807
+    }
+   },
+   {
+    "alpha": "0.25",
+    "close_match_1e-9": true,
+    "direction": "kn2nh",
+    "endpoint": "diabetes_history",
+    "exact_match": true,
+    "rc": 0,
+    "refit": {
+     "a00_base": 0.6918790316626546,
+     "a01_columns": 0.5781198905698486,
+     "a10_stage": 0.84543107226917,
+     "a11_stage_columns": 0.9282022598114896
+    },
+    "seconds": 34.5,
+    "seed": 50,
+    "stored": {
+     "a00_base": 0.6918790316626546,
+     "a01_columns": 0.5781198905698486,
+     "a10_stage": 0.84543107226917,
+     "a11_stage_columns": 0.9282022598114896
+    }
+   },
+   {
+    "alpha": "0.25",
+    "close_match_1e-9": true,
+    "direction": "kn2nh",
+    "endpoint": "diabetes_history",
+    "exact_match": true,
+    "rc": 0,
+    "refit": {
+     "a00_base": 0.7197690870817168,
+     "a01_columns": 0.5659723442881873,
+     "a10_stage": 0.8507153098945335,
+     "a11_stage_columns": 0.9257666974424473
+    },
+    "seconds": 34.1,
+    "seed": 51,
+    "stored": {
+     "a00_base": 0.7197690870817168,
+     "a01_columns": 0.5659723442881873,
+     "a10_stage": 0.8507153098945335,
+     "a11_stage_columns": 0.9257666974424473
+    }
+   },
+   {
+    "alpha": "0.25",
+    "close_match_1e-9": true,
+    "direction": "kn2nh",
+    "endpoint": "diabetes_history",
+    "exact_match": true,
+    "rc": 0,
+    "refit": {
+     "a00_base": 0.6900298450863724,
+     "a01_columns": 0.5248504812552576,
+     "a10_stage": 0.8486075913713232,
+     "a11_stage_columns": 0.9251993829980523
+    },
+    "seconds": 33.9,
+    "seed": 52,
+    "stored": {
+     "a00_base": 0.6900298450863724,
+     "a01_columns": 0.5248504812552576,
+     "a10_stage": 0.8486075913713232,
+     "a11_stage_columns": 0.9251993829980523
+    }
+   },
+   {
+    "alpha": "0.25",
+    "close_match_1e-9": true,
+    "direction": "kn2nh",
+    "endpoint": "diabetes_history",
+    "exact_match": true,
+    "rc": 0,
+    "refit": {
+     "a00_base": 0.7088925526436167,
+     "a01_columns": 0.534928078919485,
+     "a10_stage": 0.8478924858828041,
+     "a11_stage_columns": 0.9328384895964839
+    },
+    "seconds": 34.2,
+    "seed": 53,
+    "stored": {
+     "a00_base": 0.7088925526436167,
+     "a01_columns": 0.534928078919485,
+     "a10_stage": 0.8478924858828041,
+     "a11_stage_columns": 0.9328384895964839
+    }
+   },
+   {
+    "alpha": "0.25",
+    "close_match_1e-9": true,
+    "direction": "kn2nh",
+    "endpoint": "diabetes_history",
+    "exact_match": true,
+    "rc": 0,
+    "refit": {
+     "a00_base": 0.6937473398631429,
+     "a01_columns": 0.5241362178556961,
+     "a10_stage": 0.8500917190882998,
+     "a11_stage_columns": 0.9266060278940071
+    },
+    "seconds": 34.1,
+    "seed": 54,
+    "stored": {
+     "a00_base": 0.6937473398631429,
+     "a01_columns": 0.5241362178556961,
+     "a10_stage": 0.8500917190882998,
+     "a11_stage_columns": 0.9266060278940071
+    }
+   },
+   {
+    "alpha": "0.75",
+    "close_match_1e-9": true,
+    "direction": "kn2nh",
+    "endpoint": "diabetes_history",
+    "exact_match": true,
+    "rc": 0,
+    "refit": {
+     "a00_base": 0.6627730600645105,
+     "a01_columns": 0.6722796735493062,
+     "a10_stage": 0.8181699527051993,
+     "a11_stage_columns": 0.9184247578323235
+    },
+    "seconds": 35.2,
+    "seed": 50,
+    "stored": {
+     "a00_base": 0.6627730600645105,
+     "a01_columns": 0.6722796735493062,
+     "a10_stage": 0.8181699527051993,
+     "a11_stage_columns": 0.9184247578323235
+    }
+   },
+   {
+    "alpha": "0.75",
+    "close_match_1e-9": true,
+    "direction": "kn2nh",
+    "endpoint": "diabetes_history",
+    "exact_match": true,
+    "rc": 0,
+    "refit": {
+     "a00_base": 0.6957381321185525,
+     "a01_columns": 0.5732119532481713,
+     "a10_stage": 0.833990784979761,
+     "a11_stage_columns": 0.9163416017143953
+    },
+    "seconds": 34.2,
+    "seed": 51,
+    "stored": {
+     "a00_base": 0.6957381321185525,
+     "a01_columns": 0.5732119532481713,
+     "a10_stage": 0.833990784979761,
+     "a11_stage_columns": 0.9163416017143953
+    }
+   },
+   {
+    "alpha": "0.75",
+    "close_match_1e-9": true,
+    "direction": "kn2nh",
+    "endpoint": "diabetes_history",
+    "exact_match": true,
+    "rc": 0,
+    "refit": {
+     "a00_base": 0.6875729929356609,
+     "a01_columns": 0.6826617546252693,
+     "a10_stage": 0.8260744981528308,
+     "a11_stage_columns": 0.9096372564066669
+    },
+    "seconds": 34.7,
+    "seed": 52,
+    "stored": {
+     "a00_base": 0.6875729929356609,
+     "a01_columns": 0.6826617546252693,
+     "a10_stage": 0.8260744981528308,
+     "a11_stage_columns": 0.9096372564066669
+    }
+   },
+   {
+    "alpha": "0.50",
+    "close_match_1e-9": true,
+    "direction": "kn2nh",
+    "endpoint": "diabetes_history",
+    "exact_match": true,
+    "rc": 0,
+    "refit": {
+     "a00_base": 0.6844805444494068,
+     "a01_columns": 0.6159154703091116,
+     "a10_stage": 0.8358845118570397,
+     "a11_stage_columns": 0.9228310033724653
+    },
+    "seconds": 22.0,
+    "seed": 50,
+    "stored": {
+     "a00_base": 0.6844805444494068,
+     "a01_columns": 0.6159154703091116,
+     "a10_stage": 0.8358845118570397,
+     "a11_stage_columns": 0.9228310033724653
+    }
+   },
+   {
+    "alpha": "0.50",
+    "close_match_1e-9": true,
+    "direction": "kn2nh",
+    "endpoint": "diabetes_history",
+    "exact_match": true,
+    "rc": 0,
+    "refit": {
+     "a00_base": 0.7112588509798641,
+     "a01_columns": 0.6089309646643838,
+     "a10_stage": 0.8478388793861661,
+     "a11_stage_columns": 0.9290885114597724
+    },
+    "seconds": 21.9,
+    "seed": 51,
+    "stored": {
+     "a00_base": 0.7112588509798641,
+     "a01_columns": 0.6089309646643838,
+     "a10_stage": 0.8478388793861661,
+     "a11_stage_columns": 0.9290885114597724
+    }
+   },
+   {
+    "alpha": "0.50",
+    "close_match_1e-9": true,
+    "direction": "kn2nh",
+    "endpoint": "diabetes_history",
+    "exact_match": true,
+    "rc": 0,
+    "refit": {
+     "a00_base": 0.7087015633223719,
+     "a01_columns": 0.6289304462212367,
+     "a10_stage": 0.8408121593787838,
+     "a11_stage_columns": 0.9240072598208677
+    },
+    "seconds": 22.5,
+    "seed": 52,
+    "stored": {
+     "a00_base": 0.7087015633223719,
+     "a01_columns": 0.6289304462212367,
+     "a10_stage": 0.8408121593787838,
+     "a11_stage_columns": 0.9240072598208677
+    }
+   },
+   {
+    "alpha": "1.00",
+    "close_match_1e-9": true,
+    "direction": "kn2nh",
+    "endpoint": "diabetes_history",
+    "exact_match": true,
+    "rc": 0,
+    "refit": {
+     "a00_base": 0.6402800502804048,
+     "a01_columns": 0.7513363180582544,
+     "a10_stage": 0.6750400198788306,
+     "a11_stage_columns": 0.8487525849072888
+    },
+    "seconds": 21.6,
+    "seed": 50,
+    "stored": {
+     "a00_base": 0.6402800502804048,
+     "a01_columns": 0.7513363180582544,
+     "a10_stage": 0.6750400198788306,
+     "a11_stage_columns": 0.8487525849072888
+    }
+   },
+   {
+    "alpha": "1.00",
+    "close_match_1e-9": true,
+    "direction": "kn2nh",
+    "endpoint": "diabetes_history",
+    "exact_match": true,
+    "rc": 0,
+    "refit": {
+     "a00_base": 0.6861477600339766,
+     "a01_columns": 0.6526038856693376,
+     "a10_stage": 0.7371548078363459,
+     "a11_stage_columns": 0.8665525974737381
+    },
+    "seconds": 22.3,
+    "seed": 51,
+    "stored": {
+     "a00_base": 0.6861477600339766,
+     "a01_columns": 0.6526038856693376,
+     "a10_stage": 0.7371548078363459,
+     "a11_stage_columns": 0.8665525974737381
+    }
+   },
+   {
+    "alpha": "1.00",
+    "close_match_1e-9": true,
+    "direction": "kn2nh",
+    "endpoint": "diabetes_history",
+    "exact_match": true,
+    "rc": 0,
+    "refit": {
+     "a00_base": 0.672517548610897,
+     "a01_columns": 0.6620085425687722,
+     "a10_stage": 0.7515613703210431,
+     "a11_stage_columns": 0.8526527314382135
+    },
+    "seconds": 22.3,
+    "seed": 52,
+    "stored": {
+     "a00_base": 0.672517548610897,
+     "a01_columns": 0.6620085425687722,
+     "a10_stage": 0.7515613703210431,
+     "a11_stage_columns": 0.8526527314382135
+    }
+   },
+   {
+    "alpha": "1.00",
+    "close_match_1e-9": true,
+    "direction": "kn2nh",
+    "endpoint": "diabetes_history",
+    "exact_match": true,
+    "rc": 0,
+    "refit": {
+     "a00_base": 0.6818809236503968,
+     "a01_columns": 0.6356980031581776,
+     "a10_stage": 0.7476044510389996,
+     "a11_stage_columns": 0.8717981433275188
+    },
+    "seconds": 21.9,
+    "seed": 53,
+    "stored": {
+     "a00_base": 0.6818809236503968,
+     "a01_columns": 0.6356980031581776,
+     "a10_stage": 0.7476044510389996,
+     "a11_stage_columns": 0.8717981433275188
+    }
+   }
+  ],
+  "n": 31,
+  "n_close": 31,
+  "n_exact": 31
+ },
+ "verdicts": {
+  "RS_P1": false,
+  "RS_P2": false,
+  "ladder_verdict": false
+ }
+}

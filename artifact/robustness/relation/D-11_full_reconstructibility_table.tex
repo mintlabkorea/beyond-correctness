@@ -1,0 +1,65 @@
+% Phase-3 archived appendix unit
+% Phase-2 Unit ID(s): D-11 (full representation)
+% Original location: Relation / controlled reconstructibility result
+% Original source SHA-256: 726916622e270ad0c5fd157c2a9821e84742065551d407a942ac397611d5460c
+% Provenance: Post-result frozen extension
+% Original label(s): tab:app-reconstructibility-controlled
+% Compact PDF replacement: Eight-panel figure plus exact ranges in Phase-3 Section E.6
+% Content below is copied verbatim from the authoritative appendix.
+
+% Original lines 1126--1179
+\paragraph{Controlled predictive results.}
+Table~\ref{tab:app-reconstructibility-controlled} reports the association and
+held-out-realization prediction in every stratum.  Pearson correlations range
+from $-.907$ to $-.954$.  In the representative pairwise/XGB/$K=32$ stratum,
+the mean reconstruction-$R^2$/predictive-utility curve over removed-column
+rungs is $.987/.002$, $.836/.036$, $.701/.072$, $.540/.123$, $.388/.168$,
+$.224/.207$, and $.054/.242$.  The fitted slope therefore corresponds to
+approximately $+.026$ predictive utility for a $.10$ decrease in
+reconstruction $R^2$; this is a within-benchmark description, not a general
+conversion rule.
+
+\begin{table}[t]
+\caption{Controlled prospective reconstruction diagnostic. The conditional
+slope is for reconstruction $R^2$ after treating realized removed fraction as
+a categorical nuisance term; 95\% intervals cluster-bootstrap the 20
+realizations within each family--learner--$K$ stratum. The LORO column gives
+leave-one-realization-out prediction $R^2$ using reconstruction and the known
+removed fraction alone. The final column gives their paired post-result
+difference.}
+\label{tab:app-reconstructibility-controlled}
+\centering\scriptsize
+\setlength{\tabcolsep}{2.5pt}
+\begin{tabular}{llrcrcc}
+\toprule
+Family & Model & $K$ & Conditional slope [95\% CI] & Pearson $r$ & LORO $R^2$: recon / fraction & $\Delta R^2$ [95\% CI] \\
+\midrule
+Pairwise & XGB & 32  & $-.177$ [$-.311,-.067$] & $-.950$ & $.897$ / $.886$ & $+.010$ [$-.026,+.040$] \\
+Pairwise & HistGB & 32  & $-.176$ [$-.314,-.060$] & $-.951$ & $.899$ / $.889$ & $+.010$ [$-.029,+.042$] \\
+Sparse & XGB & 32  & $-.173$ [$-.283,-.067$] & $-.907$ & $.809$ / $.773$ & $+.036$ [$-.053,+.130$] \\
+Sparse & HistGB & 32  & $-.173$ [$-.281,-.069$] & $-.908$ & $.812$ / $.775$ & $+.036$ [$-.054,+.132$] \\
+\addlinespace[1pt]
+Pairwise & XGB & 512 & $-.221$ [$-.329,-.119$] & $-.954$ & $.905$ / $.885$ & $+.019$ [$-.006,+.042$] \\
+Pairwise & HistGB & 512 & $-.215$ [$-.330,-.103$] & $-.953$ & $.903$ / $.886$ & $+.017$ [$-.010,+.041$] \\
+Sparse & XGB & 512 & $-.199$ [$-.308,-.089$] & $-.915$ & $.825$ / $.765$ & $+.060$ [$-.036,+.164$] \\
+Sparse & HistGB & 512 & $-.199$ [$-.312,-.086$] & $-.913$ & $.820$ / $.758$ & $+.061$ [$-.043,+.171$] \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The association is not interchangeable with the controlled removal index.
+Reconstruction yields higher held-out-realization $R^2$ point estimates than
+removed fraction alone in every stratum, but paired post-result intervals for
+the incremental $R^2$ include zero in all eight strata. By contrast, the
+conditional reconstruction slopes remain negative with intervals below zero
+in all eight strata after realized removed fraction is treated as a categorical
+nuisance term. We therefore treat the conditional association as the separated
+result and the incremental held-out prediction as a qualified point-estimate
+pattern. At XGB/$K=32$, a mapping fit on pairwise observations predicts sparse
+observations with cross-family $R^2=.820$, and the reverse mapping achieves
+$R^2=.901$.  Removed fraction is available only because the controlled
+construction is known; reconstruction $R^2$ can instead be computed from the
+observed reduced frame and the supplied relation value before downstream
+predictive performance is observed.
+
+

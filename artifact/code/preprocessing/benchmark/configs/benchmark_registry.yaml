@@ -1,0 +1,309 @@
+version: v1
+
+defaults:
+  task_type: tabular_regression
+  eval_metrics:
+    - r2
+    - rmse
+    - mae
+  seeds: [0, 1, 2, 3, 4]
+  target_exclusion_rule: drop_target_from_features
+  drop_rows_with_missing_target: true
+  eval_split_policy:
+    source_train_splits: [train]
+    target_train_splits: [train]
+    target_eval_splits: [external, test]
+    remove_eval_subjects_from_target_train: true
+
+benchmarks:
+  - benchmark_id: std_same_nh_v1
+    description: Same-cohort NHANES baseline upper bound.
+    setting: same_cohort
+    train_dataset: nhanes
+    test_dataset: nhanes
+    feature_set: full_numeric_samecohort_v1
+    target_set: clean_main_targets_v1
+    fewshot_fracs: [0.0]
+    adaptation_policy: none
+    mask_target_cohort_only: false
+    observed_slots: []
+
+  - benchmark_id: std_same_kn_v1
+    description: Same-cohort KNHANES baseline upper bound.
+    setting: same_cohort
+    train_dataset: knhanes
+    test_dataset: knhanes
+    feature_set: full_numeric_samecohort_v1
+    target_set: clean_main_targets_v1
+    fewshot_fracs: [0.0]
+    adaptation_policy: none
+    mask_target_cohort_only: false
+    observed_slots: []
+
+  - benchmark_id: std_cross_nh2kn_shared_v1
+    description: Cross-cohort baseline using shared clinical slots only.
+    setting: cross_cohort_shared
+    train_dataset: nhanes
+    test_dataset: knhanes
+    feature_set: shared_clinical_v1
+    target_set: clean_main_targets_v1
+    fewshot_fracs: [0.0]
+    adaptation_policy: none
+    mask_target_cohort_only: false
+    observed_slots: []
+
+  - benchmark_id: std_cross_kn2nh_shared_v1
+    description: Cross-cohort baseline using shared clinical slots only.
+    setting: cross_cohort_shared
+    train_dataset: knhanes
+    test_dataset: nhanes
+    feature_set: shared_clinical_v1
+    target_set: clean_main_targets_v1
+    fewshot_fracs: [0.0]
+    adaptation_policy: none
+    mask_target_cohort_only: false
+    observed_slots: []
+
+  - benchmark_id: std_cross_nh2kn_shared_anchorreset_v1
+    description: Cross-cohort baseline using shared clinical slots only with downstream-aligned objective anchor targets.
+    setting: cross_cohort_shared
+    train_dataset: nhanes
+    test_dataset: knhanes
+    feature_set: shared_clinical_v1
+    target_set: objective_anchor_targets_v1_safe
+    fewshot_fracs: [0.0]
+    adaptation_policy: none
+    mask_target_cohort_only: false
+    observed_slots: []
+
+  - benchmark_id: std_cross_kn2nh_shared_anchorreset_v1
+    description: Cross-cohort baseline using shared clinical slots only with downstream-aligned objective anchor targets.
+    setting: cross_cohort_shared
+    train_dataset: knhanes
+    test_dataset: nhanes
+    feature_set: shared_clinical_v1
+    target_set: objective_anchor_targets_v1_safe
+    fewshot_fracs: [0.0]
+    adaptation_policy: none
+    mask_target_cohort_only: false
+    observed_slots: []
+
+  - benchmark_id: std_cross_nh2kn_shared_anchorreset_fewshot_v1
+    description: Cross-cohort shared clinical baseline with target-cohort few-shot support concatenated into training.
+    setting: cross_cohort_anchor_only
+    train_dataset: nhanes
+    test_dataset: knhanes
+    feature_set: shared_clinical_v1
+    target_set: objective_broader_validation_targets_v2
+    fewshot_fracs: [0.0, 0.01, 0.05, 0.10]
+    adaptation_policy: target_fewshot_concat
+    mask_target_cohort_only: false
+    observed_slots: []
+
+  - benchmark_id: std_cross_kn2nh_shared_anchorreset_fewshot_v1
+    description: Cross-cohort shared clinical baseline with target-cohort few-shot support concatenated into training.
+    setting: cross_cohort_anchor_only
+    train_dataset: knhanes
+    test_dataset: nhanes
+    feature_set: shared_clinical_v1
+    target_set: objective_broader_validation_targets_v2
+    fewshot_fracs: [0.0, 0.01, 0.05, 0.10]
+    adaptation_policy: target_fewshot_concat
+    mask_target_cohort_only: false
+    observed_slots: []
+
+  - benchmark_id: std_cross_nh2kn_shared_probereset_v1
+    description: Cross-cohort baseline using shared clinical slots only with probe-only anti-regression targets.
+    setting: cross_cohort_shared
+    train_dataset: nhanes
+    test_dataset: knhanes
+    feature_set: shared_clinical_v1
+    target_set: objective_probe_targets_v1
+    fewshot_fracs: [0.0]
+    adaptation_policy: none
+    mask_target_cohort_only: false
+    observed_slots: []
+
+  - benchmark_id: std_cross_kn2nh_shared_probereset_v1
+    description: Cross-cohort baseline using shared clinical slots only with probe-only anti-regression targets.
+    setting: cross_cohort_shared
+    train_dataset: knhanes
+    test_dataset: nhanes
+    feature_set: shared_clinical_v1
+    target_set: objective_probe_targets_v1
+    fewshot_fracs: [0.0]
+    adaptation_policy: none
+    mask_target_cohort_only: false
+    observed_slots: []
+
+  - benchmark_id: std_anchor_nh2kn_v1
+    description: Anchor-only cross-cohort baseline with target-cohort few-shot adaptation.
+    setting: cross_cohort_anchor_only
+    train_dataset: nhanes
+    test_dataset: knhanes
+    feature_set: anchor_core_v1
+    target_set: clean_main_targets_v1
+    fewshot_fracs: [0.0, 0.01, 0.05, 0.10]
+    adaptation_policy: target_fewshot_concat
+    mask_target_cohort_only: true
+    observed_slots:
+      - age
+      - height_cm
+      - weight_kg
+      - waist_cm
+      - sbp
+      - dbp
+
+  - benchmark_id: std_anchor_kn2nh_v1
+    description: Anchor-only cross-cohort baseline with target-cohort few-shot adaptation.
+    setting: cross_cohort_anchor_only
+    train_dataset: knhanes
+    test_dataset: nhanes
+    feature_set: anchor_core_v1
+    target_set: clean_main_targets_v1
+    fewshot_fracs: [0.0, 0.01, 0.05, 0.10]
+    adaptation_policy: target_fewshot_concat
+    mask_target_cohort_only: true
+    observed_slots:
+      - age
+      - height_cm
+      - weight_kg
+      - waist_cm
+      - sbp
+      - dbp
+
+  - benchmark_id: std_cross_nh2kn_shared_survey_v1
+    description: Post-freeze exploratory cross-cohort baseline using shared clinical and survey slots.
+    setting: cross_cohort_shared
+    train_dataset: nhanes
+    test_dataset: knhanes
+    feature_set: shared_clinical_plus_survey_v1
+    target_set: clean_main_targets_v1
+    fewshot_fracs: [0.0]
+    adaptation_policy: none
+    mask_target_cohort_only: false
+    observed_slots: []
+
+  - benchmark_id: std_cross_kn2nh_shared_survey_v1
+    description: Post-freeze exploratory cross-cohort baseline using shared clinical and survey slots.
+    setting: cross_cohort_shared
+    train_dataset: knhanes
+    test_dataset: nhanes
+    feature_set: shared_clinical_plus_survey_v1
+    target_set: clean_main_targets_v1
+    fewshot_fracs: [0.0]
+    adaptation_policy: none
+    mask_target_cohort_only: false
+    observed_slots: []
+
+  - benchmark_id: std_cross_nh2kn_shared_qseed_v1
+    description: Cross-cohort exploratory baseline using shared clinical slots plus exact executable questionnaire seeds.
+    setting: cross_cohort_shared
+    train_dataset: nhanes
+    test_dataset: knhanes
+    feature_set: shared_clinical_plus_exact_questionnaire_v1
+    target_set: clean_main_targets_v1
+    fewshot_fracs: [0.0]
+    adaptation_policy: none
+    mask_target_cohort_only: false
+    observed_slots: []
+
+  - benchmark_id: std_cross_kn2nh_shared_qseed_v1
+    description: Cross-cohort exploratory baseline using shared clinical slots plus exact executable questionnaire seeds.
+    setting: cross_cohort_shared
+    train_dataset: knhanes
+    test_dataset: nhanes
+    feature_set: shared_clinical_plus_exact_questionnaire_v1
+    target_set: clean_main_targets_v1
+    fewshot_fracs: [0.0]
+    adaptation_policy: none
+    mask_target_cohort_only: false
+    observed_slots: []
+
+  - benchmark_id: std_anchor_nh2kn_survey_v1
+    description: Post-freeze exploratory anchor-only cross-cohort baseline with a small shared survey block.
+    setting: cross_cohort_anchor_only
+    train_dataset: nhanes
+    test_dataset: knhanes
+    feature_set: anchor_core_plus_survey_v1
+    target_set: clean_main_targets_v1
+    fewshot_fracs: [0.0, 0.01, 0.05, 0.10]
+    adaptation_policy: target_fewshot_concat
+    mask_target_cohort_only: true
+    observed_slots:
+      - age
+      - height_cm
+      - weight_kg
+      - waist_cm
+      - sbp
+      - dbp
+      - sex
+      - education_level
+      - diabetes_history
+
+  - benchmark_id: std_anchor_kn2nh_survey_v1
+    description: Post-freeze exploratory anchor-only cross-cohort baseline with a small shared survey block.
+    setting: cross_cohort_anchor_only
+    train_dataset: knhanes
+    test_dataset: nhanes
+    feature_set: anchor_core_plus_survey_v1
+    target_set: clean_main_targets_v1
+    fewshot_fracs: [0.0, 0.01, 0.05, 0.10]
+    adaptation_policy: target_fewshot_concat
+    mask_target_cohort_only: true
+    observed_slots:
+      - age
+      - height_cm
+      - weight_kg
+      - waist_cm
+      - sbp
+      - dbp
+      - sex
+      - education_level
+      - diabetes_history
+
+  - benchmark_id: std_anchor_nh2kn_qseed_v1
+    description: Exploratory anchor-only cross-cohort baseline with exact executable questionnaire seeds available in the current processed parquets.
+    setting: cross_cohort_anchor_only
+    train_dataset: nhanes
+    test_dataset: knhanes
+    feature_set: anchor_core_plus_exact_questionnaire_v1
+    target_set: clean_main_targets_v1
+    fewshot_fracs: [0.0, 0.01, 0.05, 0.10]
+    adaptation_policy: target_fewshot_concat
+    mask_target_cohort_only: true
+    observed_slots:
+      - age
+      - height_cm
+      - weight_kg
+      - waist_cm
+      - sbp
+      - dbp
+      - sex
+      - education_level
+      - diabetes_history
+      - hypertension_history
+      - current_smoking_status
+
+  - benchmark_id: std_anchor_kn2nh_qseed_v1
+    description: Exploratory anchor-only cross-cohort baseline with exact executable questionnaire seeds available in the current processed parquets.
+    setting: cross_cohort_anchor_only
+    train_dataset: knhanes
+    test_dataset: nhanes
+    feature_set: anchor_core_plus_exact_questionnaire_v1
+    target_set: clean_main_targets_v1
+    fewshot_fracs: [0.0, 0.01, 0.05, 0.10]
+    adaptation_policy: target_fewshot_concat
+    mask_target_cohort_only: true
+    observed_slots:
+      - age
+      - height_cm
+      - weight_kg
+      - waist_cm
+      - sbp
+      - dbp
+      - sex
+      - education_level
+      - diabetes_history
+      - hypertension_history
+      - current_smoking_status

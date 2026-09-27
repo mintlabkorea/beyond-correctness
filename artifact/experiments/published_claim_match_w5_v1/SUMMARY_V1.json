@@ -1,0 +1,596 @@
+{
+  "content": {
+    "all_comparison_count": 25,
+    "explicit_claim_count": 18,
+    "explicit_claim_study_count": 7,
+    "claim_labels": {
+      "Yes": 18,
+      "No": 3,
+      "Unclear": 4
+    },
+    "all_states": {
+      "Matched": 1,
+      "Mismatch": 14,
+      "Indeterminate": 7,
+      "Not claimed": 3
+    },
+    "among_explicit_claims": {
+      "Matched": 1,
+      "Mismatch": 14,
+      "Indeterminate": 3,
+      "Not claimed": 0
+    },
+    "mismatch_ids": [
+      "C01-C",
+      "C01-D",
+      "C03-B",
+      "C04-A",
+      "C04-B",
+      "C05-A",
+      "C06-A",
+      "C07-A",
+      "C08-A",
+      "C08-B",
+      "C08-C",
+      "C08-D",
+      "C08-E",
+      "C08-F"
+    ],
+    "mismatch_studies": [
+      "CARTE",
+      "ConTextTab",
+      "FeatLLM",
+      "LIFT",
+      "PLATO",
+      "TabLLM",
+      "TabuLa-8B"
+    ],
+    "secondary_among_explicit_claims": {
+      "Matched": 1,
+      "Mismatch": 14,
+      "Indeterminate": 3,
+      "Not claimed": 0
+    }
+  },
+  "utility": {
+    "all_comparison_count": 25,
+    "explicit_claim_count": 11,
+    "explicit_claim_study_count": 7,
+    "claim_labels": {
+      "Yes": 11,
+      "No": 10,
+      "Unclear": 4
+    },
+    "all_states": {
+      "Matched": 2,
+      "Mismatch": 6,
+      "Indeterminate": 7,
+      "Not claimed": 10
+    },
+    "among_explicit_claims": {
+      "Matched": 2,
+      "Mismatch": 6,
+      "Indeterminate": 3,
+      "Not claimed": 0
+    },
+    "mismatch_ids": [
+      "C01-A",
+      "C01-B",
+      "C01-C",
+      "C01-D",
+      "C04-B",
+      "C05-A"
+    ],
+    "mismatch_studies": [
+      "CARTE",
+      "LIFT",
+      "PLATO"
+    ],
+    "secondary_among_explicit_claims": {
+      "Matched": 2,
+      "Mismatch": 4,
+      "Indeterminate": 5,
+      "Not claimed": 0
+    }
+  },
+  "status": "complete_files_only",
+  "comparison_count": 25,
+  "study_count": 9,
+  "claim_agreement": {
+    "claim_content": {
+      "n": 25,
+      "agreements": 23,
+      "raw_agreement": 0.92,
+      "expected_agreement": 0.6032,
+      "kappa": 0.7983870967741936,
+      "marginal_a": {
+        "Yes": 18,
+        "No": 3,
+        "Unclear": 4
+      },
+      "marginal_b": {
+        "Yes": 20,
+        "No": 3,
+        "Unclear": 2
+      },
+      "confusion": [
+        {
+          "coder_a": "Yes",
+          "coder_b": "Yes",
+          "count": 18
+        },
+        {
+          "coder_a": "Yes",
+          "coder_b": "No",
+          "count": 0
+        },
+        {
+          "coder_a": "Yes",
+          "coder_b": "Unclear",
+          "count": 0
+        },
+        {
+          "coder_a": "No",
+          "coder_b": "Yes",
+          "count": 0
+        },
+        {
+          "coder_a": "No",
+          "coder_b": "No",
+          "count": 3
+        },
+        {
+          "coder_a": "No",
+          "coder_b": "Unclear",
+          "count": 0
+        },
+        {
+          "coder_a": "Unclear",
+          "coder_b": "Yes",
+          "count": 2
+        },
+        {
+          "coder_a": "Unclear",
+          "coder_b": "No",
+          "count": 0
+        },
+        {
+          "coder_a": "Unclear",
+          "coder_b": "Unclear",
+          "count": 2
+        }
+      ]
+    },
+    "claim_utility": {
+      "n": 25,
+      "agreements": 23,
+      "raw_agreement": 0.92,
+      "expected_agreement": 0.4016,
+      "kappa": 0.8663101604278074,
+      "marginal_a": {
+        "Yes": 11,
+        "No": 10,
+        "Unclear": 4
+      },
+      "marginal_b": {
+        "Yes": 13,
+        "No": 10,
+        "Unclear": 2
+      },
+      "confusion": [
+        {
+          "coder_a": "Yes",
+          "coder_b": "Yes",
+          "count": 11
+        },
+        {
+          "coder_a": "Yes",
+          "coder_b": "No",
+          "count": 0
+        },
+        {
+          "coder_a": "Yes",
+          "coder_b": "Unclear",
+          "count": 0
+        },
+        {
+          "coder_a": "No",
+          "coder_b": "Yes",
+          "count": 0
+        },
+        {
+          "coder_a": "No",
+          "coder_b": "No",
+          "count": 10
+        },
+        {
+          "coder_a": "No",
+          "coder_b": "Unclear",
+          "count": 0
+        },
+        {
+          "coder_a": "Unclear",
+          "coder_b": "Yes",
+          "count": 2
+        },
+        {
+          "coder_a": "Unclear",
+          "coder_b": "No",
+          "count": 0
+        },
+        {
+          "coder_a": "Unclear",
+          "coder_b": "Unclear",
+          "count": 2
+        }
+      ]
+    },
+    "descriptive_only": {
+      "n": 25,
+      "agreements": 25,
+      "raw_agreement": 1.0,
+      "expected_agreement": 1.0,
+      "kappa": null,
+      "marginal_a": {
+        "Yes": 0,
+        "No": 25
+      },
+      "marginal_b": {
+        "Yes": 0,
+        "No": 25
+      },
+      "confusion": [
+        {
+          "coder_a": "Yes",
+          "coder_b": "Yes",
+          "count": 0
+        },
+        {
+          "coder_a": "Yes",
+          "coder_b": "No",
+          "count": 0
+        },
+        {
+          "coder_a": "No",
+          "coder_b": "Yes",
+          "count": 0
+        },
+        {
+          "coder_a": "No",
+          "coder_b": "No",
+          "count": 25
+        }
+      ]
+    }
+  },
+  "historical_support_agreement": {
+    "utility_support_historical": {
+      "n": 25,
+      "agreements": 16,
+      "raw_agreement": 0.64,
+      "expected_agreement": 0.3504,
+      "kappa": 0.44581280788177347,
+      "marginal_a": {
+        "Supported": 4,
+        "None": 16,
+        "Unclear": 5
+      },
+      "marginal_b": {
+        "Supported": 5,
+        "None": 9,
+        "Unclear": 11
+      },
+      "confusion": [
+        {
+          "coder_a": "Supported",
+          "coder_b": "Supported",
+          "count": 4
+        },
+        {
+          "coder_a": "Supported",
+          "coder_b": "None",
+          "count": 0
+        },
+        {
+          "coder_a": "Supported",
+          "coder_b": "Unclear",
+          "count": 0
+        },
+        {
+          "coder_a": "None",
+          "coder_b": "Supported",
+          "count": 1
+        },
+        {
+          "coder_a": "None",
+          "coder_b": "None",
+          "count": 8
+        },
+        {
+          "coder_a": "None",
+          "coder_b": "Unclear",
+          "count": 7
+        },
+        {
+          "coder_a": "Unclear",
+          "coder_b": "Supported",
+          "count": 0
+        },
+        {
+          "coder_a": "Unclear",
+          "coder_b": "None",
+          "count": 1
+        },
+        {
+          "coder_a": "Unclear",
+          "coder_b": "Unclear",
+          "count": 4
+        }
+      ]
+    },
+    "content_support_historical_derived": {
+      "n": 25,
+      "agreements": 25,
+      "raw_agreement": 1.0,
+      "expected_agreement": 0.7216,
+      "kappa": 1.0,
+      "marginal_a": {
+        "Supported": 1,
+        "None": 21,
+        "Unclear": 3
+      },
+      "marginal_b": {
+        "Supported": 1,
+        "None": 21,
+        "Unclear": 3
+      },
+      "confusion": [
+        {
+          "coder_a": "Supported",
+          "coder_b": "Supported",
+          "count": 1
+        },
+        {
+          "coder_a": "Supported",
+          "coder_b": "None",
+          "count": 0
+        },
+        {
+          "coder_a": "Supported",
+          "coder_b": "Unclear",
+          "count": 0
+        },
+        {
+          "coder_a": "None",
+          "coder_b": "Supported",
+          "count": 0
+        },
+        {
+          "coder_a": "None",
+          "coder_b": "None",
+          "count": 21
+        },
+        {
+          "coder_a": "None",
+          "coder_b": "Unclear",
+          "count": 0
+        },
+        {
+          "coder_a": "Unclear",
+          "coder_b": "Supported",
+          "count": 0
+        },
+        {
+          "coder_a": "Unclear",
+          "coder_b": "None",
+          "count": 0
+        },
+        {
+          "coder_a": "Unclear",
+          "coder_b": "Unclear",
+          "count": 3
+        }
+      ]
+    },
+    "gate_Removal": {
+      "n": 25,
+      "agreements": 24,
+      "raw_agreement": 0.96,
+      "expected_agreement": 0.456,
+      "kappa": 0.926470588235294,
+      "marginal_a": {
+        "Pass": 16,
+        "Fail": 5,
+        "Unclear": 4
+      },
+      "marginal_b": {
+        "Pass": 15,
+        "Fail": 5,
+        "Unclear": 5
+      },
+      "confusion": [
+        {
+          "coder_a": "Pass",
+          "coder_b": "Pass",
+          "count": 15
+        },
+        {
+          "coder_a": "Pass",
+          "coder_b": "Fail",
+          "count": 0
+        },
+        {
+          "coder_a": "Pass",
+          "coder_b": "Unclear",
+          "count": 1
+        },
+        {
+          "coder_a": "Fail",
+          "coder_b": "Pass",
+          "count": 0
+        },
+        {
+          "coder_a": "Fail",
+          "coder_b": "Fail",
+          "count": 5
+        },
+        {
+          "coder_a": "Fail",
+          "coder_b": "Unclear",
+          "count": 0
+        },
+        {
+          "coder_a": "Unclear",
+          "coder_b": "Pass",
+          "count": 0
+        },
+        {
+          "coder_a": "Unclear",
+          "coder_b": "Fail",
+          "count": 0
+        },
+        {
+          "coder_a": "Unclear",
+          "coder_b": "Unclear",
+          "count": 4
+        }
+      ]
+    },
+    "gate_Preservation": {
+      "n": 25,
+      "agreements": 14,
+      "raw_agreement": 0.56,
+      "expected_agreement": 0.3072,
+      "kappa": 0.3648960739030024,
+      "marginal_a": {
+        "Pass": 6,
+        "Fail": 12,
+        "Unclear": 7
+      },
+      "marginal_b": {
+        "Pass": 8,
+        "Fail": 5,
+        "Unclear": 12
+      },
+      "confusion": [
+        {
+          "coder_a": "Pass",
+          "coder_b": "Pass",
+          "count": 5
+        },
+        {
+          "coder_a": "Pass",
+          "coder_b": "Fail",
+          "count": 1
+        },
+        {
+          "coder_a": "Pass",
+          "coder_b": "Unclear",
+          "count": 0
+        },
+        {
+          "coder_a": "Fail",
+          "coder_b": "Pass",
+          "count": 1
+        },
+        {
+          "coder_a": "Fail",
+          "coder_b": "Fail",
+          "count": 4
+        },
+        {
+          "coder_a": "Fail",
+          "coder_b": "Unclear",
+          "count": 7
+        },
+        {
+          "coder_a": "Unclear",
+          "coder_b": "Pass",
+          "count": 2
+        },
+        {
+          "coder_a": "Unclear",
+          "coder_b": "Fail",
+          "count": 0
+        },
+        {
+          "coder_a": "Unclear",
+          "coder_b": "Unclear",
+          "count": 5
+        }
+      ]
+    },
+    "gate_Interface": {
+      "n": 25,
+      "agreements": 21,
+      "raw_agreement": 0.84,
+      "expected_agreement": 0.5264,
+      "kappa": 0.6621621621621621,
+      "marginal_a": {
+        "Pass": 7,
+        "Fail": 0,
+        "Unclear": 18
+      },
+      "marginal_b": {
+        "Pass": 11,
+        "Fail": 0,
+        "Unclear": 14
+      },
+      "confusion": [
+        {
+          "coder_a": "Pass",
+          "coder_b": "Pass",
+          "count": 7
+        },
+        {
+          "coder_a": "Pass",
+          "coder_b": "Fail",
+          "count": 0
+        },
+        {
+          "coder_a": "Pass",
+          "coder_b": "Unclear",
+          "count": 0
+        },
+        {
+          "coder_a": "Fail",
+          "coder_b": "Pass",
+          "count": 0
+        },
+        {
+          "coder_a": "Fail",
+          "coder_b": "Fail",
+          "count": 0
+        },
+        {
+          "coder_a": "Fail",
+          "coder_b": "Unclear",
+          "count": 0
+        },
+        {
+          "coder_a": "Unclear",
+          "coder_b": "Pass",
+          "count": 4
+        },
+        {
+          "coder_a": "Unclear",
+          "coder_b": "Fail",
+          "count": 0
+        },
+        {
+          "coder_a": "Unclear",
+          "coder_b": "Unclear",
+          "count": 14
+        }
+      ]
+    }
+  },
+  "adjudication_freeze_sha256": "dcceccfd9749c225f52716e18e2a359e6191ee81355b16245daa608406b3464b",
+  "manuscript_unchanged": true,
+  "any_axis_mismatch_count": 16,
+  "ai_not_human_reliability": true,
+  "source_version_unverified_ids": [
+    "C10-A",
+    "C10-B"
+  ]
+}

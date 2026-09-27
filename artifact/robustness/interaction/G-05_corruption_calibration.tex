@@ -1,0 +1,73 @@
+% Phase-3 archived appendix unit
+% Phase-2 Unit ID(s): G-05
+% Original location: Robustness / corruption dose and exchangeable-control calibration
+% Original source SHA-256: 726916622e270ad0c5fd157c2a9821e84742065551d407a942ac397611d5460c
+% Provenance: Prespecified controls plus exhaustive auxiliary calibration
+% Original label(s): tab:app-layer-corruption-dose; tab:app_mcr_dose; tab:app-correspondence-exchangeable-calibration
+% Compact PDF replacement: Compact interaction/control scope in Phase-3 Section F
+% Content below is copied verbatim from the authoritative appendix.
+
+% Original lines 1881--1901
+\subsection{Controlled calibration and transfer boundaries}
+\label{sec:app-controlled-boundaries}
+
+Table~\ref{tab:app-layer-corruption-dose} reports the original corruption-dose
+experiment for each kind of semantic knowledge, rather than the later mismatch
+experiment for measurement knowledge.  Corrupting measurement knowledge,
+correspondence knowledge, or relation knowledge increases error
+monotonically in every prespecified XGBoost family stratum.  This graded loss in
+performance does not establish predictive utility relative to a valid reference.
+
+The exchangeable correspondence control is not uniformly clean.  In the
+original two-draw comparison, the pairwise family gives $+.105$ and $+.108$
+for XGB and HistGB and fails the prespecified $\pm.05$ equivalence margin.
+Exhaustive enumeration of all 81 admissible correspondence corruptions places
+those draws near a two-sided five-percent tail and confirms a larger
+intended-versus-corruption-average
+effect in every family and tree
+(Table~\ref{tab:app-correspondence-exchangeable-calibration}).  Enumeration
+calibrates the excursion; it does not retroactively convert the failed margin
+into a pass.
+
+
+% Original lines 1948--1986
+\begin{table}[H]
+\caption{Original corruption-dose experiment for each kind of semantic knowledge at $K=32$ with XGBoost. The curve gives mean normalized MSE from dose zero to the maximum prespecified dose. Spearman intervals resample the 20 realizations within each fixed family. All nine strata pass the prespecified positive-dose criterion.}
+\label{tab:app-layer-corruption-dose}
+\label{tab:app_mcr_dose}
+\centering\tiny
+\setlength{\tabcolsep}{3.5pt}
+\begin{tabular}{ccP{0.46\linewidth}P{0.26\linewidth}}
+\toprule Kind & Family & Mean normalized-MSE curve & Mean $\rho$ [95\% CI] \\
+\midrule
+$M$ & Additive & .697 / .840 / .916 / .935 / .980 & +.775 [+.625,+.900] \\
+$M$ & Pairwise & .701 / .823 / .900 / .975 / 1.040 & +.855 [+.755,+.930] \\
+$M$ & Sparse & .724 / .818 / .928 / .943 / .994 & +.790 [+.690,+.880] \\
+$C$ & Additive & .697 / .752 / .831 / .933 / .973 & +.925 [+.890,+.955] \\
+$C$ & Pairwise & .701 / .817 / .955 / 1.085 / 1.257 & +.935 [+.885,+.980] \\
+$C$ & Sparse & .724 / .841 / .997 / 1.083 / 1.220 & +.840 [+.775,+.900] \\
+$R$ & Additive & .697 / .756 / .813 / .861 / .924 / 1.001 & +.994 [+.986,+1.000] \\
+$R$ & Pairwise & .701 / .706 / .710 / .714 & +.850 [+.700,+.950] \\
+$R$ & Sparse & .724 / .731 / .734 & +.675 [+.425,+.875] \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\caption{Exhaustive calibration over all $D_4\times D_4=81$ admissible correspondence corruptions. The first contrast compares intended correspondence knowledge with the finite-corruption average. The original two-draw statistic is the prespecified exchangeability control; the final column records whether it lies inside the prespecified $\pm.05$ margin.}
+\label{tab:app-correspondence-exchangeable-calibration}
+\centering\scriptsize
+\setlength{\tabcolsep}{3.5pt}
+\begin{tabular}{ccP{0.27\linewidth}P{0.22\linewidth}c}
+\toprule Model & Family & Intended $-$ corruption average & Original two-draw / two-sided $p$ & Margin \\
+\midrule
+XGB & Additive & \textbf{+.286 [+.255,+.317]} & -.030 / .236 & pass \\
+XGB & Pairwise & \textbf{+.500 [+.452,+.543]} & +.105 / .048 & \textbf{fail} \\
+XGB & Sparse & \textbf{+.469 [+.418,+.521]} & -.027 / .567 & pass \\
+HistGB & Additive & \textbf{+.285 [+.254,+.316]} & -.039 / .116 & pass \\
+HistGB & Pairwise & \textbf{+.500 [+.452,+.544]} & +.108 / .044 & \textbf{fail} \\
+HistGB & Sparse & \textbf{+.468 [+.417,+.521]} & -.033 / .491 & pass \\
+\bottomrule
+\end{tabular}
+\end{table}
+

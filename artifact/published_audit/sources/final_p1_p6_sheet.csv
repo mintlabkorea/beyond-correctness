@@ -1,0 +1,26 @@
+Study,ID,Compared conditions,Semantic component,P1,P2,P3,P4,P5,P6,Removal (original),Preservation (derived),Interface (derived),Operationalized support,Paper utility claim,Current paper support,Change vs paper
+LIFT,C01-A,Correct-Names I vs Shuffled-Names I,Feature names associated with feature values; prompt format I,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Unsupported,Y,Unsupported,Same
+LIFT,C01-B,Correct-Names II vs Shuffled-Names II,Feature names associated with feature values; prompt format II,No,No,Yes,Yes,Yes,Yes,No,No,Yes,Unsupported,Y,Unsupported,Same
+LIFT,C01-C,Correct-Names I vs W/o Names I (Table 9),Names and contextual information in prompts; prompt format I,Yes,Yes,Yes,No,Yes,Yes,Yes,No,Yes,Unsupported,Y,Unsupported,Same
+LIFT,C01-D,Correct-Names II vs W/o Names II (Table 9),Names and contextual information in prompts; prompt format II,Unclear,Unclear,Unclear,Unclear,Yes,Yes,Yes,Unclear,Yes,Indeterminate,Y,Indeterminate,Same
+TabLLM,C03-A,List Template vs List Permuted Names,Column-name/value associations,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Unsupported,N,–,
+TabLLM,C03-B,List Template vs List Only Values,Column names in list serialization,Yes,Yes,Yes,No,Yes,Yes,Yes,No,Yes,Unsupported,N,–,
+TabLLM,C03-C,List Template vs List Permuted Values,Column-value meanings and representations,No,Yes,Yes,Yes,Yes,Yes,No,No,Yes,Unsupported,N,–,
+PLATO,C04-A,Full KG vs Feature-only KG,Auxiliary feature nodes and broader-domain KG nodes,Unclear,Yes,Yes,Yes,Yes,Unclear,Yes,Unclear,Unclear,Indeterminate,Y,Indeterminate,Same
+PLATO,C04-B,Full KG vs No KG,Auxiliary KG input,Unclear,Yes,Yes,Unclear,No,No,Yes,Unclear,No,Unsupported,Y,Unsupported,Same
+PLATO,C04-C,100% edges vs 50% edges,KG edges,Yes,Yes,Yes,Yes,Yes,Unclear,No,Yes,Unclear,Unsupported,N,–,
+CARTE,C05-A,CARTE vs Graph Construction with Minhash,String feature initialization,Unclear,Yes,Yes,No,Yes,Unclear,Yes,No,Unclear,Unsupported,Y,Indeterminate,Indeterminate → Unsupported
+CARTE,C05-B,CARTE vs Exclude Edge Info.,Column/edge information,Unclear,Unclear,Yes,Unclear,Unclear,Unclear,Yes,Unclear,Unclear,Indeterminate,Y,Indeterminate,Same
+CARTE,C05-C,CARTE vs Exclude Att. Layer & Edge Info.,Edge information with attention component,Unclear,Unclear,Yes,Unclear,No,Unclear,Yes,Unclear,No,Unsupported,Y,Unsupported,Same
+FeatLLM,C06-A,FeatLLM vs -Description,Feature-description block in rule generation,Yes,Yes,Yes,Unclear,Yes,Yes,Yes,Unclear,Yes,Indeterminate,Y,Supported,Supported → Indeterminate
+TabuLa-8B,C07-A,"TABULA-8B on UniPredict with original headers (descriptive label) vs TABULA-8B with feature headers X1, X2, ... and target header Y (descriptive label)",Informative feature and target headers,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Supported,Y,Supported,Same
+ConTextTab,C08-A,base (feature and column name semantics) vs no feature semantics - Ordinal encoder,Categorical/string feature encoding,Yes,Yes,Yes,No,Unclear,Unclear,Yes,No,Unclear,Unsupported,Y,Unsupported,Same
+ConTextTab,C08-B,base (feature and column name semantics) vs no feature semantics - MinHash encoder,Categorical/string feature encoding,Unclear,Unclear,Unclear,No,Unclear,Unclear,Yes,No,Unclear,Unsupported,Y,Unsupported,Same
+ConTextTab,C08-C,base (feature and column name semantics) vs no feature semantics - AutoGluon encoder,Categorical/string feature encoding,Unclear,Unclear,Unclear,No,Unclear,Unclear,Yes,No,Unclear,Unsupported,Y,Unsupported,Same
+ConTextTab,C08-D,base (feature and column name semantics) vs no feature semantics - Gap encoder,Categorical/string feature encoding,Unclear,Unclear,Unclear,No,Unclear,Unclear,Yes,No,Unclear,Unsupported,Y,Unsupported,Same
+ConTextTab,C08-E,base (feature and column name semantics) vs column semantics - drop column names,Column-name encoding,Yes,Yes,Yes,Yes,Yes,Unclear,Yes,Yes,Unclear,Indeterminate,Y,Supported,Supported → Indeterminate
+ConTextTab,C08-F,column semantics - add description vs base (feature and column name semantics),Additional contextual column descriptions,Yes,Yes,Yes,Yes,Yes,Unclear,Yes,Yes,Unclear,Indeterminate,?,Supported,Supported → Indeterminate
+TabSTAR,C09-A,TabSTAR vs Name + Bin,Quantile text in numerical verbalization,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Supported,?,Supported,Same
+TabSTAR,C09-B,TabSTAR vs Name,Numerical information in verbalized features,Unclear,Yes,Unclear,Unclear,Unclear,Yes,Yes,Unclear,Unclear,Indeterminate,Y,Supported,Supported → Indeterminate
+TARTE,C10-A,TARTE | Enriched YAGO4.5 vs TARTE | Remove column names | Enriched YAGO4.5,Column-name information,Unclear,Unclear,Yes,Unclear,Unclear,Unclear,Yes,Unclear,Unclear,Indeterminate,N,–,
+TARTE,C10-B,TARTE | Enriched YAGO4.5 vs TARTE | MinHash | Random weights,String encoder and table pretraining,Unclear,Yes,Yes,No,Yes,No,Yes,No,No,Unsupported,Y,Unsupported,Same

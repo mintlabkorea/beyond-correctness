@@ -1,0 +1,85 @@
+{
+ "GS_P1_identification_flipped": {
+  "ci95": [
+   0.1745072387433251,
+   0.3674586718225024
+  ],
+  "drop_best_endpoint_mean": 0.22182240972082654,
+  "mean_gain": 0.26600161815444245,
+  "n_cells": 210,
+  "n_endpoints_negative": 0,
+  "per_endpoint_mean": {
+   "bun": 0.2095601630580571,
+   "dbp": 0.27556917344367915,
+   "glucose": 0.0681008613115002,
+   "hba1c": 0.17748438892485155,
+   "hematocrit": 0.5310768687561376,
+   "rbc": 0.2878368204243364,
+   "sbp": 0.3123830511625351
+  },
+  "separated": true,
+  "win_rate": 1.0
+ },
+ "GS_P1_pass": true,
+ "GS_P2_neutral_random": {
+  "ci95": [
+   0.016171774329288797,
+   0.07690385248529452
+  ],
+  "drop_best_endpoint_mean": 0.028450032320334273,
+  "mean_gain": 0.0409083192517992,
+  "n_cells": 210,
+  "n_endpoints_negative": 0,
+  "per_endpoint_mean": {
+   "bun": 0.02662348886522883,
+   "dbp": 0.0447985299539047,
+   "glucose": 0.01797099507750322,
+   "hba1c": 0.11565804084058874,
+   "hematocrit": 0.022131642784257825,
+   "rbc": 0.0016437306288007917,
+   "sbp": 0.05753180661231025
+  },
+  "separated": true,
+  "win_rate": 0.7285714285714285
+ },
+ "GS_P2_pass": true,
+ "GS_P3_pass_no_utility": true,
+ "GS_P3_utility_vs_free": {
+  "ci95": [
+   -0.0043913238996868414,
+   0.009317165746756386
+  ],
+  "drop_best_endpoint_mean": -0.0004817531146863671,
+  "mean_gain": 0.002341528191891723,
+  "n_cells": 210,
+  "n_endpoints_negative": 1,
+  "per_endpoint_mean": {
+   "bun": 0.00405035305964044,
+   "dbp": 0.0018943727246225432,
+   "glucose": 0.003590243500230117,
+   "hba1c": 0.019281216031360262,
+   "hematocrit": 0.0008464894272987151,
+   "rbc": 0.00031240187279206005,
+   "sbp": -0.013584379272702079
+  },
+  "separated": false,
+  "win_rate": 0.6523809523809524
+ },
+ "bootstrap": {
+  "hierarchy": "endpoints then cells",
+  "reps": 10000,
+  "seed": 20260819
+ },
+ "endpoints": [
+  "bun",
+  "dbp",
+  "glucose",
+  "hba1c",
+  "hematocrit",
+  "rbc",
+  "sbp"
+ ],
+ "metric": "query_sd_normalized_rmse (lower is better); gain = lesion - documented",
+ "probe_root": "experiments/crta_v3_m3_sign_probe_v1",
+ "task": "M3_nhkn2hrs"
+}

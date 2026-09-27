@@ -1,0 +1,10 @@
+stage,coding_item,agree,total,percent,kappa,coder_a_source,coder_b_source,coder_a_column,coder_b_column
+independent_initial_claim_control,Content-sensitivity claim,25,25,100.0,1.0,claim_coding_coder_a.csv,claim_coding_coder_b.csv,reported_content_sensitivity_claim,reported_content_sensitivity_claim
+independent_initial_claim_control,Predictive-utility claim,24,25,96.0,0.9070631970260222,claim_coding_coder_a.csv,claim_coding_coder_b.csv,reported_utility_claim,reported_utility_claim
+independent_initial_claim_control,Content-sensitivity support,24,25,96.0,0.8148148148148147,claim_coding_coder_a.csv,claim_coding_coder_b.csv,supports_content_sensitivity,supports_content_sensitivity
+independent_initial_claim_control,Removal,25,25,100.0,1.0,claim_coding_coder_a.csv,claim_coding_coder_b.csv,pu_removal,utility_removal
+independent_initial_claim_control,Preservation,15,25,60.0,0.26470588235294107,claim_coding_coder_a.csv,claim_coding_coder_b.csv,pu_preservation,utility_preservation
+independent_initial_claim_control,Interface,22,25,88.0,0.7838616714697406,claim_coding_coder_a.csv,claim_coding_coder_b.csv,pu_interface,utility_interface
+independent_initial_claim_control,Predictive-utility support,19,25,76.0,0.648711943793911,claim_coding_coder_a.csv,claim_coding_coder_b.csv,supports_predictive_utility,supports_predictive_utility
+independent_frozen_rule,P1-P6 check agreement,105,150,70.0,0.4505047215890589,p1_p6_coder_a.csv,p1_p6_coder_b.csv,P1..P6,P1..P6
+independent_frozen_rule,Utility support among final explicit claims,15,18,83.33333333333333,0.6931818181818183,p1_p6_coder_a.csv + claim_coding_coder_a.csv,p1_p6_coder_b.csv + claim_coding_coder_b.csv,Removal + derived Preservation/Interface,Removal + derived Preservation/Interface

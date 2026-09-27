@@ -1,0 +1,169 @@
+{
+ "bootstrap": {
+  "reps": 10000,
+  "seed": 20260820
+ },
+ "cells_per_target": {
+  "current_smoking_status": 10,
+  "diabetes_history": 10,
+  "hypertension_history": 10
+ },
+ "n_cells": 30,
+ "primary_k": 256,
+ "sections": {
+  "K1024": {
+   "S5_P1_binding_content": {
+    "ci95": [
+     0.009021783664421872,
+     0.04959532542562213
+    ],
+    "drop_best_mean": 0.015648357570061368,
+    "mean": 0.027230576953197267,
+    "n": 30,
+    "separated": true,
+    "target_means": {
+     "current_smoking_status": 0.008487871247790124,
+     "diabetes_history": 0.05039501571946907,
+     "hypertension_history": 0.02280884389233261
+    },
+    "win": 0.9666666666666667
+   },
+   "S5_P2_columns_on_stage": {
+    "ci95": [
+     -0.023310250875014888,
+     0.062398860677673904
+    ],
+    "drop_best_mean": -0.006217249950090542,
+    "mean": 0.01679475336282047,
+    "n": 30,
+    "separated": false,
+    "target_means": {
+     "current_smoking_status": -0.024016240268295984,
+     "diabetes_history": 0.06281875998864249,
+     "hypertension_history": 0.011581740368114901
+    },
+    "win": 0.7
+   },
+   "desc_deranged_vs_base": {
+    "ci95": [
+     -0.031455486238387745,
+     0.01134139038391573
+    ],
+    "drop_best_mean": -0.02186560752015191,
+    "mean": -0.010435823590376798,
+    "n": 30,
+    "separated": false,
+    "target_means": {
+     "current_smoking_status": -0.03250411151608611,
+     "diabetes_history": 0.01242374426917342,
+     "hypertension_history": -0.011227103524217708
+    },
+    "win": 0.36666666666666664
+   }
+  },
+  "K256": {
+   "S5_P1_binding_content": {
+    "ci95": [
+     0.024486257393451526,
+     0.08711075719897411
+    ],
+    "drop_best_mean": 0.03172319060992832,
+    "mean": 0.050918659175150115,
+    "n": 30,
+    "separated": true,
+    "target_means": {
+     "current_smoking_status": 0.025193726673951734,
+     "diabetes_history": 0.08930959630559374,
+     "hypertension_history": 0.03825265454590491
+    },
+    "win": 0.9333333333333333
+   },
+   "S5_P2_columns_on_stage": {
+    "ci95": [
+     -0.022183297853483754,
+     0.07201715993008982
+    ],
+    "drop_best_mean": -0.005690991300969467,
+    "mean": 0.020399489064694347,
+    "n": 30,
+    "separated": false,
+    "target_means": {
+     "current_smoking_status": -0.023541358838887406,
+     "diabetes_history": 0.07258044979602198,
+     "hypertension_history": 0.01215937623694847
+    },
+    "win": 0.6666666666666666
+   },
+   "desc_deranged_vs_base": {
+    "ci95": [
+     -0.047670118421388845,
+     -0.012853711921692632
+    ],
+    "drop_best_mean": -0.037414181910897785,
+    "mean": -0.030519170110455778,
+    "n": 30,
+    "separated": false,
+    "target_means": {
+     "current_smoking_status": -0.04873508551283914,
+     "diabetes_history": -0.016729146509571757,
+     "hypertension_history": -0.026093278308956434
+    },
+    "win": 0.1
+   }
+  },
+  "K64": {
+   "S5_P1_binding_content": {
+    "ci95": [
+     0.04651874167214927,
+     0.1310542680656595
+    ],
+    "drop_best_mean": 0.05590983882865743,
+    "mean": 0.08200516655897652,
+    "n": 30,
+    "separated": true,
+    "target_means": {
+     "current_smoking_status": 0.058056413136976646,
+     "diabetes_history": 0.13419582201961464,
+     "hypertension_history": 0.053763264520338215
+    },
+    "win": 1.0
+   },
+   "S5_P2_columns_on_stage": {
+    "ci95": [
+     -0.006511730555296144,
+     0.07381945370737712
+    ],
+    "drop_best_mean": 0.003771163608900735,
+    "mean": 0.02724083076435636,
+    "n": 30,
+    "separated": false,
+    "target_means": {
+     "current_smoking_status": -0.006984714357551625,
+     "diabetes_history": 0.07418016507526762,
+     "hypertension_history": 0.014527041575353094
+    },
+    "win": 0.8
+   },
+   "desc_deranged_vs_base": {
+    "ci95": [
+     -0.07341913427871409,
+     -0.035253647464484644
+    ],
+    "drop_best_mean": -0.06252839221943765,
+    "mean": -0.05476433579462014,
+    "n": 30,
+    "separated": false,
+    "target_means": {
+     "current_smoking_status": -0.06504112749452827,
+     "diabetes_history": -0.06001565694434704,
+     "hypertension_history": -0.03923622294498512
+    },
+    "win": 0.1
+   }
+  }
+ },
+ "verdicts": {
+  "S5_P1": true,
+  "S5_P2": false
+ }
+}

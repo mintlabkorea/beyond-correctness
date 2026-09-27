@@ -1,0 +1,177 @@
+{
+  "builder_version": "crta-payload-builder-1.0.0",
+  "contract_version": "crta-1.0.0",
+  "schema_pair_id": "nhanes_to_knhanes_shared_clinical_full_documents_v2",
+  "config_sha256": "a4b1349800c5fdfcb03ab2304f74ea30a01dfbe9d95a6ced31dca472501a4235",
+  "unit_registry_version": "crta-units-1.0.0",
+  "input_files": [
+    {
+      "path": "./iclr_latex_v3/method_contract/v1/payload_builder/configs/nhanes_knhanes_shared_clinical_full_documents_v2.json",
+      "sha256": "1fc11087a508200e9cf1c65c760055f9cd745e10488f4b64ec88a29e02ad10fc",
+      "kind": "builder_config"
+    },
+    {
+      "path": "data/nhanes_knhanes/tasks/standard_benchmark/current/results/nh_controlled_aux_v0/stage4_codebook_surface_corpus_v0.csv",
+      "sha256": "746a7ffb4d71633f32aad2dc2928704f8e27bd574a5f942f473ea513f70a4e50",
+      "kind": "column_registry"
+    },
+    {
+      "path": "data/external/anonymous-source/Data/raw/open/KNHANES 2020-2024/9_KHANES_codebook.csv",
+      "sha256": "32782807df15021c432a636a0ed10459fc087fb05856cbae382eddea2e00ff53",
+      "kind": "column_registry"
+    },
+    {
+      "path": "data/nhanes_knhanes/tasks/standard_benchmark/current/experiment_notes/schema_inventory_v1/shared_slot_target_inventory.csv",
+      "sha256": "8516fe16bfedd8c3584f2385154b4d73db24dea0de9b90ae56ca6eca0bf7ced0",
+      "kind": "column_selector"
+    },
+    {
+      "path": "./iclr_latex_v3/method_contract/v1/medical_documents/v1/document_packs/materialized/nhanes_knhanes_shared_clinical_full_documents_v2/source_nhanes_biopro_d.txt",
+      "sha256": "d1680cf8ccb995da36af1430118cc21b3078f42ae9ce4d00c52a34085610e27a",
+      "kind": "documentation"
+    },
+    {
+      "path": "./iclr_latex_v3/method_contract/v1/medical_documents/v1/document_packs/materialized/nhanes_knhanes_shared_clinical_full_documents_v2/source_nhanes_bmx_d.txt",
+      "sha256": "fa9a3fabb34ca5b173f0345fdf264064b24fe70df5012e077135e14e24f67123",
+      "kind": "documentation"
+    },
+    {
+      "path": "./iclr_latex_v3/method_contract/v1/medical_documents/v1/document_packs/materialized/nhanes_knhanes_shared_clinical_full_documents_v2/source_nhanes_bpx_d.txt",
+      "sha256": "6ee3e95768bb558be4fc90565ca5e6e438da2298148df88324514ace18a48506",
+      "kind": "documentation"
+    },
+    {
+      "path": "./iclr_latex_v3/method_contract/v1/medical_documents/v1/document_packs/materialized/nhanes_knhanes_shared_clinical_full_documents_v2/source_nhanes_cbc_d.txt",
+      "sha256": "5e8308d05b96aac49a9edf03db6743192937c6c3328c131ee728a16e2d3896ed",
+      "kind": "documentation"
+    },
+    {
+      "path": "./iclr_latex_v3/method_contract/v1/medical_documents/v1/document_packs/materialized/nhanes_knhanes_shared_clinical_full_documents_v2/source_nhanes_demo_d.txt",
+      "sha256": "2d40d637b1545b9031297fb6b53a14a759c9a12f3531c701b5fe53b886c16560",
+      "kind": "documentation"
+    },
+    {
+      "path": "./iclr_latex_v3/method_contract/v1/medical_documents/v1/document_packs/materialized/nhanes_knhanes_shared_clinical_full_documents_v2/source_nhanes_ghb_d.txt",
+      "sha256": "7fcf25232d9fb29ec7fc686e6653e4ef4f77b1ca8080e2fa51433a028a0040f9",
+      "kind": "documentation"
+    },
+    {
+      "path": "./iclr_latex_v3/method_contract/v1/medical_documents/v1/document_packs/materialized/nhanes_knhanes_shared_clinical_full_documents_v2/source_nhanes_glu_d.txt",
+      "sha256": "84ed52adb9a9c004a7c0c0859dd2264104c4c7b11b3b8d8ebcb69dc93b58f984",
+      "kind": "documentation"
+    },
+    {
+      "path": "./iclr_latex_v3/method_contract/v1/medical_documents/v1/document_packs/materialized/nhanes_knhanes_shared_clinical_full_documents_v2/source_nhanes_l13_b.txt",
+      "sha256": "0b4f2ee168e2e7231f97676b3c273057388dd5bc1d8ea80ef88402ade588f49f",
+      "kind": "documentation"
+    },
+    {
+      "path": "./iclr_latex_v3/method_contract/v1/medical_documents/v1/document_packs/materialized/nhanes_knhanes_shared_clinical_full_documents_v2/target_knhanes_cycle8_selected_pages.txt",
+      "sha256": "9eb9d9bfdc3e843eb2a0fded139458e73b829a640188e27ec966b6fcee080475",
+      "kind": "documentation"
+    },
+    {
+      "path": "./iclr_latex_v3/method_contract/v1/medical_documents/v1/document_packs/materialized/nhanes_knhanes_shared_clinical_full_documents_v2/target_knhanes_cycle9_selected_pages.txt",
+      "sha256": "81a3c65ccbe6cfc797225d37f5bf9bbf2d956896f29492a3874a20a7fb03b786",
+      "kind": "documentation"
+    },
+    {
+      "path": "./iclr_latex_v3/method_contract/v1/payload_builder/unit_registry.json",
+      "sha256": "d14bd5e4c3d8160d82513001804206f09324a044878c9f6a9db65c8816b9a17a",
+      "kind": "unit_registry"
+    }
+  ],
+  "table_audits": {
+    "source": {
+      "registry_path": "data/nhanes_knhanes/tasks/standard_benchmark/current/results/nh_controlled_aux_v0/stage4_codebook_surface_corpus_v0.csv",
+      "column_id_transform": {
+        "prefix": "",
+        "case": "preserve"
+      },
+      "exposed_registry_fields": [
+        "codebook_description",
+        "codebook_label",
+        "module",
+        "raw_variable_name",
+        "unit",
+        "value_meaning_text"
+      ],
+      "unexposed_registry_fields": [
+        "canonical_var_name",
+        "codebook_surface_text",
+        "exclude_reason",
+        "existing_concept_family",
+        "existing_construct_id",
+        "existing_feature_group",
+        "feature_id",
+        "source_dataset",
+        "surface_quality"
+      ],
+      "registry_rows": 14087,
+      "selected_columns": 12,
+      "candidate_eligible_columns": 12,
+      "missing_selected_columns": [],
+      "duplicate_registry_columns": {},
+      "forbidden_registry_rows": 0,
+      "unknown_unit_counts": {},
+      "inferred_unit_counts": {
+        "<missing>->mmhg": 2,
+        "g->g/dl": 1
+      },
+      "redacted_role_counts": {},
+      "document_span_counts": {
+        "nhanes_biopro_d_native": 7,
+        "nhanes_bmx_d_native": 9,
+        "nhanes_bpx_d_native": 8,
+        "nhanes_cbc_d_native": 6,
+        "nhanes_demo_d_native": 6,
+        "nhanes_ghb_d_native": 5,
+        "nhanes_glu_d_native": 6,
+        "nhanes_l13_b_native": 6
+      },
+      "dropped_document_chunks": 0
+    },
+    "target": {
+      "registry_path": "data/external/anonymous-source/Data/raw/open/KNHANES 2020-2024/9_KHANES_codebook.csv",
+      "column_id_transform": {
+        "prefix": "ALL__",
+        "case": "lower"
+      },
+      "exposed_registry_fields": [
+        "내용",
+        "변수명",
+        "변수설명"
+      ],
+      "unexposed_registry_fields": [],
+      "registry_rows": 461,
+      "selected_columns": 12,
+      "candidate_eligible_columns": 12,
+      "missing_selected_columns": [],
+      "duplicate_registry_columns": {},
+      "forbidden_registry_rows": 0,
+      "unknown_unit_counts": {
+        "unknown": 1
+      },
+      "inferred_unit_counts": {
+        "<missing>->%": 1,
+        "<missing>->cm": 2,
+        "<missing>->g/dl": 1,
+        "<missing>->kg": 1,
+        "<missing>->mg/dl": 4,
+        "<missing>->mmhg": 2
+      },
+      "redacted_role_counts": {},
+      "document_span_counts": {
+        "knhanes_cycle8_manual_native": 3,
+        "knhanes_cycle9_manual_native": 3
+      },
+      "dropped_document_chunks": 0
+    }
+  },
+  "payload_counts": {
+    "source_columns": 12,
+    "target_columns": 12,
+    "evidence_spans": 83
+  },
+  "proposer_input_sha256": "784e218c09b1615b2c7f052eb8e52b4b6d374243ea1fb08293f6cc7e02c667aa"
+}

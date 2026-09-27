@@ -1,0 +1,474 @@
+{
+ "analysis_scope": "post-result descriptive; no manuscript source edited",
+ "identity_check": {
+  "n_rows_zero_polarity": 24,
+  "max_abs_U_rank_zero_polarity": 0.0
+ },
+ "bootstrap": {
+  "reps": 10000,
+  "seed": 20260904,
+  "stratum_unit": "realization",
+  "mean_unit": "(family, realization) cluster"
+ },
+ "primary_K32_support_only": {
+  "strata": [
+   {
+    "family": "additive",
+    "backbone": "histgb",
+    "n": 20,
+    "intercept": 0.04501899758663071,
+    "slope": 0.09510656792148466,
+    "ci95": [
+     -0.0019216682338740105,
+     0.17143404653673794
+    ],
+    "spearman": 0.49784599953838005,
+    "mean_U_rank": 0.2780300889942681
+   },
+   {
+    "family": "additive",
+    "backbone": "xgb",
+    "n": 20,
+    "intercept": 0.05644493338892105,
+    "slope": 0.08917824005766829,
+    "ci95": [
+     -0.005411526881450057,
+     0.16389374804465967
+    ],
+    "spearman": 0.5097943035273012,
+    "mean_U_rank": 0.27493162153020834
+   },
+   {
+    "family": "pairwise",
+    "backbone": "histgb",
+    "n": 20,
+    "intercept": 0.016672324734032726,
+    "slope": 0.08329609945572429,
+    "ci95": [
+     0.04354090063374654,
+     0.12265917519670026
+    ],
+    "spearman": 0.5507782276198214,
+    "mean_U_rank": 0.1666053037543365
+   },
+   {
+    "family": "pairwise",
+    "backbone": "xgb",
+    "n": 20,
+    "intercept": 0.009441407447444492,
+    "slope": 0.08845266587689583,
+    "ci95": [
+     0.04676940196840354,
+     0.12768482614296986
+    ],
+    "spearman": 0.5705335442489399,
+    "mean_U_rank": 0.16865620602585701
+   },
+   {
+    "family": "sparse",
+    "backbone": "histgb",
+    "n": 20,
+    "intercept": 0.08551324247469552,
+    "slope": 0.08853531750317101,
+    "ci95": [
+     0.013668883694452787,
+     0.17928710559102515
+    ],
+    "spearman": 0.5363870669753549,
+    "mean_U_rank": 0.24045004810524473
+   },
+   {
+    "family": "sparse",
+    "backbone": "xgb",
+    "n": 20,
+    "intercept": 0.09295520169502872,
+    "slope": 0.08468667232293209,
+    "ci95": [
+     0.010326811808569297,
+     0.17019199137397195
+    ],
+    "spearman": 0.5426697851829725,
+    "mean_U_rank": 0.24115687826015977
+   }
+  ],
+  "n_positive": 6,
+  "n_ci_above_zero": 4,
+  "mean_slope": 0.08820926052297935,
+  "mean_slope_cluster_ci95": [
+   0.04583253194352688,
+   0.12867722305150692
+  ]
+ },
+ "sensitivity_K32_support_query": {
+  "strata": [
+   {
+    "family": "additive",
+    "backbone": "histgb",
+    "n": 20,
+    "intercept": 0.05356507028808327,
+    "slope": 0.09003809762680452,
+    "ci95": [
+     -0.001491729301373767,
+     0.15824335464484576
+    ],
+    "spearman": 0.44607001558638854,
+    "mean_U_rank": 0.2741584094737543
+   },
+   {
+    "family": "additive",
+    "backbone": "xgb",
+    "n": 20,
+    "intercept": 0.05054726867828688,
+    "slope": 0.09138048538137204,
+    "ci95": [
+     0.0023441641070601755,
+     0.1558605736324946
+    ],
+    "spearman": 0.44208724759008156,
+    "mean_U_rank": 0.27442945786264833
+   },
+   {
+    "family": "pairwise",
+    "backbone": "histgb",
+    "n": 20,
+    "intercept": 0.0013257498014478835,
+    "slope": 0.0946883374069508,
+    "ci95": [
+     0.054659811518220885,
+     0.13738268139495027
+    ],
+    "spearman": 0.6843241680326619,
+    "mean_U_rank": 0.17176475713395936
+   },
+   {
+    "family": "pairwise",
+    "backbone": "xgb",
+    "n": 20,
+    "intercept": -0.001485749449632782,
+    "slope": 0.0970631504378073,
+    "ci95": [
+     0.05758406840447344,
+     0.13903619912684292
+    ],
+    "spearman": 0.6843241680326619,
+    "mean_U_rank": 0.1732279213384204
+   },
+   {
+    "family": "sparse",
+    "backbone": "histgb",
+    "n": 20,
+    "intercept": 0.08963604448170698,
+    "slope": 0.07828915638627038,
+    "ci95": [
+     0.0018453765429069177,
+     0.16606977865907466
+    ],
+    "spearman": 0.45157037117251686,
+    "mean_U_rank": 0.22664206815768012
+   },
+   {
+    "family": "sparse",
+    "backbone": "xgb",
+    "n": 20,
+    "intercept": 0.09529287582523234,
+    "slope": 0.07653554516926993,
+    "ci95": [
+     0.000915695213534355,
+     0.16130442336561535
+    ],
+    "spearman": 0.4507850313965647,
+    "mean_U_rank": 0.2292300798714547
+   }
+  ],
+  "n_positive": 6,
+  "n_ci_above_zero": 5,
+  "mean_slope": 0.08799912873474582,
+  "mean_slope_cluster_ci95": [
+   0.04672685785698131,
+   0.12657707557997858
+  ]
+ },
+ "sensitivity_K512_support_only": {
+  "strata": [
+   {
+    "family": "additive",
+    "backbone": "xgb",
+    "n": 20,
+    "intercept": 0.008133323137144542,
+    "slope": 0.004280545868089681,
+    "ci95": [
+     -0.003270634782987146,
+     0.012655159418597446
+    ],
+    "spearman": 0.21108670380427313,
+    "mean_U_rank": 0.018620660513964257
+   },
+   {
+    "family": "pairwise",
+    "backbone": "xgb",
+    "n": 20,
+    "intercept": -0.002619398464398679,
+    "slope": 0.00685924839713309,
+    "ci95": [
+     0.0032376774015680536,
+     0.010532802713964232
+    ],
+    "spearman": 0.5800160962309168,
+    "mean_U_rank": 0.009727248650440884
+   },
+   {
+    "family": "sparse",
+    "backbone": "xgb",
+    "n": 20,
+    "intercept": 0.005238989704040994,
+    "slope": 0.0017084101251912036,
+    "ci95": [
+     -0.001818689404727993,
+     0.005087823841114557
+    ],
+    "spearman": 0.29371707620612403,
+    "mean_U_rank": 0.0082287074231256
+   }
+  ],
+  "n_positive": 3,
+  "n_ci_above_zero": 1,
+  "mean_slope": 0.0042827347968046586,
+  "mean_slope_cluster_ci95": [
+   0.001292923223824992,
+   0.007507940112476103
+  ]
+ },
+ "sensitivity_K512_support_query": {
+  "strata": [
+   {
+    "family": "additive",
+    "backbone": "xgb",
+    "n": 20,
+    "intercept": 0.009401758541131861,
+    "slope": 0.003997177371588973,
+    "ci95": [
+     -0.004570415511571782,
+     0.011782716809107661
+    ],
+    "spearman": 0.18719009582643092,
+    "mean_U_rank": 0.01919484310152484
+   },
+   {
+    "family": "pairwise",
+    "backbone": "xgb",
+    "n": 20,
+    "intercept": -0.002027332196407978,
+    "slope": 0.006537296551474622,
+    "ci95": [
+     0.0038669728918757315,
+     0.00996181016392766
+    ],
+    "spearman": 0.6629884260732141,
+    "mean_U_rank": 0.009739801596246345
+   },
+   {
+    "family": "sparse",
+    "backbone": "xgb",
+    "n": 20,
+    "intercept": 0.009333640921009084,
+    "slope": -0.0009484237250190097,
+    "ci95": [
+     -0.00485658264789415,
+     0.0031214543518464275
+    ],
+    "spearman": -0.1178009663928305,
+    "mean_U_rank": 0.00767389940222582
+   }
+  ],
+  "n_positive": 2,
+  "n_ci_above_zero": 1,
+  "mean_slope": 0.0031953500660148616,
+  "mean_slope_cluster_ci95": [
+   -8.102769651708242e-05,
+   0.0062617444551289776
+  ]
+ },
+ "descriptive_by_polarity_K32_support_only": [
+  {
+   "n_polarity": 0,
+   "backbone": "histgb",
+   "n_cells": 4,
+   "mean_U_rank": 0.0,
+   "sd_U_rank": 0.0,
+   "mean_U_raw": 0.19943469343660783
+  },
+  {
+   "n_polarity": 0,
+   "backbone": "xgb",
+   "n_cells": 4,
+   "mean_U_rank": 0.0,
+   "sd_U_rank": 0.0,
+   "mean_U_raw": 0.20067423740393736
+  },
+  {
+   "n_polarity": 1,
+   "backbone": "histgb",
+   "n_cells": 16,
+   "mean_U_rank": 0.09949605457723025,
+   "sd_U_rank": 0.16823419644367912,
+   "mean_U_raw": 0.2337304573496038
+  },
+  {
+   "n_polarity": 1,
+   "backbone": "xgb",
+   "n_cells": 16,
+   "mean_U_rank": 0.10312075260165068,
+   "sd_U_rank": 0.1781761081961462,
+   "mean_U_raw": 0.22773947629700464
+  },
+  {
+   "n_polarity": 2,
+   "backbone": "histgb",
+   "n_cells": 20,
+   "mean_U_rank": 0.30772863330001243,
+   "sd_U_rank": 0.2456352359803701,
+   "mean_U_raw": 0.30006116093648555
+  },
+  {
+   "n_polarity": 2,
+   "backbone": "xgb",
+   "n_cells": 20,
+   "mean_U_rank": 0.3060880753809459,
+   "sd_U_rank": 0.2388956897064964,
+   "mean_U_raw": 0.29902190293757114
+  },
+  {
+   "n_polarity": 3,
+   "backbone": "histgb",
+   "n_cells": 16,
+   "mean_U_rank": 0.2844088631418921,
+   "sd_U_rank": 0.14762097778571523,
+   "mean_U_raw": 0.24268761372597078
+  },
+  {
+   "n_polarity": 3,
+   "backbone": "xgb",
+   "n_cells": 16,
+   "mean_U_rank": 0.2854507099940026,
+   "sd_U_rank": 0.14401663553601965,
+   "mean_U_raw": 0.24235166639471603
+  },
+  {
+   "n_polarity": 4,
+   "backbone": "histgb",
+   "n_cells": 4,
+   "mean_U_rank": 0.351164366892695,
+   "sd_U_rank": 0.13240500790188298,
+   "mean_U_raw": 0.31686433470204306
+  },
+  {
+   "n_polarity": 4,
+   "backbone": "xgb",
+   "n_cells": 4,
+   "mean_U_rank": 0.3389973017937834,
+   "sd_U_rank": 0.13546337189984822,
+   "mean_U_raw": 0.31307861443159335
+  }
+ ],
+ "sentinel_component_U_sent_minus_U_raw_full_dose": [
+  {
+   "family": "additive",
+   "backbone": "histgb",
+   "support": 32,
+   "n": 20,
+   "mean": 0.002645646582051775,
+   "ci95": [
+    -0.025546783690741294,
+    0.03452516789453988
+   ]
+  },
+  {
+   "family": "additive",
+   "backbone": "xgb",
+   "support": 32,
+   "n": 20,
+   "mean": 0.0023509961808208025,
+   "ci95": [
+    -0.026316851641195824,
+    0.036183427986531756
+   ]
+  },
+  {
+   "family": "additive",
+   "backbone": "xgb",
+   "support": 512,
+   "n": 20,
+   "mean": 0.005459706179823137,
+   "ci95": [
+    0.0008890847969503572,
+    0.010115072993833213
+   ]
+  },
+  {
+   "family": "pairwise",
+   "backbone": "histgb",
+   "support": 32,
+   "n": 20,
+   "mean": 0.016675568135475966,
+   "ci95": [
+    -0.024117725612528364,
+    0.0655062911531562
+   ]
+  },
+  {
+   "family": "pairwise",
+   "backbone": "xgb",
+   "support": 32,
+   "n": 20,
+   "mean": 0.02590185644144452,
+   "ci95": [
+    -0.016489255128218226,
+    0.07659471293553669
+   ]
+  },
+  {
+   "family": "pairwise",
+   "backbone": "xgb",
+   "support": 512,
+   "n": 20,
+   "mean": 0.0047862592258822055,
+   "ci95": [
+    -4.13474383575673e-05,
+    0.010039495544441952
+   ]
+  },
+  {
+   "family": "sparse",
+   "backbone": "histgb",
+   "support": 32,
+   "n": 20,
+   "mean": -0.014631967234892901,
+   "ci95": [
+    -0.05265827928966597,
+    0.02242460929681145
+   ]
+  },
+  {
+   "family": "sparse",
+   "backbone": "xgb",
+   "support": 32,
+   "n": 20,
+   "mean": -0.00876782210666327,
+   "ci95": [
+    -0.048107899754586014,
+    0.029750398537030945
+   ]
+  },
+  {
+   "family": "sparse",
+   "backbone": "xgb",
+   "support": 512,
+   "n": 20,
+   "mean": 0.009695404813410125,
+   "ci95": [
+    0.004358681380327215,
+    0.014438562329153014
+   ]
+  }
+ ]
+}

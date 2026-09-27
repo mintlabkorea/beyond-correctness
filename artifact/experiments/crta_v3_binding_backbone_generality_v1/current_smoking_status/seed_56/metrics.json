@@ -1,0 +1,46 @@
+{
+ "arms": [
+  "a10_stage",
+  "a11_stage_columns",
+  "pl_columns_at_stage"
+ ],
+ "auroc": {
+  "1024": {
+   "a10_stage": 0.688637274245435,
+   "a11_stage_columns": 0.663149486514192,
+   "pl_columns_at_stage": 0.6450198765858012
+  },
+  "256": {
+   "a10_stage": 0.7098258979526465,
+   "a11_stage_columns": 0.6598102341951982,
+   "pl_columns_at_stage": 0.6480225078856183
+  },
+  "64": {
+   "a10_stage": 0.6943372785798381,
+   "a11_stage_columns": 0.7023578624133604,
+   "pl_columns_at_stage": 0.5741892111421645
+  }
+ },
+ "backbone": "sklearn_histgb_d6_i300",
+ "benchmark_id": "std_cross_nh2kn_shared_anchorreset_fewshot_v1",
+ "feature_set": "stage_factorial_all_v1",
+ "metric": "auroc_vs_documented_target_binary (higher is better)",
+ "n_eval": 4767,
+ "n_pool": 7503,
+ "n_source": 17776,
+ "pl_columns_permutation": {
+  "dbp": "hba1c",
+  "glucose": "dbp",
+  "hba1c": "glucose",
+  "height_cm": "total_cholesterol",
+  "sbp": "weight_kg",
+  "total_cholesterol": "triglycerides",
+  "triglycerides": "waist_cm",
+  "waist_cm": "sbp",
+  "weight_kg": "height_cm"
+ },
+ "primary_k": 256,
+ "seed": 56,
+ "target": "current_smoking_status",
+ "wall_seconds": 11.0
+}

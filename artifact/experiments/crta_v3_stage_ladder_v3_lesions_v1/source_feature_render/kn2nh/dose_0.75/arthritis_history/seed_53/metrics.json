@@ -1,0 +1,76 @@
+{
+ "arms": [
+  "a00_base",
+  "a01_columns",
+  "a10_stage",
+  "a11_stage_columns"
+ ],
+ "auroc": {
+  "256": {
+   "a00_base": 0.6955049784039989,
+   "a01_columns": 0.6819717557137873,
+   "a10_stage": 0.7075411113051591,
+   "a11_stage_columns": 0.6899916574035345
+  }
+ },
+ "backbone": "xgboost_hist_d6_n300_regression_ranked",
+ "benchmark_id": "std_cross_kn2nh_shared_anchorreset_fewshot_v1",
+ "feature_set": "stage_factorial_all_v1",
+ "m_axis": "source_only_fork_v1",
+ "metric": "auroc_vs_documented_target_binary (higher is better)",
+ "n_eval": 37469,
+ "n_pool": 3314,
+ "n_source": 150602,
+ "pl_columns_permutation": {
+  "dbp": "weight_kg",
+  "glucose": "height_cm",
+  "hba1c": "triglycerides",
+  "height_cm": "waist_cm",
+  "sbp": "hba1c",
+  "total_cholesterol": "glucose",
+  "triglycerides": "sbp",
+  "waist_cm": "dbp",
+  "weight_kg": "total_cholesterol"
+ },
+ "pl_relation_pairs": [
+  [
+   "glucose",
+   "dbp"
+  ],
+  [
+   "sbp",
+   "dbp"
+  ],
+  [
+   "total_cholesterol",
+   "wbc"
+  ],
+  [
+   "glucose",
+   "hematocrit"
+  ],
+  [
+   "current_smoking_status",
+   "sex"
+  ],
+  [
+   "hemoglobin",
+   "total_cholesterol"
+  ]
+ ],
+ "primary_k": 256,
+ "seed": 53,
+ "target": "arthritis_history",
+ "target_cohort": "nhanes",
+ "wall_seconds": 43.7,
+ "wrong_label_maps": {
+  "source": {
+   "1.0": 0.0,
+   "8.0": 1.0
+  },
+  "target": {
+   "1.0": 0.0,
+   "7.0": 1.0
+  }
+ }
+}

@@ -1,0 +1,101 @@
+{
+  "analysis_status": "frozen_all_reference_k512_evidence",
+  "arm": "ref_03",
+  "base_runner_sha256": "796d0bb0d17950a771c5e18fe732f955a4307956192e7329de23683e411f9447",
+  "dataset": "jungle",
+  "execution_device": "cuda:2",
+  "execution_num_shards": 3,
+  "execution_shard_index": 2,
+  "final_trainable_state_sha256": "d2a2b9aee8a33fa7cef40bc08d59921d3a22c39ea3e1cb58fffbddacfd4837aa",
+  "ia3_checkpoint_sha256": "8fe7a00fb425dd331c7a021c9468d50a14ec2ca1998007e7ead5ce3111405729",
+  "initial_trainable_state_sha256": "2b3e0be8998a1d12a84a7b358726205cce0c83973fb198a1c37bdac6aa3fbd0b",
+  "metrics": {
+    "accuracy": 0.8026550647032574,
+    "auc": 0.8833881436283966
+  },
+  "model_audit": {
+    "checkpoint_key_count": 192,
+    "checkpoint_parameter_count": 1081344,
+    "frozen_parameter_count": 11136118784,
+    "initial_trainable_state_sha256": "2b3e0be8998a1d12a84a7b358726205cce0c83973fb198a1c37bdac6aa3fbd0b",
+    "missing_base_model_key_count": 752,
+    "parameter_dtype": "torch.bfloat16",
+    "precision_layout": "frozen=bfloat16, trainable_ia3=float32",
+    "trainable_parameter_count": 1081344,
+    "trainable_parameter_dtype": "torch.float32",
+    "trainable_tensor_count": 192
+  },
+  "model_path": "external/.cache/huggingface/hub/models--bigscience--T0/snapshots/1cfa27271f8085c29323c94bd659004b210f20b5",
+  "n_test": 8964,
+  "n_train": 512,
+  "n_train_unique": 509,
+  "prior_wrapper_sha256": "62a7d917cd5450bba2af3ff548c62f4a60790f1dfdf45048fb5088017e14182d",
+  "protobuf_python_implementation": "python",
+  "protocol_sha256": "5fee5e02c870da5205e59d8f53aeb834ae374ccb5ea28f30b8b2f68f036022b0",
+  "raw_and_serialization_tree_sha256": "383519d4b1efffe01c414c1f7b12db9c7abc04aefbde0e9957c44c5eaf038763",
+  "reference_id": "ref_03",
+  "reference_manifest_sha256": "7fe208e544a954ebd2c15e273473d604107a22e49230631101466ab97097d8da",
+  "reference_permutation": [
+    1,
+    3,
+    0,
+    2,
+    4,
+    5
+  ],
+  "reference_selection_role": "exhaustive_remaining_21",
+  "reference_template_sha256": "aad712338b3508f7857d452da073daff042014ece8f3a8f863473a3038f60505",
+  "runner_sha256": "b8e659230269249a502122b44aa58f402366660ea55ea644025d29c62759fd9b",
+  "seed": 42,
+  "shot": 512,
+  "tabllm_commit": "71f6647c523aa6fd35df94ad76207c4377248c49",
+  "test_prompt_sha256": "4ccaf4a76211e1b9bd70d9942dd5a6b3e5c65d725de0d8b190427e51bd4f0141",
+  "tfew_execution_commit": "114deced63ae722a368e06cb08ea956b20c393a6",
+  "train_membership_with_replacement": true,
+  "train_prompt_sha256": "4ee608bc7659ef057b1f702fcef64524bf72cc06ad7e4c1e66b53891fe10615b",
+  "trained_checkpoint_sha256": "98b29752ca716184d85c90a47177585c3b6aeba1669de6eb1da81036a51d2769",
+  "training": {
+    "batch_order_sha256": "19d457782e2df41235d20db4bd7776bdd2d08be4464e544989de03934d20de5b",
+    "executed_steps": 3840,
+    "loss_first": {
+      "gradient_norm_pre_clip": 0.9094916582107544,
+      "lm_loss": 0.37135130167007446,
+      "loss": 3.5865678787231445,
+      "lr": 1.3020833333333334e-05,
+      "mc_loss": 0.654432475566864,
+      "unlikely_loss": 2.560784101486206
+    },
+    "loss_last": {
+      "gradient_norm_pre_clip": 3.3497211933135986,
+      "lm_loss": 0.08950543403625488,
+      "loss": 0.41831541061401367,
+      "lr": 0.0,
+      "mc_loss": 0.12499788403511047,
+      "unlikely_loss": 0.2038121074438095
+    },
+    "planned_steps": 3840
+  },
+  "training_contract": {
+    "batch_size": 4,
+    "compute_dtype": "bfloat16 base and autocast with FP32 IA3 master parameters; temporary bfloat16 IA3 evaluation copy",
+    "epochs": 30,
+    "gradient_clip": 1.0,
+    "length_norm": 1,
+    "loss": "lm + multiple_choice + unlikely",
+    "lr": 0.003,
+    "max_length": 1024,
+    "optimizer": "Adafactor(scale_parameter=True, relative_step=False)",
+    "scheduler": "linear_decay_with_warmup",
+    "warmup_ratio": 0.06
+  },
+  "versions": {
+    "datasets": "2.14.7",
+    "numpy": "2.2.6",
+    "pandas": "2.3.3",
+    "python": "3.10.20",
+    "scikit_learn": "1.7.2",
+    "torch": "2.12.0.dev20260408+cu128",
+    "transformers": "4.30.0"
+  },
+  "wall_seconds": 1333.971
+}

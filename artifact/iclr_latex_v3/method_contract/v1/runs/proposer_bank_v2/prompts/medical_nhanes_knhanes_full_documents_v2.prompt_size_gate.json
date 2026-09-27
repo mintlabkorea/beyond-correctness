@@ -1,0 +1,45 @@
+{
+  "gate_id": "crta-full-document-prompt-size-gate-1.0.0",
+  "schema_pair_id": "nhanes_to_knhanes_shared_clinical_full_documents_v2",
+  "prompt_artifact": "medical_nhanes_knhanes_full_documents_v2.prompt.json",
+  "prompt_artifact_file_sha256": "1d33cc2586a0134c929df90ecc640f319ecccd1ce4f103160e87d401c0a9c2a1",
+  "messages_sha256": "6100b640dc05c0d2f0d8a9babc13079f634991fe5863d5f64094a38ee59bf58e",
+  "requested_max_output_tokens": 16384,
+  "measurement_transport": "AutoTokenizer.apply_chat_template(add_generation_prompt=true, enable_thinking=false), followed by tokenizer.encode",
+  "models": [
+    {
+      "model_id": "Qwen/Qwen3-8B",
+      "snapshot": "b968826d9c46dd6066d109eabc6255188de91218",
+      "input_tokens": 24497,
+      "context_limit": 40960,
+      "headroom_after_requested_output": 79,
+      "pass": true
+    },
+    {
+      "model_id": "Qwen/Qwen3-32B",
+      "snapshot": "9216db5781bf21249d130ec9da846c4624c16137",
+      "input_tokens": 24497,
+      "context_limit": 40960,
+      "headroom_after_requested_output": 79,
+      "pass": true
+    },
+    {
+      "model_id": "google/medgemma-4b-it",
+      "snapshot": "290cda5eeccbee130f987c4ad74a59ae6f196408",
+      "input_tokens": 25689,
+      "context_limit": 131072,
+      "headroom_after_requested_output": 88999,
+      "pass": true
+    },
+    {
+      "model_id": "google/medgemma-27b-it",
+      "snapshot": "2d3e00ea38b50018bf5dd3aa1009457cd2d5a48f",
+      "input_tokens": 25689,
+      "context_limit": 131072,
+      "headroom_after_requested_output": 88999,
+      "pass": true
+    }
+  ],
+  "decision": "pass_all_fixed_local_proposers",
+  "notes": "No prompt truncation, model-specific document selection, or reduced output budget is permitted. The two Qwen configurations share the same tokenizer and exact 79-token residual context margin."
+}

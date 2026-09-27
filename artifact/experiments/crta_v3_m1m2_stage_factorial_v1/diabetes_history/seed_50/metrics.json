@@ -1,0 +1,106 @@
+{
+ "arms": [
+  "a00_base",
+  "a01_columns",
+  "a10_stage",
+  "a11_stage_columns",
+  "a11r_stage_columns_relations",
+  "pl_stage_at_columns",
+  "pl_columns_at_stage",
+  "pl_relations_at_stage",
+  "is_target"
+ ],
+ "auroc": {
+  "1024": {
+   "a00_base": 0.8209791284877189,
+   "a01_columns": 0.7596067509124942,
+   "a10_stage": 0.9021765862050196,
+   "a11_stage_columns": 0.9650279203860747,
+   "a11r_stage_columns_relations": 0.9633000292763159,
+   "is_target": 0.8971812841465069,
+   "pl_columns_at_stage": 0.9360268974313833,
+   "pl_relations_at_stage": 0.9667618187800945,
+   "pl_stage_at_columns": 0.8793314358488243
+  },
+  "256": {
+   "a00_base": 0.718994812158351,
+   "a01_columns": 0.6538009436095,
+   "a10_stage": 0.8862124121771819,
+   "a11_stage_columns": 0.9582590595976541,
+   "a11r_stage_columns_relations": 0.9613681356969505,
+   "is_target": 0.8229814544101067,
+   "pl_columns_at_stage": 0.8152903528899451,
+   "pl_relations_at_stage": 0.961088980875259,
+   "pl_stage_at_columns": 0.8043307983411069
+  },
+  "64": {
+   "a00_base": 0.7129523423749908,
+   "a01_columns": 0.7013294733058355,
+   "a10_stage": 0.8730839215159345,
+   "a11_stage_columns": 0.957920199726264,
+   "a11r_stage_columns_relations": 0.9591445823368189,
+   "is_target": 0.8221900866569144,
+   "pl_columns_at_stage": 0.7626898363125376,
+   "pl_relations_at_stage": 0.9575975227430878,
+   "pl_stage_at_columns": 0.5758660542342526
+  }
+ },
+ "backbone": "xgboost_hist_d6_n300_regression_ranked",
+ "benchmark_id": "std_cross_nh2kn_shared_anchorreset_fewshot_v1",
+ "feature_set": "stage_factorial_all_v1",
+ "metric": "auroc_vs_documented_target_binary (higher is better)",
+ "n_eval": 9200,
+ "n_pool": 15492,
+ "n_source": 68561,
+ "pl_columns_permutation": {
+  "dbp": "height_cm",
+  "glucose": "total_cholesterol",
+  "hba1c": "waist_cm",
+  "height_cm": "hba1c",
+  "sbp": "dbp",
+  "total_cholesterol": "sbp",
+  "triglycerides": "glucose",
+  "waist_cm": "weight_kg",
+  "weight_kg": "triglycerides"
+ },
+ "pl_relation_pairs": [
+  [
+   "creatinine",
+   "total_cholesterol"
+  ],
+  [
+   "hypertension_history",
+   "current_smoking_status"
+  ],
+  [
+   "triglycerides",
+   "waist_cm"
+  ],
+  [
+   "age",
+   "current_smoking_status"
+  ],
+  [
+   "hba1c",
+   "wbc"
+  ],
+  [
+   "weight_kg",
+   "wbc"
+  ]
+ ],
+ "primary_k": 256,
+ "seed": 50,
+ "target": "diabetes_history",
+ "wall_seconds": 86.4,
+ "wrong_label_maps": {
+  "source": {
+   "2.0": 1.0,
+   "9.0": 0.0
+  },
+  "target": {
+   "0.0": 0.0,
+   "8.0": 1.0
+  }
+ }
+}

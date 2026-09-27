@@ -1,0 +1,22 @@
+\begin{table}[H]
+\caption{Leave-one-endpoint-out robustness for the ten-endpoint real-data interaction. Each row recomputes the endpoint-cluster bootstrap after omitting the named endpoint.}
+\label{tab:app-composition-loo}
+\label{tab:app_loo}
+\centering\scriptsize
+\setlength{\tabcolsep}{6pt}
+\begin{tabular}{P{0.32\linewidth}P{0.30\linewidth}cc}
+\toprule Omitted endpoint & Mean $I^*_{MC}$ [95\% CI] & Win rate & CI above zero \\
+\midrule
+None (all 10) & +.031 [+.005, +.068] & .80 & yes \\
+Angina & +.034 [+.005, +.075] & .78 & yes \\
+Arthritis & +.036 [+.009, +.075] & .89 & yes \\
+Asthma & +.032 [+.003, +.073] & .78 & yes \\
+Cancer & +.032 [+.003, +.073] & .78 & yes \\
+Smoking & +.033 [+.004, +.075] & .78 & yes \\
+Diabetes & +.015 [+.002, +.028] & .78 & yes \\
+Heart attack & +.030 [+.002, +.070] & .78 & yes \\
+Hypertension & +.037 [+.011, +.076] & .89 & yes \\
+Kidney disease & +.031 [+.002, +.072] & .78 & yes \\
+Stroke & +.033 [+.004, +.074] & .78 & yes \\
+\bottomrule\end{tabular}
+\end{table}

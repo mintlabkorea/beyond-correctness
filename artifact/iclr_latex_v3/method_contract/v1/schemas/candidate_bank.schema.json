@@ -1,0 +1,242 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://coret.local/schemas/crta-1.0.0/candidate_bank.schema.json",
+  "title": "CRTA raw candidate bank",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "contract_version",
+    "schema_pair_id",
+    "concept_candidates",
+    "relation_candidates",
+    "abstentions"
+  ],
+  "properties": {
+    "contract_version": {"const": "crta-1.0.0"},
+    "schema_pair_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 128,
+      "pattern": "^[A-Za-z0-9_.:-]+$"
+    },
+    "concept_candidates": {
+      "type": "array",
+      "items": {"$ref": "#/definitions/concept_candidate"}
+    },
+    "relation_candidates": {
+      "type": "array",
+      "items": {"$ref": "#/definitions/relation_candidate"}
+    },
+    "abstentions": {
+      "type": "array",
+      "items": {"$ref": "#/definitions/abstention"}
+    }
+  },
+  "definitions": {
+    "candidate_common": {
+      "type": "object",
+      "required": ["candidate_id", "rank", "canonical_name", "description", "confidence"],
+      "properties": {
+        "candidate_id": {"type": "string", "pattern": "^[cr]_[0-9]{3}$"},
+        "rank": {"type": "integer", "minimum": 1, "maximum": 999},
+        "canonical_name": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[a-z][a-z0-9_]*$"
+        },
+        "description": {"type": "string", "minLength": 1, "maxLength": 1000},
+        "confidence": {"type": "number", "minimum": 0, "maximum": 1}
+      }
+    },
+    "concept_member": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["column_id", "evidence_span_ids"],
+      "properties": {
+        "column_id": {"type": "string", "minLength": 1, "maxLength": 128},
+        "evidence_span_ids": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"type": "string", "minLength": 1, "maxLength": 128},
+          "uniqueItems": true
+        }
+      }
+    },
+    "concept_candidate": {
+      "allOf": [
+        {"$ref": "#/definitions/candidate_common"},
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "candidate_id",
+            "rank",
+            "canonical_name",
+            "description",
+            "confidence",
+            "members"
+          ],
+          "properties": {
+            "candidate_id": {"type": "string", "pattern": "^c_[0-9]{3}$"},
+            "rank": {"type": "integer", "minimum": 1, "maximum": 999},
+            "canonical_name": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 128,
+              "pattern": "^[a-z][a-z0-9_]*$"
+            },
+            "description": {"type": "string", "minLength": 1, "maxLength": 1000},
+            "confidence": {"type": "number", "minimum": 0, "maximum": 1},
+            "members": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["source", "target"],
+              "properties": {
+                "source": {"type": "array", "items": {"$ref": "#/definitions/concept_member"}},
+                "target": {"type": "array", "items": {"$ref": "#/definitions/concept_member"}}
+              }
+            }
+          }
+        }
+      ]
+    },
+    "column_ref": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "id"],
+      "properties": {
+        "kind": {"const": "column"},
+        "id": {"type": "string", "minLength": 1, "maxLength": 128}
+      }
+    },
+    "concept_ref": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "id", "channel"],
+      "properties": {
+        "kind": {"const": "concept"},
+        "id": {"type": "string", "pattern": "^c_[0-9]{3}$"},
+        "channel": {"enum": ["mean", "std", "range", "observed_fraction"]}
+      }
+    },
+    "endpoint_ref": {
+      "oneOf": [
+        {"$ref": "#/definitions/column_ref"},
+        {"$ref": "#/definitions/concept_ref"}
+      ]
+    },
+    "relation_binding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["arguments", "evidence_span_ids"],
+      "properties": {
+        "arguments": {
+          "type": "object",
+          "minProperties": 1,
+          "additionalProperties": {"$ref": "#/definitions/endpoint_ref"}
+        },
+        "evidence_span_ids": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"type": "string", "minLength": 1, "maxLength": 128},
+          "uniqueItems": true
+        }
+      }
+    },
+    "operation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "parameters"],
+      "properties": {
+        "name": {
+          "enum": [
+            "difference",
+            "absolute_difference",
+            "safe_ratio",
+            "normalized_difference",
+            "product",
+            "sum2",
+            "ratio_of_differences",
+            "lag_difference",
+            "trailing_slope"
+          ]
+        },
+        "parameters": {
+          "type": "object",
+          "additionalProperties": {"type": ["integer", "number", "string", "boolean"]}
+        }
+      }
+    },
+    "relation_candidate": {
+      "allOf": [
+        {"$ref": "#/definitions/candidate_common"},
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "candidate_id",
+            "rank",
+            "canonical_name",
+            "description",
+            "confidence",
+            "semantic_type",
+            "direction",
+            "operation",
+            "bindings"
+          ],
+          "properties": {
+            "candidate_id": {"type": "string", "pattern": "^r_[0-9]{3}$"},
+            "rank": {"type": "integer", "minimum": 1, "maximum": 999},
+            "canonical_name": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 128,
+              "pattern": "^[a-z][a-z0-9_]*$"
+            },
+            "description": {"type": "string", "minLength": 1, "maxLength": 1000},
+            "confidence": {"type": "number", "minimum": 0, "maximum": 1},
+            "semantic_type": {"enum": ["measurement", "protocol", "temporal", "compositional", "physical"]},
+            "direction": {"enum": ["ordered", "symmetric", "set", "temporal"]},
+            "operation": {"$ref": "#/definitions/operation"},
+            "bindings": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["source", "target"],
+              "properties": {
+                "source": {"$ref": "#/definitions/relation_binding"},
+                "target": {"$ref": "#/definitions/relation_binding"}
+              }
+            }
+          }
+        }
+      ]
+    },
+    "abstention": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "reason", "summary", "evidence_span_ids"],
+      "properties": {
+        "kind": {"enum": ["concept", "relation", "global"]},
+        "reason": {
+          "enum": [
+            "insufficient_evidence",
+            "no_cross_schema_binding",
+            "unsupported_operation",
+            "ambiguous_endpoint",
+            "unit_unknown",
+            "leakage_risk",
+            "budget_limit",
+            "other"
+          ]
+        },
+        "summary": {"type": "string", "minLength": 1, "maxLength": 1000},
+        "evidence_span_ids": {
+          "type": "array",
+          "items": {"type": "string", "minLength": 1, "maxLength": 128},
+          "uniqueItems": true
+        }
+      }
+    }
+  }
+}

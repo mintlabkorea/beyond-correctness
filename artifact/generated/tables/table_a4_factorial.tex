@@ -1,0 +1,37 @@
+\begin{longtable}{lllP{0.23\linewidth}P{0.23\linewidth}P{0.23\linewidth}}
+\caption{Full controlled factorial results. All three effects use $Q=-\mathrm{MSE}/\mathrm{Var}(y^{\mathrm{qry}})$; intervals resample the 20 realizations within each fixed family. The MLP is a frozen-before-execution extension and is not included in the main figure.}\label{tab:app-controlled-factorial}\label{tab:app_factorial}\\
+\toprule
+Learner & $K$ & Family & Measurement & Correspondence & $I_{MC}$ \\
+\midrule\endfirsthead
+\multicolumn{6}{c}{\tablename\ \thetable\ (continued)}\\
+\toprule Learner & $K$ & Family & Measurement & Correspondence & $I_{MC}$ \\
+\midrule\endhead
+\bottomrule\endfoot
+XGB & 32 & Additive & \textbf{+.283 [+.230, +.339]} & \textbf{+.302 [+.259, +.348]} & \textbf{+.419 [+.351, +.493]} \\
+XGB & 32 & Pairwise & \textbf{+.340 [+.289, +.387]} & \textbf{+.439 [+.361, +.515]} & \textbf{+.370 [+.280, +.458]} \\
+XGB & 32 & Sparse & \textbf{+.270 [+.226, +.313]} & \textbf{+.505 [+.422, +.603]} & \textbf{+.400 [+.290, +.517]} \\
+\addlinespace[1pt]
+XGB & 512 & Additive & \textbf{+.073 [+.058, +.090]} & \textbf{+.090 [+.075, +.105]} & \textbf{+.075 [+.058, +.094]} \\
+XGB & 512 & Pairwise & \textbf{+.064 [+.055, +.072]} & \textbf{+.084 [+.063, +.106]} & \textbf{+.091 [+.072, +.113]} \\
+XGB & 512 & Sparse & \textbf{+.049 [+.040, +.059]} & \textbf{+.069 [+.057, +.081]} & \textbf{+.075 [+.060, +.089]} \\
+\addlinespace[1pt]
+HistGB & 32 & Additive & \textbf{+.288 [+.239, +.342]} & \textbf{+.306 [+.264, +.349]} & \textbf{+.420 [+.349, +.496]} \\
+HistGB & 32 & Pairwise & \textbf{+.354 [+.302, +.404]} & \textbf{+.445 [+.373, +.516]} & \textbf{+.370 [+.276, +.460]} \\
+HistGB & 32 & Sparse & \textbf{+.269 [+.225, +.313]} & \textbf{+.507 [+.423, +.607]} & \textbf{+.404 [+.289, +.527]} \\
+\addlinespace[1pt]
+HistGB & 512 & Additive & \textbf{+.072 [+.058, +.089]} & \textbf{+.090 [+.075, +.105]} & \textbf{+.076 [+.058, +.095]} \\
+HistGB & 512 & Pairwise & \textbf{+.063 [+.056, +.070]} & \textbf{+.083 [+.063, +.104]} & \textbf{+.086 [+.066, +.108]} \\
+HistGB & 512 & Sparse & \textbf{+.050 [+.040, +.061]} & \textbf{+.070 [+.059, +.081]} & \textbf{+.075 [+.059, +.089]} \\
+\addlinespace[1pt]
+TabPFN & 32 & Additive & \textbf{+.350 [+.298, +.406]} & \textbf{+.509 [+.441, +.581]} & \textbf{+.438 [+.342, +.526]} \\
+TabPFN & 32 & Pairwise & \textbf{+.321 [+.282, +.359]} & \textbf{+.501 [+.411, +.590]} & \textbf{+.412 [+.315, +.506]} \\
+TabPFN & 32 & Sparse & \textbf{+.330 [+.273, +.386]} & \textbf{+.563 [+.475, +.662]} & \textbf{+.463 [+.359, +.579]} \\
+\addlinespace[1pt]
+MLP & 32 & Additive & \textbf{+.864 [+.547, +1.311]} & \textbf{+.682 [+.557, +.819]} & \textbf{+.607 [+.341, +.884]} \\
+MLP & 32 & Pairwise & \textbf{+.915 [+.723, +1.134]} & \textbf{+.678 [+.562, +.793]} & \textbf{+.755 [+.511, +1.012]} \\
+MLP & 32 & Sparse & \textbf{+.792 [+.629, +.979]} & \textbf{+.667 [+.579, +.760]} & \textbf{+.460 [+.276, +.651]} \\
+\addlinespace[1pt]
+MLP & 512 & Additive & \textbf{+.167 [+.148, +.186]} & \textbf{+.174 [+.145, +.203]} & \textbf{+.168 [+.131, +.208]} \\
+MLP & 512 & Pairwise & \textbf{+.176 [+.152, +.200]} & \textbf{+.182 [+.138, +.233]} & \textbf{+.165 [+.115, +.219]} \\
+MLP & 512 & Sparse & \textbf{+.150 [+.119, +.182]} & \textbf{+.177 [+.155, +.203]} & \textbf{+.134 [+.101, +.166]} \\
+\end{longtable}

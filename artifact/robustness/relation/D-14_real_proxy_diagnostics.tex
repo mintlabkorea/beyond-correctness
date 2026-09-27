@@ -1,0 +1,50 @@
+% Phase-3 archived appendix unit
+% Phase-2 Unit ID(s): D-14 (detail)
+% Original location: Relation / detailed real-data proxy diagnostics
+% Original source SHA-256: 726916622e270ad0c5fd157c2a9821e84742065551d407a942ac397611d5460c
+% Provenance: Frozen boundary plus post-hoc orthogonal decomposition
+% Original label(s): none
+% Compact PDF replacement: Compact real-transfer boundary in Phase-3 Section E.7
+% Content below is copied verbatim from the authoritative appendix.
+
+% Original lines 1237--1275
+For CAMELS-120, the initial zero-noise proxy $R^2$ was $.95775$, but the proxy
+frame and downstream reference differed by two zero-padding columns.  With
+\texttt{colsample\_bytree}=.8, those otherwise uninformative columns change
+feature-sampling probabilities.  Adding the same two columns to the proxy
+frame reduces the width-aligned estimate to $.94025$, below the frozen $.95$
+gate.  More importantly, as reconstructibility fell, the reference improved
+rather than deteriorated: its $\sigma=4$ minus $\sigma=0$ change is $-.00458$
+versus $-.00153$ for the intended condition, and
+$\rho(1-R^2,\text{reference error})=-.343$ [$-.693,+.007$].  The required
+reference-only weakening was therefore not created.  This is an uninformative
+test whose conditions were not established, not a falsification.  The audit
+is another instance of the admissible-reference requirement: width and
+learner mechanics must be matched, as in the earlier width-matched examination
+reference.
+
+For NH$\rightarrow$KN, the zero-noise reconstruction $R^2$ is $.80945$ and
+mean utility is $+.000016$ normalized-RMSE.  The reference deteriorates by
+$+.00197$, but the intended condition also deteriorates by $+.00110$;
+$\rho(1-R^2,\text{reference error})=+.361$ [$+.179,+.529$].  The relationship
+is therefore not established.  Target-only linear reconstruction gives
+$R^2=1.000$, source-only linear transfer gives $.619$, and adding target
+support raises it to $.885$; target-only full-frame XGB gives $.874$, whereas
+the frozen source-plus-support XGB reconstructor gives $.809$.  Cross-table
+reconstruction consequently reflects schema shift and learner capacity as
+well as algebraic redundancy.
+
+A post-hoc orthogonal decomposition is descriptive only.  Writing
+$m=(\mathrm{SBP}+\mathrm{DBP})/2$ and
+$d=\mathrm{SBP}-\mathrm{DBP}$, independent SBP/DBP noise changes reference
+and intended error by $+.00197$ and $+.00110$.  Difference-only perturbation,
+which preserves $m$, changes them by only $+.00021$ and $+.00005$; common-mode
+perturbation, which preserves $d$, changes them by $+.00184$ and $+.00148$.
+Thus much of the original intended degradation is consistent with losing
+base-frame information orthogonal to the supplied relation value.  Under
+difference-only perturbation the intended condition is nearly flat, but the
+reference is also nearly flat, suggesting little useful contribution from
+this tested relation in these endpoints.  This diagnostic does not validate
+or falsify the proxy in real data, and low reconstructibility does not by
+itself guarantee predictive utility.
+

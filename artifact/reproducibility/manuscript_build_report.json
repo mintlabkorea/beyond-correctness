@@ -1,0 +1,57 @@
+{
+  "source_policy": "Unchanged main_new.tex and appendix_new.tex copied as main.tex and appendix.tex in a temporary directory to satisfy existing cross-references. The builder does not edit sources; reporting revisions already present in those sources are documented in REVISION_REPORT.md. Figures regenerated from included outputs; conceptual diagram metadata sanitized.",
+  "commands": [
+    {
+      "command": "pdflatex -interaction=nonstopmode -halt-on-error -file-line-error appendix.tex",
+      "returncode": 0
+    },
+    {
+      "command": "bibtex appendix",
+      "returncode": 0
+    },
+    {
+      "command": "pdflatex -interaction=nonstopmode -halt-on-error -file-line-error appendix.tex",
+      "returncode": 0
+    },
+    {
+      "command": "pdflatex -interaction=nonstopmode -halt-on-error -file-line-error appendix.tex",
+      "returncode": 0
+    },
+    {
+      "command": "pdflatex -interaction=nonstopmode -halt-on-error -file-line-error appendix.tex",
+      "returncode": 0
+    },
+    {
+      "command": "pdflatex -interaction=nonstopmode -halt-on-error -file-line-error main.tex",
+      "returncode": 0
+    },
+    {
+      "command": "bibtex main",
+      "returncode": 0
+    },
+    {
+      "command": "pdflatex -interaction=nonstopmode -halt-on-error -file-line-error main.tex",
+      "returncode": 0
+    },
+    {
+      "command": "pdflatex -interaction=nonstopmode -halt-on-error -file-line-error main.tex",
+      "returncode": 0
+    }
+  ],
+  "status": "PASS",
+  "warnings": {
+    "main": [],
+    "appendix": [
+      "LaTeX Warning: `h' float specifier changed to `ht'.",
+      "LaTeX Warning: `h' float specifier changed to `ht'.",
+      "LaTeX Warning: `h' float specifier changed to `ht'.",
+      "LaTeX Warning: `h' float specifier changed to `ht'.",
+      "LaTeX Warning: `h' float specifier changed to `ht'.",
+      "LaTeX Warning: `h' float specifier changed to `ht'.",
+      "LaTeX Warning: `h' float specifier changed to `ht'.",
+      "Overfull \\hbox (0.71318pt too wide) in paragraph at lines 1458--1466",
+      "LaTeX Warning: `h' float specifier changed to `ht'.",
+      "LaTeX Warning: `h' float specifier changed to `ht'."
+    ]
+  }
+}

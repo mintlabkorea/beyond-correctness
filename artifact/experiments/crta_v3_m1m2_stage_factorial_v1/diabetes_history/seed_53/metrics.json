@@ -1,0 +1,106 @@
+{
+ "arms": [
+  "a00_base",
+  "a01_columns",
+  "a10_stage",
+  "a11_stage_columns",
+  "a11r_stage_columns_relations",
+  "pl_stage_at_columns",
+  "pl_columns_at_stage",
+  "pl_relations_at_stage",
+  "is_target"
+ ],
+ "auroc": {
+  "1024": {
+   "a00_base": 0.820582279933562,
+   "a01_columns": 0.74450811620883,
+   "a10_stage": 0.8975767228278272,
+   "a11_stage_columns": 0.9647206907052847,
+   "a11r_stage_columns_relations": 0.964879822439389,
+   "is_target": 0.8944853007884009,
+   "pl_columns_at_stage": 0.9558082102166988,
+   "pl_relations_at_stage": 0.9644164033678063,
+   "pl_stage_at_columns": 0.4412659235942097
+  },
+  "256": {
+   "a00_base": 0.7676394707509009,
+   "a01_columns": 0.6354078038790874,
+   "a10_stage": 0.8954051508662014,
+   "a11_stage_columns": 0.9574781126436906,
+   "a11r_stage_columns_relations": 0.9596301302820578,
+   "is_target": 0.8728589548502321,
+   "pl_columns_at_stage": 0.902595441035195,
+   "pl_relations_at_stage": 0.9565838854722291,
+   "pl_stage_at_columns": 0.6292304766939438
+  },
+  "64": {
+   "a00_base": 0.596141987190018,
+   "a01_columns": 0.6725018647100738,
+   "a10_stage": 0.887774796475661,
+   "a11_stage_columns": 0.9611886527549407,
+   "a11r_stage_columns_relations": 0.9572256841070796,
+   "is_target": 0.8556345997015484,
+   "pl_columns_at_stage": 0.7640939470603784,
+   "pl_relations_at_stage": 0.9614664590026143,
+   "pl_stage_at_columns": 0.35190983826429206
+  }
+ },
+ "backbone": "xgboost_hist_d6_n300_regression_ranked",
+ "benchmark_id": "std_cross_nh2kn_shared_anchorreset_fewshot_v1",
+ "feature_set": "stage_factorial_all_v1",
+ "metric": "auroc_vs_documented_target_binary (higher is better)",
+ "n_eval": 9200,
+ "n_pool": 15492,
+ "n_source": 68561,
+ "pl_columns_permutation": {
+  "dbp": "glucose",
+  "glucose": "triglycerides",
+  "hba1c": "total_cholesterol",
+  "height_cm": "sbp",
+  "sbp": "waist_cm",
+  "total_cholesterol": "hba1c",
+  "triglycerides": "dbp",
+  "waist_cm": "weight_kg",
+  "weight_kg": "height_cm"
+ },
+ "pl_relation_pairs": [
+  [
+   "creatinine",
+   "hemoglobin"
+  ],
+  [
+   "glucose",
+   "weight_kg"
+  ],
+  [
+   "rbc",
+   "hba1c"
+  ],
+  [
+   "rbc",
+   "sex"
+  ],
+  [
+   "waist_cm",
+   "height_cm"
+  ],
+  [
+   "hematocrit",
+   "height_cm"
+  ]
+ ],
+ "primary_k": 256,
+ "seed": 53,
+ "target": "diabetes_history",
+ "wall_seconds": 86.5,
+ "wrong_label_maps": {
+  "source": {
+   "2.0": 1.0,
+   "7.0": 0.0
+  },
+  "target": {
+   "1.0": 1.0,
+   "9.0": 0.0
+  }
+ }
+}

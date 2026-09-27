@@ -1,0 +1,43 @@
+{
+ "arms": [
+  "m0c0rf",
+  "m0c1rf",
+  "m1c0rf",
+  "m1c1rf"
+ ],
+ "backbone": "tabpfn_7_regressor",
+ "device": "cuda",
+ "family": "additive",
+ "input_sha256": "6af2215c72a65ecc306e5c4d3d9af5b61b16a073dd5aa4c0f33b178741245a25",
+ "mcr_runner_sha256": "c753e142f3af884a9f9b0d635e67465e8d8e0e20cefbb13f09006be56753e4a0",
+ "metric": "nmse = MSE/Var(y_query) (verdicts)",
+ "mode": "primary_tabpfn",
+ "prereg_sha256": "18d6c940b3f14d4d24cfe31e0f5b5879607f066b6d87bb24174f5273133cbe81",
+ "realization": 17,
+ "results": {
+  "m0c0rf": {
+   "n_features": 8,
+   "nmse": 1.1668194871897926,
+   "nrmse": 1.0801941895741676
+  },
+  "m0c1rf": {
+   "n_features": 8,
+   "nmse": 0.8841481426343223,
+   "nrmse": 0.9402915200268065
+  },
+  "m1c0rf": {
+   "n_features": 8,
+   "nmse": 1.2778103789280517,
+   "nrmse": 1.1304027507610073
+  },
+  "m1c1rf": {
+   "n_features": 8,
+   "nmse": 0.6293445717560577,
+   "nrmse": 0.7933124048923336
+  }
+ },
+ "rng_namespace": "mcr_v1c",
+ "runner_sha256": "5a7a67f939b28bbe63a41b7510464653024a322624a73eb878727f89fd665cbd",
+ "support_k": 32,
+ "wall_seconds": 1.5
+}

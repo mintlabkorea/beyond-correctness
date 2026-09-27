@@ -1,0 +1,631 @@
+{
+  "bootstrap_replicates": 2000,
+  "dataset_resampling_sensitivity": {
+    "R1": {
+      "category": "positive",
+      "ci95": [
+        0.033478889175091,
+        0.15285059162440315
+      ],
+      "ci_excludes_zero": true,
+      "equivalent": false,
+      "estimate": 0.08872198795206726
+    },
+    "R2": {
+      "category": "unresolved",
+      "ci95": [
+        -0.0015981287048400655,
+        0.15012936745645664
+      ],
+      "ci_excludes_zero": false,
+      "equivalent": false,
+      "estimate": 0.07163738573252493
+    },
+    "R2-R1": {
+      "category": "unresolved",
+      "ci95": [
+        -0.0541378468988928,
+        0.021611305645654187
+      ],
+      "ci_excludes_zero": false,
+      "equivalent": false,
+      "estimate": -0.017084602219542333
+    },
+    "R3": {
+      "category": "positive",
+      "ci95": [
+        0.025487103430669483,
+        0.14853752474722282
+      ],
+      "ci_excludes_zero": true,
+      "equivalent": false,
+      "estimate": 0.07923903084586584
+    },
+    "R3-R1": {
+      "category": "unresolved",
+      "ci95": [
+        -0.0382872332758815,
+        0.02323198020687603
+      ],
+      "ci_excludes_zero": false,
+      "equivalent": false,
+      "estimate": -0.009482957106201423
+    }
+  },
+  "datasets": {
+    "bank": {
+      "robustness": "reference-family sensitive",
+      "shifts": {
+        "R2-R1": {
+          "category": "negative",
+          "ci95": [
+            -0.09550107251482493,
+            -0.07920836817116303
+          ],
+          "ci_excludes_zero": true,
+          "equivalent": false,
+          "estimate": -0.08756106822875613
+        },
+        "R3-R1": {
+          "category": "negative",
+          "ci95": [
+            -0.07213069711515128,
+            -0.05578253466440353
+          ],
+          "ci_excludes_zero": true,
+          "equivalent": false,
+          "estimate": -0.06380620201377604
+        }
+      },
+      "utility": {
+        "R1": {
+          "category": "positive",
+          "ci95": [
+            0.078347500826455,
+            0.10110409759674868
+          ],
+          "ci_excludes_zero": true,
+          "equivalent": false,
+          "estimate": 0.0900236125254071
+        },
+        "R2": {
+          "category": "near-zero",
+          "ci95": [
+            -0.007301860122273454,
+            0.012982604622984338
+          ],
+          "ci_excludes_zero": false,
+          "equivalent": true,
+          "estimate": 0.002462544296650959
+        },
+        "R3": {
+          "category": "unresolved",
+          "ci95": [
+            0.01600080222543693,
+            0.03669337436805907
+          ],
+          "ci_excludes_zero": true,
+          "equivalent": false,
+          "estimate": 0.026217410511631047
+        }
+      }
+    },
+    "blood": {
+      "robustness": "reference-family sensitive",
+      "shifts": {
+        "R2-R1": {
+          "category": "unresolved",
+          "ci95": [
+            0.00916182497017187,
+            0.10866429084944165
+          ],
+          "ci_excludes_zero": true,
+          "equivalent": false,
+          "estimate": 0.06060992955246612
+        },
+        "R3-R1": {
+          "category": "unresolved",
+          "ci95": [
+            -0.0983894691403464,
+            0.0008951542681349972
+          ],
+          "ci_excludes_zero": false,
+          "equivalent": false,
+          "estimate": -0.048596207170703634
+        }
+      },
+      "utility": {
+        "R1": {
+          "category": "positive",
+          "ci95": [
+            0.037704387829442215,
+            0.19918574781538434
+          ],
+          "ci_excludes_zero": true,
+          "equivalent": false,
+          "estimate": 0.11879014091163782
+        },
+        "R2": {
+          "category": "positive",
+          "ci95": [
+            0.1078665199080957,
+            0.25319513018872575
+          ],
+          "ci_excludes_zero": true,
+          "equivalent": false,
+          "estimate": 0.17940007046410394
+        },
+        "R3": {
+          "category": "unresolved",
+          "ci95": [
+            -0.0093098468223884,
+            0.14751807860083105
+          ],
+          "ci_excludes_zero": false,
+          "equivalent": false,
+          "estimate": 0.07019393374093419
+        }
+      }
+    },
+    "calhousing": {
+      "robustness": "magnitude-sensitive",
+      "shifts": {
+        "R2-R1": {
+          "category": "near-zero",
+          "ci95": [
+            -0.016069220688301345,
+            0.001546577428692139
+          ],
+          "ci_excludes_zero": false,
+          "equivalent": true,
+          "estimate": -0.0074558257681583695
+        },
+        "R3-R1": {
+          "category": "positive",
+          "ci95": [
+            0.020821739914926862,
+            0.03825285344137052
+          ],
+          "ci_excludes_zero": true,
+          "equivalent": false,
+          "estimate": 0.029539587950603227
+        }
+      },
+      "utility": {
+        "R1": {
+          "category": "positive",
+          "ci95": [
+            0.039392768269028315,
+            0.06660529000846788
+          ],
+          "ci_excludes_zero": true,
+          "equivalent": false,
+          "estimate": 0.05291090398741442
+        },
+        "R2": {
+          "category": "positive",
+          "ci95": [
+            0.032971760663240264,
+            0.057880702703698286
+          ],
+          "ci_excludes_zero": true,
+          "equivalent": false,
+          "estimate": 0.045455078219256054
+        },
+        "R3": {
+          "category": "positive",
+          "ci95": [
+            0.07051643519280319,
+            0.09518283360892997
+          ],
+          "ci_excludes_zero": true,
+          "equivalent": false,
+          "estimate": 0.08245049193801765
+        }
+      }
+    },
+    "car": {
+      "robustness": "category agreement; magnitude unresolved",
+      "shifts": {
+        "R2-R1": {
+          "category": "unresolved",
+          "ci95": [
+            -0.006472249972113433,
+            0.0429669713310258
+          ],
+          "ci_excludes_zero": false,
+          "equivalent": false,
+          "estimate": 0.018003440885547783
+        },
+        "R3-R1": {
+          "category": "unresolved",
+          "ci95": [
+            -0.0038005894945553494,
+            0.0416645792044679
+          ],
+          "ci_excludes_zero": false,
+          "equivalent": false,
+          "estimate": 0.01887810909388632
+        }
+      },
+      "utility": {
+        "R1": {
+          "category": "positive",
+          "ci95": [
+            0.2637841337780759,
+            0.32944291536711007
+          ],
+          "ci_excludes_zero": true,
+          "equivalent": false,
+          "estimate": 0.2973299350155984
+        },
+        "R2": {
+          "category": "positive",
+          "ci95": [
+            0.27824301002908575,
+            0.35343487834816556
+          ],
+          "ci_excludes_zero": true,
+          "equivalent": false,
+          "estimate": 0.3153333759011462
+        },
+        "R3": {
+          "category": "positive",
+          "ci95": [
+            0.2832396494313748,
+            0.35018646504794076
+          ],
+          "ci_excludes_zero": true,
+          "equivalent": false,
+          "estimate": 0.3162080441094847
+        }
+      }
+    },
+    "creditg": {
+      "robustness": "category agreement; magnitude unresolved",
+      "shifts": {
+        "R2-R1": {
+          "category": "unresolved",
+          "ci95": [
+            -0.0605120071919809,
+            0.00040730835403351734
+          ],
+          "ci_excludes_zero": false,
+          "equivalent": false,
+          "estimate": -0.03052301089729312
+        },
+        "R3-R1": {
+          "category": "unresolved",
+          "ci95": [
+            -0.051012555785314745,
+            0.02431557313168886
+          ],
+          "ci_excludes_zero": false,
+          "equivalent": false,
+          "estimate": -0.013165042425158813
+        }
+      },
+      "utility": {
+        "R1": {
+          "category": "unresolved",
+          "ci95": [
+            -0.05121842353273173,
+            0.0410479160245495
+          ],
+          "ci_excludes_zero": false,
+          "equivalent": false,
+          "estimate": -0.003282620599176456
+        },
+        "R2": {
+          "category": "unresolved",
+          "ci95": [
+            -0.08610798416619957,
+            0.01697819441467541
+          ],
+          "ci_excludes_zero": false,
+          "equivalent": false,
+          "estimate": -0.033805631496469576
+        },
+        "R3": {
+          "category": "unresolved",
+          "ci95": [
+            -0.07134337990767219,
+            0.03478781625593653
+          ],
+          "ci_excludes_zero": false,
+          "equivalent": false,
+          "estimate": -0.016447663024335268
+        }
+      }
+    },
+    "diabetes": {
+      "robustness": "reference-family sensitive",
+      "shifts": {
+        "R2-R1": {
+          "category": "negative",
+          "ci95": [
+            -0.1392895482680189,
+            -0.03755829547075087
+          ],
+          "ci_excludes_zero": true,
+          "equivalent": false,
+          "estimate": -0.08670590173613357
+        },
+        "R3-R1": {
+          "category": "negative",
+          "ci95": [
+            -0.10906216893093006,
+            -0.02101811373128449
+          ],
+          "ci_excludes_zero": true,
+          "equivalent": false,
+          "estimate": -0.06641952508611584
+        }
+      },
+      "utility": {
+        "R1": {
+          "category": "positive",
+          "ci95": [
+            0.1021843350573958,
+            0.22377387283604885
+          ],
+          "ci_excludes_zero": true,
+          "equivalent": false,
+          "estimate": 0.16434307703073567
+        },
+        "R2": {
+          "category": "unresolved",
+          "ci95": [
+            0.0008214630200483393,
+            0.15281007222700999
+          ],
+          "ci_excludes_zero": true,
+          "equivalent": false,
+          "estimate": 0.0776371752946021
+        },
+        "R3": {
+          "category": "positive",
+          "ci95": [
+            0.033606879646020306,
+            0.16655808988508616
+          ],
+          "ci_excludes_zero": true,
+          "equivalent": false,
+          "estimate": 0.09792355194461982
+        }
+      }
+    },
+    "heart": {
+      "robustness": "reference-family sensitive",
+      "shifts": {
+        "R2-R1": {
+          "category": "negative",
+          "ci95": [
+            -0.11107947510749012,
+            -0.06610939265711634
+          ],
+          "ci_excludes_zero": true,
+          "equivalent": false,
+          "estimate": -0.08805565447438199
+        },
+        "R3-R1": {
+          "category": "unresolved",
+          "ci95": [
+            -0.03049617435183915,
+            0.02277646775875382
+          ],
+          "ci_excludes_zero": false,
+          "equivalent": false,
+          "estimate": -0.0036200240205983766
+        }
+      },
+      "utility": {
+        "R1": {
+          "category": "unresolved",
+          "ci95": [
+            -0.050844517782436656,
+            0.009830320043499884
+          ],
+          "ci_excludes_zero": false,
+          "equivalent": false,
+          "estimate": -0.020851011232023133
+        },
+        "R2": {
+          "category": "negative",
+          "ci95": [
+            -0.13777470490105845,
+            -0.07962228208917613
+          ],
+          "ci_excludes_zero": true,
+          "equivalent": false,
+          "estimate": -0.10890666570640513
+        },
+        "R3": {
+          "category": "unresolved",
+          "ci95": [
+            -0.05007996028776324,
+            0.0006699199002875654
+          ],
+          "ci_excludes_zero": false,
+          "equivalent": false,
+          "estimate": -0.02447103525262151
+        }
+      }
+    },
+    "income": {
+      "robustness": "magnitude-sensitive",
+      "shifts": {
+        "R2-R1": {
+          "category": "near-zero",
+          "ci95": [
+            -0.010763599677075108,
+            -0.003937226292011133
+          ],
+          "ci_excludes_zero": true,
+          "equivalent": true,
+          "estimate": -0.007456792763131631
+        },
+        "R3-R1": {
+          "category": "negative",
+          "ci95": [
+            -0.031247768379099625,
+            -0.024875373133641916
+          ],
+          "ci_excludes_zero": true,
+          "equivalent": false,
+          "estimate": -0.028085462356014813
+        }
+      },
+      "utility": {
+        "R1": {
+          "category": "positive",
+          "ci95": [
+            0.0684261177474869,
+            0.07959607258242676
+          ],
+          "ci_excludes_zero": true,
+          "equivalent": false,
+          "estimate": 0.07397230253058396
+        },
+        "R2": {
+          "category": "positive",
+          "ci95": [
+            0.06112855594095726,
+            0.0723380941213211
+          ],
+          "ci_excludes_zero": true,
+          "equivalent": false,
+          "estimate": 0.06651550976745232
+        },
+        "R3": {
+          "category": "positive",
+          "ci95": [
+            0.040815034556616565,
+            0.05126873992052744
+          ],
+          "ci_excludes_zero": true,
+          "equivalent": false,
+          "estimate": 0.04588684017456914
+        }
+      }
+    },
+    "jungle": {
+      "robustness": "reference-family sensitive",
+      "shifts": {
+        "R2-R1": {
+          "category": "positive",
+          "ci95": [
+            0.06912254699902522,
+            0.08120693294227457
+          ],
+          "ci_excludes_zero": true,
+          "equivalent": false,
+          "estimate": 0.07538346345395969
+        },
+        "R3-R1": {
+          "category": "positive",
+          "ci95": [
+            0.08345819513226123,
+            0.09588675645175576
+          ],
+          "ci_excludes_zero": true,
+          "equivalent": false,
+          "estimate": 0.0899281520720652
+        }
+      },
+      "utility": {
+        "R1": {
+          "category": "unresolved",
+          "ci95": [
+            0.018079218081892202,
+            0.032377610588642435
+          ],
+          "ci_excludes_zero": true,
+          "equivalent": false,
+          "estimate": 0.025261551398427583
+        },
+        "R2": {
+          "category": "positive",
+          "ci95": [
+            0.09252809407590235,
+            0.10824653607390777
+          ],
+          "ci_excludes_zero": true,
+          "equivalent": false,
+          "estimate": 0.10064501485238726
+        },
+        "R3": {
+          "category": "positive",
+          "ci95": [
+            0.10698092774411366,
+            0.12277470893655168
+          ],
+          "ci_excludes_zero": true,
+          "equivalent": false,
+          "estimate": 0.11518970347049277
+        }
+      }
+    }
+  },
+  "delta": 0.02,
+  "design_sha256": "5cdac31d67a015ebca58c1f61ac5f150b842e88eced1d18b254345199302899b",
+  "final_verdict": null,
+  "phase": "primary",
+  "primary_macro": {
+    "R1": {
+      "category": "positive",
+      "ci95": [
+        0.07614517164029892,
+        0.10214796519323124
+      ],
+      "ci_excludes_zero": true,
+      "equivalent": false,
+      "estimate": 0.08872198795206726
+    },
+    "R2": {
+      "category": "positive",
+      "ci95": [
+        0.05805352494160651,
+        0.08589464532129963
+      ],
+      "ci_excludes_zero": true,
+      "equivalent": false,
+      "estimate": 0.07163738573252493
+    },
+    "R2-R1": {
+      "category": "unresolved",
+      "ci95": [
+        -0.02684755232891229,
+        -0.007716195601117643
+      ],
+      "ci_excludes_zero": true,
+      "equivalent": false,
+      "estimate": -0.017084602219542333
+    },
+    "R3": {
+      "category": "positive",
+      "ci95": [
+        0.06555114103745763,
+        0.0924663074582973
+      ],
+      "ci_excludes_zero": true,
+      "equivalent": false,
+      "estimate": 0.07923903084586584
+    },
+    "R3-R1": {
+      "category": "near-zero",
+      "ci95": [
+        -0.01924044807678413,
+        2.6089676555842562e-05
+      ],
+      "ci_excludes_zero": false,
+      "equivalent": true,
+      "estimate": -0.009482957106201423
+    }
+  },
+  "primary_verdict": "B",
+  "provenance": "reference lexical-realization robustness; design frozen before inspecting these outcomes",
+  "scope": "fixed nine-dataset panel, one fixed primary assignment and five adaptation draws; pointwise intervals",
+  "secondary": {},
+  "verdict": "B"
+}

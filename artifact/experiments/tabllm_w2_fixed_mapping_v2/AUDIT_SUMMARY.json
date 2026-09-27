@@ -1,0 +1,811 @@
+{
+  "admissible_families": {
+    "R1": true,
+    "R2": true,
+    "R3": true
+  },
+  "all_pass": true,
+  "completed_at_utc": "2026-09-10T14:11:45.185075+00:00",
+  "dataset_audit_sha256": {
+    "bank": "6aa37b9417764e2c102b7962470631bc00adf3cbd280e6fdfac86c59fc715563",
+    "blood": "76a831d13a29449dc313ce0f9676707d3b630cd32efa3546d3e26905a8e5f40b",
+    "calhousing": "422a6bd5c757281189188e797081e2498b711df0077f4e8823830c2f65824b9b",
+    "car": "eb6e4e0a181bef879e9d81ab32b765440dd0328701dff7b65b114f4db065b95b",
+    "creditg": "9aa8a5837db0ea3ef85e7edacfad5ea91f33f5cf317cc45de3fbcde2a3c50316",
+    "diabetes": "6e4f88656773f819bc52686f9819ca49ed340da80baab256b80a2c8651e9854b",
+    "heart": "71608f2604b1a86fdbc2c5a83ecd4c1e66122dbca3564a24bef8df9d8203385f",
+    "income": "7bc4caf1957a3e53309d51bf1231bcda73866eb5df9190389793ae0ddce8e4fb",
+    "jungle": "341ea6eb11336fa771589d140a4d90ad6bbd4eff1e9375b8839d7e031862c26d"
+  },
+  "datasets": {
+    "bank": {
+      "arms": {
+        "R1/ref_00": {
+          "feature_to_identifier": {
+            "age": "feature_001",
+            "average yearly balance, in euros": "feature_006",
+            "contact communication type": "feature_009",
+            "education": "feature_004",
+            "has credit in default?": "feature_005",
+            "has housing loan?": "feature_007",
+            "has personal loan?": "feature_008",
+            "last contact day of the month": "feature_010",
+            "last contact duration, in seconds": "feature_012",
+            "last contact month of year": "feature_011",
+            "marital status": "feature_003",
+            "number of contacts performed before this campaign and for this client": "feature_015",
+            "number of contacts performed during this campaign and for this client": "feature_013",
+            "number of days that passed by after the client was last contacted from a previous campaign": "feature_014",
+            "outcome of the previous marketing campaign": "feature_016",
+            "type of job": "feature_002"
+          },
+          "max_token_count": 164,
+          "mean_token_count": 155.16486667303832,
+          "min_token_count": 145,
+          "sha256": "ef210df408e3b2ce73b6ab5f2e28328252954ed0a7f6231c9e2f35250c5db045",
+          "template_sha256": "b3644cc8dd1e59b5f70c06ab70a4bd8a95e16249ac5bd857ea5d08800a82f4f9",
+          "truncated_rows": 0
+        },
+        "R2/ref_00": {
+          "feature_to_identifier": {
+            "age": "Field A",
+            "average yearly balance, in euros": "Field F",
+            "contact communication type": "Field I",
+            "education": "Field D",
+            "has credit in default?": "Field E",
+            "has housing loan?": "Field G",
+            "has personal loan?": "Field H",
+            "last contact day of the month": "Field J",
+            "last contact duration, in seconds": "Field L",
+            "last contact month of year": "Field K",
+            "marital status": "Field C",
+            "number of contacts performed before this campaign and for this client": "Field O",
+            "number of contacts performed during this campaign and for this client": "Field M",
+            "number of days that passed by after the client was last contacted from a previous campaign": "Field N",
+            "outcome of the previous marketing campaign": "Field P",
+            "type of job": "Field B"
+          },
+          "max_token_count": 133,
+          "mean_token_count": 124.16486667303833,
+          "min_token_count": 114,
+          "sha256": "21b0f3ce789bdd595b92e2c46311eceb0455dbac7d33bc2c8f6bd1b141df5a1c",
+          "template_sha256": "625d7d372759135a6051a2e15a37d7be62efd5a28854a470588f6388d7291e0e",
+          "truncated_rows": 0
+        },
+        "R3/ref_00": {
+          "feature_to_identifier": {
+            "age": "Variable A",
+            "average yearly balance, in euros": "Variable F",
+            "contact communication type": "Variable I",
+            "education": "Variable D",
+            "has credit in default?": "Variable E",
+            "has housing loan?": "Variable G",
+            "has personal loan?": "Variable H",
+            "last contact day of the month": "Variable J",
+            "last contact duration, in seconds": "Variable L",
+            "last contact month of year": "Variable K",
+            "marital status": "Variable C",
+            "number of contacts performed before this campaign and for this client": "Variable O",
+            "number of contacts performed during this campaign and for this client": "Variable M",
+            "number of days that passed by after the client was last contacted from a previous campaign": "Variable N",
+            "outcome of the previous marketing campaign": "Variable P",
+            "type of job": "Variable B"
+          },
+          "max_token_count": 149,
+          "mean_token_count": 140.16486667303832,
+          "min_token_count": 130,
+          "sha256": "da1f765405b99b6dfcaba4d8c8e1584f97582c78320d9ba44e989bc64dac996d",
+          "template_sha256": "ef6303a6f2a20ae2bf117250d5088173e6a319290bb17accea9f47088b464114",
+          "truncated_rows": 0
+        },
+        "intended/shared": {
+          "feature_to_identifier": {
+            "age": "age",
+            "average yearly balance, in euros": "average yearly balance, in euros",
+            "contact communication type": "contact communication type",
+            "education": "education",
+            "has credit in default?": "has credit in default?",
+            "has housing loan?": "has housing loan?",
+            "has personal loan?": "has personal loan?",
+            "last contact day of the month": "last contact day of the month",
+            "last contact duration, in seconds": "last contact duration, in seconds",
+            "last contact month of year": "last contact month of year",
+            "marital status": "marital status",
+            "number of contacts performed before this campaign and for this client": "number of contacts performed before this campaign and for this client",
+            "number of contacts performed during this campaign and for this client": "number of contacts performed during this campaign and for this client",
+            "number of days that passed by after the client was last contacted from a previous campaign": "number of days that passed by after the client was last contacted from a previous campaign",
+            "outcome of the previous marketing campaign": "outcome of the previous marketing campaign",
+            "type of job": "type of job"
+          },
+          "max_token_count": 195,
+          "mean_token_count": 186.16486667303832,
+          "min_token_count": 176,
+          "sha256": "6181fec4e5e75c6067eeffcc8edb3b1bfaf57e6150c48758ebd4dd02a526c3bf",
+          "template_sha256": "7ab33029a1034bd7106bc0be70f5b8530776e17e4fb9e140925cb9ce41de5b61",
+          "truncated_rows": 0
+        }
+      },
+      "dataset": "bank",
+      "feature_count": 16,
+      "n_audited_rows": 31389
+    },
+    "blood": {
+      "arms": {
+        "R1/ref_00": {
+          "feature_to_identifier": {
+            "Frequency - total number of donation": "feature_002",
+            "Monetary - total blood donated in c.c.": "feature_003",
+            "Recency - months since last donation": "feature_001",
+            "Time - months since first donation": "feature_004"
+          },
+          "max_token_count": 48,
+          "mean_token_count": 45.59837177747625,
+          "min_token_count": 45,
+          "sha256": "e782b3978e5cf72bfbf01a2d27b24bf115534c2d2e4a0852a3e5c4861d02b917",
+          "template_sha256": "39d481306cb3cec54d327e450859331a4757eaa6620e4169582e4c501f36ecaa",
+          "truncated_rows": 0
+        },
+        "R2/ref_00": {
+          "feature_to_identifier": {
+            "Frequency - total number of donation": "Field B",
+            "Monetary - total blood donated in c.c.": "Field C",
+            "Recency - months since last donation": "Field A",
+            "Time - months since first donation": "Field D"
+          },
+          "max_token_count": 41,
+          "mean_token_count": 38.59837177747625,
+          "min_token_count": 38,
+          "sha256": "76e991ab455da44cf3ed015255af0de6fc7241fc5aaa9f74e42c003d4d350d66",
+          "template_sha256": "61bafb68c09041caef36636c3a209757f0b124ef7fc70328030f765c25fa1a66",
+          "truncated_rows": 0
+        },
+        "R3/ref_00": {
+          "feature_to_identifier": {
+            "Frequency - total number of donation": "Variable B",
+            "Monetary - total blood donated in c.c.": "Variable C",
+            "Recency - months since last donation": "Variable A",
+            "Time - months since first donation": "Variable D"
+          },
+          "max_token_count": 45,
+          "mean_token_count": 42.59837177747625,
+          "min_token_count": 42,
+          "sha256": "3dbb2d68e396b20db4bf7b2931219b6a415ea3612756ac78572a248fe1588cc1",
+          "template_sha256": "31b87fecab42592861a39b59182f25a47f292820c0580839fa4954443aa475d2",
+          "truncated_rows": 0
+        },
+        "intended/shared": {
+          "feature_to_identifier": {
+            "Frequency - total number of donation": "Frequency - total number of donation",
+            "Monetary - total blood donated in c.c.": "Monetary - total blood donated in c.c.",
+            "Recency - months since last donation": "Recency - months since last donation",
+            "Time - months since first donation": "Time - months since first donation"
+          },
+          "max_token_count": 71,
+          "mean_token_count": 68.59837177747626,
+          "min_token_count": 68,
+          "sha256": "520ba8acde34b75498cd454aca9c5856706f75a07167994c53c4eadd9b38e73d",
+          "template_sha256": "da5c28e7e28c6bd6abbb39355b3643f165d20af7dd4cc8d94117c555e68a4ff4",
+          "truncated_rows": 0
+        }
+      },
+      "dataset": "blood",
+      "feature_count": 4,
+      "n_audited_rows": 737
+    },
+    "calhousing": {
+      "arms": {
+        "R1/ref_00": {
+          "feature_to_identifier": {
+            "households": "feature_006",
+            "latitude": "feature_007",
+            "longitude": "feature_008",
+            "median age": "feature_002",
+            "median income": "feature_001",
+            "population": "feature_005",
+            "total bedrooms": "feature_004",
+            "total rooms": "feature_003"
+          },
+          "max_token_count": 92,
+          "mean_token_count": 89.76006181549418,
+          "min_token_count": 84,
+          "sha256": "b66bde9b2ac88b98c9932ab6398062f949b06b5cb4b70d3dcc6553b994f4b725",
+          "template_sha256": "d328a79eb3e479b8f83a48d16a391b6bf7bb2475bd4e6a71593f81b5256e7d78",
+          "truncated_rows": 0
+        },
+        "R2/ref_00": {
+          "feature_to_identifier": {
+            "households": "Field F",
+            "latitude": "Field G",
+            "longitude": "Field H",
+            "median age": "Field B",
+            "median income": "Field A",
+            "population": "Field E",
+            "total bedrooms": "Field D",
+            "total rooms": "Field C"
+          },
+          "max_token_count": 77,
+          "mean_token_count": 74.76006181549418,
+          "min_token_count": 69,
+          "sha256": "14e1f617cb06765fa3aacc6f24266d0ea2831c5063b0e7eea96dc8aee88d4a86",
+          "template_sha256": "dc077bc00596b893ceb73900b56515c12ad95855417d976d6668bd2c3d916745",
+          "truncated_rows": 0
+        },
+        "R3/ref_00": {
+          "feature_to_identifier": {
+            "households": "Variable F",
+            "latitude": "Variable G",
+            "longitude": "Variable H",
+            "median age": "Variable B",
+            "median income": "Variable A",
+            "population": "Variable E",
+            "total bedrooms": "Variable D",
+            "total rooms": "Variable C"
+          },
+          "max_token_count": 85,
+          "mean_token_count": 82.76006181549418,
+          "min_token_count": 77,
+          "sha256": "ab5be401e17846a53fe3508c7158381265b67dc64be1e0306dab3f497e331bbd",
+          "template_sha256": "830c3a26b48b312c44197d92b5a61c497d5af5f66ab7a08f39bcdf7ec89b00d0",
+          "truncated_rows": 0
+        },
+        "intended/shared": {
+          "feature_to_identifier": {
+            "households": "households",
+            "latitude": "latitude",
+            "longitude": "longitude",
+            "median age": "median age",
+            "median income": "median income",
+            "population": "population",
+            "total bedrooms": "total bedrooms",
+            "total rooms": "total rooms"
+          },
+          "max_token_count": 75,
+          "mean_token_count": 72.76006181549418,
+          "min_token_count": 67,
+          "sha256": "4c2a54b9edad19bcade7969690183593b3481019a30201024c21dfd7cc1345a8",
+          "template_sha256": "a518098979cf74b4a61b43a30f20bdbcf73c348014bdbbadc878487be2e71cb5",
+          "truncated_rows": 0
+        }
+      },
+      "dataset": "calhousing",
+      "feature_count": 8,
+      "n_audited_rows": 14883
+    },
+    "car": {
+      "arms": {
+        "R1/ref_00": {
+          "feature_to_identifier": {
+            "Buying price": "feature_001",
+            "Doors": "feature_002",
+            "Maintenance costs": "feature_003",
+            "Persons": "feature_004",
+            "Safety score": "feature_005",
+            "Trunk size": "feature_006"
+          },
+          "max_token_count": 79,
+          "mean_token_count": 74.68097754293262,
+          "min_token_count": 73,
+          "sha256": "cf88296ac634c68dba8f2a1f5ebe6a1832abbf98d658ed2adc62629c42a31b71",
+          "template_sha256": "a8ea6771def46a6190a76878079d40686b502247971e7ca9080010697a829f3f",
+          "truncated_rows": 0
+        },
+        "R2/ref_00": {
+          "feature_to_identifier": {
+            "Buying price": "Field A",
+            "Doors": "Field B",
+            "Maintenance costs": "Field C",
+            "Persons": "Field D",
+            "Safety score": "Field E",
+            "Trunk size": "Field F"
+          },
+          "max_token_count": 68,
+          "mean_token_count": 63.68097754293263,
+          "min_token_count": 62,
+          "sha256": "6bb11ede7c00acc9a80ede5de6f794a0959a96c36e5d71d29183c988e9e699ff",
+          "template_sha256": "6d61513d3ef8cfac1d15d224c0a345b5534c4e689970f60b5659359b92e4e202",
+          "truncated_rows": 0
+        },
+        "R3/ref_00": {
+          "feature_to_identifier": {
+            "Buying price": "Variable A",
+            "Doors": "Variable B",
+            "Maintenance costs": "Variable C",
+            "Persons": "Variable D",
+            "Safety score": "Variable E",
+            "Trunk size": "Variable F"
+          },
+          "max_token_count": 74,
+          "mean_token_count": 69.68097754293262,
+          "min_token_count": 68,
+          "sha256": "e28ebd1a29f04c742fd1bf2509314c3d045e1ef20c9d879066ee16fe2f977334",
+          "template_sha256": "5952ff803c05ed627cf3deef8b2e052a54f189fd4de4f48f77b8df8502e489c8",
+          "truncated_rows": 0
+        },
+        "intended/shared": {
+          "feature_to_identifier": {
+            "Buying price": "Buying price",
+            "Doors": "Doors",
+            "Maintenance costs": "Maintenance costs",
+            "Persons": "Persons",
+            "Safety score": "Safety score",
+            "Trunk size": "Trunk size"
+          },
+          "max_token_count": 69,
+          "mean_token_count": 64.68097754293262,
+          "min_token_count": 63,
+          "sha256": "91b8312bf01596f0bc25335454808e79113269943e3e9c7cba6804c97e695d6c",
+          "template_sha256": "9908f2281a685c603add5227f9cce7346e384b7f44683ada7a43bb1c3f90a934",
+          "truncated_rows": 0
+        }
+      },
+      "dataset": "car",
+      "feature_count": 6,
+      "n_audited_rows": 1514
+    },
+    "creditg": {
+      "arms": {
+        "R1/ref_00": {
+          "feature_to_identifier": {
+            "Age in years": "feature_013",
+            "Credit amount": "feature_005",
+            "Credit history ": "feature_003",
+            "Duration in month": "feature_002",
+            "Housing": "feature_015",
+            "Installment rate in percentage of disposable income": "feature_008",
+            "Job": "feature_017",
+            "Number of existing credits at this bank": "feature_016",
+            "Number of people being liable to provide maintenance for": "feature_018",
+            "Other debtors / guarantors": "feature_010",
+            "Other installment plans": "feature_014",
+            "Personal status and sex": "feature_009",
+            "Present employment since": "feature_007",
+            "Present residence since": "feature_011",
+            "Property": "feature_012",
+            "Purpose": "feature_004",
+            "Savings account/bonds": "feature_006",
+            "Status of existing checking account": "feature_001",
+            "Telephone": "feature_019",
+            "foreign worker": "feature_020"
+          },
+          "max_token_count": 249,
+          "mean_token_count": 222.24719101123594,
+          "min_token_count": 202,
+          "sha256": "da191a7e8e103bb8a76538c300ef5e2d23b69675cf3229fc344a0abdcabecdf1",
+          "template_sha256": "70da0c31186632d1ac6585013fa811eb6e2c1b9e1ab159396e1c3de540c1f0f0",
+          "truncated_rows": 0
+        },
+        "R2/ref_00": {
+          "feature_to_identifier": {
+            "Age in years": "Field M",
+            "Credit amount": "Field E",
+            "Credit history ": "Field C",
+            "Duration in month": "Field B",
+            "Housing": "Field O",
+            "Installment rate in percentage of disposable income": "Field H",
+            "Job": "Field Q",
+            "Number of existing credits at this bank": "Field P",
+            "Number of people being liable to provide maintenance for": "Field R",
+            "Other debtors / guarantors": "Field J",
+            "Other installment plans": "Field N",
+            "Personal status and sex": "Field I",
+            "Present employment since": "Field G",
+            "Present residence since": "Field K",
+            "Property": "Field L",
+            "Purpose": "Field D",
+            "Savings account/bonds": "Field F",
+            "Status of existing checking account": "Field A",
+            "Telephone": "Field S",
+            "foreign worker": "Field T"
+          },
+          "max_token_count": 210,
+          "mean_token_count": 183.24719101123594,
+          "min_token_count": 163,
+          "sha256": "1a2f393c54e1ed82d0d7a3b125a9eb003171de38644e49c1f3ef55b58f1ec04f",
+          "template_sha256": "b78a2b978cbf0421447f2fb717eac4e2000b23ccc6fe8ade05ad58077c38a688",
+          "truncated_rows": 0
+        },
+        "R3/ref_00": {
+          "feature_to_identifier": {
+            "Age in years": "Variable M",
+            "Credit amount": "Variable E",
+            "Credit history ": "Variable C",
+            "Duration in month": "Variable B",
+            "Housing": "Variable O",
+            "Installment rate in percentage of disposable income": "Variable H",
+            "Job": "Variable Q",
+            "Number of existing credits at this bank": "Variable P",
+            "Number of people being liable to provide maintenance for": "Variable R",
+            "Other debtors / guarantors": "Variable J",
+            "Other installment plans": "Variable N",
+            "Personal status and sex": "Variable I",
+            "Present employment since": "Variable G",
+            "Present residence since": "Variable K",
+            "Property": "Variable L",
+            "Purpose": "Variable D",
+            "Savings account/bonds": "Variable F",
+            "Status of existing checking account": "Variable A",
+            "Telephone": "Variable S",
+            "foreign worker": "Variable T"
+          },
+          "max_token_count": 230,
+          "mean_token_count": 203.24719101123594,
+          "min_token_count": 183,
+          "sha256": "f7e383880907fde59ab0cc94f4af1e5c7b6014ed27ad1ec170fe960ca045fc5e",
+          "template_sha256": "3a88c17b2ffecd298ec301a9be7bdfd0d477025e84ee1da25c4193af2055811d",
+          "truncated_rows": 0
+        },
+        "intended/shared": {
+          "feature_to_identifier": {
+            "Age in years": "Age in years",
+            "Credit amount": "Credit amount",
+            "Credit history ": "Credit history ",
+            "Duration in month": "Duration in month",
+            "Housing": "Housing",
+            "Installment rate in percentage of disposable income": "Installment rate in percentage of disposable income",
+            "Job": "Job",
+            "Number of existing credits at this bank": "Number of existing credits at this bank",
+            "Number of people being liable to provide maintenance for": "Number of people being liable to provide maintenance for",
+            "Other debtors / guarantors": "Other debtors / guarantors",
+            "Other installment plans": "Other installment plans",
+            "Personal status and sex": "Personal status and sex",
+            "Present employment since": "Present employment since",
+            "Present residence since": "Present residence since",
+            "Property": "Property",
+            "Purpose": "Purpose",
+            "Savings account/bonds": "Savings account/bonds",
+            "Status of existing checking account": "Status of existing checking account",
+            "Telephone": "Telephone",
+            "foreign worker": "foreign worker"
+          },
+          "max_token_count": 252,
+          "mean_token_count": 225.24719101123594,
+          "min_token_count": 205,
+          "sha256": "292c64659d360f3ee8641dde08e92bcd9c5388595d969f82247c5b201be88457",
+          "template_sha256": "452695db2ec090f5ae15d60dbb2aa3c4e89dcb5a268e0bf4f6852e6a076b8562",
+          "truncated_rows": 0
+        }
+      },
+      "dataset": "creditg",
+      "feature_count": 20,
+      "n_audited_rows": 979
+    },
+    "diabetes": {
+      "arms": {
+        "R1/ref_00": {
+          "feature_to_identifier": {
+            "2-hour serum insulin": "feature_006",
+            "Age": "feature_001",
+            "Body mass index": "feature_007",
+            "Diabetes pedigree function": "feature_008",
+            "Diastolic blood pressure": "feature_003",
+            "Number of times pregnant": "feature_002",
+            "Plasma glucose concentration at 2 hours in an oral glucose tolerance test (GTT)": "feature_005",
+            "Triceps skin fold thickness": "feature_004"
+          },
+          "max_token_count": 87,
+          "mean_token_count": 82.66929133858268,
+          "min_token_count": 79,
+          "sha256": "08fccddccc2baae0120b601fc44bf6399d6c2664d91f31ea8c1d8ab7fac9b708",
+          "template_sha256": "e1d8bebc3b3c4717c3881e356bccf5a1890a26e6962a5a460afc68f62f4e6b29",
+          "truncated_rows": 0
+        },
+        "R2/ref_00": {
+          "feature_to_identifier": {
+            "2-hour serum insulin": "Field F",
+            "Age": "Field A",
+            "Body mass index": "Field G",
+            "Diabetes pedigree function": "Field H",
+            "Diastolic blood pressure": "Field C",
+            "Number of times pregnant": "Field B",
+            "Plasma glucose concentration at 2 hours in an oral glucose tolerance test (GTT)": "Field E",
+            "Triceps skin fold thickness": "Field D"
+          },
+          "max_token_count": 72,
+          "mean_token_count": 67.66929133858268,
+          "min_token_count": 64,
+          "sha256": "8e9afad1078cf3baa3337eac9f427e3cf38d9c07e4714d0351d06aa4e18576ba",
+          "template_sha256": "5e4e2a1b68458585f8f1361e7e652c31a888799ff632e81c351a5390df32ce4b",
+          "truncated_rows": 0
+        },
+        "R3/ref_00": {
+          "feature_to_identifier": {
+            "2-hour serum insulin": "Variable F",
+            "Age": "Variable A",
+            "Body mass index": "Variable G",
+            "Diabetes pedigree function": "Variable H",
+            "Diastolic blood pressure": "Variable C",
+            "Number of times pregnant": "Variable B",
+            "Plasma glucose concentration at 2 hours in an oral glucose tolerance test (GTT)": "Variable E",
+            "Triceps skin fold thickness": "Variable D"
+          },
+          "max_token_count": 80,
+          "mean_token_count": 75.66929133858268,
+          "min_token_count": 72,
+          "sha256": "9eb7c3e7376218e0cb461aa9741c22083eb155a9129106eb8c62109cf020f331",
+          "template_sha256": "afee8741c19df34f28a63172fcf3ceeac8896211b5079c8910807644e8842f21",
+          "truncated_rows": 0
+        },
+        "intended/shared": {
+          "feature_to_identifier": {
+            "2-hour serum insulin": "2-hour serum insulin",
+            "Age": "Age",
+            "Body mass index": "Body mass index",
+            "Diabetes pedigree function": "Diabetes pedigree function",
+            "Diastolic blood pressure": "Diastolic blood pressure",
+            "Number of times pregnant": "Number of times pregnant",
+            "Plasma glucose concentration at 2 hours in an oral glucose tolerance test (GTT)": "Plasma glucose concentration at 2 hours in an oral glucose tolerance test (GTT)",
+            "Triceps skin fold thickness": "Triceps skin fold thickness"
+          },
+          "max_token_count": 103,
+          "mean_token_count": 98.66929133858268,
+          "min_token_count": 95,
+          "sha256": "f75050d5ea3247d5887e2376310c6e260e5749fbe397b02424b749254d7ca110",
+          "template_sha256": "0728c5a2e348142dad54d3423d03b82e64f17835627aa00dccab6c0bb9881ae6",
+          "truncated_rows": 0
+        }
+      },
+      "dataset": "diabetes",
+      "feature_count": 8,
+      "n_audited_rows": 762
+    },
+    "heart": {
+      "arms": {
+        "R1/ref_00": {
+          "feature_to_identifier": {
+            "Age of the patient": "feature_001",
+            "Chest pain type": "feature_003",
+            "Exercise-induced angina": "feature_009",
+            "Fasting blood sugar > 120 mg/dl": "feature_006",
+            "Maximum heart rate achieved": "feature_008",
+            "Resting blood pressure": "feature_004",
+            "Resting electrocardiogram results": "feature_007",
+            "ST depression induced by exercise relative to rest": "feature_010",
+            "Serum cholesterol": "feature_005",
+            "Sex of the patient": "feature_002",
+            "Slope of the peak exercise ST segment": "feature_011"
+          },
+          "max_token_count": 133,
+          "mean_token_count": 122.94731064763995,
+          "min_token_count": 115,
+          "sha256": "3ed10820f07e217238865c1e2f166f7fb626c62b1f0551aed9e16d07989b8d52",
+          "template_sha256": "887fd0848ea6899abeb7a67f0617144e432c4604a1f9d78b4d344e930c0f5292",
+          "truncated_rows": 0
+        },
+        "R2/ref_00": {
+          "feature_to_identifier": {
+            "Age of the patient": "Field A",
+            "Chest pain type": "Field C",
+            "Exercise-induced angina": "Field I",
+            "Fasting blood sugar > 120 mg/dl": "Field F",
+            "Maximum heart rate achieved": "Field H",
+            "Resting blood pressure": "Field D",
+            "Resting electrocardiogram results": "Field G",
+            "ST depression induced by exercise relative to rest": "Field J",
+            "Serum cholesterol": "Field E",
+            "Sex of the patient": "Field B",
+            "Slope of the peak exercise ST segment": "Field K"
+          },
+          "max_token_count": 112,
+          "mean_token_count": 101.94731064763995,
+          "min_token_count": 94,
+          "sha256": "1ab89b2b28427b41f3a79cf4259c9877d540e58492c537578127ef8cb1fc291b",
+          "template_sha256": "6a3eae4352fef23bc2c78a1d8db1630133407d90375f4f970f69843aac6f7219",
+          "truncated_rows": 0
+        },
+        "R3/ref_00": {
+          "feature_to_identifier": {
+            "Age of the patient": "Variable A",
+            "Chest pain type": "Variable C",
+            "Exercise-induced angina": "Variable I",
+            "Fasting blood sugar > 120 mg/dl": "Variable F",
+            "Maximum heart rate achieved": "Variable H",
+            "Resting blood pressure": "Variable D",
+            "Resting electrocardiogram results": "Variable G",
+            "ST depression induced by exercise relative to rest": "Variable J",
+            "Serum cholesterol": "Variable E",
+            "Sex of the patient": "Variable B",
+            "Slope of the peak exercise ST segment": "Variable K"
+          },
+          "max_token_count": 123,
+          "mean_token_count": 112.94731064763995,
+          "min_token_count": 105,
+          "sha256": "061d93be9c910f39c4b595718a6ac23bb1f19091e80ef2dc33b9541e662db78d",
+          "template_sha256": "6e1c02dcdf27b05a4e9b5eab745fea909be2c4536c84333f583d1a65b68fa1c1",
+          "truncated_rows": 0
+        },
+        "intended/shared": {
+          "feature_to_identifier": {
+            "Age of the patient": "Age of the patient",
+            "Chest pain type": "Chest pain type",
+            "Exercise-induced angina": "Exercise-induced angina",
+            "Fasting blood sugar > 120 mg/dl": "Fasting blood sugar > 120 mg/dl",
+            "Maximum heart rate achieved": "Maximum heart rate achieved",
+            "Resting blood pressure": "Resting blood pressure",
+            "Resting electrocardiogram results": "Resting electrocardiogram results",
+            "ST depression induced by exercise relative to rest": "ST depression induced by exercise relative to rest",
+            "Serum cholesterol": "Serum cholesterol",
+            "Sex of the patient": "Sex of the patient",
+            "Slope of the peak exercise ST segment": "Slope of the peak exercise ST segment"
+          },
+          "max_token_count": 152,
+          "mean_token_count": 141.94731064763997,
+          "min_token_count": 134,
+          "sha256": "55507cfbc8af26c240ca3626480a3b9226a3545b27cc60cbe3a965f0832e76a0",
+          "template_sha256": "3e31b7f0e65b9010ccad14366ac1abb2fbcb5f48fb5e098710ec2633b65a2be8",
+          "truncated_rows": 0
+        }
+      },
+      "dataset": "heart",
+      "feature_count": 11,
+      "n_audited_rows": 911
+    },
+    "income": {
+      "arms": {
+        "R1/ref_00": {
+          "feature_to_identifier": {
+            "Age": "feature_001",
+            "Capital gain last year": "feature_009",
+            "Capital loss last year": "feature_010",
+            "Education": "feature_011",
+            "Marital status": "feature_004",
+            "Native country": "feature_006",
+            "Occupation": "feature_007",
+            "Race": "feature_002",
+            "Relation to head of the household": "feature_005",
+            "Sex": "feature_003",
+            "Work class": "feature_008",
+            "Work hours per week": "feature_012"
+          },
+          "max_token_count": 163,
+          "mean_token_count": 129.66388798243793,
+          "min_token_count": 117,
+          "sha256": "41aea62cfe4372f5f15fe6985ff86966dc89558cd578888974540ba569dc5585",
+          "template_sha256": "06ca683bc18e24a184007767accecf5ff1d27eec86d81053d0717f8428da6e4e",
+          "truncated_rows": 0
+        },
+        "R2/ref_00": {
+          "feature_to_identifier": {
+            "Age": "Field A",
+            "Capital gain last year": "Field I",
+            "Capital loss last year": "Field J",
+            "Education": "Field K",
+            "Marital status": "Field D",
+            "Native country": "Field F",
+            "Occupation": "Field G",
+            "Race": "Field B",
+            "Relation to head of the household": "Field E",
+            "Sex": "Field C",
+            "Work class": "Field H",
+            "Work hours per week": "Field L"
+          },
+          "max_token_count": 140,
+          "mean_token_count": 106.66388798243793,
+          "min_token_count": 94,
+          "sha256": "949006785f282322dd5a06502b056a233ab4429ebe113ca7d7cfcf9fbfd651ae",
+          "template_sha256": "dad8f37d713c6bc1dc98a2391259d177193aea83f68d7e809474ab08289a6773",
+          "truncated_rows": 0
+        },
+        "R3/ref_00": {
+          "feature_to_identifier": {
+            "Age": "Variable A",
+            "Capital gain last year": "Variable I",
+            "Capital loss last year": "Variable J",
+            "Education": "Variable K",
+            "Marital status": "Variable D",
+            "Native country": "Variable F",
+            "Occupation": "Variable G",
+            "Race": "Variable B",
+            "Relation to head of the household": "Variable E",
+            "Sex": "Variable C",
+            "Work class": "Variable H",
+            "Work hours per week": "Variable L"
+          },
+          "max_token_count": 152,
+          "mean_token_count": 118.66388798243793,
+          "min_token_count": 106,
+          "sha256": "b42bd5d44d3c279f8194969b26aab53b8dbcad8abac6d522fdd21917132e2d65",
+          "template_sha256": "649b7d58bd5a466c1fc9841a073803fb1b3848908d971eaa703e8b4ccc515de5",
+          "truncated_rows": 0
+        },
+        "intended/shared": {
+          "feature_to_identifier": {
+            "Age": "Age",
+            "Capital gain last year": "Capital gain last year",
+            "Capital loss last year": "Capital loss last year",
+            "Education": "Education",
+            "Marital status": "Marital status",
+            "Native country": "Native country",
+            "Occupation": "Occupation",
+            "Race": "Race",
+            "Relation to head of the household": "Relation to head of the household",
+            "Sex": "Sex",
+            "Work class": "Work class",
+            "Work hours per week": "Work hours per week"
+          },
+          "max_token_count": 150,
+          "mean_token_count": 116.66388798243793,
+          "min_token_count": 104,
+          "sha256": "460db2b7ce35478639f40d22f481b3912205baa7470466234def8b49d0425a31",
+          "template_sha256": "c249af42496cbbc4f8bf78cdc53734e1cbac97eb21762154c0c4e8522141d13e",
+          "truncated_rows": 0
+        }
+      },
+      "dataset": "income",
+      "feature_count": 12,
+      "n_audited_rows": 33709
+    },
+    "jungle": {
+      "arms": {
+        "R1/ref_00": {
+          "feature_to_identifier": {
+            "black piece file": "feature_005",
+            "black piece rank": "feature_006",
+            "black piece strength": "feature_004",
+            "white piece file": "feature_002",
+            "white piece rank": "feature_003",
+            "white piece strength": "feature_001"
+          },
+          "max_token_count": 77,
+          "mean_token_count": 73.1345404611356,
+          "min_token_count": 72,
+          "sha256": "2bb2310227d4960a188d27505242701df997de00ef83d5d65556f1f1d70bf10f",
+          "template_sha256": "2706e619dc69e785d88663aae81327db5e8c299f05497ba966da6383511aec6c",
+          "truncated_rows": 0
+        },
+        "R2/ref_00": {
+          "feature_to_identifier": {
+            "black piece file": "Field E",
+            "black piece rank": "Field F",
+            "black piece strength": "Field D",
+            "white piece file": "Field B",
+            "white piece rank": "Field C",
+            "white piece strength": "Field A"
+          },
+          "max_token_count": 66,
+          "mean_token_count": 62.13454046113559,
+          "min_token_count": 61,
+          "sha256": "d90c6927fc63206d277ace6ec0b5d83f2a5f6d0ef3010a9214b59fee560555b4",
+          "template_sha256": "d501009c18b51c8cd6716f47dcae93267c5c26f2d3bae66b26e3b0e3eb29f508",
+          "truncated_rows": 0
+        },
+        "R3/ref_00": {
+          "feature_to_identifier": {
+            "black piece file": "Variable E",
+            "black piece rank": "Variable F",
+            "black piece strength": "Variable D",
+            "white piece file": "Variable B",
+            "white piece rank": "Variable C",
+            "white piece strength": "Variable A"
+          },
+          "max_token_count": 72,
+          "mean_token_count": 68.1345404611356,
+          "min_token_count": 67,
+          "sha256": "ac9cea1d894e113e33108e3a1d27b12a5ae3baf7c2a580f57a603237fb215b50",
+          "template_sha256": "d0fef35669c3b20f5a4a25ee8c1457339dcae03141c84d55381e7b4e968c0c3a",
+          "truncated_rows": 0
+        },
+        "intended/shared": {
+          "feature_to_identifier": {
+            "black piece file": "black piece file",
+            "black piece rank": "black piece rank",
+            "black piece strength": "black piece strength",
+            "white piece file": "white piece file",
+            "white piece rank": "white piece rank",
+            "white piece strength": "white piece strength"
+          },
+          "max_token_count": 72,
+          "mean_token_count": 68.1345404611356,
+          "min_token_count": 67,
+          "sha256": "49b9bde84d491b0ef42011c69b059dbe29e38b7ae897d324f70595fac25f2a67",
+          "template_sha256": "52610bc7b2894b2275f32ba08e2edc5df8145a0eb854ef4ae7e091fb06ed26b3",
+          "truncated_rows": 0
+        }
+      },
+      "dataset": "jungle",
+      "feature_count": 6,
+      "n_audited_rows": 31314
+    }
+  },
+  "design_sha256": "5cdac31d67a015ebca58c1f61ac5f150b842e88eced1d18b254345199302899b",
+  "performance_inspected": false
+}

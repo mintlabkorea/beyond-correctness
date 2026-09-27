@@ -1,0 +1,52 @@
+{
+ "arms": [
+  "raw",
+  "pipeline_table",
+  "llm_table",
+  "placebo_table"
+ ],
+ "auroc": {
+  "1024": {
+   "llm_table": 0.6637813226695272,
+   "pipeline_table": 0.6419278261981893,
+   "placebo_table": 0.5439280298798947,
+   "raw": 0.4114047130818981
+  },
+  "256": {
+   "llm_table": 0.675352593118307,
+   "pipeline_table": 0.6827999257160839,
+   "placebo_table": 0.5363505770922921,
+   "raw": 0.4442296232839904
+  },
+  "64": {
+   "llm_table": 0.6763049284277288,
+   "pipeline_table": 0.688351045066868,
+   "placebo_table": 0.5331233849503182,
+   "raw": 0.3720213753025713
+  }
+ },
+ "backbone": "tabpfn_7.0.0_incontext_src8192_unweighted",
+ "benchmark_id": "std_cross_nh2kn_shared_anchorreset_fewshot_v1",
+ "feature_set": "shared_clinical_plus_survey_v1",
+ "metric": "auroc_vs_documented_target_binary (higher is better)",
+ "n_eval": 4767,
+ "n_pool": 7503,
+ "n_source": 17776,
+ "placebo_label_maps": {
+  "source": {
+   "1.0": 0.0,
+   "7.0": 0.5,
+   "9.0": 1.0
+  },
+  "target": {
+   "2.0": 0.5,
+   "8.0": 1.0,
+   "9.0": 0.0
+  }
+ },
+ "primary_k": 256,
+ "seed": 51,
+ "target": "current_smoking_status",
+ "target_set": "survey_label_panel_v1",
+ "wall_seconds": 120.1
+}

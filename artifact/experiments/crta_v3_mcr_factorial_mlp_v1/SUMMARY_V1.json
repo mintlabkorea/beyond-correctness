@@ -1,0 +1,426 @@
+{
+ "arm_mean_nmse": {
+  "32": {
+   "additive": {
+    "m0c0rf": 1.634807678816949,
+    "m0c1rf": 1.5598092896236901,
+    "m1c0rf": 1.3768878581636272,
+    "m1c1rf": 0.6953427773427364
+   },
+   "pairwise": {
+    "m0c0rf": 1.5191200370001743,
+    "m0c1rf": 1.5954803358384693,
+    "m1c0rf": 1.358964361178719,
+    "m1c1rf": 0.6805311790060686,
+    "rop_random": 0.6821292138590963,
+    "rop_true": 0.6799903871431714
+   },
+   "sparse": {
+    "m0c0rf": 1.7068536545717687,
+    "m0c1rf": 1.4994843353727247,
+    "m1c0rf": 1.373952072118485,
+    "m1c1rf": 0.707033260957182,
+    "rop_random": 0.705589447103494,
+    "rop_true": 0.7019741582863006
+   }
+  },
+  "512": {
+   "additive": {
+    "m0c0rf": 0.8551465621272643,
+    "m0c1rf": 0.8492124036977848,
+    "m1c0rf": 0.8559926436050624,
+    "m1c1rf": 0.6822868127983339
+   },
+   "pairwise": {
+    "m0c0rf": 0.865430958019805,
+    "m0c1rf": 0.8490272397978835,
+    "m1c0rf": 0.8548930213976306,
+    "m1c1rf": 0.6730869659227541,
+    "rop_random": 0.6729823465677158,
+    "rop_true": 0.6720663410467175
+   },
+   "sparse": {
+    "m0c0rf": 0.8837884926988459,
+    "m0c1rf": 0.84066063878552,
+    "m1c0rf": 0.8679103288887265,
+    "m1c1rf": 0.6906849757801089,
+    "rop_random": 0.6927887713040525,
+    "rop_true": 0.692137566007186
+   }
+  }
+ },
+ "bootstrap": {
+  "reps": 10000,
+  "seed": 20260820
+ },
+ "evaluability_gate": {
+  "32": {
+   "additive": {
+    "beats_intercept": true,
+    "mean_m1c1rf_nmse": 0.6953427773427364
+   },
+   "pairwise": {
+    "beats_intercept": true,
+    "mean_m1c1rf_nmse": 0.6805311790060686
+   },
+   "sparse": {
+    "beats_intercept": true,
+    "mean_m1c1rf_nmse": 0.707033260957182
+   }
+  },
+  "512": {
+   "additive": {
+    "beats_intercept": true,
+    "mean_m1c1rf_nmse": 0.6822868127983339
+   },
+   "pairwise": {
+    "beats_intercept": true,
+    "mean_m1c1rf_nmse": 0.6730869659227541
+   },
+   "sparse": {
+    "beats_intercept": true,
+    "mean_m1c1rf_nmse": 0.6906849757801089
+   }
+  }
+ },
+ "n_cells": 60,
+ "primary_support_k": "32",
+ "sections": {
+  "32": {
+   "N1_measurement": {
+    "additive": {
+     "ci95": [
+      0.5467132432321419,
+      1.3108847373872585
+     ],
+     "evaluable": true,
+     "mean": 0.8644665122809538,
+     "n": 20,
+     "separated": true,
+     "win": 1.0
+    },
+    "all_families_evaluable": true,
+    "all_families_separated": true,
+    "pairwise": {
+     "ci95": [
+      0.7234545237237635,
+      1.1341016704188884
+     ],
+     "evaluable": true,
+     "mean": 0.9149491568324004,
+     "n": 20,
+     "separated": true,
+     "win": 1.0
+    },
+    "sparse": {
+     "ci95": [
+      0.6285034636063479,
+      0.9791330763815794
+     ],
+     "evaluable": true,
+     "mean": 0.7924510744155425,
+     "n": 20,
+     "separated": true,
+     "win": 1.0
+    }
+   },
+   "N2_correspondence": {
+    "additive": {
+     "ci95": [
+      0.5571684424961705,
+      0.8189847242001574
+     ],
+     "evaluable": true,
+     "mean": 0.681545080820891,
+     "n": 20,
+     "separated": true,
+     "win": 1.0
+    },
+    "all_families_evaluable": true,
+    "all_families_separated": true,
+    "pairwise": {
+     "ci95": [
+      0.5622448511699943,
+      0.7927598379871894
+     ],
+     "evaluable": true,
+     "mean": 0.6784331821726505,
+     "n": 20,
+     "separated": true,
+     "win": 1.0
+    },
+    "sparse": {
+     "ci95": [
+      0.5786610144254765,
+      0.7601302474227104
+     ],
+     "evaluable": true,
+     "mean": 0.6669188111613029,
+     "n": 20,
+     "separated": true,
+     "win": 1.0
+    }
+   },
+   "N3_MC_interaction": {
+    "additive": {
+     "ci95": [
+      0.3413759051770833,
+      0.8839947459701514
+     ],
+     "evaluable": true,
+     "mean": 0.606546691627632,
+     "n": 20,
+     "separated": true,
+     "win": 0.95
+    },
+    "all_families_evaluable": true,
+    "all_families_separated": true,
+    "pairwise": {
+     "ci95": [
+      0.5113467683289539,
+      1.012458691662284
+     ],
+     "evaluable": true,
+     "mean": 0.7547934810109453,
+     "n": 20,
+     "separated": true,
+     "win": 0.9
+    },
+    "sparse": {
+     "ci95": [
+      0.27646704478045137,
+      0.6510406041198048
+     ],
+     "evaluable": true,
+     "mean": 0.4595494919622591,
+     "n": 20,
+     "separated": true,
+     "win": 0.85
+    }
+   },
+   "N4_op_value_content": {
+    "all_families_evaluable": true,
+    "all_families_separated": false,
+    "pairwise": {
+     "ci95": [
+      -0.0013187292967352941,
+      0.0057692036415395755
+     ],
+     "evaluable": true,
+     "mean": 0.0021388267159249685,
+     "n": 20,
+     "separated": false,
+     "win": 0.55
+    },
+    "sparse": {
+     "ci95": [
+      -0.0024574290133317447,
+      0.00921139757296291
+     ],
+     "evaluable": true,
+     "mean": 0.0036152888171933294,
+     "n": 20,
+     "separated": false,
+     "win": 0.75
+    }
+   },
+   "op_values_over_free": {
+    "all_families_evaluable": true,
+    "all_families_separated": false,
+    "pairwise": {
+     "ci95": [
+      -0.003945756663083311,
+      0.005174346096569682
+     ],
+     "evaluable": true,
+     "mean": 0.0005407918628972719,
+     "n": 20,
+     "separated": false,
+     "win": 0.55
+    },
+    "sparse": {
+     "ci95": [
+      -0.001701293498805288,
+      0.012263489255145173
+     ],
+     "evaluable": true,
+     "mean": 0.005059102670881427,
+     "n": 20,
+     "separated": false,
+     "win": 0.65
+    }
+   }
+  },
+  "512": {
+   "N1_measurement": {
+    "additive": {
+     "ci95": [
+      0.1475718984291147,
+      0.1864693043096689
+     ],
+     "evaluable": true,
+     "mean": 0.16692559089945097,
+     "n": 20,
+     "separated": true,
+     "win": 1.0
+    },
+    "all_families_evaluable": true,
+    "all_families_separated": true,
+    "pairwise": {
+     "ci95": [
+      0.1517073177410783,
+      0.19987085680363953
+     ],
+     "evaluable": true,
+     "mean": 0.17594027387512937,
+     "n": 20,
+     "separated": true,
+     "win": 1.0
+    },
+    "sparse": {
+     "ci95": [
+      0.11901837996897284,
+      0.18188110734638635
+     ],
+     "evaluable": true,
+     "mean": 0.14997566300541118,
+     "n": 20,
+     "separated": true,
+     "win": 1.0
+    }
+   },
+   "N2_correspondence": {
+    "additive": {
+     "ci95": [
+      0.14516583083779186,
+      0.20335495973233855
+     ],
+     "evaluable": true,
+     "mean": 0.17370583080672855,
+     "n": 20,
+     "separated": true,
+     "win": 1.0
+    },
+    "all_families_evaluable": true,
+    "all_families_separated": true,
+    "pairwise": {
+     "ci95": [
+      0.13750297500149344,
+      0.23262392120036415
+     ],
+     "evaluable": true,
+     "mean": 0.18180605547487633,
+     "n": 20,
+     "separated": true,
+     "win": 1.0
+    },
+    "sparse": {
+     "ci95": [
+      0.15512938727737627,
+      0.20253523056723224
+     ],
+     "evaluable": true,
+     "mean": 0.17722535310861764,
+     "n": 20,
+     "separated": true,
+     "win": 1.0
+    }
+   },
+   "N3_MC_interaction": {
+    "additive": {
+     "ci95": [
+      0.1306169278705809,
+      0.20782053804230613
+     ],
+     "evaluable": true,
+     "mean": 0.16777167237724894,
+     "n": 20,
+     "separated": true,
+     "win": 1.0
+    },
+    "all_families_evaluable": true,
+    "all_families_separated": true,
+    "pairwise": {
+     "ci95": [
+      0.11498829471006196,
+      0.2185694084066895
+     ],
+     "evaluable": true,
+     "mean": 0.16540233725295492,
+     "n": 20,
+     "separated": true,
+     "win": 0.9
+    },
+    "sparse": {
+     "ci95": [
+      0.10068370818607249,
+      0.16568434746954375
+     ],
+     "evaluable": true,
+     "mean": 0.13409749919529185,
+     "n": 20,
+     "separated": true,
+     "win": 0.95
+    }
+   },
+   "N4_op_value_content": {
+    "all_families_evaluable": true,
+    "all_families_separated": false,
+    "pairwise": {
+     "ci95": [
+      -0.003224729471576025,
+      0.0051137456425602405
+     ],
+     "evaluable": true,
+     "mean": 0.0009160055209981088,
+     "n": 20,
+     "separated": false,
+     "win": 0.55
+    },
+    "sparse": {
+     "ci95": [
+      -0.0029071460484270204,
+      0.004264576572307607
+     ],
+     "evaluable": true,
+     "mean": 0.0006512052968663973,
+     "n": 20,
+     "separated": false,
+     "win": 0.6
+    }
+   },
+   "op_values_over_free": {
+    "all_families_evaluable": true,
+    "all_families_separated": false,
+    "pairwise": {
+     "ci95": [
+      -0.004254233322826431,
+      0.006800563436609357
+     ],
+     "evaluable": true,
+     "mean": 0.001020624876036652,
+     "n": 20,
+     "separated": false,
+     "win": 0.5
+    },
+    "sparse": {
+     "ci95": [
+      -0.005573500865941586,
+      0.0027602727963432086
+     ],
+     "evaluable": true,
+     "mean": -0.0014525902270771328,
+     "n": 20,
+     "separated": false,
+     "win": 0.5
+    }
+   }
+  }
+ },
+ "verdicts": {
+  "N1_measurement": true,
+  "N2_correspondence": true,
+  "N3_MC_interaction": true,
+  "N4_op_value_content": false
+ }
+}

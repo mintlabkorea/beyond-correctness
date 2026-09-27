@@ -1,0 +1,81 @@
+{
+  "analysis_status": "retrospective_published_style_reproduction",
+  "arm": "list_template",
+  "checkpoint_audit": {
+    "checkpoint_key_count": 192,
+    "checkpoint_parameter_count": 1081344,
+    "missing_base_model_key_count": 752
+  },
+  "checkpoint_source_tfew_commit": "114deced63ae722a368e06cb08ea956b20c393a6",
+  "choices": [
+    "No",
+    "Yes"
+  ],
+  "dataset": "income",
+  "ia3_checkpoint_sha256": "8fe7a00fb425dd331c7a021c9468d50a14ec2ca1998007e7ead5ce3111405729",
+  "metrics": {
+    "0": {
+      "accuracy": 0.7053946156208415,
+      "auc": 0.7969999996470962,
+      "n_test": 9769
+    },
+    "1": {
+      "accuracy": 0.7141979731804688,
+      "auc": 0.8087925302373526,
+      "n_test": 9769
+    },
+    "1024": {
+      "accuracy": 0.704166240147405,
+      "auc": 0.7936615578937793,
+      "n_test": 9769
+    },
+    "32": {
+      "accuracy": 0.707544272699355,
+      "auc": 0.8022361203324291,
+      "n_test": 9769
+    },
+    "42": {
+      "accuracy": 0.7096939297778687,
+      "auc": 0.8004745449525772,
+      "n_test": 9769
+    },
+    "mean": {
+      "accuracy": 0.7081994062851878,
+      "auc": 0.8004329506126469,
+      "auc_sd_population": 0.005114149671534006
+    }
+  },
+  "model_path": "external/.cache/huggingface/hub/models--bigscience--T0/snapshots/1cfa27271f8085c29323c94bd659004b210f20b5",
+  "n_full": 48842,
+  "n_scored_union": 32680,
+  "protocol_sha256": "84ed4f92d8ff4e198bf036dd3378e7b9008cf501374115a4893d1e11abf780c0",
+  "raw_and_serialization_tree_sha256": "383519d4b1efffe01c414c1f7b12db9c7abc04aefbde0e9957c44c5eaf038763",
+  "runner_sha256": "58697774da35b4d2ed573045618d66f557ebf29ffadbd269539862c2dc802b9a",
+  "scoring": {
+    "batch_size": 16,
+    "device": "cuda:0",
+    "length_normalization": 1,
+    "max_input_tokens": 1024,
+    "test_fraction": 0.2,
+    "test_split_seeds": [
+      42,
+      1024,
+      0,
+      1,
+      32
+    ]
+  },
+  "source_discrepancy": "paper text names bigscience/T0pp once; released t011b config and released IA3 checkpoint use bigscience/T0; this audit follows code. The TabLLM repository vendors only a subset of T-Few; model modification is loaded from the corresponding complete upstream T-Few checkout recorded by tfew_execution_commit.",
+  "tabllm_commit": "71f6647c523aa6fd35df94ad76207c4377248c49",
+  "tfew_execution_commit": "114deced63ae722a368e06cb08ea956b20c393a6",
+  "versions": {
+    "datasets": "2.14.7",
+    "numpy": "2.2.6",
+    "pandas": "2.3.3",
+    "python": "3.10.20",
+    "scikit_learn": "1.7.2",
+    "torch": "2.12.0.dev20260408+cu128",
+    "transformers": "4.30.0"
+  },
+  "wall_seconds": 154.712
+}

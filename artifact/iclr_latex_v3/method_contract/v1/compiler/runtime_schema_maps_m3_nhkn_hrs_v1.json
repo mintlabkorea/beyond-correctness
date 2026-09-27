@@ -1,0 +1,48 @@
+{
+  "schema_pair_id": "nhkn_combined_to_hrs_medical_registry_v1",
+  "source": {
+    "nhkn__age": "slot__age",
+    "nhkn__sex": "slot__sex",
+    "nhkn__sbp": "slot__sbp",
+    "nhkn__dbp": "slot__dbp",
+    "nhkn__glucose": "slot__glucose",
+    "nhkn__hba1c": "slot__hba1c",
+    "nhkn__creatinine": "slot__creatinine",
+    "nhkn__bun": "target__bun",
+    "nhkn__hemoglobin": "slot__hemoglobin",
+    "nhkn__hematocrit": "target__hematocrit",
+    "nhkn__rbc": "target__rbc",
+    "nhkn__wbc": "target__wbc",
+    "nhkn__total_cholesterol": "slot__total_cholesterol"
+  },
+  "target": {
+    "hrs__age_years": "slot__age",
+    "hrs__sbp": "slot__sbp",
+    "hrs__dbp": "slot__dbp",
+    "hrs__glucose": "slot__glucose",
+    "hrs__hba1c": "slot__hba1c",
+    "hrs__creatinine": "slot__creatinine",
+    "hrs__bun": "target__bun",
+    "hrs__hemoglobin": "slot__hemoglobin",
+    "hrs__hematocrit": "slot__hematocrit",
+    "hrs__rbc": "target__rbc",
+    "hrs__wbc": "target__wbc",
+    "hrs__total_cholesterol": "target__total_cholesterol"
+  },
+  "source_documentation_raw_ids": {
+    "nhkn__age": {"nhanes": "RIDAGEYR", "knhanes": "age", "dtype": "numeric", "unit": "years"},
+    "nhkn__sex": {"nhanes": "RIAGENDR", "knhanes": "sex", "dtype": "categorical", "unit": ""},
+    "nhkn__sbp": {"nhanes": "BPXSY1", "knhanes": "HE_sbp1", "dtype": "numeric", "unit": "mmHg"},
+    "nhkn__dbp": {"nhanes": "BPXDI1", "knhanes": "HE_dbp1", "dtype": "numeric", "unit": "mmHg"},
+    "nhkn__glucose": {"nhanes": "LBXGLU", "knhanes": "HE_glu", "dtype": "numeric", "unit": "mg/dL"},
+    "nhkn__hba1c": {"nhanes": "LBXGH", "knhanes": "HE_HbA1c", "dtype": "numeric", "unit": "%"},
+    "nhkn__creatinine": {"nhanes": "LBXSCR", "knhanes": "HE_crea", "dtype": "numeric", "unit": "mg/dL"},
+    "nhkn__bun": {"nhanes": "LBXSBU", "knhanes": "HE_BUN", "dtype": "numeric", "unit": "mg/dL"},
+    "nhkn__hemoglobin": {"nhanes": "LBXHGB", "knhanes": "HE_HB", "dtype": "numeric", "unit": "g/dL"},
+    "nhkn__hematocrit": {"nhanes": "LBXHCT", "knhanes": null, "dtype": "numeric", "unit": "%"},
+    "nhkn__rbc": {"nhanes": "LBXRBCSI", "knhanes": "HE_RBC", "dtype": "numeric", "unit": "10^6/uL"},
+    "nhkn__wbc": {"nhanes": "LBXWBCSI", "knhanes": "HE_WBC", "dtype": "numeric", "unit": "10^3/uL"},
+    "nhkn__total_cholesterol": {"nhanes": "LBXTC", "knhanes": "HE_chol", "dtype": "numeric", "unit": "mg/dL"}
+  },
+  "provenance_note": "Exact runtime columns and raw IDs follow the pre-existing HRS transfer input builder; this file declares schema lineage only and contains no concept membership. KNHANES has no canonical hematocrit source column in the frozen input lock."
+}

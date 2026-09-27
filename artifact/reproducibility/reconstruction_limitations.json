@@ -1,0 +1,29 @@
+{
+  "scope": "Unresolved Level 2/3 reconstruction provenance; none is waived as a completed reconstruction",
+  "limitations": [
+    {
+      "id": "L01",
+      "promise": "Code",
+      "status": "PARTIAL",
+      "record": "MISSING_ARTIFACTS.md",
+      "reason": "Complete original HRS/KNHANES source product/release and preparation chain are not retained in the supplied repository.",
+      "author_action": "Supply original governed source/version/preparation records to enable exact full reruns; provider authorization remains reviewer-specific."
+    },
+    {
+      "id": "L02",
+      "promise": "Complete historical package locks",
+      "status": "PARTIAL",
+      "record": "MISSING_ARTIFACTS.md",
+      "reason": "Some historical numerical environments have per-run versions but no complete execution lock.",
+      "author_action": "Supply retained execution locks or archived wheels if exact historical environment reconstruction is required; do not fabricate from current packages."
+    },
+    {
+      "id": "L03",
+      "promise": "Original NHANES public preparation",
+      "status": "PARTIAL",
+      "record": "MISSING_ARTIFACTS.md",
+      "reason": "Recovered builder/source hashes do not pin the historical builder revision and preparation stack.",
+      "author_action": "Acquire original public components and require the supplied frozen output hash check; exact reproduction remains untested until that passes."
+    }
+  ]
+}

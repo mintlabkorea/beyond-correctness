@@ -1,0 +1,48 @@
+{
+  "manifest_id": "crta_v3_all_llm_all_task_utility_v1",
+  "status": "frozen_before_new_cross_model_efficacy",
+  "frozen_at": "2026-08-14",
+  "contract_version": "crta-1.0.0",
+  "primary_candidate_kind": "grouped_concept",
+  "primary_arm": "auto_concept",
+  "comparator_arm": "shared_base",
+  "efficacy_order": ["M1", "M2", "M3", "M4", "M5", "M6", "N1", "N2"],
+  "analysis_order": ["utility", "specificity", "relation_appendix", "mechanism"],
+  "models": [
+    {"id": "codex_gpt56sol", "model": "gpt-5.6-sol", "revision": "hosted_alias_frozen_2026-08-13", "scope": "all", "panel_source": "crta-proposer-matrix-1.0.0"},
+    {"id": "qwen3_8b", "model": "Qwen/Qwen3-8B", "revision": "b968826d9c46dd6066d109eabc6255188de91218", "scope": "all", "panel_source": "crta-proposer-matrix-1.0.0"},
+    {"id": "qwen3_32b", "model": "Qwen/Qwen3-32B", "revision": "9216db5781bf21249d130ec9da846c4624c16137", "scope": "all", "panel_source": "crta-proposer-matrix-1.0.0"},
+    {"id": "medgemma_4b_it", "model": "google/medgemma-4b-it", "revision": "290cda5eeccbee130f987c4ad74a59ae6f196408", "scope": "medical_only", "panel_source": "crta-proposer-matrix-1.0.0"},
+    {"id": "medgemma_27b_it", "model": "google/medgemma-27b-it", "revision": "2d3e00ea38b50018bf5dd3aa1009457cd2d5a48f", "scope": "medical_only", "panel_source": "crta-proposer-matrix-1.0.0"},
+    {"id": "gemma3_27b_it", "model": "google/gemma-3-27b-it", "revision": "005ad3404e59d6023443cb575daa05336842228a", "scope": "all", "panel_source": "crta-proposer-matrix-1.1.0"},
+    {"id": "olmo31_32b_instruct", "model": "allenai/Olmo-3.1-32B-Instruct", "revision": "ac0587e4a7744a551c059d8cd17ba220bc940dae", "scope": "all", "panel_source": "crta-proposer-matrix-1.1.0"},
+    {"id": "llama4_scout", "model": "meta-llama/Llama-4-Scout-17B-16E-Instruct", "revision": "92f3b1597a195b523d8d9e5700e57e4fbb8f20d3", "scope": "all", "panel_source": "crta-proposer-matrix-1.1.0"},
+    {"id": "claude_sonnet_4_6", "model": "claude-sonnet-4-6", "revision": "hosted_alias_frozen_2026-08-13", "scope": "all", "panel_source": "crta-proposer-matrix-1.0.0", "current_blocker": "cli_authentication_401"}
+  ],
+  "tasks": [
+    {"id": "M1", "direction": "NHANES_to_KNHANES", "domain": "medical", "payload_id": "medical_nhanes_knhanes_full_documents_v2", "payload_sha256": "f8576d256b8d3d43076586a3029dc82561f553dc637b51836ed9434ef5c39d82", "prompt_sha256": "1d33cc2586a0134c929df90ecc640f319ecccd1ce4f103160e87d401c0a9c2a1", "state": "utility_complete_all_frozen_models"},
+    {"id": "M2", "direction": "KNHANES_to_NHANES", "domain": "medical", "payload_id": "medical_nhanes_knhanes_full_documents_v2", "payload_sha256": "f8576d256b8d3d43076586a3029dc82561f553dc637b51836ed9434ef5c39d82", "prompt_sha256": "1d33cc2586a0134c929df90ecc640f319ecccd1ce4f103160e87d401c0a9c2a1", "state": "utility_complete_all_frozen_models"},
+    {"id": "M3", "direction": "NHANES_plus_KNHANES_to_HRS", "domain": "medical", "payload_id": "medical_nhkn_hrs_registry_documents_v1", "payload_sha256": "407356a04653af709a3c0bed1d3409017a85e41c43fa02d4be3c59598fecfa20", "prompt_sha256": "1d2c95d776e768765b5b97f4ab7997595b5d87e89477ee2729da5a8c905909d1", "state": "payload_codex_bank_and_protocol_ready_person_level_authorization_gated"},
+    {"id": "M4", "direction": "HRS_to_KLoSA", "domain": "medical", "payload_id": "medical_hrs_klosa_full_documents_v2", "payload_sha256": "02a5f5914d634efce03b66e0fed17b0759623ab37af58def906b701222dc4916", "prompt_sha256": "460632da018560554c6b5574f59b6e01d141c6e1e5d9ec6121e3c5dedca63fca", "state": "proposer_ready_downstream_lock_required"},
+    {"id": "M5", "direction": "HRS_to_ELSA", "domain": "medical", "payload_id": "medical_hrs_elsa_full_documents_v2", "payload_sha256": "944932c278719524dc9b6493cce3faceeff070c925f7e742ce67038b3c8b4625", "prompt_sha256": "ef840d9904fb756423c83e81a4aaf16689c6afef813a551896a190eb76252393", "state": "proposer_ready_private_downstream_lock_required"},
+    {"id": "M6", "direction": "HRS_to_CHARLS", "domain": "medical", "payload_id": "medical_hrs_charls_full_documents_v2", "payload_sha256": "39aca37d7fc8305229614df322086ab5bfe9156b85ac7b7ec509a16d57157bd5", "prompt_sha256": "aad5287443321f3770cbeaeebd5a234d5a19302f90baa042bc923da0b8ab38cb", "state": "proposer_ready_private_downstream_lock_required"},
+    {"id": "N1", "direction": "CAMELS_US_to_CAMELS_GB", "domain": "hydrology", "payload_id": "camels_us_to_gb_native_v1", "payload_sha256": "5c528002b46b0523427907ae2a81b64d89fdcb8136997f92d855d6db0f6c8819", "prompt_sha256": "cc514066bfbcc33d0674905dc6c7271bf548393f64e361a9c77a0a04c43eb88b", "state": "confirmatory_split_and_configurable_runner_ready_task_order_sealed"},
+    {"id": "N2", "direction": "CMAPSS_to_NCMAPSS", "domain": "industrial", "payload_id": "industrial_cmapss_ncmapss_v1", "payload_sha256": "58bdb431d9b96461f6e9e64fc4cee4f31f9122debfd10bd9d7e848b3eff2bb5b", "prompt_sha256": "db7a7a9f8b83e3b4f5d173592a8678a521e103d0521551cc9ce5d474e30ec3ee", "state": "six_subset_20_support_seed_runner_preflight_ready_task_order_sealed"}
+  ],
+  "bank_status_policy": {
+    "usable_nonempty": "execute_auto_concept",
+    "valid_empty": "declare_auto_c_equals_base_and_zero_gain",
+    "invalid_generation": "report_failure_and_na_efficacy",
+    "invalid_contract": "report_failure_and_na_efficacy",
+    "scope_n_a": "report_structural_na",
+    "runtime_blocked": "retain_row_and_blocker"
+  },
+  "privacy": {
+    "llm_allowed": ["schema", "codebook", "data_dictionary", "manual", "documentation"],
+    "llm_forbidden": ["participant_rows", "outcomes", "support_membership", "query_membership", "predictions", "metrics"]
+  },
+  "excluded_cached_models": [
+    {"model": "Qwen/Qwen3-0.6B", "reason": "not_in_frozen_proposer_panel"},
+    {"model": "Qwen/Qwen3-14B", "reason": "not_in_frozen_proposer_panel"}
+  ]
+}

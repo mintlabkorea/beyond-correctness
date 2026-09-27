@@ -1,0 +1,32 @@
+\begin{table}[H]
+\caption{Mismatch-dose statistics. $\rho$ is the realization-level Spearman coefficient between dose and $U_M(d)$; $U_M(8)$ is the full-mismatch utility. Intervals are realization-bootstrap intervals within each fixed family. HistGB and TabPFN at $K=512$ are post-result budget-completion extensions and are left unbolded; boldface is reserved for the originally registered full-dose strata.}
+\label{tab:app-measurement-dose-stats}
+\label{tab:app_mismatch_stats}
+\centering\scriptsize
+\setlength{\tabcolsep}{5pt}
+\begin{tabular}{lllll}
+\toprule
+Learner & $K$ & Family & Mean $\rho$ [95\% CI] & $U_M(8)$ [95\% CI] \\
+\midrule
+XGB & 32 & Additive & +.82 [+.72, +.91] & \textbf{+.259 [+.225, +.292]} \\
+XGB & 32 & Pairwise & +.90 [+.81, +.97] & \textbf{+.259 [+.207, +.313]} \\
+XGB & 32 & Sparse & +.78 [+.66, +.89] & \textbf{+.260 [+.205, +.318]} \\
+HistGB & 32 & Additive & +.85 [+.74, +.94] & \textbf{+.257 [+.225, +.291]} \\
+HistGB & 32 & Pairwise & +.89 [+.80, +.96] & \textbf{+.264 [+.212, +.323]} \\
+HistGB & 32 & Sparse & +.79 [+.68, +.87] & \textbf{+.263 [+.208, +.320]} \\
+TabPFN & 32 & Additive & +.78 [+.66, +.89] & \textbf{+.249 [+.207, +.294]} \\
+TabPFN & 32 & Pairwise & +.85 [+.76, +.93] & \textbf{+.248 [+.198, +.301]} \\
+TabPFN & 32 & Sparse & +.75 [+.62, +.86] & \textbf{+.176 [+.138, +.224]} \\
+\addlinespace[1pt]
+XGB & 512 & Additive & +.77 [+.63, +.88] & \textbf{+.033 [+.025, +.041]} \\
+XGB & 512 & Pairwise & +.68 [+.52, +.82] & \textbf{+.037 [+.026, +.048]} \\
+XGB & 512 & Sparse & +.55 [+.32, +.74] & \textbf{+.028 [+.020, +.037]} \\
+HistGB & 512 & Additive & +.76 [+.66, +.85] & +.033 [+.025, +.041] \\
+HistGB & 512 & Pairwise & +.65 [+.48, +.79] & +.035 [+.025, +.046] \\
+HistGB & 512 & Sparse & +.63 [+.44, +.79] & +.030 [+.022, +.039] \\
+TabPFN & 512 & Additive & +.70 [+.53, +.83] & +.027 [+.022, +.032] \\
+TabPFN & 512 & Pairwise & +.80 [+.68, +.90] & +.035 [+.028, +.043] \\
+TabPFN & 512 & Sparse & +.57 [+.42, +.72] & +.022 [+.016, +.029] \\
+\bottomrule
+\end{tabular}
+\end{table}

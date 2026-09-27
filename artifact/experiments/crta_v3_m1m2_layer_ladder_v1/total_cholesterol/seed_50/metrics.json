@@ -1,0 +1,193 @@
+{
+ "arms": [
+  "rung0_base",
+  "rung1_columns",
+  "rung2_grouping",
+  "rung3_measurement",
+  "pl_columns",
+  "pl_grouping",
+  "pl_measurement",
+  "is_target",
+  "loo_columns",
+  "loo_grouping",
+  "loo_measurement (alias of rung2_grouping)"
+ ],
+ "backbone": "xgboost_hist_d6_n300",
+ "benchmark_id": "std_cross_nh2kn_shared_anchorreset_fewshot_v1",
+ "dropped_members_by_group": {
+  "blood_lipid_measurements": [
+   "total_cholesterol"
+  ],
+  "body_measurements": [],
+  "diabetes_test_measurements": [],
+  "first_reading_blood_pressure": []
+ },
+ "feature_set": "ladder_all_slots_v1",
+ "member_slots": [
+  "height_cm",
+  "weight_kg",
+  "waist_cm",
+  "sbp",
+  "dbp",
+  "glucose",
+  "hba1c",
+  "triglycerides"
+ ],
+ "metric": "query_sd_normalized_rmse (lower is better)",
+ "n_pool": 6791,
+ "n_query": 12675,
+ "n_source": 53071,
+ "nrmse": {
+  "1024": {
+   "is_target": 0.9572018491677187,
+   "loo_columns": 0.9071288765725868,
+   "loo_grouping": 0.9056906768583517,
+   "loo_measurement": 0.9040093628606275,
+   "pl_columns": 0.9123471441420637,
+   "pl_grouping": 0.8990129691656538,
+   "pl_measurement": 0.9053261908632613,
+   "rung0_base": 0.9585288629205075,
+   "rung1_columns": 0.9055539353304909,
+   "rung2_grouping": 0.9040093628606275,
+   "rung3_measurement": 0.9034821514453446
+  },
+  "256": {
+   "is_target": 0.9742989021742682,
+   "loo_columns": 0.9175884094184612,
+   "loo_grouping": 0.9307594911453945,
+   "loo_measurement": 0.9419000076210797,
+   "pl_columns": 0.9508549375946297,
+   "pl_grouping": 0.9323202558720828,
+   "pl_measurement": 0.9440215878444922,
+   "rung0_base": 0.9806696034989101,
+   "rung1_columns": 0.9382485090943437,
+   "rung2_grouping": 0.9419000076210797,
+   "rung3_measurement": 0.9298028412703446
+  },
+  "64": {
+   "is_target": 0.9900607199905318,
+   "loo_columns": 0.9290758309957734,
+   "loo_grouping": 0.9358588718849705,
+   "loo_measurement": 0.931156890749417,
+   "pl_columns": 0.982216649534703,
+   "pl_grouping": 0.9392385168930517,
+   "pl_measurement": 0.9516864777751786,
+   "rung0_base": 0.9745813194484239,
+   "rung1_columns": 0.9360998647574309,
+   "rung2_grouping": 0.931156890749417,
+   "rung3_measurement": 0.938443510621373
+  }
+ },
+ "pl_columns_permutation": {
+  "dbp": "hba1c",
+  "glucose": "waist_cm",
+  "hba1c": "weight_kg",
+  "height_cm": "triglycerides",
+  "sbp": "height_cm",
+  "triglycerides": "glucose",
+  "waist_cm": "dbp",
+  "weight_kg": "sbp"
+ },
+ "pl_grouping_partition": {
+  "blood_lipid_measurements": [
+   "weight_kg"
+  ],
+  "body_measurements": [
+   "glucose",
+   "triglycerides",
+   "waist_cm"
+  ],
+  "diabetes_test_measurements": [
+   "dbp",
+   "sbp"
+  ],
+  "first_reading_blood_pressure": [
+   "hba1c",
+   "height_cm"
+  ]
+ },
+ "pl_measurement_table": {
+  "knhanes/ALL__bs3_1": {
+   "kind": "map",
+   "map": {
+    "3.0": 1.0,
+    "8.0": 0.5,
+    "9.0": 0.0
+   }
+  },
+  "knhanes/ALL__de1_dg": {
+   "kind": "map",
+   "map": {
+    "0.0": 0.0,
+    "1.0": 1.0
+   }
+  },
+  "knhanes/ALL__di1_dg": {
+   "kind": "map",
+   "map": {
+    "1.0": 1.0,
+    "9.0": 0.0
+   }
+  },
+  "knhanes/ALL__educ": {
+   "kind": "map",
+   "map": {
+    "1.0": 1.0,
+    "2.0": 0.3333333333333333,
+    "8.0": 0.6666666666666666,
+    "9.0": 0.0
+   }
+  },
+  "knhanes/ALL__sex": {
+   "kind": "map",
+   "map": {
+    "1.0": 1.0,
+    "2.0": 0.0
+   }
+  },
+  "nhanes/BPQ020": {
+   "kind": "map",
+   "map": {
+    "7.0": 1.0,
+    "9.0": 0.0
+   }
+  },
+  "nhanes/DIQ010": {
+   "kind": "map",
+   "map": {
+    "1.0": 1.0,
+    "2.0": 0.5,
+    "9.0": 0.0
+   }
+  },
+  "nhanes/DMDEDUC2": {
+   "kind": "map",
+   "map": {
+    "1.0": 0.5,
+    "3.0": 0.75,
+    "4.0": 0.0,
+    "7.0": 1.0,
+    "9.0": 0.25
+   }
+  },
+  "nhanes/RIAGENDR": {
+   "kind": "map",
+   "map": {
+    "1.0": 0.0,
+    "2.0": 1.0
+   }
+  },
+  "nhanes/SMQ040": {
+   "kind": "map",
+   "map": {
+    "2.0": 1.0,
+    "3.0": 0.5,
+    "9.0": 0.0
+   }
+  }
+ },
+ "primary_k": 256,
+ "seed": 50,
+ "target": "total_cholesterol",
+ "wall_seconds": 94.3
+}

@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "whole_ledger_equal": true,
+  "summary": {
+    "proposed_concepts": 4,
+    "accepted_concepts": 4,
+    "proposed_relations": 1,
+    "accepted_relations": 1,
+    "abstentions": 4,
+    "rejection_reason_counts": {}
+  },
+  "scope": "Original mechanical validator on stored payload and stored parsed response; no LLM call; no clinical data.",
+  "command": "python3 iclr_latex_v3/method_contract/v1/scripts/validate_candidates.py --input iclr_latex_v3/method_contract/v1/payloads/medical_nhanes_knhanes_full_documents_v2/proposer_input.json --output iclr_latex_v3/method_contract/v1/runs/proposer_bank_v2/models/gpt-5.6-sol/medical_nhanes_knhanes_full_documents_v2_attempt_02/raw_candidate_bank.json"
+}

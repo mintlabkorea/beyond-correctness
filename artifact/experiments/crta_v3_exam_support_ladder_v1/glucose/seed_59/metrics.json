@@ -1,0 +1,168 @@
+{
+  "arms": [
+    "S_shared_bridge",
+    "W_deranged_bridge",
+    "R_domain_local"
+  ],
+  "base_runner_sha256": "fa62432a89ee87a6ca7eb6bcf9731ff451f75f54a958bec449b079a89798d4a5",
+  "base_slots_used": [
+    "age",
+    "creatinine",
+    "rbc",
+    "wbc",
+    "hemoglobin",
+    "hematocrit",
+    "sex",
+    "education_level",
+    "diabetes_history",
+    "hypertension_history",
+    "current_smoking_status"
+  ],
+  "diagnostic_classes": [
+    "A"
+  ],
+  "diagnostic_min_child_weight": {
+    "1024": 174.234375,
+    "256": 696.9375,
+    "64": 2787.75
+  },
+  "diagnostic_min_child_weight_rows": 8.0,
+  "frozen_runner_sha256": "1806fd61f1dc472e3c33fdec2c90f29aef68b889026f695667f08ef4c6ac9dd3",
+  "host": "anonymous-compute-host",
+  "matrix_shapes": {
+    "1024:R_domain_local": [
+      23326,
+      27
+    ],
+    "1024:S_shared_bridge": [
+      23326,
+      27
+    ],
+    "1024:W_deranged_bridge": [
+      23326,
+      27
+    ],
+    "256:R_domain_local": [
+      22558,
+      27
+    ],
+    "256:S_shared_bridge": [
+      22558,
+      27
+    ],
+    "256:W_deranged_bridge": [
+      22558,
+      27
+    ],
+    "64:R_domain_local": [
+      22366,
+      27
+    ],
+    "64:S_shared_bridge": [
+      22366,
+      27
+    ],
+    "64:W_deranged_bridge": [
+      22366,
+      27
+    ]
+  },
+  "member_slots": [
+    "height_cm",
+    "weight_kg",
+    "waist_cm",
+    "sbp",
+    "dbp",
+    "hba1c",
+    "total_cholesterol",
+    "triglycerides"
+  ],
+  "metric": "query_sd_normalized_rmse (lower is better)",
+  "min_pool_floor": 4096,
+  "n_pool": 6776,
+  "n_query": 12651,
+  "n_source": 22302,
+  "nrmse": {
+    "1024": {
+      "R_domain_local": 0.6254553564448146,
+      "S_shared_bridge": 0.6135087263146505,
+      "W_deranged_bridge": 0.6581572388034901
+    },
+    "256": {
+      "R_domain_local": 0.7552058134464289,
+      "S_shared_bridge": 0.6688488855948084,
+      "W_deranged_bridge": 0.8084707760122043
+    },
+    "64": {
+      "R_domain_local": 0.9347817164692039,
+      "S_shared_bridge": 0.7211569050433664,
+      "W_deranged_bridge": 1.325242086546063
+    }
+  },
+  "nrmse_diagnostic": {
+    "diag_mcw": {
+      "1024": {
+        "R_domain_local": 0.6165485538280902,
+        "S_shared_bridge": 0.6136155573723471,
+        "W_deranged_bridge": 0.6405717301091322
+      },
+      "256": {
+        "R_domain_local": 0.7724041320843603,
+        "S_shared_bridge": 0.6448847736842851,
+        "W_deranged_bridge": 0.7867274469949737
+      },
+      "64": {
+        "R_domain_local": 0.9024842926770468,
+        "S_shared_bridge": 0.6942428404625893,
+        "W_deranged_bridge": 0.9149764185929917
+      }
+    }
+  },
+  "primary_k": 256,
+  "protocol_sha256": "6ec7753da87d8318090d83160990e662c0da4efe5ca02fd3741341cebf03161c",
+  "runner_sha256": "9c19b3e9259054f00232e44550fe6d2ce4ca1a6c99e4986ea994c5b3835ddb2c",
+  "seed": 59,
+  "support_ladder": [
+    64,
+    256,
+    1024
+  ],
+  "support_rows_drawn": {
+    "1024": 1024,
+    "256": 256,
+    "64": 64
+  },
+  "target": "glucose",
+  "target_class": "A",
+  "target_derangement": {
+    "dbp": "hba1c",
+    "hba1c": "triglycerides",
+    "height_cm": "total_cholesterol",
+    "sbp": "height_cm",
+    "total_cholesterol": "waist_cm",
+    "triglycerides": "dbp",
+    "waist_cm": "weight_kg",
+    "weight_kg": "sbp"
+  },
+  "target_set": "objective_broader_validation_targets_v2",
+  "task": "crta_v3_exam_support_ladder_v1",
+  "threads": 2,
+  "v2_runner_sha256": "c1c9d268b126610f0a260082761d7f67d966801be40aa5b899f86e78a833c11e",
+  "versions": {
+    "numpy": "2.2.6",
+    "pandas": "2.3.3",
+    "python": "3.10.20",
+    "sklearn": "1.7.2",
+    "xgboost": "3.1.3"
+  },
+  "wall_seconds": 32.0,
+  "xgb": {
+    "colsample_bytree": 1.0,
+    "learning_rate": 0.05,
+    "max_depth": 6,
+    "n_estimators": 300,
+    "reg_lambda": 1.0,
+    "subsample": 0.8,
+    "threads": 2
+  }
+}

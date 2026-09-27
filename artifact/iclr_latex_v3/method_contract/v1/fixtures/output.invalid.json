@@ -1,0 +1,50 @@
+{
+  "contract_version": "crta-1.0.0",
+  "schema_pair_id": "toy_source:toy_target",
+  "concept_candidates": [
+    {
+      "candidate_id": "c_002",
+      "rank": 1,
+      "canonical_name": "inlet_temperature",
+      "description": "A pure one-to-one inlet temperature correspondence.",
+      "confidence": 0.99,
+      "members": {
+        "source": [
+          {"column_id": "src_temp_a", "evidence_span_ids": ["src_col_a"]}
+        ],
+        "target": [
+          {"column_id": "tgt_temp_x", "evidence_span_ids": ["tgt_col_x"]}
+        ]
+      }
+    }
+  ],
+  "relation_candidates": [
+    {
+      "candidate_id": "r_002",
+      "rank": 1,
+      "canonical_name": "outcome_adjusted_temperature",
+      "description": "An invalid operation that uses the prediction outcome as an endpoint.",
+      "confidence": 1.0,
+      "semantic_type": "protocol",
+      "direction": "ordered",
+      "operation": {"name": "difference", "parameters": {}},
+      "bindings": {
+        "source": {
+          "arguments": {
+            "lhs": {"kind": "column", "id": "src_temp_b"},
+            "rhs": {"kind": "column", "id": "src_outcome"}
+          },
+          "evidence_span_ids": ["src_relation"]
+        },
+        "target": {
+          "arguments": {
+            "lhs": {"kind": "column", "id": "tgt_temp_y"},
+            "rhs": {"kind": "column", "id": "tgt_outcome"}
+          },
+          "evidence_span_ids": ["tgt_relation"]
+        }
+      }
+    }
+  ],
+  "abstentions": []
+}

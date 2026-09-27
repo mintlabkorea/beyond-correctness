@@ -1,0 +1,74 @@
+{
+ "arms": [
+  "a00_base",
+  "a01_columns",
+  "a10_stage",
+  "a11_stage_columns"
+ ],
+ "auroc": {
+  "256": {
+   "a00_base": 0.808435589834629,
+   "a01_columns": 0.850067242550897,
+   "a10_stage": 0.6862997047003567,
+   "a11_stage_columns": 0.7233658798841505
+  }
+ },
+ "backbone": "xgboost_hist_d6_n300_regression_ranked",
+ "benchmark_id": "std_cross_nh2kn_shared_anchorreset_fewshot_v1",
+ "feature_set": "stage_factorial_all_v1",
+ "metric": "auroc_vs_documented_target_binary (higher is better)",
+ "n_eval": 5267,
+ "n_pool": 11224,
+ "n_source": 38021,
+ "pl_columns_permutation": {
+  "dbp": "height_cm",
+  "glucose": "weight_kg",
+  "hba1c": "triglycerides",
+  "height_cm": "waist_cm",
+  "sbp": "total_cholesterol",
+  "total_cholesterol": "dbp",
+  "triglycerides": "glucose",
+  "waist_cm": "sbp",
+  "weight_kg": "hba1c"
+ },
+ "pl_relation_pairs": [
+  [
+   "height_cm",
+   "total_cholesterol"
+  ],
+  [
+   "sex",
+   "rbc"
+  ],
+  [
+   "creatinine",
+   "hemoglobin"
+  ],
+  [
+   "glucose",
+   "hemoglobin"
+  ],
+  [
+   "rbc",
+   "diabetes_history"
+  ],
+  [
+   "total_cholesterol",
+   "sex"
+  ]
+ ],
+ "primary_k": 256,
+ "seed": 55,
+ "target": "angina_history",
+ "wall_seconds": 20.5,
+ "wrong_label_maps": {
+  "source": {
+   "2.0": 0.0,
+   "7.0": 1.0
+  },
+  "target": {
+   "1.0": 0.0,
+   "8.0": 1.0
+  }
+ }
+}

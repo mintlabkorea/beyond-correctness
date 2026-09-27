@@ -1,0 +1,136 @@
+{
+ "arms": [
+  "m1c1r1",
+  "m1c1r0",
+  "m1c0r1",
+  "m0c1r1",
+  "m1c0r0",
+  "m0c1r0",
+  "m0c0r1",
+  "m0c0r0"
+ ],
+ "audit": {
+  "c_deranged": [
+   1,
+   5,
+   6,
+   4,
+   3,
+   7,
+   2,
+   0
+  ],
+  "c_deranged2": [
+   1,
+   0,
+   3,
+   2,
+   6,
+   7,
+   4,
+   5
+  ],
+  "ordinal_features": [
+   6,
+   2,
+   3,
+   4
+  ],
+  "source_table_digests": {
+   "true": "a2fdc2681399",
+   "wrong": "9af70b27f2bf",
+   "wrong2": "d6023bf94c8f"
+  }
+ },
+ "backbones": [
+  "xgb"
+ ],
+ "checks": {},
+ "family": "pairwise",
+ "input_sha256": "6af2215c72a65ecc306e5c4d3d9af5b61b16a073dd5aa4c0f33b178741245a25",
+ "mechanism": {
+  "family": "pairwise",
+  "feat_terms": [],
+  "pair_terms": [
+   [
+    2,
+    5,
+    "log_ratio",
+    1,
+    0.7912730407166803
+   ],
+   [
+    0,
+    7,
+    "diff",
+    1,
+    0.9115382630392712
+   ],
+   [
+    6,
+    1,
+    "diff",
+    -1,
+    0.9406427178448745
+   ]
+  ],
+  "vshape_terms": []
+ },
+ "metric": "nmse = MSE/Var(y_query) (verdicts); nrmse descriptive",
+ "mode": "nc_c",
+ "n_query": 2000,
+ "n_source": 2048,
+ "name_match_accuracy": 1.0,
+ "prereg_sha256": "c4fb8a7ab8f02ba39ad30a3e6eca486c20a92093561cca9f10f96c885fbeb1f5",
+ "realization": 1,
+ "results": {
+  "32": {
+   "xgb": {
+    "m0c0r0": {
+     "nmse": 1.035156448843747,
+     "nrmse": 1.0174263849752212
+    },
+    "m0c0r1": {
+     "nmse": 0.986005423582054,
+     "nrmse": 0.9929780579559921
+    },
+    "m0c1r0": {
+     "nmse": 0.9746330042363229,
+     "nrmse": 0.9872350298871706
+    },
+    "m0c1r1": {
+     "nmse": 0.9654704875539837,
+     "nrmse": 0.9825835778975666
+    },
+    "m1c0r0": {
+     "nmse": 1.2584842431854295,
+     "nrmse": 1.1218218411073255
+    },
+    "m1c0r1": {
+     "nmse": 1.2043922467959354,
+     "nrmse": 1.097448061092613
+    },
+    "m1c1r0": {
+     "nmse": 0.6829644266313413,
+     "nrmse": 0.8264166180754966
+    },
+    "m1c1r1": {
+     "nmse": 0.6827383399306552,
+     "nrmse": 0.8262798193896879
+    }
+   }
+  }
+ },
+ "runner_sha256": "657e354476fb21ac5e060cfc34b97ac5dedb5a028edf024dfa43c1cc1d31f01b",
+ "sensitivity_weighted_xgb_k32": {},
+ "supports": [
+  32
+ ],
+ "versions": {
+  "numpy": "2.2.6",
+  "pandas": "2.3.3",
+  "sklearn": "1.7.2",
+  "xgboost": "3.1.3"
+ },
+ "wall_seconds": 1.4
+}

@@ -1,0 +1,16 @@
+\begin{table}[H]
+\caption{Frozen-before-execution CAMELS per-relation ablation. The four observed arms are documented ($D$), precipitation-only flipped ($P$), PET-only flipped ($E$), and both flipped ($B$). The metric is log1p RMSE and gain is arm minus documented, so positive values mean that changing the declared direction worsened prediction. Intervals cluster by query basin.}
+\label{tab:app-camels-per-relation}
+\centering\scriptsize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{P{0.57\linewidth}P{0.29\linewidth}c}
+\toprule Contrast & Mean [95\% CI] & Separated \\
+\midrule
+Both flipped $-$ documented ($B-D$) & \textbf{+.18422 [+.1310, +.2484]} & yes \\
+Precipitation flipped, PET documented ($P-D$) & \textbf{+.19054 [+.1429, +.2476]} & yes \\
+PET flipped, precipitation documented ($E-D$) & -.00057 [-.0026, +.0013] & no \\
+PET conditional when precipitation is flipped ($B-P$) & -.00632 [-.0161, +.0039] & no \\
+Shapley precipitation contribution & \textbf{+.18767 [+.1377, +.2486]} & yes \\
+Shapley PET contribution & -.00345 [-.0086, +.0019] & no \\
+\bottomrule\end{tabular}
+\end{table}

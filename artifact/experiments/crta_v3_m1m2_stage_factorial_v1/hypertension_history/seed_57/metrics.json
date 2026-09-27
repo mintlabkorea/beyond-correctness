@@ -1,0 +1,106 @@
+{
+ "arms": [
+  "a00_base",
+  "a01_columns",
+  "a10_stage",
+  "a11_stage_columns",
+  "a11r_stage_columns_relations",
+  "pl_stage_at_columns",
+  "pl_columns_at_stage",
+  "pl_relations_at_stage",
+  "is_target"
+ ],
+ "auroc": {
+  "1024": {
+   "a00_base": 0.8004302739400744,
+   "a01_columns": 0.7679338116302309,
+   "a10_stage": 0.8914660677744783,
+   "a11_stage_columns": 0.9118193611264167,
+   "a11r_stage_columns_relations": 0.9091907327951172,
+   "is_target": 0.8778231977716797,
+   "pl_columns_at_stage": 0.9013013764881964,
+   "pl_relations_at_stage": 0.9104548536508503,
+   "pl_stage_at_columns": 0.177158741549581
+  },
+  "256": {
+   "a00_base": 0.6856201139510101,
+   "a01_columns": 0.6469604291893893,
+   "a10_stage": 0.8860725386209374,
+   "a11_stage_columns": 0.9002626095210986,
+   "a11r_stage_columns_relations": 0.8944086622957519,
+   "is_target": 0.8782512481950344,
+   "pl_columns_at_stage": 0.8645665347974268,
+   "pl_relations_at_stage": 0.8967132388654587,
+   "pl_stage_at_columns": 0.4022087964760731
+  },
+  "64": {
+   "a00_base": 0.5251511639547112,
+   "a01_columns": 0.46153039308116656,
+   "a10_stage": 0.8733064097044401,
+   "a11_stage_columns": 0.8930123500873598,
+   "a11r_stage_columns_relations": 0.8868929881447155,
+   "is_target": 0.8239470592865551,
+   "pl_columns_at_stage": 0.8464270009609909,
+   "pl_relations_at_stage": 0.885360262716475,
+   "pl_stage_at_columns": 0.6720899208925291
+  }
+ },
+ "backbone": "xgboost_hist_d6_n300_regression_ranked",
+ "benchmark_id": "std_cross_nh2kn_shared_anchorreset_fewshot_v1",
+ "feature_set": "stage_factorial_all_v1",
+ "metric": "auroc_vs_documented_target_binary (higher is better)",
+ "n_eval": 6640,
+ "n_pool": 15129,
+ "n_source": 44371,
+ "pl_columns_permutation": {
+  "dbp": "glucose",
+  "glucose": "triglycerides",
+  "hba1c": "waist_cm",
+  "height_cm": "sbp",
+  "sbp": "dbp",
+  "total_cholesterol": "hba1c",
+  "triglycerides": "weight_kg",
+  "waist_cm": "height_cm",
+  "weight_kg": "total_cholesterol"
+ },
+ "pl_relation_pairs": [
+  [
+   "diabetes_history",
+   "current_smoking_status"
+  ],
+  [
+   "age",
+   "glucose"
+  ],
+  [
+   "creatinine",
+   "hematocrit"
+  ],
+  [
+   "sbp",
+   "dbp"
+  ],
+  [
+   "dbp",
+   "sex"
+  ],
+  [
+   "rbc",
+   "creatinine"
+  ]
+ ],
+ "primary_k": 256,
+ "seed": 57,
+ "target": "hypertension_history",
+ "wall_seconds": 73.1,
+ "wrong_label_maps": {
+  "source": {
+   "1.0": 1.0,
+   "2.0": 0.0
+  },
+  "target": {
+   "0.0": 1.0,
+   "1.0": 0.0
+  }
+ }
+}

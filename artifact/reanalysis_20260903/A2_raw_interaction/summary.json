@@ -1,0 +1,100 @@
+{
+  "bootstrap": {
+    "base_seed": 20260820,
+    "pairing": "raw, folded, and their difference use identical resamples",
+    "reps": 10000,
+    "unit": "endpoint-direction, then seeds within unit"
+  },
+  "interpretive_boundary": "This estimates interaction level. It does not overturn the previously failed raw attenuation-ladder criterion, which is a different estimand.",
+  "max_parent_point_error": 3.469446951953614e-17,
+  "results": [
+    {
+      "ci95_high": 0.0861320379714106,
+      "ci95_low": 0.017809098736807086,
+      "estimand": "raw_interaction",
+      "estimate": 0.047209195326231405,
+      "n_endpoint_direction_units": 20,
+      "n_seed_cells": 200,
+      "scope": "pooled"
+    },
+    {
+      "ci95_high": 0.05816974461033166,
+      "ci95_low": 0.008223861928157319,
+      "estimand": "folded_interaction",
+      "estimate": 0.031151124421987083,
+      "n_endpoint_direction_units": 20,
+      "n_seed_cells": 200,
+      "scope": "pooled"
+    },
+    {
+      "ci95_high": 0.03717903551657249,
+      "ci95_low": 0.00034327195691705317,
+      "estimand": "raw_minus_folded",
+      "estimate": 0.016058070904244354,
+      "n_endpoint_direction_units": 20,
+      "n_seed_cells": 200,
+      "scope": "pooled"
+    },
+    {
+      "ci95_high": 0.05579531670453098,
+      "ci95_low": -0.0053653543318704046,
+      "estimand": "raw_interaction",
+      "estimate": 0.01999199507803345,
+      "n_endpoint_direction_units": 10,
+      "n_seed_cells": 100,
+      "scope": "nh2kn"
+    },
+    {
+      "ci95_high": 0.055782903211056264,
+      "ci95_low": -0.005405980895359045,
+      "estimand": "folded_interaction",
+      "estimate": 0.019982651444091056,
+      "n_endpoint_direction_units": 10,
+      "n_seed_cells": 100,
+      "scope": "nh2kn"
+    },
+    {
+      "ci95_high": 0.0022111492564031885,
+      "ci95_low": -0.002211337697219748,
+      "estimand": "raw_minus_folded",
+      "estimate": 9.3436339423901e-06,
+      "n_endpoint_direction_units": 10,
+      "n_seed_cells": 100,
+      "scope": "nh2kn"
+    },
+    {
+      "ci95_high": 0.14147184979376254,
+      "ci95_low": 0.03084298030397331,
+      "estimand": "raw_interaction",
+      "estimate": 0.0744263955744294,
+      "n_endpoint_direction_units": 10,
+      "n_seed_cells": 100,
+      "scope": "kn2nh"
+    },
+    {
+      "ci95_high": 0.08528128399938924,
+      "ci95_low": 0.00619594028255081,
+      "estimand": "folded_interaction",
+      "estimate": 0.04231959739988311,
+      "n_endpoint_direction_units": 10,
+      "n_seed_cells": 100,
+      "scope": "kn2nh"
+    },
+    {
+      "ci95_high": 0.07090558058380912,
+      "ci95_low": 0.0012100970928990583,
+      "estimand": "raw_minus_folded",
+      "estimate": 0.032106798174546314,
+      "n_endpoint_direction_units": 10,
+      "n_seed_cells": 100,
+      "scope": "kn2nh"
+    }
+  ],
+  "sources": [
+    "experiments/crta_v3_stage_endpoint_expansion_nh2kn_v1",
+    "experiments/crta_v3_stage_endpoint_expansion_kn2nh_v1",
+    "experiments/crta_v3_stage_endpoint_expansion_SUMMARY_V1.json",
+    "scripts/summarize_crta_v3_stage_factorial_endpoint_expansion_v1.py"
+  ],
+  "status": "complete"
+}

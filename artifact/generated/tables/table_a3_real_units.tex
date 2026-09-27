@@ -1,0 +1,60 @@
+\begin{longtable}{P{0.045\linewidth}P{0.27\linewidth}P{0.23\linewidth}rr}
+\caption{Unit-resolved real-data attribution. Entries are seed-averaged unit effects in each setting's native metric. Positive values favor the supplied condition. Unit rows are descriptive; inferential intervals are computed on the aggregate independent units and reported in Table~\ref{tab:app-relation-full} and the main paper.}\label{tab:app-unit-attribution}\label{tab:app_real_units}\\
+\toprule
+Role & Setting / interface & Endpoint or basin & Content & Utility \\
+\midrule
+\endfirsthead
+\multicolumn{5}{c}{\tablename\ \thetable\ (continued)}\\
+\toprule Role & Setting / interface & Endpoint or basin & Content & Utility \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+$M$ & NHANES--KNHANES labels & Smoking & +.144 & +.201 \\
+$M$ & NHANES--KNHANES labels & Diabetes & +.359 & +.556 \\
+$M$ & NHANES--KNHANES labels & Hypertension & +.372 & +.396 \\
+\addlinespace[1pt]
+$C$ & Exam binding · original XGB & DBP & +.011 & n/e \\
+$C$ & Exam binding · original XGB & Glucose & +.162 & n/e \\
+$C$ & Exam binding · original XGB & SBP & +.054 & n/e \\
+$C$ & Exam binding · original XGB & Total cholesterol & +.020 & n/e \\
+$C$ & Exam binding · original XGB & Triglycerides & +.051 & n/e \\
+$C$ & Exam binding · original XGB & Waist circumference & +.090 & n/e \\
+\addlinespace[1pt]
+$C$ & Survey binding · XGB & Smoking & +.042 & -.010 \\
+$C$ & Survey binding · XGB & Diabetes & +.072 & +.076 \\
+$C$ & Survey binding · XGB & Hypertension & +.022 & +.016 \\
+\addlinespace[1pt]
+$C$ & Survey binding · HistGB & Smoking & +.025 & -.024 \\
+$C$ & Survey binding · HistGB & Diabetes & +.089 & +.073 \\
+$C$ & Survey binding · HistGB & Hypertension & +.038 & +.012 \\
+\addlinespace[1pt]
+$R$ & NHANES--KNHANES & DBP & +.183 & +.007 \\
+$R$ & NHANES--KNHANES & Glucose & +.218 & -.013 \\
+$R$ & NHANES--KNHANES & SBP & +.193 & -.002 \\
+$R$ & NHANES--KNHANES & Total cholesterol & +.010 & -.004 \\
+$R$ & NHANES--KNHANES & Triglycerides & +.051 & -.001 \\
+$R$ & NHANES--KNHANES & Waist circumference & +.445 & +.002 \\
+\addlinespace[1pt]
+$R$ & NHANES/KNHANES--HRS & BUN & +.210 & +.004 \\
+$R$ & NHANES/KNHANES--HRS & DBP & +.276 & +.002 \\
+$R$ & NHANES/KNHANES--HRS & Glucose & +.068 & +.004 \\
+$R$ & NHANES/KNHANES--HRS & HbA1c & +.177 & +.019 \\
+$R$ & NHANES/KNHANES--HRS & Hematocrit & +.531 & +.001 \\
+$R$ & NHANES/KNHANES--HRS & RBC & +.288 & +.000 \\
+$R$ & NHANES/KNHANES--HRS & SBP & +.312 & -.014 \\
+\addlinespace[1pt]
+$R$ & CAMELS-US--GB & Basin 7003 & +.155 & +.000 \\
+$R$ & CAMELS-US--GB & Basin 25006 & +.169 & -.000 \\
+$R$ & CAMELS-US--GB & Basin 33058 & +.090 & -.001 \\
+$R$ & CAMELS-US--GB & Basin 34012 & +.032 & -.001 \\
+$R$ & CAMELS-US--GB & Basin 37008 & +.094 & -.002 \\
+$R$ & CAMELS-US--GB & Basin 39054 & +.153 & +.003 \\
+$R$ & CAMELS-US--GB & Basin 52006 & +.153 & +.001 \\
+$R$ & CAMELS-US--GB & Basin 60005 & +.281 & -.001 \\
+$R$ & CAMELS-US--GB & Basin 73015 & +.193 & +.005 \\
+$R$ & CAMELS-US--GB & Basin 80006 & +.463 & +.008 \\
+$R$ & CAMELS-US--GB & Basin 82001 & +.222 & -.004 \\
+$R$ & CAMELS-US--GB & Basin 84008 & +.206 & +.001 \\
+\end{longtable}
+\noindent{\footnotesize\emph{Note.} Utility is not evaluable (n/e) for the original examination arm because removing binding also removes its member columns. The post-result width-matched domain-local reference is reported separately in Table~\ref{tab:app-exam-no-bridge}.}

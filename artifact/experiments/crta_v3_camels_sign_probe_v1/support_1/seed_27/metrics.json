@@ -1,0 +1,72 @@
+{
+ "arms": {
+  "free": {
+   "log1p_rmse": 0.35351114253047705,
+   "mae_mm_day": 0.9342380950115395,
+   "mean_basin_nse": 0.12474467048187961,
+   "median_basin_nse": 0.46217671010543426,
+   "rmse_mm_day": 2.1379135029254566
+  },
+  "sign_documented": {
+   "log1p_rmse": 0.3419139757540266,
+   "mae_mm_day": 0.9040828505478077,
+   "mean_basin_nse": 0.25726685481379435,
+   "median_basin_nse": 0.4341396177091861,
+   "rmse_mm_day": 2.0810352875595934
+  },
+  "sign_flipped": {
+   "log1p_rmse": 0.5885857181792711,
+   "mae_mm_day": 1.43371954080521,
+   "mean_basin_nse": -0.5147132755227308,
+   "median_basin_nse": 0.0022917665160612777,
+   "rmse_mm_day": 3.2283463905636864
+  },
+  "sign_random": {
+   "log1p_rmse": 0.35489768679088324,
+   "mae_mm_day": 0.933436819975926,
+   "mean_basin_nse": 0.21107120791278225,
+   "median_basin_nse": 0.4154790895439931,
+   "rmse_mm_day": 2.1605084590544203
+  }
+ },
+ "constrained_features": [
+  "pet_chess",
+  "pet_chess__trailmean_3",
+  "pet_chess__trailmean_30",
+  "pet_chess__trailmean_7",
+  "pet_hydrope",
+  "pet_hydrope__trailmean_3",
+  "pet_hydrope__trailmean_30",
+  "pet_hydrope__trailmean_7",
+  "pet_mean",
+  "peti_chess",
+  "peti_chess__trailmean_3",
+  "peti_chess__trailmean_30",
+  "peti_chess__trailmean_7",
+  "peti_hydrope",
+  "peti_hydrope__trailmean_3",
+  "peti_hydrope__trailmean_30",
+  "peti_hydrope__trailmean_7",
+  "prcp",
+  "prcp__trailmean_3",
+  "prcp__trailmean_30",
+  "prcp__trailmean_7",
+  "precipitation_cehgear",
+  "precipitation_cehgear__trailmean_3",
+  "precipitation_cehgear__trailmean_30",
+  "precipitation_cehgear__trailmean_7",
+  "precipitation_haduk",
+  "precipitation_haduk__trailmean_3",
+  "precipitation_haduk__trailmean_30",
+  "precipitation_haduk__trailmean_7"
+ ],
+ "n_base_features": 132,
+ "n_constrained_features": 29,
+ "n_query_rows": 16533,
+ "n_source_rows": 90764,
+ "n_support_rows": 1448,
+ "seed": 27,
+ "support_basins": 1,
+ "task": "N1_camels_us2gb",
+ "wall_seconds": 24.7
+}

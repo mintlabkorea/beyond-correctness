@@ -1,0 +1,365 @@
+{
+ "analysis_status": "post-result reference-construction extension",
+ "bootstrap": {
+  "hierarchy": "endpoints then seeds",
+  "reps": 10000,
+  "seed": 20260828
+ },
+ "contrasts": {
+  "content_S_minus_W": {
+   "ci95": [
+    0.028580579138995126,
+    0.12094153193910395
+   ],
+   "drop_best_endpoint_mean": 0.046573890535430304,
+   "interval_sensitivities": {
+    "bca_cluster_mean": [
+     0.034539193884283045,
+     0.1324848355458
+    ],
+    "bootstrap_reps": 10000,
+    "seed": 20260928,
+    "student_t_cluster_mean": [
+     0.003126605466950219,
+     0.13601110032385966
+    ],
+    "studentized_cluster_bootstrap": [
+     0.02596809766525053,
+     0.20025812007720478
+    ],
+    "studentized_valid_fraction": 0.9996
+   },
+   "leave_one_endpoint_out": {
+    "all_lower_bounds_above_zero": true,
+    "analysis_status": "post-result leave-one-endpoint-out sensitivity",
+    "bootstrap": {
+     "hierarchy": "retained endpoints then seeds",
+     "reps": 10000,
+     "seed_base": 20261828
+    },
+    "minimum_lower_bound": {
+     "omitted": "waist_cm",
+     "value": 0.021337199314974152
+    },
+    "rows": {
+     "dbp": {
+      "ci95": [
+       0.037568156071323223,
+       0.136541546659602
+      ],
+      "mean": 0.08082598435759433,
+      "n_cells": 50,
+      "n_endpoints": 5,
+      "separated": true,
+      "win": 0.98
+     },
+     "glucose": {
+      "ci95": [
+       0.021483062612429323,
+       0.07404588920863261
+      ],
+      "mean": 0.046573890535430304,
+      "n_cells": 50,
+      "n_endpoints": 5,
+      "separated": true,
+      "win": 0.94
+     },
+     "sbp": {
+      "ci95": [
+       0.023831766677769393,
+       0.13459869264531163
+      ],
+      "mean": 0.0728884141702345,
+      "n_cells": 50,
+      "n_endpoints": 5,
+      "separated": true,
+      "win": 0.94
+     },
+     "total_cholesterol": {
+      "ci95": [
+       0.03474050894655751,
+       0.13579811891677349
+      ],
+      "mean": 0.07973548492166667,
+      "n_cells": 50,
+      "n_endpoints": 5,
+      "separated": true,
+      "win": 0.96
+     },
+     "triglycerides": {
+      "ci95": [
+       0.024662707815313264,
+       0.13304664475585
+      ],
+      "mean": 0.0725864201893431,
+      "n_cells": 50,
+      "n_endpoints": 5,
+      "separated": true,
+      "win": 0.94
+     },
+     "waist_cm": {
+      "ci95": [
+       0.021337199314974152,
+       0.12708992110062642
+      ],
+      "mean": 0.06480292319816082,
+      "n_cells": 50,
+      "n_endpoints": 5,
+      "separated": true,
+      "win": 0.94
+     }
+    }
+   },
+   "mean": 0.06956885289540496,
+   "n_cells": 60,
+   "n_endpoints": 6,
+   "per_endpoint_mean": {
+    "dbp": 0.013283195584458085,
+    "glucose": 0.1845436646952782,
+    "sbp": 0.05297104652125717,
+    "total_cholesterol": 0.018735692764096378,
+    "triglycerides": 0.054481016425714276,
+    "waist_cm": 0.09339850138162561
+   },
+   "separated": true,
+   "win": 0.95
+  },
+  "reference_minus_wrong_R_minus_W": {
+   "ci95": [
+    0.0019614223715243304,
+    0.04292085042846097
+   ],
+   "drop_best_endpoint_mean": 0.01529731696872448,
+   "interval_sensitivities": {
+    "bca_cluster_mean": [
+     0.0024592911906976375,
+     0.041988396897785024
+    ],
+    "bootstrap_reps": 10000,
+    "seed": 20260930,
+    "student_t_cluster_mean": [
+     -0.006632977320560524,
+     0.051080665409043186
+    ],
+    "studentized_cluster_bootstrap": [
+     -0.008935110904430069,
+     0.05527011259543178
+    ],
+    "studentized_valid_fraction": 0.9999
+   },
+   "leave_one_endpoint_out": {
+    "all_lower_bounds_above_zero": false,
+    "analysis_status": "post-result leave-one-endpoint-out sensitivity",
+    "bootstrap": {
+     "hierarchy": "retained endpoints then seeds",
+     "reps": 10000,
+     "seed_base": 20262028
+    },
+    "minimum_lower_bound": {
+     "omitted": "glucose",
+     "value": -0.0034467618927087745
+    },
+    "rows": {
+     "dbp": {
+      "ci95": [
+       -0.00020439984537463647,
+       0.04777404506172143
+      ],
+      "mean": 0.02412745882662719,
+      "n_cells": 50,
+      "n_endpoints": 5,
+      "separated": false,
+      "win": 0.72
+     },
+     "glucose": {
+      "ci95": [
+       -0.0034467618927087745,
+       0.034816266856162396
+      ],
+      "mean": 0.01529731696872448,
+      "n_cells": 50,
+      "n_endpoints": 5,
+      "separated": false,
+      "win": 0.7
+     },
+     "sbp": {
+      "ci95": [
+       -0.002730829553106456,
+       0.0451335569190653
+      ],
+      "mean": 0.020731312501104274,
+      "n_cells": 50,
+      "n_endpoints": 5,
+      "separated": false,
+      "win": 0.7
+     },
+     "total_cholesterol": {
+      "ci95": [
+       0.004038519612247249,
+       0.04855138554399352
+      ],
+      "mean": 0.026805629954707148,
+      "n_cells": 50,
+      "n_endpoints": 5,
+      "separated": true,
+      "win": 0.82
+     },
+     "triglycerides": {
+      "ci95": [
+       0.010208589412002587,
+       0.048535880363106854
+      ],
+      "mean": 0.029295248226277337,
+      "n_cells": 50,
+      "n_endpoints": 5,
+      "separated": true,
+      "win": 0.86
+     },
+     "waist_cm": {
+      "ci95": [
+       -0.0034232657602016217,
+       0.039512819529500656
+      ],
+      "mean": 0.017086097788007567,
+      "n_cells": 50,
+      "n_endpoints": 5,
+      "separated": false,
+      "win": 0.7
+     }
+    }
+   },
+   "mean": 0.022223844044241336,
+   "n_cells": 60,
+   "n_endpoints": 6,
+   "per_endpoint_mean": {
+    "dbp": 0.012705770132312055,
+    "glucose": 0.05685647942182559,
+    "sbp": 0.029686501759926598,
+    "total_cholesterol": -0.000685085508087735,
+    "triglycerides": -0.013133176865938678,
+    "waist_cm": 0.047912575325410156
+   },
+   "separated": true,
+   "win": 0.75
+  },
+  "utility_S_minus_R": {
+   "ci95": [
+    0.01714623946011468,
+    0.08442289459783187
+   ],
+   "drop_best_endpoint_mean": 0.03127657356670582,
+   "interval_sensitivities": {
+    "bca_cluster_mean": [
+     0.021815857583607306,
+     0.09026241452749904
+    ],
+    "bootstrap_reps": 10000,
+    "seed": 20260929,
+    "student_t_cluster_mean": [
+     -0.0005512079766316069,
+     0.09524122567895886
+    ],
+    "studentized_cluster_bootstrap": [
+     0.012565043127890786,
+     0.13030965975695033
+    ],
+    "studentized_valid_fraction": 0.9999
+   },
+   "leave_one_endpoint_out": {
+    "all_lower_bounds_above_zero": true,
+    "analysis_status": "post-result leave-one-endpoint-out sensitivity",
+    "bootstrap": {
+     "hierarchy": "retained endpoints then seeds",
+     "reps": 10000,
+     "seed_base": 20261928
+    },
+    "minimum_lower_bound": {
+     "omitted": "triglycerides",
+     "value": 0.011101645734472145
+    },
+    "rows": {
+     "dbp": {
+      "ci95": [
+       0.02632318962459702,
+       0.09659936714709233
+      ],
+      "mean": 0.05669852553096714,
+      "n_cells": 50,
+      "n_endpoints": 5,
+      "separated": true,
+      "win": 0.96
+     },
+     "glucose": {
+      "ci95": [
+       0.011202245800085244,
+       0.05482183813355726
+      ],
+      "mean": 0.03127657356670582,
+      "n_cells": 50,
+      "n_endpoints": 5,
+      "separated": true,
+      "win": 0.88
+     },
+     "sbp": {
+      "ci95": [
+       0.01668464709908581,
+       0.09502997444641884
+      ],
+      "mean": 0.052157101669130235,
+      "n_cells": 50,
+      "n_endpoints": 5,
+      "separated": true,
+      "win": 0.9
+     },
+     "total_cholesterol": {
+      "ci95": [
+       0.01719527825959933,
+       0.09654241088272583
+      ],
+      "mean": 0.05292985496695952,
+      "n_cells": 50,
+      "n_endpoints": 5,
+      "separated": true,
+      "win": 0.9
+     },
+     "triglycerides": {
+      "ci95": [
+       0.011101645734472145,
+       0.08896908209698075
+      ],
+      "mean": 0.04329117196306575,
+      "n_cells": 50,
+      "n_endpoints": 5,
+      "separated": true,
+      "win": 0.88
+     },
+     "waist_cm": {
+      "ci95": [
+       0.011721275976792593,
+       0.09306393693259969
+      ],
+      "mean": 0.04771682541015325,
+      "n_cells": 50,
+      "n_endpoints": 5,
+      "separated": true,
+      "win": 0.88
+     }
+    }
+   },
+   "mean": 0.04734500885116363,
+   "n_cells": 60,
+   "n_endpoints": 6,
+   "per_endpoint_mean": {
+    "dbp": 0.0005774254521460298,
+    "glucose": 0.12768718527345257,
+    "sbp": 0.023284544761330572,
+    "total_cholesterol": 0.019420778272184115,
+    "triglycerides": 0.06761419329165295,
+    "waist_cm": 0.04548592605621546
+   },
+   "separated": true,
+   "win": 0.9
+  }
+ },
+ "reference": "domain-local member columns preserve values and width while removing shared cross-domain member identity"
+}

@@ -1,0 +1,71 @@
+{
+  "A1_llm_vs_placebo": {
+    "best_target": "hypertension_history",
+    "ci95": [
+      0.23010094790987212,
+      0.5944045919655848
+    ],
+    "drop_best_target_mean": 0.3647363186403053,
+    "mean_gain": 0.4221665659514553,
+    "n_pairs": 30,
+    "per_target_mean": {
+      "current_smoking_status": 0.2265496460061295,
+      "diabetes_history": 0.502922991274481,
+      "hypertension_history": 0.5370270605737556
+    },
+    "separated": true,
+    "win_rate": 0.9666666666666667
+  },
+  "A2_pipeline_vs_placebo": {
+    "best_target": "hypertension_history",
+    "ci95": [
+      0.2411167604201576,
+      0.6030584998538323
+    ],
+    "drop_best_target_mean": 0.3784375083810546,
+    "mean_gain": 0.4313006924452882,
+    "n_pairs": 30,
+    "per_target_mean": {
+      "current_smoking_status": 0.23779002178125644,
+      "diabetes_history": 0.5190849949808528,
+      "hypertension_history": 0.5370270605737556
+    },
+    "separated": true,
+    "win_rate": 0.9666666666666667
+  },
+  "bootstrap": {
+    "hierarchy": "targets then seeds",
+    "reps": 10000,
+    "seed": 20260819
+  },
+  "experiment_root": "experiments/crta_v3_label_panel_tabpfn_v1",
+  "metric": "auroc (higher is better); gain = arm - reference",
+  "n_cells": 30,
+  "primary_k": 256,
+  "raw_absolute_auroc_per_target": {
+    "current_smoking_status": 0.41028747664091514,
+    "diabetes_history": 0.13150874537990803,
+    "hypertension_history": 0.4384063445844843
+  },
+  "raw_vs_pipeline_descriptive": {
+    "best_target": "current_smoking_status",
+    "ci95": [
+      -0.8212559719863581,
+      -0.27339738302192
+    ],
+    "drop_best_target_mean": -0.6395707521892591,
+    "mean_gain": -0.5168080104475193,
+    "n_pairs": 30,
+    "per_target_mean": {
+      "current_smoking_status": -0.27128252696403965,
+      "diabetes_history": -0.8234902959065631,
+      "hypertension_history": -0.45565120847195517
+    },
+    "win_rate": 0.0
+  },
+  "targets_present": [
+    "current_smoking_status",
+    "diabetes_history",
+    "hypertension_history"
+  ]
+}

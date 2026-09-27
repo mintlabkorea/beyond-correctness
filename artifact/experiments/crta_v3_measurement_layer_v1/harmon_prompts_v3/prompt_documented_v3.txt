@@ -1,0 +1,133 @@
+You are building a value-harmonization table for survey items drawn from two
+cohort studies, NHANES (United States) and KNHANES (Korea).  Downstream code
+will use this table to decide which numeric codes are real answers, which are
+non-answers to be masked, and whether a code ordering runs opposite to the
+quantity being measured.
+
+For each item below, report the four fields in the output contract.  Where a
+codebook entry is supplied, it is authoritative; where none is supplied, say so
+by setting `basis` to "prior" rather than inventing a citation.  Report every
+item; do not skip any.
+
+ITEMS:
+- item_id: NHANES::RIAGENDR
+  cohort: NHANES
+  variable: RIAGENDR
+  label: sex
+  codebook value text: Code or Value Value Description Count Cumulative Skip to Item 1 Male 4557 4557 2 Female 4697 9254 . Missing 0 9254 <h3 class="vartitle"
+- item_id: KNHANES::ALL__sex
+  cohort: KNHANES
+  variable: ALL__sex
+  label: 성별
+  codebook value text: 1. 남자2. 여자
+- item_id: NHANES::DMDEDUC2
+  cohort: NHANES
+  variable: DMDEDUC2
+  label: education level
+  codebook value text: Code or Value Value Description Count Cumulative Skip to Item 1 Less than 9th grade 479 479 2 9-11th grade (Includes 12th grade with no diploma) 638 1117 3 High school graduate/GED or equivalent 1325 2442 4 Some college or AA degree 1778 4220 5 College graduate or above 1336 5556 7 Refused 2 5558 9 Don't know 11 5569 . Missing 3685 9254 <h3 class="vartitle"
+- item_id: KNHANES::ALL__educ
+  cohort: KNHANES
+  variable: ALL__educ
+  codebook value text: (none available)
+- item_id: NHANES::DIQ010
+  cohort: NHANES
+  variable: DIQ010
+  label: diabetes history
+  codebook value text: Code or Value Value Description Count Cumulative Skip to Item 1 Yes 893 893 2 No 7816 8709 DIQ159 3 Borderline 184 8893 DIQ159 7 Refused 0 8893 DIQ159 9 Don't know 4 8897 DIQ159 . Missing 0 8897
+- item_id: KNHANES::ALL__de1_dg
+  cohort: KNHANES
+  variable: ALL__de1_dg
+  label: 당뇨병 의사진단 여부
+  codebook value text: 0. 없음, 1. 있음, 8. 비해당(소아, 청소년), 9. 모름, 무응답
+- item_id: NHANES::BPQ020
+  cohort: NHANES
+  variable: BPQ020
+  label: hypertension history
+  codebook value text: Code or Value Value Description Count Cumulative Skip to Item 1 Yes 2137 2137 2 No 4014 6151 BPQ080 7 Refused 0 6151 BPQ080 9 Don't know 10 6161 BPQ080 . Missing 0 6161
+- item_id: KNHANES::ALL__di1_dg
+  cohort: KNHANES
+  variable: ALL__di1_dg
+  label: 고혈압 의사진단 여부
+  codebook value text: 0. 없음 1. 있음8. 비해당(소아, 청소년)9. 모름, 무응답
+- item_id: NHANES::SMQ020
+  cohort: NHANES
+  variable: SMQ020
+  label: Smoked at least 100 cigarettes in life
+  codebook value text: Code or Value Value Description Count Cumulative Skip to Item 1 Yes 2359 2359 2 No 3497 5856 SMQ890 7 Refused 0 5856 SMQ890 9 Don't know 0 5856 SMQ890 . Missing 868 6724
+- item_id: NHANES::SMQ040
+  cohort: NHANES
+  variable: SMQ040
+  label: current smoking status
+  codebook value text: Code or Value Value Description Count Cumulative Skip to Item 1 Every day 805 805 SMQ078 2 Some days 216 1021 SMD641 3 Not at all 1338 2359 7 Refused 0 2359 SMAQUEX2 9 Don't know 0 2359 SMAQUEX2 . Missing 4365 6724
+- item_id: KNHANES::BS1_1
+  cohort: KNHANES
+  variable: BS1_1
+  label: 평생 일반담배(궐련) 흡연 여부
+  codebook value text: 1. 5갑(100개비) 미만, 2. 5갑 이상, 3. 피운 적 없음, 8. 비해당, 9. 모름
+- item_id: KNHANES::ALL__bs3_1
+  cohort: KNHANES
+  variable: ALL__bs3_1
+  label: 현재 궐련 흡연 여부
+  codebook value text: 1. 매일, 2. 가끔, 3. 과거에 피웠으나 현재 안 피움, 8. 비해당, 9. 모름
+- item_id: NHANES::ALQ110
+  cohort: NHANES
+  variable: ALQ110
+  label: Had at least 12 alcohol drinks/lifetime?
+  codebook value text: (none available)
+- item_id: NHANES::ALQ121
+  cohort: NHANES
+  variable: ALQ121
+  label: Past 12 mos how often drink alc bev
+  codebook value text: (none available)
+- item_id: KNHANES::BD1
+  cohort: KNHANES
+  variable: BD1
+  label: 평생음주경험
+  codebook value text: 1. 없음, 2. 있음, 8. 비해당(소아), 9. 모름, 무응답
+- item_id: KNHANES::BD1_11
+  cohort: KNHANES
+  variable: BD1_11
+  label: 1년간 음주빈도
+  codebook value text: 1. 전혀 없음, 2. 월 1회 미만, 3. 월 1회 정도, 4. 월 2~4회, 5. 주 2~3회, 6. 주 4회 이상, 8. 비해당
+- item_id: KNHANES::FFQ__ff_soju
+  cohort: KNHANES
+  variable: FFQ__ff_soju
+  codebook value text: (none available)
+
+Return one JSON object and nothing else.  No prose, no code fence.
+
+{
+  "items": [
+    {
+      "item_id": "<exactly as given>",
+      "response_type": "binary" | "ordinal" | "categorical" | "continuous",
+      "valid_codes": [<the numeric codes that carry a real answer>],
+      "missing_or_sentinel_codes": [<codes meaning refused / don't know / not applicable>],
+      "ordinal_direction": "higher_is_more" | "higher_is_less" | "unordered",
+      "requires_reverse_coding": true | false,
+      "basis": "documentation" | "prior"
+    }
+  ]
+}
+
+For continuous items report valid_codes as [] and ordinal_direction
+"higher_is_more" or "higher_is_less" for the measured quantity.
+
+`ordinal_direction` describes what a LARGER code number means for the quantity
+the item measures: "higher_is_more" if a larger code means more of it,
+"higher_is_less" if a larger code means less of it, "unordered" if the codes
+are categories with no magnitude ordering.
+
+`requires_reverse_coding` -- operational rule, applied uniformly.  First name
+the quantity or state the item measures (a diagnosis item measures the
+condition being PRESENT; a difficulty or dependency scale measures the
+difficulty or dependency itself).  Set requires_reverse_coding = true exactly
+when a numerically larger valid code corresponds to LESS of that quantity or
+to the state being ABSENT.  This applies to binary items too: if the code for
+"yes / present" is smaller than the code for "no / absent", the item requires
+reverse coding.  Never mark a yes/no item "unordered" as a way of skipping
+this decision.
+
+Set `basis` to "documentation" only when the supplied codebook text determines
+your answer, and to "prior" when you are relying on knowledge of the
+instrument.

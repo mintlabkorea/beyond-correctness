@@ -1,0 +1,101 @@
+{
+  "analysis_status": "frozen_all_reference_k512_evidence",
+  "arm": "ref_12",
+  "base_runner_sha256": "796d0bb0d17950a771c5e18fe732f955a4307956192e7329de23683e411f9447",
+  "dataset": "car",
+  "execution_device": "cuda:1",
+  "execution_num_shards": 3,
+  "execution_shard_index": 1,
+  "final_trainable_state_sha256": "2de2b6e3d63cc8acb44791033eae65b278dee42f8412434974b98623f3fcd25c",
+  "ia3_checkpoint_sha256": "8fe7a00fb425dd331c7a021c9468d50a14ec2ca1998007e7ead5ce3111405729",
+  "initial_trainable_state_sha256": "2b3e0be8998a1d12a84a7b358726205cce0c83973fb198a1c37bdac6aa3fbd0b",
+  "metrics": {
+    "accuracy": 0.9190751445086706,
+    "auc": 0.9934635472317949
+  },
+  "model_audit": {
+    "checkpoint_key_count": 192,
+    "checkpoint_parameter_count": 1081344,
+    "frozen_parameter_count": 11136118784,
+    "initial_trainable_state_sha256": "2b3e0be8998a1d12a84a7b358726205cce0c83973fb198a1c37bdac6aa3fbd0b",
+    "missing_base_model_key_count": 752,
+    "parameter_dtype": "torch.bfloat16",
+    "precision_layout": "frozen=bfloat16, trainable_ia3=float32",
+    "trainable_parameter_count": 1081344,
+    "trainable_parameter_dtype": "torch.float32",
+    "trainable_tensor_count": 192
+  },
+  "model_path": "external/.cache/huggingface/hub/models--bigscience--T0/snapshots/1cfa27271f8085c29323c94bd659004b210f20b5",
+  "n_test": 346,
+  "n_train": 512,
+  "n_train_unique": 335,
+  "prior_wrapper_sha256": "62a7d917cd5450bba2af3ff548c62f4a60790f1dfdf45048fb5088017e14182d",
+  "protobuf_python_implementation": "python",
+  "protocol_sha256": "5fee5e02c870da5205e59d8f53aeb834ae374ccb5ea28f30b8b2f68f036022b0",
+  "raw_and_serialization_tree_sha256": "383519d4b1efffe01c414c1f7b12db9c7abc04aefbde0e9957c44c5eaf038763",
+  "reference_id": "ref_12",
+  "reference_manifest_sha256": "7fe208e544a954ebd2c15e273473d604107a22e49230631101466ab97097d8da",
+  "reference_permutation": [
+    3,
+    5,
+    0,
+    1,
+    4,
+    2
+  ],
+  "reference_selection_role": "exhaustive_remaining_21",
+  "reference_template_sha256": "d1c42d8e55047816b229ef720e89fe86c8e6cf6227308f98db611c1faf195c5f",
+  "runner_sha256": "b8e659230269249a502122b44aa58f402366660ea55ea644025d29c62759fd9b",
+  "seed": 32,
+  "shot": 512,
+  "tabllm_commit": "71f6647c523aa6fd35df94ad76207c4377248c49",
+  "test_prompt_sha256": "b0a35b76e82a871aa18afb79c90e677cc2d0a5b9f80771f322f506ef9c69170c",
+  "tfew_execution_commit": "114deced63ae722a368e06cb08ea956b20c393a6",
+  "train_membership_with_replacement": true,
+  "train_prompt_sha256": "55474a8d39ef1cedc7860477189294c85ce43036aff068c75843f879ee723398",
+  "trained_checkpoint_sha256": "cd0bb3991b376a1e131b51c0b52620954e3b888fdc3a0b266e0001bee01e0d87",
+  "training": {
+    "batch_order_sha256": "9d05a13b05658c7f989db036ae0a189ed1060f41ff4cd995128ef1fb3d5619c8",
+    "executed_steps": 3840,
+    "loss_first": {
+      "gradient_norm_pre_clip": 1.5138386487960815,
+      "lm_loss": 2.1722424030303955,
+      "loss": 6.567183494567871,
+      "lr": 1.3020833333333334e-05,
+      "mc_loss": 1.3912830352783203,
+      "unlikely_loss": 3.0036582946777344
+    },
+    "loss_last": {
+      "gradient_norm_pre_clip": 0.05622049793601036,
+      "lm_loss": 0.0009912685491144657,
+      "loss": -0.00529085285961628,
+      "lr": 0.0,
+      "mc_loss": 0.002432488137856126,
+      "unlikely_loss": -0.008714609779417515
+    },
+    "planned_steps": 3840
+  },
+  "training_contract": {
+    "batch_size": 4,
+    "compute_dtype": "bfloat16 base and autocast with FP32 IA3 master parameters; temporary bfloat16 IA3 evaluation copy",
+    "epochs": 30,
+    "gradient_clip": 1.0,
+    "length_norm": 1,
+    "loss": "lm + multiple_choice + unlikely",
+    "lr": 0.003,
+    "max_length": 1024,
+    "optimizer": "Adafactor(scale_parameter=True, relative_step=False)",
+    "scheduler": "linear_decay_with_warmup",
+    "warmup_ratio": 0.06
+  },
+  "versions": {
+    "datasets": "2.14.7",
+    "numpy": "2.2.6",
+    "pandas": "2.3.3",
+    "python": "3.10.20",
+    "scikit_learn": "1.7.2",
+    "torch": "2.12.0.dev20260408+cu128",
+    "transformers": "4.30.0"
+  },
+  "wall_seconds": 726.278
+}

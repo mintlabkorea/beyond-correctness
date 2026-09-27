@@ -1,0 +1,99 @@
+{
+  "analysis": "retrospective descriptive fidelity sensitivity",
+  "filter": {
+    "rule_sha256": "73261377ae7b8fa183487d9a07818829510771b464a179bb18b0e1cc9ffb368d",
+    "threshold": "0.015",
+    "selection_inputs": "S,W,R_pub only; no anonymous/reference-library values or effects",
+    "included": [
+      "car",
+      "diabetes",
+      "income",
+      "jungle"
+    ],
+    "excluded": [
+      "bank",
+      "blood",
+      "calhousing",
+      "creditg",
+      "heart"
+    ],
+    "input_projection_sha256": "0c9388ed9d1a19cf6a80b1b191a33b1cd1af523779f8d7fc637df43d267fc4ff",
+    "decisions_sha256": "0a466936dee8cb9e1bdcd411a912343181936e875209aa3da8ef720792b52bc3",
+    "source_sha256": {
+      "reproduction": "e6d85f64f13a122ed9e30adb0795ed1c42785b2b6729504432da76f7c52c1600",
+      "published": "320c9222aa7bbf3a34c6bffc3d0ca5f5e4144e6c8bec247b8368f6e25fb52f35"
+    }
+  },
+  "condition_pass_count": 21,
+  "condition_count": 27,
+  "dataset_max_error": 0.0346988227213517,
+  "results": [
+    {
+      "panel": "full_panel",
+      "n": 9,
+      "datasets": [
+        "bank",
+        "blood",
+        "calhousing",
+        "car",
+        "creditg",
+        "diabetes",
+        "heart",
+        "income",
+        "jungle"
+      ],
+      "macro_content": 0.11244695790775523,
+      "macro_utility_Ranon": 0.08836999289607617,
+      "global_macro_min": 0.0883699928960762,
+      "global_macro_max": 0.1240386098676735,
+      "global_macro_span": 0.03566861697159731,
+      "minimum_reference_ids": [
+        "ref_00"
+      ],
+      "maximum_reference_ids": [
+        "ref_04"
+      ],
+      "sign_sensitive_count": 4,
+      "sign_sensitive_datasets": [
+        "calhousing",
+        "creditg",
+        "heart",
+        "jungle"
+      ],
+      "zero_touch_datasets": []
+    },
+    {
+      "panel": "fidelity_015",
+      "n": 4,
+      "datasets": [
+        "car",
+        "diabetes",
+        "income",
+        "jungle"
+      ],
+      "macro_content": 0.21648214556068066,
+      "macro_utility_Ranon": 0.1406873480329253,
+      "global_macro_min": 0.1197407928530696,
+      "global_macro_max": 0.1751606116953013,
+      "global_macro_span": 0.05541981884223172,
+      "minimum_reference_ids": [
+        "ref_16"
+      ],
+      "maximum_reference_ids": [
+        "ref_20"
+      ],
+      "sign_sensitive_count": 1,
+      "sign_sensitive_datasets": [
+        "jungle"
+      ],
+      "zero_touch_datasets": []
+    }
+  ],
+  "validation": {
+    "all_216_references_present": true,
+    "canonical_matches_reproduction": true,
+    "full_panel_matches_existing_reference_summary": true,
+    "filter_excludes_Ranon_and_effects": true,
+    "new_inference_or_predictions": false
+  }
+}

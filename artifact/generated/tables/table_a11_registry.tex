@@ -1,0 +1,45 @@
+\begin{longtable}{P{0.23\linewidth}P{0.16\linewidth}P{0.10\linewidth}P{0.31\linewidth}P{0.13\linewidth}}
+\caption{Audit and failure registry. ``Fail'' denotes failure of the stated prespecified criterion, not a failed computation. Optional tests without completed summaries are explicitly marked not run and are not interpreted as results.}\label{tab:app_registry}\label{tab:app-analysis-registry}\\
+\toprule Test & Analysis status & Verdict & Consequence & Location \\
+\midrule\endfirsthead
+\multicolumn{5}{c}{\tablename\ \thetable\ (continued)}\\
+\toprule Test & Analysis status & Verdict & Consequence & Location \\
+\midrule\endhead
+\bottomrule\endfoot
+Measurement polarity panel & Confirmatory & Pass & 3-endpoint content and utility separate & Table~\ref{tab:app-measurement-full} \\
+Ten-endpoint measurement extension & Frozen-before-execution extension & Qualified & descriptive gain; matched-wrong coverage gate fails & Table~\ref{tab:app-measurement-full} \\
+Measurement mismatch dose and support ladder & Frozen-before-execution + post-result budget completion / descriptive support extension & Pass & original 12 strata pass; six added K=512 strata pass the same consistency checks; the five-point support ladder documents all absolute arms & Figures~\ref{fig:app-measurement-dose} and~\ref{fig:app-mismatch-support-ladder}; Table~\ref{tab:app-measurement-dose-stats} \\
+Correspondence interfaces & Confirmatory + frozen-before-execution extensions & Qualified & binding content separates; tree utility and canonical aggregation do not & Table~\ref{tab:app-correspondence-interfaces} \\
+Four-arm correspondence, XGB & Exploratory existing-cell analysis & Mixed & all four arms reported: measurement-off simple effect unresolved; measurement-supplied simple effect positive & Section~\ref{sec:app-correspondence-resolution} \\
+Conditional correspondence, HistGB & Post-result frozen confirmation & Fail rule & 8/10 positive but endpoint Student-$t$ interval crosses zero; no positive or no-effect claim & Section~\ref{sec:app-correspondence-resolution} \\
+Examination domain-local reference & Post-result reference extension & Qualified pass & utility separates under primary, BCa, and studentized intervals; endpoint Student-$t$ narrowly crosses zero & Table~\ref{tab:app-exam-no-bridge} \\
+Real utility resolution & Post-hoc power diagnostic & Descriptive & cluster-level MDE separates resolution-limited clinical panels from the CAMELS-120 boundary & Table~\ref{tab:app-real-utility-resolution} \\
+Real-data relation direction contrasts & Confirmatory + frozen-before-execution extensions & Qualified & content separates in all three primary settings; utility remains unresolved & Table~\ref{tab:app-relation-full} \\
+Controlled relation interfaces & Frozen-before-execution confirmatory benchmark & Pass & executable-direction utility separates across the tree family--budget grid; operation-value utility does not & Table~\ref{tab:app-relation-full} \\
+Controlled relation capacity & Additional frozen sensitivity & Fail stability & no family--budget stratum is stable across every frozen one-factor alternative & Section~\ref{sec:app-relation-value-interface} \\
+Constituent-absence registry search & Post-result outcome-blind audit & Zero eligible & constituent removal remains a controlled mechanism probe only & Section~\ref{sec:app-relation-value-interface} \\
+Joint M/C surface & Frozen-before-execution extension & Pass & moderate rectangle separates in all 6 tree strata & Figure~\ref{fig:app-mc-surface} \\
+Controlled source-label ladder & Frozen-before-execution extension & Pass & all six curves decline; crossing in final interval & Figure~\ref{fig:app-controlled-integrity-ladder} \\
+Null-source falsification & Frozen-before-execution extension & Fail & negative interactions separate in pairwise/sparse; no universal routing-mechanism claim & Table~\ref{tab:app-target-only-wrong-transfer} \\
+Real source-label ladder & Frozen-before-execution extension & Fail & flat/rising; controlled mechanism does not transfer & Figure~\ref{fig:app-real-source-ladders} \\
+Real source-only measurement ladder & Frozen-before-execution extension & Fail & flat/rising under the source-only measurement axis & Figure~\ref{fig:app-real-source-ladders} \\
+Source-feature rendering lesion & Frozen-before-execution extension & Fail & flat; neither attenuation criterion passes & Figure~\ref{fig:app-real-lesions} \\
+Source-feature column permutation & Frozen-before-execution extension & Fail & flat; neither attenuation criterion passes & Figure~\ref{fig:app-real-lesions} \\
+Support-label lesion & Frozen-before-execution extension & Pass & only tested real-data lesion passing both attenuation criteria & Figure~\ref{fig:app-real-lesions} \\
+Value redundancy/equivariance & Frozen-before-execution extension & Pass & magnitude nonredundant; sign-equivariance criterion passes & Table~\ref{tab:app-relation-value-interface} \\
+Partially monotone MLP & Frozen-before-execution extension & Fail & directional-utility grid does not pass & Table~\ref{tab:app-relation-monotone-mlp} \\
+CAMELS per-relation ablation & Frozen-before-execution extension & Qualified & precipitation carries essentially the joint effect; PET contrast is not separated & Table~\ref{tab:app-camels-per-relation} \\
+Audit qualification versus effect & Post-hoc robustness & Qualified & medical audit categories do not align with content or utility & Table~\ref{tab:app-relation-audit-effect} \\
+Open-world decoy compiler & Frozen-before-execution extension & Qualified & high-recall abstention; operating tradeoff reported exactly & Table~\ref{tab:app-correspondence-decoy-matcher}; Figure~\ref{fig:app-correspondence-decoy-damage} \\
+Seven-model extraction panel & Frozen-before-execution extension & Qualified & one model separates; six fail or are incomplete & Table~\ref{tab:app-extraction-model-panel} \\
+Ten-endpoint LOO & Post-hoc robustness & Pass & all ten leave-one-out intervals remain above zero & Table~\ref{tab:app-composition-loo} \\
+CAMELS 120-basin extension & Frozen-before-execution extension & Pass & content replicates; utility has a narrow scale-specific interval & Table~\ref{tab:app-relation-full} \\
+Real supplied transfer vs target-only & Additional transfer-abstention summary & Pass anchor & supplied $M+C$ transfer beats target-only; not component utility & Section~\ref{sec:app-controlled-boundaries} \\
+TransTab correspondence & Post-result mechanism extension & Qualified & four-arm bridge decomposition scopes name/token content, shared identity, and false-bridge effects & Table~\ref{tab:app-transtab-correspondence} \\
+CARTE M/C/R & Post-result learner-coverage extension & Qualified & K=512 correspondence content; utility, measurement, relation remain scoped & Table~\ref{tab:app-carte-mcr} \\
+Higher-order M/C/R interaction & Frozen-before-execution extension & Fail gate & no third stacking-layer claim & Section~\ref{sec:app-negative-results} \\
+Second HRS factorial pair & Optional/not run & Not run & licensed-data scope would require new authorization & Section~\ref{sec:app-negative-results} \\
+Document-compiled Auto-C campaign & Predates component draft & Separate & not pooled with M/C/R and not semantic-specificity evidence & Section~\ref{sec:app-autoc} \\
+Published TabLLM printed-number audit & Retrospective external reanalysis & Qualified & aggregate conclusion survives; dataset benefit--harm decomposition is heterogeneous & Section~\ref{sec:app-tabllm-reproduction} \\
+TabLLM released-code reproduction & Post-hoc compatibility reproduction & Qualified & stable-reference macro harm is unresolved; dataset-level heterogeneity remains & Section~\ref{sec:app-tabllm-reproduction} \\
+\end{longtable}

@@ -1,0 +1,74 @@
+{
+ "arms": [
+  "a00_base",
+  "a01_columns",
+  "a10_stage",
+  "a11_stage_columns"
+ ],
+ "auroc": {
+  "256": {
+   "a00_base": 0.5008435857453208,
+   "a01_columns": 0.4987802355425539,
+   "a10_stage": 0.5107746231455683,
+   "a11_stage_columns": 0.5256968459720949
+  }
+ },
+ "backbone": "xgboost_hist_d6_n300_regression_ranked",
+ "benchmark_id": "std_cross_kn2nh_shared_anchorreset_fewshot_v1",
+ "feature_set": "stage_factorial_all_v1",
+ "metric": "auroc_vs_documented_target_binary (higher is better)",
+ "n_eval": 61152,
+ "n_pool": 5907,
+ "n_source": 154924,
+ "pl_columns_permutation": {
+  "dbp": "glucose",
+  "glucose": "weight_kg",
+  "hba1c": "waist_cm",
+  "height_cm": "triglycerides",
+  "sbp": "dbp",
+  "total_cholesterol": "hba1c",
+  "triglycerides": "height_cm",
+  "waist_cm": "sbp",
+  "weight_kg": "total_cholesterol"
+ },
+ "pl_relation_pairs": [
+  [
+   "education_level",
+   "hba1c"
+  ],
+  [
+   "total_cholesterol",
+   "rbc"
+  ],
+  [
+   "hematocrit",
+   "total_cholesterol"
+  ],
+  [
+   "hba1c",
+   "height_cm"
+  ],
+  [
+   "age",
+   "sex"
+  ],
+  [
+   "glucose",
+   "diabetes_history"
+  ]
+ ],
+ "primary_k": 256,
+ "seed": 58,
+ "target": "asthma_history",
+ "wall_seconds": 25.1,
+ "wrong_label_maps": {
+  "source": {
+   "0.0": 1.0,
+   "9.0": 0.0
+  },
+  "target": {
+   "2.0": 1.0,
+   "7.0": 0.0
+  }
+ }
+}

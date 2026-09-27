@@ -1,0 +1,38 @@
+{
+ "arms": [
+  "llm_table"
+ ],
+ "auroc": {
+  "256": {
+   "llm_table": 0.3855759465395836
+  }
+ },
+ "backbone": "xgboost_hist_d6_n300_regression_ranked",
+ "benchmark_id": "std_cross_nh2kn_shared_anchorreset_fewshot_v1",
+ "eval_prevalence": 0.10804347826086956,
+ "feature_set": "shared_clinical_plus_survey_v1",
+ "metric": "auroc_vs_documented_target_binary (higher is better)",
+ "n_eval": 9200,
+ "n_pool": 15492,
+ "n_source": 68561,
+ "placebo_label_maps": {
+  "source": {
+   "1.0": 0.75,
+   "2.0": 0.0,
+   "3.0": 0.125,
+   "7.0": 0.25,
+   "9.0": 1.0
+  },
+  "target": {
+   "0.0": 0.8888888888888888,
+   "1.0": 1.0,
+   "8.0": 0.1111111111111111,
+   "9.0": 0.0
+  }
+ },
+ "primary_k": 256,
+ "seed": 55,
+ "target": "diabetes_history",
+ "target_set": "survey_label_panel_v1",
+ "wall_seconds": 10.8
+}

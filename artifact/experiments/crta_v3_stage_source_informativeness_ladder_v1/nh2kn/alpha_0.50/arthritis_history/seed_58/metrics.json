@@ -1,0 +1,74 @@
+{
+ "arms": [
+  "a00_base",
+  "a01_columns",
+  "a10_stage",
+  "a11_stage_columns"
+ ],
+ "auroc": {
+  "256": {
+   "a00_base": 0.666326985920467,
+   "a01_columns": 0.7914690609025296,
+   "a10_stage": 0.8248540273856863,
+   "a11_stage_columns": 0.8322082587334902
+  }
+ },
+ "backbone": "xgboost_hist_d6_n300_regression_ranked",
+ "benchmark_id": "std_cross_nh2kn_shared_anchorreset_fewshot_v1",
+ "feature_set": "stage_factorial_all_v1",
+ "metric": "auroc_vs_documented_target_binary (higher is better)",
+ "n_eval": 6118,
+ "n_pool": 15060,
+ "n_source": 38021,
+ "pl_columns_permutation": {
+  "dbp": "total_cholesterol",
+  "glucose": "sbp",
+  "hba1c": "dbp",
+  "height_cm": "weight_kg",
+  "sbp": "height_cm",
+  "total_cholesterol": "glucose",
+  "triglycerides": "waist_cm",
+  "waist_cm": "hba1c",
+  "weight_kg": "triglycerides"
+ },
+ "pl_relation_pairs": [
+  [
+   "hba1c",
+   "diabetes_history"
+  ],
+  [
+   "weight_kg",
+   "age"
+  ],
+  [
+   "hypertension_history",
+   "hematocrit"
+  ],
+  [
+   "weight_kg",
+   "rbc"
+  ],
+  [
+   "education_level",
+   "creatinine"
+  ],
+  [
+   "education_level",
+   "hemoglobin"
+  ]
+ ],
+ "primary_k": 256,
+ "seed": 58,
+ "target": "arthritis_history",
+ "wall_seconds": 21.1,
+ "wrong_label_maps": {
+  "source": {
+   "2.0": 1.0,
+   "9.0": 0.0
+  },
+  "target": {
+   "8.0": 0.0,
+   "9.0": 1.0
+  }
+ }
+}

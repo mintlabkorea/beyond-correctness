@@ -1,0 +1,24 @@
+% Phase-3 archived appendix unit
+% Phase-2 Unit ID(s): H-03
+% Original location: Construction / thread-count reproducibility boundary
+% Original source SHA-256: 726916622e270ad0c5fd157c2a9821e84742065551d407a942ac397611d5460c
+% Provenance: Implementation reproducibility audit
+% Original label(s): none
+% Compact PDF replacement: Fixed-thread constraint in Phase-3 Section H
+% Content below is copied verbatim from the authoritative appendix.
+
+% Original lines 2133--2145
+\paragraph{Thread-count reproducibility boundary.}
+A separate implementation-reproducibility audit records a
+HistGradientBoosting thread-count sensitivity.  Comparing a one-thread ladder
+run with the earlier two-thread value-redundancy run produced 92
+non-bitwise-identical HistGradientBoosting values (worst nMSE difference
+$.0075$), while all 400 XGBoost comparisons were bit-identical.  Re-fitting
+the unchanged value-redundancy runner at one thread yielded 800/800
+bit-identical HistGradientBoosting values (worst difference zero).  Thus these
+HistGradientBoosting cell values are reproducible at a fixed thread count;
+cross-host comparisons with different thread counts are not treated as
+bitwise replications.  This implementation note does not alter the within-run
+paired contrasts or their prespecified verdicts.
+\FloatBarrier
+

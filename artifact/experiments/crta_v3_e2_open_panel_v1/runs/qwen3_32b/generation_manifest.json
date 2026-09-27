@@ -1,0 +1,47 @@
+{
+  "contract_version": "crta-knowledge-panel-1.0.0",
+  "decoding": {
+    "attn_implementation": "sdpa",
+    "do_sample": false,
+    "effective_max_new_tokens": 8192,
+    "requested_max_new_tokens": 8192
+  },
+  "elapsed_seconds": 626.267,
+  "external_retrieval_requested": "disabled",
+  "finished_at_utc": "2026-08-25T02:01:23.077008+00:00",
+  "materialized": true,
+  "model": "Qwen/Qwen3-32B@9216db5781bf21249d130ec9da846c4624c16137-e2-v3",
+  "model_path": "external/.cache/huggingface/hub/models--Qwen--Qwen3-32B/snapshots/9216db5781bf21249d130ec9da846c4624c16137",
+  "native_structured_output": false,
+  "parse_error": null,
+  "prompt_hashes": {
+    "messages_sha256": "0f7022fc56c4e595aba12cfde22186f72588f831e876fe4c43f14df398794fcd",
+    "system_sha256": "4133b2878b6340964df6f3ddbfcf37d943c00dbd78403a4f56fc696e802cd4a7",
+    "user_sha256": "b7ade1e1f2fc2cfa78d0f5c3bf51a86262638f2278365253360f7cde841f120a"
+  },
+  "provider": "huggingface_local",
+  "raw_response_chars": 4601,
+  "raw_response_sha256": "735e3265c77f0cc95cf514481af04147e78b3f4795364861d986b5e3c31e6f62",
+  "return_code": 0,
+  "role_transport": "native_system_user",
+  "role_transport_confounded": false,
+  "runtime": {
+    "context_limit": 40960,
+    "generated_tokens": 1331,
+    "input_device": "cuda:2",
+    "input_tokens": 2253,
+    "model_load_finished_at_utc": "2026-08-25T01:50:56.809690+00:00",
+    "model_load_started_at_utc": "2026-08-25T01:50:41.726567+00:00",
+    "physical_cuda_device": 2,
+    "torch_version": "2.12.0.dev20260408+cu128",
+    "transformers_version": "5.12.0"
+  },
+  "schema_pair_id": "nhanes_knhanes_survey_measurement_v1",
+  "started_at_utc": "2026-08-25T01:50:56.809879+00:00",
+  "strict_json_parse": true,
+  "thinking_disabled": true,
+  "tools_requested": "disabled",
+  "transport": "transformers_apply_chat_template",
+  "transport_normalization": "identity",
+  "transport_normalization_content_preserving": true
+}

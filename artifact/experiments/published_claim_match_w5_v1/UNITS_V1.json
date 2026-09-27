@@ -1,0 +1,202 @@
+[
+  {
+    "comparison_id": "C01-A",
+    "study": "LIFT",
+    "semantic_component": "Feature names associated with feature values; prompt format I",
+    "intended": "Correct-Names I",
+    "comparator": "Shuffled-Names I",
+    "location_hint": "Official C01 main §4.1/Table 9, PDF p.8; official supplement D.2.1, printed pp.42–44 (PDF pp.20–22); supplied LIFT.pdf also contains these examples."
+  },
+  {
+    "comparison_id": "C01-B",
+    "study": "LIFT",
+    "semantic_component": "Feature names associated with feature values; prompt format II",
+    "intended": "Correct-Names II",
+    "comparator": "Shuffled-Names II",
+    "location_hint": "Official C01 main §4.1/Table 9, PDF p.8; official supplement D.2.1, printed pp.42–44 (PDF pp.20–22); supplied LIFT.pdf also contains these examples."
+  },
+  {
+    "comparison_id": "C01-C",
+    "study": "LIFT",
+    "semantic_component": "Names and contextual information in prompts; prompt format I",
+    "intended": "Correct-Names I",
+    "comparator": "W/o Names I (Table 9)",
+    "location_hint": "Official C01 main §4.1/Table 9, PDF p.8; official supplement D.2.1, printed pp.42–44 (PDF pp.20–22); supplied LIFT.pdf also contains these examples."
+  },
+  {
+    "comparison_id": "C01-D",
+    "study": "LIFT",
+    "semantic_component": "Names and contextual information in prompts; prompt format II",
+    "intended": "Correct-Names II",
+    "comparator": "W/o Names II (Table 9)",
+    "location_hint": "Official C01 main §4.1/Table 9, PDF p.8; official supplement D.2.1, printed pp.42–44 (PDF pp.20–22); supplied LIFT.pdf also contains these examples."
+  },
+  {
+    "comparison_id": "C03-A",
+    "study": "TabLLM",
+    "semantic_component": "Column-name/value associations",
+    "intended": "List Template",
+    "comparator": "List Permuted Names",
+    "location_hint": "Official C03 §3, PDF pp.3–4; §5.1/Figure 2, p.6; supplement Tables 12–14 and §9; supplied tabllm.pdf corroborates definitions."
+  },
+  {
+    "comparison_id": "C03-B",
+    "study": "TabLLM",
+    "semantic_component": "Column names in list serialization",
+    "intended": "List Template",
+    "comparator": "List Only Values",
+    "location_hint": "Official C03 §3, PDF pp.3–4; §5.1/Figure 2, p.6; supplement Tables 12–14 and §9; supplied tabllm.pdf corroborates definitions."
+  },
+  {
+    "comparison_id": "C03-C",
+    "study": "TabLLM",
+    "semantic_component": "Column-value meanings and representations",
+    "intended": "List Template",
+    "comparator": "List Permuted Values",
+    "location_hint": "Official C03 §3, PDF pp.3–4; §5.1/Figure 2, p.6; supplement Tables 12–14 and §9; supplied tabllm.pdf corroborates definitions."
+  },
+  {
+    "comparison_id": "C04-A",
+    "study": "PLATO",
+    "semantic_component": "Auxiliary feature nodes and broader-domain KG nodes",
+    "intended": "Full KG",
+    "comparator": "Feature-only KG",
+    "location_hint": "Official C04 (Ruiz et al., not supplied plato.pdf): §3.1–3.2, Table 3 p.7, §4.1 p.9."
+  },
+  {
+    "comparison_id": "C04-B",
+    "study": "PLATO",
+    "semantic_component": "Auxiliary KG input",
+    "intended": "Full KG",
+    "comparator": "No KG",
+    "location_hint": "Official C04 (Ruiz et al., not supplied plato.pdf): §3.1–3.2, Table 3 p.7, §4.1 p.9."
+  },
+  {
+    "comparison_id": "C04-C",
+    "study": "PLATO",
+    "semantic_component": "KG edges",
+    "intended": "100% edges",
+    "comparator": "50% edges",
+    "location_hint": "Official C04 §4.1 p.9, Table 4."
+  },
+  {
+    "comparison_id": "C05-A",
+    "study": "CARTE",
+    "semantic_component": "String feature initialization",
+    "intended": "CARTE",
+    "comparator": "Graph Construction with Minhash",
+    "location_hint": "Official C05 §3 and Appendix C.3/Figure 10, PDF p.21; supplied carte.pdf corroborates component labels. Figure arms expanded against CARTE baseline; no separate pairwise test is implied."
+  },
+  {
+    "comparison_id": "C05-B",
+    "study": "CARTE",
+    "semantic_component": "Column/edge information",
+    "intended": "CARTE",
+    "comparator": "Exclude Edge Info.",
+    "location_hint": "Official C05 §3 and Appendix C.3/Figure 10, PDF p.21; supplied carte.pdf corroborates component labels. Figure arms expanded against CARTE baseline; no separate pairwise test is implied."
+  },
+  {
+    "comparison_id": "C05-C",
+    "study": "CARTE",
+    "semantic_component": "Edge information with attention component",
+    "intended": "CARTE",
+    "comparator": "Exclude Att. Layer & Edge Info.",
+    "location_hint": "Official C05 §3 and Appendix C.3/Figure 10, PDF p.21; supplied carte.pdf corroborates component labels. Figure arms expanded against CARTE baseline; no separate pairwise test is implied."
+  },
+  {
+    "comparison_id": "C06-A",
+    "study": "FeatLLM",
+    "semantic_component": "Feature-description block in rule generation",
+    "intended": "FeatLLM",
+    "comparator": "-Description",
+    "location_hint": "Official C06 §3.1/Figure 2 pp.3–4, §4.2/Table 4 pp.7–8, Appendix A.2 and K.2/Table 18; supplied featllm.pdf corroborates prompt components."
+  },
+  {
+    "comparison_id": "C07-A",
+    "study": "TabuLa-8B",
+    "semantic_component": "Informative feature and target headers",
+    "intended": "TABULA-8B on UniPredict with original headers (descriptive label)",
+    "comparator": "TABULA-8B with feature headers X1, X2, ... and target header Y (descriptive label)",
+    "location_hint": "Official C07 §5.5, Appendix F.2 p.26/Figure 12 p.27; supplied tabula.pdf has different pagination."
+  },
+  {
+    "comparison_id": "C08-A",
+    "study": "ConTextTab",
+    "semantic_component": "Categorical/string feature encoding",
+    "intended": "base (feature and column name semantics)",
+    "comparator": "no feature semantics - Ordinal encoder",
+    "location_hint": "Official C08 §5.1 p.8, Table 2 bottom semantic block p.9, Appendix A.4/Figures 9–10 pp.27–28; supplied contextab.pdf has different pagination."
+  },
+  {
+    "comparison_id": "C08-B",
+    "study": "ConTextTab",
+    "semantic_component": "Categorical/string feature encoding",
+    "intended": "base (feature and column name semantics)",
+    "comparator": "no feature semantics - MinHash encoder",
+    "location_hint": "Official C08 §5.1 p.8, Table 2 bottom semantic block p.9, Appendix A.4/Figures 9–10 pp.27–28; supplied contextab.pdf has different pagination."
+  },
+  {
+    "comparison_id": "C08-C",
+    "study": "ConTextTab",
+    "semantic_component": "Categorical/string feature encoding",
+    "intended": "base (feature and column name semantics)",
+    "comparator": "no feature semantics - AutoGluon encoder",
+    "location_hint": "Official C08 §5.1 p.8, Table 2 bottom semantic block p.9, Appendix A.4/Figures 9–10 pp.27–28; supplied contextab.pdf has different pagination."
+  },
+  {
+    "comparison_id": "C08-D",
+    "study": "ConTextTab",
+    "semantic_component": "Categorical/string feature encoding",
+    "intended": "base (feature and column name semantics)",
+    "comparator": "no feature semantics - Gap encoder",
+    "location_hint": "Official C08 §5.1 p.8, Table 2 bottom semantic block p.9, Appendix A.4/Figures 9–10 pp.27–28; supplied contextab.pdf has different pagination."
+  },
+  {
+    "comparison_id": "C08-E",
+    "study": "ConTextTab",
+    "semantic_component": "Column-name encoding",
+    "intended": "base (feature and column name semantics)",
+    "comparator": "column semantics - drop column names",
+    "location_hint": "Official C08 §5.1 p.8, Table 2 bottom semantic block p.9, Appendix A.4/Figures 9–10 pp.27–28; supplied contextab.pdf has different pagination."
+  },
+  {
+    "comparison_id": "C08-F",
+    "study": "ConTextTab",
+    "semantic_component": "Additional contextual column descriptions",
+    "intended": "column semantics - add description",
+    "comparator": "base (feature and column name semantics)",
+    "location_hint": "Official C08 §5.1 p.8, Table 2 bottom semantic block p.9, Appendix A.4/Figures 9–10 pp.27–28; supplied contextab.pdf has different pagination."
+  },
+  {
+    "comparison_id": "C09-A",
+    "study": "TabSTAR",
+    "semantic_component": "Quantile text in numerical verbalization",
+    "intended": "TabSTAR",
+    "comparator": "Name + Bin",
+    "location_hint": "Official C09 §4/A.1, §6 Q3 p.9/Table 4 p.10, Appendix G.4/Tables 31–32 pp.53–54; supplied tabstar.pdf has different pagination."
+  },
+  {
+    "comparison_id": "C09-B",
+    "study": "TabSTAR",
+    "semantic_component": "Numerical information in verbalized features",
+    "intended": "TabSTAR",
+    "comparator": "Name",
+    "location_hint": "Official C09 §4/A.1, §6 Q3 p.9/Table 4 p.10, Appendix G.4/Tables 31–32 pp.53–54; supplied tabstar.pdf has different pagination."
+  },
+  {
+    "comparison_id": "C10-A",
+    "study": "TARTE",
+    "semantic_component": "Column-name information",
+    "intended": "TARTE | Enriched YAGO4.5",
+    "comparator": "TARTE | Remove column names | Enriched YAGO4.5",
+    "location_hint": "C10 official indexed published Figure 6 p.10/§4.3 from eligibility screening; supplied tarte.pdf is arXiv v2 corroboration, not the accepted PDF. Conditions known, implementation details not fully established from published source."
+  },
+  {
+    "comparison_id": "C10-B",
+    "study": "TARTE",
+    "semantic_component": "String encoder and table pretraining",
+    "intended": "TARTE | Enriched YAGO4.5",
+    "comparator": "TARTE | MinHash | Random weights",
+    "location_hint": "C10 official indexed published Figure 6 p.10/§4.3 from eligibility screening; supplied tarte.pdf is arXiv v2 corroboration, not the accepted PDF. Conditions known, implementation details not fully established from published source."
+  }
+]

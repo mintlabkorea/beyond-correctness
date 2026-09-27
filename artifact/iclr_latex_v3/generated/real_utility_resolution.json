@@ -1,0 +1,58 @@
+{
+  "analysis_status": "post-hoc conventional resolution diagnostic",
+  "test": "two-sided one-sample noncentral-t power",
+  "alpha": 0.05,
+  "target_power": 0.8,
+  "unit": "seed-averaged endpoint or basin",
+  "planning_sd": "observed between-unit standard deviation",
+  "panels": [
+    {
+      "setting": "Relation: NHANES--KNHANES",
+      "metric": "norm.-RMSE",
+      "n_units": 6,
+      "observed_mean": -0.0019674892914510866,
+      "between_unit_sd": 0.006606226140151703,
+      "mde_80": 0.009476927241259136
+    },
+    {
+      "setting": "Relation: NHANES/KNHANES--HRS",
+      "metric": "norm.-RMSE",
+      "n_units": 7,
+      "observed_mean": 0.0023415281918917233,
+      "between_unit_sd": 0.009588355503402425,
+      "mde_80": 0.012201821484984771
+    },
+    {
+      "setting": "Relation: CAMELS-12",
+      "metric": "log-RMSE",
+      "n_units": 12,
+      "observed_mean": 0.0007522672144340026,
+      "between_unit_sd": 0.003277003521812678,
+      "mde_80": 0.002912123157031912
+    },
+    {
+      "setting": "Relation: CAMELS-120",
+      "metric": "log-RMSE",
+      "n_units": 120,
+      "observed_mean": -1.306955229073726e-06,
+      "between_unit_sd": 0.005850764495979297,
+      "mde_80": 0.001508534159952202
+    },
+    {
+      "setting": "Correspondence: survey XGB",
+      "metric": "AUROC",
+      "n_units": 3,
+      "observed_mean": 0.027295220784457175,
+      "between_unit_sd": 0.04419733288819541,
+      "mde_80": 0.14426201933271043
+    },
+    {
+      "setting": "Correspondence: survey HistGB",
+      "metric": "AUROC",
+      "n_units": 3,
+      "observed_mean": 0.02039948906469435,
+      "between_unit_sd": 0.048587808330609245,
+      "mde_80": 0.15859272238113944
+    }
+  ]
+}

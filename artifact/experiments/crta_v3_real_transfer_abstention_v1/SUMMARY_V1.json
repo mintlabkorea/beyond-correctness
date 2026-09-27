@@ -1,0 +1,130 @@
+{
+ "analysis_status": "review_triggered_transfer_abstention_summary_of_existing_prespecified_descriptive_cells",
+ "estimand": "correct documented measurement+correspondence source-transfer pipeline minus target-only with the same representation and target support",
+ "interpretation": "transfer-abstention comparison; not component-specific utility and not a pooled M+C+R estimand",
+ "metrics": {
+  "corrected": "f(A)=max(A,1-A), applied separately to each arm before differencing; positive favors source transfer",
+  "raw": "raw AUROC difference; positive favors source transfer"
+ },
+ "per_direction": {
+  "kn2nh": {
+   "mean_over_endpoints": 0.04471971697821936,
+   "n_endpoint_clusters": 10,
+   "positive_endpoint_clusters": 9,
+   "raw_mean_over_endpoints": 0.04494170080697323,
+   "raw_positive_endpoint_clusters": 9
+  },
+  "nh2kn": {
+   "mean_over_endpoints": 0.08678058640157378,
+   "n_endpoint_clusters": 10,
+   "positive_endpoint_clusters": 9,
+   "raw_mean_over_endpoints": 0.0872386069468128,
+   "raw_positive_endpoint_clusters": 9
+  }
+ },
+ "per_endpoint": {
+  "angina_history": 0.07346790292385913,
+  "arthritis_history": 0.055119971881618324,
+  "asthma_history": -0.00027450879792482747,
+  "cancer_history": 0.0696055883783906,
+  "current_smoking_status": 0.05417301008617233,
+  "diabetes_history": 0.05220746777984768,
+  "heart_attack_history": 0.09756551443017668,
+  "hypertension_history": 0.03672060859406598,
+  "kidney_disease_history": 0.12633068837276826,
+  "stroke_history": 0.09258527324999147
+ },
+ "per_endpoint_corrected": {
+  "angina_history": 0.07346790292385913,
+  "arthritis_history": 0.055119971881618324,
+  "asthma_history": -0.00027450879792482747,
+  "cancer_history": 0.0696055883783906,
+  "current_smoking_status": 0.05417301008617233,
+  "diabetes_history": 0.05220746777984768,
+  "heart_attack_history": 0.09756551443017668,
+  "hypertension_history": 0.03672060859406598,
+  "kidney_disease_history": 0.12633068837276826,
+  "stroke_history": 0.09258527324999147
+ },
+ "per_endpoint_raw": {
+  "angina_history": 0.07346790292385913,
+  "arthritis_history": 0.055119971881618324,
+  "asthma_history": -0.00027450879792482747,
+  "cancer_history": 0.0718956911045858,
+  "current_smoking_status": 0.05417301008617233,
+  "diabetes_history": 0.05220746777984768,
+  "heart_attack_history": 0.09756551443017668,
+  "hypertension_history": 0.03672060859406598,
+  "kidney_disease_history": 0.12744060751653763,
+  "stroke_history": 0.09258527324999147
+ },
+ "provenance": {
+  "freeze_sha256": "d44259313fe0c2033f46573721f83749cdd7b0f9dcf5f68b05fb7bbabc6297ae",
+  "input_summary_sha256": "4a7894ae820226409d0c93eb9861bf47f0f0581be5440633467dfeebae622dbe",
+  "summarizer_sha256": "1739c99044e2d20d3f895d454f33af6d403db94391655c069836e7834985b4a9"
+ },
+ "summary": {
+  "ci95_student_t": [
+   0.040617261030658866,
+   0.09088304234913426
+  ],
+  "endpoint_cluster_values": [
+   0.07346790292385913,
+   0.055119971881618324,
+   -0.00027450879792482747,
+   0.0696055883783906,
+   0.05417301008617233,
+   0.05220746777984768,
+   0.09756551443017668,
+   0.03672060859406598,
+   0.12633068837276826,
+   0.09258527324999147
+  ],
+  "mean": 0.06575015168989656,
+  "n_endpoint_clusters": 10,
+  "positive_endpoint_clusters": 9
+ },
+ "summary_corrected": {
+  "ci95_student_t": [
+   0.040617261030658866,
+   0.09088304234913426
+  ],
+  "endpoint_cluster_values": [
+   0.07346790292385913,
+   0.055119971881618324,
+   -0.00027450879792482747,
+   0.0696055883783906,
+   0.05417301008617233,
+   0.05220746777984768,
+   0.09756551443017668,
+   0.03672060859406598,
+   0.12633068837276826,
+   0.09258527324999147
+  ],
+  "mean": 0.06575015168989656,
+  "n_endpoint_clusters": 10,
+  "positive_endpoint_clusters": 9
+ },
+ "summary_raw": {
+  "ci95_student_t": [
+   0.04077977684762839,
+   0.09140053090615764
+  ],
+  "endpoint_cluster_values": [
+   0.07346790292385913,
+   0.055119971881618324,
+   -0.00027450879792482747,
+   0.0718956911045858,
+   0.05417301008617233,
+   0.05220746777984768,
+   0.09756551443017668,
+   0.03672060859406598,
+   0.12744060751653763,
+   0.09258527324999147
+  ],
+  "mean": 0.06609015387689302,
+  "n_endpoint_clusters": 10,
+  "positive_endpoint_clusters": 9
+ },
+ "support_k": 256
+}

@@ -1,0 +1,9 @@
+# Anonymity audit
+
+The final scan found no HIGH/ERROR identity finding. Generic, decoded-Python-string and local known-identity scans were run before ZIP creation; a separate private-pattern/AST/ripgrep audit also passed; the portable scan was repeated after fresh extraction. The one-page FINAL_ARTIFACT_REPORT.md is inside the archive; exact timing and archive hash/size are in the detailed report outside it.
+
+Checks include private paths, email/ORCID patterns, repository author/OS/host/institutional fingerprints, secrets/account/scheduler settings, excluded cache/credential directories, symlinks, PDF authors and all XML members in the five XLSX workbooks. Known identity strings and fingerprints are not distributed. Third-party bibliographic names/model identifiers are preserved.
+
+Human workbook creator/last-modifier/comment authors and nested ZIP/date metadata were anonymized; external hyperlinks/links were removed. All 2,791 final-master cell values match the original after declared role/path sanitization. No personnel content was read or copied. Sanitization changes distributed bytes; source_provenance.csv and source_copy_ledger.csv distinguish original hashes from distributed hashes. Current release hashes are in SHA256SUMS.
+
+The portable scanner is pattern based, not a proof against every possible identity string. It checks PDF author properties when pdfinfo is installed; the finalization environment included pdfinfo. A local author-specific scan and the separate independent_anonymity_audit.json supplement the portable one without exposing private identifiers. The prior release missed an obfuscated identity pattern in an obsolete verifier; that verifier is now excluded and the actual excluded source is tested as a positive regression. Only reviewed third-party bibliographic author matches are retained.

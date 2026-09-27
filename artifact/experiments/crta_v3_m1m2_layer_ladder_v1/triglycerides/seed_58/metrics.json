@@ -1,0 +1,193 @@
+{
+ "arms": [
+  "rung0_base",
+  "rung1_columns",
+  "rung2_grouping",
+  "rung3_measurement",
+  "pl_columns",
+  "pl_grouping",
+  "pl_measurement",
+  "is_target",
+  "loo_columns",
+  "loo_grouping",
+  "loo_measurement (alias of rung2_grouping)"
+ ],
+ "backbone": "xgboost_hist_d6_n300",
+ "benchmark_id": "std_cross_nh2kn_shared_anchorreset_fewshot_v1",
+ "dropped_members_by_group": {
+  "blood_lipid_measurements": [
+   "triglycerides"
+  ],
+  "body_measurements": [],
+  "diabetes_test_measurements": [],
+  "first_reading_blood_pressure": []
+ },
+ "feature_set": "ladder_all_slots_v1",
+ "member_slots": [
+  "height_cm",
+  "weight_kg",
+  "waist_cm",
+  "sbp",
+  "dbp",
+  "glucose",
+  "hba1c",
+  "total_cholesterol"
+ ],
+ "metric": "query_sd_normalized_rmse (lower is better)",
+ "n_pool": 6779,
+ "n_query": 12675,
+ "n_source": 45239,
+ "nrmse": {
+  "1024": {
+   "is_target": 0.9629145033988582,
+   "loo_columns": 0.8984853527182293,
+   "loo_grouping": 0.8832948940790258,
+   "loo_measurement": 0.8960191533489203,
+   "pl_columns": 0.9176058367512571,
+   "pl_grouping": 0.899153953767876,
+   "pl_measurement": 0.8991660382407587,
+   "rung0_base": 0.9612520964836545,
+   "rung1_columns": 0.8776261890042496,
+   "rung2_grouping": 0.8960191533489203,
+   "rung3_measurement": 0.8942338578717063
+  },
+  "256": {
+   "is_target": 0.9598013168252549,
+   "loo_columns": 0.9279506847063005,
+   "loo_grouping": 0.9102184110164202,
+   "loo_measurement": 0.9216945916818993,
+   "pl_columns": 0.9565348417084243,
+   "pl_grouping": 0.9116159480757112,
+   "pl_measurement": 0.9300214363699879,
+   "rung0_base": 0.9577446323856258,
+   "rung1_columns": 0.9079634985480526,
+   "rung2_grouping": 0.9216945916818993,
+   "rung3_measurement": 0.9227270721566525
+  },
+  "64": {
+   "is_target": 1.0141907225839253,
+   "loo_columns": 0.8947962896565305,
+   "loo_grouping": 0.9040243369054239,
+   "loo_measurement": 0.8949056530434215,
+   "pl_columns": 0.9724295974245798,
+   "pl_grouping": 0.9023087928221357,
+   "pl_measurement": 0.8978004235199455,
+   "rung0_base": 0.995881252689554,
+   "rung1_columns": 0.9000564755116219,
+   "rung2_grouping": 0.8949056530434215,
+   "rung3_measurement": 0.8969451767925876
+  }
+ },
+ "pl_columns_permutation": {
+  "dbp": "glucose",
+  "glucose": "hba1c",
+  "hba1c": "waist_cm",
+  "height_cm": "weight_kg",
+  "sbp": "total_cholesterol",
+  "total_cholesterol": "sbp",
+  "waist_cm": "dbp",
+  "weight_kg": "height_cm"
+ },
+ "pl_grouping_partition": {
+  "blood_lipid_measurements": [
+   "total_cholesterol"
+  ],
+  "body_measurements": [
+   "glucose",
+   "height_cm",
+   "waist_cm"
+  ],
+  "diabetes_test_measurements": [
+   "sbp",
+   "weight_kg"
+  ],
+  "first_reading_blood_pressure": [
+   "dbp",
+   "hba1c"
+  ]
+ },
+ "pl_measurement_table": {
+  "knhanes/ALL__bs3_1": {
+   "kind": "map",
+   "map": {
+    "1.0": 1.0,
+    "2.0": 0.0,
+    "8.0": 0.5
+   }
+  },
+  "knhanes/ALL__de1_dg": {
+   "kind": "map",
+   "map": {
+    "8.0": 1.0,
+    "9.0": 0.0
+   }
+  },
+  "knhanes/ALL__di1_dg": {
+   "kind": "map",
+   "map": {
+    "1.0": 0.0,
+    "9.0": 1.0
+   }
+  },
+  "knhanes/ALL__educ": {
+   "kind": "map",
+   "map": {
+    "1.0": 0.6666666666666666,
+    "2.0": 1.0,
+    "4.0": 0.0,
+    "9.0": 0.3333333333333333
+   }
+  },
+  "knhanes/ALL__sex": {
+   "kind": "map",
+   "map": {
+    "1.0": 1.0,
+    "2.0": 0.0
+   }
+  },
+  "nhanes/BPQ020": {
+   "kind": "map",
+   "map": {
+    "1.0": 1.0,
+    "9.0": 0.0
+   }
+  },
+  "nhanes/DIQ010": {
+   "kind": "map",
+   "map": {
+    "1.0": 0.0,
+    "2.0": 1.0,
+    "7.0": 0.5
+   }
+  },
+  "nhanes/DMDEDUC2": {
+   "kind": "map",
+   "map": {
+    "1.0": 0.75,
+    "2.0": 0.0,
+    "3.0": 0.5,
+    "7.0": 1.0,
+    "9.0": 0.25
+   }
+  },
+  "nhanes/RIAGENDR": {
+   "kind": "map",
+   "map": {
+    "1.0": 0.0,
+    "2.0": 1.0
+   }
+  },
+  "nhanes/SMQ040": {
+   "kind": "map",
+   "map": {
+    "1.0": 1.0,
+    "2.0": 0.5,
+    "7.0": 0.0
+   }
+  }
+ },
+ "primary_k": 256,
+ "seed": 58,
+ "target": "triglycerides",
+ "wall_seconds": 96.3
+}

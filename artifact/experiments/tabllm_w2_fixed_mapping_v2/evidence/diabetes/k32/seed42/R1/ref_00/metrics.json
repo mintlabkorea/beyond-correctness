@@ -1,0 +1,125 @@
+{
+  "audit_sha256": "44d8155f8300b1a4b142415092942838f8537ce93a3aff3dda7acc545a5864e2",
+  "cell": [
+    "diabetes",
+    32,
+    42,
+    "R1",
+    "ref_00"
+  ],
+  "checkpoint_sha256": "8fe7a00fb425dd331c7a021c9468d50a14ec2ca1998007e7ead5ce3111405729",
+  "completed_at_utc": "2026-09-10T16:26:07.910784+00:00",
+  "design_sha256": "5cdac31d67a015ebca58c1f61ac5f150b842e88eced1d18b254345199302899b",
+  "feature_to_identifier": {
+    "2-hour serum insulin": "feature_006",
+    "Age": "feature_001",
+    "Body mass index": "feature_007",
+    "Diabetes pedigree function": "feature_008",
+    "Diastolic blood pressure": "feature_003",
+    "Number of times pregnant": "feature_002",
+    "Plasma glucose concentration at 2 hours in an oral glucose tolerance test (GTT)": "feature_005",
+    "Triceps skin fold thickness": "feature_004"
+  },
+  "gpu": 2,
+  "metrics": {
+    "accuracy": 0.6298701298701299,
+    "auc": 0.6741496598639456
+  },
+  "model_files": {
+    ".gitattributes": "98ccb431c012ebfe976280fbd45aea4cec7409935868ccecf3954370f96732a1",
+    "README.md": "4d4029cb81f74695a450f4497dd12aa34f3e86bf98d3c480ed1231a015cebb45",
+    "config.json": "ef552104049013790961bd3624ac91cacdd8d9aabd09201f8b30e2f06693d97f",
+    "pytorch_model.bin": "806b1cfa7743d85fddc12bdba93b701c572816c7cc47108ee93fccffe4b6ee7f",
+    "special_tokens_map.json": "4720c0fddbe4c5991334f85ad7073d9bd0a294a8ba4641a2f8dab614ca825949",
+    "spiece.model": "d60acb128cf7b7f2536e8f38a5b18a05535c9e14c7a355904270e15b0945ea86",
+    "tokenizer_config.json": "b971dce1d2805c2a66da8657156e7114a30501c6ba602fc947c8bf607a3ead2d"
+  },
+  "original_provenance": {
+    "analysis_status": "frozen_ranon_support_ladder_evidence",
+    "arm": "list_stable_anonymous",
+    "dataset": "diabetes",
+    "final_trainable_state_sha256": "40d587eb6c9920336906551562ea1569f8d820eebd850f0e9c0cd96334c81520",
+    "ia3_checkpoint_sha256": "8fe7a00fb425dd331c7a021c9468d50a14ec2ca1998007e7ead5ce3111405729",
+    "initial_trainable_state_sha256": "2b3e0be8998a1d12a84a7b358726205cce0c83973fb198a1c37bdac6aa3fbd0b",
+    "metrics": {
+      "accuracy": 0.6298701298701299,
+      "auc": 0.6741496598639456
+    },
+    "model_audit": {
+      "checkpoint_key_count": 192,
+      "checkpoint_parameter_count": 1081344,
+      "frozen_parameter_count": 11136118784,
+      "initial_trainable_state_sha256": "2b3e0be8998a1d12a84a7b358726205cce0c83973fb198a1c37bdac6aa3fbd0b",
+      "missing_base_model_key_count": 752,
+      "parameter_dtype": "torch.bfloat16",
+      "precision_layout": "frozen=bfloat16, trainable_ia3=float32",
+      "trainable_parameter_count": 1081344,
+      "trainable_parameter_dtype": "torch.float32",
+      "trainable_tensor_count": 192
+    },
+    "model_path": "external/.cache/huggingface/hub/models--bigscience--T0/snapshots/1cfa27271f8085c29323c94bd659004b210f20b5",
+    "n_test": 154,
+    "n_train": 32,
+    "n_train_unique": 31,
+    "protocol_sha256": "915adb519be2159cb90fee6734bc872ef7449c409267f47ace105d5588b68a83",
+    "raw_and_serialization_tree_sha256": "383519d4b1efffe01c414c1f7b12db9c7abc04aefbde0e9957c44c5eaf038763",
+    "runner_sha256": "796d0bb0d17950a771c5e18fe732f955a4307956192e7329de23683e411f9447",
+    "seed": 42,
+    "shot": 32,
+    "tabllm_commit": "71f6647c523aa6fd35df94ad76207c4377248c49",
+    "test_prompt_sha256": "e46e78e6d3f75ab47633fdb337319314b945ed7651cd9d6c79907ddc01f63c2d",
+    "tfew_execution_commit": "114deced63ae722a368e06cb08ea956b20c393a6",
+    "train_membership_with_replacement": true,
+    "train_prompt_sha256": "7d4f1bf0fe8b65ca8f9abb3ee82a82028d0692b050a003045e5e3ff8fc69cd76",
+    "trained_checkpoint_sha256": "54f0de27f116fccb51e9eaf035fc3595830171bda32b764992103e6f56fb4fa0",
+    "training": {
+      "batch_order_sha256": "a40b3e9ea035984cf76aea2928501be00b3cefac5e6e15acd84e6ee09b7add49",
+      "executed_steps": 240,
+      "loss_first": {
+        "gradient_norm_pre_clip": 1.0356191396713257,
+        "lm_loss": 0.41553795337677,
+        "loss": 3.6944942474365234,
+        "lr": 0.00020833333333333335,
+        "mc_loss": 0.6434447765350342,
+        "unlikely_loss": 2.6355113983154297
+      },
+      "loss_last": {
+        "gradient_norm_pre_clip": 1.1626474857330322,
+        "lm_loss": 0.4460868835449219,
+        "loss": 1.120974063873291,
+        "lr": 0.0,
+        "mc_loss": 0.25550147891044617,
+        "unlikely_loss": 0.4193856418132782
+      },
+      "planned_steps": 240
+    },
+    "training_contract": {
+      "batch_size": 4,
+      "compute_dtype": "bfloat16 base and autocast with FP32 IA3 master parameters; temporary bfloat16 IA3 evaluation copy",
+      "epochs": 30,
+      "gradient_clip": 1.0,
+      "length_norm": 1,
+      "loss": "lm + multiple_choice + unlikely",
+      "lr": 0.003,
+      "max_length": 1024,
+      "optimizer": "Adafactor(scale_parameter=True, relative_step=False)",
+      "scheduler": "linear_decay_with_warmup",
+      "warmup_ratio": 0.06
+    },
+    "versions": {
+      "datasets": "2.14.7",
+      "numpy": "2.2.6",
+      "pandas": "2.3.3",
+      "python": "3.10.20",
+      "scikit_learn": "1.7.2",
+      "torch": "2.12.0.dev20260408+cu128",
+      "transformers": "4.30.0"
+    },
+    "wall_seconds": 67.856
+  },
+  "prompt_audit_sha256": "08fccddccc2baae0120b601fc44bf6399d6c2664d91f31ea8c1d8ab7fac9b708",
+  "reused_from": "external/tabllm_ranon_support_ladder_v1/evidence_v1/list_stable_anonymous/diabetes/k32/seed42",
+  "seconds": 0.015636939002433792,
+  "source_metrics_sha256": "d110b0049f9d12603dbcc7a9476504d4aa243c353e09f0debea9bed33fd0d291",
+  "split_sha256": "119e48aab7999475d82d4258dedb0875d54fa2613c8c31aae1dbda2a1942c831"
+}

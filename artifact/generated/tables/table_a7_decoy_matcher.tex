@@ -1,0 +1,14 @@
+\begin{table}[t]
+\caption{Open-world decoy matcher over 1,315 target candidates. Gold top-1 accuracy is measured with the true construct present. ``Recall at zero false bindings'' is the largest recall retained by a single score threshold while binding none of the nine construct-level orphans. The last column reports the frozen operating summary.}
+\label{tab:app-correspondence-decoy-matcher}
+\label{tab:app_decoy_matcher}
+\centering\scriptsize
+\setlength{\tabcolsep}{5pt}
+\begin{tabular}{P{0.25\linewidth}cccP{0.30\linewidth}}
+\toprule Matcher evidence & Gold top-1 & Recall at zero FBR & Orphans & Frozen operating summary \\
+\midrule
+Name & 2/9 & 0/9 & 9 & no operating point meeting the 8/9 recall target \\
+Name + unit & 4/9 & 2/9 & 9 & no operating point meeting the 8/9 recall target \\
+Name + unit + codebook & 9/9 & 8/9 & 9 & threshold: 8/9 recall, 0 FBR; margin: 9/9 recall, 5 FBR \\
+\bottomrule\end{tabular}
+\end{table}

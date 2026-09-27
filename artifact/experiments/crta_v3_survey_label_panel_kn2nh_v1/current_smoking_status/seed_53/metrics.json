@@ -1,0 +1,53 @@
+{
+ "arms": [
+  "raw",
+  "pipeline_table",
+  "llm_table",
+  "placebo_table"
+ ],
+ "auroc": {
+  "1024": {
+   "llm_table": 0.7186024163873946,
+   "pipeline_table": 0.7093238993442718,
+   "placebo_table": 0.30892981281055343,
+   "raw": 0.36208494162918897
+  },
+  "256": {
+   "llm_table": 0.6832011994764071,
+   "pipeline_table": 0.664839767873901,
+   "placebo_table": 0.38074515030508305,
+   "raw": 0.42006935295550546
+  },
+  "64": {
+   "llm_table": 0.7000060172026664,
+   "pipeline_table": 0.6774496264032013,
+   "placebo_table": 0.46953463304910925,
+   "raw": 0.44079668299848773
+  }
+ },
+ "backbone": "xgboost_hist_d6_n300_regression_ranked",
+ "benchmark_id": "std_cross_kn2nh_shared_anchorreset_fewshot_v1",
+ "eval_prevalence": 0.41697119851347164,
+ "feature_set": "shared_clinical_plus_survey_v1",
+ "metric": "auroc_vs_documented_target_binary (higher is better)",
+ "n_eval": 16145,
+ "n_pool": 1548,
+ "n_source": 75032,
+ "placebo_label_maps": {
+  "source": {
+   "1.0": 1.0,
+   "3.0": 0.0,
+   "8.0": 0.5
+  },
+  "target": {
+   "1.0": 0.0,
+   "3.0": 1.0,
+   "7.0": 0.5
+  }
+ },
+ "primary_k": 256,
+ "seed": 53,
+ "target": "current_smoking_status",
+ "target_set": "survey_label_panel_v1",
+ "wall_seconds": 35.1
+}

@@ -1,0 +1,68 @@
+{
+ "arms": [
+  "a11_stage_columns"
+ ],
+ "auroc": {
+  "256": {
+   "a11_stage_columns": 0.8887861206872391
+  }
+ },
+ "backbone": "xgboost_hist_d6_n300_regression_ranked",
+ "benchmark_id": "std_cross_nh2kn_shared_anchorreset_fewshot_v1",
+ "feature_set": "stage_factorial_all_v1",
+ "metric": "auroc_vs_documented_target_binary (higher is better)",
+ "n_eval": 5139,
+ "n_pool": 15129,
+ "n_source": 33141,
+ "pl_columns_permutation": {
+  "dbp": "total_cholesterol",
+  "glucose": "dbp",
+  "hba1c": "waist_cm",
+  "height_cm": "weight_kg",
+  "sbp": "hba1c",
+  "total_cholesterol": "glucose",
+  "triglycerides": "height_cm",
+  "waist_cm": "sbp",
+  "weight_kg": "triglycerides"
+ },
+ "pl_relation_pairs": [
+  [
+   "total_cholesterol",
+   "current_smoking_status"
+  ],
+  [
+   "glucose",
+   "total_cholesterol"
+  ],
+  [
+   "sex",
+   "hematocrit"
+  ],
+  [
+   "age",
+   "education_level"
+  ],
+  [
+   "dbp",
+   "height_cm"
+  ],
+  [
+   "current_smoking_status",
+   "sex"
+  ]
+ ],
+ "primary_k": 256,
+ "seed": 54,
+ "target": "kidney_disease_history",
+ "wall_seconds": 30.6,
+ "wrong_label_maps": {
+  "source": {
+   "1.0": 1.0,
+   "9.0": 0.0
+  },
+  "target": {
+   "0.0": 0.0,
+   "8.0": 1.0
+  }
+ }
+}

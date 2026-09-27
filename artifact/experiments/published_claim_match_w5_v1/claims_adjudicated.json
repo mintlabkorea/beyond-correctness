@@ -1,0 +1,3739 @@
+[
+  {
+    "comparison_id": "C01-A",
+    "study": "LIFT",
+    "claim_content": "Yes",
+    "claim_utility": "Yes",
+    "descriptive_only": "No",
+    "claim_text": "Second, we observe that correctly incorporating feature names helps boost the performances of LIFT for datasets except for CMC.",
+    "claim_location": "C01-A-W3: PDF p. 8, source lines 454–462 (iclr_latex_v3/design_audit/sources/C01_main.txt)",
+    "linkage": "explicit_group",
+    "claim_scope": "Feature names associated with feature values; prompt format I: Correct-Names I versus Shuffled-Names I",
+    "rationale": "The shared correct/shuffled/unnamed comparison interpretation attributes prediction changes to correct feature/value association and explicitly says correct names boost performance. The benefit is qualified to datasets other than CMC, and this row retains its original prompt format and comparator.",
+    "coder_id": "third_same_model_AI_adjudicator",
+    "quote_evidence": [
+      {
+        "quote": "Second, we observe that correctly incorporating feature names helps boost the performances of LIFT for datasets except for CMC.",
+        "window_id": "C01-A-W3",
+        "source_path": "iclr_latex_v3/design_audit/sources/C01_main.txt",
+        "pdf_page": 8,
+        "start_line": 454,
+        "end_line": 462
+      },
+      {
+        "quote": "Third, if we use similar prompts with shuffled feature names (Shuffled-Names I, II), then the performance of LIFT drops by a significant margin. These results imply that the aforementioned performance improvements are indeed due to proper prompting with correct feature/value association.",
+        "window_id": "C01-A-W3",
+        "source_path": "iclr_latex_v3/design_audit/sources/C01_main.txt",
+        "pdf_page": 8,
+        "start_line": 454,
+        "end_line": 462
+      }
+    ],
+    "complete_window_inventory": [
+      {
+        "window_id": "C01-A-W1",
+        "source_path": "iclr_latex_v3/design_audit/sources/C01_main.txt",
+        "pdf_page": 7,
+        "start_line": 428,
+        "end_line": 431,
+        "role": "introducing_paragraph_part_1"
+      },
+      {
+        "window_id": "C01-A-W2",
+        "source_path": "iclr_latex_v3/design_audit/sources/C01_main.txt",
+        "pdf_page": 7,
+        "start_line": 435,
+        "end_line": 444,
+        "role": "table_9_caption"
+      },
+      {
+        "window_id": "C01-A-W3",
+        "source_path": "iclr_latex_v3/design_audit/sources/C01_main.txt",
+        "pdf_page": 8,
+        "start_line": 454,
+        "end_line": 462,
+        "role": "introducing_paragraph_continuation_interpretation_and_subsection_conclusion"
+      },
+      {
+        "window_id": "C01-A-W4",
+        "source_path": "iclr_latex_v3/design_audit/sources/C01_main.txt",
+        "pdf_page": 5,
+        "start_line": 247,
+        "end_line": 249,
+        "role": "explicit_table_9_linked_main_findings_summary"
+      }
+    ],
+    "coverage_notes": "Main Sec 4.1 and Table 9 complete, interrupted by table float. Shared interpretation addresses the correct/shuffled/unnamed group; each unit retains its original prompt format. D.2.1 reviewed for coverage; later GPT-J/Table 34 and regression/Table 35 are separate comparisons, not added. Generic abstract/conclusion assertions without a particular comparison link excluded. No separate following paragraph before Sec 4.2.",
+    "source_version_caveat": "Official published PDF archived locally; raw reading text regenerated from the same archived PDF where needed.",
+    "adjudication_type": "Third same-model AI adjudication; not human validation",
+    "disagreement_fields": [
+      "linkage"
+    ],
+    "raw_labels": {
+      "A": {
+        "claim_content": "Yes",
+        "claim_utility": "Yes",
+        "descriptive_only": "No",
+        "linkage": "explicit_group"
+      },
+      "B": {
+        "claim_content": "Yes",
+        "claim_utility": "Yes",
+        "descriptive_only": "No",
+        "linkage": "explicit_comparison"
+      }
+    },
+    "adjudication_rationale": "W3 explicitly interprets the correct/shuffled/unnamed result group as a consequence of correct feature/value association and says correct names help boost performance except on CMC; this satisfies content and conditional utility. The shared paragraph supports the fixed prompt-format unit, with group linkage retained because its concluding interpretation spans the named variants.",
+    "additional_claim_quotes": [
+      "Third, if we use similar prompts with shuffled feature names (Shuffled-Names I, II), then the performance of LIFT drops by a significant margin. These results imply that the aforementioned performance improvements are indeed due to proper prompting with correct feature/value association."
+    ],
+    "window_inventory": [
+      {
+        "window_id": "C01-A-W1",
+        "source_path": "iclr_latex_v3/design_audit/sources/C01_main.txt",
+        "start_line": 428,
+        "end_line": 431,
+        "pdf_page": 7,
+        "role": "introducing_paragraph_part_1"
+      },
+      {
+        "window_id": "C01-A-W2",
+        "source_path": "iclr_latex_v3/design_audit/sources/C01_main.txt",
+        "start_line": 435,
+        "end_line": 444,
+        "pdf_page": 7,
+        "role": "table_9_caption"
+      },
+      {
+        "window_id": "C01-A-W3",
+        "source_path": "iclr_latex_v3/design_audit/sources/C01_main.txt",
+        "start_line": 454,
+        "end_line": 462,
+        "pdf_page": 8,
+        "role": "introducing_paragraph_continuation_interpretation_and_subsection_conclusion"
+      },
+      {
+        "window_id": "C01-A-W4",
+        "source_path": "iclr_latex_v3/design_audit/sources/C01_main.txt",
+        "start_line": 247,
+        "end_line": 249,
+        "pdf_page": 5,
+        "role": "explicit_table_9_linked_main_findings_summary"
+      }
+    ],
+    "adjudication_action": "resolve_disagreement",
+    "agreed_row_review": "All windows reviewed for exact quotation, comparison attribution and semantic scope; no agreed claim-axis correction required."
+  },
+  {
+    "comparison_id": "C01-B",
+    "study": "LIFT",
+    "claim_content": "Yes",
+    "claim_utility": "Yes",
+    "descriptive_only": "No",
+    "claim_text": "Second, we observe that correctly incorporating feature names helps boost the performances of LIFT for datasets except for CMC.",
+    "claim_location": "C01-B-W3: PDF p. 8, source lines 454–462 (iclr_latex_v3/design_audit/sources/C01_main.txt)",
+    "linkage": "explicit_group",
+    "claim_scope": "Feature names associated with feature values; prompt format II: Correct-Names II versus Shuffled-Names II",
+    "rationale": "The shared correct/shuffled/unnamed comparison interpretation attributes prediction changes to correct feature/value association and explicitly says correct names boost performance. The benefit is qualified to datasets other than CMC, and this row retains its original prompt format and comparator.",
+    "coder_id": "third_same_model_AI_adjudicator",
+    "quote_evidence": [
+      {
+        "quote": "Second, we observe that correctly incorporating feature names helps boost the performances of LIFT for datasets except for CMC.",
+        "window_id": "C01-B-W3",
+        "source_path": "iclr_latex_v3/design_audit/sources/C01_main.txt",
+        "pdf_page": 8,
+        "start_line": 454,
+        "end_line": 462
+      },
+      {
+        "quote": "Third, if we use similar prompts with shuffled feature names (Shuffled-Names I, II), then the performance of LIFT drops by a significant margin. These results imply that the aforementioned performance improvements are indeed due to proper prompting with correct feature/value association.",
+        "window_id": "C01-B-W3",
+        "source_path": "iclr_latex_v3/design_audit/sources/C01_main.txt",
+        "pdf_page": 8,
+        "start_line": 454,
+        "end_line": 462
+      }
+    ],
+    "complete_window_inventory": [
+      {
+        "window_id": "C01-B-W1",
+        "source_path": "iclr_latex_v3/design_audit/sources/C01_main.txt",
+        "pdf_page": 7,
+        "start_line": 428,
+        "end_line": 431,
+        "role": "introducing_paragraph_part_1"
+      },
+      {
+        "window_id": "C01-B-W2",
+        "source_path": "iclr_latex_v3/design_audit/sources/C01_main.txt",
+        "pdf_page": 7,
+        "start_line": 435,
+        "end_line": 444,
+        "role": "table_9_caption"
+      },
+      {
+        "window_id": "C01-B-W3",
+        "source_path": "iclr_latex_v3/design_audit/sources/C01_main.txt",
+        "pdf_page": 8,
+        "start_line": 454,
+        "end_line": 462,
+        "role": "introducing_paragraph_continuation_interpretation_and_subsection_conclusion"
+      },
+      {
+        "window_id": "C01-B-W4",
+        "source_path": "iclr_latex_v3/design_audit/sources/C01_main.txt",
+        "pdf_page": 5,
+        "start_line": 247,
+        "end_line": 249,
+        "role": "explicit_table_9_linked_main_findings_summary"
+      }
+    ],
+    "coverage_notes": "Main Sec 4.1 and Table 9 complete, interrupted by table float. Shared interpretation addresses the correct/shuffled/unnamed group; each unit retains its original prompt format. D.2.1 reviewed for coverage; later GPT-J/Table 34 and regression/Table 35 are separate comparisons, not added. Generic abstract/conclusion assertions without a particular comparison link excluded. No separate following paragraph before Sec 4.2.",
+    "source_version_caveat": "Official published PDF archived locally; raw reading text regenerated from the same archived PDF where needed.",
+    "adjudication_type": "Third same-model AI adjudication; not human validation",
+    "disagreement_fields": [
+      "linkage"
+    ],
+    "raw_labels": {
+      "A": {
+        "claim_content": "Yes",
+        "claim_utility": "Yes",
+        "descriptive_only": "No",
+        "linkage": "explicit_group"
+      },
+      "B": {
+        "claim_content": "Yes",
+        "claim_utility": "Yes",
+        "descriptive_only": "No",
+        "linkage": "explicit_comparison"
+      }
+    },
+    "adjudication_rationale": "W3 explicitly interprets the correct/shuffled/unnamed result group as a consequence of correct feature/value association and says correct names help boost performance except on CMC; this satisfies content and conditional utility. The shared paragraph supports the fixed prompt-format unit, with group linkage retained because its concluding interpretation spans the named variants.",
+    "additional_claim_quotes": [
+      "Third, if we use similar prompts with shuffled feature names (Shuffled-Names I, II), then the performance of LIFT drops by a significant margin. These results imply that the aforementioned performance improvements are indeed due to proper prompting with correct feature/value association."
+    ],
+    "window_inventory": [
+      {
+        "window_id": "C01-B-W1",
+        "source_path": "iclr_latex_v3/design_audit/sources/C01_main.txt",
+        "start_line": 428,
+        "end_line": 431,
+        "pdf_page": 7,
+        "role": "introducing_paragraph_part_1"
+      },
+      {
+        "window_id": "C01-B-W2",
+        "source_path": "iclr_latex_v3/design_audit/sources/C01_main.txt",
+        "start_line": 435,
+        "end_line": 444,
+        "pdf_page": 7,
+        "role": "table_9_caption"
+      },
+      {
+        "window_id": "C01-B-W3",
+        "source_path": "iclr_latex_v3/design_audit/sources/C01_main.txt",
+        "start_line": 454,
+        "end_line": 462,
+        "pdf_page": 8,
+        "role": "introducing_paragraph_continuation_interpretation_and_subsection_conclusion"
+      },
+      {
+        "window_id": "C01-B-W4",
+        "source_path": "iclr_latex_v3/design_audit/sources/C01_main.txt",
+        "start_line": 247,
+        "end_line": 249,
+        "pdf_page": 5,
+        "role": "explicit_table_9_linked_main_findings_summary"
+      }
+    ],
+    "adjudication_action": "resolve_disagreement",
+    "agreed_row_review": "All windows reviewed for exact quotation, comparison attribution and semantic scope; no agreed claim-axis correction required."
+  },
+  {
+    "comparison_id": "C01-C",
+    "study": "LIFT",
+    "claim_content": "Yes",
+    "claim_utility": "Yes",
+    "descriptive_only": "No",
+    "claim_text": "Second, we observe that correctly incorporating feature names helps boost the performances of LIFT for datasets except for CMC.",
+    "claim_location": "C01-C-W3: PDF p. 8, source lines 454–462 (iclr_latex_v3/design_audit/sources/C01_main.txt)",
+    "linkage": "explicit_group",
+    "claim_scope": "Names and contextual information in prompts; prompt format I: Correct-Names I versus W/o Names I (Table 9)",
+    "rationale": "The shared correct/shuffled/unnamed comparison interpretation attributes prediction changes to correct feature/value association and explicitly says correct names boost performance. The benefit is qualified to datasets other than CMC, and this row retains its original prompt format and comparator.",
+    "coder_id": "third_same_model_AI_adjudicator",
+    "quote_evidence": [
+      {
+        "quote": "Second, we observe that correctly incorporating feature names helps boost the performances of LIFT for datasets except for CMC.",
+        "window_id": "C01-C-W3",
+        "source_path": "iclr_latex_v3/design_audit/sources/C01_main.txt",
+        "pdf_page": 8,
+        "start_line": 454,
+        "end_line": 462
+      },
+      {
+        "quote": "Third, if we use similar prompts with shuffled feature names (Shuffled-Names I, II), then the performance of LIFT drops by a significant margin. These results imply that the aforementioned performance improvements are indeed due to proper prompting with correct feature/value association.",
+        "window_id": "C01-C-W3",
+        "source_path": "iclr_latex_v3/design_audit/sources/C01_main.txt",
+        "pdf_page": 8,
+        "start_line": 454,
+        "end_line": 462
+      }
+    ],
+    "complete_window_inventory": [
+      {
+        "window_id": "C01-C-W1",
+        "source_path": "iclr_latex_v3/design_audit/sources/C01_main.txt",
+        "pdf_page": 7,
+        "start_line": 428,
+        "end_line": 431,
+        "role": "introducing_paragraph_part_1"
+      },
+      {
+        "window_id": "C01-C-W2",
+        "source_path": "iclr_latex_v3/design_audit/sources/C01_main.txt",
+        "pdf_page": 7,
+        "start_line": 435,
+        "end_line": 444,
+        "role": "table_9_caption"
+      },
+      {
+        "window_id": "C01-C-W3",
+        "source_path": "iclr_latex_v3/design_audit/sources/C01_main.txt",
+        "pdf_page": 8,
+        "start_line": 454,
+        "end_line": 462,
+        "role": "introducing_paragraph_continuation_interpretation_and_subsection_conclusion"
+      },
+      {
+        "window_id": "C01-C-W4",
+        "source_path": "iclr_latex_v3/design_audit/sources/C01_main.txt",
+        "pdf_page": 5,
+        "start_line": 247,
+        "end_line": 249,
+        "role": "explicit_table_9_linked_main_findings_summary"
+      }
+    ],
+    "coverage_notes": "Main Sec 4.1 and Table 9 complete, interrupted by table float. Shared interpretation addresses the correct/shuffled/unnamed group; each unit retains its original prompt format. D.2.1 reviewed for coverage; later GPT-J/Table 34 and regression/Table 35 are separate comparisons, not added. Generic abstract/conclusion assertions without a particular comparison link excluded. No separate following paragraph before Sec 4.2.",
+    "source_version_caveat": "Official published PDF archived locally; raw reading text regenerated from the same archived PDF where needed.",
+    "adjudication_type": "Third same-model AI adjudication; not human validation",
+    "disagreement_fields": [],
+    "raw_labels": {
+      "A": {
+        "claim_content": "Yes",
+        "claim_utility": "Yes",
+        "descriptive_only": "No",
+        "linkage": "explicit_group"
+      },
+      "B": {
+        "claim_content": "Yes",
+        "claim_utility": "Yes",
+        "descriptive_only": "No",
+        "linkage": "explicit_group"
+      }
+    },
+    "adjudication_rationale": "W3 explicitly interprets the correct/shuffled/unnamed result group as a consequence of correct feature/value association and says correct names help boost performance except on CMC; this satisfies content and conditional utility. The shared paragraph supports the fixed prompt-format unit, with group linkage retained because its concluding interpretation spans the named variants.",
+    "additional_claim_quotes": [
+      "Third, if we use similar prompts with shuffled feature names (Shuffled-Names I, II), then the performance of LIFT drops by a significant margin. These results imply that the aforementioned performance improvements are indeed due to proper prompting with correct feature/value association."
+    ],
+    "window_inventory": [
+      {
+        "window_id": "C01-C-W1",
+        "source_path": "iclr_latex_v3/design_audit/sources/C01_main.txt",
+        "start_line": 428,
+        "end_line": 431,
+        "pdf_page": 7,
+        "role": "introducing_paragraph_part_1"
+      },
+      {
+        "window_id": "C01-C-W2",
+        "source_path": "iclr_latex_v3/design_audit/sources/C01_main.txt",
+        "start_line": 435,
+        "end_line": 444,
+        "pdf_page": 7,
+        "role": "table_9_caption"
+      },
+      {
+        "window_id": "C01-C-W3",
+        "source_path": "iclr_latex_v3/design_audit/sources/C01_main.txt",
+        "start_line": 454,
+        "end_line": 462,
+        "pdf_page": 8,
+        "role": "introducing_paragraph_continuation_interpretation_and_subsection_conclusion"
+      },
+      {
+        "window_id": "C01-C-W4",
+        "source_path": "iclr_latex_v3/design_audit/sources/C01_main.txt",
+        "start_line": 247,
+        "end_line": 249,
+        "pdf_page": 5,
+        "role": "explicit_table_9_linked_main_findings_summary"
+      }
+    ],
+    "adjudication_action": "agree",
+    "agreed_row_review": "All windows reviewed for exact quotation, comparison attribution and semantic scope; no agreed claim-axis correction required."
+  },
+  {
+    "comparison_id": "C01-D",
+    "study": "LIFT",
+    "claim_content": "Yes",
+    "claim_utility": "Yes",
+    "descriptive_only": "No",
+    "claim_text": "Second, we observe that correctly incorporating feature names helps boost the performances of LIFT for datasets except for CMC.",
+    "claim_location": "C01-D-W3: PDF p. 8, source lines 454–462 (iclr_latex_v3/design_audit/sources/C01_main.txt)",
+    "linkage": "explicit_group",
+    "claim_scope": "Names and contextual information in prompts; prompt format II: Correct-Names II versus W/o Names II (Table 9)",
+    "rationale": "The shared correct/shuffled/unnamed comparison interpretation attributes prediction changes to correct feature/value association and explicitly says correct names boost performance. The benefit is qualified to datasets other than CMC, and this row retains its original prompt format and comparator.",
+    "coder_id": "third_same_model_AI_adjudicator",
+    "quote_evidence": [
+      {
+        "quote": "Second, we observe that correctly incorporating feature names helps boost the performances of LIFT for datasets except for CMC.",
+        "window_id": "C01-D-W3",
+        "source_path": "iclr_latex_v3/design_audit/sources/C01_main.txt",
+        "pdf_page": 8,
+        "start_line": 454,
+        "end_line": 462
+      },
+      {
+        "quote": "Third, if we use similar prompts with shuffled feature names (Shuffled-Names I, II), then the performance of LIFT drops by a significant margin. These results imply that the aforementioned performance improvements are indeed due to proper prompting with correct feature/value association.",
+        "window_id": "C01-D-W3",
+        "source_path": "iclr_latex_v3/design_audit/sources/C01_main.txt",
+        "pdf_page": 8,
+        "start_line": 454,
+        "end_line": 462
+      }
+    ],
+    "complete_window_inventory": [
+      {
+        "window_id": "C01-D-W1",
+        "source_path": "iclr_latex_v3/design_audit/sources/C01_main.txt",
+        "pdf_page": 7,
+        "start_line": 428,
+        "end_line": 431,
+        "role": "introducing_paragraph_part_1"
+      },
+      {
+        "window_id": "C01-D-W2",
+        "source_path": "iclr_latex_v3/design_audit/sources/C01_main.txt",
+        "pdf_page": 7,
+        "start_line": 435,
+        "end_line": 444,
+        "role": "table_9_caption"
+      },
+      {
+        "window_id": "C01-D-W3",
+        "source_path": "iclr_latex_v3/design_audit/sources/C01_main.txt",
+        "pdf_page": 8,
+        "start_line": 454,
+        "end_line": 462,
+        "role": "introducing_paragraph_continuation_interpretation_and_subsection_conclusion"
+      },
+      {
+        "window_id": "C01-D-W4",
+        "source_path": "iclr_latex_v3/design_audit/sources/C01_main.txt",
+        "pdf_page": 5,
+        "start_line": 247,
+        "end_line": 249,
+        "role": "explicit_table_9_linked_main_findings_summary"
+      }
+    ],
+    "coverage_notes": "Main Sec 4.1 and Table 9 complete, interrupted by table float. Shared interpretation addresses the correct/shuffled/unnamed group; each unit retains its original prompt format. D.2.1 reviewed for coverage; later GPT-J/Table 34 and regression/Table 35 are separate comparisons, not added. Generic abstract/conclusion assertions without a particular comparison link excluded. No separate following paragraph before Sec 4.2.",
+    "source_version_caveat": "Official published PDF archived locally; raw reading text regenerated from the same archived PDF where needed.",
+    "adjudication_type": "Third same-model AI adjudication; not human validation",
+    "disagreement_fields": [],
+    "raw_labels": {
+      "A": {
+        "claim_content": "Yes",
+        "claim_utility": "Yes",
+        "descriptive_only": "No",
+        "linkage": "explicit_group"
+      },
+      "B": {
+        "claim_content": "Yes",
+        "claim_utility": "Yes",
+        "descriptive_only": "No",
+        "linkage": "explicit_group"
+      }
+    },
+    "adjudication_rationale": "W3 explicitly interprets the correct/shuffled/unnamed result group as a consequence of correct feature/value association and says correct names help boost performance except on CMC; this satisfies content and conditional utility. The shared paragraph supports the fixed prompt-format unit, with group linkage retained because its concluding interpretation spans the named variants.",
+    "additional_claim_quotes": [
+      "Third, if we use similar prompts with shuffled feature names (Shuffled-Names I, II), then the performance of LIFT drops by a significant margin. These results imply that the aforementioned performance improvements are indeed due to proper prompting with correct feature/value association."
+    ],
+    "window_inventory": [
+      {
+        "window_id": "C01-D-W1",
+        "source_path": "iclr_latex_v3/design_audit/sources/C01_main.txt",
+        "start_line": 428,
+        "end_line": 431,
+        "pdf_page": 7,
+        "role": "introducing_paragraph_part_1"
+      },
+      {
+        "window_id": "C01-D-W2",
+        "source_path": "iclr_latex_v3/design_audit/sources/C01_main.txt",
+        "start_line": 435,
+        "end_line": 444,
+        "pdf_page": 7,
+        "role": "table_9_caption"
+      },
+      {
+        "window_id": "C01-D-W3",
+        "source_path": "iclr_latex_v3/design_audit/sources/C01_main.txt",
+        "start_line": 454,
+        "end_line": 462,
+        "pdf_page": 8,
+        "role": "introducing_paragraph_continuation_interpretation_and_subsection_conclusion"
+      },
+      {
+        "window_id": "C01-D-W4",
+        "source_path": "iclr_latex_v3/design_audit/sources/C01_main.txt",
+        "start_line": 247,
+        "end_line": 249,
+        "pdf_page": 5,
+        "role": "explicit_table_9_linked_main_findings_summary"
+      }
+    ],
+    "adjudication_action": "agree",
+    "agreed_row_review": "All windows reviewed for exact quotation, comparison attribution and semantic scope; no agreed claim-axis correction required."
+  },
+  {
+    "comparison_id": "C03-A",
+    "study": "TabLLM",
+    "claim_content": "Yes",
+    "claim_utility": "No",
+    "descriptive_only": "No",
+    "claim_text": "This indicates that if enough training examples are available, the serialization approach does not matter, but that TabLLM relies on information from the feature names in the zero-shot and few-shot regime, and also relies on the association of the names with the correct values.",
+    "claim_location": "C03-A-W4: PDF p. 6, source lines 542–557 (experiments/published_claim_match_w5_v1/sources_reading/C03_raw.txt)",
+    "linkage": "explicit_comparison",
+    "claim_scope": "Column-name/value associations: List Template versus List Permuted Names",
+    "rationale": "The interpretation explicitly asserts reliance on the relevant names, name/value associations, or values in zero/few-shot prediction, with equalization at larger training sizes. The complete window does not separately interpret this intervention as semantic knowledge benefiting prediction; observed poorer performance and reliance are not by themselves a utility claim.",
+    "coder_id": "third_same_model_AI_adjudicator",
+    "quote_evidence": [
+      {
+        "quote": "This indicates that if enough training examples are available, the serialization approach does not matter, but that TabLLM relies on information from the feature names in the zero-shot and few-shot regime, and also relies on the association of the names with the correct values.",
+        "window_id": "C03-A-W4",
+        "source_path": "experiments/published_claim_match_w5_v1/sources_reading/C03_raw.txt",
+        "pdf_page": 6,
+        "start_line": 542,
+        "end_line": 557
+      }
+    ],
+    "complete_window_inventory": [
+      {
+        "window_id": "C03-A-W1",
+        "source_path": "experiments/published_claim_match_w5_v1/sources_reading/C03_raw.txt",
+        "pdf_page": 5,
+        "start_line": 487,
+        "end_line": 505,
+        "role": "subsection_intro_and_preceding_paragraph"
+      },
+      {
+        "window_id": "C03-A-W2",
+        "source_path": "experiments/published_claim_match_w5_v1/sources_reading/C03_raw.txt",
+        "pdf_page": 6,
+        "start_line": 531,
+        "end_line": 534,
+        "role": "figure_2_caption"
+      },
+      {
+        "window_id": "C03-A-W3",
+        "source_path": "experiments/published_claim_match_w5_v1/sources_reading/C03_raw.txt",
+        "pdf_page": 6,
+        "start_line": 535,
+        "end_line": 541,
+        "role": "preceding_serialization_paragraph_continuation"
+      },
+      {
+        "window_id": "C03-A-W4",
+        "source_path": "experiments/published_claim_match_w5_v1/sources_reading/C03_raw.txt",
+        "pdf_page": 6,
+        "start_line": 542,
+        "end_line": 557,
+        "role": "interpretation_of_three_audited_serializations"
+      },
+      {
+        "window_id": "C03-A-W5",
+        "source_path": "experiments/published_claim_match_w5_v1/sources_reading/C03_raw.txt",
+        "pdf_page": 6,
+        "start_line": 558,
+        "end_line": 568,
+        "role": "subsection_conclusion_part_1"
+      },
+      {
+        "window_id": "C03-A-W6",
+        "source_path": "experiments/published_claim_match_w5_v1/sources_reading/C03_raw.txt",
+        "pdf_page": 6,
+        "start_line": 598,
+        "end_line": 601,
+        "role": "subsection_conclusion_part_2"
+      }
+    ],
+    "coverage_notes": "Full Sec 5.1 prose retained around Figure 2, including neighboring serializers and healthcare context; interpret only statements linked to this unit. Figure 3 float, numeric plots, unrelated main model comparisons, and generic discussion/abstract claims excluded. Supplement tables give numeric detail rather than a separate interpretation of these three comparisons.",
+    "source_version_caveat": "Official published PDF archived locally; raw reading text regenerated from the same archived PDF where needed.",
+    "adjudication_type": "Third same-model AI adjudication; not human validation",
+    "disagreement_fields": [],
+    "raw_labels": {
+      "A": {
+        "claim_content": "Yes",
+        "claim_utility": "No",
+        "descriptive_only": "No",
+        "linkage": "explicit_comparison"
+      },
+      "B": {
+        "claim_content": "Yes",
+        "claim_utility": "No",
+        "descriptive_only": "No",
+        "linkage": "explicit_comparison"
+      }
+    },
+    "adjudication_rationale": "W4 explicitly asserts reliance on feature names, name/value association, or correct values as appropriate to this fixed serialization, in the zero/few-shot regime. It supplies a use interpretation, while the positive benefit interpretation in W1 concerns Text Template versus List Template and cannot supply utility for this intervention; the complete remaining window adds no utility claim.",
+    "additional_claim_quotes": [],
+    "window_inventory": [
+      {
+        "window_id": "C03-A-W1",
+        "source_path": "experiments/published_claim_match_w5_v1/sources_reading/C03_raw.txt",
+        "start_line": 487,
+        "end_line": 505,
+        "pdf_page": 5,
+        "role": "subsection_intro_and_preceding_paragraph"
+      },
+      {
+        "window_id": "C03-A-W2",
+        "source_path": "experiments/published_claim_match_w5_v1/sources_reading/C03_raw.txt",
+        "start_line": 531,
+        "end_line": 534,
+        "pdf_page": 6,
+        "role": "figure_2_caption"
+      },
+      {
+        "window_id": "C03-A-W3",
+        "source_path": "experiments/published_claim_match_w5_v1/sources_reading/C03_raw.txt",
+        "start_line": 535,
+        "end_line": 541,
+        "pdf_page": 6,
+        "role": "preceding_serialization_paragraph_continuation"
+      },
+      {
+        "window_id": "C03-A-W4",
+        "source_path": "experiments/published_claim_match_w5_v1/sources_reading/C03_raw.txt",
+        "start_line": 542,
+        "end_line": 557,
+        "pdf_page": 6,
+        "role": "interpretation_of_three_audited_serializations"
+      },
+      {
+        "window_id": "C03-A-W5",
+        "source_path": "experiments/published_claim_match_w5_v1/sources_reading/C03_raw.txt",
+        "start_line": 558,
+        "end_line": 568,
+        "pdf_page": 6,
+        "role": "subsection_conclusion_part_1"
+      },
+      {
+        "window_id": "C03-A-W6",
+        "source_path": "experiments/published_claim_match_w5_v1/sources_reading/C03_raw.txt",
+        "start_line": 598,
+        "end_line": 601,
+        "pdf_page": 6,
+        "role": "subsection_conclusion_part_2"
+      }
+    ],
+    "adjudication_action": "agree",
+    "agreed_row_review": "All windows reviewed for exact quotation, comparison attribution and semantic scope; no agreed claim-axis correction required."
+  },
+  {
+    "comparison_id": "C03-B",
+    "study": "TabLLM",
+    "claim_content": "Yes",
+    "claim_utility": "No",
+    "descriptive_only": "No",
+    "claim_text": "This indicates that if enough training examples are available, the serialization approach does not matter, but that TabLLM relies on information from the feature names in the zero-shot and few-shot regime, and also relies on the association of the names with the correct values.",
+    "claim_location": "C03-B-W4: PDF p. 6, source lines 542–557 (experiments/published_claim_match_w5_v1/sources_reading/C03_raw.txt)",
+    "linkage": "explicit_comparison",
+    "claim_scope": "Column names in list serialization: List Template versus List Only Values",
+    "rationale": "The interpretation explicitly asserts reliance on the relevant names, name/value associations, or values in zero/few-shot prediction, with equalization at larger training sizes. The complete window does not separately interpret this intervention as semantic knowledge benefiting prediction; observed poorer performance and reliance are not by themselves a utility claim.",
+    "coder_id": "third_same_model_AI_adjudicator",
+    "quote_evidence": [
+      {
+        "quote": "This indicates that if enough training examples are available, the serialization approach does not matter, but that TabLLM relies on information from the feature names in the zero-shot and few-shot regime, and also relies on the association of the names with the correct values.",
+        "window_id": "C03-B-W4",
+        "source_path": "experiments/published_claim_match_w5_v1/sources_reading/C03_raw.txt",
+        "pdf_page": 6,
+        "start_line": 542,
+        "end_line": 557
+      }
+    ],
+    "complete_window_inventory": [
+      {
+        "window_id": "C03-B-W1",
+        "source_path": "experiments/published_claim_match_w5_v1/sources_reading/C03_raw.txt",
+        "pdf_page": 5,
+        "start_line": 487,
+        "end_line": 505,
+        "role": "subsection_intro_and_preceding_paragraph"
+      },
+      {
+        "window_id": "C03-B-W2",
+        "source_path": "experiments/published_claim_match_w5_v1/sources_reading/C03_raw.txt",
+        "pdf_page": 6,
+        "start_line": 531,
+        "end_line": 534,
+        "role": "figure_2_caption"
+      },
+      {
+        "window_id": "C03-B-W3",
+        "source_path": "experiments/published_claim_match_w5_v1/sources_reading/C03_raw.txt",
+        "pdf_page": 6,
+        "start_line": 535,
+        "end_line": 541,
+        "role": "preceding_serialization_paragraph_continuation"
+      },
+      {
+        "window_id": "C03-B-W4",
+        "source_path": "experiments/published_claim_match_w5_v1/sources_reading/C03_raw.txt",
+        "pdf_page": 6,
+        "start_line": 542,
+        "end_line": 557,
+        "role": "interpretation_of_three_audited_serializations"
+      },
+      {
+        "window_id": "C03-B-W5",
+        "source_path": "experiments/published_claim_match_w5_v1/sources_reading/C03_raw.txt",
+        "pdf_page": 6,
+        "start_line": 558,
+        "end_line": 568,
+        "role": "subsection_conclusion_part_1"
+      },
+      {
+        "window_id": "C03-B-W6",
+        "source_path": "experiments/published_claim_match_w5_v1/sources_reading/C03_raw.txt",
+        "pdf_page": 6,
+        "start_line": 598,
+        "end_line": 601,
+        "role": "subsection_conclusion_part_2"
+      }
+    ],
+    "coverage_notes": "Full Sec 5.1 prose retained around Figure 2, including neighboring serializers and healthcare context; interpret only statements linked to this unit. Figure 3 float, numeric plots, unrelated main model comparisons, and generic discussion/abstract claims excluded. Supplement tables give numeric detail rather than a separate interpretation of these three comparisons.",
+    "source_version_caveat": "Official published PDF archived locally; raw reading text regenerated from the same archived PDF where needed.",
+    "adjudication_type": "Third same-model AI adjudication; not human validation",
+    "disagreement_fields": [],
+    "raw_labels": {
+      "A": {
+        "claim_content": "Yes",
+        "claim_utility": "No",
+        "descriptive_only": "No",
+        "linkage": "explicit_comparison"
+      },
+      "B": {
+        "claim_content": "Yes",
+        "claim_utility": "No",
+        "descriptive_only": "No",
+        "linkage": "explicit_comparison"
+      }
+    },
+    "adjudication_rationale": "W4 explicitly asserts reliance on feature names, name/value association, or correct values as appropriate to this fixed serialization, in the zero/few-shot regime. It supplies a use interpretation, while the positive benefit interpretation in W1 concerns Text Template versus List Template and cannot supply utility for this intervention; the complete remaining window adds no utility claim.",
+    "additional_claim_quotes": [],
+    "window_inventory": [
+      {
+        "window_id": "C03-B-W1",
+        "source_path": "experiments/published_claim_match_w5_v1/sources_reading/C03_raw.txt",
+        "start_line": 487,
+        "end_line": 505,
+        "pdf_page": 5,
+        "role": "subsection_intro_and_preceding_paragraph"
+      },
+      {
+        "window_id": "C03-B-W2",
+        "source_path": "experiments/published_claim_match_w5_v1/sources_reading/C03_raw.txt",
+        "start_line": 531,
+        "end_line": 534,
+        "pdf_page": 6,
+        "role": "figure_2_caption"
+      },
+      {
+        "window_id": "C03-B-W3",
+        "source_path": "experiments/published_claim_match_w5_v1/sources_reading/C03_raw.txt",
+        "start_line": 535,
+        "end_line": 541,
+        "pdf_page": 6,
+        "role": "preceding_serialization_paragraph_continuation"
+      },
+      {
+        "window_id": "C03-B-W4",
+        "source_path": "experiments/published_claim_match_w5_v1/sources_reading/C03_raw.txt",
+        "start_line": 542,
+        "end_line": 557,
+        "pdf_page": 6,
+        "role": "interpretation_of_three_audited_serializations"
+      },
+      {
+        "window_id": "C03-B-W5",
+        "source_path": "experiments/published_claim_match_w5_v1/sources_reading/C03_raw.txt",
+        "start_line": 558,
+        "end_line": 568,
+        "pdf_page": 6,
+        "role": "subsection_conclusion_part_1"
+      },
+      {
+        "window_id": "C03-B-W6",
+        "source_path": "experiments/published_claim_match_w5_v1/sources_reading/C03_raw.txt",
+        "start_line": 598,
+        "end_line": 601,
+        "pdf_page": 6,
+        "role": "subsection_conclusion_part_2"
+      }
+    ],
+    "adjudication_action": "agree",
+    "agreed_row_review": "All windows reviewed for exact quotation, comparison attribution and semantic scope; no agreed claim-axis correction required."
+  },
+  {
+    "comparison_id": "C03-C",
+    "study": "TabLLM",
+    "claim_content": "Yes",
+    "claim_utility": "No",
+    "descriptive_only": "No",
+    "claim_text": "The discrepancy for zero and very few shots was even stronger for List Permuted Values, which suggests that TabLLM relies more on the correct values than feature names. Again, the performance equalized for more examples showing the ability of TabLLM to learn new associations if enough training data is available.",
+    "claim_location": "C03-C-W4: PDF p. 6, source lines 542–557 (experiments/published_claim_match_w5_v1/sources_reading/C03_raw.txt)",
+    "linkage": "explicit_comparison",
+    "claim_scope": "Column-value meanings and representations: List Template versus List Permuted Values",
+    "rationale": "The interpretation explicitly asserts reliance on the relevant names, name/value associations, or values in zero/few-shot prediction, with equalization at larger training sizes. The complete window does not separately interpret this intervention as semantic knowledge benefiting prediction; observed poorer performance and reliance are not by themselves a utility claim.",
+    "coder_id": "third_same_model_AI_adjudicator",
+    "quote_evidence": [
+      {
+        "quote": "The discrepancy for zero and very few shots was even stronger for List Permuted Values, which suggests that TabLLM relies more on the correct values than feature names. Again, the performance equalized for more examples showing the ability of TabLLM to learn new associations if enough training data is available.",
+        "window_id": "C03-C-W4",
+        "source_path": "experiments/published_claim_match_w5_v1/sources_reading/C03_raw.txt",
+        "pdf_page": 6,
+        "start_line": 542,
+        "end_line": 557
+      }
+    ],
+    "complete_window_inventory": [
+      {
+        "window_id": "C03-C-W1",
+        "source_path": "experiments/published_claim_match_w5_v1/sources_reading/C03_raw.txt",
+        "pdf_page": 5,
+        "start_line": 487,
+        "end_line": 505,
+        "role": "subsection_intro_and_preceding_paragraph"
+      },
+      {
+        "window_id": "C03-C-W2",
+        "source_path": "experiments/published_claim_match_w5_v1/sources_reading/C03_raw.txt",
+        "pdf_page": 6,
+        "start_line": 531,
+        "end_line": 534,
+        "role": "figure_2_caption"
+      },
+      {
+        "window_id": "C03-C-W3",
+        "source_path": "experiments/published_claim_match_w5_v1/sources_reading/C03_raw.txt",
+        "pdf_page": 6,
+        "start_line": 535,
+        "end_line": 541,
+        "role": "preceding_serialization_paragraph_continuation"
+      },
+      {
+        "window_id": "C03-C-W4",
+        "source_path": "experiments/published_claim_match_w5_v1/sources_reading/C03_raw.txt",
+        "pdf_page": 6,
+        "start_line": 542,
+        "end_line": 557,
+        "role": "interpretation_of_three_audited_serializations"
+      },
+      {
+        "window_id": "C03-C-W5",
+        "source_path": "experiments/published_claim_match_w5_v1/sources_reading/C03_raw.txt",
+        "pdf_page": 6,
+        "start_line": 558,
+        "end_line": 568,
+        "role": "subsection_conclusion_part_1"
+      },
+      {
+        "window_id": "C03-C-W6",
+        "source_path": "experiments/published_claim_match_w5_v1/sources_reading/C03_raw.txt",
+        "pdf_page": 6,
+        "start_line": 598,
+        "end_line": 601,
+        "role": "subsection_conclusion_part_2"
+      }
+    ],
+    "coverage_notes": "Full Sec 5.1 prose retained around Figure 2, including neighboring serializers and healthcare context; interpret only statements linked to this unit. Figure 3 float, numeric plots, unrelated main model comparisons, and generic discussion/abstract claims excluded. Supplement tables give numeric detail rather than a separate interpretation of these three comparisons.",
+    "source_version_caveat": "Official published PDF archived locally; raw reading text regenerated from the same archived PDF where needed.",
+    "adjudication_type": "Third same-model AI adjudication; not human validation",
+    "disagreement_fields": [],
+    "raw_labels": {
+      "A": {
+        "claim_content": "Yes",
+        "claim_utility": "No",
+        "descriptive_only": "No",
+        "linkage": "explicit_comparison"
+      },
+      "B": {
+        "claim_content": "Yes",
+        "claim_utility": "No",
+        "descriptive_only": "No",
+        "linkage": "explicit_comparison"
+      }
+    },
+    "adjudication_rationale": "W4 explicitly asserts reliance on feature names, name/value association, or correct values as appropriate to this fixed serialization, in the zero/few-shot regime. It supplies a use interpretation, while the positive benefit interpretation in W1 concerns Text Template versus List Template and cannot supply utility for this intervention; the complete remaining window adds no utility claim.",
+    "additional_claim_quotes": [],
+    "window_inventory": [
+      {
+        "window_id": "C03-C-W1",
+        "source_path": "experiments/published_claim_match_w5_v1/sources_reading/C03_raw.txt",
+        "start_line": 487,
+        "end_line": 505,
+        "pdf_page": 5,
+        "role": "subsection_intro_and_preceding_paragraph"
+      },
+      {
+        "window_id": "C03-C-W2",
+        "source_path": "experiments/published_claim_match_w5_v1/sources_reading/C03_raw.txt",
+        "start_line": 531,
+        "end_line": 534,
+        "pdf_page": 6,
+        "role": "figure_2_caption"
+      },
+      {
+        "window_id": "C03-C-W3",
+        "source_path": "experiments/published_claim_match_w5_v1/sources_reading/C03_raw.txt",
+        "start_line": 535,
+        "end_line": 541,
+        "pdf_page": 6,
+        "role": "preceding_serialization_paragraph_continuation"
+      },
+      {
+        "window_id": "C03-C-W4",
+        "source_path": "experiments/published_claim_match_w5_v1/sources_reading/C03_raw.txt",
+        "start_line": 542,
+        "end_line": 557,
+        "pdf_page": 6,
+        "role": "interpretation_of_three_audited_serializations"
+      },
+      {
+        "window_id": "C03-C-W5",
+        "source_path": "experiments/published_claim_match_w5_v1/sources_reading/C03_raw.txt",
+        "start_line": 558,
+        "end_line": 568,
+        "pdf_page": 6,
+        "role": "subsection_conclusion_part_1"
+      },
+      {
+        "window_id": "C03-C-W6",
+        "source_path": "experiments/published_claim_match_w5_v1/sources_reading/C03_raw.txt",
+        "start_line": 598,
+        "end_line": 601,
+        "pdf_page": 6,
+        "role": "subsection_conclusion_part_2"
+      }
+    ],
+    "adjudication_action": "agree",
+    "agreed_row_review": "All windows reviewed for exact quotation, comparison attribution and semantic scope; no agreed claim-axis correction required."
+  },
+  {
+    "comparison_id": "C04-A",
+    "study": "PLATO",
+    "claim_content": "Yes",
+    "claim_utility": "Yes",
+    "descriptive_only": "No",
+    "claim_text": "We find that both the feature nodes and the broader knowledge nodes are important for PLATO’s performance.",
+    "claim_location": "C04-A-W3: PDF p. 9, source lines 509–513 (experiments/published_claim_match_w5_v1/sources_reading/C04_raw.txt)",
+    "linkage": "explicit_comparison",
+    "claim_scope": "Auxiliary feature nodes and broader-domain KG nodes: Full KG versus Feature-only KG",
+    "rationale": "The exact full-KG versus feature-only comparison is explicitly interpreted as improved performance, within a group said to rely on feature and broader-domain information. Both semantic use and predictive utility are claimed on BRCA.",
+    "coder_id": "third_same_model_AI_adjudicator",
+    "quote_evidence": [
+      {
+        "quote": "We find that both the feature nodes and the broader knowledge nodes are important for PLATO’s performance.",
+        "window_id": "C04-A-W3",
+        "source_path": "experiments/published_claim_match_w5_v1/sources_reading/C04_raw.txt",
+        "pdf_page": 9,
+        "start_line": 509,
+        "end_line": 513
+      },
+      {
+        "quote": "PLATO’s performance thus relies on both the feature information and the broader domain information in the KG.",
+        "window_id": "C04-A-W3",
+        "source_path": "experiments/published_claim_match_w5_v1/sources_reading/C04_raw.txt",
+        "pdf_page": 9,
+        "start_line": 509,
+        "end_line": 513
+      }
+    ],
+    "complete_window_inventory": [
+      {
+        "window_id": "C04-A-W1",
+        "source_path": "experiments/published_claim_match_w5_v1/sources_reading/C04_raw.txt",
+        "pdf_page": 7,
+        "start_line": 393,
+        "end_line": 395,
+        "role": "table_3_caption"
+      },
+      {
+        "window_id": "C04-A-W2",
+        "source_path": "experiments/published_claim_match_w5_v1/sources_reading/C04_raw.txt",
+        "pdf_page": 8,
+        "start_line": 499,
+        "end_line": 508,
+        "role": "introducing_paragraph"
+      },
+      {
+        "window_id": "C04-A-W3",
+        "source_path": "experiments/published_claim_match_w5_v1/sources_reading/C04_raw.txt",
+        "pdf_page": 9,
+        "start_line": 509,
+        "end_line": 513,
+        "role": "interpretation_and_local_subsection_conclusion"
+      },
+      {
+        "window_id": "C04-A-W4",
+        "source_path": "experiments/published_claim_match_w5_v1/sources_reading/C04_raw.txt",
+        "pdf_page": 2,
+        "start_line": 99,
+        "end_line": 105,
+        "role": "introduction_explicit_ablation_group_summary"
+      },
+      {
+        "window_id": "C04-A-W5",
+        "source_path": "experiments/published_claim_match_w5_v1/sources_reading/C04_raw.txt",
+        "pdf_page": 9,
+        "start_line": 542,
+        "end_line": 547,
+        "role": "discussion_explicit_ablation_group_summary"
+      }
+    ],
+    "coverage_notes": "Local Table 3 comparison-group paragraph complete; next mini-subsection is a different edge-removal comparison. Distant statements explicitly name ablations but also describe other components; do not transfer unrelated component claims. No additional independent local conclusion.",
+    "source_version_caveat": "Official published PDF archived locally; raw reading text regenerated from the same archived PDF where needed.",
+    "adjudication_type": "Third same-model AI adjudication; not human validation",
+    "disagreement_fields": [
+      "linkage"
+    ],
+    "raw_labels": {
+      "A": {
+        "claim_content": "Yes",
+        "claim_utility": "Yes",
+        "descriptive_only": "No",
+        "linkage": "explicit_group"
+      },
+      "B": {
+        "claim_content": "Yes",
+        "claim_utility": "Yes",
+        "descriptive_only": "No",
+        "linkage": "explicit_comparison"
+      }
+    },
+    "adjudication_rationale": "W3 explicitly says performance relies on feature and broader domain information and that both are important for performance, satisfying both axes. Its full-KG versus feature-only sentence names the exact unit, so explicit_comparison resolves the linkage difference.",
+    "additional_claim_quotes": [
+      "PLATO’s performance thus relies on both the feature information and the broader domain information in the KG."
+    ],
+    "window_inventory": [
+      {
+        "window_id": "C04-A-W1",
+        "source_path": "experiments/published_claim_match_w5_v1/sources_reading/C04_raw.txt",
+        "start_line": 393,
+        "end_line": 395,
+        "pdf_page": 7,
+        "role": "table_3_caption"
+      },
+      {
+        "window_id": "C04-A-W2",
+        "source_path": "experiments/published_claim_match_w5_v1/sources_reading/C04_raw.txt",
+        "start_line": 499,
+        "end_line": 508,
+        "pdf_page": 8,
+        "role": "introducing_paragraph"
+      },
+      {
+        "window_id": "C04-A-W3",
+        "source_path": "experiments/published_claim_match_w5_v1/sources_reading/C04_raw.txt",
+        "start_line": 509,
+        "end_line": 513,
+        "pdf_page": 9,
+        "role": "interpretation_and_local_subsection_conclusion"
+      },
+      {
+        "window_id": "C04-A-W4",
+        "source_path": "experiments/published_claim_match_w5_v1/sources_reading/C04_raw.txt",
+        "start_line": 99,
+        "end_line": 105,
+        "pdf_page": 2,
+        "role": "introduction_explicit_ablation_group_summary"
+      },
+      {
+        "window_id": "C04-A-W5",
+        "source_path": "experiments/published_claim_match_w5_v1/sources_reading/C04_raw.txt",
+        "start_line": 542,
+        "end_line": 547,
+        "pdf_page": 9,
+        "role": "discussion_explicit_ablation_group_summary"
+      }
+    ],
+    "adjudication_action": "resolve_disagreement",
+    "agreed_row_review": "All windows reviewed for exact quotation, comparison attribution and semantic scope; no agreed claim-axis correction required."
+  },
+  {
+    "comparison_id": "C04-B",
+    "study": "PLATO",
+    "claim_content": "Yes",
+    "claim_utility": "Yes",
+    "descriptive_only": "No",
+    "claim_text": "We find that both the feature nodes and the broader knowledge nodes are important for PLATO’s performance.",
+    "claim_location": "C04-B-W3: PDF p. 9, source lines 509–513 (experiments/published_claim_match_w5_v1/sources_reading/C04_raw.txt)",
+    "linkage": "explicit_group",
+    "claim_scope": "Auxiliary KG input: Full KG versus No KG",
+    "rationale": "The Table 3 group explicitly interprets both feature and broader domain information as relied upon and important for predictive performance. This applies to the fixed KG-node comparison on BRCA without borrowing the separate edge-removal result.",
+    "coder_id": "third_same_model_AI_adjudicator",
+    "quote_evidence": [
+      {
+        "quote": "We find that both the feature nodes and the broader knowledge nodes are important for PLATO’s performance.",
+        "window_id": "C04-B-W3",
+        "source_path": "experiments/published_claim_match_w5_v1/sources_reading/C04_raw.txt",
+        "pdf_page": 9,
+        "start_line": 509,
+        "end_line": 513
+      },
+      {
+        "quote": "PLATO’s performance thus relies on both the feature information and the broader domain information in the KG.",
+        "window_id": "C04-B-W3",
+        "source_path": "experiments/published_claim_match_w5_v1/sources_reading/C04_raw.txt",
+        "pdf_page": 9,
+        "start_line": 509,
+        "end_line": 513
+      }
+    ],
+    "complete_window_inventory": [
+      {
+        "window_id": "C04-B-W1",
+        "source_path": "experiments/published_claim_match_w5_v1/sources_reading/C04_raw.txt",
+        "pdf_page": 7,
+        "start_line": 393,
+        "end_line": 395,
+        "role": "table_3_caption"
+      },
+      {
+        "window_id": "C04-B-W2",
+        "source_path": "experiments/published_claim_match_w5_v1/sources_reading/C04_raw.txt",
+        "pdf_page": 8,
+        "start_line": 499,
+        "end_line": 508,
+        "role": "introducing_paragraph"
+      },
+      {
+        "window_id": "C04-B-W3",
+        "source_path": "experiments/published_claim_match_w5_v1/sources_reading/C04_raw.txt",
+        "pdf_page": 9,
+        "start_line": 509,
+        "end_line": 513,
+        "role": "interpretation_and_local_subsection_conclusion"
+      },
+      {
+        "window_id": "C04-B-W4",
+        "source_path": "experiments/published_claim_match_w5_v1/sources_reading/C04_raw.txt",
+        "pdf_page": 2,
+        "start_line": 99,
+        "end_line": 105,
+        "role": "introduction_explicit_ablation_group_summary"
+      },
+      {
+        "window_id": "C04-B-W5",
+        "source_path": "experiments/published_claim_match_w5_v1/sources_reading/C04_raw.txt",
+        "pdf_page": 9,
+        "start_line": 542,
+        "end_line": 547,
+        "role": "discussion_explicit_ablation_group_summary"
+      }
+    ],
+    "coverage_notes": "Local Table 3 comparison-group paragraph complete; next mini-subsection is a different edge-removal comparison. Distant statements explicitly name ablations but also describe other components; do not transfer unrelated component claims. No additional independent local conclusion.",
+    "source_version_caveat": "Official published PDF archived locally; raw reading text regenerated from the same archived PDF where needed.",
+    "adjudication_type": "Third same-model AI adjudication; not human validation",
+    "disagreement_fields": [],
+    "raw_labels": {
+      "A": {
+        "claim_content": "Yes",
+        "claim_utility": "Yes",
+        "descriptive_only": "No",
+        "linkage": "explicit_group"
+      },
+      "B": {
+        "claim_content": "Yes",
+        "claim_utility": "Yes",
+        "descriptive_only": "No",
+        "linkage": "explicit_group"
+      }
+    },
+    "adjudication_rationale": "W3 explicitly says performance relies on feature and broader domain information and that both are important for performance, satisfying both axes. The full-KG versus no-KG unit is covered by the explicit three-configuration group in W2–W3; the edge and architecture claims are separate.",
+    "additional_claim_quotes": [
+      "PLATO’s performance thus relies on both the feature information and the broader domain information in the KG."
+    ],
+    "window_inventory": [
+      {
+        "window_id": "C04-B-W1",
+        "source_path": "experiments/published_claim_match_w5_v1/sources_reading/C04_raw.txt",
+        "start_line": 393,
+        "end_line": 395,
+        "pdf_page": 7,
+        "role": "table_3_caption"
+      },
+      {
+        "window_id": "C04-B-W2",
+        "source_path": "experiments/published_claim_match_w5_v1/sources_reading/C04_raw.txt",
+        "start_line": 499,
+        "end_line": 508,
+        "pdf_page": 8,
+        "role": "introducing_paragraph"
+      },
+      {
+        "window_id": "C04-B-W3",
+        "source_path": "experiments/published_claim_match_w5_v1/sources_reading/C04_raw.txt",
+        "start_line": 509,
+        "end_line": 513,
+        "pdf_page": 9,
+        "role": "interpretation_and_local_subsection_conclusion"
+      },
+      {
+        "window_id": "C04-B-W4",
+        "source_path": "experiments/published_claim_match_w5_v1/sources_reading/C04_raw.txt",
+        "start_line": 99,
+        "end_line": 105,
+        "pdf_page": 2,
+        "role": "introduction_explicit_ablation_group_summary"
+      },
+      {
+        "window_id": "C04-B-W5",
+        "source_path": "experiments/published_claim_match_w5_v1/sources_reading/C04_raw.txt",
+        "start_line": 542,
+        "end_line": 547,
+        "pdf_page": 9,
+        "role": "discussion_explicit_ablation_group_summary"
+      }
+    ],
+    "adjudication_action": "agree",
+    "agreed_row_review": "All windows reviewed for exact quotation, comparison attribution and semantic scope; no agreed claim-axis correction required."
+  },
+  {
+    "comparison_id": "C04-C",
+    "study": "PLATO",
+    "claim_content": "No",
+    "claim_utility": "No",
+    "descriptive_only": "No",
+    "claim_text": "We conduct an ablation study to assess PLATO’s robustness to missing edges in the KG.",
+    "claim_location": "C04-C-W2: PDF p. 9, source lines 514–520 (experiments/published_claim_match_w5_v1/sources_reading/C04_raw.txt); C04-C-W3: PDF p. 2, source lines 99–105 (experiments/published_claim_match_w5_v1/sources_reading/C04_raw.txt)",
+    "linkage": "explicit_comparison",
+    "claim_scope": "KG edges: 100% edges versus 50% edges",
+    "rationale": "The edge comparison is interpreted as robustness to missing information, not as reliance on edge semantic content or a benefit from more knowledge. This is a substantive robustness interpretation rather than purely descriptive reporting; claims about other nodes and architectural embeddings cannot supply either positive axis for this comparison.",
+    "coder_id": "third_same_model_AI_adjudicator",
+    "quote_evidence": [
+      {
+        "quote": "We conduct an ablation study to assess PLATO’s robustness to missing edges in the KG.",
+        "window_id": "C04-C-W2",
+        "source_path": "experiments/published_claim_match_w5_v1/sources_reading/C04_raw.txt",
+        "pdf_page": 9,
+        "start_line": 514,
+        "end_line": 520
+      },
+      {
+        "quote": "Ablation studies demonstrate the importance of PLATO’s trainable message-passing, the importance of non-feature nodes in the KG, and PLATO’s robustness to missing edges in the KG.",
+        "window_id": "C04-C-W3",
+        "source_path": "experiments/published_claim_match_w5_v1/sources_reading/C04_raw.txt",
+        "pdf_page": 2,
+        "start_line": 99,
+        "end_line": 105
+      }
+    ],
+    "complete_window_inventory": [
+      {
+        "window_id": "C04-C-W1",
+        "source_path": "experiments/published_claim_match_w5_v1/sources_reading/C04_raw.txt",
+        "pdf_page": 7,
+        "start_line": 426,
+        "end_line": 427,
+        "role": "table_4_caption"
+      },
+      {
+        "window_id": "C04-C-W2",
+        "source_path": "experiments/published_claim_match_w5_v1/sources_reading/C04_raw.txt",
+        "pdf_page": 9,
+        "start_line": 514,
+        "end_line": 520,
+        "role": "introducing_interpretive_paragraph_and_local_conclusion"
+      },
+      {
+        "window_id": "C04-C-W3",
+        "source_path": "experiments/published_claim_match_w5_v1/sources_reading/C04_raw.txt",
+        "pdf_page": 2,
+        "start_line": 99,
+        "end_line": 105,
+        "role": "introduction_explicit_ablation_group_summary"
+      },
+      {
+        "window_id": "C04-C-W4",
+        "source_path": "experiments/published_claim_match_w5_v1/sources_reading/C04_raw.txt",
+        "pdf_page": 9,
+        "start_line": 542,
+        "end_line": 547,
+        "role": "discussion_explicit_ablation_group_summary"
+      }
+    ],
+    "coverage_notes": "Full local missing-edge paragraph retained. Adjacent node-removal and MLP-layer paragraphs are other units, not evidence for this edge-dose comparison. Distant summaries explicitly reference robustness and other ablations separately; retain correct attribution.",
+    "source_version_caveat": "Official published PDF archived locally; raw reading text regenerated from the same archived PDF where needed.",
+    "adjudication_type": "Third same-model AI adjudication; not human validation",
+    "disagreement_fields": [],
+    "raw_labels": {
+      "A": {
+        "claim_content": "No",
+        "claim_utility": "No",
+        "descriptive_only": "No",
+        "linkage": "explicit_comparison"
+      },
+      "B": {
+        "claim_content": "No",
+        "claim_utility": "No",
+        "descriptive_only": "No",
+        "linkage": "explicit_comparison"
+      }
+    },
+    "adjudication_rationale": "W2 describes robustness to missing edges and the linked distant summaries repeat that interpretation. Neither interprets this edge-dose comparison as reliance on edge semantic content or as knowledge improving prediction; the robustness interpretation is substantive, so descriptive_only remains No.",
+    "additional_claim_quotes": [
+      "Ablation studies demonstrate the importance of PLATO’s trainable message-passing, the importance of non-feature nodes in the KG, and PLATO’s robustness to missing edges in the KG."
+    ],
+    "window_inventory": [
+      {
+        "window_id": "C04-C-W1",
+        "source_path": "experiments/published_claim_match_w5_v1/sources_reading/C04_raw.txt",
+        "start_line": 426,
+        "end_line": 427,
+        "pdf_page": 7,
+        "role": "table_4_caption"
+      },
+      {
+        "window_id": "C04-C-W2",
+        "source_path": "experiments/published_claim_match_w5_v1/sources_reading/C04_raw.txt",
+        "start_line": 514,
+        "end_line": 520,
+        "pdf_page": 9,
+        "role": "introducing_interpretive_paragraph_and_local_conclusion"
+      },
+      {
+        "window_id": "C04-C-W3",
+        "source_path": "experiments/published_claim_match_w5_v1/sources_reading/C04_raw.txt",
+        "start_line": 99,
+        "end_line": 105,
+        "pdf_page": 2,
+        "role": "introduction_explicit_ablation_group_summary"
+      },
+      {
+        "window_id": "C04-C-W4",
+        "source_path": "experiments/published_claim_match_w5_v1/sources_reading/C04_raw.txt",
+        "start_line": 542,
+        "end_line": 547,
+        "pdf_page": 9,
+        "role": "discussion_explicit_ablation_group_summary"
+      }
+    ],
+    "adjudication_action": "agree",
+    "agreed_row_review": "All windows reviewed for exact quotation, comparison attribution and semantic scope; no agreed claim-axis correction required."
+  },
+  {
+    "comparison_id": "C05-A",
+    "study": "CARTE",
+    "claim_content": "Yes",
+    "claim_utility": "Yes",
+    "descriptive_only": "No",
+    "claim_text": "The figure shows that each are crucial for gaining the performance of CARTE.",
+    "claim_location": "C05-A-W2: PDF p. 21, source lines 1358–1368 (iclr_latex_v3/design_audit/sources/C05_main.txt)",
+    "linkage": "explicit_comparison",
+    "claim_scope": "String feature initialization: CARTE versus Graph Construction with Minhash",
+    "rationale": "The named Minhash interpretation links semantic-similarity encoding to effective use of external information, and the group expressly describes the components as crucial for performance. Preserve the emphasis on limited information in the table; the separate attention/context rationale is not needed for this row.",
+    "coder_id": "third_same_model_AI_adjudicator",
+    "quote_evidence": [
+      {
+        "quote": "The figure shows that each are crucial for gaining the performance of CARTE.",
+        "window_id": "C05-A-W2",
+        "source_path": "iclr_latex_v3/design_audit/sources/C05_main.txt",
+        "pdf_page": 21,
+        "start_line": 1358,
+        "end_line": 1368
+      },
+      {
+        "quote": "Moreover, the performance gap between CARTE and Minhash confirm that string-level models, that also capture semantic similarity, is important and the use of language models are pivotal for effectively using external information, especially when information given in the table is limited.",
+        "window_id": "C05-A-W2",
+        "source_path": "iclr_latex_v3/design_audit/sources/C05_main.txt",
+        "pdf_page": 21,
+        "start_line": 1358,
+        "end_line": 1368
+      }
+    ],
+    "complete_window_inventory": [
+      {
+        "window_id": "C05-A-W1",
+        "source_path": "iclr_latex_v3/design_audit/sources/C05_main.txt",
+        "pdf_page": 21,
+        "start_line": 1351,
+        "end_line": 1355,
+        "role": "figure_10_caption"
+      },
+      {
+        "window_id": "C05-A-W2",
+        "source_path": "iclr_latex_v3/design_audit/sources/C05_main.txt",
+        "pdf_page": 21,
+        "start_line": 1358,
+        "end_line": 1368,
+        "role": "complete_subsection_C3_introduction_interpretation_conclusion"
+      }
+    ],
+    "coverage_notes": "Complete C.3 caption and paragraph; each unit maps to its named Figure 10 variant. Subsequent C.4 addresses oversmoothing, a different experiment. The common paragraph separately discusses semantic encoding, edge information, attention, and context; unit-level semantic scope must be respected. No additional explicitly linked abstract/introduction/conclusion passage located.",
+    "source_version_caveat": "Official published PDF archived locally; raw reading text regenerated from the same archived PDF where needed.",
+    "adjudication_type": "Third same-model AI adjudication; not human validation",
+    "disagreement_fields": [],
+    "raw_labels": {
+      "A": {
+        "claim_content": "Yes",
+        "claim_utility": "Yes",
+        "descriptive_only": "No",
+        "linkage": "explicit_comparison"
+      },
+      "B": {
+        "claim_content": "Yes",
+        "claim_utility": "Yes",
+        "descriptive_only": "No",
+        "linkage": "explicit_comparison"
+      }
+    },
+    "adjudication_rationale": "W1–W2 name Minhash, distinguish its lack of semantic content, and interpret language models as crucial to using external information within a group explicitly crucial for performance. Both positive axes apply to string initialization, especially with limited table information; the context/attention statements are not needed.",
+    "additional_claim_quotes": [
+      "Moreover, the performance gap between CARTE and Minhash confirm that string-level models, that also capture semantic similarity, is important and the use of language models are pivotal for effectively using external information, especially when information given in the table is limited."
+    ],
+    "window_inventory": [
+      {
+        "window_id": "C05-A-W1",
+        "source_path": "iclr_latex_v3/design_audit/sources/C05_main.txt",
+        "start_line": 1351,
+        "end_line": 1355,
+        "pdf_page": 21,
+        "role": "figure_10_caption"
+      },
+      {
+        "window_id": "C05-A-W2",
+        "source_path": "iclr_latex_v3/design_audit/sources/C05_main.txt",
+        "start_line": 1358,
+        "end_line": 1368,
+        "pdf_page": 21,
+        "role": "complete_subsection_C3_introduction_interpretation_conclusion"
+      }
+    ],
+    "adjudication_action": "agree",
+    "agreed_row_review": "All windows reviewed for exact quotation, comparison attribution and semantic scope; no agreed claim-axis correction required."
+  },
+  {
+    "comparison_id": "C05-B",
+    "study": "CARTE",
+    "claim_content": "Unclear",
+    "claim_utility": "Unclear",
+    "descriptive_only": "No",
+    "claim_text": "In particular, it is interesting to observe the significant decrease with the exclusion of edge information and the attention layer. Since both are essential for leveraging context within a given table, it implies that capturing context is pivotal for attaining the strong performances in predictions.",
+    "claim_location": "C05-B-W2: PDF p. 21, source lines 1358–1368 (iclr_latex_v3/design_audit/sources/C05_main.txt)",
+    "linkage": "explicit_group",
+    "claim_scope": "Column/edge information: CARTE versus Exclude Edge Info.",
+    "rationale": "The comparison group expressly claims use and predictive value of table context, but does not distinguish semantic content of edge information from structural or statistical context. Both semantic axes therefore remain ambiguous; the explicit semantic-similarity claim for Minhash cannot transfer to this intervention.",
+    "coder_id": "third_same_model_AI_adjudicator",
+    "quote_evidence": [
+      {
+        "quote": "In particular, it is interesting to observe the significant decrease with the exclusion of edge information and the attention layer. Since both are essential for leveraging context within a given table, it implies that capturing context is pivotal for attaining the strong performances in predictions.",
+        "window_id": "C05-B-W2",
+        "source_path": "iclr_latex_v3/design_audit/sources/C05_main.txt",
+        "pdf_page": 21,
+        "start_line": 1358,
+        "end_line": 1368
+      }
+    ],
+    "complete_window_inventory": [
+      {
+        "window_id": "C05-B-W1",
+        "source_path": "iclr_latex_v3/design_audit/sources/C05_main.txt",
+        "pdf_page": 21,
+        "start_line": 1351,
+        "end_line": 1355,
+        "role": "figure_10_caption"
+      },
+      {
+        "window_id": "C05-B-W2",
+        "source_path": "iclr_latex_v3/design_audit/sources/C05_main.txt",
+        "pdf_page": 21,
+        "start_line": 1358,
+        "end_line": 1368,
+        "role": "complete_subsection_C3_introduction_interpretation_conclusion"
+      }
+    ],
+    "coverage_notes": "Complete C.3 caption and paragraph; each unit maps to its named Figure 10 variant. Subsequent C.4 addresses oversmoothing, a different experiment. The common paragraph separately discusses semantic encoding, edge information, attention, and context; unit-level semantic scope must be respected. No additional explicitly linked abstract/introduction/conclusion passage located.",
+    "source_version_caveat": "Official published PDF archived locally; raw reading text regenerated from the same archived PDF where needed.",
+    "adjudication_type": "Third same-model AI adjudication; not human validation",
+    "disagreement_fields": [
+      "claim_content",
+      "claim_utility"
+    ],
+    "raw_labels": {
+      "A": {
+        "claim_content": "Unclear",
+        "claim_utility": "Unclear",
+        "descriptive_only": "No",
+        "linkage": "explicit_group"
+      },
+      "B": {
+        "claim_content": "Yes",
+        "claim_utility": "Yes",
+        "descriptive_only": "No",
+        "linkage": "explicit_group"
+      }
+    },
+    "adjudication_rationale": "W2 explicitly calls table context essential to use and pivotal for prediction, but neither W1 nor W2 specifies that this context is semantic knowledge rather than structural or statistical information. Under the frozen semantic-scope rule both axes are Unclear; the separate Minhash semantic-similarity interpretation cannot transfer to this edge/attention intervention, resolving the A/B difference without inventing absence.",
+    "additional_claim_quotes": [],
+    "window_inventory": [
+      {
+        "window_id": "C05-B-W1",
+        "source_path": "iclr_latex_v3/design_audit/sources/C05_main.txt",
+        "start_line": 1351,
+        "end_line": 1355,
+        "pdf_page": 21,
+        "role": "figure_10_caption"
+      },
+      {
+        "window_id": "C05-B-W2",
+        "source_path": "iclr_latex_v3/design_audit/sources/C05_main.txt",
+        "start_line": 1358,
+        "end_line": 1368,
+        "pdf_page": 21,
+        "role": "complete_subsection_C3_introduction_interpretation_conclusion"
+      }
+    ],
+    "adjudication_action": "resolve_disagreement",
+    "agreed_row_review": "All windows reviewed for exact quotation, comparison attribution and semantic scope; no agreed claim-axis correction required."
+  },
+  {
+    "comparison_id": "C05-C",
+    "study": "CARTE",
+    "claim_content": "Unclear",
+    "claim_utility": "Unclear",
+    "descriptive_only": "No",
+    "claim_text": "In particular, it is interesting to observe the significant decrease with the exclusion of edge information and the attention layer. Since both are essential for leveraging context within a given table, it implies that capturing context is pivotal for attaining the strong performances in predictions.",
+    "claim_location": "C05-C-W2: PDF p. 21, source lines 1358–1368 (iclr_latex_v3/design_audit/sources/C05_main.txt)",
+    "linkage": "explicit_group",
+    "claim_scope": "Edge information with attention component: CARTE versus Exclude Att. Layer & Edge Info.",
+    "rationale": "The comparison group expressly claims use and predictive value of table context, but does not distinguish semantic content of edge information from structural or statistical context. Both semantic axes therefore remain ambiguous; the explicit semantic-similarity claim for Minhash cannot transfer to this intervention.",
+    "coder_id": "third_same_model_AI_adjudicator",
+    "quote_evidence": [
+      {
+        "quote": "In particular, it is interesting to observe the significant decrease with the exclusion of edge information and the attention layer. Since both are essential for leveraging context within a given table, it implies that capturing context is pivotal for attaining the strong performances in predictions.",
+        "window_id": "C05-C-W2",
+        "source_path": "iclr_latex_v3/design_audit/sources/C05_main.txt",
+        "pdf_page": 21,
+        "start_line": 1358,
+        "end_line": 1368
+      }
+    ],
+    "complete_window_inventory": [
+      {
+        "window_id": "C05-C-W1",
+        "source_path": "iclr_latex_v3/design_audit/sources/C05_main.txt",
+        "pdf_page": 21,
+        "start_line": 1351,
+        "end_line": 1355,
+        "role": "figure_10_caption"
+      },
+      {
+        "window_id": "C05-C-W2",
+        "source_path": "iclr_latex_v3/design_audit/sources/C05_main.txt",
+        "pdf_page": 21,
+        "start_line": 1358,
+        "end_line": 1368,
+        "role": "complete_subsection_C3_introduction_interpretation_conclusion"
+      }
+    ],
+    "coverage_notes": "Complete C.3 caption and paragraph; each unit maps to its named Figure 10 variant. Subsequent C.4 addresses oversmoothing, a different experiment. The common paragraph separately discusses semantic encoding, edge information, attention, and context; unit-level semantic scope must be respected. No additional explicitly linked abstract/introduction/conclusion passage located.",
+    "source_version_caveat": "Official published PDF archived locally; raw reading text regenerated from the same archived PDF where needed.",
+    "adjudication_type": "Third same-model AI adjudication; not human validation",
+    "disagreement_fields": [
+      "claim_content",
+      "claim_utility"
+    ],
+    "raw_labels": {
+      "A": {
+        "claim_content": "Unclear",
+        "claim_utility": "Unclear",
+        "descriptive_only": "No",
+        "linkage": "explicit_group"
+      },
+      "B": {
+        "claim_content": "Yes",
+        "claim_utility": "Yes",
+        "descriptive_only": "No",
+        "linkage": "explicit_group"
+      }
+    },
+    "adjudication_rationale": "W2 explicitly calls table context essential to use and pivotal for prediction, but neither W1 nor W2 specifies that this context is semantic knowledge rather than structural or statistical information. Under the frozen semantic-scope rule both axes are Unclear; the separate Minhash semantic-similarity interpretation cannot transfer to this edge/attention intervention, resolving the A/B difference without inventing absence.",
+    "additional_claim_quotes": [],
+    "window_inventory": [
+      {
+        "window_id": "C05-C-W1",
+        "source_path": "iclr_latex_v3/design_audit/sources/C05_main.txt",
+        "start_line": 1351,
+        "end_line": 1355,
+        "pdf_page": 21,
+        "role": "figure_10_caption"
+      },
+      {
+        "window_id": "C05-C-W2",
+        "source_path": "iclr_latex_v3/design_audit/sources/C05_main.txt",
+        "start_line": 1358,
+        "end_line": 1368,
+        "pdf_page": 21,
+        "role": "complete_subsection_C3_introduction_interpretation_conclusion"
+      }
+    ],
+    "adjudication_action": "resolve_disagreement",
+    "agreed_row_review": "All windows reviewed for exact quotation, comparison attribution and semantic scope; no agreed claim-axis correction required."
+  },
+  {
+    "comparison_id": "C06-A",
+    "study": "FeatLLM",
+    "claim_content": "Yes",
+    "claim_utility": "Yes",
+    "descriptive_only": "No",
+    "claim_text": "On the other hand, the effect of feature descriptions and reasoning instructions are high when the number of shot is small. This suggests that the efficient utilization of the prior knowledge of LLM becomes crucial for performance improvements.",
+    "claim_location": "C06-A-W2: PDF p. 8, source lines 684–696 (experiments/published_claim_match_w5_v1/sources_reading/C06_raw.txt)",
+    "linkage": "explicit_group",
+    "claim_scope": "Feature-description block in rule generation: FeatLLM versus -Description",
+    "rationale": "The description/reasoning group explicitly interprets its effect as utilization of LLM prior knowledge crucial for performance improvement. The claim includes the audited description removal and is strongest when the number of shots is small, without importing tuning or ensemble claims.",
+    "coder_id": "third_same_model_AI_adjudicator",
+    "quote_evidence": [
+      {
+        "quote": "On the other hand, the effect of feature descriptions and reasoning instructions are high when the number of shot is small. This suggests that the efficient utilization of the prior knowledge of LLM becomes crucial for performance improvements.",
+        "window_id": "C06-A-W2",
+        "source_path": "experiments/published_claim_match_w5_v1/sources_reading/C06_raw.txt",
+        "pdf_page": 8,
+        "start_line": 684,
+        "end_line": 696
+      }
+    ],
+    "complete_window_inventory": [
+      {
+        "window_id": "C06-A-W1",
+        "source_path": "experiments/published_claim_match_w5_v1/sources_reading/C06_raw.txt",
+        "pdf_page": 7,
+        "start_line": 670,
+        "end_line": 678,
+        "role": "introducing_paragraph"
+      },
+      {
+        "window_id": "C06-A-W2",
+        "source_path": "experiments/published_claim_match_w5_v1/sources_reading/C06_raw.txt",
+        "pdf_page": 8,
+        "start_line": 684,
+        "end_line": 696,
+        "role": "interpretive_paragraph_and_local_ablation_conclusion"
+      },
+      {
+        "window_id": "C06-A-W3",
+        "source_path": "experiments/published_claim_match_w5_v1/sources_reading/C06_raw.txt",
+        "pdf_page": 8,
+        "start_line": 697,
+        "end_line": 699,
+        "role": "table_4_caption"
+      },
+      {
+        "window_id": "C06-A-W4",
+        "source_path": "experiments/published_claim_match_w5_v1/sources_reading/C06_raw.txt",
+        "pdf_page": 26,
+        "start_line": 1639,
+        "end_line": 1640,
+        "role": "supplement_K2_table_18_caption"
+      }
+    ],
+    "coverage_notes": "Local ablation paragraphs and Table 4 caption complete; K.2 consists of the expanded numeric table with no separate interpretive paragraph. Subsequent timing/feature-quality discussions concern other comparisons. The group paragraph distinguishes description/reasoning from tuning/ensemble; interpret only the audited -Description comparison. No generic model benefit inherited.",
+    "source_version_caveat": "Official published PDF archived locally; raw reading text regenerated from the same archived PDF where needed.",
+    "adjudication_type": "Third same-model AI adjudication; not human validation",
+    "disagreement_fields": [],
+    "raw_labels": {
+      "A": {
+        "claim_content": "Yes",
+        "claim_utility": "Yes",
+        "descriptive_only": "No",
+        "linkage": "explicit_group"
+      },
+      "B": {
+        "claim_content": "Yes",
+        "claim_utility": "Yes",
+        "descriptive_only": "No",
+        "linkage": "explicit_group"
+      }
+    },
+    "adjudication_rationale": "W2 explicitly interprets the description/reasoning subgroup as efficient utilization of prior LLM knowledge crucial for performance improvements, satisfying both axes for the description omission. The claim is strongest at small shot counts; tuning and ensemble interpretations are outside this unit.",
+    "additional_claim_quotes": [],
+    "window_inventory": [
+      {
+        "window_id": "C06-A-W1",
+        "source_path": "experiments/published_claim_match_w5_v1/sources_reading/C06_raw.txt",
+        "start_line": 670,
+        "end_line": 678,
+        "pdf_page": 7,
+        "role": "introducing_paragraph"
+      },
+      {
+        "window_id": "C06-A-W2",
+        "source_path": "experiments/published_claim_match_w5_v1/sources_reading/C06_raw.txt",
+        "start_line": 684,
+        "end_line": 696,
+        "pdf_page": 8,
+        "role": "interpretive_paragraph_and_local_ablation_conclusion"
+      },
+      {
+        "window_id": "C06-A-W3",
+        "source_path": "experiments/published_claim_match_w5_v1/sources_reading/C06_raw.txt",
+        "start_line": 697,
+        "end_line": 699,
+        "pdf_page": 8,
+        "role": "table_4_caption"
+      },
+      {
+        "window_id": "C06-A-W4",
+        "source_path": "experiments/published_claim_match_w5_v1/sources_reading/C06_raw.txt",
+        "start_line": 1639,
+        "end_line": 1640,
+        "pdf_page": 26,
+        "role": "supplement_K2_table_18_caption"
+      }
+    ],
+    "adjudication_action": "agree",
+    "agreed_row_review": "All windows reviewed for exact quotation, comparison attribution and semantic scope; no agreed claim-axis correction required."
+  },
+  {
+    "comparison_id": "C07-A",
+    "study": "TabuLa-8B",
+    "claim_content": "Yes",
+    "claim_utility": "Yes",
+    "descriptive_only": "No",
+    "claim_text": "We believe that this drop in performance is commensurate to the loss in information when column headers are eliminated.",
+    "claim_location": "C07-A-W2: PDF p. 9, source lines 540–546 (iclr_latex_v3/design_audit/sources/C07_main.txt); C07-A-W5: PDF p. 26, source lines 1655–1666 (iclr_latex_v3/design_audit/sources/C07_main.txt)",
+    "linkage": "explicit_comparison",
+    "claim_scope": "Informative feature and target headers: TABULA-8B on UniPredict with original headers (descriptive label) versus TABULA-8B with feature headers X1, X2, ... and target header Y (descriptive label)",
+    "rationale": "The explicitly linked header ablation describes utilization of column-name semantic information and an explicit performance benefit for small shot counts. It also states declining utility as shots increase and robust prediction without rich headers; these qualifications do not erase the conditional positive claims.",
+    "coder_id": "third_same_model_AI_adjudicator",
+    "quote_evidence": [
+      {
+        "quote": "We believe that this drop in performance is commensurate to the loss in information when column headers are eliminated.",
+        "window_id": "C07-A-W2",
+        "source_path": "iclr_latex_v3/design_audit/sources/C07_main.txt",
+        "pdf_page": 9,
+        "start_line": 540,
+        "end_line": 546
+      },
+      {
+        "quote": "First, for small number of shots, the semantically-meaningful headers provide a performance benefit:",
+        "window_id": "C07-A-W5",
+        "source_path": "iclr_latex_v3/design_audit/sources/C07_main.txt",
+        "pdf_page": 26,
+        "start_line": 1655,
+        "end_line": 1666
+      },
+      {
+        "quote": "Third, we observe that the utility of semantically-meaningful headers decreases as the number of shots increase.",
+        "window_id": "C07-A-W5",
+        "source_path": "iclr_latex_v3/design_audit/sources/C07_main.txt",
+        "pdf_page": 26,
+        "start_line": 1655,
+        "end_line": 1666
+      }
+    ],
+    "complete_window_inventory": [
+      {
+        "window_id": "C07-A-W1",
+        "source_path": "iclr_latex_v3/design_audit/sources/C07_main.txt",
+        "pdf_page": 8,
+        "start_line": 513,
+        "end_line": 520,
+        "role": "explicitly_ablation_linked_main_result_context"
+      },
+      {
+        "window_id": "C07-A-W2",
+        "source_path": "iclr_latex_v3/design_audit/sources/C07_main.txt",
+        "pdf_page": 9,
+        "start_line": 540,
+        "end_line": 546,
+        "role": "explicitly_ablation_linked_main_summary"
+      },
+      {
+        "window_id": "C07-A-W3",
+        "source_path": "iclr_latex_v3/design_audit/sources/C07_main.txt",
+        "pdf_page": 26,
+        "start_line": 1641,
+        "end_line": 1649,
+        "role": "subsection_heading_and_introductory_rationale"
+      },
+      {
+        "window_id": "C07-A-W4",
+        "source_path": "iclr_latex_v3/design_audit/sources/C07_main.txt",
+        "pdf_page": 26,
+        "start_line": 1650,
+        "end_line": 1654,
+        "role": "introducing_paragraph"
+      },
+      {
+        "window_id": "C07-A-W5",
+        "source_path": "iclr_latex_v3/design_audit/sources/C07_main.txt",
+        "pdf_page": 26,
+        "start_line": 1655,
+        "end_line": 1666,
+        "role": "interpretive_paragraph"
+      },
+      {
+        "window_id": "C07-A-W6",
+        "source_path": "iclr_latex_v3/design_audit/sources/C07_main.txt",
+        "pdf_page": 26,
+        "start_line": 1667,
+        "end_line": 1669,
+        "role": "subsection_conclusion"
+      },
+      {
+        "window_id": "C07-A-W7",
+        "source_path": "iclr_latex_v3/design_audit/sources/C07_main.txt",
+        "pdf_page": 27,
+        "start_line": 1705,
+        "end_line": 1707,
+        "role": "figure_12_caption"
+      }
+    ],
+    "coverage_notes": "Coverage: Figure 12 caption; complete F.2 rationale, intervention paragraph, result interpretation, and separate closing paragraph; main §5.4 paragraph explicitly pointing to F.2; and §5.5 header-removal summary. Linkage: explicit_comparison throughout F.2/Figure 12 and its main summary. The main §5.4 paragraph begins with a between-benchmark observation and explicitly points to the controlled F.2 experiment; do not substitute that observation for the controlled comparison. Absence inventory: no separate prose following the Figure 12 caption before F.3 starts (lines 1712 onward); the complete interpretation and conclusion precede the floated figure. Abstract/introduction and §6 discussion contain no explicit link to this header-removal ablation, so general model claims are excluded. Low-shot, increased-shot and robustness conditions are preserved. Numeric figure axes and outcomes are excluded.",
+    "source_version_caveat": "Archived local main PDF/text used; pagination refers to this archived PDF. No new source or version substituted.",
+    "adjudication_type": "Third same-model AI adjudication; not human validation",
+    "disagreement_fields": [],
+    "raw_labels": {
+      "A": {
+        "claim_content": "Yes",
+        "claim_utility": "Yes",
+        "descriptive_only": "No",
+        "linkage": "explicit_comparison"
+      },
+      "B": {
+        "claim_content": "Yes",
+        "claim_utility": "Yes",
+        "descriptive_only": "No",
+        "linkage": "explicit_comparison"
+      }
+    },
+    "adjudication_rationale": "W2 links the header ablation to utilization of semantic column information and interprets the drop as lost information; W5 expressly claims a predictive benefit of meaningful headers for small shot counts. W5–W7 preserve decreasing utility with more shots and robustness without rich headers, so both conditional positive claims remain valid.",
+    "additional_claim_quotes": [
+      "First, for small number of shots, the semantically-meaningful headers provide a performance benefit:",
+      "Third, we observe that the utility of semantically-meaningful headers decreases as the number of shots increase."
+    ],
+    "window_inventory": [
+      {
+        "window_id": "C07-A-W1",
+        "source_path": "iclr_latex_v3/design_audit/sources/C07_main.txt",
+        "start_line": 513,
+        "end_line": 520,
+        "pdf_page": 8,
+        "role": "explicitly_ablation_linked_main_result_context"
+      },
+      {
+        "window_id": "C07-A-W2",
+        "source_path": "iclr_latex_v3/design_audit/sources/C07_main.txt",
+        "start_line": 540,
+        "end_line": 546,
+        "pdf_page": 9,
+        "role": "explicitly_ablation_linked_main_summary"
+      },
+      {
+        "window_id": "C07-A-W3",
+        "source_path": "iclr_latex_v3/design_audit/sources/C07_main.txt",
+        "start_line": 1641,
+        "end_line": 1649,
+        "pdf_page": 26,
+        "role": "subsection_heading_and_introductory_rationale"
+      },
+      {
+        "window_id": "C07-A-W4",
+        "source_path": "iclr_latex_v3/design_audit/sources/C07_main.txt",
+        "start_line": 1650,
+        "end_line": 1654,
+        "pdf_page": 26,
+        "role": "introducing_paragraph"
+      },
+      {
+        "window_id": "C07-A-W5",
+        "source_path": "iclr_latex_v3/design_audit/sources/C07_main.txt",
+        "start_line": 1655,
+        "end_line": 1666,
+        "pdf_page": 26,
+        "role": "interpretive_paragraph"
+      },
+      {
+        "window_id": "C07-A-W6",
+        "source_path": "iclr_latex_v3/design_audit/sources/C07_main.txt",
+        "start_line": 1667,
+        "end_line": 1669,
+        "pdf_page": 26,
+        "role": "subsection_conclusion"
+      },
+      {
+        "window_id": "C07-A-W7",
+        "source_path": "iclr_latex_v3/design_audit/sources/C07_main.txt",
+        "start_line": 1705,
+        "end_line": 1707,
+        "pdf_page": 27,
+        "role": "figure_12_caption"
+      }
+    ],
+    "adjudication_action": "agree",
+    "agreed_row_review": "All windows reviewed for exact quotation, comparison attribution and semantic scope; no agreed claim-axis correction required."
+  },
+  {
+    "comparison_id": "C08-A",
+    "study": "ConTextTab",
+    "claim_content": "Yes",
+    "claim_utility": "No",
+    "descriptive_only": "No",
+    "claim_text": "As expected, we observe a significant drop in performance when discarding semantics completely or when using the conventional string encoders from the skrub library. Hence, ConTextTab successfully leverages the semantic content of features.",
+    "claim_location": "C08-A-W2: PDF p. 8, source lines 471–479 (iclr_latex_v3/design_audit/sources/C08_main.txt)",
+    "linkage": "explicit_group",
+    "claim_scope": "Categorical/string feature encoding: base (feature and column name semantics) versus no feature semantics - Ordinal encoder",
+    "rationale": "The feature-encoder group, which names the audited alternative, explicitly concludes that the model leverages feature semantic content on CARTE. Its performance-drop report is interpreted as semantic use, without a separate explicit interpretation of semantic knowledge as a predictive benefit, so the utility axis is No under the conservative rule.",
+    "coder_id": "third_same_model_AI_adjudicator",
+    "quote_evidence": [
+      {
+        "quote": "As expected, we observe a significant drop in performance when discarding semantics completely or when using the conventional string encoders from the skrub library. Hence, ConTextTab successfully leverages the semantic content of features.",
+        "window_id": "C08-A-W2",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "pdf_page": 8,
+        "start_line": 471,
+        "end_line": 479
+      }
+    ],
+    "complete_window_inventory": [
+      {
+        "window_id": "C08-A-W1",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "pdf_page": 8,
+        "start_line": 470,
+        "end_line": 470,
+        "role": "table_2_introducing_paragraph"
+      },
+      {
+        "window_id": "C08-A-W2",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "pdf_page": 8,
+        "start_line": 471,
+        "end_line": 479,
+        "role": "feature_encoding_introduction_and_interpretation"
+      },
+      {
+        "window_id": "C08-A-W3",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "pdf_page": 8,
+        "start_line": 480,
+        "end_line": 489,
+        "role": "column_name_introduction_and_interpretation"
+      },
+      {
+        "window_id": "C08-A-W4",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "pdf_page": 8,
+        "start_line": 490,
+        "end_line": 491,
+        "role": "semantic_subsection_conclusion"
+      },
+      {
+        "window_id": "C08-A-W5",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "pdf_page": 9,
+        "start_line": 503,
+        "end_line": 507,
+        "role": "table_2_caption"
+      },
+      {
+        "window_id": "C08-A-W6",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "pdf_page": 26,
+        "start_line": 2171,
+        "end_line": 2173,
+        "role": "appendix_subsection_introduction"
+      },
+      {
+        "window_id": "C08-A-W7",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "pdf_page": 27,
+        "start_line": 2244,
+        "end_line": 2246,
+        "role": "figure_9_caption_including_panel_captions"
+      },
+      {
+        "window_id": "C08-A-W8",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "pdf_page": 27,
+        "start_line": 2268,
+        "end_line": 2270,
+        "role": "appendix_semantic_ablation_introduction_and_conclusion"
+      },
+      {
+        "window_id": "C08-A-W9",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "pdf_page": 28,
+        "start_line": 2344,
+        "end_line": 2347,
+        "role": "figure_10_caption_including_panel_captions"
+      }
+    ],
+    "coverage_notes": "Coverage: Table 2 full caption and introduction; both complete semantic paragraphs and the shared semantic closing paragraph in §5.1; Appendix A.4 introduction, complete semantic-embeddings paragraph, and Figure 9/10 captions with panel captions. Linkage: explicit_group to Table 2 semantic block; lines 471–479 specifically address the feature-encoding variants (C08-A/B/C/D), lines 480–489 address column removal and enrichment (C08-E/F), and lines 490–491 close both groups. Shared context does not transfer feature-encoding interpretations to column enrichment or vice versa. Absence inventory: no additional immediately following interpretive prose is supplied for Figure 9 or 10; nearby A.4 paragraphs concern different ablations (text-embedding model, curriculum, clipping, fine-tuning). A.4 ends its semantic discussion at line 2270. No abstract/introduction/conclusion passage explicitly links these six fixed interventions; general model claims excluded. All CARTE-only and statistical-qualification language is retained. Numeric table cells and figure matrices excluded.",
+    "source_version_caveat": "Archived local main PDF/text used; pagination refers to this archived PDF. No new source or version substituted.",
+    "adjudication_type": "Third same-model AI adjudication; not human validation",
+    "disagreement_fields": [],
+    "raw_labels": {
+      "A": {
+        "claim_content": "Yes",
+        "claim_utility": "No",
+        "descriptive_only": "No",
+        "linkage": "explicit_group"
+      },
+      "B": {
+        "claim_content": "Yes",
+        "claim_utility": "No",
+        "descriptive_only": "No",
+        "linkage": "explicit_group"
+      }
+    },
+    "adjudication_rationale": "W2 names the feature-encoder comparison group and interprets its results as leveraging semantic feature content, with W4 closing that group; the CARTE-only qualifier remains. The performance-drop report is interpreted as use, not separately as knowledge benefit under the conservative rule; W3’s explicit boost concerns column enrichment and cannot supply utility here.",
+    "additional_claim_quotes": [],
+    "window_inventory": [
+      {
+        "window_id": "C08-A-W1",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 470,
+        "end_line": 470,
+        "pdf_page": 8,
+        "role": "table_2_introducing_paragraph"
+      },
+      {
+        "window_id": "C08-A-W2",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 471,
+        "end_line": 479,
+        "pdf_page": 8,
+        "role": "feature_encoding_introduction_and_interpretation"
+      },
+      {
+        "window_id": "C08-A-W3",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 480,
+        "end_line": 489,
+        "pdf_page": 8,
+        "role": "column_name_introduction_and_interpretation"
+      },
+      {
+        "window_id": "C08-A-W4",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 490,
+        "end_line": 491,
+        "pdf_page": 8,
+        "role": "semantic_subsection_conclusion"
+      },
+      {
+        "window_id": "C08-A-W5",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 503,
+        "end_line": 507,
+        "pdf_page": 9,
+        "role": "table_2_caption"
+      },
+      {
+        "window_id": "C08-A-W6",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 2171,
+        "end_line": 2173,
+        "pdf_page": 26,
+        "role": "appendix_subsection_introduction"
+      },
+      {
+        "window_id": "C08-A-W7",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 2244,
+        "end_line": 2246,
+        "pdf_page": 27,
+        "role": "figure_9_caption_including_panel_captions"
+      },
+      {
+        "window_id": "C08-A-W8",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 2268,
+        "end_line": 2270,
+        "pdf_page": 27,
+        "role": "appendix_semantic_ablation_introduction_and_conclusion"
+      },
+      {
+        "window_id": "C08-A-W9",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 2344,
+        "end_line": 2347,
+        "pdf_page": 28,
+        "role": "figure_10_caption_including_panel_captions"
+      }
+    ],
+    "adjudication_action": "agree",
+    "agreed_row_review": "All windows reviewed for exact quotation, comparison attribution and semantic scope; no agreed claim-axis correction required."
+  },
+  {
+    "comparison_id": "C08-B",
+    "study": "ConTextTab",
+    "claim_content": "Yes",
+    "claim_utility": "No",
+    "descriptive_only": "No",
+    "claim_text": "As expected, we observe a significant drop in performance when discarding semantics completely or when using the conventional string encoders from the skrub library. Hence, ConTextTab successfully leverages the semantic content of features.",
+    "claim_location": "C08-B-W2: PDF p. 8, source lines 471–479 (iclr_latex_v3/design_audit/sources/C08_main.txt)",
+    "linkage": "explicit_group",
+    "claim_scope": "Categorical/string feature encoding: base (feature and column name semantics) versus no feature semantics - MinHash encoder",
+    "rationale": "The feature-encoder group, which names the audited alternative, explicitly concludes that the model leverages feature semantic content on CARTE. Its performance-drop report is interpreted as semantic use, without a separate explicit interpretation of semantic knowledge as a predictive benefit, so the utility axis is No under the conservative rule.",
+    "coder_id": "third_same_model_AI_adjudicator",
+    "quote_evidence": [
+      {
+        "quote": "As expected, we observe a significant drop in performance when discarding semantics completely or when using the conventional string encoders from the skrub library. Hence, ConTextTab successfully leverages the semantic content of features.",
+        "window_id": "C08-B-W2",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "pdf_page": 8,
+        "start_line": 471,
+        "end_line": 479
+      }
+    ],
+    "complete_window_inventory": [
+      {
+        "window_id": "C08-B-W1",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "pdf_page": 8,
+        "start_line": 470,
+        "end_line": 470,
+        "role": "table_2_introducing_paragraph"
+      },
+      {
+        "window_id": "C08-B-W2",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "pdf_page": 8,
+        "start_line": 471,
+        "end_line": 479,
+        "role": "feature_encoding_introduction_and_interpretation"
+      },
+      {
+        "window_id": "C08-B-W3",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "pdf_page": 8,
+        "start_line": 480,
+        "end_line": 489,
+        "role": "column_name_introduction_and_interpretation"
+      },
+      {
+        "window_id": "C08-B-W4",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "pdf_page": 8,
+        "start_line": 490,
+        "end_line": 491,
+        "role": "semantic_subsection_conclusion"
+      },
+      {
+        "window_id": "C08-B-W5",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "pdf_page": 9,
+        "start_line": 503,
+        "end_line": 507,
+        "role": "table_2_caption"
+      },
+      {
+        "window_id": "C08-B-W6",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "pdf_page": 26,
+        "start_line": 2171,
+        "end_line": 2173,
+        "role": "appendix_subsection_introduction"
+      },
+      {
+        "window_id": "C08-B-W7",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "pdf_page": 27,
+        "start_line": 2244,
+        "end_line": 2246,
+        "role": "figure_9_caption_including_panel_captions"
+      },
+      {
+        "window_id": "C08-B-W8",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "pdf_page": 27,
+        "start_line": 2268,
+        "end_line": 2270,
+        "role": "appendix_semantic_ablation_introduction_and_conclusion"
+      },
+      {
+        "window_id": "C08-B-W9",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "pdf_page": 28,
+        "start_line": 2344,
+        "end_line": 2347,
+        "role": "figure_10_caption_including_panel_captions"
+      }
+    ],
+    "coverage_notes": "Coverage: Table 2 full caption and introduction; both complete semantic paragraphs and the shared semantic closing paragraph in §5.1; Appendix A.4 introduction, complete semantic-embeddings paragraph, and Figure 9/10 captions with panel captions. Linkage: explicit_group to Table 2 semantic block; lines 471–479 specifically address the feature-encoding variants (C08-A/B/C/D), lines 480–489 address column removal and enrichment (C08-E/F), and lines 490–491 close both groups. Shared context does not transfer feature-encoding interpretations to column enrichment or vice versa. Absence inventory: no additional immediately following interpretive prose is supplied for Figure 9 or 10; nearby A.4 paragraphs concern different ablations (text-embedding model, curriculum, clipping, fine-tuning). A.4 ends its semantic discussion at line 2270. No abstract/introduction/conclusion passage explicitly links these six fixed interventions; general model claims excluded. All CARTE-only and statistical-qualification language is retained. Numeric table cells and figure matrices excluded.",
+    "source_version_caveat": "Archived local main PDF/text used; pagination refers to this archived PDF. No new source or version substituted.",
+    "adjudication_type": "Third same-model AI adjudication; not human validation",
+    "disagreement_fields": [],
+    "raw_labels": {
+      "A": {
+        "claim_content": "Yes",
+        "claim_utility": "No",
+        "descriptive_only": "No",
+        "linkage": "explicit_group"
+      },
+      "B": {
+        "claim_content": "Yes",
+        "claim_utility": "No",
+        "descriptive_only": "No",
+        "linkage": "explicit_group"
+      }
+    },
+    "adjudication_rationale": "W2 names the feature-encoder comparison group and interprets its results as leveraging semantic feature content, with W4 closing that group; the CARTE-only qualifier remains. The performance-drop report is interpreted as use, not separately as knowledge benefit under the conservative rule; W3’s explicit boost concerns column enrichment and cannot supply utility here.",
+    "additional_claim_quotes": [],
+    "window_inventory": [
+      {
+        "window_id": "C08-B-W1",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 470,
+        "end_line": 470,
+        "pdf_page": 8,
+        "role": "table_2_introducing_paragraph"
+      },
+      {
+        "window_id": "C08-B-W2",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 471,
+        "end_line": 479,
+        "pdf_page": 8,
+        "role": "feature_encoding_introduction_and_interpretation"
+      },
+      {
+        "window_id": "C08-B-W3",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 480,
+        "end_line": 489,
+        "pdf_page": 8,
+        "role": "column_name_introduction_and_interpretation"
+      },
+      {
+        "window_id": "C08-B-W4",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 490,
+        "end_line": 491,
+        "pdf_page": 8,
+        "role": "semantic_subsection_conclusion"
+      },
+      {
+        "window_id": "C08-B-W5",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 503,
+        "end_line": 507,
+        "pdf_page": 9,
+        "role": "table_2_caption"
+      },
+      {
+        "window_id": "C08-B-W6",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 2171,
+        "end_line": 2173,
+        "pdf_page": 26,
+        "role": "appendix_subsection_introduction"
+      },
+      {
+        "window_id": "C08-B-W7",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 2244,
+        "end_line": 2246,
+        "pdf_page": 27,
+        "role": "figure_9_caption_including_panel_captions"
+      },
+      {
+        "window_id": "C08-B-W8",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 2268,
+        "end_line": 2270,
+        "pdf_page": 27,
+        "role": "appendix_semantic_ablation_introduction_and_conclusion"
+      },
+      {
+        "window_id": "C08-B-W9",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 2344,
+        "end_line": 2347,
+        "pdf_page": 28,
+        "role": "figure_10_caption_including_panel_captions"
+      }
+    ],
+    "adjudication_action": "agree",
+    "agreed_row_review": "All windows reviewed for exact quotation, comparison attribution and semantic scope; no agreed claim-axis correction required."
+  },
+  {
+    "comparison_id": "C08-C",
+    "study": "ConTextTab",
+    "claim_content": "Yes",
+    "claim_utility": "No",
+    "descriptive_only": "No",
+    "claim_text": "As expected, we observe a significant drop in performance when discarding semantics completely or when using the conventional string encoders from the skrub library. Hence, ConTextTab successfully leverages the semantic content of features.",
+    "claim_location": "C08-C-W2: PDF p. 8, source lines 471–479 (iclr_latex_v3/design_audit/sources/C08_main.txt)",
+    "linkage": "explicit_group",
+    "claim_scope": "Categorical/string feature encoding: base (feature and column name semantics) versus no feature semantics - AutoGluon encoder",
+    "rationale": "The feature-encoder group, which names the audited alternative, explicitly concludes that the model leverages feature semantic content on CARTE. Its performance-drop report is interpreted as semantic use, without a separate explicit interpretation of semantic knowledge as a predictive benefit, so the utility axis is No under the conservative rule.",
+    "coder_id": "third_same_model_AI_adjudicator",
+    "quote_evidence": [
+      {
+        "quote": "As expected, we observe a significant drop in performance when discarding semantics completely or when using the conventional string encoders from the skrub library. Hence, ConTextTab successfully leverages the semantic content of features.",
+        "window_id": "C08-C-W2",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "pdf_page": 8,
+        "start_line": 471,
+        "end_line": 479
+      }
+    ],
+    "complete_window_inventory": [
+      {
+        "window_id": "C08-C-W1",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "pdf_page": 8,
+        "start_line": 470,
+        "end_line": 470,
+        "role": "table_2_introducing_paragraph"
+      },
+      {
+        "window_id": "C08-C-W2",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "pdf_page": 8,
+        "start_line": 471,
+        "end_line": 479,
+        "role": "feature_encoding_introduction_and_interpretation"
+      },
+      {
+        "window_id": "C08-C-W3",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "pdf_page": 8,
+        "start_line": 480,
+        "end_line": 489,
+        "role": "column_name_introduction_and_interpretation"
+      },
+      {
+        "window_id": "C08-C-W4",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "pdf_page": 8,
+        "start_line": 490,
+        "end_line": 491,
+        "role": "semantic_subsection_conclusion"
+      },
+      {
+        "window_id": "C08-C-W5",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "pdf_page": 9,
+        "start_line": 503,
+        "end_line": 507,
+        "role": "table_2_caption"
+      },
+      {
+        "window_id": "C08-C-W6",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "pdf_page": 26,
+        "start_line": 2171,
+        "end_line": 2173,
+        "role": "appendix_subsection_introduction"
+      },
+      {
+        "window_id": "C08-C-W7",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "pdf_page": 27,
+        "start_line": 2244,
+        "end_line": 2246,
+        "role": "figure_9_caption_including_panel_captions"
+      },
+      {
+        "window_id": "C08-C-W8",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "pdf_page": 27,
+        "start_line": 2268,
+        "end_line": 2270,
+        "role": "appendix_semantic_ablation_introduction_and_conclusion"
+      },
+      {
+        "window_id": "C08-C-W9",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "pdf_page": 28,
+        "start_line": 2344,
+        "end_line": 2347,
+        "role": "figure_10_caption_including_panel_captions"
+      }
+    ],
+    "coverage_notes": "Coverage: Table 2 full caption and introduction; both complete semantic paragraphs and the shared semantic closing paragraph in §5.1; Appendix A.4 introduction, complete semantic-embeddings paragraph, and Figure 9/10 captions with panel captions. Linkage: explicit_group to Table 2 semantic block; lines 471–479 specifically address the feature-encoding variants (C08-A/B/C/D), lines 480–489 address column removal and enrichment (C08-E/F), and lines 490–491 close both groups. Shared context does not transfer feature-encoding interpretations to column enrichment or vice versa. Absence inventory: no additional immediately following interpretive prose is supplied for Figure 9 or 10; nearby A.4 paragraphs concern different ablations (text-embedding model, curriculum, clipping, fine-tuning). A.4 ends its semantic discussion at line 2270. No abstract/introduction/conclusion passage explicitly links these six fixed interventions; general model claims excluded. All CARTE-only and statistical-qualification language is retained. Numeric table cells and figure matrices excluded.",
+    "source_version_caveat": "Archived local main PDF/text used; pagination refers to this archived PDF. No new source or version substituted.",
+    "adjudication_type": "Third same-model AI adjudication; not human validation",
+    "disagreement_fields": [],
+    "raw_labels": {
+      "A": {
+        "claim_content": "Yes",
+        "claim_utility": "No",
+        "descriptive_only": "No",
+        "linkage": "explicit_group"
+      },
+      "B": {
+        "claim_content": "Yes",
+        "claim_utility": "No",
+        "descriptive_only": "No",
+        "linkage": "explicit_group"
+      }
+    },
+    "adjudication_rationale": "W2 names the feature-encoder comparison group and interprets its results as leveraging semantic feature content, with W4 closing that group; the CARTE-only qualifier remains. The performance-drop report is interpreted as use, not separately as knowledge benefit under the conservative rule; W3’s explicit boost concerns column enrichment and cannot supply utility here.",
+    "additional_claim_quotes": [],
+    "window_inventory": [
+      {
+        "window_id": "C08-C-W1",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 470,
+        "end_line": 470,
+        "pdf_page": 8,
+        "role": "table_2_introducing_paragraph"
+      },
+      {
+        "window_id": "C08-C-W2",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 471,
+        "end_line": 479,
+        "pdf_page": 8,
+        "role": "feature_encoding_introduction_and_interpretation"
+      },
+      {
+        "window_id": "C08-C-W3",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 480,
+        "end_line": 489,
+        "pdf_page": 8,
+        "role": "column_name_introduction_and_interpretation"
+      },
+      {
+        "window_id": "C08-C-W4",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 490,
+        "end_line": 491,
+        "pdf_page": 8,
+        "role": "semantic_subsection_conclusion"
+      },
+      {
+        "window_id": "C08-C-W5",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 503,
+        "end_line": 507,
+        "pdf_page": 9,
+        "role": "table_2_caption"
+      },
+      {
+        "window_id": "C08-C-W6",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 2171,
+        "end_line": 2173,
+        "pdf_page": 26,
+        "role": "appendix_subsection_introduction"
+      },
+      {
+        "window_id": "C08-C-W7",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 2244,
+        "end_line": 2246,
+        "pdf_page": 27,
+        "role": "figure_9_caption_including_panel_captions"
+      },
+      {
+        "window_id": "C08-C-W8",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 2268,
+        "end_line": 2270,
+        "pdf_page": 27,
+        "role": "appendix_semantic_ablation_introduction_and_conclusion"
+      },
+      {
+        "window_id": "C08-C-W9",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 2344,
+        "end_line": 2347,
+        "pdf_page": 28,
+        "role": "figure_10_caption_including_panel_captions"
+      }
+    ],
+    "adjudication_action": "agree",
+    "agreed_row_review": "All windows reviewed for exact quotation, comparison attribution and semantic scope; no agreed claim-axis correction required."
+  },
+  {
+    "comparison_id": "C08-D",
+    "study": "ConTextTab",
+    "claim_content": "Yes",
+    "claim_utility": "No",
+    "descriptive_only": "No",
+    "claim_text": "As expected, we observe a significant drop in performance when discarding semantics completely or when using the conventional string encoders from the skrub library. Hence, ConTextTab successfully leverages the semantic content of features.",
+    "claim_location": "C08-D-W2: PDF p. 8, source lines 471–479 (iclr_latex_v3/design_audit/sources/C08_main.txt)",
+    "linkage": "explicit_group",
+    "claim_scope": "Categorical/string feature encoding: base (feature and column name semantics) versus no feature semantics - Gap encoder",
+    "rationale": "The feature-encoder group, which names the audited alternative, explicitly concludes that the model leverages feature semantic content on CARTE. Its performance-drop report is interpreted as semantic use, without a separate explicit interpretation of semantic knowledge as a predictive benefit, so the utility axis is No under the conservative rule.",
+    "coder_id": "third_same_model_AI_adjudicator",
+    "quote_evidence": [
+      {
+        "quote": "As expected, we observe a significant drop in performance when discarding semantics completely or when using the conventional string encoders from the skrub library. Hence, ConTextTab successfully leverages the semantic content of features.",
+        "window_id": "C08-D-W2",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "pdf_page": 8,
+        "start_line": 471,
+        "end_line": 479
+      }
+    ],
+    "complete_window_inventory": [
+      {
+        "window_id": "C08-D-W1",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "pdf_page": 8,
+        "start_line": 470,
+        "end_line": 470,
+        "role": "table_2_introducing_paragraph"
+      },
+      {
+        "window_id": "C08-D-W2",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "pdf_page": 8,
+        "start_line": 471,
+        "end_line": 479,
+        "role": "feature_encoding_introduction_and_interpretation"
+      },
+      {
+        "window_id": "C08-D-W3",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "pdf_page": 8,
+        "start_line": 480,
+        "end_line": 489,
+        "role": "column_name_introduction_and_interpretation"
+      },
+      {
+        "window_id": "C08-D-W4",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "pdf_page": 8,
+        "start_line": 490,
+        "end_line": 491,
+        "role": "semantic_subsection_conclusion"
+      },
+      {
+        "window_id": "C08-D-W5",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "pdf_page": 9,
+        "start_line": 503,
+        "end_line": 507,
+        "role": "table_2_caption"
+      },
+      {
+        "window_id": "C08-D-W6",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "pdf_page": 26,
+        "start_line": 2171,
+        "end_line": 2173,
+        "role": "appendix_subsection_introduction"
+      },
+      {
+        "window_id": "C08-D-W7",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "pdf_page": 27,
+        "start_line": 2244,
+        "end_line": 2246,
+        "role": "figure_9_caption_including_panel_captions"
+      },
+      {
+        "window_id": "C08-D-W8",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "pdf_page": 27,
+        "start_line": 2268,
+        "end_line": 2270,
+        "role": "appendix_semantic_ablation_introduction_and_conclusion"
+      },
+      {
+        "window_id": "C08-D-W9",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "pdf_page": 28,
+        "start_line": 2344,
+        "end_line": 2347,
+        "role": "figure_10_caption_including_panel_captions"
+      }
+    ],
+    "coverage_notes": "Coverage: Table 2 full caption and introduction; both complete semantic paragraphs and the shared semantic closing paragraph in §5.1; Appendix A.4 introduction, complete semantic-embeddings paragraph, and Figure 9/10 captions with panel captions. Linkage: explicit_group to Table 2 semantic block; lines 471–479 specifically address the feature-encoding variants (C08-A/B/C/D), lines 480–489 address column removal and enrichment (C08-E/F), and lines 490–491 close both groups. Shared context does not transfer feature-encoding interpretations to column enrichment or vice versa. Absence inventory: no additional immediately following interpretive prose is supplied for Figure 9 or 10; nearby A.4 paragraphs concern different ablations (text-embedding model, curriculum, clipping, fine-tuning). A.4 ends its semantic discussion at line 2270. No abstract/introduction/conclusion passage explicitly links these six fixed interventions; general model claims excluded. All CARTE-only and statistical-qualification language is retained. Numeric table cells and figure matrices excluded.",
+    "source_version_caveat": "Archived local main PDF/text used; pagination refers to this archived PDF. No new source or version substituted.",
+    "adjudication_type": "Third same-model AI adjudication; not human validation",
+    "disagreement_fields": [],
+    "raw_labels": {
+      "A": {
+        "claim_content": "Yes",
+        "claim_utility": "No",
+        "descriptive_only": "No",
+        "linkage": "explicit_group"
+      },
+      "B": {
+        "claim_content": "Yes",
+        "claim_utility": "No",
+        "descriptive_only": "No",
+        "linkage": "explicit_group"
+      }
+    },
+    "adjudication_rationale": "W2 names the feature-encoder comparison group and interprets its results as leveraging semantic feature content, with W4 closing that group; the CARTE-only qualifier remains. The performance-drop report is interpreted as use, not separately as knowledge benefit under the conservative rule; W3’s explicit boost concerns column enrichment and cannot supply utility here.",
+    "additional_claim_quotes": [],
+    "window_inventory": [
+      {
+        "window_id": "C08-D-W1",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 470,
+        "end_line": 470,
+        "pdf_page": 8,
+        "role": "table_2_introducing_paragraph"
+      },
+      {
+        "window_id": "C08-D-W2",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 471,
+        "end_line": 479,
+        "pdf_page": 8,
+        "role": "feature_encoding_introduction_and_interpretation"
+      },
+      {
+        "window_id": "C08-D-W3",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 480,
+        "end_line": 489,
+        "pdf_page": 8,
+        "role": "column_name_introduction_and_interpretation"
+      },
+      {
+        "window_id": "C08-D-W4",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 490,
+        "end_line": 491,
+        "pdf_page": 8,
+        "role": "semantic_subsection_conclusion"
+      },
+      {
+        "window_id": "C08-D-W5",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 503,
+        "end_line": 507,
+        "pdf_page": 9,
+        "role": "table_2_caption"
+      },
+      {
+        "window_id": "C08-D-W6",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 2171,
+        "end_line": 2173,
+        "pdf_page": 26,
+        "role": "appendix_subsection_introduction"
+      },
+      {
+        "window_id": "C08-D-W7",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 2244,
+        "end_line": 2246,
+        "pdf_page": 27,
+        "role": "figure_9_caption_including_panel_captions"
+      },
+      {
+        "window_id": "C08-D-W8",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 2268,
+        "end_line": 2270,
+        "pdf_page": 27,
+        "role": "appendix_semantic_ablation_introduction_and_conclusion"
+      },
+      {
+        "window_id": "C08-D-W9",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 2344,
+        "end_line": 2347,
+        "pdf_page": 28,
+        "role": "figure_10_caption_including_panel_captions"
+      }
+    ],
+    "adjudication_action": "agree",
+    "agreed_row_review": "All windows reviewed for exact quotation, comparison attribution and semantic scope; no agreed claim-axis correction required."
+  },
+  {
+    "comparison_id": "C08-E",
+    "study": "ConTextTab",
+    "claim_content": "Yes",
+    "claim_utility": "No",
+    "descriptive_only": "No",
+    "claim_text": "Dropping column name semantics indeed results in a performance loss of about [NUM]% in accuracy and [NUM]% in R[NUM] score.",
+    "claim_location": "C08-E-W3: PDF p. 8, source lines 480–489 (iclr_latex_v3/design_audit/sources/C08_main.txt); C08-E-W4: PDF p. 8, source lines 490–491 (iclr_latex_v3/design_audit/sources/C08_main.txt)",
+    "linkage": "explicit_group",
+    "claim_scope": "Column-name encoding: base (feature and column name semantics) versus column semantics - drop column names",
+    "rationale": "The shared closing interpretation explicitly asserts leveraging column-name semantics, covering the removal comparison on CARTE. The local removal statement reports a performance loss but does not separately interpret it as knowledge benefit; the explicit boost statement addresses enrichment, a different comparison.",
+    "coder_id": "third_same_model_AI_adjudicator",
+    "quote_evidence": [
+      {
+        "quote": "Dropping column name semantics indeed results in a performance loss of about [NUM]% in accuracy and [NUM]% in R[NUM] score.",
+        "window_id": "C08-E-W3",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "pdf_page": 8,
+        "start_line": 480,
+        "end_line": 489
+      },
+      {
+        "quote": "Overall, ConTextTab successfully integrated and leverages semantics, both present in the table’s features as well as those potentially contained in the table column names.",
+        "window_id": "C08-E-W4",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "pdf_page": 8,
+        "start_line": 490,
+        "end_line": 491
+      }
+    ],
+    "complete_window_inventory": [
+      {
+        "window_id": "C08-E-W1",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "pdf_page": 8,
+        "start_line": 470,
+        "end_line": 470,
+        "role": "table_2_introducing_paragraph"
+      },
+      {
+        "window_id": "C08-E-W2",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "pdf_page": 8,
+        "start_line": 471,
+        "end_line": 479,
+        "role": "feature_encoding_introduction_and_interpretation"
+      },
+      {
+        "window_id": "C08-E-W3",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "pdf_page": 8,
+        "start_line": 480,
+        "end_line": 489,
+        "role": "column_name_introduction_and_interpretation"
+      },
+      {
+        "window_id": "C08-E-W4",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "pdf_page": 8,
+        "start_line": 490,
+        "end_line": 491,
+        "role": "semantic_subsection_conclusion"
+      },
+      {
+        "window_id": "C08-E-W5",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "pdf_page": 9,
+        "start_line": 503,
+        "end_line": 507,
+        "role": "table_2_caption"
+      },
+      {
+        "window_id": "C08-E-W6",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "pdf_page": 26,
+        "start_line": 2171,
+        "end_line": 2173,
+        "role": "appendix_subsection_introduction"
+      },
+      {
+        "window_id": "C08-E-W7",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "pdf_page": 27,
+        "start_line": 2244,
+        "end_line": 2246,
+        "role": "figure_9_caption_including_panel_captions"
+      },
+      {
+        "window_id": "C08-E-W8",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "pdf_page": 27,
+        "start_line": 2268,
+        "end_line": 2270,
+        "role": "appendix_semantic_ablation_introduction_and_conclusion"
+      },
+      {
+        "window_id": "C08-E-W9",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "pdf_page": 28,
+        "start_line": 2344,
+        "end_line": 2347,
+        "role": "figure_10_caption_including_panel_captions"
+      }
+    ],
+    "coverage_notes": "Coverage: Table 2 full caption and introduction; both complete semantic paragraphs and the shared semantic closing paragraph in §5.1; Appendix A.4 introduction, complete semantic-embeddings paragraph, and Figure 9/10 captions with panel captions. Linkage: explicit_group to Table 2 semantic block; lines 471–479 specifically address the feature-encoding variants (C08-A/B/C/D), lines 480–489 address column removal and enrichment (C08-E/F), and lines 490–491 close both groups. Shared context does not transfer feature-encoding interpretations to column enrichment or vice versa. Absence inventory: no additional immediately following interpretive prose is supplied for Figure 9 or 10; nearby A.4 paragraphs concern different ablations (text-embedding model, curriculum, clipping, fine-tuning). A.4 ends its semantic discussion at line 2270. No abstract/introduction/conclusion passage explicitly links these six fixed interventions; general model claims excluded. All CARTE-only and statistical-qualification language is retained. Numeric table cells and figure matrices excluded.",
+    "source_version_caveat": "Archived local main PDF/text used; pagination refers to this archived PDF. No new source or version substituted.",
+    "adjudication_type": "Third same-model AI adjudication; not human validation",
+    "disagreement_fields": [],
+    "raw_labels": {
+      "A": {
+        "claim_content": "Yes",
+        "claim_utility": "No",
+        "descriptive_only": "No",
+        "linkage": "explicit_group"
+      },
+      "B": {
+        "claim_content": "Yes",
+        "claim_utility": "No",
+        "descriptive_only": "No",
+        "linkage": "explicit_group"
+      }
+    },
+    "adjudication_rationale": "W3 reports column-semantic removal and W4 explicitly concludes that the model leverages semantics potentially in column names, supporting content for this group. W3’s performance-loss report is not separately interpreted as knowledge benefit; its explicit boost concerns the different enrichment intervention, so utility remains No.",
+    "additional_claim_quotes": [
+      "Overall, ConTextTab successfully integrated and leverages semantics, both present in the table’s features as well as those potentially contained in the table column names."
+    ],
+    "window_inventory": [
+      {
+        "window_id": "C08-E-W1",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 470,
+        "end_line": 470,
+        "pdf_page": 8,
+        "role": "table_2_introducing_paragraph"
+      },
+      {
+        "window_id": "C08-E-W2",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 471,
+        "end_line": 479,
+        "pdf_page": 8,
+        "role": "feature_encoding_introduction_and_interpretation"
+      },
+      {
+        "window_id": "C08-E-W3",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 480,
+        "end_line": 489,
+        "pdf_page": 8,
+        "role": "column_name_introduction_and_interpretation"
+      },
+      {
+        "window_id": "C08-E-W4",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 490,
+        "end_line": 491,
+        "pdf_page": 8,
+        "role": "semantic_subsection_conclusion"
+      },
+      {
+        "window_id": "C08-E-W5",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 503,
+        "end_line": 507,
+        "pdf_page": 9,
+        "role": "table_2_caption"
+      },
+      {
+        "window_id": "C08-E-W6",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 2171,
+        "end_line": 2173,
+        "pdf_page": 26,
+        "role": "appendix_subsection_introduction"
+      },
+      {
+        "window_id": "C08-E-W7",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 2244,
+        "end_line": 2246,
+        "pdf_page": 27,
+        "role": "figure_9_caption_including_panel_captions"
+      },
+      {
+        "window_id": "C08-E-W8",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 2268,
+        "end_line": 2270,
+        "pdf_page": 27,
+        "role": "appendix_semantic_ablation_introduction_and_conclusion"
+      },
+      {
+        "window_id": "C08-E-W9",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 2344,
+        "end_line": 2347,
+        "pdf_page": 28,
+        "role": "figure_10_caption_including_panel_captions"
+      }
+    ],
+    "adjudication_action": "agree",
+    "agreed_row_review": "All windows reviewed for exact quotation, comparison attribution and semantic scope; no agreed claim-axis correction required."
+  },
+  {
+    "comparison_id": "C08-F",
+    "study": "ConTextTab",
+    "claim_content": "Yes",
+    "claim_utility": "Yes",
+    "descriptive_only": "No",
+    "claim_text": "Further enriching column header semantics slightly boosts performance, resulting in a slightly better rank, however with a win rate of [NUM]% at a p-value of [NUM] this is not statistically significant.",
+    "claim_location": "C08-F-W3: PDF p. 8, source lines 480–489 (iclr_latex_v3/design_audit/sources/C08_main.txt); C08-F-W4: PDF p. 8, source lines 490–491 (iclr_latex_v3/design_audit/sources/C08_main.txt)",
+    "linkage": "explicit_group",
+    "claim_scope": "Additional contextual column descriptions: column semantics - add description versus base (feature and column name semantics)",
+    "rationale": "The closing semantic interpretation encompasses both column-name interventions, including contextual descriptions, and explicitly claims semantic use. Enrichment is expressly said to boost performance slightly on CARTE, with the stated lack of statistical significance preserved.",
+    "coder_id": "third_same_model_AI_adjudicator",
+    "quote_evidence": [
+      {
+        "quote": "Further enriching column header semantics slightly boosts performance, resulting in a slightly better rank, however with a win rate of [NUM]% at a p-value of [NUM] this is not statistically significant.",
+        "window_id": "C08-F-W3",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "pdf_page": 8,
+        "start_line": 480,
+        "end_line": 489
+      },
+      {
+        "quote": "Overall, ConTextTab successfully integrated and leverages semantics, both present in the table’s features as well as those potentially contained in the table column names.",
+        "window_id": "C08-F-W4",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "pdf_page": 8,
+        "start_line": 490,
+        "end_line": 491
+      }
+    ],
+    "complete_window_inventory": [
+      {
+        "window_id": "C08-F-W1",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "pdf_page": 8,
+        "start_line": 470,
+        "end_line": 470,
+        "role": "table_2_introducing_paragraph"
+      },
+      {
+        "window_id": "C08-F-W2",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "pdf_page": 8,
+        "start_line": 471,
+        "end_line": 479,
+        "role": "feature_encoding_introduction_and_interpretation"
+      },
+      {
+        "window_id": "C08-F-W3",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "pdf_page": 8,
+        "start_line": 480,
+        "end_line": 489,
+        "role": "column_name_introduction_and_interpretation"
+      },
+      {
+        "window_id": "C08-F-W4",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "pdf_page": 8,
+        "start_line": 490,
+        "end_line": 491,
+        "role": "semantic_subsection_conclusion"
+      },
+      {
+        "window_id": "C08-F-W5",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "pdf_page": 9,
+        "start_line": 503,
+        "end_line": 507,
+        "role": "table_2_caption"
+      },
+      {
+        "window_id": "C08-F-W6",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "pdf_page": 26,
+        "start_line": 2171,
+        "end_line": 2173,
+        "role": "appendix_subsection_introduction"
+      },
+      {
+        "window_id": "C08-F-W7",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "pdf_page": 27,
+        "start_line": 2244,
+        "end_line": 2246,
+        "role": "figure_9_caption_including_panel_captions"
+      },
+      {
+        "window_id": "C08-F-W8",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "pdf_page": 27,
+        "start_line": 2268,
+        "end_line": 2270,
+        "role": "appendix_semantic_ablation_introduction_and_conclusion"
+      },
+      {
+        "window_id": "C08-F-W9",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "pdf_page": 28,
+        "start_line": 2344,
+        "end_line": 2347,
+        "role": "figure_10_caption_including_panel_captions"
+      }
+    ],
+    "coverage_notes": "Coverage: Table 2 full caption and introduction; both complete semantic paragraphs and the shared semantic closing paragraph in §5.1; Appendix A.4 introduction, complete semantic-embeddings paragraph, and Figure 9/10 captions with panel captions. Linkage: explicit_group to Table 2 semantic block; lines 471–479 specifically address the feature-encoding variants (C08-A/B/C/D), lines 480–489 address column removal and enrichment (C08-E/F), and lines 490–491 close both groups. Shared context does not transfer feature-encoding interpretations to column enrichment or vice versa. Absence inventory: no additional immediately following interpretive prose is supplied for Figure 9 or 10; nearby A.4 paragraphs concern different ablations (text-embedding model, curriculum, clipping, fine-tuning). A.4 ends its semantic discussion at line 2270. No abstract/introduction/conclusion passage explicitly links these six fixed interventions; general model claims excluded. All CARTE-only and statistical-qualification language is retained. Numeric table cells and figure matrices excluded.",
+    "source_version_caveat": "Archived local main PDF/text used; pagination refers to this archived PDF. No new source or version substituted.",
+    "adjudication_type": "Third same-model AI adjudication; not human validation",
+    "disagreement_fields": [],
+    "raw_labels": {
+      "A": {
+        "claim_content": "Yes",
+        "claim_utility": "Yes",
+        "descriptive_only": "No",
+        "linkage": "explicit_group"
+      },
+      "B": {
+        "claim_content": "Yes",
+        "claim_utility": "Yes",
+        "descriptive_only": "No",
+        "linkage": "explicit_group"
+      }
+    },
+    "adjudication_rationale": "W3 explicitly attributes a slight performance boost to enrichment and W4 concludes the two column-semantic interventions as leveraging column semantics; this satisfies both axes within the permitted explicit group. The CARTE-only setting and stated lack of statistical significance qualify the benefit without erasing the reported claim.",
+    "additional_claim_quotes": [
+      "Overall, ConTextTab successfully integrated and leverages semantics, both present in the table’s features as well as those potentially contained in the table column names."
+    ],
+    "window_inventory": [
+      {
+        "window_id": "C08-F-W1",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 470,
+        "end_line": 470,
+        "pdf_page": 8,
+        "role": "table_2_introducing_paragraph"
+      },
+      {
+        "window_id": "C08-F-W2",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 471,
+        "end_line": 479,
+        "pdf_page": 8,
+        "role": "feature_encoding_introduction_and_interpretation"
+      },
+      {
+        "window_id": "C08-F-W3",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 480,
+        "end_line": 489,
+        "pdf_page": 8,
+        "role": "column_name_introduction_and_interpretation"
+      },
+      {
+        "window_id": "C08-F-W4",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 490,
+        "end_line": 491,
+        "pdf_page": 8,
+        "role": "semantic_subsection_conclusion"
+      },
+      {
+        "window_id": "C08-F-W5",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 503,
+        "end_line": 507,
+        "pdf_page": 9,
+        "role": "table_2_caption"
+      },
+      {
+        "window_id": "C08-F-W6",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 2171,
+        "end_line": 2173,
+        "pdf_page": 26,
+        "role": "appendix_subsection_introduction"
+      },
+      {
+        "window_id": "C08-F-W7",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 2244,
+        "end_line": 2246,
+        "pdf_page": 27,
+        "role": "figure_9_caption_including_panel_captions"
+      },
+      {
+        "window_id": "C08-F-W8",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 2268,
+        "end_line": 2270,
+        "pdf_page": 27,
+        "role": "appendix_semantic_ablation_introduction_and_conclusion"
+      },
+      {
+        "window_id": "C08-F-W9",
+        "source_path": "iclr_latex_v3/design_audit/sources/C08_main.txt",
+        "start_line": 2344,
+        "end_line": 2347,
+        "pdf_page": 28,
+        "role": "figure_10_caption_including_panel_captions"
+      }
+    ],
+    "adjudication_action": "agree",
+    "agreed_row_review": "All windows reviewed for exact quotation, comparison attribution and semantic scope; no agreed claim-axis correction required."
+  },
+  {
+    "comparison_id": "C09-A",
+    "study": "TabSTAR",
+    "claim_content": "No",
+    "claim_utility": "No",
+    "descriptive_only": "No",
+    "claim_text": "The addition of the quantile information on top of the bin seems to have limited impact, although marginally winning on the average performance.",
+    "claim_location": "C09-A-W4: PDF p. 52, source lines 3103–3107 (iclr_latex_v3/design_audit/sources/C09_main.txt)",
+    "linkage": "explicit_comparison",
+    "claim_scope": "Quantile text in numerical verbalization: TabSTAR versus Name + Bin",
+    "rationale": "For quantile addition specifically, the authors interpret the impact as limited and report a marginal average win, without asserting use of quantile semantic content or interpreting semantic knowledge as providing benefit. The substantive limited-impact interpretation prevents descriptive-only coding, and broader numerical-information benefits concern comparisons to Name rather than this incremental quantile intervention.",
+    "coder_id": "third_same_model_AI_adjudicator",
+    "quote_evidence": [
+      {
+        "quote": "The addition of the quantile information on top of the bin seems to have limited impact, although marginally winning on the average performance.",
+        "window_id": "C09-A-W4",
+        "source_path": "iclr_latex_v3/design_audit/sources/C09_main.txt",
+        "pdf_page": 52,
+        "start_line": 3103,
+        "end_line": 3107
+      }
+    ],
+    "complete_window_inventory": [
+      {
+        "window_id": "C09-A-W1",
+        "source_path": "iclr_latex_v3/design_audit/sources/C09_main.txt",
+        "pdf_page": 9,
+        "start_line": 542,
+        "end_line": 553,
+        "role": "q3_introduction_interpretation_and_subsection_conclusion"
+      },
+      {
+        "window_id": "C09-A-W2",
+        "source_path": "iclr_latex_v3/design_audit/sources/C09_main.txt",
+        "pdf_page": 10,
+        "start_line": 559,
+        "end_line": 559,
+        "role": "table_4_caption"
+      },
+      {
+        "window_id": "C09-A-W3",
+        "source_path": "iclr_latex_v3/design_audit/sources/C09_main.txt",
+        "pdf_page": 51,
+        "start_line": 3068,
+        "end_line": 3073,
+        "role": "appendix_g4_heading_and_interpretive_paragraph_part_1"
+      },
+      {
+        "window_id": "C09-A-W4",
+        "source_path": "iclr_latex_v3/design_audit/sources/C09_main.txt",
+        "pdf_page": 52,
+        "start_line": 3103,
+        "end_line": 3107,
+        "role": "appendix_g4_interpretive_paragraph_part_2_and_conclusion"
+      },
+      {
+        "window_id": "C09-A-W5",
+        "source_path": "iclr_latex_v3/design_audit/sources/C09_main.txt",
+        "pdf_page": 52,
+        "start_line": 3124,
+        "end_line": 3125,
+        "role": "figure_8_caption"
+      },
+      {
+        "window_id": "C09-A-W6",
+        "source_path": "iclr_latex_v3/design_audit/sources/C09_main.txt",
+        "pdf_page": 53,
+        "start_line": 3159,
+        "end_line": 3160,
+        "role": "table_31_illustrative_caption"
+      },
+      {
+        "window_id": "C09-A-W7",
+        "source_path": "iclr_latex_v3/design_audit/sources/C09_main.txt",
+        "pdf_page": 54,
+        "start_line": 3180,
+        "end_line": 3182,
+        "role": "table_32_caption"
+      }
+    ],
+    "coverage_notes": "Coverage: complete §6 Q3 paragraph with variant definitions, main Table 4 caption, complete Appendix G.4 interpretive paragraph and conclusion, Figure 8 caption, illustrative Table 31 caption, and full-results Table 32 caption. Linkage: explicit_group to the numerical-verbalization experiment. The quantile-addition statement explicitly concerns C09-A; the two variants that integrate numerical information is group wording spanning Name+Bin and TabSTAR relative to Name, so preserve the distinction between C09-A and C09-B. G.4 paragraph spans source lines 3070–3073 and 3103–3107, separated only by a floated Table 29/Figure 7 for a different experiment; both verbatim fragments are included in order, without that unrelated float. Absence inventory: §6 Q3 ends with the interpretation, without another separate closing paragraph; Table 4 is followed by §7; no further G.4 prose follows Figure 8 or Tables 31/32, and Table 32 ends the PDF. Abstract/introduction have no explicit link to these ablations; §7 numerical-binning discussion is a future-research proposal without a link to this ablation and is excluded. All dataset and limited-quantile-impact qualifiers are retained. Numeric performance tables/plots and illustrative table body excluded.",
+    "source_version_caveat": "Archived local main PDF/text used; pagination refers to this archived PDF. No new source or version substituted.",
+    "adjudication_type": "Third same-model AI adjudication; not human validation",
+    "disagreement_fields": [],
+    "raw_labels": {
+      "A": {
+        "claim_content": "No",
+        "claim_utility": "No",
+        "descriptive_only": "No",
+        "linkage": "explicit_comparison"
+      },
+      "B": {
+        "claim_content": "No",
+        "claim_utility": "No",
+        "descriptive_only": "No",
+        "linkage": "explicit_comparison"
+      }
+    },
+    "adjudication_rationale": "W4 specifically interprets added quantiles as having limited impact, with a marginal observed average win; it does not assert semantic-content reliance or interpret knowledge as yielding benefit. W1 and W3–W4’s broader numerical-information benefit concerns variants versus Name, not this increment over Name + Bin; the limited-impact interpretation is substantive, so descriptive_only is No.",
+    "additional_claim_quotes": [],
+    "window_inventory": [
+      {
+        "window_id": "C09-A-W1",
+        "source_path": "iclr_latex_v3/design_audit/sources/C09_main.txt",
+        "start_line": 542,
+        "end_line": 553,
+        "pdf_page": 9,
+        "role": "q3_introduction_interpretation_and_subsection_conclusion"
+      },
+      {
+        "window_id": "C09-A-W2",
+        "source_path": "iclr_latex_v3/design_audit/sources/C09_main.txt",
+        "start_line": 559,
+        "end_line": 559,
+        "pdf_page": 10,
+        "role": "table_4_caption"
+      },
+      {
+        "window_id": "C09-A-W3",
+        "source_path": "iclr_latex_v3/design_audit/sources/C09_main.txt",
+        "start_line": 3068,
+        "end_line": 3073,
+        "pdf_page": 51,
+        "role": "appendix_g4_heading_and_interpretive_paragraph_part_1"
+      },
+      {
+        "window_id": "C09-A-W4",
+        "source_path": "iclr_latex_v3/design_audit/sources/C09_main.txt",
+        "start_line": 3103,
+        "end_line": 3107,
+        "pdf_page": 52,
+        "role": "appendix_g4_interpretive_paragraph_part_2_and_conclusion"
+      },
+      {
+        "window_id": "C09-A-W5",
+        "source_path": "iclr_latex_v3/design_audit/sources/C09_main.txt",
+        "start_line": 3124,
+        "end_line": 3125,
+        "pdf_page": 52,
+        "role": "figure_8_caption"
+      },
+      {
+        "window_id": "C09-A-W6",
+        "source_path": "iclr_latex_v3/design_audit/sources/C09_main.txt",
+        "start_line": 3159,
+        "end_line": 3160,
+        "pdf_page": 53,
+        "role": "table_31_illustrative_caption"
+      },
+      {
+        "window_id": "C09-A-W7",
+        "source_path": "iclr_latex_v3/design_audit/sources/C09_main.txt",
+        "start_line": 3180,
+        "end_line": 3182,
+        "pdf_page": 54,
+        "role": "table_32_caption"
+      }
+    ],
+    "adjudication_action": "agree",
+    "agreed_row_review": "All windows reviewed for exact quotation, comparison attribution and semantic scope; no agreed claim-axis correction required."
+  },
+  {
+    "comparison_id": "C09-B",
+    "study": "TabSTAR",
+    "claim_content": "No",
+    "claim_utility": "Yes",
+    "descriptive_only": "No",
+    "claim_text": "our findings reveal that incorporating numerical information significantly enhances performance, highlighting the importance of balancing numerical precision with a representation format that aligns with the language model’s parametric knowledge.",
+    "claim_location": "C09-B-W1: PDF p. 9, source lines 542–553 (iclr_latex_v3/design_audit/sources/C09_main.txt); C09-B-W4: PDF p. 52, source lines 3103–3107 (iclr_latex_v3/design_audit/sources/C09_main.txt)",
+    "linkage": "explicit_group",
+    "claim_scope": "Numerical information in verbalized features: TabSTAR versus Name",
+    "rationale": "The numerical-information group explicitly interprets semantically verbalized numerical information as improving prediction relative to names alone, while retaining dataset-specific limited gains and failures. Describing information injection and benefit does not independently assert reliance on or use of its semantic content, so content is No.",
+    "coder_id": "third_same_model_AI_adjudicator",
+    "quote_evidence": [
+      {
+        "quote": "our findings reveal that incorporating numerical information significantly enhances performance, highlighting the importance of balancing numerical precision with a representation format that aligns with the language model’s parametric knowledge.",
+        "window_id": "C09-B-W1",
+        "source_path": "iclr_latex_v3/design_audit/sources/C09_main.txt",
+        "pdf_page": 9,
+        "start_line": 542,
+        "end_line": 553
+      },
+      {
+        "quote": "marginal for some datasets. Interestingly, some datasets significantly underperform, with the R[NUM] dataset completely failing the task.",
+        "window_id": "C09-B-W4",
+        "source_path": "iclr_latex_v3/design_audit/sources/C09_main.txt",
+        "pdf_page": 52,
+        "start_line": 3103,
+        "end_line": 3107
+      }
+    ],
+    "complete_window_inventory": [
+      {
+        "window_id": "C09-B-W1",
+        "source_path": "iclr_latex_v3/design_audit/sources/C09_main.txt",
+        "pdf_page": 9,
+        "start_line": 542,
+        "end_line": 553,
+        "role": "q3_introduction_interpretation_and_subsection_conclusion"
+      },
+      {
+        "window_id": "C09-B-W2",
+        "source_path": "iclr_latex_v3/design_audit/sources/C09_main.txt",
+        "pdf_page": 10,
+        "start_line": 559,
+        "end_line": 559,
+        "role": "table_4_caption"
+      },
+      {
+        "window_id": "C09-B-W3",
+        "source_path": "iclr_latex_v3/design_audit/sources/C09_main.txt",
+        "pdf_page": 51,
+        "start_line": 3068,
+        "end_line": 3073,
+        "role": "appendix_g4_heading_and_interpretive_paragraph_part_1"
+      },
+      {
+        "window_id": "C09-B-W4",
+        "source_path": "iclr_latex_v3/design_audit/sources/C09_main.txt",
+        "pdf_page": 52,
+        "start_line": 3103,
+        "end_line": 3107,
+        "role": "appendix_g4_interpretive_paragraph_part_2_and_conclusion"
+      },
+      {
+        "window_id": "C09-B-W5",
+        "source_path": "iclr_latex_v3/design_audit/sources/C09_main.txt",
+        "pdf_page": 52,
+        "start_line": 3124,
+        "end_line": 3125,
+        "role": "figure_8_caption"
+      },
+      {
+        "window_id": "C09-B-W6",
+        "source_path": "iclr_latex_v3/design_audit/sources/C09_main.txt",
+        "pdf_page": 53,
+        "start_line": 3159,
+        "end_line": 3160,
+        "role": "table_31_illustrative_caption"
+      },
+      {
+        "window_id": "C09-B-W7",
+        "source_path": "iclr_latex_v3/design_audit/sources/C09_main.txt",
+        "pdf_page": 54,
+        "start_line": 3180,
+        "end_line": 3182,
+        "role": "table_32_caption"
+      }
+    ],
+    "coverage_notes": "Coverage: complete §6 Q3 paragraph with variant definitions, main Table 4 caption, complete Appendix G.4 interpretive paragraph and conclusion, Figure 8 caption, illustrative Table 31 caption, and full-results Table 32 caption. Linkage: explicit_group to the numerical-verbalization experiment. The quantile-addition statement explicitly concerns C09-A; the two variants that integrate numerical information is group wording spanning Name+Bin and TabSTAR relative to Name, so preserve the distinction between C09-A and C09-B. G.4 paragraph spans source lines 3070–3073 and 3103–3107, separated only by a floated Table 29/Figure 7 for a different experiment; both verbatim fragments are included in order, without that unrelated float. Absence inventory: §6 Q3 ends with the interpretation, without another separate closing paragraph; Table 4 is followed by §7; no further G.4 prose follows Figure 8 or Tables 31/32, and Table 32 ends the PDF. Abstract/introduction have no explicit link to these ablations; §7 numerical-binning discussion is a future-research proposal without a link to this ablation and is excluded. All dataset and limited-quantile-impact qualifiers are retained. Numeric performance tables/plots and illustrative table body excluded.",
+    "source_version_caveat": "Archived local main PDF/text used; pagination refers to this archived PDF. No new source or version substituted.",
+    "adjudication_type": "Third same-model AI adjudication; not human validation",
+    "disagreement_fields": [],
+    "raw_labels": {
+      "A": {
+        "claim_content": "No",
+        "claim_utility": "Yes",
+        "descriptive_only": "No",
+        "linkage": "explicit_group"
+      },
+      "B": {
+        "claim_content": "No",
+        "claim_utility": "Yes",
+        "descriptive_only": "No",
+        "linkage": "explicit_group"
+      }
+    },
+    "adjudication_rationale": "W1 interprets incorporating semantic numerical information as enhancing performance and W3–W4 qualify that benefit by dataset, supporting utility for TabSTAR versus Name. Injecting information describes the representation rather than asserting the predictor relies on its semantic content, and the complete window contains no distinct content-use assertion.",
+    "additional_claim_quotes": [
+      "marginal for some datasets. Interestingly, some datasets significantly underperform, with the R[NUM] dataset completely failing the task."
+    ],
+    "window_inventory": [
+      {
+        "window_id": "C09-B-W1",
+        "source_path": "iclr_latex_v3/design_audit/sources/C09_main.txt",
+        "start_line": 542,
+        "end_line": 553,
+        "pdf_page": 9,
+        "role": "q3_introduction_interpretation_and_subsection_conclusion"
+      },
+      {
+        "window_id": "C09-B-W2",
+        "source_path": "iclr_latex_v3/design_audit/sources/C09_main.txt",
+        "start_line": 559,
+        "end_line": 559,
+        "pdf_page": 10,
+        "role": "table_4_caption"
+      },
+      {
+        "window_id": "C09-B-W3",
+        "source_path": "iclr_latex_v3/design_audit/sources/C09_main.txt",
+        "start_line": 3068,
+        "end_line": 3073,
+        "pdf_page": 51,
+        "role": "appendix_g4_heading_and_interpretive_paragraph_part_1"
+      },
+      {
+        "window_id": "C09-B-W4",
+        "source_path": "iclr_latex_v3/design_audit/sources/C09_main.txt",
+        "start_line": 3103,
+        "end_line": 3107,
+        "pdf_page": 52,
+        "role": "appendix_g4_interpretive_paragraph_part_2_and_conclusion"
+      },
+      {
+        "window_id": "C09-B-W5",
+        "source_path": "iclr_latex_v3/design_audit/sources/C09_main.txt",
+        "start_line": 3124,
+        "end_line": 3125,
+        "pdf_page": 52,
+        "role": "figure_8_caption"
+      },
+      {
+        "window_id": "C09-B-W6",
+        "source_path": "iclr_latex_v3/design_audit/sources/C09_main.txt",
+        "start_line": 3159,
+        "end_line": 3160,
+        "pdf_page": 53,
+        "role": "table_31_illustrative_caption"
+      },
+      {
+        "window_id": "C09-B-W7",
+        "source_path": "iclr_latex_v3/design_audit/sources/C09_main.txt",
+        "start_line": 3180,
+        "end_line": 3182,
+        "pdf_page": 54,
+        "role": "table_32_caption"
+      }
+    ],
+    "adjudication_action": "agree",
+    "agreed_row_review": "All windows reviewed for exact quotation, comparison attribution and semantic scope; no agreed claim-axis correction required."
+  },
+  {
+    "comparison_id": "C10-A",
+    "study": "TARTE",
+    "claim_content": "Unclear",
+    "claim_utility": "Unclear",
+    "descriptive_only": "No",
+    "claim_text": "In addition, without datetime detection or column information, properly pre-trained weights still provide competitive representations. This suggests that TARTE can perform well even on tables without meaningful column names.",
+    "claim_location": "C10-A-W5: PDF p. 10, source lines 622–629 (iclr_latex_v3/design_audit/sources/C10_author_mirror.txt)",
+    "linkage": "explicit_comparison",
+    "claim_scope": "Column-name information: TARTE | Enriched YAGO4.5 versus TARTE | Remove column names | Enriched YAGO4.5",
+    "rationale": "The available arXiv v2 text gives a robustness interpretation for missing column names, not a positive use or benefit claim for that information. Equivalence to the accepted published version is unverified, so neither axis can be coded as absent for the published unit; broader pretraining claims do not transfer to header removal.",
+    "coder_id": "third_same_model_AI_adjudicator",
+    "quote_evidence": [
+      {
+        "quote": "In addition, without datetime detection or column information, properly pre-trained weights still provide competitive representations. This suggests that TARTE can perform well even on tables without meaningful column names.",
+        "window_id": "C10-A-W5",
+        "source_path": "iclr_latex_v3/design_audit/sources/C10_author_mirror.txt",
+        "pdf_page": 10,
+        "start_line": 622,
+        "end_line": 629
+      }
+    ],
+    "complete_window_inventory": [
+      {
+        "window_id": "C10-A-W1",
+        "source_path": "iclr_latex_v3/design_audit/sources/C10_author_mirror.txt",
+        "pdf_page": 9,
+        "start_line": 581,
+        "end_line": 581,
+        "role": "subsection_heading"
+      },
+      {
+        "window_id": "C10-A-W2",
+        "source_path": "iclr_latex_v3/design_audit/sources/C10_author_mirror.txt",
+        "pdf_page": 9,
+        "start_line": 583,
+        "end_line": 589,
+        "role": "figure_6_introducing_paragraph"
+      },
+      {
+        "window_id": "C10-A-W3",
+        "source_path": "iclr_latex_v3/design_audit/sources/C10_author_mirror.txt",
+        "pdf_page": 9,
+        "start_line": 590,
+        "end_line": 593,
+        "role": "first_interpretive_paragraph"
+      },
+      {
+        "window_id": "C10-A-W4",
+        "source_path": "iclr_latex_v3/design_audit/sources/C10_author_mirror.txt",
+        "pdf_page": 10,
+        "start_line": 605,
+        "end_line": 608,
+        "role": "figure_6_caption"
+      },
+      {
+        "window_id": "C10-A-W5",
+        "source_path": "iclr_latex_v3/design_audit/sources/C10_author_mirror.txt",
+        "pdf_page": 10,
+        "start_line": 622,
+        "end_line": 629,
+        "role": "following_interpretive_paragraph_and_ablation_subsection_conclusion"
+      },
+      {
+        "window_id": "C10-A-W6",
+        "source_path": "iclr_latex_v3/design_audit/sources/C10_author_mirror.txt",
+        "pdf_page": 12,
+        "start_line": 748,
+        "end_line": 758,
+        "role": "explicitly_figure_6_linked_discussion_summary"
+      },
+      {
+        "window_id": "C10-A-W7",
+        "source_path": "iclr_latex_v3/design_audit/sources/C10_author_mirror.txt",
+        "pdf_page": 12,
+        "start_line": 759,
+        "end_line": 765,
+        "role": "following_explicitly_figure_6_linked_discussion_paragraph"
+      }
+    ],
+    "coverage_notes": "Coverage of available mirror: Figure 6 full caption, introducing paragraph, both interpretive paragraphs and closing header-removal sentence under §4.3, plus two complete §5 paragraphs explicitly citing Figure 6. Linkage: explicit_group for Figure 6; the first interpretation names MinHash versus TARTE, while the following paragraph includes CARTE and other interventions and explicitly addresses missing column information at its end. The §5 Figure-6-linked pretraining summary concerns the broader pretraining group; do not automatically attribute it to the column-name intervention. Absence inventory: no separate further conclusion for this ablation paragraph; the next titled paragraph at lines 631–642 is a different Table 1 meta-feature analysis, excluded along with its numerical table. Abstract/introduction contain general model/pretraining discussion but no explicit Figure 6 or particular-fixed-arm linkage. The local mirror is not established as the accepted published source, so this is coverage of that available version only, not evidence that all published-source claims are absent. Numeric figure ranks/table results excluded.",
+    "source_version_caveat": "Source-version uncertainty: local C10_author_mirror.pdf identifies itself as arXiv:2505.14415v2, 30 Jun 2025, with July 1, 2025 running date. It is corroborating mirror/preprint text, not established as the accepted published PDF. Frozen units identify the published Figure 6/§4.3, but equivalence of wording/version has not been verified. Preserve this uncertainty during coding/adjudication; do not turn source uncertainty into an absent claim.",
+    "adjudication_type": "Third same-model AI adjudication; not human validation",
+    "disagreement_fields": [],
+    "raw_labels": {
+      "A": {
+        "claim_content": "Unclear",
+        "claim_utility": "Unclear",
+        "descriptive_only": "No",
+        "linkage": "explicit_comparison"
+      },
+      "B": {
+        "claim_content": "Unclear",
+        "claim_utility": "Unclear",
+        "descriptive_only": "No",
+        "linkage": "explicit_comparison"
+      }
+    },
+    "adjudication_rationale": "W5 of the available arXiv v2 mirror interprets competitive prediction without meaningful column names; broader pretraining claims in W6–W7 do not transfer to this intervention. README and the source-version caveat state that accepted-paper equivalence is unverified and access remains unavailable, requiring Unclear on both published-claim axes rather than converting unavailable coverage into No.",
+    "additional_claim_quotes": [],
+    "window_inventory": [
+      {
+        "window_id": "C10-A-W1",
+        "source_path": "iclr_latex_v3/design_audit/sources/C10_author_mirror.txt",
+        "start_line": 581,
+        "end_line": 581,
+        "pdf_page": 9,
+        "role": "subsection_heading"
+      },
+      {
+        "window_id": "C10-A-W2",
+        "source_path": "iclr_latex_v3/design_audit/sources/C10_author_mirror.txt",
+        "start_line": 583,
+        "end_line": 589,
+        "pdf_page": 9,
+        "role": "figure_6_introducing_paragraph"
+      },
+      {
+        "window_id": "C10-A-W3",
+        "source_path": "iclr_latex_v3/design_audit/sources/C10_author_mirror.txt",
+        "start_line": 590,
+        "end_line": 593,
+        "pdf_page": 9,
+        "role": "first_interpretive_paragraph"
+      },
+      {
+        "window_id": "C10-A-W4",
+        "source_path": "iclr_latex_v3/design_audit/sources/C10_author_mirror.txt",
+        "start_line": 605,
+        "end_line": 608,
+        "pdf_page": 10,
+        "role": "figure_6_caption"
+      },
+      {
+        "window_id": "C10-A-W5",
+        "source_path": "iclr_latex_v3/design_audit/sources/C10_author_mirror.txt",
+        "start_line": 622,
+        "end_line": 629,
+        "pdf_page": 10,
+        "role": "following_interpretive_paragraph_and_ablation_subsection_conclusion"
+      },
+      {
+        "window_id": "C10-A-W6",
+        "source_path": "iclr_latex_v3/design_audit/sources/C10_author_mirror.txt",
+        "start_line": 748,
+        "end_line": 758,
+        "pdf_page": 12,
+        "role": "explicitly_figure_6_linked_discussion_summary"
+      },
+      {
+        "window_id": "C10-A-W7",
+        "source_path": "iclr_latex_v3/design_audit/sources/C10_author_mirror.txt",
+        "start_line": 759,
+        "end_line": 765,
+        "pdf_page": 12,
+        "role": "following_explicitly_figure_6_linked_discussion_paragraph"
+      }
+    ],
+    "adjudication_action": "agree",
+    "agreed_row_review": "All windows reviewed for exact quotation, comparison attribution and semantic scope; no agreed claim-axis correction required."
+  },
+  {
+    "comparison_id": "C10-B",
+    "study": "TARTE",
+    "claim_content": "Unclear",
+    "claim_utility": "Unclear",
+    "descriptive_only": "No",
+    "claim_text": "First, comparing MinHash to TARTE reveals the importance of FastText.",
+    "claim_location": "C10-B-W3: PDF p. 9, source lines 590–593 (iclr_latex_v3/design_audit/sources/C10_author_mirror.txt); C10-B-W6: PDF p. 12, source lines 748–758 (iclr_latex_v3/design_audit/sources/C10_author_mirror.txt)",
+    "linkage": "explicit_comparison",
+    "claim_scope": "String encoder and table pretraining: TARTE | Enriched YAGO4.5 versus TARTE | MinHash | Random weights",
+    "rationale": "The available arXiv v2 comparison describes semantic similarity in representations and the value of knowledge pretraining for tabular learning, making positive claims plausible in that version. Because equivalence to the accepted published source is unverified, both published-unit axes remain Unclear rather than treating that version as definitive evidence.",
+    "coder_id": "third_same_model_AI_adjudicator",
+    "quote_evidence": [
+      {
+        "quote": "First, comparing MinHash to TARTE reveals the importance of FastText.",
+        "window_id": "C10-B-W3",
+        "source_path": "iclr_latex_v3/design_audit/sources/C10_author_mirror.txt",
+        "pdf_page": 9,
+        "start_line": 590,
+        "end_line": 593
+      },
+      {
+        "quote": "As FastText captures semantic similarities, its combination with a suitable transformer architecture (subsection [NUM] or CARTE) forms an inductive bias of smoothness: similar tables have similar representations.",
+        "window_id": "C10-B-W3",
+        "source_path": "iclr_latex_v3/design_audit/sources/C10_author_mirror.txt",
+        "pdf_page": 9,
+        "start_line": 590,
+        "end_line": 593
+      },
+      {
+        "quote": "Our study shows the value of pre-training to acquire world knowledge for tabular learning (Figure [NUM]).",
+        "window_id": "C10-B-W6",
+        "source_path": "iclr_latex_v3/design_audit/sources/C10_author_mirror.txt",
+        "pdf_page": 12,
+        "start_line": 748,
+        "end_line": 758
+      }
+    ],
+    "complete_window_inventory": [
+      {
+        "window_id": "C10-B-W1",
+        "source_path": "iclr_latex_v3/design_audit/sources/C10_author_mirror.txt",
+        "pdf_page": 9,
+        "start_line": 581,
+        "end_line": 581,
+        "role": "subsection_heading"
+      },
+      {
+        "window_id": "C10-B-W2",
+        "source_path": "iclr_latex_v3/design_audit/sources/C10_author_mirror.txt",
+        "pdf_page": 9,
+        "start_line": 583,
+        "end_line": 589,
+        "role": "figure_6_introducing_paragraph"
+      },
+      {
+        "window_id": "C10-B-W3",
+        "source_path": "iclr_latex_v3/design_audit/sources/C10_author_mirror.txt",
+        "pdf_page": 9,
+        "start_line": 590,
+        "end_line": 593,
+        "role": "first_interpretive_paragraph"
+      },
+      {
+        "window_id": "C10-B-W4",
+        "source_path": "iclr_latex_v3/design_audit/sources/C10_author_mirror.txt",
+        "pdf_page": 10,
+        "start_line": 605,
+        "end_line": 608,
+        "role": "figure_6_caption"
+      },
+      {
+        "window_id": "C10-B-W5",
+        "source_path": "iclr_latex_v3/design_audit/sources/C10_author_mirror.txt",
+        "pdf_page": 10,
+        "start_line": 622,
+        "end_line": 629,
+        "role": "following_interpretive_paragraph_and_ablation_subsection_conclusion"
+      },
+      {
+        "window_id": "C10-B-W6",
+        "source_path": "iclr_latex_v3/design_audit/sources/C10_author_mirror.txt",
+        "pdf_page": 12,
+        "start_line": 748,
+        "end_line": 758,
+        "role": "explicitly_figure_6_linked_discussion_summary"
+      },
+      {
+        "window_id": "C10-B-W7",
+        "source_path": "iclr_latex_v3/design_audit/sources/C10_author_mirror.txt",
+        "pdf_page": 12,
+        "start_line": 759,
+        "end_line": 765,
+        "role": "following_explicitly_figure_6_linked_discussion_paragraph"
+      }
+    ],
+    "coverage_notes": "Coverage of available mirror: Figure 6 full caption, introducing paragraph, both interpretive paragraphs and closing header-removal sentence under §4.3, plus two complete §5 paragraphs explicitly citing Figure 6. Linkage: explicit_group for Figure 6; the first interpretation names MinHash versus TARTE, while the following paragraph includes CARTE and other interventions and explicitly addresses missing column information at its end. The §5 Figure-6-linked pretraining summary concerns the broader pretraining group; do not automatically attribute it to the column-name intervention. Absence inventory: no separate further conclusion for this ablation paragraph; the next titled paragraph at lines 631–642 is a different Table 1 meta-feature analysis, excluded along with its numerical table. Abstract/introduction contain general model/pretraining discussion but no explicit Figure 6 or particular-fixed-arm linkage. The local mirror is not established as the accepted published source, so this is coverage of that available version only, not evidence that all published-source claims are absent. Numeric figure ranks/table results excluded.",
+    "source_version_caveat": "Source-version uncertainty: local C10_author_mirror.pdf identifies itself as arXiv:2505.14415v2, 30 Jun 2025, with July 1, 2025 running date. It is corroborating mirror/preprint text, not established as the accepted published PDF. Frozen units identify the published Figure 6/§4.3, but equivalence of wording/version has not been verified. Preserve this uncertainty during coding/adjudication; do not turn source uncertainty into an absent claim.",
+    "adjudication_type": "Third same-model AI adjudication; not human validation",
+    "disagreement_fields": [],
+    "raw_labels": {
+      "A": {
+        "claim_content": "Unclear",
+        "claim_utility": "Unclear",
+        "descriptive_only": "No",
+        "linkage": "explicit_comparison"
+      },
+      "B": {
+        "claim_content": "Unclear",
+        "claim_utility": "Unclear",
+        "descriptive_only": "No",
+        "linkage": "explicit_comparison"
+      }
+    },
+    "adjudication_rationale": "W3 of the available mirror names MinHash versus TARTE and describes semantic similarities, while W6 attributes value to world-knowledge pretraining for the figure group. Because README and the source-version caveat do not establish equivalence of this arXiv v2 text to the accepted paper, both published-claim axes remain Unclear; the mirror does not remove the source uncertainty.",
+    "additional_claim_quotes": [
+      "As FastText captures semantic similarities, its combination with a suitable transformer architecture (subsection [NUM] or CARTE) forms an inductive bias of smoothness: similar tables have similar representations.",
+      "Our study shows the value of pre-training to acquire world knowledge for tabular learning (Figure [NUM])."
+    ],
+    "window_inventory": [
+      {
+        "window_id": "C10-B-W1",
+        "source_path": "iclr_latex_v3/design_audit/sources/C10_author_mirror.txt",
+        "start_line": 581,
+        "end_line": 581,
+        "pdf_page": 9,
+        "role": "subsection_heading"
+      },
+      {
+        "window_id": "C10-B-W2",
+        "source_path": "iclr_latex_v3/design_audit/sources/C10_author_mirror.txt",
+        "start_line": 583,
+        "end_line": 589,
+        "pdf_page": 9,
+        "role": "figure_6_introducing_paragraph"
+      },
+      {
+        "window_id": "C10-B-W3",
+        "source_path": "iclr_latex_v3/design_audit/sources/C10_author_mirror.txt",
+        "start_line": 590,
+        "end_line": 593,
+        "pdf_page": 9,
+        "role": "first_interpretive_paragraph"
+      },
+      {
+        "window_id": "C10-B-W4",
+        "source_path": "iclr_latex_v3/design_audit/sources/C10_author_mirror.txt",
+        "start_line": 605,
+        "end_line": 608,
+        "pdf_page": 10,
+        "role": "figure_6_caption"
+      },
+      {
+        "window_id": "C10-B-W5",
+        "source_path": "iclr_latex_v3/design_audit/sources/C10_author_mirror.txt",
+        "start_line": 622,
+        "end_line": 629,
+        "pdf_page": 10,
+        "role": "following_interpretive_paragraph_and_ablation_subsection_conclusion"
+      },
+      {
+        "window_id": "C10-B-W6",
+        "source_path": "iclr_latex_v3/design_audit/sources/C10_author_mirror.txt",
+        "start_line": 748,
+        "end_line": 758,
+        "pdf_page": 12,
+        "role": "explicitly_figure_6_linked_discussion_summary"
+      },
+      {
+        "window_id": "C10-B-W7",
+        "source_path": "iclr_latex_v3/design_audit/sources/C10_author_mirror.txt",
+        "start_line": 759,
+        "end_line": 765,
+        "pdf_page": 12,
+        "role": "following_explicitly_figure_6_linked_discussion_paragraph"
+      }
+    ],
+    "adjudication_action": "agree",
+    "agreed_row_review": "All windows reviewed for exact quotation, comparison attribution and semantic scope; no agreed claim-axis correction required."
+  }
+]

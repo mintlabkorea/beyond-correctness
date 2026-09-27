@@ -1,0 +1,10 @@
+# Additional recovered existing inputs
+
+These files were located by following explicit paths in the experiment runners beyond the repository boundary. No raw or person-level file was read into the release.
+
+- `foundation/raw_adapter_source_locks_v2.py`: existing source-lock implementation, copied without changing its scientific logic. Use only the NHANES function through `reproducibility/prepare_public_nhanes.py` for the public controlled path. Imports require numpy, pandas, pyarrow and pyreadstat. No historical exact pyarrow/pyreadstat lock was recovered. The wrapper checks all original public XPT hashes before preparation and the frozen output hash afterward. Preparation was not executed during packaging.
+- `nhanes_source_lock/`: original public component filenames/checksums, variable registry and aggregate cohort audit. No participant identifiers or values. Provider-use restrictions and original false authorization flags are preserved.
+- `benchmark/`: original shared clinical table builder and three configuration files. This is a preserved external source, not a complete standalone clinical preparation chain; its historical relative project layout, manifests, governed raw inputs and authorization checks remain prerequisites. Do not relocate its ROOT constant silently or treat the copy as a new historical version.
+- `robustness/correspondence/variable_metadata_table_draft_v1.csv`: original 46-row variable-metadata table (23 target candidate rows have metadata in the frozen matcher audit). It is not the 1,315-column candidate universe. The full 1,315-name schema inventory was subsequently exported at finalization and matched to the frozen source-file and pool hashes; see robustness/correspondence/candidate_inventory_provenance.json.
+
+`source_copy_ledger.csv` distinguishes original bytes, anonymized bytes, and external source labels. NHANES `2023/DEMO_L.xpt` corresponds to the public August 2021–August 2023 release; retain the original adapter directory label `2023`.

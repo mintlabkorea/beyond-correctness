@@ -1,0 +1,193 @@
+{
+ "arms": [
+  "rung0_base",
+  "rung1_columns",
+  "rung2_grouping",
+  "rung3_measurement",
+  "pl_columns",
+  "pl_grouping",
+  "pl_measurement",
+  "is_target",
+  "loo_columns",
+  "loo_grouping",
+  "loo_measurement (alias of rung2_grouping)"
+ ],
+ "backbone": "xgboost_hist_d6_n300",
+ "benchmark_id": "std_cross_nh2kn_shared_anchorreset_fewshot_v1",
+ "dropped_members_by_group": {
+  "blood_lipid_measurements": [
+   "triglycerides"
+  ],
+  "body_measurements": [],
+  "diabetes_test_measurements": [],
+  "first_reading_blood_pressure": []
+ },
+ "feature_set": "ladder_all_slots_v1",
+ "member_slots": [
+  "height_cm",
+  "weight_kg",
+  "waist_cm",
+  "sbp",
+  "dbp",
+  "glucose",
+  "hba1c",
+  "total_cholesterol"
+ ],
+ "metric": "query_sd_normalized_rmse (lower is better)",
+ "n_pool": 6779,
+ "n_query": 12675,
+ "n_source": 45239,
+ "nrmse": {
+  "1024": {
+   "is_target": 0.996940249748642,
+   "loo_columns": 0.899327801504932,
+   "loo_grouping": 0.8785348856535692,
+   "loo_measurement": 0.886418937208661,
+   "pl_columns": 0.9025296889876323,
+   "pl_grouping": 0.8890614511339943,
+   "pl_measurement": 0.9076215925001905,
+   "rung0_base": 0.9748989177336997,
+   "rung1_columns": 0.8787876436517725,
+   "rung2_grouping": 0.886418937208661,
+   "rung3_measurement": 0.8840156883258737
+  },
+  "256": {
+   "is_target": 0.9735815061511803,
+   "loo_columns": 0.891325478884223,
+   "loo_grouping": 0.8924202466262271,
+   "loo_measurement": 0.8986985352912853,
+   "pl_columns": 0.9231333579245915,
+   "pl_grouping": 0.8886155698242209,
+   "pl_measurement": 0.9082730836718885,
+   "rung0_base": 1.0175253444711279,
+   "rung1_columns": 0.8845604660429838,
+   "rung2_grouping": 0.8986985352912853,
+   "rung3_measurement": 0.891971519110233
+  },
+  "64": {
+   "is_target": 1.0414991941845664,
+   "loo_columns": 1.0435034711090054,
+   "loo_grouping": 0.8938337402659313,
+   "loo_measurement": 0.9546826898778761,
+   "pl_columns": 0.9492329752323231,
+   "pl_grouping": 0.8944711845568989,
+   "pl_measurement": 0.9699035037234477,
+   "rung0_base": 1.0673446969613207,
+   "rung1_columns": 0.8880653799637886,
+   "rung2_grouping": 0.9546826898778761,
+   "rung3_measurement": 0.9695422696958321
+  }
+ },
+ "pl_columns_permutation": {
+  "dbp": "weight_kg",
+  "glucose": "waist_cm",
+  "hba1c": "glucose",
+  "height_cm": "hba1c",
+  "sbp": "height_cm",
+  "total_cholesterol": "dbp",
+  "waist_cm": "sbp",
+  "weight_kg": "total_cholesterol"
+ },
+ "pl_grouping_partition": {
+  "blood_lipid_measurements": [
+   "glucose"
+  ],
+  "body_measurements": [
+   "sbp",
+   "total_cholesterol",
+   "weight_kg"
+  ],
+  "diabetes_test_measurements": [
+   "dbp",
+   "hba1c"
+  ],
+  "first_reading_blood_pressure": [
+   "height_cm",
+   "waist_cm"
+  ]
+ },
+ "pl_measurement_table": {
+  "knhanes/ALL__bs3_1": {
+   "kind": "map",
+   "map": {
+    "1.0": 1.0,
+    "2.0": 0.5,
+    "8.0": 0.0
+   }
+  },
+  "knhanes/ALL__de1_dg": {
+   "kind": "map",
+   "map": {
+    "0.0": 0.0,
+    "8.0": 1.0
+   }
+  },
+  "knhanes/ALL__di1_dg": {
+   "kind": "map",
+   "map": {
+    "1.0": 1.0,
+    "9.0": 0.0
+   }
+  },
+  "knhanes/ALL__educ": {
+   "kind": "map",
+   "map": {
+    "1.0": 0.3333333333333333,
+    "2.0": 0.6666666666666666,
+    "3.0": 1.0,
+    "4.0": 0.0
+   }
+  },
+  "knhanes/ALL__sex": {
+   "kind": "map",
+   "map": {
+    "1.0": 0.0,
+    "2.0": 1.0
+   }
+  },
+  "nhanes/BPQ020": {
+   "kind": "map",
+   "map": {
+    "2.0": 1.0,
+    "9.0": 0.0
+   }
+  },
+  "nhanes/DIQ010": {
+   "kind": "map",
+   "map": {
+    "1.0": 0.0,
+    "3.0": 1.0,
+    "9.0": 0.5
+   }
+  },
+  "nhanes/DMDEDUC2": {
+   "kind": "map",
+   "map": {
+    "1.0": 0.5,
+    "3.0": 0.25,
+    "5.0": 0.0,
+    "7.0": 0.75,
+    "9.0": 1.0
+   }
+  },
+  "nhanes/RIAGENDR": {
+   "kind": "map",
+   "map": {
+    "1.0": 1.0,
+    "2.0": 0.0
+   }
+  },
+  "nhanes/SMQ040": {
+   "kind": "map",
+   "map": {
+    "1.0": 0.0,
+    "2.0": 1.0,
+    "9.0": 0.5
+   }
+  }
+ },
+ "primary_k": 256,
+ "seed": 52,
+ "target": "triglycerides",
+ "wall_seconds": 86.4
+}

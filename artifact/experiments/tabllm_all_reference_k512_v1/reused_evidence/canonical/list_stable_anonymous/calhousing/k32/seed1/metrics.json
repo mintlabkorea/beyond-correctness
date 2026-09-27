@@ -1,0 +1,83 @@
+{
+  "analysis_status": "frozen_ranon_support_ladder_evidence",
+  "arm": "list_stable_anonymous",
+  "dataset": "calhousing",
+  "final_trainable_state_sha256": "893b5ad27202d7c99f316e2b186bf5f74e89485a2d41e0ef849da0632e4b4f6a",
+  "ia3_checkpoint_sha256": "8fe7a00fb425dd331c7a021c9468d50a14ec2ca1998007e7ead5ce3111405729",
+  "initial_trainable_state_sha256": "2b3e0be8998a1d12a84a7b358726205cce0c83973fb198a1c37bdac6aa3fbd0b",
+  "metrics": {
+    "accuracy": 0.7388565891472868,
+    "auc": 0.7998795097575265
+  },
+  "model_audit": {
+    "checkpoint_key_count": 192,
+    "checkpoint_parameter_count": 1081344,
+    "frozen_parameter_count": 11136118784,
+    "initial_trainable_state_sha256": "2b3e0be8998a1d12a84a7b358726205cce0c83973fb198a1c37bdac6aa3fbd0b",
+    "missing_base_model_key_count": 752,
+    "parameter_dtype": "torch.bfloat16",
+    "precision_layout": "frozen=bfloat16, trainable_ia3=float32",
+    "trainable_parameter_count": 1081344,
+    "trainable_parameter_dtype": "torch.float32",
+    "trainable_tensor_count": 192
+  },
+  "model_path": "external/.cache/huggingface/hub/models--bigscience--T0/snapshots/1cfa27271f8085c29323c94bd659004b210f20b5",
+  "n_test": 4128,
+  "n_train": 32,
+  "n_train_unique": 32,
+  "protocol_sha256": "915adb519be2159cb90fee6734bc872ef7449c409267f47ace105d5588b68a83",
+  "raw_and_serialization_tree_sha256": "383519d4b1efffe01c414c1f7b12db9c7abc04aefbde0e9957c44c5eaf038763",
+  "runner_sha256": "796d0bb0d17950a771c5e18fe732f955a4307956192e7329de23683e411f9447",
+  "seed": 1,
+  "shot": 32,
+  "tabllm_commit": "71f6647c523aa6fd35df94ad76207c4377248c49",
+  "test_prompt_sha256": "8b3644fb5bb698f3941735dd920b67685c8554890feaa86a15dfed967beaf6e6",
+  "tfew_execution_commit": "114deced63ae722a368e06cb08ea956b20c393a6",
+  "train_membership_with_replacement": false,
+  "train_prompt_sha256": "9cc9ffc70569b77071e9c09e50774d15d7c0c5f753dc9ab9c68c8606933d3485",
+  "trained_checkpoint_sha256": "11972a1ba4b9289a7b383286c48d85edcb8436748ca68c41f03ef0d96c4f8de0",
+  "training": {
+    "batch_order_sha256": "aeb4c157117602054902efec803b7601ecb151847928db428d89dd602447f16d",
+    "executed_steps": 240,
+    "loss_first": {
+      "gradient_norm_pre_clip": 0.7360031008720398,
+      "lm_loss": 0.3469294309616089,
+      "loss": 3.7033119201660156,
+      "lr": 0.00020833333333333335,
+      "mc_loss": 0.6875501871109009,
+      "unlikely_loss": 2.668832302093506
+    },
+    "loss_last": {
+      "gradient_norm_pre_clip": 0.34192806482315063,
+      "lm_loss": 0.32611083984375,
+      "loss": 0.7861441373825073,
+      "lr": 0.0,
+      "mc_loss": 0.14611762762069702,
+      "unlikely_loss": 0.3139156997203827
+    },
+    "planned_steps": 240
+  },
+  "training_contract": {
+    "batch_size": 4,
+    "compute_dtype": "bfloat16 base and autocast with FP32 IA3 master parameters; temporary bfloat16 IA3 evaluation copy",
+    "epochs": 30,
+    "gradient_clip": 1.0,
+    "length_norm": 1,
+    "loss": "lm + multiple_choice + unlikely",
+    "lr": 0.003,
+    "max_length": 1024,
+    "optimizer": "Adafactor(scale_parameter=True, relative_step=False)",
+    "scheduler": "linear_decay_with_warmup",
+    "warmup_ratio": 0.06
+  },
+  "versions": {
+    "datasets": "2.14.7",
+    "numpy": "2.2.6",
+    "pandas": "2.3.3",
+    "python": "3.10.20",
+    "scikit_learn": "1.7.2",
+    "torch": "2.12.0.dev20260408+cu128",
+    "transformers": "4.30.0"
+  },
+  "wall_seconds": 65.904
+}

@@ -1,0 +1,68 @@
+{
+ "arms": [
+  "a11_stage_columns"
+ ],
+ "auroc": {
+  "256": {
+   "a11_stage_columns": 0.8301996073998383
+  }
+ },
+ "backbone": "xgboost_hist_d6_n300_regression_ranked",
+ "benchmark_id": "std_cross_nh2kn_shared_anchorreset_fewshot_v1",
+ "feature_set": "stage_factorial_all_v1",
+ "metric": "auroc_vs_documented_target_binary (higher is better)",
+ "n_eval": 5245,
+ "n_pool": 15130,
+ "n_source": 38021,
+ "pl_columns_permutation": {
+  "dbp": "hba1c",
+  "glucose": "dbp",
+  "hba1c": "total_cholesterol",
+  "height_cm": "waist_cm",
+  "sbp": "triglycerides",
+  "total_cholesterol": "height_cm",
+  "triglycerides": "weight_kg",
+  "waist_cm": "sbp",
+  "weight_kg": "glucose"
+ },
+ "pl_relation_pairs": [
+  [
+   "hemoglobin",
+   "glucose"
+  ],
+  [
+   "hypertension_history",
+   "diabetes_history"
+  ],
+  [
+   "waist_cm",
+   "education_level"
+  ],
+  [
+   "diabetes_history",
+   "age"
+  ],
+  [
+   "waist_cm",
+   "sex"
+  ],
+  [
+   "triglycerides",
+   "sex"
+  ]
+ ],
+ "primary_k": 256,
+ "seed": 57,
+ "target": "stroke_history",
+ "wall_seconds": 33.0,
+ "wrong_label_maps": {
+  "source": {
+   "1.0": 1.0,
+   "2.0": 0.0
+  },
+  "target": {
+   "0.0": 0.0,
+   "1.0": 1.0
+  }
+ }
+}

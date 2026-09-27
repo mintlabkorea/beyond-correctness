@@ -1,0 +1,131 @@
+{
+ "all_endpoints": {
+  "ci95": [
+   0.005064764332183858,
+   0.06833809299613189
+  ],
+  "mean": 0.031151124421987093,
+  "n": 10,
+  "win": 0.8
+ },
+ "bootstrap": {
+  "reps": 10000,
+  "seed": 20260820,
+  "unit": "endpoint cluster (two directions x ten seeds averaged)"
+ },
+ "endpoint_cluster_means": {
+  "angina_history": 0.00888124836689505,
+  "arthritis_history": -0.01414557746176554,
+  "asthma_history": 0.02111291314196246,
+  "cancer_history": 0.026240018498194656,
+  "current_smoking_status": 0.011442266992905605,
+  "diabetes_history": 0.1798522407256315,
+  "heart_attack_history": 0.04396471239997769,
+  "hypertension_history": -0.020154199906940028,
+  "kidney_disease_history": 0.036832847088871176,
+  "stroke_history": 0.017484774374138295
+ },
+ "leave_one_out": {
+  "angina_history": {
+   "ci95": [
+    0.005146421653180122,
+    0.07513600644184266
+   ],
+   "ci_excludes_zero": true,
+   "mean": 0.03362555509477509,
+   "n": 9,
+   "win": 0.7777777777777778
+  },
+  "arthritis_history": {
+   "ci95": [
+    0.008851535388205604,
+    0.07537260795671562
+   ],
+   "ci_excludes_zero": true,
+   "mean": 0.0361840912979596,
+   "n": 9,
+   "win": 0.8888888888888888
+  },
+  "asthma_history": {
+   "ci95": [
+    0.003140253413539159,
+    0.07253034279837495
+   ],
+   "ci_excludes_zero": true,
+   "mean": 0.03226648123087871,
+   "n": 9,
+   "win": 0.7777777777777778
+  },
+  "cancer_history": {
+   "ci95": [
+    0.0030208370044464664,
+    0.0730407103556557
+   ],
+   "ci_excludes_zero": true,
+   "mean": 0.03169680285796403,
+   "n": 9,
+   "win": 0.7777777777777778
+  },
+  "current_smoking_status": {
+   "ci95": [
+    0.004257288199570112,
+    0.07522840110641528
+   ],
+   "ci_excludes_zero": true,
+   "mean": 0.033340997469662806,
+   "n": 9,
+   "win": 0.7777777777777778
+  },
+  "diabetes_history": {
+   "ci95": [
+    0.0015562242976932081,
+    0.027601169494267393
+   ],
+   "ci_excludes_zero": true,
+   "mean": 0.014628778166026597,
+   "n": 9,
+   "win": 0.7777777777777778
+  },
+  "heart_attack_history": {
+   "ci95": [
+    0.0020863541006571496,
+    0.0703999102130984
+   ],
+   "ci_excludes_zero": true,
+   "mean": 0.029727392424432578,
+   "n": 9,
+   "win": 0.7777777777777778
+  },
+  "hypertension_history": {
+   "ci95": [
+    0.01054475759341196,
+    0.07626748331697236
+   ],
+   "ci_excludes_zero": true,
+   "mean": 0.036851716014090104,
+   "n": 9,
+   "win": 0.8888888888888888
+  },
+  "kidney_disease_history": {
+   "ci95": [
+    0.002067454660470736,
+    0.07174372311236511
+   ],
+   "ci_excludes_zero": true,
+   "mean": 0.030519821903444416,
+   "n": 9,
+   "win": 0.7777777777777778
+  },
+  "stroke_history": {
+   "ci95": [
+    0.004252226417955597,
+    0.07429642771398542
+   ],
+   "ci_excludes_zero": true,
+   "mean": 0.03266960776063696,
+   "n": 9,
+   "win": 0.7777777777777778
+  }
+ },
+ "n_loo_ci_above_zero": 10
+}

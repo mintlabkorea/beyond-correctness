@@ -1,0 +1,87 @@
+{
+  "audit_sha256": "44d8155f8300b1a4b142415092942838f8537ce93a3aff3dda7acc545a5864e2",
+  "cell": [
+    "creditg",
+    32,
+    1,
+    "R2",
+    "ref_00"
+  ],
+  "checkpoint_sha256": "8fe7a00fb425dd331c7a021c9468d50a14ec2ca1998007e7ead5ce3111405729",
+  "completed_at_utc": "2026-09-10T16:23:43.131088+00:00",
+  "design_sha256": "5cdac31d67a015ebca58c1f61ac5f150b842e88eced1d18b254345199302899b",
+  "feature_to_identifier": {
+    "Age in years": "Field M",
+    "Credit amount": "Field E",
+    "Credit history ": "Field C",
+    "Duration in month": "Field B",
+    "Housing": "Field O",
+    "Installment rate in percentage of disposable income": "Field H",
+    "Job": "Field Q",
+    "Number of existing credits at this bank": "Field P",
+    "Number of people being liable to provide maintenance for": "Field R",
+    "Other debtors / guarantors": "Field J",
+    "Other installment plans": "Field N",
+    "Personal status and sex": "Field I",
+    "Present employment since": "Field G",
+    "Present residence since": "Field K",
+    "Property": "Field L",
+    "Purpose": "Field D",
+    "Savings account/bonds": "Field F",
+    "Status of existing checking account": "Field A",
+    "Telephone": "Field S",
+    "foreign worker": "Field T"
+  },
+  "gpu": 2,
+  "initial_trainable_state_sha256": "2b3e0be8998a1d12a84a7b358726205cce0c83973fb198a1c37bdac6aa3fbd0b",
+  "metrics": {
+    "accuracy": 0.65,
+    "auc": 0.6657624719896214
+  },
+  "model_audit": {
+    "checkpoint_key_count": 192,
+    "checkpoint_parameter_count": 1081344,
+    "frozen_parameter_count": 11136118784,
+    "initial_trainable_state_sha256": "2b3e0be8998a1d12a84a7b358726205cce0c83973fb198a1c37bdac6aa3fbd0b",
+    "missing_base_model_key_count": 752,
+    "parameter_dtype": "torch.bfloat16",
+    "precision_layout": "frozen=bfloat16, trainable_ia3=float32",
+    "trainable_parameter_count": 1081344,
+    "trainable_parameter_dtype": "torch.float32",
+    "trainable_tensor_count": 192
+  },
+  "model_files": {
+    ".gitattributes": "98ccb431c012ebfe976280fbd45aea4cec7409935868ccecf3954370f96732a1",
+    "README.md": "4d4029cb81f74695a450f4497dd12aa34f3e86bf98d3c480ed1231a015cebb45",
+    "config.json": "ef552104049013790961bd3624ac91cacdd8d9aabd09201f8b30e2f06693d97f",
+    "pytorch_model.bin": "806b1cfa7743d85fddc12bdba93b701c572816c7cc47108ee93fccffe4b6ee7f",
+    "special_tokens_map.json": "4720c0fddbe4c5991334f85ad7073d9bd0a294a8ba4641a2f8dab614ca825949",
+    "spiece.model": "d60acb128cf7b7f2536e8f38a5b18a05535c9e14c7a355904270e15b0945ea86",
+    "tokenizer_config.json": "b971dce1d2805c2a66da8657156e7114a30501c6ba602fc947c8bf607a3ead2d"
+  },
+  "prompt_audit_sha256": "1a2f393c54e1ed82d0d7a3b125a9eb003171de38644e49c1f3ef55b58f1ec04f",
+  "seconds": 48.16886635699484,
+  "split_sha256": "119e48aab7999475d82d4258dedb0875d54fa2613c8c31aae1dbda2a1942c831",
+  "trained_checkpoint_sha256": "5ec31a01949e49c076ae994379fa3901093594f9d66132c867cc22344343ee10",
+  "training": {
+    "batch_order_sha256": "16abccc295d93f9da01ec9a7bac64c85a1aa6fa7b8a395223a953a55be8b1df1",
+    "executed_steps": 240,
+    "loss_first": {
+      "gradient_norm_pre_clip": 1.181628942489624,
+      "lm_loss": 0.39929959177970886,
+      "loss": 3.8341658115386963,
+      "lr": 0.00020833333333333335,
+      "mc_loss": 0.6415370106697083,
+      "unlikely_loss": 2.7933292388916016
+    },
+    "loss_last": {
+      "gradient_norm_pre_clip": 0.8662236332893372,
+      "lm_loss": 0.3158092498779297,
+      "loss": 0.908836841583252,
+      "lr": 0.0,
+      "mc_loss": 0.15924233198165894,
+      "unlikely_loss": 0.43378522992134094
+    },
+    "planned_steps": 240
+  }
+}

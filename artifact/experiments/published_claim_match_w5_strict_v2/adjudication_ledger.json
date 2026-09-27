@@ -1,0 +1,455 @@
+{
+  "coder_id": "AI_adjudicator_strict_v2",
+  "review_completed_utc": "2026-09-10T15:10:19.056621+00:00",
+  "full_25_review_completed": true,
+  "reviewed_comparisons": 25,
+  "method": "Read every supplied unit and source window; repeated identical window text was checked for identity and each unit was separately assessed for attribution. Reviewed both coders after their raw freeze. Agreement was not treated as evidence of correctness.",
+  "raw_label_disagreements": [],
+  "agreement_label_corrections": [],
+  "label_counts": {
+    "Yes": 6,
+    "Unclear": 3,
+    "No": 16
+  },
+  "remaining_uncertainty": [
+    {
+      "comparison_id": "C03-B",
+      "type": "attribution",
+      "detail": "Correct-association inference may be grouped with values-only or specifically attached to permutation; wording does not resolve this."
+    },
+    {
+      "comparison_id": "C10-A",
+      "type": "source_version",
+      "detail": "arXiv v2 versus accepted-publication wording unverified."
+    },
+    {
+      "comparison_id": "C10-B",
+      "type": "source_version",
+      "detail": "arXiv v2 versus accepted-publication wording unverified."
+    }
+  ],
+  "review_entries": [
+    {
+      "comparison_id": "C01-A",
+      "study": "LIFT",
+      "coder_a": "Yes",
+      "coder_b": "Yes",
+      "adjudicated": "Yes",
+      "disposition": "agreement_retained",
+      "all_supplied_windows_reviewed": [
+        "C01-A-W1",
+        "C01-A-W2",
+        "C01-A-W3",
+        "C01-A-W4"
+      ],
+      "review_reason": "The interpretation expressly attributes improvements to correct feature/value association, specifying the particular correspondence of supplied names and values. The immediately preceding reference to Shuffled-Names I, II includes format I, and “These results” links the joint interpretation to it. The stated benefit excludes CMC. This decision follows the interpretation, not the fact that names were shuffled."
+    },
+    {
+      "comparison_id": "C01-B",
+      "study": "LIFT",
+      "coder_a": "Yes",
+      "coder_b": "Yes",
+      "adjudicated": "Yes",
+      "disposition": "agreement_retained",
+      "all_supplied_windows_reviewed": [
+        "C01-B-W1",
+        "C01-B-W2",
+        "C01-B-W3",
+        "C01-B-W4"
+      ],
+      "review_reason": "The interpretation expressly attributes improvements to correct feature/value association, specifying the particular correspondence of supplied names and values. The immediately preceding reference to Shuffled-Names I, II includes format II, and “These results” links the joint interpretation to it. The stated benefit excludes CMC. This decision follows the interpretation, not the fact that names were shuffled."
+    },
+    {
+      "comparison_id": "C01-C",
+      "study": "LIFT",
+      "coder_a": "Yes",
+      "coder_b": "Yes",
+      "adjudicated": "Yes",
+      "disposition": "agreement_retained",
+      "all_supplied_windows_reviewed": [
+        "C01-C-W1",
+        "C01-C-W2",
+        "C01-C-W3",
+        "C01-C-W4"
+      ],
+      "review_reason": "The caption explicitly includes incorporating versus not incorporating names. The paragraph then identifies improvements from correctly incorporating names and attributes the “aforementioned performance improvements” to “correct feature/value association.” That explicit backward reference makes the particular-correspondence interpretation a group claim encompassing the format I names-versus-no-names comparison. The qualification except for CMC remains. The removal operation itself is not the basis for Yes."
+    },
+    {
+      "comparison_id": "C01-D",
+      "study": "LIFT",
+      "coder_a": "Yes",
+      "coder_b": "Yes",
+      "adjudicated": "Yes",
+      "disposition": "agreement_retained",
+      "all_supplied_windows_reviewed": [
+        "C01-D-W1",
+        "C01-D-W2",
+        "C01-D-W3",
+        "C01-D-W4"
+      ],
+      "review_reason": "The caption explicitly includes incorporating versus not incorporating names. The paragraph then identifies improvements from correctly incorporating names and attributes the “aforementioned performance improvements” to “correct feature/value association.” That explicit backward reference makes the particular-correspondence interpretation a group claim encompassing the format II names-versus-no-names comparison. The qualification except for CMC remains. The removal operation itself is not the basis for Yes."
+    },
+    {
+      "comparison_id": "C03-A",
+      "study": "TabLLM",
+      "coder_a": "Yes",
+      "coder_b": "Yes",
+      "adjudicated": "Yes",
+      "disposition": "agreement_retained",
+      "all_supplied_windows_reviewed": [
+        "C03-A-W1",
+        "C03-A-W2",
+        "C03-A-W3",
+        "C03-A-W4",
+        "C03-A-W5",
+        "C03-A-W6"
+      ],
+      "review_reason": "The named permuted-feature-name observation is followed by the explicit inference that TabLLM relies on the association of names with correct values. This is a claim about the particular supplied name/value correspondence in the zero/few-shot regime, with adaptation possible given more examples. Attribution to the named permutation is clear even though attribution of this association clause to the earlier values-only comparison is not."
+    },
+    {
+      "comparison_id": "C03-B",
+      "study": "TabLLM",
+      "coder_a": "Unclear",
+      "coder_b": "Unclear",
+      "adjudicated": "Unclear",
+      "disposition": "agreement_retained",
+      "all_supplied_windows_reviewed": [
+        "C03-B-W1",
+        "C03-B-W2",
+        "C03-B-W3",
+        "C03-B-W4",
+        "C03-B-W5",
+        "C03-B-W6"
+      ],
+      "review_reason": "The values-only result clearly participates in an inference about reliance on information from feature names, which is only weak use under this codebook. The stronger correct-name/value-association clause follows a separately named permutation result. “This indicates” could group both results, while “and also” could introduce the distinct inference specifically licensed by permutation. The wording does not settle whether the particular-correspondence claim is attributed to this values-only unit. Retain Unclear for attribution, rather than infer Yes from neighboring content or No from removal."
+    },
+    {
+      "comparison_id": "C03-C",
+      "study": "TabLLM",
+      "coder_a": "Yes",
+      "coder_b": "Yes",
+      "adjudicated": "Yes",
+      "disposition": "agreement_retained",
+      "all_supplied_windows_reviewed": [
+        "C03-C-W1",
+        "C03-C-W2",
+        "C03-C-W3",
+        "C03-C-W4",
+        "C03-C-W5",
+        "C03-C-W6"
+      ],
+      "review_reason": "The authors name List Permuted Values and expressly infer greater reliance on correct values than feature names, then interpret equalization with more training examples as learning new associations. The linked interpretation concerns the particular supplied value associations, not just availability of a value component. Its scope is zero/very few shots and is qualified by adaptation with more examples."
+    },
+    {
+      "comparison_id": "C04-A",
+      "study": "PLATO",
+      "coder_a": "No",
+      "coder_b": "No",
+      "adjudicated": "No",
+      "disposition": "agreement_retained",
+      "all_supplied_windows_reviewed": [
+        "C04-A-W1",
+        "C04-A-W2",
+        "C04-A-W3",
+        "C04-A-W4",
+        "C04-A-W5"
+      ],
+      "review_reason": "The caption and full/feature-only/no-KG paragraph claim importance of, and reliance on, feature information and broader domain information. The supplied linked summaries also concern component importance. These are weak information-use and benefit interpretations; none identifies dependence on the particular supplied meanings or associations. The group wording is explicit, but its strength does not meet the strict definition."
+    },
+    {
+      "comparison_id": "C04-B",
+      "study": "PLATO",
+      "coder_a": "No",
+      "coder_b": "No",
+      "adjudicated": "No",
+      "disposition": "agreement_retained",
+      "all_supplied_windows_reviewed": [
+        "C04-B-W1",
+        "C04-B-W2",
+        "C04-B-W3",
+        "C04-B-W4",
+        "C04-B-W5"
+      ],
+      "review_reason": "The caption and full/feature-only/no-KG paragraph claim importance of, and reliance on, feature information and broader domain information. The supplied linked summaries also concern component importance. These are weak information-use and benefit interpretations; none identifies dependence on the particular supplied meanings or associations. The group wording is explicit, but its strength does not meet the strict definition."
+    },
+    {
+      "comparison_id": "C04-C",
+      "study": "PLATO",
+      "coder_a": "No",
+      "coder_b": "No",
+      "adjudicated": "No",
+      "disposition": "agreement_retained",
+      "all_supplied_windows_reviewed": [
+        "C04-C-W1",
+        "C04-C-W2",
+        "C04-C-W3",
+        "C04-C-W4"
+      ],
+      "review_reason": "The local paragraph and linked summaries interpret the edge-removal result as robustness to missing information and retained performance. They do not assert that particular edge meanings or semantic relations determine the effect. Neighboring conclusions about non-feature nodes or trainable components belong to different interventions."
+    },
+    {
+      "comparison_id": "C05-A",
+      "study": "CARTE",
+      "coder_a": "No",
+      "coder_b": "No",
+      "adjudicated": "No",
+      "disposition": "agreement_retained",
+      "all_supplied_windows_reviewed": [
+        "C05-A-W1",
+        "C05-A-W2"
+      ],
+      "review_reason": "The explicit CARTE/Minhash interpretation concerns the importance of string encoders capturing semantic similarity and language models for effective use of external information, especially when table information is limited. This is encoder-importance and weak-use language. The authors do not interpret dependence on which particular meaning or semantic assignment is supplied; replacing an encoder does not itself establish that stronger claim."
+    },
+    {
+      "comparison_id": "C05-B",
+      "study": "CARTE",
+      "coder_a": "No",
+      "coder_b": "No",
+      "adjudicated": "No",
+      "disposition": "agreement_retained",
+      "all_supplied_windows_reviewed": [
+        "C05-B-W1",
+        "C05-B-W2"
+      ],
+      "review_reason": "The common paragraph expressly groups edge information with attention and interprets their contribution as capturing within-table context. That is component/context-use language, without a particular semantic meaning, assignment, or correspondence determining the result. The separately worded Minhash inference cannot be transferred to this unit."
+    },
+    {
+      "comparison_id": "C05-C",
+      "study": "CARTE",
+      "coder_a": "No",
+      "coder_b": "No",
+      "adjudicated": "No",
+      "disposition": "agreement_retained",
+      "all_supplied_windows_reviewed": [
+        "C05-C-W1",
+        "C05-C-W2"
+      ],
+      "review_reason": "The common paragraph expressly groups edge information with attention and interprets their contribution as capturing within-table context. That is component/context-use language, without a particular semantic meaning, assignment, or correspondence determining the result. The separately worded Minhash inference cannot be transferred to this unit."
+    },
+    {
+      "comparison_id": "C06-A",
+      "study": "FeatLLM",
+      "coder_a": "No",
+      "coder_b": "No",
+      "adjudicated": "No",
+      "disposition": "agreement_retained",
+      "all_supplied_windows_reviewed": [
+        "C06-A-W1",
+        "C06-A-W2",
+        "C06-A-W3",
+        "C06-A-W4"
+      ],
+      "review_reason": "The interpretation groups feature descriptions and reasoning instructions and explains their low-shot benefit as efficient utilization of prior LLM knowledge. This is weak knowledge use and component benefit. It does not assert that the effect depends on the particular feature-description meanings or their assignments; the tuning and ensemble interpretations concern other components."
+    },
+    {
+      "comparison_id": "C07-A",
+      "study": "TabuLa-8B",
+      "coder_a": "No",
+      "coder_b": "No",
+      "adjudicated": "No",
+      "disposition": "agreement_retained",
+      "all_supplied_windows_reviewed": [
+        "C07-A-W1",
+        "C07-A-W2",
+        "C07-A-W3",
+        "C07-A-W4",
+        "C07-A-W5",
+        "C07-A-W6",
+        "C07-A-W7"
+      ],
+      "review_reason": "The complete local and linked main windows interpret the ablation as low-shot benefit from informative headers, less reliance on keys with additional shots, and robustness without rich headers. Even the conclusion mentioning “semantic content” asserts robustness, not dependence on which particular meaning is supplied. The intervention description and loss-of-information attribution do not add a particular-content interpretation."
+    },
+    {
+      "comparison_id": "C08-A",
+      "study": "ConTextTab",
+      "coder_a": "No",
+      "coder_b": "No",
+      "adjudicated": "No",
+      "disposition": "agreement_retained",
+      "all_supplied_windows_reviewed": [
+        "C08-A-W1",
+        "C08-A-W2",
+        "C08-A-W3",
+        "C08-A-W4",
+        "C08-A-W5",
+        "C08-A-W6",
+        "C08-A-W7",
+        "C08-A-W8",
+        "C08-A-W9"
+      ],
+      "review_reason": "The CARTE-only feature-encoding paragraph explicitly includes the ordinal variant in the group and concludes that ConTextTab leverages semantic content of features. Under the strict codebook this is a weak semantic-use claim, even with a reported performance drop. The group conclusion does not interpret dependence on particular supplied meanings, semantic assignments, or correct correspondences. The separate column-name interventions do not change this scope."
+    },
+    {
+      "comparison_id": "C08-B",
+      "study": "ConTextTab",
+      "coder_a": "No",
+      "coder_b": "No",
+      "adjudicated": "No",
+      "disposition": "agreement_retained",
+      "all_supplied_windows_reviewed": [
+        "C08-B-W1",
+        "C08-B-W2",
+        "C08-B-W3",
+        "C08-B-W4",
+        "C08-B-W5",
+        "C08-B-W6",
+        "C08-B-W7",
+        "C08-B-W8",
+        "C08-B-W9"
+      ],
+      "review_reason": "The CARTE-only feature-encoding paragraph explicitly includes the MinHash variant in the group and concludes that ConTextTab leverages semantic content of features. Under the strict codebook this is a weak semantic-use claim, even with a reported performance drop. The group conclusion does not interpret dependence on particular supplied meanings, semantic assignments, or correct correspondences. The separate column-name interventions do not change this scope."
+    },
+    {
+      "comparison_id": "C08-C",
+      "study": "ConTextTab",
+      "coder_a": "No",
+      "coder_b": "No",
+      "adjudicated": "No",
+      "disposition": "agreement_retained",
+      "all_supplied_windows_reviewed": [
+        "C08-C-W1",
+        "C08-C-W2",
+        "C08-C-W3",
+        "C08-C-W4",
+        "C08-C-W5",
+        "C08-C-W6",
+        "C08-C-W7",
+        "C08-C-W8",
+        "C08-C-W9"
+      ],
+      "review_reason": "The CARTE-only feature-encoding paragraph explicitly includes the AutoGluon variant in the group and concludes that ConTextTab leverages semantic content of features. Under the strict codebook this is a weak semantic-use claim, even with a reported performance drop. The group conclusion does not interpret dependence on particular supplied meanings, semantic assignments, or correct correspondences. The separate column-name interventions do not change this scope."
+    },
+    {
+      "comparison_id": "C08-D",
+      "study": "ConTextTab",
+      "coder_a": "No",
+      "coder_b": "No",
+      "adjudicated": "No",
+      "disposition": "agreement_retained",
+      "all_supplied_windows_reviewed": [
+        "C08-D-W1",
+        "C08-D-W2",
+        "C08-D-W3",
+        "C08-D-W4",
+        "C08-D-W5",
+        "C08-D-W6",
+        "C08-D-W7",
+        "C08-D-W8",
+        "C08-D-W9"
+      ],
+      "review_reason": "The CARTE-only feature-encoding paragraph explicitly includes the Gap variant in the group and concludes that ConTextTab leverages semantic content of features. Under the strict codebook this is a weak semantic-use claim, even with a reported performance drop. The group conclusion does not interpret dependence on particular supplied meanings, semantic assignments, or correct correspondences. The separate column-name interventions do not change this scope."
+    },
+    {
+      "comparison_id": "C08-E",
+      "study": "ConTextTab",
+      "coder_a": "No",
+      "coder_b": "No",
+      "adjudicated": "No",
+      "disposition": "agreement_retained",
+      "all_supplied_windows_reviewed": [
+        "C08-E-W1",
+        "C08-E-W2",
+        "C08-E-W3",
+        "C08-E-W4",
+        "C08-E-W5",
+        "C08-E-W6",
+        "C08-E-W7",
+        "C08-E-W8",
+        "C08-E-W9"
+      ],
+      "review_reason": "The name-removal sentence reports a performance loss; the shared closing paragraph says the model integrates and leverages semantics in names and features. These are component benefit and weak semantic-use interpretations. No linked text states that this comparison shows dependence on the particular meaning of a header or its correct association with values."
+    },
+    {
+      "comparison_id": "C08-F",
+      "study": "ConTextTab",
+      "coder_a": "No",
+      "coder_b": "No",
+      "adjudicated": "No",
+      "disposition": "agreement_retained",
+      "all_supplied_windows_reviewed": [
+        "C08-F-W1",
+        "C08-F-W2",
+        "C08-F-W3",
+        "C08-F-W4",
+        "C08-F-W5",
+        "C08-F-W6",
+        "C08-F-W7",
+        "C08-F-W8",
+        "C08-F-W9"
+      ],
+      "review_reason": "The specific enrichment interpretation is a slight benefit expressly qualified as not statistically significant. The common conclusion adds only that semantics are integrated and leveraged. Neither interprets dependence on the particular contextual-description content supplied. The stronger-sounding feature-encoder discussion is a separate intervention group and is also only semantic-use wording."
+    },
+    {
+      "comparison_id": "C09-A",
+      "study": "TabSTAR",
+      "coder_a": "No",
+      "coder_b": "No",
+      "adjudicated": "No",
+      "disposition": "agreement_retained",
+      "all_supplied_windows_reviewed": [
+        "C09-A-W1",
+        "C09-A-W2",
+        "C09-A-W3",
+        "C09-A-W4",
+        "C09-A-W5",
+        "C09-A-W6",
+        "C09-A-W7"
+      ],
+      "review_reason": "The exact quantile increment is interpreted as having limited impact and a marginal average advantage. No particular quantile meaning or semantic assignment is claimed to determine the effect. The broader numerical-information conclusion primarily contrasts the two numerical variants with Name and cannot replace this unit-specific interpretation."
+    },
+    {
+      "comparison_id": "C09-B",
+      "study": "TabSTAR",
+      "coder_a": "No",
+      "coder_b": "No",
+      "adjudicated": "No",
+      "disposition": "agreement_retained",
+      "all_supplied_windows_reviewed": [
+        "C09-B-W1",
+        "C09-B-W2",
+        "C09-B-W3",
+        "C09-B-W4",
+        "C09-B-W5",
+        "C09-B-W6",
+        "C09-B-W7"
+      ],
+      "review_reason": "The two numerical variants versus Name are explicitly grouped, and the authors interpret the results as benefit from numerical information and a representation format aligned with model knowledge. This concerns inclusion and representation quality, not dependence on a particular supplied numerical meaning, direction, or correspondence. Appendix qualifications about marginal gains and failure on some datasets are retained; they do not convert the claim into particular-content dependence."
+    },
+    {
+      "comparison_id": "C10-A",
+      "study": "TARTE",
+      "coder_a": "Unclear",
+      "coder_b": "Unclear",
+      "adjudicated": "Unclear",
+      "disposition": "agreement_retained",
+      "all_supplied_windows_reviewed": [
+        "C10-A-W1",
+        "C10-A-W2",
+        "C10-A-W3",
+        "C10-A-W4",
+        "C10-A-W5",
+        "C10-A-W6",
+        "C10-A-W7"
+      ],
+      "review_reason": "In the supplied mirror, the directly linked column-information passage asserts competitive representations and good performance without meaningful names: a robustness claim, not particular-content dependence. However, the packet identifies this text as arXiv:2505.14415v2 dated 30 June 2025, with accepted-publication wording equivalence unverified. Thus the original publication claim cannot be decided from these windows. Retain source-version Unclear, not an absent published claim; broader pretraining conclusions are not transferred to column removal."
+    },
+    {
+      "comparison_id": "C10-B",
+      "study": "TARTE",
+      "coder_a": "Unclear",
+      "coder_b": "Unclear",
+      "adjudicated": "Unclear",
+      "disposition": "agreement_retained",
+      "all_supplied_windows_reviewed": [
+        "C10-B-W1",
+        "C10-B-W2",
+        "C10-B-W3",
+        "C10-B-W4",
+        "C10-B-W5",
+        "C10-B-W6",
+        "C10-B-W7"
+      ],
+      "review_reason": "The supplied mirror explicitly compares MinHash with TARTE and interprets FastText importance via semantic similarity and smooth representations. This is encoder/semantic-use language, while the broader figure also discusses pretraining benefits; neither explicitly makes a particular-content interpretation for the fixed composite comparison. More decisively, this is arXiv:2505.14415v2 dated 30 June 2025, not verified as the accepted publication wording. Retain source-version Unclear without asserting absence of a published strict claim or isolating an encoder effect from this composite comparison."
+    }
+  ]
+}

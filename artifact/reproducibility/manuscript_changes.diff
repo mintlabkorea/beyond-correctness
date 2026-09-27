@@ -1,0 +1,233 @@
+--- before/main_new.tex
++++ iclr_latex_v3/main_new.tex
+@@ -75,7 +75,7 @@
+ In cross-table transfer, prior studies commonly assess semantic knowledge by comparing the intended knowledge with altered alternatives, such as corrupted or shuffled semantics, or with omission-based controls \citep{dinh2022lift,hegselmann2023tabllm}.
+ Corrupted or shuffled alternatives may introduce misleading semantic information, degrading prediction and making the intended knowledge appear beneficial partly because the alternative performs worse.
+ Omission-based controls can also be difficult to interpret because removing semantic knowledge can simultaneously remove other information available to the model, change how the remaining information is represented, or alter the transfer procedure \citep{hewitt2019designing,elazar2021amnesic,sturmfels2020visualizing}.
+-Consequently, a large semantic-ablation effect does not by itself establish a comparable improvement in predictiion.
++Consequently, a large semantic-ablation effect does not by itself establish a comparable improvement in prediction.
+ 
+ % P3. 
+ We therefore separate two evaluation questions that are often not clearly distinguished in semantic ablations.
+@@ -216,7 +216,7 @@
+ 
+ For text inputs, changing the tested text can change tokens; this alone does not fail Preservation. 
+ For feature-name tests, Removal means that the original feature-name meaning is removed; we do not assume that every anonymous label has exactly the same effect on the model.
+-In the published-ablation audit, we check Preservation by asking whether the other predictive values, feature identity, input width, and the rest of the input format are preserved, and check Interface by asking whether the model and learning procedure are unchanged \supp{\S\ref{sec:published_audit}}.
++In the published-ablation audit, we check Preservation by asking whether the other predictive values, feature identity, input width, and the rest of the input format are preserved, and check Setup by asking whether the model and learning procedure are unchanged \supp{\S\ref{sec:published_audit}}.
+ 
+ Controls that fail these criteria may support broader comparisons but do not isolate predictive utility.
+ Predictive utility is defined relative to a particular suitable reference, so different suitable references need not give the same value.
+@@ -322,7 +322,7 @@
+ 
+ We use $n_{\mathrm{adapt}}$ for labeled TabLLM adaptation examples and $n_{\mathrm{target}}$ for labeled target examples in cross-table transfer.
+ Conditions share the same split and adaptation or target samples, and the same realization in the controlled benchmark, so all contrasts are paired.
+-Confidence intervals use 10,000 paired resamples over endpoint--seed pairs for clinical experiments, basins for hydrology, realizations for the controlled benchmark, and test rows for TabLLM.
++Unless otherwise stated in the supplement, confidence intervals use 10,000 paired resamples over endpoint--seed pairs for clinical experiments, basins for hydrology, realizations for the controlled benchmark, and test rows for TabLLM.
+ Prespecified analyses form the primary results; post-hoc analyses are explicitly labeled and are accompanied by the corresponding broader analysis when available \supp{\S\ref{sec:app-experimental-details}}.
+ 
+ We use these settings to test three questions in sequence: whether content sensitivity reflects predictive utility (\ref{sec:gap_composition}), whether utility varies across suitable references (\ref{sec:utility_relative}), and how utility changes with the information available to the reference (\ref{sec:reference_recover}).
+@@ -483,7 +483,7 @@
+ In the pairwise XGB setting, intended nMSE changes only from $.708$ to $.741$, while reference nMSE worsens from $.710$ to $.983$.
+ 
+ Removing constituent inputs also changes the information available to the model. To test whether reconstructibility itself is related to utility, we instead add noise to the constituent inputs while keeping the number of input columns fixed.
+-At each fixed noise level, lower reconstruction $R^2$ shows a modest association with higher utility (Spearman $\rho$ between $1-R^2$ and utility: $+.165$ to $+.329$; \supp{\S\ref{sec:app-noisy-proxy}}).
++At each fixed noise level, lower reconstruction $R^2$ shows a modest association with higher utility (within-setting Spearman $\rho$ between $1-R^2$ and utility, averaged over eight settings at each nonzero dose: $+.165$ to $+.329$; \supp{\S\ref{sec:app-noisy-proxy}}).
+ Because this relationship cannot be isolated from other input changes in the real-data relation experiments, we treat it as a modest association observed in the controlled benchmark rather than a mechanism established in real-data transfer.
+ 
+ \begin{figure}[h]
+@@ -503,8 +503,8 @@
+ Labeled target examples give the reference another way to recover task-relevant information.
+ Accordingly, utility decreases as target support increases for the continuous clinical endpoints, in TabLLM, and the controlled benchmark (Figure~\ref{fig:real_support_reference}).
+ 
+-Among the six examination endpoints for which the target itself is a matched variable, correspondence utility falls from $+.069$ to $+.018$ as target support increases.
+-This attenuation is driven mainly by the reference catching up: intended SD-normalized RMSE improves from $.739$ to $.676$, while the reference improves from $.808$ to $.694$.
++Among the six examination endpoints for which the target itself is a matched variable, correspondence utility falls from $+.070$ to $+.018$ as target support increases.
++This attenuation is driven mainly by the reference catching up: intended SD-normalized RMSE improves from $.738$ to $.676$, while the reference improves from $.808$ to $.694$.
+ The broader 13-endpoint analysis shows the same downward trend, although utility at $n_{\mathrm{target}}=256$ remains unresolved ($+.014$, 95\% CI $[-.013,+.042]$).
+ 
+ The decline extends beyond continuous clinical endpoints.
+--- before/appendix_new.tex
++++ iclr_latex_v3/appendix_new.tex
+@@ -195,7 +195,7 @@
+ 
+ \paragraph{Pairing and intervals.}
+ Conditions within the same comparison use the same data split and random seed, and query performance is never used to select hyperparameters.
+-All bootstrap intervals use 10,000 resamples.
++Unless otherwise stated, bootstrap intervals use 10,000 resamples. The paired reference-variation analysis in Section~\ref{sec:app-tabllm-reference-audit} uses 5,000 resamples, and the fixed-mapping lexical-reference analysis in Section C.3 uses 2,000 paired resamples.
+ For the survey experiments, we resample endpoints and their paired seeds; for hydrology, we resample basins; and for the controlled experiments, we resample the 20 realizations within each outcome family.
+ When an analysis uses a different resampling procedure or decision rule, we state it in that section.
+ Alternative interval estimates are reported only as robustness checks and do not replace the primary result.
+@@ -510,7 +510,7 @@
+ \label{sec:app-correspondence-construction-audit}
+ 
+ Separately, we test correspondence construction in a larger candidate space containing 1,315 target variables.
+-Each of nine known source--target matches is evaluated against this full candidate set.
++Each of nine known source--target matches is evaluated against this full candidate set. The artifact includes a metadata-only export of all 1,315 column names; its source-file hash and sorted-name pool hash match the frozen execution record. The CSV was exported during artifact finalization, not represented as a historical CSV.
+ 
+ Using feature names alone recovers 2 of the 9 matches, while adding units recovers 4 of 9.
+ Using names, units, and codebook descriptions recovers all 9 matches.
+@@ -723,13 +723,13 @@
+ With the documented measurement information, both content sensitivity and predictive utility are positive.
+ 
+ Table~\ref{tab:app-measurement-full} also reports an extension to ten endpoints.
+-In this broader set, the reference AUROC is above chance on average, while predictive utility remains positive.
++In this broader set, the reference AUROC is above chance on average, while predictive utility remains positive. The intended--altered comparison fails its frozen coverage requirement: cancer history in KNHANES-to-NHANES transfer has only 4 of 10 finite seed pairs, below the required eight. The frozen analysis retains available finite pairs within each endpoint--direction unit and weights endpoint clusters equally; this ten-endpoint comparison is descriptive and is not a coverage-qualified confirmation.
+ 
+ \begin{table}[h]
+ \caption{
+ Measurement-knowledge results with \(n_{\mathrm{target}}=256\).
+ Positive differences favor the intended condition.
+-The ten-endpoint content-sensitivity result is reported as an extension rather than a primary result.
++The ten-endpoint content-sensitivity result is descriptive because its frozen finite-pair coverage gate failed.
+ }
+ \label{tab:app-measurement-full}
+ \centering
+@@ -956,7 +956,7 @@
+ Diabetes   & +.164 & +.088 & +.217 & .130 \\
+ Heart      & -.021 & -.021 & +.143 & .163 \\
+ Income     & +.074 & +.055 & +.106 & .051 \\
+-Jungle     & +.025 & -.020 & +.083 & .103 \\
++Jungle     & +.025 & -.020 & +.083 & .102 \\
+ \bottomrule
+ \end{tabular}
+ \end{table}
+@@ -1028,7 +1028,7 @@
+ 
+ \paragraph{Alternative anonymous labels.}
+ The primary reference uses artificial identifiers such as \texttt{feature\_001}.
+-To check whether the result depends on this particular wording, we repeat the zero-shot comparison using \texttt{Field A} and \texttt{Variable A} while keeping the feature mapping and the rest of the input format unchanged.
++To check whether the result depends on this particular wording, we repeat the zero-shot comparison using \texttt{Field A} and \texttt{Variable A} while keeping the feature mapping and the rest of the input format unchanged. Intervals for this fixed-mapping analysis use 2,000 paired row resamples, preserving overlap across the split seeds.
+ 
+ Mean predictive utility remains positive for all three versions: \(+.0887\) with \texttt{feature\_001}, \(+.0716\) with \texttt{Field A}, and \(+.0792\) with \texttt{Variable A}.
+ Relative to the primary reference, \texttt{Field A} reduces utility by \(-.0171\) (95\% CI \([-.0268,-.0077]\)), while the shift for \texttt{Variable A} is smaller at \(-.0095\).
+@@ -1149,8 +1149,7 @@
+ 
+ The same pattern appears across all eight family--model--support settings.
+ At fixed nonzero noise levels, realizations with lower reconstruction $R^2$
+-generally have higher utility, with mean within-dose Spearman correlations between
+-\(+.165\) and \(+.329\) across the evaluated nonzero doses.
++generally have higher utility. At each dose, we first compute Spearman correlation between $1-R^2$ and utility across the 20 realizations separately in each family--learner--support setting, then take the arithmetic mean across the eight settings. These dose-specific means range from \(+.165\) to \(+.329\) across the six nonzero doses.
+ This within-dose analysis is post-result and descriptive.
+ Unlike the across-dose trend, it does not rely on the mechanically ordered noise dose and therefore provides complementary evidence for the same relationship without changing input width or variable identity.
+ 
+@@ -1185,7 +1184,7 @@
+ \toprule
+ \(n_{\mathrm{adapt}}\) & Predictive utility & 95\% CI \\
+ \midrule
+-0   & +.088 & [+.034,+.153] \\
++0   & +.088 & [+.033,+.153] \\
+ 4   & +.073 & [+.012,+.144] \\
+ 32  & +.035 & [+.017,+.054] \\
+ 512 & +.007 & [+.003,+.011] \\
+@@ -1279,7 +1278,7 @@
+ \(n_{\mathrm{target}}=256\) and \(1024\).
+ 
+ Absolute performance improves in both conditions:
+-nRMSE decreases from .739 to .676 for the intended condition and from .808 to .694 for the reference.
++nRMSE decreases from .738 to .676 for the intended condition and from .808 to .694 for the reference.
+ The larger improvement of the reference accounts for the shrinking predictive utility.
+ 
+ The examination and controlled support manipulations differ in how labeled-target weight changes with sample size.
+@@ -1653,7 +1652,7 @@
+ For each included study, we retain all reported comparisons that satisfy this rule rather than selecting comparisons based on their effect direction or magnitude.
+ We additionally screened XTab and CM2 during revision.
+ Among the excluded studies, TransTab uses semantic column and categorical descriptions but does not report an ablation that alters or removes them; XTab does not use feature-level semantic information as a model input; and CM2 uses column-name semantics but likewise reports no ablation that alters or removes them.
+-Table~\ref{tab:app-audit-screening} summarizes the screening decisions.
++Table~\ref{tab:app-audit-screening} summarizes the screening decisions. The artifact retains the original ten-study screening sheet and a separately dated finalization record of the author-verified revision decisions for XTab and CM2; the latter is not presented as a pre-revision record.
+ We screened 12 candidate studies and retained nine, yielding 25 qualifying comparisons.
+ 
+ \begin{table}[h]
+@@ -2007,10 +2006,10 @@
+ \begin{table}[h]
+ \caption{
+ Software versions used across the principal analyses and model-specific extensions.
+-Model-specific environments are listed separately where they differ from the principal analysis environment.
++The principal environment and recorded experiment-specific exceptions are listed separately; these version records do not imply that a complete historical environment lock exists for every run.
+ }\label{tab:app-software-environment}
+ \centering\small
+-\begin{tabular}{ll}
++\begin{tabular}{P{0.59\linewidth}P{0.33\linewidth}}
+ \toprule
+ Component & Version \\
+ \midrule
+@@ -2023,30 +2022,37 @@
+ PyTorch & \texttt{2.12.0.dev20260408+cu128} \\
+ Transformers (documentation extraction) & 5.12.0 \\
+ Python (TabLLM / learner extensions) & 3.10.20 \\
+-Transformers (TabLLM / TransTab) & 4.30.0 \\
++Transformers (TabLLM / TransTab conformance) & 4.30.0 \\
+ Datasets (TabLLM) & 2.14.7 \\
+-TransTab & commit \texttt{fdb34cf38abda73ee6a741b802fe226cc89ba7b5} \\
++TransTab & \texttt{fdb34cf38abda73ee6a74}\newline\texttt{1b802fe226cc89ba7b5} \\
+ CARTE & \texttt{carte-ai==0.0.26} \\
+-\bottomrule
+-\end{tabular}
+-\end{table}
+-
+-HistGradientBoosting results are bitwise reproducible at a fixed thread count; cross-thread executions are not claimed to be bitwise identical.
++Python (examination support/reference, value-redundancy, CARTE) & 3.10.20 \\
++Transformers (original TransTab run) & 5.12.0 \\
++Relation-capacity sensitivity: Python / NumPy / XGBoost & 3.8.8 / 1.24.4 / 2.1.4 \\
++Null-source extension: NumPy / scikit-learn / XGBoost & 1.24.4 / 1.3.2 / 2.1.4 \\
++
++\bottomrule
++\end{tabular}
++\end{table}
++
++The supplied one-thread replication reproduces all 400 comparable stored HistGradientBoosting nMSE values exactly. This is equality of recorded numerical outputs; cross-thread bitwise identity is not claimed. The artifact distinguishes exact equality from the $10^{-12}$ tolerance used to count material cross-thread differences, and documents the historical comparison scope.
+ The planned second HRS factorial pair was not executed because it requires new authorization for licensed HRS microdata.
+ 
++The lightweight workflow verifies the paper from included aggregate outputs without restricted data or model calls. Full experiment execution additionally requires the documented source products, prepared inputs, model assets, and reviewer-specific access permissions. The artifact identifies incomplete historical environment locks and external clinical preparation dependencies explicitly; it does not claim that restricted-data experiments can be rerun from the archive alone.
++
+ \subsection{Supplementary artifact map}
+ 
+ \begin{table}[h]
+-\caption{Map of complete supplementary artifacts included with this submission.}
++\caption{Map of supplementary artifacts included with this submission. Public-data and governed-data execution dependencies are documented separately in the artifact.}
+ \label{tab:app-artifact-map}
+ \centering\small
+ \setlength{\tabcolsep}{4pt}
+ \begin{tabular}{P{0.30\linewidth}P{0.62\linewidth}}
+ \toprule
+-Artifact directory & Complete contents \\
++Artifact directory & Contents \\
+ \midrule
+ \path{provenance/} &
+-complete analysis-provenance ledger \\
++analysis-provenance ledger, with unavailable historical dates explicitly marked unknown \\
+ \path{tabllm/} &
+ complete frozen reference library, global-construction audit, product-space sensitivity summaries, and dataset-level reference envelopes
+ , exhaustive $k=512$ global-reference extension, and per-reference decay summaries \\
+@@ -2064,10 +2070,12 @@
+ complete TransTab and CARTE results \\
+ \path{method_contract/} &
+ complete prompt components, rendered prompts, schemas, acceptance rules, raw responses, and generation manifests \\
++\path{published_audit/} &
++initial human coding, independent P1--P6 checks, final consensus, source evidence, and adjudication history \\
+ \path{extraction/} &
+ complete seven-model measurement-code extraction panel \\
+ \path{reproducibility/} &
+-exact software/model revisions, environment details, and thread-count audit \\
++recorded software/model revisions, experiment-specific environment exceptions, missing-lock disclosures, and thread-count audit \\
+ \bottomrule
+ \end{tabular}
+ \end{table}
+--- before/references_seed.bib
++++ iclr_latex_v3/references_seed.bib
+@@ -891,3 +891,15 @@
+   year    = {2026},
+   doi     = {10.1007/s11883-026-01398-z}
+ }
++
++% Bibliographic metadata checked against the publisher DOI record during artifact finalization.
++@article{kim2025kinematics,
++  title={Learning-based 3D human kinematics estimation using behavioral constraints from activity classification},
++  author={Kim, Daekyum and Jin, Yichu and Cho, Haedo and Jones, Truman and Zhou, Yu Meng and Fadaie, Ameneh and Popov, Dmitry and Swaminathan, Krithika and Walsh, Conor J.},
++  journal={Nature Communications},
++  volume={16},
++  pages={3454},
++  year={2025},
++  doi={10.1038/s41467-025-58624-6},
++  url={https://www.nature.com/articles/s41467-025-58624-6}
++}

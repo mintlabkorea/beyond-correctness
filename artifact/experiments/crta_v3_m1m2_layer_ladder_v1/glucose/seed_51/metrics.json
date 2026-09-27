@@ -1,0 +1,193 @@
+{
+ "arms": [
+  "rung0_base",
+  "rung1_columns",
+  "rung2_grouping",
+  "rung3_measurement",
+  "pl_columns",
+  "pl_grouping",
+  "pl_measurement",
+  "is_target",
+  "loo_columns",
+  "loo_grouping",
+  "loo_measurement (alias of rung2_grouping)"
+ ],
+ "backbone": "xgboost_hist_d6_n300",
+ "benchmark_id": "std_cross_nh2kn_shared_anchorreset_fewshot_v1",
+ "dropped_members_by_group": {
+  "blood_lipid_measurements": [],
+  "body_measurements": [],
+  "diabetes_test_measurements": [
+   "glucose"
+  ],
+  "first_reading_blood_pressure": []
+ },
+ "feature_set": "ladder_all_slots_v1",
+ "member_slots": [
+  "height_cm",
+  "weight_kg",
+  "waist_cm",
+  "sbp",
+  "dbp",
+  "hba1c",
+  "total_cholesterol",
+  "triglycerides"
+ ],
+ "metric": "query_sd_normalized_rmse (lower is better)",
+ "n_pool": 6776,
+ "n_query": 12651,
+ "n_source": 22302,
+ "nrmse": {
+  "1024": {
+   "is_target": 0.8584525706049453,
+   "loo_columns": 0.6173592382119972,
+   "loo_grouping": 0.606766839786891,
+   "loo_measurement": 0.6080122153279259,
+   "pl_columns": 0.656726278222445,
+   "pl_grouping": 0.6070942057923989,
+   "pl_measurement": 0.6050121056363506,
+   "rung0_base": 0.8629121429451878,
+   "rung1_columns": 0.6063167604968871,
+   "rung2_grouping": 0.6080122153279259,
+   "rung3_measurement": 0.6048718964594602
+  },
+  "256": {
+   "is_target": 0.8843135180981303,
+   "loo_columns": 0.6568241350580595,
+   "loo_grouping": 0.637348602052548,
+   "loo_measurement": 0.6120305490488186,
+   "pl_columns": 0.7824150786969662,
+   "pl_grouping": 0.6266623595002699,
+   "pl_measurement": 0.6134818205643844,
+   "rung0_base": 0.8919809678523724,
+   "rung1_columns": 0.6279669704891991,
+   "rung2_grouping": 0.6120305490488186,
+   "rung3_measurement": 0.6201923302719591
+  },
+  "64": {
+   "is_target": 1.0527991848703986,
+   "loo_columns": 0.8478349921080682,
+   "loo_grouping": 0.8664167436526534,
+   "loo_measurement": 0.8207450307194203,
+   "pl_columns": 1.026163815983151,
+   "pl_grouping": 0.7902216173718982,
+   "pl_measurement": 1.0718985388897537,
+   "rung0_base": 1.0330998938782914,
+   "rung1_columns": 0.7104815755961578,
+   "rung2_grouping": 0.8207450307194203,
+   "rung3_measurement": 0.8492726991869469
+  }
+ },
+ "pl_columns_permutation": {
+  "dbp": "total_cholesterol",
+  "hba1c": "dbp",
+  "height_cm": "hba1c",
+  "sbp": "height_cm",
+  "total_cholesterol": "weight_kg",
+  "triglycerides": "waist_cm",
+  "waist_cm": "sbp",
+  "weight_kg": "triglycerides"
+ },
+ "pl_grouping_partition": {
+  "blood_lipid_measurements": [
+   "hba1c",
+   "triglycerides"
+  ],
+  "body_measurements": [
+   "height_cm",
+   "sbp",
+   "waist_cm"
+  ],
+  "diabetes_test_measurements": [
+   "weight_kg"
+  ],
+  "first_reading_blood_pressure": [
+   "dbp",
+   "total_cholesterol"
+  ]
+ },
+ "pl_measurement_table": {
+  "knhanes/ALL__bs3_1": {
+   "kind": "map",
+   "map": {
+    "3.0": 1.0,
+    "8.0": 0.0,
+    "9.0": 0.5
+   }
+  },
+  "knhanes/ALL__de1_dg": {
+   "kind": "map",
+   "map": {
+    "1.0": 1.0,
+    "9.0": 0.0
+   }
+  },
+  "knhanes/ALL__di1_dg": {
+   "kind": "map",
+   "map": {
+    "0.0": 0.0,
+    "1.0": 1.0
+   }
+  },
+  "knhanes/ALL__educ": {
+   "kind": "map",
+   "map": {
+    "2.0": 1.0,
+    "3.0": 0.6666666666666666,
+    "8.0": 0.3333333333333333,
+    "9.0": 0.0
+   }
+  },
+  "knhanes/ALL__sex": {
+   "kind": "map",
+   "map": {
+    "1.0": 1.0,
+    "2.0": 0.0
+   }
+  },
+  "nhanes/BPQ020": {
+   "kind": "map",
+   "map": {
+    "2.0": 1.0,
+    "7.0": 0.0
+   }
+  },
+  "nhanes/DIQ010": {
+   "kind": "map",
+   "map": {
+    "2.0": 0.5,
+    "3.0": 0.0,
+    "7.0": 1.0
+   }
+  },
+  "nhanes/DMDEDUC2": {
+   "kind": "map",
+   "map": {
+    "1.0": 0.75,
+    "3.0": 1.0,
+    "4.0": 0.0,
+    "5.0": 0.5,
+    "7.0": 0.25
+   }
+  },
+  "nhanes/RIAGENDR": {
+   "kind": "map",
+   "map": {
+    "1.0": 0.0,
+    "2.0": 1.0
+   }
+  },
+  "nhanes/SMQ040": {
+   "kind": "map",
+   "map": {
+    "1.0": 1.0,
+    "2.0": 0.5,
+    "9.0": 0.0
+   }
+  }
+ },
+ "primary_k": 256,
+ "seed": 51,
+ "target": "glucose",
+ "wall_seconds": 72.6
+}

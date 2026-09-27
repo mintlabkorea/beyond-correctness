@@ -1,0 +1,44 @@
+{
+ "arms": {
+  "free": {
+   "mae": 12.345150204639802,
+   "query_sd": 20.66722998230565,
+   "query_sd_normalized_rmse": 0.7570298809158784,
+   "r2": 0.42690575940049114,
+   "rmse": 15.645710652365917
+  },
+  "sign_documented": {
+   "mae": 12.92427692499888,
+   "query_sd": 20.66722998230565,
+   "query_sd_normalized_rmse": 0.7886236001279625,
+   "r2": 0.37807281732121134,
+   "rmse": 16.29866531331845
+  },
+  "sign_flipped": {
+   "mae": 17.03622126860955,
+   "query_sd": 20.66722998230565,
+   "query_sd_normalized_rmse": 1.090479272563861,
+   "r2": -0.1891450438914073,
+   "rmse": 22.537185917014682
+  },
+  "sign_random": {
+   "mae": 12.423775737044092,
+   "query_sd": 20.66722998230565,
+   "query_sd_normalized_rmse": 0.7623015973448851,
+   "r2": 0.4188962746854368,
+   "rmse": 15.754662428205698
+  }
+ },
+ "constrained_features": [
+  "age",
+  "dbp"
+ ],
+ "endpoint": "sbp",
+ "n_query": 26663,
+ "n_source": 122615,
+ "n_support": 269,
+ "seed": 41,
+ "support_fraction": 0.01,
+ "task": "M3_nhkn2hrs",
+ "wall_seconds": 43.3
+}

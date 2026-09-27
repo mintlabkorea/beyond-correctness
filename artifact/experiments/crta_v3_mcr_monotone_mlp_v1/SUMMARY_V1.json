@@ -1,0 +1,306 @@
+{
+ "arm_mean_nmse": {
+  "32": {
+   "additive": {
+    "free": 0.6758544239722009,
+    "mono_flip": 0.9615726412341943,
+    "mono_true": 0.671167494201951
+   },
+   "pairwise": {
+    "free": 0.6709478131207902,
+    "mono_flip": 0.6573719900707726,
+    "mono_true": 0.6634531639436816
+   },
+   "sparse": {
+    "free": 0.6935751619947976,
+    "mono_flip": 0.677487589938435,
+    "mono_true": 0.6805766774044502
+   }
+  },
+  "512": {
+   "additive": {
+    "free": 0.6683066149676872,
+    "mono_flip": 0.9539232380940239,
+    "mono_true": 0.6671864125952723
+   },
+   "pairwise": {
+    "free": 0.6621237344686928,
+    "mono_flip": 0.6527970353353754,
+    "mono_true": 0.6562485886912615
+   },
+   "sparse": {
+    "free": 0.6819778901596336,
+    "mono_flip": 0.6726105425993787,
+    "mono_true": 0.6751623817997683
+   }
+  }
+ },
+ "bootstrap": {
+  "reps": 10000,
+  "seed": 20260820
+ },
+ "evaluability_gate": {
+  "32": {
+   "additive": {
+    "beats_intercept": true,
+    "mean_free_nmse": 0.6758544239722009
+   },
+   "pairwise": {
+    "beats_intercept": true,
+    "mean_free_nmse": 0.6709478131207902
+   },
+   "sparse": {
+    "beats_intercept": true,
+    "mean_free_nmse": 0.6935751619947976
+   }
+  },
+  "512": {
+   "additive": {
+    "beats_intercept": true,
+    "mean_free_nmse": 0.6683066149676872
+   },
+   "pairwise": {
+    "beats_intercept": true,
+    "mean_free_nmse": 0.6621237344686928
+   },
+   "sparse": {
+    "beats_intercept": true,
+    "mean_free_nmse": 0.6819778901596336
+   }
+  }
+ },
+ "n_cells": 60,
+ "primary_support_k": "32",
+ "sections": {
+  "32": {
+   "NM1_constraint_utility": {
+    "additive": {
+     "ci95": [
+      -0.0013442956883176686,
+      0.010911093137631491
+     ],
+     "evaluable": true,
+     "mean": 0.004686929770249854,
+     "n": 20,
+     "separated": false,
+     "win": 0.65
+    },
+    "all_families_evaluable": true,
+    "all_families_separated": false,
+    "pairwise": {
+     "ci95": [
+      0.0020439086808771464,
+      0.01266525151547846
+     ],
+     "evaluable": true,
+     "mean": 0.007494649177108609,
+     "n": 20,
+     "separated": true,
+     "win": 0.8
+    },
+    "sparse": {
+     "ci95": [
+      0.00734475096991699,
+      0.018930114898222633
+     ],
+     "evaluable": true,
+     "mean": 0.012998484590347576,
+     "n": 20,
+     "separated": true,
+     "win": 0.8
+    }
+   },
+   "NM2_direction_content": {
+    "additive": {
+     "ci95": [
+      0.27048078541405607,
+      0.31309338227507244
+     ],
+     "evaluable": true,
+     "mean": 0.2904051470322432,
+     "n": 20,
+     "separated": true,
+     "win": 1.0
+    },
+    "all_families_evaluable": true,
+    "all_families_separated": false,
+    "pairwise": {
+     "ci95": [
+      -0.008841215924985381,
+      -0.0034584715299749336
+     ],
+     "evaluable": true,
+     "mean": -0.006081173872909162,
+     "n": 20,
+     "separated": false,
+     "win": 0.1
+    },
+    "sparse": {
+     "ci95": [
+      -0.005576713186656029,
+      -0.00040697061242884845
+     ],
+     "evaluable": true,
+     "mean": -0.003089087466014967,
+     "n": 20,
+     "separated": false,
+     "win": 0.3
+    }
+   },
+   "flip_over_free": {
+    "additive": {
+     "ci95": [
+      -0.31090973163497526,
+      -0.26315702971252064
+     ],
+     "evaluable": true,
+     "mean": -0.28571821726199337,
+     "n": 20,
+     "separated": false,
+     "win": 0.0
+    },
+    "all_families_evaluable": true,
+    "all_families_separated": false,
+    "pairwise": {
+     "ci95": [
+      0.00999227192273178,
+      0.017320083411449867
+     ],
+     "evaluable": true,
+     "mean": 0.013575823050017772,
+     "n": 20,
+     "separated": true,
+     "win": 1.0
+    },
+    "sparse": {
+     "ci95": [
+      0.01123235664221489,
+      0.02144637499046318
+     ],
+     "evaluable": true,
+     "mean": 0.01608757205636254,
+     "n": 20,
+     "separated": true,
+     "win": 1.0
+    }
+   }
+  },
+  "512": {
+   "NM1_constraint_utility": {
+    "additive": {
+     "ci95": [
+      -0.004100079966063358,
+      0.006292506072683195
+     ],
+     "evaluable": true,
+     "mean": 0.0011202023724149357,
+     "n": 20,
+     "separated": false,
+     "win": 0.45
+    },
+    "all_families_evaluable": true,
+    "all_families_separated": false,
+    "pairwise": {
+     "ci95": [
+      0.0023158017424087674,
+      0.009499732308616358
+     ],
+     "evaluable": true,
+     "mean": 0.005875145777431384,
+     "n": 20,
+     "separated": true,
+     "win": 0.75
+    },
+    "sparse": {
+     "ci95": [
+      0.002644209210349148,
+      0.010689320226043617
+     ],
+     "evaluable": true,
+     "mean": 0.006815508359865397,
+     "n": 20,
+     "separated": true,
+     "win": 0.8
+    }
+   },
+   "NM2_direction_content": {
+    "additive": {
+     "ci95": [
+      0.2674465504971714,
+      0.3090751939493082
+     ],
+     "evaluable": true,
+     "mean": 0.2867368254987517,
+     "n": 20,
+     "separated": true,
+     "win": 1.0
+    },
+    "all_families_evaluable": true,
+    "all_families_separated": false,
+    "pairwise": {
+     "ci95": [
+      -0.005130067264160232,
+      -0.0017307573477241857
+     ],
+     "evaluable": true,
+     "mean": -0.0034515533558861387,
+     "n": 20,
+     "separated": false,
+     "win": 0.2
+    },
+    "sparse": {
+     "ci95": [
+      -0.0053884831862893254,
+      0.0003677125110407328
+     ],
+     "evaluable": true,
+     "mean": -0.0025518392003896105,
+     "n": 20,
+     "separated": false,
+     "win": 0.25
+    }
+   },
+   "flip_over_free": {
+    "additive": {
+     "ci95": [
+      -0.30984058153021626,
+      -0.26378695561276944
+     ],
+     "evaluable": true,
+     "mean": -0.28561662312633673,
+     "n": 20,
+     "separated": false,
+     "win": 0.0
+    },
+    "all_families_evaluable": true,
+    "all_families_separated": false,
+    "pairwise": {
+     "ci95": [
+      0.006317375303524115,
+      0.012570519433371383
+     ],
+     "evaluable": true,
+     "mean": 0.009326699133317523,
+     "n": 20,
+     "separated": true,
+     "win": 0.9
+    },
+    "sparse": {
+     "ci95": [
+      0.005785047744618451,
+      0.013288488604086341
+     ],
+     "evaluable": true,
+     "mean": 0.009367347560255007,
+     "n": 20,
+     "separated": true,
+     "win": 0.9
+    }
+   }
+  }
+ },
+ "verdicts": {
+  "NM1_constraint_utility": false,
+  "NM2_direction_content": false
+ }
+}

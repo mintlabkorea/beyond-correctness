@@ -1,0 +1,7 @@
+# Complete learner-coverage outputs
+
+TransTab original, Transformers-4.30 conformance replication, and bridge-decomposition outputs are retained separately under their `experiments/crta_v3_mcr_transtab_*` paths. The official source commit is `fdb34cf38abda73ee6a741b802fe226cc89ba7b5`. Architecture, label standardization, domain-local medians/missingness indicators, fixed 50-epoch training, and realization seeds are executable in `scripts/run_crta_v3_mcr_transtab_c_v1.py`; the bridge extension imports the same implementation.
+
+The exact compatibility code is in that runner: `TrainDataset.__getitem__` uses `index:index+1` instead of `index-1:index`, and regression consumes the raw logit instead of the classifier sigmoid. The wrapper preserves the optimizer/training objective. The original 5.12 result and 4.30 conformance comparison are both retained; neither is relabeled as the other.
+
+CARTE's complete M/C/R family/budget grid is in `experiments/crta_v3_mcr_carte_v1/`. `scripts/run_crta_v3_mcr_carte_v1.py` records carte-ai 0.0.26, preprocessing, target fraction .125, validation .2, and early stopping. Its compatibility subclass creates/passes the GradScaler argument required by the upstream step signature; this recorded repair is retained. The upstream CARTE Git revision was **not frozen**. `asset_identifiers.json` preserves the pretrained and fastText hashes without bundling the assets. CARTE's value-plus-text relation interface is distinct from executable tree direction constraints.

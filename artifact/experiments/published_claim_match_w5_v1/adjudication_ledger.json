@@ -1,0 +1,240 @@
+[
+  {
+    "comparison_id": "C01-A",
+    "study": "LIFT",
+    "adjudication_type": "Third same-model AI adjudication; not human validation",
+    "adjudication_action": "resolve_disagreement",
+    "disagreement_fields": [
+      "linkage"
+    ],
+    "changed_fields": [
+      "linkage"
+    ],
+    "raw_A_labels": {
+      "claim_content": "Yes",
+      "claim_utility": "Yes",
+      "descriptive_only": "No",
+      "linkage": "explicit_group"
+    },
+    "raw_B_labels": {
+      "claim_content": "Yes",
+      "claim_utility": "Yes",
+      "descriptive_only": "No",
+      "linkage": "explicit_comparison"
+    },
+    "adjudicated_labels": {
+      "claim_content": "Yes",
+      "claim_utility": "Yes",
+      "descriptive_only": "No",
+      "linkage": "explicit_group"
+    },
+    "source_justification": "W3 explicitly interprets the correct/shuffled/unnamed result group as a consequence of correct feature/value association and says correct names help boost performance except on CMC; this satisfies content and conditional utility. The shared paragraph supports the fixed prompt-format unit, with group linkage retained because its concluding interpretation spans the named variants.",
+    "quote_evidence": [
+      {
+        "quote": "Second, we observe that correctly incorporating feature names helps boost the performances of LIFT for datasets except for CMC.",
+        "window_id": "C01-A-W3",
+        "source_path": "iclr_latex_v3/design_audit/sources/C01_main.txt",
+        "pdf_page": 8,
+        "start_line": 454,
+        "end_line": 462
+      },
+      {
+        "quote": "Third, if we use similar prompts with shuffled feature names (Shuffled-Names I, II), then the performance of LIFT drops by a significant margin. These results imply that the aforementioned performance improvements are indeed due to proper prompting with correct feature/value association.",
+        "window_id": "C01-A-W3",
+        "source_path": "iclr_latex_v3/design_audit/sources/C01_main.txt",
+        "pdf_page": 8,
+        "start_line": 454,
+        "end_line": 462
+      }
+    ],
+    "source_version_caveat": "Official published PDF archived locally; raw reading text regenerated from the same archived PDF where needed."
+  },
+  {
+    "comparison_id": "C01-B",
+    "study": "LIFT",
+    "adjudication_type": "Third same-model AI adjudication; not human validation",
+    "adjudication_action": "resolve_disagreement",
+    "disagreement_fields": [
+      "linkage"
+    ],
+    "changed_fields": [
+      "linkage"
+    ],
+    "raw_A_labels": {
+      "claim_content": "Yes",
+      "claim_utility": "Yes",
+      "descriptive_only": "No",
+      "linkage": "explicit_group"
+    },
+    "raw_B_labels": {
+      "claim_content": "Yes",
+      "claim_utility": "Yes",
+      "descriptive_only": "No",
+      "linkage": "explicit_comparison"
+    },
+    "adjudicated_labels": {
+      "claim_content": "Yes",
+      "claim_utility": "Yes",
+      "descriptive_only": "No",
+      "linkage": "explicit_group"
+    },
+    "source_justification": "W3 explicitly interprets the correct/shuffled/unnamed result group as a consequence of correct feature/value association and says correct names help boost performance except on CMC; this satisfies content and conditional utility. The shared paragraph supports the fixed prompt-format unit, with group linkage retained because its concluding interpretation spans the named variants.",
+    "quote_evidence": [
+      {
+        "quote": "Second, we observe that correctly incorporating feature names helps boost the performances of LIFT for datasets except for CMC.",
+        "window_id": "C01-B-W3",
+        "source_path": "iclr_latex_v3/design_audit/sources/C01_main.txt",
+        "pdf_page": 8,
+        "start_line": 454,
+        "end_line": 462
+      },
+      {
+        "quote": "Third, if we use similar prompts with shuffled feature names (Shuffled-Names I, II), then the performance of LIFT drops by a significant margin. These results imply that the aforementioned performance improvements are indeed due to proper prompting with correct feature/value association.",
+        "window_id": "C01-B-W3",
+        "source_path": "iclr_latex_v3/design_audit/sources/C01_main.txt",
+        "pdf_page": 8,
+        "start_line": 454,
+        "end_line": 462
+      }
+    ],
+    "source_version_caveat": "Official published PDF archived locally; raw reading text regenerated from the same archived PDF where needed."
+  },
+  {
+    "comparison_id": "C04-A",
+    "study": "PLATO",
+    "adjudication_type": "Third same-model AI adjudication; not human validation",
+    "adjudication_action": "resolve_disagreement",
+    "disagreement_fields": [
+      "linkage"
+    ],
+    "changed_fields": [
+      "linkage"
+    ],
+    "raw_A_labels": {
+      "claim_content": "Yes",
+      "claim_utility": "Yes",
+      "descriptive_only": "No",
+      "linkage": "explicit_group"
+    },
+    "raw_B_labels": {
+      "claim_content": "Yes",
+      "claim_utility": "Yes",
+      "descriptive_only": "No",
+      "linkage": "explicit_comparison"
+    },
+    "adjudicated_labels": {
+      "claim_content": "Yes",
+      "claim_utility": "Yes",
+      "descriptive_only": "No",
+      "linkage": "explicit_comparison"
+    },
+    "source_justification": "W3 explicitly says performance relies on feature and broader domain information and that both are important for performance, satisfying both axes. Its full-KG versus feature-only sentence names the exact unit, so explicit_comparison resolves the linkage difference.",
+    "quote_evidence": [
+      {
+        "quote": "We find that both the feature nodes and the broader knowledge nodes are important for PLATO’s performance.",
+        "window_id": "C04-A-W3",
+        "source_path": "experiments/published_claim_match_w5_v1/sources_reading/C04_raw.txt",
+        "pdf_page": 9,
+        "start_line": 509,
+        "end_line": 513
+      },
+      {
+        "quote": "PLATO’s performance thus relies on both the feature information and the broader domain information in the KG.",
+        "window_id": "C04-A-W3",
+        "source_path": "experiments/published_claim_match_w5_v1/sources_reading/C04_raw.txt",
+        "pdf_page": 9,
+        "start_line": 509,
+        "end_line": 513
+      }
+    ],
+    "source_version_caveat": "Official published PDF archived locally; raw reading text regenerated from the same archived PDF where needed."
+  },
+  {
+    "comparison_id": "C05-B",
+    "study": "CARTE",
+    "adjudication_type": "Third same-model AI adjudication; not human validation",
+    "adjudication_action": "resolve_disagreement",
+    "disagreement_fields": [
+      "claim_content",
+      "claim_utility"
+    ],
+    "changed_fields": [
+      "claim_content",
+      "claim_utility"
+    ],
+    "raw_A_labels": {
+      "claim_content": "Unclear",
+      "claim_utility": "Unclear",
+      "descriptive_only": "No",
+      "linkage": "explicit_group"
+    },
+    "raw_B_labels": {
+      "claim_content": "Yes",
+      "claim_utility": "Yes",
+      "descriptive_only": "No",
+      "linkage": "explicit_group"
+    },
+    "adjudicated_labels": {
+      "claim_content": "Unclear",
+      "claim_utility": "Unclear",
+      "descriptive_only": "No",
+      "linkage": "explicit_group"
+    },
+    "source_justification": "W2 explicitly calls table context essential to use and pivotal for prediction, but neither W1 nor W2 specifies that this context is semantic knowledge rather than structural or statistical information. Under the frozen semantic-scope rule both axes are Unclear; the separate Minhash semantic-similarity interpretation cannot transfer to this edge/attention intervention, resolving the A/B difference without inventing absence.",
+    "quote_evidence": [
+      {
+        "quote": "In particular, it is interesting to observe the significant decrease with the exclusion of edge information and the attention layer. Since both are essential for leveraging context within a given table, it implies that capturing context is pivotal for attaining the strong performances in predictions.",
+        "window_id": "C05-B-W2",
+        "source_path": "iclr_latex_v3/design_audit/sources/C05_main.txt",
+        "pdf_page": 21,
+        "start_line": 1358,
+        "end_line": 1368
+      }
+    ],
+    "source_version_caveat": "Official published PDF archived locally; raw reading text regenerated from the same archived PDF where needed."
+  },
+  {
+    "comparison_id": "C05-C",
+    "study": "CARTE",
+    "adjudication_type": "Third same-model AI adjudication; not human validation",
+    "adjudication_action": "resolve_disagreement",
+    "disagreement_fields": [
+      "claim_content",
+      "claim_utility"
+    ],
+    "changed_fields": [
+      "claim_content",
+      "claim_utility"
+    ],
+    "raw_A_labels": {
+      "claim_content": "Unclear",
+      "claim_utility": "Unclear",
+      "descriptive_only": "No",
+      "linkage": "explicit_group"
+    },
+    "raw_B_labels": {
+      "claim_content": "Yes",
+      "claim_utility": "Yes",
+      "descriptive_only": "No",
+      "linkage": "explicit_group"
+    },
+    "adjudicated_labels": {
+      "claim_content": "Unclear",
+      "claim_utility": "Unclear",
+      "descriptive_only": "No",
+      "linkage": "explicit_group"
+    },
+    "source_justification": "W2 explicitly calls table context essential to use and pivotal for prediction, but neither W1 nor W2 specifies that this context is semantic knowledge rather than structural or statistical information. Under the frozen semantic-scope rule both axes are Unclear; the separate Minhash semantic-similarity interpretation cannot transfer to this edge/attention intervention, resolving the A/B difference without inventing absence.",
+    "quote_evidence": [
+      {
+        "quote": "In particular, it is interesting to observe the significant decrease with the exclusion of edge information and the attention layer. Since both are essential for leveraging context within a given table, it implies that capturing context is pivotal for attaining the strong performances in predictions.",
+        "window_id": "C05-C-W2",
+        "source_path": "iclr_latex_v3/design_audit/sources/C05_main.txt",
+        "pdf_page": 21,
+        "start_line": 1358,
+        "end_line": 1368
+      }
+    ],
+    "source_version_caveat": "Official published PDF archived locally; raw reading text regenerated from the same archived PDF where needed."
+  }
+]

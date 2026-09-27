@@ -1,0 +1,96 @@
+{
+ "V_BETWEEN_CONTENT": {
+  "best_target": "glucose",
+  "ci95": [
+   -0.0030838364580949786,
+   0.00012082326964933727
+  ],
+  "drop_best_target_mean": -0.0019101345386171697,
+  "mean_gain": -0.001478808556834397,
+  "n_pairs": 60,
+  "per_target_mean": {
+   "dbp": -0.001987561668908766,
+   "glucose": 0.0006778213520794663,
+   "sbp": -0.003195005794039163,
+   "total_cholesterol": -0.003554344470859261,
+   "triglycerides": -0.00017984107202170251,
+   "waist_cm": -0.0006339196872569564
+  },
+  "separated": false,
+  "win_rate": 0.31666666666666665
+ },
+ "V_BETWEEN_VALUE": {
+  "best_target": "dbp",
+  "ci95": [
+   -0.005442323534788616,
+   -0.00046065314160971055
+  ],
+  "drop_best_target_mean": -0.003521254996774438,
+  "mean_gain": -0.002846074537865862,
+  "n_pairs": 60,
+  "per_target_mean": {
+   "dbp": 0.0005298277566770148,
+   "glucose": -0.00284734636113968,
+   "sbp": -0.005026817143327145,
+   "total_cholesterol": -0.00769463705523542,
+   "triglycerides": -0.002175993606244664,
+   "waist_cm": 0.00013851918207472003
+  },
+  "separated": false,
+  "win_rate": 0.3
+ },
+ "bootstrap": {
+  "hierarchy": "targets then seeds",
+  "reps": 10000,
+  "seed": 20260819
+ },
+ "coupled_pairs": [
+  [
+   "body_measurements",
+   "first_reading_blood_pressure"
+  ],
+  [
+   "body_measurements",
+   "diabetes_test_measurements"
+  ],
+  [
+   "blood_lipid_measurements",
+   "body_measurements"
+  ],
+  [
+   "blood_lipid_measurements",
+   "diabetes_test_measurements"
+  ]
+ ],
+ "desc_h_gated_vs_free": {
+  "best_target": "total_cholesterol",
+  "ci95": [
+   -0.0002538420652416477,
+   0.003328749514185416
+  ],
+  "drop_best_target_mean": 0.0009981304454891504,
+  "mean_gain": 0.0015124149446494753,
+  "n_pairs": 60,
+  "per_target_mean": {
+   "dbp": -0.0017098085377880378,
+   "glucose": 0.003802349734633448,
+   "sbp": 0.0006187767079371742,
+   "total_cholesterol": 0.004083837440451099,
+   "triglycerides": 0.0013368903897822415,
+   "waist_cm": 0.0009424439328809264
+  },
+  "win_rate": 0.6833333333333333
+ },
+ "experiment_root": "experiments/crta_v3_pam_hierarchical_v2",
+ "metric": "query_sd_normalized_rmse (lower is better); gain = reference - arm",
+ "n_cells": 60,
+ "primary_k": 256,
+ "targets_present": [
+  "dbp",
+  "glucose",
+  "sbp",
+  "total_cholesterol",
+  "triglycerides",
+  "waist_cm"
+ ]
+}

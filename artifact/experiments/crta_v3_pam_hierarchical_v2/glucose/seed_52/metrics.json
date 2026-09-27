@@ -1,0 +1,74 @@
+{
+ "arms": [
+  "free",
+  "adj_concept",
+  "pl_adj",
+  "h_gated",
+  "h_gated_pl"
+ ],
+ "coupled_pairs": [
+  [
+   "body_measurements",
+   "first_reading_blood_pressure"
+  ],
+  [
+   "body_measurements",
+   "diabetes_test_measurements"
+  ],
+  [
+   "blood_lipid_measurements",
+   "body_measurements"
+  ],
+  [
+   "blood_lipid_measurements",
+   "diabetes_test_measurements"
+  ]
+ ],
+ "metric": "query_sd_normalized_rmse (lower is better)",
+ "nrmse": {
+  "1024": {
+   "adj_concept": 0.594269794265572,
+   "free": 0.5969400822958745,
+   "h_gated": 0.5961334631325994,
+   "h_gated_pl": 0.5965028158708281,
+   "pl_adj": 0.5900069983058728
+  },
+  "256": {
+   "adj_concept": 0.61349558004117,
+   "free": 0.6219169456681194,
+   "h_gated": 0.62432750746046,
+   "h_gated_pl": 0.6191255557573704,
+   "pl_adj": 0.6104049943500028
+  },
+  "64": {
+   "adj_concept": 0.6331252811758848,
+   "free": 0.6587023198520394,
+   "h_gated": 0.6479657788316264,
+   "h_gated_pl": 0.6460112673860894,
+   "pl_adj": 0.638473244163795
+  }
+ },
+ "placebo_pairs": [
+  [
+   "body_measurements",
+   "diabetes_test_measurements"
+  ],
+  [
+   "blood_lipid_measurements",
+   "body_measurements"
+  ],
+  [
+   "diabetes_test_measurements",
+   "first_reading_blood_pressure"
+  ],
+  [
+   "blood_lipid_measurements",
+   "diabetes_test_measurements"
+  ]
+ ],
+ "primary_k": 256,
+ "reused_from_v1": "experiments/crta_v3_pam_constraint_relations_v1/glucose/seed_52/metrics.json",
+ "seed": 52,
+ "target": "glucose",
+ "wall_seconds": 19.7
+}

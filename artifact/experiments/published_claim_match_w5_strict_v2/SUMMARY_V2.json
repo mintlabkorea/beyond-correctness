@@ -1,0 +1,132 @@
+{
+  "status": "complete_strict_content_recoding_files_only",
+  "comparison_count": 25,
+  "study_count": 9,
+  "strict_content_agreement": {
+    "n": 25,
+    "agreements": 25,
+    "raw_agreement": 1.0,
+    "expected_agreement": 0.4816,
+    "kappa": 1.0,
+    "marginal_a": {
+      "Yes": 6,
+      "No": 16,
+      "Unclear": 3
+    },
+    "marginal_b": {
+      "Yes": 6,
+      "No": 16,
+      "Unclear": 3
+    },
+    "confusion": [
+      {
+        "coder_a": "Yes",
+        "coder_b": "Yes",
+        "count": 6
+      },
+      {
+        "coder_a": "Yes",
+        "coder_b": "No",
+        "count": 0
+      },
+      {
+        "coder_a": "Yes",
+        "coder_b": "Unclear",
+        "count": 0
+      },
+      {
+        "coder_a": "No",
+        "coder_b": "Yes",
+        "count": 0
+      },
+      {
+        "coder_a": "No",
+        "coder_b": "No",
+        "count": 16
+      },
+      {
+        "coder_a": "No",
+        "coder_b": "Unclear",
+        "count": 0
+      },
+      {
+        "coder_a": "Unclear",
+        "coder_b": "Yes",
+        "count": 0
+      },
+      {
+        "coder_a": "Unclear",
+        "coder_b": "No",
+        "count": 0
+      },
+      {
+        "coder_a": "Unclear",
+        "coder_b": "Unclear",
+        "count": 3
+      }
+    ]
+  },
+  "source_windows_unchanged": true,
+  "utility_and_support_unchanged": true,
+  "manuscript_unchanged": true,
+  "ai_not_human_reliability": true,
+  "claim_labels": {
+    "Yes": 6,
+    "Unclear": 3,
+    "No": 16
+  },
+  "content_states": {
+    "Matched": 1,
+    "Mismatch": 2,
+    "Indeterminate": 6,
+    "Not claimed": 16
+  },
+  "explicit_content_claims": [
+    "C01-A",
+    "C01-B",
+    "C01-C",
+    "C01-D",
+    "C03-A",
+    "C03-C"
+  ],
+  "explicit_content_states": {
+    "Matched": 1,
+    "Mismatch": 2,
+    "Indeterminate": 3,
+    "Not claimed": 0
+  },
+  "content_mismatch_ids": [
+    "C01-C",
+    "C01-D"
+  ],
+  "strict_claim_studies": [
+    "LIFT",
+    "TabLLM"
+  ],
+  "mismatch_studies": [
+    "LIFT"
+  ],
+  "utility_states": {
+    "Matched": 2,
+    "Mismatch": 6,
+    "Indeterminate": 7,
+    "Not claimed": 10
+  },
+  "utility_explicit_states": {
+    "Matched": 2,
+    "Mismatch": 6,
+    "Indeterminate": 3,
+    "Not claimed": 0
+  },
+  "content_transition_counts": {
+    "Yes->Yes": 6,
+    "Yes->No": 11,
+    "Yes->Unclear": 1,
+    "No->Yes": 0,
+    "No->No": 3,
+    "No->Unclear": 0,
+    "Unclear->Yes": 0,
+    "Unclear->No": 2,
+    "Unclear->Unclear": 2
+  }
+}

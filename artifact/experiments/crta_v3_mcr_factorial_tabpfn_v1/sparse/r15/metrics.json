@@ -1,0 +1,55 @@
+{
+ "arms": [
+  "m0c0rf",
+  "m0c1rf",
+  "m1c0rf",
+  "m1c1rf",
+  "rop_random",
+  "rop_true"
+ ],
+ "backbone": "tabpfn_7_regressor",
+ "device": "cuda",
+ "family": "sparse",
+ "input_sha256": "6af2215c72a65ecc306e5c4d3d9af5b61b16a073dd5aa4c0f33b178741245a25",
+ "mcr_runner_sha256": "c753e142f3af884a9f9b0d635e67465e8d8e0e20cefbb13f09006be56753e4a0",
+ "metric": "nmse = MSE/Var(y_query) (verdicts)",
+ "mode": "primary_tabpfn",
+ "prereg_sha256": "18d6c940b3f14d4d24cfe31e0f5b5879607f066b6d87bb24174f5273133cbe81",
+ "realization": 15,
+ "results": {
+  "m0c0rf": {
+   "n_features": 8,
+   "nmse": 1.0812677435829212,
+   "nrmse": 1.039840249068539
+  },
+  "m0c1rf": {
+   "n_features": 8,
+   "nmse": 1.0272442469161829,
+   "nrmse": 1.0135305850916305
+  },
+  "m1c0rf": {
+   "n_features": 8,
+   "nmse": 0.9711556058425491,
+   "nrmse": 0.985472275532168
+  },
+  "m1c1rf": {
+   "n_features": 8,
+   "nmse": 0.5887301320768247,
+   "nrmse": 0.767287515913575
+  },
+  "rop_random": {
+   "n_features": 10,
+   "nmse": 0.5880230316020718,
+   "nrmse": 0.7668265981315932
+  },
+  "rop_true": {
+   "n_features": 10,
+   "nmse": 0.5878785123650713,
+   "nrmse": 0.7667323603220821
+  }
+ },
+ "rng_namespace": "mcr_v1c",
+ "runner_sha256": "5a7a67f939b28bbe63a41b7510464653024a322624a73eb878727f89fd665cbd",
+ "support_k": 32,
+ "wall_seconds": 2.3
+}

@@ -1,0 +1,214 @@
+{
+ "D_vs_is_target": {
+  "best_target": "diabetes_history",
+  "ci95": [
+   0.006483520737534512,
+   0.10091326260021745
+  ],
+  "drop_best_target_mean": 0.011949244574537266,
+  "mean_gain": 0.0422413588667255,
+  "n_pairs": 30,
+  "per_target_mean": {
+   "current_smoking_status": 0.006257970632481058,
+   "diabetes_history": 0.10282558745110196,
+   "hypertension_history": 0.017640518516593474
+  },
+  "separated": true,
+  "win_rate": 0.8333333333333334
+ },
+ "I1_interaction": {
+  "best_target": "diabetes_history",
+  "ci95": [
+   -0.010402310771704167,
+   0.15820813820897592
+  ],
+  "drop_best_target_mean": 0.0018087183073330932,
+  "mean_gain": 0.05562501365945248,
+  "n_pairs": 30,
+  "per_target_mean": {
+   "current_smoking_status": -0.009769911912948265,
+   "diabetes_history": 0.16325760436369124,
+   "hypertension_history": 0.01338734852761445
+  },
+  "separated": false,
+  "win_rate": 0.7
+ },
+ "I1_sens_inversion_corrected": {
+  "best_target": "diabetes_history",
+  "ci95": [
+   -0.010642687061875633,
+   0.15820813820897592
+  ],
+  "drop_best_target_mean": 0.0017620001376211281,
+  "mean_gain": 0.05559386821297784,
+  "n_pairs": 30,
+  "per_target_mean": {
+   "current_smoking_status": -0.009863348252372195,
+   "diabetes_history": 0.16325760436369124,
+   "hypertension_history": 0.01338734852761445
+  },
+  "separated": false,
+  "win_rate": 0.6666666666666666
+ },
+ "S1_stage_content": {
+  "best_target": "hypertension_history",
+  "ci95": [
+   0.19320283615909403,
+   0.47638342559270974
+  ],
+  "drop_best_target_mean": 0.2926392191379317,
+  "mean_gain": 0.3440789360440857,
+  "n_pairs": 30,
+  "per_target_mean": {
+   "current_smoking_status": 0.1889540380602877,
+   "diabetes_history": 0.3963244002155757,
+   "hypertension_history": 0.44695836985639364
+  },
+  "separated": true,
+  "win_rate": 1.0
+ },
+ "S2_binding_content": {
+  "best_target": "diabetes_history",
+  "ci95": [
+   0.02240772894255393,
+   0.07073487750313454
+  ],
+  "drop_best_target_mean": 0.031972250661849326,
+  "mean_gain": 0.045162448670211915,
+  "n_pairs": 30,
+  "per_target_mean": {
+   "current_smoking_status": 0.04232971874657524,
+   "diabetes_history": 0.07154284468693713,
+   "hypertension_history": 0.021614782577123414
+  },
+  "separated": true,
+  "win_rate": 1.0
+ },
+ "S3_relation_content": {
+  "best_target": "current_smoking_status",
+  "ci95": [
+   -0.0033648363549472196,
+   0.0029590282441110537
+  ],
+  "drop_best_target_mean": -0.0026498702267317873,
+  "mean_gain": -0.0009736369352412251,
+  "n_pairs": 30,
+  "per_target_mean": {
+   "current_smoking_status": 0.0023788296477398998,
+   "diabetes_history": -0.0024409312320425426,
+   "hypertension_history": -0.0028588092214210325
+  },
+  "separated": false,
+  "win_rate": 0.3
+ },
+ "arm_absolute_auroc_means": {
+  "a00_base": {
+   "current_smoking_status": 0.4150636540568427,
+   "diabetes_history": 0.7755565135879866,
+   "hypertension_history": 0.6881722983404027
+  },
+  "a01_columns": {
+   "current_smoking_status": 0.4150169358871307,
+   "diabetes_history": 0.6884887622101118,
+   "hypertension_history": 0.6902973892630035
+  },
+  "a10_stage": {
+   "current_smoking_status": 0.7072723266688069,
+   "diabetes_history": 0.8827597561974333,
+   "hypertension_history": 0.8870767191138282
+  },
+  "a11_stage_columns": {
+   "current_smoking_status": 0.6974556965861466,
+   "diabetes_history": 0.9589496091832496,
+   "hypertension_history": 0.9025891585640435
+  },
+  "a11r_stage_columns_relations": {
+   "current_smoking_status": 0.6965578320372998,
+   "diabetes_history": 0.9574886928198486,
+   "hypertension_history": 0.8999263096536932
+  },
+  "is_target": {
+   "current_smoking_status": 0.6911977259536656,
+   "diabetes_history": 0.8561240217321477,
+   "hypertension_history": 0.88494864004745
+  }
+ },
+ "bootstrap": {
+  "hierarchy": "targets then seeds",
+  "reps": 10000,
+  "seed": 20260819
+ },
+ "desc_columns_at_stage": {
+  "best_target": "diabetes_history",
+  "ci95": [
+   -0.009433658848178763,
+   0.0754968805644003
+  ],
+  "drop_best_target_mean": 0.002847904683777541,
+  "mean_gain": 0.027295220784457175,
+  "n_pairs": 30,
+  "per_target_mean": {
+   "current_smoking_status": -0.009816630082660227,
+   "diabetes_history": 0.07618985298581644,
+   "hypertension_history": 0.015512439450215309
+  },
+  "win_rate": 0.7333333333333333
+ },
+ "desc_columns_off_stage": {
+  "best_target": "hypertension_history",
+  "ci95": [
+   -0.08249274349689002,
+   0.009312610040837886
+  ],
+  "drop_best_target_mean": -0.0435572347737934,
+  "mean_gain": -0.028329792874995312,
+  "n_pairs": 30,
+  "per_target_mean": {
+   "current_smoking_status": -4.67181697119623e-05,
+   "diabetes_history": -0.08706775137787484,
+   "hypertension_history": 0.0021250909226008586
+  },
+  "win_rate": 0.3333333333333333
+ },
+ "desc_relations_marginal": {
+  "best_target": "current_smoking_status",
+  "ci95": [
+   -0.003501727618335927,
+   0.0006198025383946664
+  ],
+  "drop_best_target_mean": -0.0020618826368755394,
+  "mean_gain": -0.0016738766075326242,
+  "n_pairs": 30,
+  "per_target_mean": {
+   "current_smoking_status": -0.000897864548846794,
+   "diabetes_history": -0.0014609163634009658,
+   "hypertension_history": -0.0026628489103501128
+  },
+  "win_rate": 0.3333333333333333
+ },
+ "desc_stage_marginal_at_base": {
+  "best_target": "current_smoking_status",
+  "ci95": [
+   0.1090041963434682,
+   0.29097722567780254
+  ],
+  "drop_best_target_mean": 0.153053831691436,
+  "mean_gain": 0.19943877866494533,
+  "n_pairs": 30,
+  "per_target_mean": {
+   "current_smoking_status": 0.2922086726119641,
+   "diabetes_history": 0.10720324260944661,
+   "hypertension_history": 0.1989044207734254
+  },
+  "win_rate": 1.0
+ },
+ "experiment_root": "experiments/crta_v3_m1m2_stage_factorial_v1",
+ "metric": "auroc (higher is better); gain = arm - reference",
+ "n_cells": 30,
+ "primary_k": 256,
+ "targets_present": [
+  "current_smoking_status",
+  "diabetes_history",
+  "hypertension_history"
+ ]
+}

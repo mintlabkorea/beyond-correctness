@@ -1,0 +1,92 @@
+{
+ "arms": [
+  "raw",
+  "pipeline_table",
+  "llm_table",
+  "placebo_table"
+ ],
+ "backbone": "xgboost_hist_d6_n300",
+ "benchmark_id": "std_cross_nh2kn_shared_anchorreset_fewshot_v1",
+ "feature_set": "shared_clinical_plus_survey_v1",
+ "metric": "query_sd_normalized_rmse (lower is better)",
+ "n_pool": 6776,
+ "n_query": 12651,
+ "n_source": 22302,
+ "nrmse": {
+  "1024": {
+   "llm_table": 0.6156572447022192,
+   "pipeline_table": 0.6022638357810574,
+   "placebo_table": 0.6276901052224126,
+   "raw": 0.6110972272810827
+  },
+  "256": {
+   "llm_table": 0.6506663085593652,
+   "pipeline_table": 0.6296849068843716,
+   "placebo_table": 0.7120445417902225,
+   "raw": 0.6482557680976045
+  },
+  "64": {
+   "llm_table": 0.763124138200695,
+   "pipeline_table": 0.7020424092830281,
+   "placebo_table": 0.7985938748010258,
+   "raw": 0.7912062624949118
+  }
+ },
+ "placebo_spec": {
+  "knhanes/ALL__de1_dg": {
+   "kind": "map",
+   "map": {
+    "0.0": 0.0,
+    "1.0": 1.0
+   }
+  },
+  "knhanes/ALL__educ": {
+   "kind": "map",
+   "map": {
+    "1.0": 3.0,
+    "2.0": 4.0,
+    "4.0": 5.0,
+    "5.0": 5.0,
+    "6.0": 1.0,
+    "7.0": 2.0,
+    "8.0": 5.0,
+    "99.0": 1.0
+   }
+  },
+  "knhanes/ALL__sex": {
+   "kind": "map",
+   "map": {
+    "1.0": 2.0,
+    "2.0": 1.0
+   }
+  },
+  "nhanes/DIQ010": {
+   "kind": "map",
+   "map": {
+    "1.0": 0.0,
+    "7.0": 1.0
+   }
+  },
+  "nhanes/DMDEDUC2": {
+   "kind": "map",
+   "map": {
+    "1.0": 1.0,
+    "3.0": 4.0,
+    "5.0": 2.0,
+    "7.0": 3.0,
+    "9.0": 5.0
+   }
+  },
+  "nhanes/RIAGENDR": {
+   "kind": "map",
+   "map": {
+    "1.0": 2.0,
+    "2.0": 1.0
+   }
+  }
+ },
+ "primary_k": 256,
+ "seed": 53,
+ "target": "glucose",
+ "wall_seconds": 67.4
+}

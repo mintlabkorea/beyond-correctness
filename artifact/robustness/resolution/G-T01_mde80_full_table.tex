@@ -1,0 +1,39 @@
+% Phase-3 archived appendix unit
+% Phase-2 Unit ID(s): G-T01
+% Original location: Robustness / cluster-level resolution diagnostic
+% Original source SHA-256: 726916622e270ad0c5fd157c2a9821e84742065551d407a942ac397611d5460c
+% Provenance: Post-hoc descriptive power diagnostic
+% Original label(s): tab:app-real-utility-resolution
+% Compact PDF replacement: Three-sentence resolution statement in Phase-3 Section G
+% Content below is copied verbatim from the authoritative appendix.
+
+% Original lines 1691--1718
+\paragraph{Conventional cluster-level resolution.}
+To separate decision-rule-specific thresholds from a familiar power calculation,
+we also averaged paired gains within each independent endpoint or basin and
+treated the observed between-unit standard deviation as a planning value.  We
+then solved the noncentral-$t$ power equation for the minimum positive mean
+giving 80\% power under a two-sided one-sample test at $\alpha=.05$.
+Table~\ref{tab:app-real-utility-resolution} reports the results.  The
+calculation is post-hoc and descriptive, and is especially
+uncertain when the planning standard deviation comes from three endpoints.
+
+\begin{table}[H]
+\caption{Conventional cluster-level resolution diagnostic for real-data predictive utility. MDE$_{80}$ is the minimum positive mean giving 80\% power for a two-sided one-sample $t$ test at $\alpha=.05$, treating the observed standard deviation of seed-averaged independent-unit effects as the planning standard deviation. Metrics are native and are not compared across rows. This post-hoc calculation is descriptive and does not bound the observed effect.}
+\label{tab:app-real-utility-resolution}
+\centering\scriptsize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{P{0.40\linewidth}P{0.15\linewidth}rrr}
+\toprule
+Setting & Metric & Units & Observed & MDE$_{80}$ \\
+\midrule
+Relation knowledge: NHANES--KNHANES & norm.-RMSE & 6 & -.0020 & 0.0095 \\
+Relation knowledge: NHANES/KNHANES--HRS & norm.-RMSE & 7 & +.0023 & 0.0122 \\
+Relation knowledge: CAMELS-12 & log-RMSE & 12 & +.0008 & 0.0029 \\
+Relation knowledge: CAMELS-120 & log-RMSE & 120 & -.0000 & 0.0015 \\
+Correspondence knowledge: survey XGB & AUROC & 3 & +.0273 & 0.1443 \\
+Correspondence knowledge: survey HistGB & AUROC & 3 & +.0204 & 0.1586 \\
+\bottomrule
+\end{tabular}
+\end{table}
+

@@ -1,0 +1,98 @@
+{
+  "analysis_status": "frozen_reference_envelope_support_ladder_evidence",
+  "arm": "ref_04",
+  "base_runner_sha256": "796d0bb0d17950a771c5e18fe732f955a4307956192e7329de23683e411f9447",
+  "dataset": "blood",
+  "execution_device": "cuda:1",
+  "execution_num_shards": 2,
+  "execution_shard_index": 1,
+  "final_trainable_state_sha256": "c7b0f2409e18714863cfa86220e5942c790722390dc0f44c94058ce7108dc9ba",
+  "ia3_checkpoint_sha256": "8fe7a00fb425dd331c7a021c9468d50a14ec2ca1998007e7ead5ce3111405729",
+  "initial_trainable_state_sha256": "2b3e0be8998a1d12a84a7b358726205cce0c83973fb198a1c37bdac6aa3fbd0b",
+  "metrics": {
+    "accuracy": 0.29333333333333333,
+    "auc": 0.46543961864406785
+  },
+  "model_audit": {
+    "checkpoint_key_count": 192,
+    "checkpoint_parameter_count": 1081344,
+    "frozen_parameter_count": 11136118784,
+    "initial_trainable_state_sha256": "2b3e0be8998a1d12a84a7b358726205cce0c83973fb198a1c37bdac6aa3fbd0b",
+    "missing_base_model_key_count": 752,
+    "parameter_dtype": "torch.bfloat16",
+    "precision_layout": "frozen=bfloat16, trainable_ia3=float32",
+    "trainable_parameter_count": 1081344,
+    "trainable_parameter_dtype": "torch.float32",
+    "trainable_tensor_count": 192
+  },
+  "model_path": "external/.cache/huggingface/hub/models--bigscience--T0/snapshots/1cfa27271f8085c29323c94bd659004b210f20b5",
+  "n_test": 150,
+  "n_train": 4,
+  "n_train_unique": 4,
+  "protobuf_python_implementation": "python",
+  "protocol_sha256": "6773ce26a309a1c0d18b0e14fcf74eccec471912a92e0441b6b170f18767b64b",
+  "raw_and_serialization_tree_sha256": "383519d4b1efffe01c414c1f7b12db9c7abc04aefbde0e9957c44c5eaf038763",
+  "reference_id": "ref_04",
+  "reference_manifest_sha256": "7fe208e544a954ebd2c15e273473d604107a22e49230631101466ab97097d8da",
+  "reference_permutation": [
+    1,
+    2,
+    3,
+    0
+  ],
+  "reference_selection_role": "upper",
+  "reference_template_sha256": "514ee34c7949060076465e55944262d2cae45980b737ba540b6ae01167f2eb56",
+  "runner_sha256": "62a7d917cd5450bba2af3ff548c62f4a60790f1dfdf45048fb5088017e14182d",
+  "seed": 1024,
+  "shot": 4,
+  "tabllm_commit": "71f6647c523aa6fd35df94ad76207c4377248c49",
+  "test_prompt_sha256": "71c7e4a27853ee1e2ce2ca83786efeed0a4a8ea9d91b2a3f7a62973d4ba7fe92",
+  "tfew_execution_commit": "114deced63ae722a368e06cb08ea956b20c393a6",
+  "train_membership_with_replacement": false,
+  "train_prompt_sha256": "33fe9cd0fb47d91be3d8f72a4d7dbeffad30631e6223ff4866172a9d21664823",
+  "trained_checkpoint_sha256": "c8bb34e1c31875af1c1ce0bcc0b081a5b853af646b29b25bae8580c3ed55e6d3",
+  "training": {
+    "batch_order_sha256": "0537cbbd9c0677002159a5d4264977f39f3df6928149347bafc4063db91eead9",
+    "executed_steps": 30,
+    "loss_first": {
+      "gradient_norm_pre_clip": 0.7164252400398254,
+      "lm_loss": 0.39164048433303833,
+      "loss": 3.487227439880371,
+      "lr": 0.0016666666666666668,
+      "mc_loss": 0.6024065613746643,
+      "unlikely_loss": 2.493180274963379
+    },
+    "loss_last": {
+      "gradient_norm_pre_clip": 0.7321918606758118,
+      "lm_loss": 0.564697265625,
+      "loss": 1.5781121253967285,
+      "lr": 0.0,
+      "mc_loss": 0.508818507194519,
+      "unlikely_loss": 0.5045962929725647
+    },
+    "planned_steps": 30
+  },
+  "training_contract": {
+    "batch_size": 4,
+    "compute_dtype": "bfloat16 base and autocast with FP32 IA3 master parameters; temporary bfloat16 IA3 evaluation copy",
+    "epochs": 30,
+    "gradient_clip": 1.0,
+    "length_norm": 1,
+    "loss": "lm + multiple_choice + unlikely",
+    "lr": 0.003,
+    "max_length": 1024,
+    "optimizer": "Adafactor(scale_parameter=True, relative_step=False)",
+    "scheduler": "linear_decay_with_warmup",
+    "warmup_ratio": 0.06
+  },
+  "versions": {
+    "datasets": "2.14.7",
+    "numpy": "2.2.6",
+    "pandas": "2.3.3",
+    "python": "3.10.20",
+    "scikit_learn": "1.7.2",
+    "torch": "2.12.0.dev20260408+cu128",
+    "transformers": "4.30.0"
+  },
+  "wall_seconds": 8.449
+}

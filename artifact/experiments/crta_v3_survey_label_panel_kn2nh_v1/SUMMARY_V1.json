@@ -1,0 +1,71 @@
+{
+  "A1_llm_vs_placebo": {
+    "best_target": "diabetes_history",
+    "ci95": [
+      NaN,
+      NaN
+    ],
+    "drop_best_target_mean": NaN,
+    "mean_gain": NaN,
+    "n_pairs": 30,
+    "per_target_mean": {
+      "current_smoking_status": 0.25312871183131963,
+      "diabetes_history": 0.4259564250485107,
+      "hypertension_history": NaN
+    },
+    "separated": false,
+    "win_rate": 0.9333333333333333
+  },
+  "A2_pipeline_vs_placebo": {
+    "best_target": "diabetes_history",
+    "ci95": [
+      NaN,
+      NaN
+    ],
+    "drop_best_target_mean": NaN,
+    "mean_gain": NaN,
+    "n_pairs": 30,
+    "per_target_mean": {
+      "current_smoking_status": 0.2371884775981738,
+      "diabetes_history": 0.45668171297033744,
+      "hypertension_history": NaN
+    },
+    "separated": false,
+    "win_rate": 0.9333333333333333
+  },
+  "bootstrap": {
+    "hierarchy": "targets then seeds",
+    "reps": 10000,
+    "seed": 20260819
+  },
+  "experiment_root": "experiments/crta_v3_survey_label_panel_kn2nh_v1",
+  "metric": "auroc (higher is better); gain = arm - reference",
+  "n_cells": 30,
+  "primary_k": 256,
+  "raw_absolute_auroc_per_target": {
+    "current_smoking_status": 0.4069741477744177,
+    "diabetes_history": 0.4241716130706119,
+    "hypertension_history": 0.44077705305281134
+  },
+  "raw_vs_pipeline_descriptive": {
+    "best_target": "current_smoking_status",
+    "ci95": [
+      -0.47523851782809234,
+      -0.2698057737232068
+    ],
+    "drop_best_target_mean": -0.41379719752645466,
+    "mean_gain": -0.3650571383104746,
+    "n_pairs": 30,
+    "per_target_mean": {
+      "current_smoking_status": -0.2675770198785147,
+      "diabetes_history": -0.47728211062566245,
+      "hypertension_history": -0.3503122844272468
+    },
+    "win_rate": 0.0
+  },
+  "targets_present": [
+    "current_smoking_status",
+    "diabetes_history",
+    "hypertension_history"
+  ]
+}

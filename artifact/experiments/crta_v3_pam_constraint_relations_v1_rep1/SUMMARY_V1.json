@@ -1,0 +1,135 @@
+{
+ "V_ADJ_adjacency_content": {
+  "best_target": "waist_cm",
+  "ci95": [
+   -0.0007029963211628285,
+   0.006876839481065237
+  ],
+  "drop_best_target_mean": 0.0006779838921881387,
+  "mean_gain": 0.0026042286221162197,
+  "n_pairs": 60,
+  "per_target_mean": {
+   "dbp": -0.0021485225432352206,
+   "glucose": 0.0013236145828968815,
+   "sbp": -0.00035729927260902405,
+   "total_cholesterol": 0.0036489200173602243,
+   "triglycerides": 0.0009232066765278324,
+   "waist_cm": 0.012235452271756625
+  },
+  "separated": false,
+  "win_rate": 0.7
+ },
+ "V_SIGN_CONTENT_flip_must_hurt": {
+  "best_target": "waist_cm",
+  "ci95": [
+   0.08410986848368456,
+   0.2989981488298516
+  ],
+  "drop_best_target_mean": 0.13470911399835978,
+  "mean_gain": 0.18617473396905534,
+  "n_pairs": 60,
+  "per_target_mean": {
+   "dbp": 0.18582916006865693,
+   "glucose": 0.2195841867307336,
+   "sbp": 0.19687567111330878,
+   "total_cholesterol": 0.013475540278232456,
+   "triglycerides": 0.05778101180086724,
+   "waist_cm": 0.44350283382253314
+  },
+  "separated": true,
+  "win_rate": 1.0
+ },
+ "bootstrap": {
+  "hierarchy": "targets then seeds",
+  "reps": 10000,
+  "seed": 20260819
+ },
+ "declared_sign_vs_free_tax_expected": {
+  "best_target": "dbp",
+  "ci95": [
+   -0.006573118050942079,
+   0.003145642354315095
+  ],
+  "drop_best_target_mean": -0.002898617562611332,
+  "mean_gain": -0.0012420620238990413,
+  "n_pairs": 60,
+  "per_target_mean": {
+   "dbp": 0.007040715669662412,
+   "glucose": -0.011956643521599397,
+   "sbp": -0.0019474731858314053,
+   "total_cholesterol": -0.002737842163361248,
+   "triglycerides": 0.0007730663882701383,
+   "waist_cm": 0.0013758046694652526
+  },
+  "win_rate": 0.5
+ },
+ "desc_adj_sign_vs_free": {
+  "best_target": "total_cholesterol",
+  "ci95": [
+   -0.0013145361546216222,
+   0.006421869638719847
+  ],
+  "drop_best_target_mean": 0.001838194029940824,
+  "mean_gain": 0.0028927869556411106,
+  "n_pairs": 60,
+  "per_target_mean": {
+   "dbp": 0.007277351665490195,
+   "glucose": -0.005457425067990717,
+   "sbp": 0.002139143794004772,
+   "total_cholesterol": 0.008165751584142544,
+   "triglycerides": 0.0035218013125599247,
+   "waist_cm": 0.001710098445639946
+  },
+  "win_rate": 0.7166666666666667
+ },
+ "desc_adj_vs_free": {
+  "best_target": "total_cholesterol",
+  "ci95": [
+   5.6589917628068105e-05,
+   0.007956090806905972
+  ],
+  "drop_best_target_mean": 0.002770907105225294,
+  "mean_gain": 0.00397086768294905,
+  "n_pairs": 60,
+  "per_target_mean": {
+   "dbp": -0.002962916450245745,
+   "glucose": 0.009817175784718024,
+   "sbp": 0.0020042247227378684,
+   "total_cholesterol": 0.00997067057156783,
+   "triglycerides": 0.00438207854310878,
+   "waist_cm": 0.0006139729258075432
+  },
+  "win_rate": 0.7
+ },
+ "desc_pl_adj_vs_free": {
+  "best_target": "glucose",
+  "ci95": [
+   -0.004560795917553258,
+   0.006170268480757376
+  ],
+  "drop_best_target_mean": -5.8745367364831935e-05,
+  "mean_gain": 0.0013666390608328305,
+  "n_pairs": 60,
+  "per_target_mean": {
+   "dbp": -0.0008143939070105244,
+   "glucose": 0.008493561201821143,
+   "sbp": 0.0023615239953468925,
+   "total_cholesterol": 0.006321750554207606,
+   "triglycerides": 0.003458871866580948,
+   "waist_cm": -0.011621479345949082
+  },
+  "win_rate": 0.6
+ },
+ "experiment_root": "experiments/crta_v3_pam_constraint_relations_v1_rep1",
+ "metric": "query_sd_normalized_rmse (lower is better); gain = reference - arm",
+ "n_cells": 60,
+ "primary_k": 256,
+ "targets_present": [
+  "dbp",
+  "glucose",
+  "sbp",
+  "total_cholesterol",
+  "triglycerides",
+  "waist_cm"
+ ]
+}

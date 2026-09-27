@@ -1,0 +1,43 @@
+{
+ "arms": {
+  "free": {
+   "mae": 24.06626182810547,
+   "query_sd": 43.71828498368423,
+   "query_sd_normalized_rmse": 0.9654049874075534,
+   "r2": 0.06799321028862138,
+   "rmse": 42.205850364153505
+  },
+  "sign_documented": {
+   "mae": 23.865513618038158,
+   "query_sd": 43.71828498368423,
+   "query_sd_normalized_rmse": 0.9614110805597438,
+   "r2": 0.07568873417694588,
+   "rmse": 42.031243606382674
+  },
+  "sign_flipped": {
+   "mae": 26.546246005623008,
+   "query_sd": 43.71828498368423,
+   "query_sd_normalized_rmse": 1.0322244918944932,
+   "r2": -0.06548740166684497,
+   "rmse": 45.12708450378211
+  },
+  "sign_random": {
+   "mae": 26.546246005623008,
+   "query_sd": 43.71828498368423,
+   "query_sd_normalized_rmse": 1.0322244918944932,
+   "r2": -0.06548740166684497,
+   "rmse": 45.12708450378211
+  }
+ },
+ "constrained_features": [
+  "hba1c"
+ ],
+ "endpoint": "glucose",
+ "n_query": 9327,
+ "n_source": 90060,
+ "n_support": 490,
+ "seed": 45,
+ "support_fraction": 0.05,
+ "task": "M3_nhkn2hrs",
+ "wall_seconds": 16.4
+}

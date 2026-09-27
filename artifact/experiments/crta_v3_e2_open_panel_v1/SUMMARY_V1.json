@@ -1,0 +1,233 @@
+{
+ "E2_P1": {
+  "n_models_reverse_all_three_any_basis": 1,
+  "n_models_reverse_all_three_documented": 1,
+  "pass": true,
+  "prior_panel": "0/7"
+ },
+ "E2_P2": {
+  "n_models_complete": 5,
+  "n_models_separated": 1,
+  "pass": true
+ },
+ "models": {
+  "gemma_3_27b_it": {
+   "A1_llm_minus_placebo": {
+    "ci95": [
+     -0.38657590989634605,
+     -0.20846700778965518
+    ],
+    "mean": -0.29492486008424124,
+    "n": 30,
+    "separated": false,
+    "win": 0.1
+   },
+   "A3_llm_minus_pipeline": {
+    "ci95": [
+     -0.6649571749074965,
+     -0.5062977973356773
+    ],
+    "mean": -0.5864577285418193,
+    "n": 30,
+    "separated": false,
+    "win": 0.0
+   },
+   "complete": true,
+   "materializable": true,
+   "per_target": {
+    "current_smoking_status": {
+     "a1_mean": -0.13004645211488916,
+     "a3_mean": -0.27403222998695104,
+     "llm_mean": 0.3713097050808718
+    },
+    "diabetes_history": {
+     "a1_mean": -0.39937405936962256,
+     "a3_mean": -0.7581661428478254,
+     "llm_mean": 0.1963631717185884
+    },
+    "hypertension_history": {
+     "a1_mean": -0.3553540687682121,
+     "a3_mean": -0.7271748127906814,
+     "llm_mean": 0.1767219330972903
+    }
+   }
+  },
+  "medgemma_27b_it": {
+   "A1_llm_minus_placebo": {
+    "ci95": [
+     -0.1848173672345845,
+     -0.00983399804364916
+    ],
+    "mean": -0.09594382595987798,
+    "n": 30,
+    "separated": false,
+    "win": 0.36666666666666664
+   },
+   "A3_llm_minus_pipeline": {
+    "ci95": [
+     -0.4410076333922998,
+     -0.33354029310227296
+    ],
+    "mean": -0.387476694417456,
+    "n": 30,
+    "separated": false,
+    "win": 0.0
+   },
+   "complete": true,
+   "materializable": true,
+   "per_target": {
+    "current_smoking_status": {
+     "a1_mean": -0.055759549518088355,
+     "a3_mean": -0.19974532739015025,
+     "llm_mean": 0.4455966076776726
+    },
+    "diabetes_history": {
+     "a1_mean": -0.21133302373343152,
+     "a3_mean": -0.5701251072116345,
+     "llm_mean": 0.3844042073547794
+    },
+    "hypertension_history": {
+     "a1_mean": -0.020738904628114,
+     "a3_mean": -0.3925596486505834,
+     "llm_mean": 0.5113370972373883
+    }
+   }
+  },
+  "medgemma_4b_it": {
+   "A1_llm_minus_placebo": {
+    "ci95": [
+     NaN,
+     NaN
+    ],
+    "mean": NaN,
+    "n": 30,
+    "separated": false,
+    "win": 0.06666666666666667
+   },
+   "A3_llm_minus_pipeline": {
+    "ci95": [
+     NaN,
+     NaN
+    ],
+    "mean": NaN,
+    "n": 30,
+    "separated": false,
+    "win": 0.0
+   },
+   "complete": true,
+   "materializable": true,
+   "per_target": {
+    "current_smoking_status": {
+     "a1_mean": NaN,
+     "a3_mean": NaN,
+     "llm_mean": NaN
+    },
+    "diabetes_history": {
+     "a1_mean": -0.28671099838122077,
+     "a3_mean": -0.6455030818594236,
+     "llm_mean": 0.3090262327069902
+    },
+    "hypertension_history": {
+     "a1_mean": NaN,
+     "a3_mean": NaN,
+     "llm_mean": NaN
+    }
+   }
+  },
+  "olmo_3_1_32b_instruct": {
+   "error": "KeyError('KNHANES::ALL__di1_dg')",
+   "materializable": false
+  },
+  "qwen3_14b": {
+   "error": "ValueError(\"could not convert string to float: '.'\")",
+   "materializable": false
+  },
+  "qwen3_32b": {
+   "A1_llm_minus_placebo": {
+    "ci95": [
+     -0.3415691676890018,
+     -0.16758871201478456
+    ],
+    "mean": -0.2533809557924913,
+    "n": 30,
+    "separated": false,
+    "win": 0.13333333333333333
+   },
+   "A3_llm_minus_pipeline": {
+    "ci95": [
+     -0.6066810020406123,
+     -0.48048783340203205
+    ],
+    "mean": -0.5449138242500694,
+    "n": 30,
+    "separated": false,
+    "win": 0.0
+   },
+   "complete": true,
+   "materializable": true,
+   "per_target": {
+    "current_smoking_status": {
+     "a1_mean": -0.15685409201127226,
+     "a3_mean": -0.3008398698833341,
+     "llm_mean": 0.3445020651844887
+    },
+    "diabetes_history": {
+     "a1_mean": -0.3451735210188746,
+     "a3_mean": -0.7039656044970775,
+     "llm_mean": 0.2505637100693363
+    },
+    "hypertension_history": {
+     "a1_mean": -0.25811525434732696,
+     "a3_mean": -0.6299359983697964,
+     "llm_mean": 0.2739607475181754
+    }
+   }
+  },
+  "qwen3_8b": {
+   "A1_llm_minus_placebo": {
+    "ci95": [
+     0.17900009885069876,
+     0.34495046278719765
+    ],
+    "mean": 0.2589261329864279,
+    "n": 30,
+    "separated": true,
+    "win": 0.9
+   },
+   "A3_llm_minus_pipeline": {
+    "ci95": [
+     -0.052902584510909095,
+     -0.013670464463998283
+    ],
+    "mean": -0.032606735471150186,
+    "n": 30,
+    "separated": false,
+    "win": 0.36666666666666664
+   },
+   "complete": true,
+   "materializable": true,
+   "per_target": {
+    "current_smoking_status": {
+     "a1_mean": 0.1541418128587996,
+     "a3_mean": 0.010156034986737717,
+     "llm_mean": 0.6554979700545606
+    },
+    "diabetes_history": {
+     "a1_mean": 0.35871235210433944,
+     "a3_mean": -7.97313738634342e-05,
+     "llm_mean": 0.9544495831925504
+    },
+    "hypertension_history": {
+     "a1_mean": 0.2639242339961446,
+     "a3_mean": -0.10789651002632483,
+     "llm_mean": 0.796000235861647
+    }
+   }
+  }
+ },
+ "verdicts": {
+  "E2_P1": true,
+  "E2_P2": true,
+  "all": true
+ }
+}

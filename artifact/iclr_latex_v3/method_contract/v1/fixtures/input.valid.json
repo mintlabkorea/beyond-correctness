@@ -1,0 +1,218 @@
+{
+  "contract_version": "crta-1.0.0",
+  "schema_pair_id": "toy_source:toy_target",
+  "candidate_budgets": {
+    "max_concepts": 24,
+    "max_relations": 48
+  },
+  "tables": [
+    {
+      "table_id": "source",
+      "schema_name": "toy_source",
+      "columns": [
+        {
+          "column_id": "src_temp_a",
+          "display_name": "Sensor A",
+          "dtype": "numeric",
+          "role": "feature",
+          "candidate_eligible": true,
+          "value_domain": "positive",
+          "unit": {
+            "symbol": "K",
+            "dimension": "temperature",
+            "canonical_symbol": "K",
+            "scale_to_canonical": 1.0,
+            "offset_to_canonical": 0.0
+          },
+          "evidence_span_ids": ["src_col_a"]
+        },
+        {
+          "column_id": "src_temp_b",
+          "display_name": "Sensor B",
+          "dtype": "numeric",
+          "role": "feature",
+          "candidate_eligible": true,
+          "value_domain": "positive",
+          "unit": {
+            "symbol": "K",
+            "dimension": "temperature",
+            "canonical_symbol": "K",
+            "scale_to_canonical": 1.0,
+            "offset_to_canonical": 0.0
+          },
+          "evidence_span_ids": ["src_col_b"]
+        },
+        {
+          "column_id": "src_unit_id",
+          "display_name": "Unit identifier",
+          "dtype": "text",
+          "role": "group_key",
+          "candidate_eligible": false,
+          "value_domain": "categorical",
+          "unit": null,
+          "evidence_span_ids": []
+        },
+        {
+          "column_id": "src_cycle",
+          "display_name": "Cycle",
+          "dtype": "integer",
+          "role": "time_index",
+          "candidate_eligible": false,
+          "value_domain": "nonnegative",
+          "unit": null,
+          "evidence_span_ids": []
+        },
+        {
+          "column_id": "src_outcome",
+          "display_name": "Outcome",
+          "dtype": "numeric",
+          "role": "target",
+          "candidate_eligible": false,
+          "value_domain": "nonnegative",
+          "unit": null,
+          "evidence_span_ids": ["outcome_doc"]
+        }
+      ]
+    },
+    {
+      "table_id": "target",
+      "schema_name": "toy_target",
+      "columns": [
+        {
+          "column_id": "tgt_temp_x",
+          "display_name": "Channel X",
+          "dtype": "numeric",
+          "role": "feature",
+          "candidate_eligible": true,
+          "value_domain": "positive",
+          "unit": {
+            "symbol": "degC",
+            "dimension": "temperature",
+            "canonical_symbol": "K",
+            "scale_to_canonical": 1.0,
+            "offset_to_canonical": 273.15
+          },
+          "evidence_span_ids": ["tgt_col_x"]
+        },
+        {
+          "column_id": "tgt_temp_y",
+          "display_name": "Channel Y",
+          "dtype": "numeric",
+          "role": "feature",
+          "candidate_eligible": true,
+          "value_domain": "positive",
+          "unit": {
+            "symbol": "degC",
+            "dimension": "temperature",
+            "canonical_symbol": "K",
+            "scale_to_canonical": 1.0,
+            "offset_to_canonical": 273.15
+          },
+          "evidence_span_ids": ["tgt_col_y"]
+        },
+        {
+          "column_id": "tgt_unit_id",
+          "display_name": "Unit identifier",
+          "dtype": "text",
+          "role": "group_key",
+          "candidate_eligible": false,
+          "value_domain": "categorical",
+          "unit": null,
+          "evidence_span_ids": []
+        },
+        {
+          "column_id": "tgt_cycle",
+          "display_name": "Cycle",
+          "dtype": "integer",
+          "role": "time_index",
+          "candidate_eligible": false,
+          "value_domain": "nonnegative",
+          "unit": null,
+          "evidence_span_ids": []
+        },
+        {
+          "column_id": "tgt_outcome",
+          "display_name": "Outcome",
+          "dtype": "numeric",
+          "role": "target",
+          "candidate_eligible": false,
+          "value_domain": "nonnegative",
+          "unit": null,
+          "evidence_span_ids": ["outcome_doc"]
+        }
+      ]
+    }
+  ],
+  "evidence_spans": [
+    {
+      "span_id": "src_col_a",
+      "document_id": "source_manual",
+      "applies_to": ["source"],
+      "location": "variables/a",
+      "text": "Sensor A is an inlet temperature measurement.",
+      "sha256": "f72825ee20aa4242fef1ec084775d542f33e5518b1c0b0bba9d7a69c1e1cf96a",
+      "candidate_eligible": true,
+      "exclusion_reason": null
+    },
+    {
+      "span_id": "src_col_b",
+      "document_id": "source_manual",
+      "applies_to": ["source"],
+      "location": "variables/b",
+      "text": "Sensor B is an outlet temperature measurement.",
+      "sha256": "0077d72688a76f3f20e7369a3344afae28a7fffa20d6aa3ff4c1d1f4e80f4375",
+      "candidate_eligible": true,
+      "exclusion_reason": null
+    },
+    {
+      "span_id": "src_relation",
+      "document_id": "source_manual",
+      "applies_to": ["source"],
+      "location": "protocol/stage",
+      "text": "The protocol defines outlet temperature minus inlet temperature as a stage difference.",
+      "sha256": "c3ff18cfe9f99f0e85b7472d85767d9c03167d55443717024ad5def5b516e840",
+      "candidate_eligible": true,
+      "exclusion_reason": null
+    },
+    {
+      "span_id": "tgt_col_x",
+      "document_id": "target_manual",
+      "applies_to": ["target"],
+      "location": "channels/x",
+      "text": "Channel X records inlet temperature.",
+      "sha256": "6c35fa997e7371fbcbb163aaf50b0e51efb02e1f046d7f542aeb93c9e315d0d9",
+      "candidate_eligible": true,
+      "exclusion_reason": null
+    },
+    {
+      "span_id": "tgt_col_y",
+      "document_id": "target_manual",
+      "applies_to": ["target"],
+      "location": "channels/y",
+      "text": "Channel Y records outlet temperature.",
+      "sha256": "df3dc5cb0ca7b7efef361575ef2a9e47f388886d795c76dc9b3082846acd9442",
+      "candidate_eligible": true,
+      "exclusion_reason": null
+    },
+    {
+      "span_id": "tgt_relation",
+      "document_id": "target_manual",
+      "applies_to": ["target"],
+      "location": "protocol/stage",
+      "text": "The target protocol defines outlet temperature minus inlet temperature as a stage difference.",
+      "sha256": "ef7b4420d32cbf7180008c590c5ff9c9a83d23177e55958b31b396c079276cee",
+      "candidate_eligible": true,
+      "exclusion_reason": null
+    },
+    {
+      "span_id": "outcome_doc",
+      "document_id": "task_definition",
+      "applies_to": ["source", "target"],
+      "location": "outcome",
+      "text": "The prediction outcome is remaining duration.",
+      "sha256": "cdf76eabe40d19db6bec05ea26dc0012705bc629ba906f46fa2aa62caa73da0d",
+      "candidate_eligible": false,
+      "exclusion_reason": "Outcome definition is excluded from candidate generation."
+    }
+  ]
+}

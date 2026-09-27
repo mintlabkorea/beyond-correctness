@@ -1,0 +1,82 @@
+% Phase-3 archived appendix unit
+% Phase-2 Unit ID(s): I-T01
+% Original location: Complete analysis provenance audit
+% Original source SHA-256: 726916622e270ad0c5fd157c2a9821e84742065551d407a942ac397611d5460c
+% Provenance: Mixed; complete analysis-by-analysis ledger
+% Original label(s): sec:app-registry; tab:app_registry; tab:app-analysis-registry
+% Compact PDF replacement: Nine-row claim-oriented matrix plus local statuses in Phase-3 PDF
+% Content below is copied verbatim from the authoritative appendix.
+
+% Original lines 2147--2217
+\section{Complete analysis provenance audit}
+\label{sec:app-registry}
+
+The table below provides the complete analysis-provenance ledger for the
+supplement, including when each analysis was defined, its outcome under the
+stated decision criterion, the resulting interpretation, and its location.
+It is not treated as a single family of confirmatory hypotheses, and no
+table-wide FWER correction is introduced.
+
+An outcome of \emph{criterion not met} means that the stated decision
+criterion was not satisfied, not that the computation failed.
+\emph{No eligible case} indicates that the corresponding outcome-blind audit
+found no case meeting its eligibility rule.
+
+{\tiny\setlength{\tabcolsep}{1.5pt}
+\begin{longtable}{P{0.23\linewidth}P{0.16\linewidth}P{0.10\linewidth}P{0.31\linewidth}P{0.13\linewidth}}
+\caption{Complete analysis provenance and decision audit. Outcome labels summarize the stated decision rule without changing the analysis provenance. \emph{Criterion not met} denotes failure to satisfy that rule rather than a failed computation; analyses that were not executed are explicitly marked \emph{not run}.}\label{tab:app_registry}\label{tab:app-analysis-registry}\\
+\toprule Analysis & Provenance & Outcome & Interpretation & Location \\
+\midrule\endfirsthead
+\multicolumn{5}{c}{\tablename\ \thetable\ (continued)}\\
+\toprule Analysis & Provenance & Outcome & Interpretation & Location \\
+\midrule\endhead
+\bottomrule\endfoot
+External timestamp audit & Post-result reproducibility audit & No external timestamp & no external registration or independently verifiable external pre-execution timestamp; local/hash provenance only & Section~\ref{sec:app-scope} \\
+Measurement knowledge polarity panel & Confirmatory & Pass & 3-endpoint content sensitivity and predictive utility separate & Table~\ref{tab:app-measurement-full} \\
+Ten-endpoint measurement knowledge extension & Frozen-before-execution extension & Qualified & descriptive gain; wrong-condition coverage criterion was not met & Table~\ref{tab:app-measurement-full} \\
+Measurement polarity-invariant sensitivity & Post-result sensitivity & Qualified & utility remains positive on the folded score; the ten-endpoint content result remains descriptive & Table~\ref{tab:app-measurement-full} \\
+Measurement mismatch dose and labeled-target-row ladder & Frozen-before-execution + post-result budget completion / descriptive support extension & Pass & original 12 strata pass; six added K=512 strata pass the same consistency checks; the five-point ladder documents all absolute conditions & Figures~\ref{fig:app-measurement-dose} and~\ref{fig:app-mismatch-support-ladder}; Table~\ref{tab:app-measurement-dose-stats} \\
+Ways of supplying correspondence knowledge & Confirmatory + frozen-before-execution extensions & Qualified & binding content sensitivity separates; tree predictive utility and canonical aggregation do not & Table~\ref{tab:app-correspondence-interfaces} \\
+Four-condition correspondence knowledge, XGB & Exploratory existing-cell analysis & Mixed & all four conditions reported: the simple effect without measurement knowledge is unresolved; the simple effect with intended measurement knowledge is positive & Section~\ref{sec:app-correspondence-resolution} \\
+Conditional correspondence knowledge, HistGB & Post-result frozen confirmation & Criterion not met & 8/10 positive but endpoint Student-$t$ interval crosses zero; no positive or no-effect claim & Section~\ref{sec:app-correspondence-resolution} \\
+Examination domain-local reference & Post-result reference extension & Qualified & predictive utility separates under primary, BCa, and studentized intervals; endpoint Student-$t$ narrowly crosses zero & Table~\ref{tab:app-exam-no-bridge} \\
+Examination labeled-target-row ladder & Frozen-before-execution confirmatory (class A); exploratory (13 endpoints) & Pass & predictive utility declines with distinct labeled target rows at fixed target mass; bootstrap and endpoint Student-$t$ both exclude zero; survives the prespecified minimum-child-weight diagnostic; direction was calibrated from a prior sweep and the comparison differs from the controlled one & Table~\ref{tab:app-exam-support-ladder} \\
+Examination HbA1c endpoint addition & Optional/not run & Not run & documented KNHANES source-mapping and scale deferral remains; not run to target the seven-endpoint Student-$t$ threshold; any future anchor-eligible run must be executed once and reported regardless of outcome & This audit table \\
+Real-data predictive-utility resolution & Post-hoc power diagnostic & Descriptive & cluster-level MDE separates resolution-limited clinical panels from the CAMELS-120 boundary & Table~\ref{tab:app-real-utility-resolution} \\
+Real-data relation direction contrasts & Confirmatory + frozen-before-execution extensions & Qualified & content sensitivity separates in all three primary settings; predictive utility remains unresolved & Table~\ref{tab:app-relation-full} \\
+Supplying relation knowledge as values or directions & Frozen-before-execution confirmatory benchmark & Pass & executable-direction predictive utility separates across the tree family--budget grid; computed-value predictive utility does not & Table~\ref{tab:app-relation-full} \\
+Controlled capacity for relation knowledge & Additional frozen sensitivity & Criterion not met & no family--budget stratum is stable across every prespecified one-factor alternative & Section~\ref{sec:app-relation-value-interface} \\
+Outcome-blind constituent-absence audit & Post-result outcome-blind audit & No eligible case & constituent removal remains a controlled mechanism probe only & Section~\ref{sec:app-relation-value-interface} \\
+Graded constituent-removal ladder & Frozen-before-execution extension & Pass & monotone rise, endpoint reproduction, and separated midpoint rung all pass on the 4-cell family--model grid; evidence grade unchanged & Table~\ref{tab:app-relation-ladder}; Figure~\ref{fig:app-redundancy-ladder} \\
+Controlled reconstruction--utility proxy & Post-result frozen extension & Qualified / pass & reconstruction $R^2$ tracks measured utility across all eight controlled strata and relation families; scope is limited to computed relation values & Section~\ref{sec:app-reconstructibility-proxy}; Table~\ref{tab:app-reconstructibility-controlled}; Figure~\ref{fig:app-reconstructibility-proxy} \\
+Reconstruction incremental LORO $R^2$ & Post-result sensitivity & Qualified & point estimates are higher in 8/8 strata, but paired $\Delta R^2$ intervals include zero; conditional slopes remain negative & Table~\ref{tab:app-reconstructibility-controlled} \\
+Real-data reconstruction-proxy boundary & Frozen-before-execution falsification / boundary extension & Qualified & CAMELS test conditions not established and uninformative; NH$\rightarrow$KN criterion not met with a partial diagnostic because intended performance also degrades & Section~\ref{sec:app-reconstructibility-proxy}; Table~\ref{tab:app-reconstructibility-real} \\
+Joint M/C surface & Frozen-before-execution extension & Pass & moderate rectangle separates in all 6 tree strata & Figure~\ref{fig:app-mc-surface} \\
+Controlled source-label ladder & Frozen-before-execution extension & Pass & all six curves decline; crossing in final interval & Figure~\ref{fig:app-controlled-integrity-ladder} \\
+Null-source falsification & Frozen-before-execution extension & Criterion not met & negative interactions separate in pairwise/sparse; no universal routing-mechanism claim & Table~\ref{tab:app-target-only-wrong-transfer} \\
+Real source-label ladder & Frozen-before-execution extension & Criterion not met & flat/rising; controlled mechanism does not transfer & Figure~\ref{fig:app-real-source-ladders} \\
+Real source-only measurement knowledge ladder & Frozen-before-execution extension & Criterion not met & flat/rising under the source-only measurement knowledge axis & Figure~\ref{fig:app-real-source-ladders} \\
+Source-feature rendering test & Frozen-before-execution extension & Criterion not met & flat; neither attenuation criterion passes & Figure~\ref{fig:app-real-lesions} \\
+Source-feature column permutation & Frozen-before-execution extension & Criterion not met & flat; neither attenuation criterion passes & Figure~\ref{fig:app-real-lesions} \\
+Corruption of labeled-target labels & Frozen-before-execution extension & Pass & only tested real-data change passing both prespecified attenuation criteria on the polarity-invariant score; post-result raw-AUROC analysis does not establish attenuation & Figure~\ref{fig:app-real-lesions} \\
+Raw versus folded interaction level & Post-result sensitivity & Qualified & positive on both scales; folding reduces the pooled interaction level & Section~\ref{sec:app-correspondence-resolution} \\
+Value redundancy/equivariance & Frozen-before-execution extension & Pass & magnitude nonredundant; sign-equivariance criterion passes & Table~\ref{tab:app-relation-value-interface} \\
+Partially monotone MLP & Frozen-before-execution extension & Criterion not met & directional predictive-utility grid does not pass & Table~\ref{tab:app-relation-monotone-mlp} \\
+MLP absolute-performance audit & Post-result sensitivity & Qualified & intended performance is not inferior; effect magnitude remains learner-dependent & Table~\ref{tab:app-relation-monotone-mlp} \\
+CAMELS per-relation ablation & Frozen-before-execution extension & Qualified & precipitation carries essentially the joint effect; PET contrast is not separated & Table~\ref{tab:app-camels-per-relation} \\
+Audit qualification versus effect & Post-hoc robustness & Qualified & medical audit categories do not align with content sensitivity or predictive utility & Section~\ref{sec:app-relation-evidence} \\
+Open-world correspondence matching audit & Frozen-before-execution extension & Qualified & high-recall abstention; operating tradeoff reported exactly & Table~\ref{tab:app-correspondence-decoy-matcher}; Figure~\ref{fig:app-correspondence-decoy-damage} \\
+Seven-model extraction panel & Frozen-before-execution extension & Qualified & one model separates; six fail or are incomplete & Table~\ref{tab:app-extraction-model-panel} \\
+Ten-endpoint LOO & Post-hoc robustness & Pass & all ten leave-one-out intervals remain above zero & Table~\ref{tab:app-composition-loo} \\
+CAMELS 120-basin extension & Frozen-before-execution extension & Pass & content sensitivity replicates; predictive utility has a narrow scale-specific interval & Table~\ref{tab:app-relation-full} \\
+Real intended transfer vs target-only & Additional transfer-abstention summary & Pass & transfer with intended measurement knowledge and correspondence knowledge beats target-only; not predictive utility for either kind alone & Section~\ref{sec:app-controlled-boundaries} \\
+TransTab correspondence knowledge & Post-result mechanism extension & Qualified & four-condition decomposition distinguishes content sensitivity to names beyond identifiers, shared identifiers, and the false-identifier effect & Table~\ref{tab:app-transtab-correspondence} \\
+CARTE M/C/R & Post-result model-coverage extension & Qualified & K=512 content sensitivity for correspondence knowledge; predictive utility, measurement knowledge, and relation knowledge results remain scoped & Table~\ref{tab:app-carte-mcr} \\
+Higher-order M/C/R interaction & Frozen-before-execution extension & Criterion not met & no third stacking-layer claim & Section~\ref{sec:app-negative-results} \\
+Second HRS factorial pair & Optional/not run & Not run & licensed-data scope would require new authorization & Section~\ref{sec:app-negative-results} \\
+Published TabLLM printed-number audit & Retrospective external reanalysis & Qualified & aggregate conclusion survives; the split between predictive utility and $Q_{\mathrm{reference}}-Q_{\mathrm{wrong}}$ is heterogeneous across datasets & Section~\ref{sec:app-tabllm-reproduction} \\
+TabLLM released-code reproduction & Post-hoc compatibility reproduction & Qualified & the stable-reference macro $Q_{\mathrm{reference}}-Q_{\mathrm{wrong}}$ is unresolved; dataset-level heterogeneity remains & Section~\ref{sec:app-tabllm-reproduction} \\
+TabLLM within-run control sensitivity & Post-result reaggregation & Qualified & macro result is stable; dataset-level control sensitivity is heterogeneous & Section~\ref{sec:app-tabllm-reproduction} \\
+TabLLM stable-anonymous support ladder & Frozen-before-execution extension & Pass & format-matched macro utility attenuates with support within the fixed nine-dataset panel; dataset heterogeneity is retained & Table~\ref{tab:app-tabllm-support-ladder}; Figure~\ref{fig:app-tabllm-support-by-dataset} \\
+\end{longtable}
+

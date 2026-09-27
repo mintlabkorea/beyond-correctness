@@ -1,0 +1,142 @@
+{
+ "arms": [
+  "m1c1r1",
+  "m1c1r0",
+  "m1c0r1",
+  "m0c1r1",
+  "m1c0r0",
+  "m0c1r0",
+  "m0c0r1",
+  "m0c0r0",
+  "m1c1rf"
+ ],
+ "audit": {
+  "c_deranged": [
+   3,
+   5,
+   6,
+   0,
+   7,
+   1,
+   2,
+   4
+  ],
+  "c_deranged2": [
+   3,
+   5,
+   6,
+   7,
+   0,
+   2,
+   1,
+   4
+  ],
+  "ordinal_features": [
+   3,
+   0,
+   4,
+   7
+  ],
+  "source_table_digests": {
+   "true": "49c5dbcb747f",
+   "wrong": "1d794a48bd25",
+   "wrong2": "d86a595c7a19"
+  }
+ },
+ "backbones": [
+  "xgb"
+ ],
+ "checks": {
+  "true_relation_equals_free": true
+ },
+ "family": "pairwise",
+ "input_sha256": "6af2215c72a65ecc306e5c4d3d9af5b61b16a073dd5aa4c0f33b178741245a25",
+ "mechanism": {
+  "family": "vshape",
+  "feat_terms": [],
+  "pair_terms": [],
+  "vshape_terms": [
+   [
+    7,
+    0.682844176973168
+   ],
+   [
+    1,
+    0.9770916195012558
+   ],
+   [
+    5,
+    0.6397417166201331
+   ],
+   [
+    0,
+    0.6174017507481799
+   ],
+   [
+    6,
+    0.5652504812228019
+   ]
+  ]
+ },
+ "metric": "nmse = MSE/Var(y_query) (verdicts); nrmse descriptive",
+ "mode": "nc_r",
+ "n_query": 2000,
+ "n_source": 2048,
+ "name_match_accuracy": 0.0,
+ "prereg_sha256": "c4fb8a7ab8f02ba39ad30a3e6eca486c20a92093561cca9f10f96c885fbeb1f5",
+ "realization": 5,
+ "results": {
+  "32": {
+   "xgb": {
+    "m0c0r0": {
+     "nmse": 1.0025839402196606,
+     "nrmse": 1.0012911365929795
+    },
+    "m0c0r1": {
+     "nmse": 1.018578927544318,
+     "nrmse": 1.009246712922226
+    },
+    "m0c1r0": {
+     "nmse": 1.3396394109358427,
+     "nrmse": 1.1574279290460565
+    },
+    "m0c1r1": {
+     "nmse": 1.1541990880529969,
+     "nrmse": 1.074336580431383
+    },
+    "m1c0r0": {
+     "nmse": 0.9711412943879205,
+     "nrmse": 0.9854650142891531
+    },
+    "m1c0r1": {
+     "nmse": 0.9544520762304043,
+     "nrmse": 0.9769606318733649
+    },
+    "m1c1r0": {
+     "nmse": 0.8270790535035559,
+     "nrmse": 0.9094388673811759
+    },
+    "m1c1r1": {
+     "nmse": 0.6944465356491171,
+     "nrmse": 0.8333345880551924
+    },
+    "m1c1rf": {
+     "nmse": 0.6944465356491171,
+     "nrmse": 0.8333345880551924
+    }
+   }
+  }
+ },
+ "runner_sha256": "657e354476fb21ac5e060cfc34b97ac5dedb5a028edf024dfa43c1cc1d31f01b",
+ "sensitivity_weighted_xgb_k32": {},
+ "supports": [
+  32
+ ],
+ "versions": {
+  "numpy": "2.2.6",
+  "pandas": "2.3.3",
+  "sklearn": "1.7.2",
+  "xgboost": "3.1.3"
+ },
+ "wall_seconds": 0.9
+}

@@ -1,0 +1,76 @@
+{
+ "arms": [
+  "a00_base",
+  "a01_columns",
+  "a10_stage",
+  "a11_stage_columns"
+ ],
+ "auroc": {
+  "256": {
+   "a00_base": 0.5368178215262676,
+   "a01_columns": 0.5485415781375635,
+   "a10_stage": 0.6531674078201415,
+   "a11_stage_columns": 0.6689242221535376
+  }
+ },
+ "backbone": "xgboost_hist_d6_n300_regression_ranked",
+ "benchmark_id": "std_cross_kn2nh_shared_anchorreset_fewshot_v1",
+ "feature_set": "stage_factorial_all_v1",
+ "m_axis": "source_only_fork_v1",
+ "metric": "auroc_vs_documented_target_binary (higher is better)",
+ "n_eval": 32620,
+ "n_pool": 3314,
+ "n_source": 151292,
+ "pl_columns_permutation": {
+  "dbp": "sbp",
+  "glucose": "triglycerides",
+  "hba1c": "total_cholesterol",
+  "height_cm": "hba1c",
+  "sbp": "waist_cm",
+  "total_cholesterol": "glucose",
+  "triglycerides": "weight_kg",
+  "waist_cm": "dbp",
+  "weight_kg": "height_cm"
+ },
+ "pl_relation_pairs": [
+  [
+   "age",
+   "current_smoking_status"
+  ],
+  [
+   "hba1c",
+   "dbp"
+  ],
+  [
+   "current_smoking_status",
+   "total_cholesterol"
+  ],
+  [
+   "hemoglobin",
+   "education_level"
+  ],
+  [
+   "sbp",
+   "rbc"
+  ],
+  [
+   "glucose",
+   "age"
+  ]
+ ],
+ "primary_k": 256,
+ "seed": 58,
+ "target": "kidney_disease_history",
+ "target_cohort": "nhanes",
+ "wall_seconds": 32.3,
+ "wrong_label_maps": {
+  "source": {
+   "8.0": 0.0,
+   "9.0": 1.0
+  },
+  "target": {
+   "2.0": 1.0,
+   "9.0": 0.0
+  }
+ }
+}

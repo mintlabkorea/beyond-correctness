@@ -1,0 +1,68 @@
+{
+ "arms": [
+  "a11_stage_columns"
+ ],
+ "auroc": {
+  "256": {
+   "a11_stage_columns": 0.9061264982044349
+  }
+ },
+ "backbone": "xgboost_hist_d6_n300_regression_ranked",
+ "benchmark_id": "std_cross_nh2kn_shared_anchorreset_fewshot_v1",
+ "feature_set": "stage_factorial_all_v1",
+ "metric": "auroc_vs_documented_target_binary (higher is better)",
+ "n_eval": 9200,
+ "n_pool": 15492,
+ "n_source": 68561,
+ "pl_columns_permutation": {
+  "dbp": "waist_cm",
+  "glucose": "triglycerides",
+  "hba1c": "weight_kg",
+  "height_cm": "dbp",
+  "sbp": "glucose",
+  "total_cholesterol": "hba1c",
+  "triglycerides": "height_cm",
+  "waist_cm": "sbp",
+  "weight_kg": "total_cholesterol"
+ },
+ "pl_relation_pairs": [
+  [
+   "weight_kg",
+   "wbc"
+  ],
+  [
+   "hba1c",
+   "wbc"
+  ],
+  [
+   "rbc",
+   "height_cm"
+  ],
+  [
+   "height_cm",
+   "dbp"
+  ],
+  [
+   "dbp",
+   "total_cholesterol"
+  ],
+  [
+   "weight_kg",
+   "height_cm"
+  ]
+ ],
+ "primary_k": 256,
+ "seed": 50,
+ "target": "diabetes_history",
+ "wall_seconds": 46.6,
+ "wrong_label_maps": {
+  "source": {
+   "2.0": 1.0,
+   "7.0": 0.0
+  },
+  "target": {
+   "0.0": 1.0,
+   "9.0": 0.0
+  }
+ }
+}

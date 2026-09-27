@@ -1,0 +1,41 @@
+% Phase-3 archived appendix unit
+% Phase-2 Unit ID(s): G-07
+% Original location: Robustness / source-integrity extensions
+% Original source SHA-256: 726916622e270ad0c5fd157c2a9821e84742065551d407a942ac397611d5460c
+% Provenance: Frozen and triggered auxiliary extensions
+% Original label(s): tab:app-composition-integrity-extensions; tab:app_integrity_extensions
+% Compact PDF replacement: Balanced controlled-to-real boundary in Phase-3 Section F
+% Content below is copied verbatim from the authoritative appendix.
+
+% Original lines 1929--1937
+The five-point source-integrity ladder extends to TabPFN, with all three
+family curves declining and crossing sign in the final interval.  The
+triggered source-mass ladder does not identify a mass-proportional mechanism:
+all six slope intervals include zero, and the prespecified classification is
+\emph{mass versus collision unresolved}.  Independently, source-only endpoint
+AUROC fails to predict the ten-endpoint real-data interaction
+($\rho=-.030$, exact $p=.541$).  These outcomes remain together in
+Table~\ref{tab:app-composition-integrity-extensions} so that the controlled
+integrity effect is not generalized to the real endpoint panel.
+
+% Original lines 2010--2028
+\begin{longtable}{P{0.10\linewidth}P{0.13\linewidth}P{0.21\linewidth}P{0.19\linewidth}P{0.19\linewidth}}
+\caption{Source-integrity extensions. The TabPFN rows repeat the five-point $\alpha$ ladder and resample 20 realizations within family; the tree mass rows condition on fully permuted source labels, vary the number of source rows, and use the same realization-level inference. The source-only endpoint row asks whether source-only AUROC predicts the ten-endpoint real-data interaction.}\label{tab:app-composition-integrity-extensions}\label{tab:app_integrity_extensions}\\
+\toprule Test & Stratum & Means in prespecified order & Trend [95\% CI] & Verdict \\
+\midrule\endfirsthead
+\multicolumn{5}{c}{\tablename\ \thetable\ (continued)}\\
+\toprule Test & Stratum & Means in prespecified order & Trend [95\% CI] & Verdict \\
+\midrule\endhead
+\bottomrule\endfoot
+TabPFN $\alpha$ & Additive & .438 / .328 / .185 / .051 / -.010 & $\rho=-.900$ [-1.000,-.715] & pass; cross [.75,1] \\
+TabPFN $\alpha$ & Pairwise & .412 / .294 / .175 / .048 / -.015 & $\rho=-.875$ [-1.000,-.675] & pass; cross [.75,1] \\
+TabPFN $\alpha$ & Sparse & .463 / .348 / .228 / .076 / -.011 & $\rho=-.980$ [-1.000,-.955] & pass; cross [.75,1] \\
+Mass ladder & XGB additive & -.084 / -.007 / -.043 & slope $+.010$ [-.014,+.034] & unresolved \\
+Mass ladder & HistGB additive & -.084 / -.002 / -.038 & slope $+.011$ [-.013,+.037] & unresolved \\
+Mass ladder & XGB pairwise & -.041 / -.086 / -.062 & slope $-.005$ [-.018,+.008] & unresolved \\
+Mass ladder & HistGB pairwise & -.042 / -.077 / -.066 & slope $-.006$ [-.020,+.008] & unresolved \\
+Mass ladder & XGB sparse & -.084 / -.093 / -.070 & slope $+.004$ [-.010,+.017] & low-mass negative; slope fails \\
+Mass ladder & HistGB sparse & -.084 / -.084 / -.068 & slope $+.004$ [-.010,+.017] & low-mass negative; slope fails \\
+Endpoint association & 10 endpoints & source AUROC vs. $I^*_{MC}$ & $\rho=-.030$, exact $p=.541$ & fail \\
+\end{longtable}
+

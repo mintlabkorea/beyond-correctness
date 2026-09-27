@@ -1,0 +1,23 @@
+{
+  "contract_version": "crta-1.0.0",
+  "candidate_budgets": {
+    "max_concepts": 24,
+    "max_relations": 48
+  },
+  "decoding": {
+    "mode": "greedy",
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "max_output_tokens": 16384,
+    "num_return_sequences": 1,
+    "seed": 0,
+    "response_mode": "raw_json",
+    "tools": "disabled",
+    "external_retrieval": "disabled"
+  },
+  "invalid_generation_policy": {
+    "semantic_repair": "disabled",
+    "count_as_generation_failure": true,
+    "preserve_raw_text": true
+  }
+}

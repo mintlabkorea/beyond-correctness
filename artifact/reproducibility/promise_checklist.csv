@@ -1,0 +1,96 @@
+Promise,Manuscript location,Required artifact,Actual path,Status,Notes
+Complete analysis provenance ledger,A.2; H.2,Complete analysis provenance ledger,provenance/analysis_ledger.csv;provenance/I-T01_complete_analysis_ledger.tex,PASS,"All mapped analyses indexed; retained freeze/decision metadata preserved. Dates not supported by records remain UNKNOWN, as Appendix H.2 now states."
+Code,Reproducibility Statement,Code,scripts/;iclr_latex_v3/scripts/,PARTIAL,Scientific runners and local dependencies included. Full governed clinical product/version/preparation records remain incomplete; no archive-only full training reproduction is claimed. L01.
+System instruction,A.6; H.2,System instruction,iclr_latex_v3/method_contract/v1/prompt/system.txt,PASS,
+User template,A.6; H.2,User template,iclr_latex_v3/method_contract/v1/prompt/user_template.txt,PASS,
+Input schema,A.6; H.2,Input schema,iclr_latex_v3/method_contract/v1/schemas/proposer_input.schema.json,PASS,
+Output JSON schema,A.6; H.2,Output JSON schema,iclr_latex_v3/method_contract/v1/schemas/candidate_bank.schema.json,PASS,
+Executable relation DSL,A.6; H.2,Executable relation DSL,iclr_latex_v3/method_contract/v1/dsl/dsl_v1.json,PASS,
+Validation and acceptance rules,A.6; H.2,Validation and acceptance rules,iclr_latex_v3/method_contract/v1/acceptance/ACCEPTANCE_RULES.md,PASS,
+Mechanical validator,A.6; H.2,Mechanical validator,iclr_latex_v3/method_contract/v1/scripts/validate_candidates.py,PASS,
+Candidate budgets and stored decoding settings,A.6; H.2,Candidate budgets and stored decoding settings,iclr_latex_v3/method_contract/v1/generation_config.json,PASS,
+Rendered prompt,A.6; H.2,Rendered prompt,iclr_latex_v3/method_contract/v1/runs/proposer_bank_v2/prompts/medical_nhanes_knhanes_full_documents_v2.prompt.json,PASS,
+Raw model response,A.6; H.2,Raw model response,iclr_latex_v3/method_contract/v1/runs/proposer_bank_v2/models/gpt-5.6-sol/medical_nhanes_knhanes_full_documents_v2_attempt_02/raw_response.txt,PASS,
+Parsed candidate response,A.6; H.2,Parsed candidate response,iclr_latex_v3/method_contract/v1/runs/proposer_bank_v2/models/gpt-5.6-sol/medical_nhanes_knhanes_full_documents_v2_attempt_02/raw_candidate_bank.json,PASS,
+Accepted/rejected candidate decisions,A.6; H.2,Accepted/rejected candidate decisions,iclr_latex_v3/method_contract/v1/runs/proposer_bank_v2/models/gpt-5.6-sol/medical_nhanes_knhanes_full_documents_v2_attempt_02/decision_ledger.json,PASS,
+"Execution manifest, model, CLI and reasoning effort",A.6; H.2,"Execution manifest, model, CLI and reasoning effort",iclr_latex_v3/method_contract/v1/runs/proposer_bank_v2/models/gpt-5.6-sol/medical_nhanes_knhanes_full_documents_v2_attempt_02/generation_manifest.json,PASS,
+Cryptographic hashes,A.6; H.2,Cryptographic hashes,SHA256SUMS;reproducibility/source_copy_ledger.csv;reproducibility/recorded_hash_audit.csv,PASS,"Release SHA256SUMS and manifest verified; original, sanitized and older external hash references distinguished. No claim that missing historical external objects were recovered."
+"LLM inputs exclude rows, labels, predictions and performance",A.6,"LLM inputs exclude rows, labels, predictions and performance",method_contract/input_boundary_audit.json,PASS,Schemas and documentation payloads audited structurally; no new LLM call.
+Eligible-column checks,A.6,Eligible-column checks,iclr_latex_v3/method_contract/v1/scripts/validate_candidates.py,PASS,
+Evidence-reference checks,A.6,Evidence-reference checks,iclr_latex_v3/method_contract/v1/scripts/validate_candidates.py,PASS,
+Leakage-role checks,A.6,Leakage-role checks,iclr_latex_v3/method_contract/v1/scripts/validate_candidates.py,PASS,
+Operation and argument validation,A.6,Operation and argument validation,iclr_latex_v3/method_contract/v1/scripts/validate_candidates.py,PASS,
+Unit compatibility checks,A.6,Unit compatibility checks,iclr_latex_v3/method_contract/v1/scripts/validate_candidates.py,PASS,
+Duplicate checks,A.6,Duplicate checks,iclr_latex_v3/method_contract/v1/scripts/validate_candidates.py,PASS,
+Complete frozen 24-reference library,B.1; C; D.3; H.2,Complete frozen 24-reference library,experiments/tabllm_reference_space_v1/REFERENCE_MANIFEST_V1.json,PASS,
+Deterministic generation and duplicate skipping,B.1; C; D.3; H.2,Deterministic generation and duplicate skipping,scripts/run_tabllm_reference_space_v1.py,PASS,
+Global construction and product-space sensitivity,B.1; C; D.3; H.2,Global construction and product-space sensitivity,experiments/tabllm_reference_space_v1/summary_v1/SUMMARY_V1.json,PASS,
+Dataset reference envelopes,B.1; C; D.3; H.2,Dataset reference envelopes,experiments/tabllm_reference_space_v1/summary_v1/reference_utilities.csv,PASS,
+Simultaneous intervals and paired-noise summaries,B.1; C; D.3; H.2,Simultaneous intervals and paired-noise summaries,experiments/tabllm_paired_reference_decomposition_v2/SUMMARY_V1.json,PASS,
+Exhaustive k=512 extension and per-reference decay,B.1; C; D.3; H.2,Exhaustive k=512 extension and per-reference decay,experiments/tabllm_all_reference_k512_v1/summary_v1/SUMMARY_V1.json,PASS,
+Primary anonymous-name reference,B.1; C; D.3; H.2,Primary anonymous-name reference,experiments/tabllm_retrospective_audit_v1/SUMMARY_V1.json,PASS,
+"Alternative feature_001, Field A, Variable A labels",B.1; C; D.3; H.2,"Alternative feature_001, Field A, Variable A labels",experiments/tabllm_w2_fixed_mapping_v2/FROZEN_DESIGN.json,PASS,
+Alternative-label adaptation results,B.1; C; D.3; H.2,Alternative-label adaptation results,experiments/tabllm_w2_fixed_mapping_v2/full_analysis/SUMMARY.json,PASS,
+Compatibility reproduction and published comparison,B.1; C; D.3; H.2,Compatibility reproduction and published comparison,experiments/tabllm_retrospective_audit_v1/SUMMARY_V1.json,PASS,
+n_adapt 0/4/32/512,B.1; C; D.3; H.2,n_adapt 0/4/32/512,experiments/tabllm_ranon_support_ladder_v1/SUMMARY_V1.json,PASS,
+T-Few compatibility changes,B.1; C; D.3; H.2,T-Few compatibility changes,tabllm/README.md,PASS,
+Paired row resampling inputs,C.2; B.1,Paired row resampling inputs,scripts/analyze_tabllm_paired_reference_v2.py;experiments/tabllm_paired_reference_decomposition_v2/,NOT REDISTRIBUTABLE,Person-level predictions omitted under conservative redistribution policy. Recreate from separately acquired original public assets with supplied runners/analysis; frozen interval verification is self-contained.
+Focused three-endpoint measurement,B.2; D.1; E.1,Focused three-endpoint measurement,experiments/crta_v3_survey_label_panel_v1/SUMMARY_V1.json,PASS,
+Ten-endpoint extension,B.2; D.1; E.1,Ten-endpoint extension,experiments/crta_v3_survey_label_panel_endpoint_expansion_v1/SUMMARY_V1.json,PASS,
+Mismatch-dose controlled benchmark,B.2; D.1; E.1,Mismatch-dose controlled benchmark,experiments/crta_v3_mcr_mismatch_dose_v1/SUMMARY_V1.json,PASS,
+Rank alignment and reversal counts,B.2; D.1; E.1,Rank alignment and reversal counts,experiments/crta_v3_mcr_nonsemantic_rank_alignment_v1/SUMMARY_V1.json,PASS,
+Absolute/polarity-invariant AUROC,E.1,Absolute/polarity-invariant AUROC,reanalysis_20260903/A3_measurement_folded/,PASS,
+Intended/altered/width-matched constructions; values and width checks,B.3; D.3; E.3,Intended/altered/width-matched constructions; values and width checks,experiments/crta_v3_exam_no_bridge_reference_v1/;scripts/run_crta_v3_exam_no_bridge_reference_v1.py,PASS,
+Six and 13 endpoint panels,B.3; D.3; E.3,Six and 13 endpoint panels,experiments/crta_v3_exam_reference_sensitivity_v2/;scripts/run_crta_v3_exam_reference_sensitivity_v2.py,PASS,
+Labeled target support ladder and clean rerun,B.3; D.3; E.3,Labeled target support ladder and clean rerun,experiments/crta_v3_exam_support_ladder_v1/;scripts/run_crta_v3_exam_support_ladder_v1.py,PASS,
+Plausible neighbour and orphan binding,B.3; D.3; E.3,Plausible neighbour and orphan binding,experiments/crta_v3_decoy_compiler_specificity_v1/;scripts/run_crta_v3_decoy_compiler_specificity_v1.py,PASS,
+Correspondence interface analysis,B.3; D.3; E.3,Correspondence interface analysis,experiments/crta_v3_m1m2_stage_factorial_v1/;scripts/run_crta_v3_m1m2_stage_factorial_v1.py,PASS,
+"Full 1,315-candidate construction audit",A.6; H.2,"Full 1,315-candidate construction audit",robustness/correspondence/candidate_inventory_1315.csv;robustness/correspondence/candidate_inventory_provenance.json,PASS,Schema-only finalization export matches frozen source file and all 50 original pool hashes. Not presented as an original CSV.
+Reversed/random/unconstrained direction comparisons,B.4; D.2; E.2-E.3,Reversed/random/unconstrained direction comparisons,experiments/crta_v3_relation_random_wrong_v1/,PASS,
+Constituent-removal results,B.4; D.2; E.2-E.3,Constituent-removal results,experiments/crta_v3_mcr_redundancy_ladder_v1/,PASS,
+Fixed-width noisy proxy and reconstruction R2,B.4; D.2; E.2-E.3,Fixed-width noisy proxy and reconstruction R2,experiments/crta_v3_mcr_noisy_proxy_recoverability_v1/,PASS,
+Real-data reconstructibility boundary,B.4; D.2; E.2-E.3,Real-data reconstructibility boundary,experiments/crta_v3_real_value_reconstruction_falsification_v1/,PASS,
+Individual CAMELS relations,B.4; D.2; E.2-E.3,Individual CAMELS relations,experiments/crta_v3_camels_sign_relation_ablation_v1/,PASS,
+Tree depth and capacity,B.4; D.2; E.2-E.3,Tree depth and capacity,experiments/crta_v3_relation_capacity_sensitivity_v1/,PASS,
+MLP directional relations,B.4; D.2; E.2-E.3,MLP directional relations,experiments/crta_v3_mcr_monotone_mlp_v1/,PASS,
+Within-dose reconstruction correlations,D.2,Within-dose reconstruction correlations,robustness/relation/historical_within_dose_table.tex;robustness/relation/within_dose_dose_means.csv,PASS,Historical table defines mean across eight settings at each dose; corrected verification reproduces .165-.329. Previous packaging used the wrong averaging axis.
+Relation evidence audit,A.6,Relation evidence audit,robustness/relation/relation_evidence_from_manuscript.tex;robustness/relation/D-03_evidence_grade_effect.tex,PASS,
+Full exploratory interaction surfaces,E.4; H.2,Full exploratory interaction surfaces,experiments/crta_v3_mcr_mc_surface_v1/,PASS,
+Endpoint robustness,E.4; H.2,Endpoint robustness,experiments/crta_v3_stage_endpoint_expansion_loo_v1/,PASS,
+Corruption calibration,E.4; H.2,Corruption calibration,experiments/crta_v3_mcr_dose_response_v1/,PASS,
+Exchangeable-control calibration,E.4; H.2,Exchangeable-control calibration,experiments/crta_v3_mcr_n5_exhaustive_v1/,PASS,
+Source integrity,E.4; H.2,Source integrity,experiments/crta_v3_mcr_source_informativeness_ladder_v1/,PASS,
+Source label corruption in real data,E.4; H.2,Source label corruption in real data,experiments/crta_v3_stage_source_informativeness_ladder_v1/,PASS,
+Source-only prediction,E.4; H.2,Source-only prediction,experiments/crta_v3_stage_source_ladder_v2_source_only_v1/,PASS,
+"Rendering, permutation and labeled-target perturbations",E.4; H.2,"Rendering, permutation and labeled-target perturbations",experiments/crta_v3_stage_ladder_v3_lesions_v1/,PASS,
+Conditional source-mass diagnostics,E.4; H.2,Conditional source-mass diagnostics,experiments/crta_v3_mcr_null_source_mass_ladder_v1/,PASS,
+"MDE assumptions, intervals, unit/endpoint/basin results",E.3; H.2,"MDE assumptions, intervals, unit/endpoint/basin results",iclr_latex_v3/generated/real_utility_resolution.json;robustness/resolution/;scripts/compute_crta_v3_utility_mde_v1.py,PASS,
+Full TransTab original results,E.2; H.2,Full TransTab original results,experiments/crta_v3_mcr_transtab_c_v1/,PASS,
+TransTab 4.30 conformance replication,E.2; H.2,TransTab 4.30 conformance replication,experiments/crta_v3_mcr_transtab_c_tf430_v1/,PASS,
+Full TransTab bridge decomposition,E.2; H.2,Full TransTab bridge decomposition,experiments/crta_v3_mcr_transtab_bridge_decomposition_v1/,PASS,
+Complete CARTE M/C/R grid,E.2; H.2,Complete CARTE M/C/R grid,experiments/crta_v3_mcr_carte_v1/,PASS,
+"TransTab upstream revision, architecture, preprocessing, labels, fixes, seeds",E.2,"TransTab upstream revision, architecture, preprocessing, labels, fixes, seeds",scripts/run_crta_v3_mcr_transtab_c_v1.py;configs/recorded_code_constants.json;model_coverage/README.md,PASS,
+"CARTE version, preprocessing, assets and training settings",E.2,"CARTE version, preprocessing, assets and training settings",scripts/run_crta_v3_mcr_carte_v1.py;model_coverage/asset_identifiers.json,PASS,
+CARTE upstream Git revision,E.2,CARTE upstream Git revision,model_coverage/README.md,NOT APPLICABLE,Manuscript explicitly states revision was not recorded.
+Full 25-comparison human consensus,F.1-F.5,Full 25-comparison human consensus,published_audit/comparison_level_final.csv;published_audit/content_sensitivity_final_adjudication.csv,PASS,Utility/check labels from original final workbook; explicit content-support labels from the dated finalization adjudication record. C01-B decision supplied by author; three other labels carry forward initial agreement. No backdating.
+Initial Coder A human coding,F.1-F.5,Initial Coder A human coding,published_audit/claim_coding_coder_a.csv,PASS,Supplied independent initial record; no new coding.
+Initial Coder B human coding,F.1-F.5,Initial Coder B human coding,published_audit/claim_coding_coder_b.csv,PASS,Supplied independent initial record; no new coding.
+Independent P1-P6 Coder A,F.1-F.5,Independent P1-P6 Coder A,published_audit/p1_p6_coder_a.csv,PASS,Canonical independent frozen-rule Markdown projected to CSV; preliminary sheet kept separate.
+Independent P1-P6 Coder B,F.1-F.5,Independent P1-P6 Coder B,published_audit/p1_p6_coder_b.csv,PASS,Canonical independent frozen-rule CSV.
+Final P1-P6 consensus and passages,F.1-F.5,Final P1-P6 consensus and passages,published_audit/sources/final_consensus.xlsx;published_audit/p1_p6_evidence_150.csv,PASS,All 150 checks; initial-label columns exactly match both independent sources; stages and rationale retained.
+Current agreement summary,F.1-F.5,Current agreement summary,published_audit/agreement_summary.csv,PASS,"Seven initial agreements/kappas; 105/150 independent checks; 15/18 utility support, kappa .693."
+Current claim coding and adjudication,F.1-F.5,Current claim coding and adjudication,published_audit/claim_coding.csv;published_audit/source_evidence.csv;published_audit/adjudication_history/;published_audit/content_sensitivity_final_adjudication.csv;published_audit/C01-B_adjudication_record.md,PASS,Initial disagreements preserved. Final content support links to the new adjudication record; utility support links to the original master workbook. Finalization decisions are not independent reliability observations.
+Seven-model raw responses and model versions,A.6; H.2,Seven-model raw responses and model versions,experiments/crta_v3_e2_open_panel_v1/runs/,PASS,
+Seven-model fixed audit prompt,A.6; H.2,Seven-model fixed audit prompt,experiments/crta_v3_measurement_layer_v1/harmon_prompts_v3/,PASS,
+Seven-model parser and validation,A.6; H.2,Seven-model parser and validation,scripts/score_crta_v3_e2_open_panel_v1.py,PASS,
+Seven-model complete-record and valid-code/evaluation outcomes,A.6; H.2,Seven-model complete-record and valid-code/evaluation outcomes,experiments/crta_v3_e2_open_panel_v1/SUMMARY_V1.json,PASS,
+Exact software/model versions,H.1-H.2,Exact software/model versions,reproducibility/environments/version_audit.csv,PASS,77 per-run recorded versions match source selectors and principal/exception declarations. Full historical package locks are separately PARTIAL (L02).
+Thread-count audit,H.1-H.2,Thread-count audit,reproducibility/thread_count_audit/README.md,PASS,400 comparable stored nMSE values per learner match after rerun; historical bitwise/800 wording corrected in current paper. Original prose and missing thread-field limitation retained.
+Table and figure to script/output mapping,Reproducibility Statement; H.2,Table and figure to script/output mapping,reproducibility/table_figure_map.csv,PASS,
+Every printed numerical result verified,Packaging requirement,Every printed numerical result verified,reproducibility/result_verification.csv,PASS,All mapped quantitative table/figure checks and selected prose checks pass at declared precision; evidence verification is not refitting intervals. Not every incidental prose integer is independently tested.
+HRS/KNHANES person-level data and predictions,Reproducibility Statement,HRS/KNHANES person-level data and predictions,DATA_ACCESS.md,NOT REDISTRIBUTABLE,Excluded. Authorized acquisition is required; exact external preparation gaps are separately disclosed as I03.
+Planned second HRS factorial pair,H.1,Planned second HRS factorial pair,iclr_latex_v3/appendix_new.tex,NOT APPLICABLE,Not executed; manuscript explicitly says new authorization required.
+Revision screening of XTab and CM2,F.1; Table A18,Original study decision records,iclr_latex_v3/design_audit/ELIGIBILITY_SCREEN_V1.csv;published_audit/revision_screening_record.csv,PASS,Ten original decisions plus two author-verified revision exclusions recorded at finalization; no backdating.
+Compiled manuscript reference completeness,Main paper,Every cited bibliography key,generated/manuscript/main_new.pdf; reproducibility/manuscript_build_report.json,PASS,Missing Kim 2025 entry added from publisher bibliographic metadata; main and appendix compile with no undefined citations.
+Original NHANES public preparation,A.3; H.1,Builder and public source hashes,code/preprocessing/foundation/raw_adapter_source_locks_v2.py; code/preprocessing/nhanes_source_lock/,PARTIAL,Builder and exact public source hashes recovered. Historical builder revision and complete preparation environment not pinned; wrapper requires frozen output hash match before claiming exact reproduction. L03.
+Complete historical package locks,H.1; explicit limitation,Complete execution lock for every run,reproducibility/environments/README.md;reproducibility/environments/version_audit.csv,PARTIAL,Per-run versions are available; complete pip/conda/wheel locks are not. Not recreated from the packaging environment. L02.

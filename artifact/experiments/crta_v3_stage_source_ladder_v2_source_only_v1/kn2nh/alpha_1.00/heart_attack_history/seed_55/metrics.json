@@ -1,0 +1,76 @@
+{
+ "arms": [
+  "a00_base",
+  "a01_columns",
+  "a10_stage",
+  "a11_stage_columns"
+ ],
+ "auroc": {
+  "256": {
+   "a00_base": 0.6459539240754606,
+   "a01_columns": 0.6482220558479646,
+   "a10_stage": 0.6510984253012962,
+   "a11_stage_columns": 0.7055207835554641
+  }
+ },
+ "backbone": "xgboost_hist_d6_n300_regression_ranked",
+ "benchmark_id": "std_cross_kn2nh_shared_anchorreset_fewshot_v1",
+ "feature_set": "stage_factorial_all_v1",
+ "m_axis": "source_only_fork_v1",
+ "metric": "auroc_vs_documented_target_binary (higher is better)",
+ "n_eval": 37487,
+ "n_pool": 3314,
+ "n_source": 112235,
+ "pl_columns_permutation": {
+  "dbp": "weight_kg",
+  "glucose": "triglycerides",
+  "hba1c": "glucose",
+  "height_cm": "total_cholesterol",
+  "sbp": "waist_cm",
+  "total_cholesterol": "hba1c",
+  "triglycerides": "height_cm",
+  "waist_cm": "sbp",
+  "weight_kg": "dbp"
+ },
+ "pl_relation_pairs": [
+  [
+   "hematocrit",
+   "hba1c"
+  ],
+  [
+   "glucose",
+   "hematocrit"
+  ],
+  [
+   "education_level",
+   "height_cm"
+  ],
+  [
+   "creatinine",
+   "hemoglobin"
+  ],
+  [
+   "hypertension_history",
+   "diabetes_history"
+  ],
+  [
+   "diabetes_history",
+   "hba1c"
+  ]
+ ],
+ "primary_k": 256,
+ "seed": 55,
+ "target": "heart_attack_history",
+ "target_cohort": "nhanes",
+ "wall_seconds": 31.9,
+ "wrong_label_maps": {
+  "source": {
+   "1.0": 1.0,
+   "8.0": 0.0
+  },
+  "target": {
+   "1.0": 0.0,
+   "7.0": 1.0
+  }
+ }
+}

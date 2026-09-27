@@ -1,0 +1,252 @@
+[
+  {
+    "Comparison ID": "C01-A",
+    "Study": "LIFT",
+    "Tested semantic use": "Feature-name semantics/association within the specified prompt format",
+    "Protected observations": "Observed values, their multiplicity, target labels and examples",
+    "Protected metadata": "Target/task descriptions and category/value meanings",
+    "Protected representation": "Format-specific scaffolding and field identity, except the tested name span",
+    "Protected predictive setup": "Same LM family and training/inference policy",
+    "Scope evidence": "Official C01 main §4.1/Table 9, PDF p.8; official supplement D.2.1, printed pp.42–44 (PDF pp.20–22); supplied LIFT.pdf also contains these examples."
+  },
+  {
+    "Comparison ID": "C01-B",
+    "Study": "LIFT",
+    "Tested semantic use": "Feature-name semantics/association within the specified prompt format",
+    "Protected observations": "Observed values, their multiplicity, target labels and examples",
+    "Protected metadata": "Target/task descriptions and category/value meanings",
+    "Protected representation": "Format-specific scaffolding and field identity, except the tested name span",
+    "Protected predictive setup": "Same LM family and training/inference policy",
+    "Scope evidence": "Official C01 main §4.1/Table 9, PDF p.8; official supplement D.2.1, printed pp.42–44 (PDF pp.20–22); supplied LIFT.pdf also contains these examples."
+  },
+  {
+    "Comparison ID": "C01-C",
+    "Study": "LIFT",
+    "Tested semantic use": "Feature-name semantics/association within the specified prompt format",
+    "Protected observations": "Observed values, their multiplicity, target labels and examples",
+    "Protected metadata": "Target/task descriptions and category/value meanings",
+    "Protected representation": "Format-specific scaffolding and field identity, except the tested name span",
+    "Protected predictive setup": "Same LM family and training/inference policy",
+    "Scope evidence": "Official C01 main §4.1/Table 9, PDF p.8; official supplement D.2.1, printed pp.42–44 (PDF pp.20–22); supplied LIFT.pdf also contains these examples."
+  },
+  {
+    "Comparison ID": "C01-D",
+    "Study": "LIFT",
+    "Tested semantic use": "Feature-name semantics/association within the specified prompt format",
+    "Protected observations": "Observed values, their multiplicity, target labels and examples",
+    "Protected metadata": "Target/task descriptions and category/value meanings",
+    "Protected representation": "Format-specific scaffolding and field identity, except the tested name span",
+    "Protected predictive setup": "Same LM family and training/inference policy",
+    "Scope evidence": "Official C01 main §4.1/Table 9, PDF p.8; official supplement D.2.1, printed pp.42–44 (PDF pp.20–22); supplied LIFT.pdf also contains these examples."
+  },
+  {
+    "Comparison ID": "C03-A",
+    "Study": "TabLLM",
+    "Tested semantic use": "Feature-name semantics/association under List Template",
+    "Protected observations": "Ordered values, target labels and examples",
+    "Protected metadata": "Task/target prompt and non-tested value meanings",
+    "Protected representation": "List Template scaffolding and stable field identity",
+    "Protected predictive setup": "Same T0 and fine-tuning/evaluation policy",
+    "Scope evidence": "Official C03 §3, PDF pp.3–4; §5.1/Figure 2, p.6; supplement Tables 12–14 and §9; supplied tabllm.pdf corroborates definitions."
+  },
+  {
+    "Comparison ID": "C03-B",
+    "Study": "TabLLM",
+    "Tested semantic use": "Feature-name semantics/association under List Template",
+    "Protected observations": "Ordered values, target labels and examples",
+    "Protected metadata": "Task/target prompt and non-tested value meanings",
+    "Protected representation": "List Template scaffolding and stable field identity",
+    "Protected predictive setup": "Same T0 and fine-tuning/evaluation policy",
+    "Scope evidence": "Official C03 §3, PDF pp.3–4; §5.1/Figure 2, p.6; supplement Tables 12–14 and §9; supplied tabllm.pdf corroborates definitions."
+  },
+  {
+    "Comparison ID": "C03-C",
+    "Study": "TabLLM",
+    "Tested semantic use": "Meaning assigned to values under the mixed categorical/continuous permutation",
+    "Protected observations": "Original continuous resolution, categorical identity structure, targets and examples",
+    "Protected metadata": "Feature names, task and target prompt",
+    "Protected representation": "List Template scaffolding and stable field identity",
+    "Protected predictive setup": "Same T0 and fine-tuning/evaluation policy",
+    "Scope evidence": "Official C03 §3, PDF pp.3–4; §5.1/Figure 2, p.6; supplement Tables 12–14 and §9; supplied tabllm.pdf corroborates definitions."
+  },
+  {
+    "Comparison ID": "C04-A",
+    "Study": "PLATO",
+    "Tested semantic use": "Broader-domain KG information beyond feature nodes",
+    "Protected observations": "BRCA features, labels and evaluated examples",
+    "Protected metadata": "Feature-node information independent of the removed broader domain",
+    "Protected representation": "Feature-node input representation and weight-inference interface",
+    "Protected predictive setup": "Same PLATO family, capacity and training policy except tested graph input",
+    "Scope evidence": "Official C04 (Ruiz et al., not supplied plato.pdf): §3.1–3.2, Table 3 p.7, §4.1 p.9."
+  },
+  {
+    "Comparison ID": "C04-B",
+    "Study": "PLATO",
+    "Tested semantic use": "Complete auxiliary KG use conditional on the KG-enabled predictive setup",
+    "Protected observations": "BRCA features, labels and evaluated examples",
+    "Protected metadata": "Non-tested feature information",
+    "Protected representation": "Feature-node input representation and weight-inference interface",
+    "Protected predictive setup": "Same PLATO family, capacity and training policy except tested graph input",
+    "Scope evidence": "Official C04 (Ruiz et al., not supplied plato.pdf): §3.1–3.2, Table 3 p.7, §4.1 p.9."
+  },
+  {
+    "Comparison ID": "C04-C",
+    "Study": "PLATO",
+    "Tested semantic use": "Complete supplied KG relational information (not just the deleted subset)",
+    "Protected observations": "BRCA features, labels and evaluated examples",
+    "Protected metadata": "Non-tested feature information",
+    "Protected representation": "Feature-node input representation and weight-inference interface",
+    "Protected predictive setup": "Same PLATO family, capacity and training policy except tested graph input",
+    "Scope evidence": "Official C04 §4.1 p.9, Table 4."
+  },
+  {
+    "Comparison ID": "C05-A",
+    "Study": "CARTE",
+    "Tested semantic use": "Language-semantic string initialization, conditional on the remaining CARTE setup",
+    "Protected observations": "Cell values, field multiplicity and target labels",
+    "Protected metadata": "Non-tested names/value semantics",
+    "Protected representation": "Encoder family and non-tested value/graph representation",
+    "Protected predictive setup": "Graph predictor, capacity, pretraining/adaptation policy",
+    "Scope evidence": "Official C05 §3 and Appendix C.3/Figure 10, PDF p.21; supplied carte.pdf corroborates component labels. Figure arms expanded against CARTE baseline; no separate pairwise test is implied."
+  },
+  {
+    "Comparison ID": "C05-B",
+    "Study": "CARTE",
+    "Tested semantic use": "Column semantics carried by edge information, including any retained column-conditioned routes",
+    "Protected observations": "Cell values, field multiplicity and target labels",
+    "Protected metadata": "Non-tested names/value semantics",
+    "Protected representation": "Value-bearing node initialization and non-tested graph representation",
+    "Protected predictive setup": "Graph predictor, capacity, pretraining/adaptation policy",
+    "Scope evidence": "Official C05 §3 and Appendix C.3/Figure 10, PDF p.21; supplied carte.pdf corroborates component labels. Figure arms expanded against CARTE baseline; no separate pairwise test is implied."
+  },
+  {
+    "Comparison ID": "C05-C",
+    "Study": "CARTE",
+    "Tested semantic use": "Column semantics carried by edge information, including any retained column-conditioned routes",
+    "Protected observations": "Cell values, field multiplicity and target labels",
+    "Protected metadata": "Non-tested names/value semantics",
+    "Protected representation": "Value-bearing node initialization and non-tested graph representation",
+    "Protected predictive setup": "Graph predictor, capacity, pretraining/adaptation policy",
+    "Scope evidence": "Official C05 §3 and Appendix C.3/Figure 10, PDF p.21; supplied carte.pdf corroborates component labels. Figure arms expanded against CARTE baseline; no separate pairwise test is implied."
+  },
+  {
+    "Comparison ID": "C06-A",
+    "Study": "FeatLLM",
+    "Tested semantic use": "Entire supplied feature-description block, including types, definitions and category information",
+    "Protected observations": "Observed demonstrations, their labels and prediction inputs",
+    "Protected metadata": "Task description and metadata outside that block",
+    "Protected representation": "Same named examples, rule-count/format policy and binary-feature interface",
+    "Protected predictive setup": "Same generator/parser/model family, ensemble and tuning recipe; generated rules may change",
+    "Scope evidence": "Official C06 §3.1/Figure 2 pp.3–4, §4.2/Table 4 pp.7–8, Appendix A.2 and K.2/Table 18; supplied featllm.pdf corroborates prompt components."
+  },
+  {
+    "Comparison ID": "C07-A",
+    "Study": "TabuLa-8B",
+    "Tested semantic use": "Joint informative feature-and-target-header content",
+    "Protected observations": "Table values, target values and examples",
+    "Protected metadata": "Non-header metadata",
+    "Protected representation": "Stable field positions/identities and serialization, except tested header strings",
+    "Protected predictive setup": "Same TABULA-8B checkpoint and evaluation procedure",
+    "Scope evidence": "Official C07 §5.5, Appendix F.2 p.26/Figure 12 p.27; supplied tabula.pdf has different pagination."
+  },
+  {
+    "Comparison ID": "C08-A",
+    "Study": "ConTextTab",
+    "Tested semantic use": "LLM-derived cell-feature semantic channel conditional on encoder setup",
+    "Protected observations": "Cells, target labels and evaluated rows",
+    "Protected metadata": "Column metadata not under test",
+    "Protected representation": "Encoder family/geometry, numerical branch and field identity",
+    "Protected predictive setup": "Same base-model family, capacity and training/adaptation/evaluation opportunity",
+    "Scope evidence": "Official C08 §5.1 p.8, Table 2 bottom semantic block p.9, Appendix A.4/Figures 9–10 pp.27–28; supplied contextab.pdf has different pagination."
+  },
+  {
+    "Comparison ID": "C08-B",
+    "Study": "ConTextTab",
+    "Tested semantic use": "LLM-derived cell-feature semantic channel conditional on encoder setup",
+    "Protected observations": "Cells, target labels and evaluated rows",
+    "Protected metadata": "Column metadata not under test",
+    "Protected representation": "Encoder family/geometry, numerical branch and field identity",
+    "Protected predictive setup": "Same base-model family, capacity and training/adaptation/evaluation opportunity",
+    "Scope evidence": "Official C08 §5.1 p.8, Table 2 bottom semantic block p.9, Appendix A.4/Figures 9–10 pp.27–28; supplied contextab.pdf has different pagination."
+  },
+  {
+    "Comparison ID": "C08-C",
+    "Study": "ConTextTab",
+    "Tested semantic use": "LLM-derived cell-feature semantic channel conditional on encoder setup",
+    "Protected observations": "Cells, target labels and evaluated rows",
+    "Protected metadata": "Column metadata not under test",
+    "Protected representation": "Encoder family/geometry, numerical branch and field identity",
+    "Protected predictive setup": "Same base-model family, capacity and training/adaptation/evaluation opportunity",
+    "Scope evidence": "Official C08 §5.1 p.8, Table 2 bottom semantic block p.9, Appendix A.4/Figures 9–10 pp.27–28; supplied contextab.pdf has different pagination."
+  },
+  {
+    "Comparison ID": "C08-D",
+    "Study": "ConTextTab",
+    "Tested semantic use": "LLM-derived cell-feature semantic channel conditional on encoder setup",
+    "Protected observations": "Cells, target labels and evaluated rows",
+    "Protected metadata": "Column metadata not under test",
+    "Protected representation": "Encoder family/geometry, numerical branch and field identity",
+    "Protected predictive setup": "Same base-model family, capacity and training/adaptation/evaluation opportunity",
+    "Scope evidence": "Official C08 §5.1 p.8, Table 2 bottom semantic block p.9, Appendix A.4/Figures 9–10 pp.27–28; supplied contextab.pdf has different pagination."
+  },
+  {
+    "Comparison ID": "C08-E",
+    "Study": "ConTextTab",
+    "Tested semantic use": "Supplied column-name semantic content",
+    "Protected observations": "Cells, target labels and evaluated rows",
+    "Protected metadata": "Cell meanings, target context and other metadata",
+    "Protected representation": "Cell encoder and stable field slots; header pathway except tested name strings",
+    "Protected predictive setup": "Same base-model family, capacity and training/adaptation/evaluation opportunity",
+    "Scope evidence": "Official C08 §5.1 p.8, Table 2 bottom semantic block p.9, Appendix A.4/Figures 9–10 pp.27–28; supplied contextab.pdf has different pagination."
+  },
+  {
+    "Comparison ID": "C08-F",
+    "Study": "ConTextTab",
+    "Tested semantic use": "Additional generated contextual column-description content",
+    "Protected observations": "Cells, target labels and evaluated rows",
+    "Protected metadata": "Original column names and target context",
+    "Protected representation": "Original field identity and column/cell-encoding pathways",
+    "Protected predictive setup": "Same model/evaluation procedure and permitted row/target access; generated-description content may differ",
+    "Scope evidence": "Official C08 §5.1 p.8, Table 2 bottom semantic block p.9, Appendix A.4/Figures 9–10 pp.27–28; supplied contextab.pdf has different pagination."
+  },
+  {
+    "Comparison ID": "C09-A",
+    "Study": "TabSTAR",
+    "Tested semantic use": "Explicit quantile text conditional on name-plus-bin verbalization",
+    "Protected observations": "Numerical and other values, targets and examples",
+    "Protected metadata": "Field names, non-tested metadata and target context",
+    "Protected representation": "Separate numerical branch, fusion/interaction architecture and non-tested text; bin/range text is protected",
+    "Protected predictive setup": "Same encoder/model family and training/adaptation recipe; fitted weights may change",
+    "Scope evidence": "Official C09 §4/A.1, §6 Q3 p.9/Table 4 p.10, Appendix G.4/Tables 31–32 pp.53–54; supplied tabstar.pdf has different pagination."
+  },
+  {
+    "Comparison ID": "C09-B",
+    "Study": "TabSTAR",
+    "Tested semantic use": "Explicit bin/quantile numeric content in verbalization conditional on the numerical branch",
+    "Protected observations": "Numerical and other values, targets and examples",
+    "Protected metadata": "Field names, non-tested metadata and target context",
+    "Protected representation": "Separate numerical branch, fusion/interaction architecture and non-tested text",
+    "Protected predictive setup": "Same encoder/model family and training/adaptation recipe; fitted weights may change",
+    "Scope evidence": "Official C09 §4/A.1, §6 Q3 p.9/Table 4 p.10, Appendix G.4/Tables 31–32 pp.53–54; supplied tabstar.pdf has different pagination."
+  },
+  {
+    "Comparison ID": "C10-A",
+    "Study": "TARTE",
+    "Tested semantic use": "Supplied column-name semantic content",
+    "Protected observations": "Cell/numerical values, target labels and examples",
+    "Protected metadata": "Non-tested metadata and field identities",
+    "Protected representation": "Numerical/cell-value routing, field identity and non-tested representations",
+    "Protected predictive setup": "Same table-pretraining status, model family and Ridge training policy",
+    "Scope evidence": "C10 official indexed published Figure 6 p.10/§4.3 from eligibility screening; supplied tarte.pdf is arXiv v2 corroboration, not the accepted PDF. Conditions known, implementation details not fully established from published source."
+  },
+  {
+    "Comparison ID": "C10-B",
+    "Study": "TARTE",
+    "Tested semantic use": "FastText semantic initialization conditional on table pretraining",
+    "Protected observations": "Cell/numerical values, target labels and examples",
+    "Protected metadata": "Non-tested metadata and field identities",
+    "Protected representation": "Non-tested cell initialization/encoder and downstream representation",
+    "Protected predictive setup": "Same table-pretraining status, model family and Ridge training policy",
+    "Scope evidence": "C10 official indexed published Figure 6 p.10/§4.3 from eligibility screening; supplied tarte.pdf is arXiv v2 corroboration, not the accepted PDF. Conditions known, implementation details not fully established from published source."
+  }
+]

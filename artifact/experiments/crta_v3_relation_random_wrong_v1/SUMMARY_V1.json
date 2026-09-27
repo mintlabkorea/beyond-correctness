@@ -1,0 +1,934 @@
+{
+  "bootstrap": {
+    "hierarchy": "targets then seeds",
+    "reps": 10000,
+    "seed": 20260819
+  },
+  "complete_120_cells": true,
+  "experiment_root": "experiments/crta_v3_relation_random_wrong_v1",
+  "metric": "query_sd_normalized_rmse (lower is better); gain = nrmse(second) - nrmse(first), positive favours first",
+  "n_draws": 5,
+  "pooled_descriptive": {
+    "RW1_random_content": {
+      "best_target": "dbp",
+      "ci95": [
+        -0.0063914024077256154,
+        0.0035249067305935257
+      ],
+      "drop_best_target_mean": -0.0027307593076407065,
+      "mean_gain": -0.0010042491095017259,
+      "n_pairs": 120,
+      "per_target_mean": {
+        "dbp": 0.007628301881193178,
+        "glucose": -0.012365106365980144,
+        "sbp": -0.00172524875604273,
+        "total_cholesterol": -0.0025395413257138454,
+        "triglycerides": 0.0004216142174805204,
+        "waist_cm": 0.002554485692052666
+      },
+      "win_rate": 0.5083333333333333
+    },
+    "RW2_reversal_content_gate": {
+      "best_target": "waist_cm",
+      "ci95": [
+        0.08215152107392956,
+        0.2981719555568488
+      ],
+      "drop_best_target_mean": 0.13293456324774733,
+      "mean_gain": 0.1847832870463367,
+      "n_pairs": 120,
+      "per_target_mean": {
+        "dbp": 0.18450707091121935,
+        "glucose": 0.21898317607198092,
+        "sbp": 0.1948206028245713,
+        "total_cholesterol": 0.011932371789865837,
+        "triglycerides": 0.05442959464109922,
+        "waist_cm": 0.4440269060392835
+      },
+      "win_rate": 0.9916666666666667
+    },
+    "RW3_utility": {
+      "best_target": "dbp",
+      "ci95": [
+        -0.006676183898256053,
+        0.002805231932233053
+      ],
+      "drop_best_target_mean": -0.0033462662825524663,
+      "mean_gain": -0.0016047756576750638,
+      "n_pairs": 120,
+      "per_target_mean": {
+        "dbp": 0.0071026774667119486,
+        "glucose": -0.012329563237961555,
+        "sbp": -0.0021394133910742075,
+        "total_cholesterol": -0.0035611915632870637,
+        "triglycerides": -0.0002076614195200721,
+        "waist_cm": 0.0015064981990805665
+      },
+      "win_rate": 0.48333333333333334
+    },
+    "RW4_reference_minus_random_wrong": {
+      "best_target": "waist_cm",
+      "ci95": [
+        2.8359083709262064e-05,
+        0.0011019458121228685
+      ],
+      "drop_best_target_mean": 0.0005110343592135858,
+      "mean_gain": 0.0006005265481733381,
+      "n_pairs": 120,
+      "per_target_mean": {
+        "dbp": 0.0005256244144812294,
+        "glucose": -3.5543128018589167e-05,
+        "sbp": 0.0004141646350314776,
+        "total_cholesterol": 0.0010216502375732183,
+        "triglycerides": 0.0006292756370005926,
+        "waist_cm": 0.0010479874929720996
+      },
+      "win_rate": 0.5583333333333333
+    },
+    "RW5_reversal_beyond_random": {
+      "best_target": "waist_cm",
+      "ci95": [
+        0.08290095277619837,
+        0.2992388727689439
+      ],
+      "drop_best_target_mean": 0.13465055931755993,
+      "mean_gain": 0.1857875361558384,
+      "n_pairs": 120,
+      "per_target_mean": {
+        "dbp": 0.17687876903002614,
+        "glucose": 0.23134828243796107,
+        "sbp": 0.19654585158061405,
+        "total_cholesterol": 0.014471913115579682,
+        "triglycerides": 0.05400798042361869,
+        "waist_cm": 0.4414724203472308
+      },
+      "win_rate": 0.9916666666666667
+    },
+    "desc_per_draw_RW1": {
+      "sign_random_1": {
+        "best_target": "dbp",
+        "ci95": [
+          -0.006239794501577618,
+          0.0023911023732575676
+        ],
+        "drop_best_target_mean": -0.0029558783674245776,
+        "mean_gain": -0.0015061325010487677,
+        "n_pairs": 120,
+        "per_target_mean": {
+          "dbp": 0.005742596830830282,
+          "glucose": -0.01153089686483127,
+          "sbp": -0.002421380199987244,
+          "total_cholesterol": -0.002224680742286689,
+          "triglycerides": 0.0003379146566923119,
+          "waist_cm": 0.0010596513132900027
+        },
+        "win_rate": 0.49166666666666664
+      },
+      "sign_random_2": {
+        "best_target": "dbp",
+        "ci95": [
+          -0.00521054579284783,
+          0.005945467687248505
+        ],
+        "drop_best_target_mean": -0.0018852012374478656,
+        "mean_gain": 0.0003712149969302266,
+        "n_pairs": 120,
+        "per_target_mean": {
+          "dbp": 0.011653296168820687,
+          "glucose": -0.01074892881192988,
+          "sbp": -0.0013721989855165484,
+          "total_cholesterol": -0.0018024594452522523,
+          "triglycerides": 0.000327728629015972,
+          "waist_cm": 0.004169852426443382
+        },
+        "win_rate": 0.5
+      },
+      "sign_random_3": {
+        "best_target": "dbp",
+        "ci95": [
+          -0.006884890235229303,
+          0.003224457633736598
+        ],
+        "drop_best_target_mean": -0.0032967933069926255,
+        "mean_gain": -0.0014600726920970248,
+        "n_pairs": 120,
+        "per_target_mean": {
+          "dbp": 0.007723530382380978,
+          "glucose": -0.01293896851620932,
+          "sbp": -0.0020348526134075064,
+          "total_cholesterol": -0.002811718674210606,
+          "triglycerides": 0.00034897349145140424,
+          "waist_cm": 0.0009525997774129019
+        },
+        "win_rate": 0.4583333333333333
+      },
+      "sign_random_4": {
+        "best_target": "dbp",
+        "ci95": [
+          -0.007723457937021866,
+          0.003225805515749174
+        ],
+        "drop_best_target_mean": -0.0030732489201603192,
+        "mean_gain": -0.0015300960867496063,
+        "n_pairs": 120,
+        "per_target_mean": {
+          "dbp": 0.006185668080303958,
+          "glucose": -0.01511672104969954,
+          "sbp": -0.0011363099874157068,
+          "total_cholesterol": -0.0029022617388095194,
+          "triglycerides": 0.0006383406471186182,
+          "waist_cm": 0.003150707528004551
+        },
+        "win_rate": 0.5
+      },
+      "sign_random_5": {
+        "best_target": "dbp",
+        "ci95": [
+          -0.005984035936431394,
+          0.003454499394557006
+        ],
+        "drop_best_target_mean": -0.002442674706178143,
+        "mean_gain": -0.0008961592645434391,
+        "n_pairs": 120,
+        "per_target_mean": {
+          "dbp": 0.0068364179436300795,
+          "glucose": -0.011490016587230655,
+          "sbp": -0.0016615019938867105,
+          "total_cholesterol": -0.0029565860280101664,
+          "triglycerides": 0.00045511366312432356,
+          "waist_cm": 0.0034396174151124946
+        },
+        "win_rate": 0.5083333333333333
+      }
+    },
+    "desc_per_draw_RW4": {
+      "sign_random_1": {
+        "best_target": "total_cholesterol",
+        "ci95": [
+          -0.0009640836220445736,
+          0.0012101409336307508
+        ],
+        "drop_best_target_mean": -0.00014893037624851945,
+        "mean_gain": 9.864315662629631e-05,
+        "n_pairs": 120,
+        "per_target_mean": {
+          "dbp": -0.0013600806358816664,
+          "glucose": 0.0007986663731302856,
+          "sbp": -0.00028196680891303674,
+          "total_cholesterol": 0.001336510821000375,
+          "triglycerides": 0.000545576076212384,
+          "waist_cm": -0.0004468468857905639
+        },
+        "win_rate": 0.5166666666666667
+      },
+      "sign_random_2": {
+        "best_target": "dbp",
+        "ci95": [
+          0.0006516604802410686,
+          0.0037136865047164946
+        ],
+        "drop_best_target_mean": 0.001461065045104601,
+        "mean_gain": 0.0019759906546052905,
+        "n_pairs": 120,
+        "per_target_mean": {
+          "dbp": 0.0045506187021087385,
+          "glucose": 0.001580634426031674,
+          "sbp": 0.0007672144055576591,
+          "total_cholesterol": 0.0017587321180348114,
+          "triglycerides": 0.0005353900485360441,
+          "waist_cm": 0.002663354227362816
+        },
+        "win_rate": 0.625
+      },
+      "sign_random_3": {
+        "best_target": "total_cholesterol",
+        "ci95": [
+          -0.0006603051254119105,
+          0.0008991601176180848
+        ],
+        "drop_best_target_mean": 2.374898087835531e-05,
+        "mean_gain": 0.00014470296557803907,
+        "n_pairs": 120,
+        "per_target_mean": {
+          "dbp": 0.000620852915669029,
+          "glucose": -0.0006094052782477655,
+          "sbp": 0.00010456077766670125,
+          "total_cholesterol": 0.0007494728890764579,
+          "triglycerides": 0.0005566349109714763,
+          "waist_cm": -0.0005538984216676646
+        },
+        "win_rate": 0.5333333333333333
+      },
+      "sign_random_4": {
+        "best_target": "waist_cm",
+        "ci95": [
+          -0.0015056633208854395,
+          0.0013791884798001561
+        ],
+        "drop_best_target_mean": -0.00023922638067424784,
+        "mean_gain": 7.467957092545755e-05,
+        "n_pairs": 120,
+        "per_target_mean": {
+          "dbp": -0.0009170093864079909,
+          "glucose": -0.0027871578117379834,
+          "sbp": 0.0010031034036585007,
+          "total_cholesterol": 0.0006589298244775443,
+          "triglycerides": 0.0008460020666386902,
+          "waist_cm": 0.0016442093289239846
+        },
+        "win_rate": 0.49166666666666664
+      },
+      "sign_random_5": {
+        "best_target": "waist_cm",
+        "ci95": [
+          -0.00019550585751737612,
+          0.0016756143677520785
+        ],
+        "drop_best_target_mean": 0.0004637158285515641,
+        "mean_gain": 0.0007086163931316248,
+        "n_pairs": 120,
+        "per_target_mean": {
+          "dbp": -0.00026625952308186875,
+          "glucose": 0.0008395466507308991,
+          "sbp": 0.0004779113971874971,
+          "total_cholesterol": 0.0006046055352768975,
+          "triglycerides": 0.0006627750826443957,
+          "waist_cm": 0.0019331192160319283
+        },
+        "win_rate": 0.55
+      }
+    },
+    "desc_within_cell_draw_sd_mean": 0.0033741477308274924,
+    "n_cells": 120,
+    "replication_gate_all_pass": true,
+    "replication_gate_worst_abs_delta_nrmse": 0.0,
+    "targets_present": [
+      "dbp",
+      "glucose",
+      "sbp",
+      "total_cholesterol",
+      "triglycerides",
+      "waist_cm"
+    ]
+  },
+  "primary_k": 256,
+  "seed_sets": {
+    "rep1": {
+      "RW1_random_content": {
+        "best_target": "dbp",
+        "ci95": [
+          -0.00650456426167899,
+          0.004009742583642793
+        ],
+        "drop_best_target_mean": -0.0023033975228494786,
+        "mean_gain": -0.0006514818757972894,
+        "n_pairs": 60,
+        "per_target_mean": {
+          "dbp": 0.007608096359463657,
+          "glucose": -0.012614243014112968,
+          "sbp": -0.001460003655528841,
+          "total_cholesterol": -0.0019797535253835764,
+          "triglycerides": 0.0012827367763952658,
+          "waist_cm": 0.003254275804382728
+        },
+        "separated": false,
+        "win_rate": 0.55
+      },
+      "RW2_reversal_content_gate": {
+        "best_target": "waist_cm",
+        "ci95": [
+          0.08410986848368456,
+          0.2989981488298516
+        ],
+        "drop_best_target_mean": 0.13470911399835978,
+        "mean_gain": 0.18617473396905534,
+        "n_pairs": 60,
+        "per_target_mean": {
+          "dbp": 0.18582916006865693,
+          "glucose": 0.2195841867307336,
+          "sbp": 0.19687567111330878,
+          "total_cholesterol": 0.013475540278232456,
+          "triglycerides": 0.05778101180086724,
+          "waist_cm": 0.44350283382253314
+        },
+        "separated": true,
+        "win_rate": 1.0
+      },
+      "RW3_utility": {
+        "best_target": "dbp",
+        "ci95": [
+          -0.006573118050942079,
+          0.003145642354315095
+        ],
+        "drop_best_target_mean": -0.002898617562611332,
+        "mean_gain": -0.0012420620238990413,
+        "n_pairs": 60,
+        "per_target_mean": {
+          "dbp": 0.007040715669662412,
+          "glucose": -0.011956643521599397,
+          "sbp": -0.0019474731858314053,
+          "total_cholesterol": -0.002737842163361248,
+          "triglycerides": 0.0007730663882701383,
+          "waist_cm": 0.0013758046694652526
+        },
+        "win_rate": 0.5
+      },
+      "RW4_reference_minus_random_wrong": {
+        "best_target": "waist_cm",
+        "ci95": [
+          -0.00030926637658454506,
+          0.0014291651897777825
+        ],
+        "drop_best_target_mean": 0.0003330019507386073,
+        "mean_gain": 0.0005905801481017519,
+        "n_pairs": 60,
+        "per_target_mean": {
+          "dbp": 0.0005673806898012446,
+          "glucose": -0.000657599492513572,
+          "sbp": 0.0004874695303025645,
+          "total_cholesterol": 0.0007580886379776719,
+          "triglycerides": 0.0005096703881251275,
+          "waist_cm": 0.0018784711349174755
+        },
+        "win_rate": 0.5333333333333333
+      },
+      "RW5_reversal_beyond_random": {
+        "best_target": "waist_cm",
+        "ci95": [
+          0.08471927058107576,
+          0.2994150841295899
+        ],
+        "drop_best_target_mean": 0.13614174741019308,
+        "mean_gain": 0.18682621584485262,
+        "n_pairs": 60,
+        "per_target_mean": {
+          "dbp": 0.17822106370919324,
+          "glucose": 0.23219842974484656,
+          "sbp": 0.19833567476883762,
+          "total_cholesterol": 0.015455293803616033,
+          "triglycerides": 0.05649827502447198,
+          "waist_cm": 0.44024855801815044
+        },
+        "separated": true,
+        "win_rate": 1.0
+      },
+      "desc_per_draw_RW1": {
+        "sign_random_1": {
+          "best_target": "dbp",
+          "ci95": [
+            -0.0062829173613494285,
+            0.002799293766988609
+          ],
+          "drop_best_target_mean": -0.0026148676637231015,
+          "mean_gain": -0.0012078770150771023,
+          "n_pairs": 60,
+          "per_target_mean": {
+            "dbp": 0.005827076228152895,
+            "glucose": -0.01120085228071952,
+            "sbp": -0.00252297193492651,
+            "total_cholesterol": -0.001426491331135682,
+            "triglycerides": 0.001503565663262807,
+            "waist_cm": 0.0005724115649033967
+          },
+          "win_rate": 0.5333333333333333
+        },
+        "sign_random_2": {
+          "best_target": "dbp",
+          "ci95": [
+            -0.005247657086650734,
+            0.007108739515340251
+          ],
+          "drop_best_target_mean": -0.0012923518773736275,
+          "mean_gain": 0.0009761251067338347,
+          "n_pairs": 60,
+          "per_target_mean": {
+            "dbp": 0.012318510027271145,
+            "glucose": -0.010592881534519205,
+            "sbp": -0.0014994859015400209,
+            "total_cholesterol": -0.002330660102765536,
+            "triglycerides": 0.0018099359759648826,
+            "waist_cm": 0.006151332175991742
+          },
+          "win_rate": 0.5166666666666667
+        },
+        "sign_random_3": {
+          "best_target": "dbp",
+          "ci95": [
+            -0.007571793276861421,
+            0.0030883521270552187
+          ],
+          "drop_best_target_mean": -0.0032571697426591207,
+          "mean_gain": -0.001549759180136349,
+          "n_pairs": 60,
+          "per_target_mean": {
+            "dbp": 0.006987293632477509,
+            "glucose": -0.013834818449726316,
+            "sbp": -0.0022539332363710864,
+            "total_cholesterol": -0.0014690788174828383,
+            "triglycerides": 0.0011290068871981584,
+            "waist_cm": 0.00014297490308647908
+          },
+          "win_rate": 0.45
+        },
+        "sign_random_4": {
+          "best_target": "dbp",
+          "ci95": [
+            -0.007461417405161189,
+            0.003912980265109601
+          ],
+          "drop_best_target_mean": -0.00200870722995391,
+          "mean_gain": -0.0008053199791159168,
+          "n_pairs": 60,
+          "per_target_mean": {
+            "dbp": 0.005211616275074049,
+            "glucose": -0.014586365483595853,
+            "sbp": 0.00016346169664362974,
+            "total_cholesterol": -0.00263517864092454,
+            "triglycerides": 0.0024350138563543067,
+            "waist_cm": 0.004579532421752908
+          },
+          "win_rate": 0.5333333333333333
+        },
+        "sign_random_5": {
+          "best_target": "dbp",
+          "ci95": [
+            -0.0067564682148247655,
+            0.004277696066345613
+          ],
+          "drop_best_target_mean": -0.002343891100537612,
+          "mean_gain": -0.0006705783113908644,
+          "n_pairs": 60,
+          "per_target_mean": {
+            "dbp": 0.007695985634342872,
+            "glucose": -0.012856297322003885,
+            "sbp": -0.0011870889014501396,
+            "total_cholesterol": -0.0020373587346093403,
+            "triglycerides": -0.00046383850080379264,
+            "waist_cm": 0.004825127956179098
+          },
+          "win_rate": 0.5166666666666667
+        }
+      },
+      "desc_per_draw_RW4": {
+        "sign_random_1": {
+          "best_target": "total_cholesterol",
+          "ci95": [
+            -0.0013528694506151444,
+            0.0015392686406596715
+          ],
+          "drop_best_target_mean": -0.00022124815585878644,
+          "mean_gain": 3.4185008821939014e-05,
+          "n_pairs": 60,
+          "per_target_mean": {
+            "dbp": -0.0012136394415095176,
+            "glucose": 0.0007557912408798773,
+            "sbp": -0.0005754987490951047,
+            "total_cholesterol": 0.0013113508322255662,
+            "triglycerides": 0.0007304992749926686,
+            "waist_cm": -0.0008033931045618558
+          },
+          "win_rate": 0.48333333333333334
+        },
+        "sign_random_2": {
+          "best_target": "dbp",
+          "ci95": [
+            0.0002512318855280017,
+            0.0048965369886074615
+          ],
+          "drop_best_target_mean": 0.0016062656852377044,
+          "mean_gain": 0.002218187130632876,
+          "n_pairs": 60,
+          "per_target_mean": {
+            "dbp": 0.005277794357608734,
+            "glucose": 0.0013637619870801921,
+            "sbp": 0.00044798728429138455,
+            "total_cholesterol": 0.00040718206059571217,
+            "triglycerides": 0.0010368695876947442,
+            "waist_cm": 0.004775527506526489
+          },
+          "win_rate": 0.6
+        },
+        "sign_random_3": {
+          "best_target": "total_cholesterol",
+          "ci95": [
+            -0.0016508406140323566,
+            0.0008754634342549815
+          ],
+          "drop_best_target_mean": -0.0006229892566604511,
+          "mean_gain": -0.00030769715623730766,
+          "n_pairs": 60,
+          "per_target_mean": {
+            "dbp": -5.342203718490257e-05,
+            "glucose": -0.0018781749281269189,
+            "sbp": -0.00030646005053968083,
+            "total_cholesterol": 0.0012687633458784097,
+            "triglycerides": 0.00035594049892802017,
+            "waist_cm": -0.0012328297663787735
+          },
+          "win_rate": 0.48333333333333334
+        },
+        "sign_random_4": {
+          "best_target": "waist_cm",
+          "ci95": [
+            -0.0016787048947973524,
+            0.0024448094875895877
+          ],
+          "drop_best_target_mean": -0.00011665509671778152,
+          "mean_gain": 0.0004367420447831246,
+          "n_pairs": 60,
+          "per_target_mean": {
+            "dbp": -0.0018290993945883627,
+            "glucose": -0.0026297219619964562,
+            "sbp": 0.002110934882475035,
+            "total_cholesterol": 0.00010266352243670784,
+            "triglycerides": 0.0016619474680841684,
+            "waist_cm": 0.003203727752287655
+          },
+          "win_rate": 0.5333333333333333
+        },
+        "sign_random_5": {
+          "best_target": "waist_cm",
+          "ci95": [
+            -0.0010253304472783288,
+            0.0023248348606675364
+          ],
+          "drop_best_target_mean": -4.08420233295681e-06,
+          "mean_gain": 0.0005714837125081769,
+          "n_pairs": 60,
+          "per_target_mean": {
+            "dbp": 0.0006552699646804605,
+            "glucose": -0.0008996538004044874,
+            "sbp": 0.0007603842843812658,
+            "total_cholesterol": 0.0007004834287519079,
+            "triglycerides": -0.0012369048890739308,
+            "waist_cm": 0.0034493232867138456
+          },
+          "win_rate": 0.5
+        }
+      },
+      "desc_within_cell_draw_sd_mean": 0.0037939573810100427,
+      "n_cells": 60,
+      "replication_gate_all_pass": true,
+      "replication_gate_worst_abs_delta_nrmse": 0.0,
+      "targets_present": [
+        "dbp",
+        "glucose",
+        "sbp",
+        "total_cholesterol",
+        "triglycerides",
+        "waist_cm"
+      ]
+    },
+    "v1": {
+      "RW1_random_content": {
+        "best_target": "dbp",
+        "ci95": [
+          -0.006490350320211597,
+          0.0032976652506444015
+        ],
+        "drop_best_target_mean": -0.0031581210924319348,
+        "mean_gain": -0.0013570163432061624,
+        "n_pairs": 60,
+        "per_target_mean": {
+          "dbp": 0.007648507402922699,
+          "glucose": -0.012115969717847319,
+          "sbp": -0.001990493856556619,
+          "total_cholesterol": -0.003099329126044115,
+          "triglycerides": -0.0004395083414342249,
+          "waist_cm": 0.0018546955797226039
+        },
+        "separated": false,
+        "win_rate": 0.4666666666666667
+      },
+      "RW2_reversal_content_gate": {
+        "best_target": "waist_cm",
+        "ci95": [
+          0.08064145873778034,
+          0.29753601333008994
+        ],
+        "drop_best_target_mean": 0.13116001249713483,
+        "mean_gain": 0.18339184012361803,
+        "n_pairs": 60,
+        "per_target_mean": {
+          "dbp": 0.18318498175378176,
+          "glucose": 0.21838216541322825,
+          "sbp": 0.19276553453583384,
+          "total_cholesterol": 0.010389203301499218,
+          "triglycerides": 0.0510781774813312,
+          "waist_cm": 0.44455097825603385
+        },
+        "separated": true,
+        "win_rate": 0.9833333333333333
+      },
+      "RW3_utility": {
+        "best_target": "dbp",
+        "ci95": [
+          -0.007093575310487717,
+          0.002768977522123899
+        ],
+        "drop_best_target_mean": -0.003793915002493601,
+        "mean_gain": -0.0019674892914510866,
+        "n_pairs": 60,
+        "per_target_mean": {
+          "dbp": 0.007164639263761485,
+          "glucose": -0.012702482954323713,
+          "sbp": -0.0023313535963170096,
+          "total_cholesterol": -0.004384540963212879,
+          "triglycerides": -0.0011883892273102826,
+          "waist_cm": 0.0016371917286958804
+        },
+        "win_rate": 0.4666666666666667
+      },
+      "RW4_reference_minus_random_wrong": {
+        "best_target": "total_cholesterol",
+        "ci95": [
+          -6.801468599361034e-05,
+          0.001294696192704906
+        ],
+        "drop_best_target_mean": 0.00047552517046015594,
+        "mean_gain": 0.0006104729482449241,
+        "n_pairs": 60,
+        "per_target_mean": {
+          "dbp": 0.00048386813916121427,
+          "glucose": 0.0005865132364763937,
+          "sbp": 0.00034085973976039075,
+          "total_cholesterol": 0.001285211837168765,
+          "triglycerides": 0.0007488808858760576,
+          "waist_cm": 0.00021750385102672353
+        },
+        "win_rate": 0.5833333333333334
+      },
+      "RW5_reversal_beyond_random": {
+        "best_target": "waist_cm",
+        "ci95": [
+          0.0816812320735468,
+          0.299437351327806
+        ],
+        "drop_best_target_mean": 0.13315937122492674,
+        "mean_gain": 0.18474885646682415,
+        "n_pairs": 60,
+        "per_target_mean": {
+          "dbp": 0.17553647435085903,
+          "glucose": 0.2304981351310756,
+          "sbp": 0.19475602839239045,
+          "total_cholesterol": 0.013488532427543332,
+          "triglycerides": 0.051517685822765426,
+          "waist_cm": 0.4426962826763113
+        },
+        "separated": true,
+        "win_rate": 0.9833333333333333
+      },
+      "desc_per_draw_RW1": {
+        "sign_random_1": {
+          "best_target": "dbp",
+          "ci95": [
+            -0.006690665850918474,
+            0.0023661018833672225
+          ],
+          "drop_best_target_mean": -0.0032968890711260533,
+          "mean_gain": -0.0018043879870204328,
+          "n_pairs": 60,
+          "per_target_mean": {
+            "dbp": 0.00565811743350767,
+            "glucose": -0.011860941448943018,
+            "sbp": -0.002319788465047978,
+            "total_cholesterol": -0.0030228701534376957,
+            "triglycerides": -0.0008277363498781831,
+            "waist_cm": 0.0015468910616766086
+          },
+          "win_rate": 0.45
+        },
+        "sign_random_2": {
+          "best_target": "dbp",
+          "ci95": [
+            -0.005626571462012451,
+            0.005392253550609645
+          ],
+          "drop_best_target_mean": -0.0024780505975221033,
+          "mean_gain": -0.00023369511287338145,
+          "n_pairs": 60,
+          "per_target_mean": {
+            "dbp": 0.01098808231037023,
+            "glucose": -0.010904976089340556,
+            "sbp": -0.001244912069493076,
+            "total_cholesterol": -0.0012742587877389688,
+            "triglycerides": -0.0011544787179329386,
+            "waist_cm": 0.0021883726768950227
+          },
+          "win_rate": 0.48333333333333334
+        },
+        "sign_random_3": {
+          "best_target": "dbp",
+          "ci95": [
+            -0.006626688572512627,
+            0.003547250846461677
+          ],
+          "drop_best_target_mean": -0.0033364168713261298,
+          "mean_gain": -0.0013703862040577006,
+          "n_pairs": 60,
+          "per_target_mean": {
+            "dbp": 0.008459767132284446,
+            "glucose": -0.012043118582692325,
+            "sbp": -0.0018157719904439262,
+            "total_cholesterol": -0.0041543585309383735,
+            "triglycerides": -0.00043105990429535,
+            "waist_cm": 0.0017622246517393248
+          },
+          "win_rate": 0.4666666666666667
+        },
+        "sign_random_4": {
+          "best_target": "dbp",
+          "ci95": [
+            -0.008447317501556985,
+            0.0028245121851682045
+          ],
+          "drop_best_target_mean": -0.004137790610366728,
+          "mean_gain": -0.002254872194383296,
+          "n_pairs": 60,
+          "per_target_mean": {
+            "dbp": 0.007159719885533866,
+            "glucose": -0.015647076615803224,
+            "sbp": -0.002436081671475043,
+            "total_cholesterol": -0.0031693448366944986,
+            "triglycerides": -0.0011583325621170703,
+            "waist_cm": 0.0017218826342561943
+          },
+          "win_rate": 0.4666666666666667
+        },
+        "sign_random_5": {
+          "best_target": "dbp",
+          "ci95": [
+            -0.005716687352976964,
+            0.0030195689094796164
+          ],
+          "drop_best_target_mean": -0.002541458311818674,
+          "mean_gain": -0.0011217402176960138,
+          "n_pairs": 60,
+          "per_target_mean": {
+            "dbp": 0.0059768502529172875,
+            "glucose": -0.010123735852457428,
+            "sbp": -0.0021359150863232814,
+            "total_cholesterol": -0.0038758133214109925,
+            "triglycerides": 0.0013740658270524398,
+            "waist_cm": 0.002054106874045891
+          },
+          "win_rate": 0.5
+        }
+      },
+      "desc_per_draw_RW4": {
+        "sign_random_1": {
+          "best_target": "total_cholesterol",
+          "ci95": [
+            -0.0011037139485238438,
+            0.0014284368324546568
+          ],
+          "drop_best_target_mean": -7.661259663825248e-05,
+          "mean_gain": 0.0001631013044306536,
+          "n_pairs": 60,
+          "per_target_mean": {
+            "dbp": -0.0015065218302538152,
+            "glucose": 0.000841541505380694,
+            "sbp": 1.1565131269031247e-05,
+            "total_cholesterol": 0.001361670809775184,
+            "triglycerides": 0.0003606528774320994,
+            "waist_cm": -9.030066701927186e-05
+          },
+          "win_rate": 0.55
+        },
+        "sign_random_2": {
+          "best_target": "dbp",
+          "ci95": [
+            0.0002250617906346755,
+            0.0038438181766156055
+          ],
+          "drop_best_target_mean": 0.0013158644049714974,
+          "mean_gain": 0.001733794178577705,
+          "n_pairs": 60,
+          "per_target_mean": {
+            "dbp": 0.003823443046608743,
+            "glucose": 0.001797506864983156,
+            "sbp": 0.0010864415268239335,
+            "total_cholesterol": 0.003110282175473911,
+            "triglycerides": 3.391050937734397e-05,
+            "waist_cm": 0.0005511809481991425
+          },
+          "win_rate": 0.65
+        },
+        "sign_random_3": {
+          "best_target": "dbp",
+          "ci95": [
+            -0.00025729435957272346,
+            0.0015371212627535269
+          ],
+          "drop_best_target_mean": 0.00045749813116747085,
+          "mean_gain": 0.0005971030873933858,
+          "n_pairs": 60,
+          "per_target_mean": {
+            "dbp": 0.0012951278685229607,
+            "glucose": 0.000659364371631388,
+            "sbp": 0.0005155816058730833,
+            "total_cholesterol": 0.00023018243227450607,
+            "triglycerides": 0.0007573293230149325,
+            "waist_cm": 0.00012503292304344438
+          },
+          "win_rate": 0.5833333333333334
+        },
+        "sign_random_4": {
+          "best_target": "total_cholesterol",
+          "ci95": [
+            -0.00198849768789257,
+            0.0009667802554151204
+          ],
+          "drop_best_target_mean": -0.0005878987088223275,
+          "mean_gain": -0.00028738290293220945,
+          "n_pairs": 60,
+          "per_target_mean": {
+            "dbp": -4.91937822761912e-06,
+            "glucose": -0.002944593661479511,
+            "sbp": -0.00010472807515803373,
+            "total_cholesterol": 0.0012151961265183808,
+            "triglycerides": 3.005666519321215e-05,
+            "waist_cm": 8.4690905560314e-05
+          },
+          "win_rate": 0.45
+        },
+        "sign_random_5": {
+          "best_target": "glucose",
+          "ci95": [
+            -0.0005432812357278871,
+            0.002298142310998241
+          ],
+          "drop_best_target_mean": 0.0004991494681328301,
+          "mean_gain": 0.0008457490737550727,
+          "n_pairs": 60,
+          "per_target_mean": {
+            "dbp": -0.001187789010844198,
+            "glucose": 0.0025787471018662855,
+            "sbp": 0.00019543850999372835,
+            "total_cholesterol": 0.0005087276418018871,
+            "triglycerides": 0.002562455054362722,
+            "waist_cm": 0.00041691514535001085
+          },
+          "win_rate": 0.6
+        }
+      },
+      "desc_within_cell_draw_sd_mean": 0.002954338080644944,
+      "n_cells": 60,
+      "replication_gate_all_pass": true,
+      "replication_gate_worst_abs_delta_nrmse": 0.0,
+      "targets_present": [
+        "dbp",
+        "glucose",
+        "sbp",
+        "total_cholesterol",
+        "triglycerides",
+        "waist_cm"
+      ]
+    }
+  },
+  "verdicts": {
+    "RW_P1_gate_and_reversal_separated": true,
+    "RW_P2_random_content_not_separated": true,
+    "RW_P3_reversal_beyond_random_separated": true
+  }
+}

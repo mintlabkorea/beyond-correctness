@@ -1,0 +1,36 @@
+% Phase-3 archived appendix unit
+% Phase-2 Unit ID(s): D-T04
+% Original location: Relation knowledge / graded input-column-removal ladder
+% Original source SHA-256: 726916622e270ad0c5fd157c2a9821e84742065551d407a942ac397611d5460c
+% Provenance: Frozen-before-execution extension
+% Original label(s): tab:app-relation-ladder
+% Compact PDF replacement: Trajectory figure plus endpoint/range prose in Phase-3 Section E.4
+% Content below is copied verbatim from the authoritative appendix.
+
+% Original lines 953--977
+\begin{table}[t]
+\caption{Graded input-column-removal ladder at $K=32$ (controlled benchmark, 20 realizations per family). Condition columns are mean nMSE, lower is better, for XGB; predictive utility is the paired reference-minus-intended difference, so the two condition columns subtract exactly to the XGB predictive utility. Rung $0$ and the final rung reproduce Tables~\ref{tab:app-relation-full} and~\ref{tab:app-relation-value-interface}. Bold marks intervals above zero. Only 8 of 20 sparse realizations have four constituents, so the final sparse rung is reported at its own $n$ rather than pooled.}
+\label{tab:app-relation-ladder}
+\centering\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{llrrrll}
+\toprule
+Family & $k$ removed & $n$ & Reference & Intended & Predictive utility (XGB) & Predictive utility (HistGB) \\
+\midrule
+Pairwise & 0 & 20 & 0.710 & 0.708 & +.002 [-.002, +.005] & +.001 [-.004, +.005] \\
+ & 1 & 20 & 0.749 & 0.713 & \textbf{+.036 [+.028, +.045]} & \textbf{+.035 [+.027, +.043]} \\
+ & 2 & 20 & 0.793 & 0.721 & \textbf{+.072 [+.062, +.083]} & \textbf{+.071 [+.059, +.083]} \\
+ & 3 & 20 & 0.848 & 0.725 & \textbf{+.123 [+.111, +.136]} & \textbf{+.122 [+.110, +.134]} \\
+ & 4 & 20 & 0.895 & 0.727 & \textbf{+.168 [+.153, +.182]} & \textbf{+.166 [+.151, +.181]} \\
+ & 5 & 20 & 0.945 & 0.737 & \textbf{+.207 [+.191, +.224]} & \textbf{+.208 [+.191, +.225]} \\
+ & 6 & 20 & 0.983 & 0.741 & \textbf{+.242 [+.227, +.257]} & \textbf{+.241 [+.227, +.255]} \\
+\addlinespace[2pt]
+Sparse & 0 & 20 & 0.731 & 0.731 & +.000 [-.003, +.003] & +.000 [-.003, +.004] \\
+ & 1 & 20 & 0.810 & 0.742 & \textbf{+.068 [+.044, +.096]} & \textbf{+.070 [+.046, +.099]} \\
+ & 2 & 20 & 0.896 & 0.752 & \textbf{+.143 [+.121, +.167]} & \textbf{+.142 [+.120, +.167]} \\
+ & 3 & 20 & 0.968 & 0.759 & \textbf{+.208 [+.190, +.228]} & \textbf{+.208 [+.188, +.228]} \\
+ & 4 & 8 & 1.023 & 0.776 & \textbf{+.247 [+.221, +.270]} & \textbf{+.246 [+.223, +.269]} \\
+\bottomrule
+\end{tabular}
+\end{table}
+

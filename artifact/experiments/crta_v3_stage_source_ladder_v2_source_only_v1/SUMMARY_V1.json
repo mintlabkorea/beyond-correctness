@@ -1,0 +1,392 @@
+{
+ "alphas": [
+  0.0,
+  0.25,
+  0.5,
+  0.75,
+  1.0
+ ],
+ "bootstrap": {
+  "reps": 10000,
+  "seed": 20260820,
+  "unit": "endpoint cluster (two directions averaged)"
+ },
+ "corrected": {
+  "RS_P1_spearman": {
+   "ci95": [
+    -0.005000000000000018,
+    0.33999999999999997
+   ],
+   "mean": 0.16499999999999998,
+   "n": 10,
+   "pass": false,
+   "win_positive": 0.6
+  },
+  "RS_P2_decline": {
+   "ci95": [
+    -0.02954651021390721,
+    -0.007348304380139302
+   ],
+   "mean": -0.018346156439944653,
+   "n": 10,
+   "pass": false,
+   "win_positive": 0.2
+  },
+  "endpoint_cluster_rho": {
+   "angina_history": 0.09999999999999992,
+   "arthritis_history": 0.4499999999999999,
+   "asthma_history": 0.5,
+   "cancer_history": -0.25,
+   "current_smoking_status": 0.09999999999999992,
+   "diabetes_history": 0.0,
+   "heart_attack_history": -0.04999999999999999,
+   "hypertension_history": 0.35,
+   "kidney_disease_history": -0.15,
+   "stroke_history": 0.5999999999999999
+  },
+  "per_direction_mean_curve": {
+   "kn2nh": [
+    0.04512472761705036,
+    0.045758798767269585,
+    0.04294585853207148,
+    0.04114895066796572,
+    0.04719376680018979
+   ],
+   "nh2kn": [
+    0.035828824389173564,
+    0.03329457218542463,
+    0.03364923991324417,
+    0.042675949127011524,
+    0.07045209808592345
+   ]
+  },
+  "per_unit_rho": {
+   "kn2nh|angina_history": -0.7,
+   "kn2nh|arthritis_history": 0.0,
+   "kn2nh|asthma_history": 0.7,
+   "kn2nh|cancer_history": -0.7,
+   "kn2nh|current_smoking_status": 0.8999999999999998,
+   "kn2nh|diabetes_history": 0.7,
+   "kn2nh|heart_attack_history": -0.7,
+   "kn2nh|hypertension_history": -0.3,
+   "kn2nh|kidney_disease_history": -0.39999999999999997,
+   "kn2nh|stroke_history": 0.3,
+   "nh2kn|angina_history": 0.8999999999999998,
+   "nh2kn|arthritis_history": 0.8999999999999998,
+   "nh2kn|asthma_history": 0.3,
+   "nh2kn|cancer_history": 0.19999999999999998,
+   "nh2kn|current_smoking_status": -0.7,
+   "nh2kn|diabetes_history": -0.7,
+   "nh2kn|heart_attack_history": 0.6,
+   "nh2kn|hypertension_history": 0.9999999999999999,
+   "nh2kn|kidney_disease_history": 0.09999999999999999,
+   "nh2kn|stroke_history": 0.8999999999999998
+  },
+  "pooled_I_by_alpha": {
+   "0.00": {
+    "ci95": [
+     0.024008496186240517,
+     0.058972858322059146
+    ],
+    "mean": 0.04047677600311196,
+    "n": 10,
+    "win_positive": 0.9
+   },
+   "0.25": {
+    "ci95": [
+     0.022771537625203394,
+     0.05984609353120502
+    ],
+    "mean": 0.039526685476347106,
+    "n": 10,
+    "win_positive": 1.0
+   },
+   "0.50": {
+    "ci95": [
+     0.0224358881778843,
+     0.057614696887768435
+    ],
+    "mean": 0.03829754922265783,
+    "n": 10,
+    "win_positive": 1.0
+   },
+   "0.75": {
+    "ci95": [
+     0.027791249461329104,
+     0.05994948856644615
+    ],
+    "mean": 0.04191244989748862,
+    "n": 10,
+    "win_positive": 1.0
+   },
+   "1.00": {
+    "ci95": [
+     0.04600696935669756,
+     0.07269286153842242
+    ],
+    "mean": 0.05882293244305662,
+    "n": 10,
+    "win_positive": 1.0
+   }
+  }
+ },
+ "drop_diabetes_sensitivity": {
+  "RS_P1_spearman": {
+   "ci95": [
+    -0.005555555555555576,
+    0.3722222222222221
+   ],
+   "mean": 0.1833333333333333,
+   "n": 9,
+   "pass": false,
+   "win_positive": 0.6666666666666666
+  },
+  "RS_P2_decline": {
+   "ci95": [
+    -0.03159140796153649,
+    -0.009257127928342417
+   ],
+   "mean": -0.020571360844792445,
+   "n": 9,
+   "pass": false,
+   "win_positive": 0.1111111111111111
+  },
+  "endpoint_cluster_rho": {
+   "angina_history": 0.09999999999999992,
+   "arthritis_history": 0.4499999999999999,
+   "asthma_history": 0.5,
+   "cancer_history": -0.25,
+   "current_smoking_status": 0.09999999999999992,
+   "heart_attack_history": -0.04999999999999999,
+   "hypertension_history": 0.35,
+   "kidney_disease_history": -0.15,
+   "stroke_history": 0.5999999999999999
+  },
+  "per_direction_mean_curve": {
+   "kn2nh": [
+    0.049173412420231405,
+    0.04849865444420251,
+    0.045168687066796324,
+    0.043880333651136735,
+    0.04689691752782149
+   ],
+   "nh2kn": [
+    0.016995927134820316,
+    0.01498182814185093,
+    0.016629665848383726,
+    0.02495621909007584,
+    0.0604151437168151
+   ]
+  },
+  "per_unit_rho": {
+   "kn2nh|angina_history": -0.7,
+   "kn2nh|arthritis_history": 0.0,
+   "kn2nh|asthma_history": 0.7,
+   "kn2nh|cancer_history": -0.7,
+   "kn2nh|current_smoking_status": 0.8999999999999998,
+   "kn2nh|heart_attack_history": -0.7,
+   "kn2nh|hypertension_history": -0.3,
+   "kn2nh|kidney_disease_history": -0.39999999999999997,
+   "kn2nh|stroke_history": 0.3,
+   "nh2kn|angina_history": 0.8999999999999998,
+   "nh2kn|arthritis_history": 0.8999999999999998,
+   "nh2kn|asthma_history": 0.3,
+   "nh2kn|cancer_history": 0.19999999999999998,
+   "nh2kn|current_smoking_status": -0.7,
+   "nh2kn|heart_attack_history": 0.6,
+   "nh2kn|hypertension_history": 0.9999999999999999,
+   "nh2kn|kidney_disease_history": 0.09999999999999999,
+   "nh2kn|stroke_history": 0.8999999999999998
+  },
+  "pooled_I_by_alpha": {
+   "0.00": {
+    "ci95": [
+     0.02020582723962623,
+     0.04531450249684215
+    ],
+    "mean": 0.03308466977752586,
+    "n": 9,
+    "win_positive": 0.8888888888888888
+   },
+   "0.25": {
+    "ci95": [
+     0.01889359304774773,
+     0.04487805373654659
+    ],
+    "mean": 0.031740241293026716,
+    "n": 9,
+    "win_positive": 1.0
+   },
+   "0.50": {
+    "ci95": [
+     0.018922142493352098,
+     0.043688538453888245
+    ],
+    "mean": 0.030899176457590025,
+    "n": 9,
+    "win_positive": 1.0
+   },
+   "0.75": {
+    "ci95": [
+     0.025182986609195976,
+     0.0438698287591697
+    ],
+    "mean": 0.034418276370606286,
+    "n": 9,
+    "win_positive": 1.0
+   },
+   "1.00": {
+    "ci95": [
+     0.04318177250999661,
+     0.06314118917241035
+    ],
+    "mean": 0.0536560306223183,
+    "n": 9,
+    "win_positive": 1.0
+   }
+  }
+ },
+ "expected_cells": 1000,
+ "found_cells": 1000,
+ "permutation_audit_check": {
+  "cells_without_audit_entry": [],
+  "n_without_audit_entry": 0,
+  "nestedness_verified": true
+ },
+ "permutation_audits_verified": true,
+ "raw_descriptive": {
+  "RS_P1_spearman": {
+   "ci95": [
+    -0.26499999999999996,
+    0.2899999999999999
+   ],
+   "mean": 0.025,
+   "n": 10,
+   "pass": false,
+   "win_positive": 0.5
+  },
+  "RS_P2_decline": {
+   "ci95": [
+    -0.02846530229540629,
+    0.002689428927900001
+   ],
+   "mean": -0.01330310956536494,
+   "n": 10,
+   "pass": false,
+   "win_positive": 0.4
+  },
+  "endpoint_cluster_rho": {
+   "angina_history": 0.09999999999999992,
+   "arthritis_history": 0.4499999999999999,
+   "asthma_history": 0.5,
+   "cancer_history": -0.6,
+   "current_smoking_status": -0.8499999999999999,
+   "diabetes_history": -0.09999999999999992,
+   "heart_attack_history": -0.04999999999999999,
+   "hypertension_history": 0.35,
+   "kidney_disease_history": -0.15,
+   "stroke_history": 0.5999999999999999
+  },
+  "per_direction_mean_curve": {
+   "kn2nh": [
+    0.025775946279701895,
+    0.023922987949762612,
+    0.019088991207914498,
+    0.016096361535366373,
+    0.02178554410719672
+   ],
+   "nh2kn": [
+    0.04128873744711673,
+    0.034677707840416974,
+    0.03384151297640911,
+    0.042568255068209535,
+    0.07188535875035179
+   ]
+  },
+  "per_unit_rho": {
+   "kn2nh|angina_history": -0.7,
+   "kn2nh|arthritis_history": 0.0,
+   "kn2nh|asthma_history": 0.7,
+   "kn2nh|cancer_history": -0.7,
+   "kn2nh|current_smoking_status": -0.9999999999999999,
+   "kn2nh|diabetes_history": 0.7,
+   "kn2nh|heart_attack_history": -0.7,
+   "kn2nh|hypertension_history": -0.3,
+   "kn2nh|kidney_disease_history": -0.39999999999999997,
+   "kn2nh|stroke_history": 0.3,
+   "nh2kn|angina_history": 0.8999999999999998,
+   "nh2kn|arthritis_history": 0.8999999999999998,
+   "nh2kn|asthma_history": 0.3,
+   "nh2kn|cancer_history": -0.49999999999999994,
+   "nh2kn|current_smoking_status": -0.7,
+   "nh2kn|diabetes_history": -0.8999999999999998,
+   "nh2kn|heart_attack_history": 0.6,
+   "nh2kn|hypertension_history": 0.9999999999999999,
+   "nh2kn|kidney_disease_history": 0.09999999999999999,
+   "nh2kn|stroke_history": 0.8999999999999998
+  },
+  "pooled_I_by_alpha": {
+   "0.00": {
+    "ci95": [
+     0.010541976885378135,
+     0.057707965013702046
+    ],
+    "mean": 0.033532341863409316,
+    "n": 10,
+    "win_positive": 0.8
+   },
+   "0.25": {
+    "ci95": [
+     0.00557062679548587,
+     0.054245368617492226
+    ],
+    "mean": 0.02930034789508979,
+    "n": 10,
+    "win_positive": 0.9
+   },
+   "0.50": {
+    "ci95": [
+     0.0015145002476073355,
+     0.051194602373875985
+    ],
+    "mean": 0.02646525209216181,
+    "n": 10,
+    "win_positive": 0.9
+   },
+   "0.75": {
+    "ci95": [
+     0.00283573354163207,
+     0.0543113731464068
+    ],
+    "mean": 0.02933230830178795,
+    "n": 10,
+    "win_positive": 0.9
+   },
+   "1.00": {
+    "ci95": [
+     0.01771173815164318,
+     0.06966378862160555
+    ],
+    "mean": 0.04683545142877425,
+    "n": 10,
+    "win_positive": 0.9
+   }
+  }
+ },
+ "v1_frozen_m_axis_reference": {
+  "RS_P1_rho_mean": 0.37999999999999995,
+  "RS_P2_decline_mean": -0.026124527764349665,
+  "pooled_I_by_alpha": {
+   "0.00": 0.031151124421987093,
+   "0.25": 0.031569486640359426,
+   "0.50": 0.03206247631859953,
+   "0.75": 0.035237854665454114,
+   "1.00": 0.05727565218633675
+  }
+ },
+ "verdicts": {
+  "RS_P1": false,
+  "RS_P2": false,
+  "ladder_verdict": false
+ }
+}

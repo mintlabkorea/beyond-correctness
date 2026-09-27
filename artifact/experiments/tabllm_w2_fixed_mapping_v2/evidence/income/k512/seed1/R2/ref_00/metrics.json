@@ -1,0 +1,79 @@
+{
+  "audit_sha256": "44d8155f8300b1a4b142415092942838f8537ce93a3aff3dda7acc545a5864e2",
+  "cell": [
+    "income",
+    512,
+    1,
+    "R2",
+    "ref_00"
+  ],
+  "checkpoint_sha256": "8fe7a00fb425dd331c7a021c9468d50a14ec2ca1998007e7ead5ce3111405729",
+  "completed_at_utc": "2026-09-11T09:06:24.308864+00:00",
+  "design_sha256": "5cdac31d67a015ebca58c1f61ac5f150b842e88eced1d18b254345199302899b",
+  "feature_to_identifier": {
+    "Age": "Field A",
+    "Capital gain last year": "Field I",
+    "Capital loss last year": "Field J",
+    "Education": "Field K",
+    "Marital status": "Field D",
+    "Native country": "Field F",
+    "Occupation": "Field G",
+    "Race": "Field B",
+    "Relation to head of the household": "Field E",
+    "Sex": "Field C",
+    "Work class": "Field H",
+    "Work hours per week": "Field L"
+  },
+  "gpu": 2,
+  "initial_trainable_state_sha256": "2b3e0be8998a1d12a84a7b358726205cce0c83973fb198a1c37bdac6aa3fbd0b",
+  "metrics": {
+    "accuracy": 0.776230934589006,
+    "auc": 0.8622348833963668
+  },
+  "model_audit": {
+    "checkpoint_key_count": 192,
+    "checkpoint_parameter_count": 1081344,
+    "frozen_parameter_count": 11136118784,
+    "initial_trainable_state_sha256": "2b3e0be8998a1d12a84a7b358726205cce0c83973fb198a1c37bdac6aa3fbd0b",
+    "missing_base_model_key_count": 752,
+    "parameter_dtype": "torch.bfloat16",
+    "precision_layout": "frozen=bfloat16, trainable_ia3=float32",
+    "trainable_parameter_count": 1081344,
+    "trainable_parameter_dtype": "torch.float32",
+    "trainable_tensor_count": 192
+  },
+  "model_files": {
+    ".gitattributes": "98ccb431c012ebfe976280fbd45aea4cec7409935868ccecf3954370f96732a1",
+    "README.md": "4d4029cb81f74695a450f4497dd12aa34f3e86bf98d3c480ed1231a015cebb45",
+    "config.json": "ef552104049013790961bd3624ac91cacdd8d9aabd09201f8b30e2f06693d97f",
+    "pytorch_model.bin": "806b1cfa7743d85fddc12bdba93b701c572816c7cc47108ee93fccffe4b6ee7f",
+    "special_tokens_map.json": "4720c0fddbe4c5991334f85ad7073d9bd0a294a8ba4641a2f8dab614ca825949",
+    "spiece.model": "d60acb128cf7b7f2536e8f38a5b18a05535c9e14c7a355904270e15b0945ea86",
+    "tokenizer_config.json": "b971dce1d2805c2a66da8657156e7114a30501c6ba602fc947c8bf607a3ead2d"
+  },
+  "prompt_audit_sha256": "949006785f282322dd5a06502b056a233ab4429ebe113ca7d7cfcf9fbfd651ae",
+  "seconds": 762.0693425079808,
+  "split_sha256": "119e48aab7999475d82d4258dedb0875d54fa2613c8c31aae1dbda2a1942c831",
+  "trained_checkpoint_sha256": "344e5073d6dcc5235b40616f7aadc656edbc3fb598afaf6d0511040cd05f6417",
+  "training": {
+    "batch_order_sha256": "4875b393478d0fab86d7cd569f9f62adacd23f2aed6564c3ca900981fa70dc57",
+    "executed_steps": 3840,
+    "loss_first": {
+      "gradient_norm_pre_clip": 0.5221765637397766,
+      "lm_loss": 0.3789207935333252,
+      "loss": 3.417405605316162,
+      "lr": 1.3020833333333334e-05,
+      "mc_loss": 0.5507572889328003,
+      "unlikely_loss": 2.487727403640747
+    },
+    "loss_last": {
+      "gradient_norm_pre_clip": 4.885873317718506,
+      "lm_loss": 0.2717933654785156,
+      "loss": 1.090217113494873,
+      "lr": 0.0,
+      "mc_loss": 0.2963714003562927,
+      "unlikely_loss": 0.5220523476600647
+    },
+    "planned_steps": 3840
+  }
+}

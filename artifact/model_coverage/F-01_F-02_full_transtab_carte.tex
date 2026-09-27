@@ -1,0 +1,118 @@
+% Phase-3 archived appendix unit
+% Phase-2 Unit ID(s): F-01; F-02
+% Original location: Semantics-native model-coverage extensions
+% Original source SHA-256: 726916622e270ad0c5fd157c2a9821e84742065551d407a942ac397611d5460c
+% Provenance: Post-result model-coverage extensions
+% Original label(s): sec:app-learner-coverage; tab:app-transtab-correspondence; tab:app-carte-mcr
+% Compact PDF replacement: Balanced TransTab/CARTE matrix in Phase-3 Section F
+% Content below is copied verbatim from the authoritative appendix.
+
+% Original lines 1546--1652
+\section{Semantics-native model-coverage extensions}
+\label{sec:app-learner-coverage}
+\label{app:semantic_learners}
+
+TransTab and CARTE are \emph{post-result model-coverage extensions}, not
+members of the predictor set fixed before execution, and their evidence is not
+uniform. The TransTab four-condition extension attributes the conventional gap
+to shared identifiers and worse performance under the wrong condition rather
+than to positive name sensitivity beyond those identifiers. CARTE supplies
+qualified $K=512$ content sensitivity without uniform predictive utility or a
+relation replication.
+
+For TransTab, other semantic knowledge is held in the intended condition while
+correspondence knowledge varies. The four conditions use intended names, anonymous
+identifiers shared across corresponding source/target columns, stable anonymous
+identifiers with distinct domain-local namespaces, and wrong names. The
+distinct-anonymous reference preserves within-domain column identity and
+source transfer while removing shared cross-domain identifiers; it
+is not target-only. 
+The reference intentionally removes transfer mediated by shared cross-domain
+identifier identity, which is the tested semantic knowledge. Source rows,
+within-domain identities, model parameterization, and all other training paths
+are unchanged. Because the reference uses a larger identifier vocabulary than
+the shared-identifier condition, it does not have fewer embedding parameters,
+so its lower score cannot be attributed to reduced capacity.
+At $K=32$, the shared-identifier condition exceeds the reference by
+$+.114$--$+.129$, while $Q_{\mathrm{wrong}}-Q_{\mathrm{reference}}$ is
+$-.456$--$-.361$; worse performance under the wrong condition accounts for
+74--80\% of the conventional intended--wrong gap. At $K=512$, the
+same shared-identifier difference attenuates to $+.007$--$+.009$, and worse
+performance under the wrong condition accounts for 97--100\% of the gap.
+The intended-minus-shared-identifier difference has no positive interval in any
+of the six family--budget strata and is negative in three. Exact decomposition
+residuals are below $1.2\times10^{-16}$.
+
+The authoritative official-source runs use Transformers 4.30.0.  For the
+earlier three-condition compatibility grid, an audit against 5.12.0 exactly matched
+all 360 normalized-MSE floats, 1,080 construction hashes, and prespecified
+contrasts; the new four-condition grid was refit only under the authoritative
+environment.  Because the regression head postdates the
+original TransTab paper and the model in the four-condition analysis is initialized from scratch,
+the name/token contrast is not an identification of pretrained language
+semantics; tokenization, surface statistics, and optimization remain possible
+causes.  A pretrained schema-token encoder could in principle produce a
+positive name/token contrast; this experiment instead identifies the
+contribution of shared tokens in the scratch-initialized model as shared
+identity rather than lexical semantic knowledge. Compatibility details are in the
+artifact README.
+
+CARTE receives the full M/C/R condition set fixed before execution. Its
+correspondence knowledge slice is inconclusive at $K=32$ but separates intended from
+wrong in all three
+families at $K=512$; the across-family min-statistic interval is
+$[+.003,+.048]$.  Intended-versus-reference predictive utility separates in
+pairwise and sparse but not additive at $K=512$, so CARTE supports
+content sensitivity for correspondence knowledge at that budget, not an all-budget
+predictive-utility claim. Measurement knowledge is
+mixed and relation knowledge is not statistically separated from zero under CARTE's
+value/graph implementation. CARTE is therefore not presented as a full TransTab
+replication.
+
+{\tiny\setlength{\tabcolsep}{2.5pt}
+\begin{longtable}{ccP{0.105\linewidth}P{0.18\linewidth}P{0.18\linewidth}P{0.18\linewidth}P{0.18\linewidth}}
+\caption{Post-result TransTab decomposition under one four-condition runner. The first two differences are intended minus the condition with shared anonymous identifiers, and that shared-identifier condition minus reference. $Q_{\mathrm{wrong}}-Q_{\mathrm{reference}}$ is wrong minus reference, so a negative value indicates worse performance under the wrong condition; content sensitivity is intended minus wrong. Positive values favor the first named condition. Intervals resample the 20 realizations within each fixed family, and bold intervals exclude zero.}\label{tab:app-transtab-correspondence}\label{tab:app_transtab}\\
+\toprule
+$K$ & Family & Unit & $Q_{\mathrm{intended}}-Q_{\mathrm{shared}}$ & $Q_{\mathrm{shared}}-Q_{\mathrm{reference}}$ & $Q_{\mathrm{wrong}}-Q_{\mathrm{reference}}$ & Content sensitivity \\
+\midrule\endfirsthead
+\multicolumn{7}{c}{\tablename\ \thetable\ (continued)}\\
+\toprule $K$ & Family & Unit & $Q_{\mathrm{intended}}-Q_{\mathrm{shared}}$ & $Q_{\mathrm{shared}}-Q_{\mathrm{reference}}$ & $Q_{\mathrm{wrong}}-Q_{\mathrm{reference}}$ & Content sensitivity \\
+\midrule\endhead
+\bottomrule\endfoot
+32 & Additive & 20 realizations & \textbf{-.011 [-.016,-.006]} & \textbf{+.114 [+.087,+.143]} & \textbf{-.424 [-.513,-.338]} & \textbf{+.527 [+.438,+.617]} \\
+32 & Pairwise & 20 realizations & +.001 [-.002,+.005] & \textbf{+.129 [+.095,+.165]} & \textbf{-.361 [-.458,-.268]} & \textbf{+.491 [+.390,+.593]} \\
+32 & Sparse & 20 realizations & -.004 [-.010,+.001] & \textbf{+.126 [+.089,+.169]} & \textbf{-.456 [-.549,-.372]} & \textbf{+.577 [+.491,+.674]} \\
+512 & Additive & 20 realizations & \textbf{-.007 [-.010,-.003]} & \textbf{+.007 [+.002,+.012]} & \textbf{-.160 [-.186,-.134]} & \textbf{+.161 [+.132,+.188]} \\
+512 & Pairwise & 20 realizations & -.002 [-.005,+.001] & \textbf{+.007 [+.002,+.012]} & \textbf{-.152 [-.187,-.119]} & \textbf{+.157 [+.125,+.193]} \\
+512 & Sparse & 20 realizations & \textbf{-.008 [-.011,-.005]} & \textbf{+.009 [+.002,+.015]} & \textbf{-.165 [-.189,-.141]} & \textbf{+.165 [+.144,+.189]} \\
+\end{longtable}
+ \begin{longtable}{P{0.045\linewidth}P{0.09\linewidth}P{0.13\linewidth}P{0.18\linewidth}P{0.18\linewidth}P{0.18\linewidth}}
+\caption{Post-result model-coverage extension: CARTE on the M/C/R conditions fixed before execution. The last column reports wrong minus reference. Measurement knowledge and relation knowledge are held intended for the conditional correspondence knowledge slice, and analogously for the other kinds of semantic knowledge. Positive values favor the first named condition; intervals resample the 20 realizations within each fixed family, and bold intervals exclude zero.}\label{tab:app-carte-mcr}\label{tab:app_carte}\\
+\toprule
+$K$ & Family & Kind of semantic knowledge & Content sensitivity & Predictive utility & $Q_{\mathrm{wrong}}-Q_{\mathrm{reference}}$ \\
+\midrule\endfirsthead
+\multicolumn{6}{c}{\tablename\ \thetable\ (continued)}\\
+\toprule $K$ & Family & Kind of semantic knowledge & Content sensitivity & Predictive utility & $Q_{\mathrm{wrong}}-Q_{\mathrm{reference}}$ \\
+\midrule\endhead
+\bottomrule\endfoot
+32 & Additive & Measurement knowledge & +.015 [-.038,+.074] & +.026 [-.018,+.071] & +.011 [-.031,+.052] \\
+32 & Pairwise & Measurement knowledge & +.026 [-.021,+.098] & +.034 [-.010,+.090] & +.008 [-.045,+.066] \\
+32 & Sparse & Measurement knowledge & \textbf{+.105 [+.028,+.200]} & +.064 [-.009,+.143] & -.040 [-.127,+.029] \\
+32 & Additive & Correspondence knowledge & +.033 [-.012,+.083] & +.008 [-.039,+.058] & -.025 [-.061,+.008] \\
+32 & Pairwise & Correspondence knowledge & +.045 [-.003,+.103] & -.014 [-.092,+.072] & -.059 [-.128,+.003] \\
+32 & Sparse & Correspondence knowledge & \textbf{+.077 [+.020,+.138]} & +.153 [-.001,+.347] & +.076 [-.063,+.255] \\
+32 & Additive & Relation knowledge & +.027 [-.008,+.066] & -.023 [-.082,+.035] & -.050 [-.123,+.022] \\
+32 & Pairwise & Relation knowledge & -.002 [-.048,+.040] & -.017 [-.075,+.044] & -.014 [-.068,+.041] \\
+32 & Sparse & Relation knowledge & -.014 [-.092,+.068] & +.040 [-.041,+.130] & +.054 [-.029,+.144] \\
+\addlinespace[1pt]
+512 & Additive & Measurement knowledge & +.031 [-.002,+.054] & +.025 [-.012,+.050] & -.006 [-.022,+.009] \\
+512 & Pairwise & Measurement knowledge & \textbf{+.039 [+.028,+.051]} & \textbf{+.033 [+.023,+.043]} & -.006 [-.021,+.007] \\
+512 & Sparse & Measurement knowledge & \textbf{+.042 [+.032,+.052]} & \textbf{+.027 [+.014,+.041]} & -.015 [-.032,+.002] \\
+512 & Additive & Correspondence knowledge & \textbf{+.041 [+.003,+.067]} & +.025 [-.013,+.050] & -.016 [-.033,+.002] \\
+512 & Pairwise & Correspondence knowledge & \textbf{+.037 [+.023,+.051]} & \textbf{+.025 [+.016,+.035]} & \textbf{-.012 [-.022,-.002]} \\
+512 & Sparse & Correspondence knowledge & \textbf{+.058 [+.039,+.078]} & \textbf{+.024 [+.015,+.033]} & \textbf{-.034 [-.051,-.018]} \\
+512 & Additive & Relation knowledge & -.014 [-.051,+.008] & -.017 [-.053,+.007] & -.002 [-.011,+.006] \\
+512 & Pairwise & Relation knowledge & +.031 [-.005,+.080] & +.003 [-.007,+.013] & -.029 [-.080,+.009] \\
+512 & Sparse & Relation knowledge & +.005 [-.004,+.014] & +.004 [-.004,+.011] & -.001 [-.013,+.010] \\
+\end{longtable}
+

@@ -1,0 +1,744 @@
+{
+  "contract_version": "crta-1.0.0",
+  "schema_pair_id": "nhanes_to_knhanes_shared_clinical_v1",
+  "candidate_budgets": {
+    "max_concepts": 24,
+    "max_relations": 48
+  },
+  "tables": [
+    {
+      "table_id": "source",
+      "schema_name": "NHANES shared_clinical_v1 raw feature schema",
+      "columns": [
+        {
+          "column_id": "BMXHT",
+          "display_name": "Standing Height (cm)",
+          "dtype": "numeric",
+          "role": "feature",
+          "candidate_eligible": true,
+          "value_domain": "nonnegative",
+          "unit": {
+            "symbol": "cm",
+            "dimension": "length",
+            "canonical_symbol": "m",
+            "scale_to_canonical": 0.01,
+            "offset_to_canonical": 0.0
+          },
+          "evidence_span_ids": [
+            "source.nhanes_raw_codebook_surface.BMXHT"
+          ]
+        },
+        {
+          "column_id": "BMXWAIST",
+          "display_name": "Waist Circumference (cm)",
+          "dtype": "numeric",
+          "role": "feature",
+          "candidate_eligible": true,
+          "value_domain": "nonnegative",
+          "unit": {
+            "symbol": "cm",
+            "dimension": "length",
+            "canonical_symbol": "m",
+            "scale_to_canonical": 0.01,
+            "offset_to_canonical": 0.0
+          },
+          "evidence_span_ids": [
+            "source.nhanes_raw_codebook_surface.BMXWAIST"
+          ]
+        },
+        {
+          "column_id": "BMXWT",
+          "display_name": "Weight (kg)",
+          "dtype": "numeric",
+          "role": "feature",
+          "candidate_eligible": true,
+          "value_domain": "nonnegative",
+          "unit": {
+            "symbol": "kg",
+            "dimension": "mass",
+            "canonical_symbol": "kg",
+            "scale_to_canonical": 1.0,
+            "offset_to_canonical": 0.0
+          },
+          "evidence_span_ids": [
+            "source.nhanes_raw_codebook_surface.BMXWT"
+          ]
+        },
+        {
+          "column_id": "BPXDI1",
+          "display_name": "Diastolic: Blood pres (1st rdg) mm Hg",
+          "dtype": "numeric",
+          "role": "feature",
+          "candidate_eligible": true,
+          "value_domain": "nonnegative",
+          "unit": {
+            "symbol": "mmhg",
+            "dimension": "pressure",
+            "canonical_symbol": "Pa",
+            "scale_to_canonical": 133.322387415,
+            "offset_to_canonical": 0.0
+          },
+          "evidence_span_ids": [
+            "source.nhanes_raw_codebook_surface.BPXDI1"
+          ]
+        },
+        {
+          "column_id": "BPXSY1",
+          "display_name": "Systolic: Blood pres (1st rdg) mm Hg",
+          "dtype": "numeric",
+          "role": "feature",
+          "candidate_eligible": true,
+          "value_domain": "nonnegative",
+          "unit": {
+            "symbol": "mmhg",
+            "dimension": "pressure",
+            "canonical_symbol": "Pa",
+            "scale_to_canonical": 133.322387415,
+            "offset_to_canonical": 0.0
+          },
+          "evidence_span_ids": [
+            "source.nhanes_raw_codebook_surface.BPXSY1"
+          ]
+        },
+        {
+          "column_id": "LBXGH",
+          "display_name": "Glycohemoglobin (%)",
+          "dtype": "numeric",
+          "role": "feature",
+          "candidate_eligible": true,
+          "value_domain": "nonnegative",
+          "unit": {
+            "symbol": "%",
+            "dimension": "fraction_percent",
+            "canonical_symbol": "%",
+            "scale_to_canonical": 1.0,
+            "offset_to_canonical": 0.0
+          },
+          "evidence_span_ids": [
+            "source.nhanes_raw_codebook_surface.LBXGH"
+          ]
+        },
+        {
+          "column_id": "LBXGLU",
+          "display_name": "Fasting Glucose (mg/dL)",
+          "dtype": "numeric",
+          "role": "feature",
+          "candidate_eligible": true,
+          "value_domain": "nonnegative",
+          "unit": {
+            "symbol": "mg/dL",
+            "dimension": "mass_concentration",
+            "canonical_symbol": "mg/dL",
+            "scale_to_canonical": 1.0,
+            "offset_to_canonical": 0.0
+          },
+          "evidence_span_ids": [
+            "source.nhanes_raw_codebook_surface.LBXGLU"
+          ]
+        },
+        {
+          "column_id": "LBXHGB",
+          "display_name": "Hemoglobin (g/dL)",
+          "dtype": "numeric",
+          "role": "feature",
+          "candidate_eligible": true,
+          "value_domain": "nonnegative",
+          "unit": {
+            "symbol": "g/dl",
+            "dimension": "mass_concentration",
+            "canonical_symbol": "g/L",
+            "scale_to_canonical": 10.0,
+            "offset_to_canonical": 0.0
+          },
+          "evidence_span_ids": [
+            "source.nhanes_raw_codebook_surface.LBXHGB"
+          ]
+        },
+        {
+          "column_id": "LBXSCR",
+          "display_name": "Creatinine, refrigerated serum (mg/dL)",
+          "dtype": "numeric",
+          "role": "feature",
+          "candidate_eligible": true,
+          "value_domain": "nonnegative",
+          "unit": {
+            "symbol": "mg/dL",
+            "dimension": "mass_concentration",
+            "canonical_symbol": "mg/dL",
+            "scale_to_canonical": 1.0,
+            "offset_to_canonical": 0.0
+          },
+          "evidence_span_ids": [
+            "source.nhanes_raw_codebook_surface.LBXSCR"
+          ]
+        },
+        {
+          "column_id": "LBXSTR",
+          "display_name": "Triglycerides, refrig serum (mg/dL)",
+          "dtype": "numeric",
+          "role": "feature",
+          "candidate_eligible": true,
+          "value_domain": "nonnegative",
+          "unit": {
+            "symbol": "mg/dL",
+            "dimension": "mass_concentration",
+            "canonical_symbol": "mg/dL",
+            "scale_to_canonical": 1.0,
+            "offset_to_canonical": 0.0
+          },
+          "evidence_span_ids": [
+            "source.nhanes_raw_codebook_surface.LBXSTR"
+          ]
+        },
+        {
+          "column_id": "LBXTC",
+          "display_name": "Total Cholesterol (mg/dL)",
+          "dtype": "numeric",
+          "role": "feature",
+          "candidate_eligible": true,
+          "value_domain": "nonnegative",
+          "unit": {
+            "symbol": "mg/dL",
+            "dimension": "mass_concentration",
+            "canonical_symbol": "mg/dL",
+            "scale_to_canonical": 1.0,
+            "offset_to_canonical": 0.0
+          },
+          "evidence_span_ids": [
+            "source.nhanes_raw_codebook_surface.LBXTC"
+          ]
+        },
+        {
+          "column_id": "RIDAGEYR",
+          "display_name": "Age in years at screening",
+          "dtype": "numeric",
+          "role": "feature",
+          "candidate_eligible": true,
+          "value_domain": "nonnegative",
+          "unit": {
+            "symbol": "years",
+            "dimension": "time",
+            "canonical_symbol": "year",
+            "scale_to_canonical": 1.0,
+            "offset_to_canonical": 0.0
+          },
+          "evidence_span_ids": [
+            "source.nhanes_raw_codebook_surface.RIDAGEYR"
+          ]
+        }
+      ]
+    },
+    {
+      "table_id": "target",
+      "schema_name": "KNHANES shared_clinical_v1 processed feature schema",
+      "columns": [
+        {
+          "column_id": "ALL__age",
+          "display_name": "나이",
+          "dtype": "numeric",
+          "role": "feature",
+          "candidate_eligible": true,
+          "value_domain": "nonnegative",
+          "unit": {
+            "symbol": "unknown",
+            "dimension": "unknown",
+            "canonical_symbol": "unknown",
+            "scale_to_canonical": 1.0,
+            "offset_to_canonical": 0.0
+          },
+          "evidence_span_ids": [
+            "target.knhanes_2020_2024_official_codebook.ALL__age"
+          ]
+        },
+        {
+          "column_id": "ALL__he_chol",
+          "display_name": "총콜레스테롤",
+          "dtype": "numeric",
+          "role": "feature",
+          "candidate_eligible": true,
+          "value_domain": "nonnegative",
+          "unit": {
+            "symbol": "mg/dl",
+            "dimension": "mass_concentration",
+            "canonical_symbol": "mg/dL",
+            "scale_to_canonical": 1.0,
+            "offset_to_canonical": 0.0
+          },
+          "evidence_span_ids": [
+            "target.knhanes_2020_2024_official_codebook.ALL__he_chol"
+          ]
+        },
+        {
+          "column_id": "ALL__he_crea",
+          "display_name": "혈중크레아티닌",
+          "dtype": "numeric",
+          "role": "feature",
+          "candidate_eligible": true,
+          "value_domain": "nonnegative",
+          "unit": {
+            "symbol": "mg/dl",
+            "dimension": "mass_concentration",
+            "canonical_symbol": "mg/dL",
+            "scale_to_canonical": 1.0,
+            "offset_to_canonical": 0.0
+          },
+          "evidence_span_ids": [
+            "target.knhanes_2020_2024_official_codebook.ALL__he_crea"
+          ]
+        },
+        {
+          "column_id": "ALL__he_dbp1",
+          "display_name": "1차 이완기 혈압",
+          "dtype": "numeric",
+          "role": "feature",
+          "candidate_eligible": true,
+          "value_domain": "nonnegative",
+          "unit": {
+            "symbol": "mmhg",
+            "dimension": "pressure",
+            "canonical_symbol": "Pa",
+            "scale_to_canonical": 133.322387415,
+            "offset_to_canonical": 0.0
+          },
+          "evidence_span_ids": [
+            "target.knhanes_2020_2024_official_codebook.ALL__he_dbp1"
+          ]
+        },
+        {
+          "column_id": "ALL__he_glu",
+          "display_name": "공복혈당",
+          "dtype": "numeric",
+          "role": "feature",
+          "candidate_eligible": true,
+          "value_domain": "nonnegative",
+          "unit": {
+            "symbol": "mg/dl",
+            "dimension": "mass_concentration",
+            "canonical_symbol": "mg/dL",
+            "scale_to_canonical": 1.0,
+            "offset_to_canonical": 0.0
+          },
+          "evidence_span_ids": [
+            "target.knhanes_2020_2024_official_codebook.ALL__he_glu"
+          ]
+        },
+        {
+          "column_id": "ALL__he_hb",
+          "display_name": "헤모글로빈",
+          "dtype": "numeric",
+          "role": "feature",
+          "candidate_eligible": true,
+          "value_domain": "nonnegative",
+          "unit": {
+            "symbol": "g/dl",
+            "dimension": "mass_concentration",
+            "canonical_symbol": "g/L",
+            "scale_to_canonical": 10.0,
+            "offset_to_canonical": 0.0
+          },
+          "evidence_span_ids": [
+            "target.knhanes_2020_2024_official_codebook.ALL__he_hb"
+          ]
+        },
+        {
+          "column_id": "ALL__he_hba1c",
+          "display_name": "당화혈색소",
+          "dtype": "numeric",
+          "role": "feature",
+          "candidate_eligible": true,
+          "value_domain": "nonnegative",
+          "unit": {
+            "symbol": "%",
+            "dimension": "fraction_percent",
+            "canonical_symbol": "%",
+            "scale_to_canonical": 1.0,
+            "offset_to_canonical": 0.0
+          },
+          "evidence_span_ids": [
+            "target.knhanes_2020_2024_official_codebook.ALL__he_hba1c"
+          ]
+        },
+        {
+          "column_id": "ALL__he_ht",
+          "display_name": "신장",
+          "dtype": "numeric",
+          "role": "feature",
+          "candidate_eligible": true,
+          "value_domain": "nonnegative",
+          "unit": {
+            "symbol": "cm",
+            "dimension": "length",
+            "canonical_symbol": "m",
+            "scale_to_canonical": 0.01,
+            "offset_to_canonical": 0.0
+          },
+          "evidence_span_ids": [
+            "target.knhanes_2020_2024_official_codebook.ALL__he_ht"
+          ]
+        },
+        {
+          "column_id": "ALL__he_sbp1",
+          "display_name": "1차 수축기 혈압",
+          "dtype": "numeric",
+          "role": "feature",
+          "candidate_eligible": true,
+          "value_domain": "nonnegative",
+          "unit": {
+            "symbol": "mmhg",
+            "dimension": "pressure",
+            "canonical_symbol": "Pa",
+            "scale_to_canonical": 133.322387415,
+            "offset_to_canonical": 0.0
+          },
+          "evidence_span_ids": [
+            "target.knhanes_2020_2024_official_codebook.ALL__he_sbp1"
+          ]
+        },
+        {
+          "column_id": "ALL__he_tg",
+          "display_name": "중성지방",
+          "dtype": "numeric",
+          "role": "feature",
+          "candidate_eligible": true,
+          "value_domain": "nonnegative",
+          "unit": {
+            "symbol": "mg/dl",
+            "dimension": "mass_concentration",
+            "canonical_symbol": "mg/dL",
+            "scale_to_canonical": 1.0,
+            "offset_to_canonical": 0.0
+          },
+          "evidence_span_ids": [
+            "target.knhanes_2020_2024_official_codebook.ALL__he_tg"
+          ]
+        },
+        {
+          "column_id": "ALL__he_wc",
+          "display_name": "허리둘레",
+          "dtype": "numeric",
+          "role": "feature",
+          "candidate_eligible": true,
+          "value_domain": "nonnegative",
+          "unit": {
+            "symbol": "cm",
+            "dimension": "length",
+            "canonical_symbol": "m",
+            "scale_to_canonical": 0.01,
+            "offset_to_canonical": 0.0
+          },
+          "evidence_span_ids": [
+            "target.knhanes_2020_2024_official_codebook.ALL__he_wc"
+          ]
+        },
+        {
+          "column_id": "ALL__he_wt",
+          "display_name": "체중",
+          "dtype": "numeric",
+          "role": "feature",
+          "candidate_eligible": true,
+          "value_domain": "nonnegative",
+          "unit": {
+            "symbol": "kg",
+            "dimension": "mass",
+            "canonical_symbol": "kg",
+            "scale_to_canonical": 1.0,
+            "offset_to_canonical": 0.0
+          },
+          "evidence_span_ids": [
+            "target.knhanes_2020_2024_official_codebook.ALL__he_wt"
+          ]
+        }
+      ]
+    }
+  ],
+  "evidence_spans": [
+    {
+      "span_id": "source.nhanes_raw_codebook_surface.BMXHT",
+      "document_id": "nhanes_raw_codebook_surface",
+      "applies_to": [
+        "source"
+      ],
+      "location": "stage4_codebook_surface_corpus_v0.csv:row:20:BMX",
+      "text": "raw_variable_name: BMXHT | codebook_label: Standing Height (cm) | codebook_description: Standing Height (cm) | unit: cm | module: BMX",
+      "sha256": "7cea96c2185003eab1e023992f72f9b1aa289d92fc89e24e16f0c658eb6e3bac",
+      "candidate_eligible": true,
+      "exclusion_reason": null
+    },
+    {
+      "span_id": "source.nhanes_raw_codebook_surface.BMXWAIST",
+      "document_id": "nhanes_raw_codebook_surface",
+      "applies_to": [
+        "source"
+      ],
+      "location": "stage4_codebook_surface_corpus_v0.csv:row:627:BMX",
+      "text": "raw_variable_name: BMXWAIST | codebook_label: Waist Circumference (cm) | codebook_description: Waist Circumference (cm) | unit: cm | module: BMX",
+      "sha256": "90dba486d00355371fdd4fc10bee5a2c660a961a0d51f7665b3c08104ee205fe",
+      "candidate_eligible": true,
+      "exclusion_reason": null
+    },
+    {
+      "span_id": "source.nhanes_raw_codebook_surface.BMXWT",
+      "document_id": "nhanes_raw_codebook_surface",
+      "applies_to": [
+        "source"
+      ],
+      "location": "stage4_codebook_surface_corpus_v0.csv:row:628:BMX",
+      "text": "raw_variable_name: BMXWT | codebook_label: Weight (kg) | codebook_description: Weight (kg) | unit: kg | module: BMX",
+      "sha256": "9f6ebe98add70958ddaa0247fcd044a9a642818c607c2ca3d3abc483d1c79894",
+      "candidate_eligible": true,
+      "exclusion_reason": null
+    },
+    {
+      "span_id": "source.nhanes_raw_codebook_surface.BPXDI1",
+      "document_id": "nhanes_raw_codebook_surface",
+      "applies_to": [
+        "source"
+      ],
+      "location": "stage4_codebook_surface_corpus_v0.csv:row:13481:BPX",
+      "text": "raw_variable_name: BPXDI1 | codebook_label: Diastolic: Blood pres (1st rdg) mm Hg | codebook_description: Diastolic: Blood pres (1st rdg) mm Hg | module: BPX",
+      "sha256": "b0571bfa570393c75c920f658b26354f3f97e534739090657bfc62038b7d1349",
+      "candidate_eligible": true,
+      "exclusion_reason": null
+    },
+    {
+      "span_id": "source.nhanes_raw_codebook_surface.BPXSY1",
+      "document_id": "nhanes_raw_codebook_surface",
+      "applies_to": [
+        "source"
+      ],
+      "location": "stage4_codebook_surface_corpus_v0.csv:row:13499:BPX",
+      "text": "raw_variable_name: BPXSY1 | codebook_label: Systolic: Blood pres (1st rdg) mm Hg | codebook_description: Systolic: Blood pres (1st rdg) mm Hg | module: BPX",
+      "sha256": "dd230c321b1fadf7332bba25ea5fb3421266f3a616edc769e2f5230169942897",
+      "candidate_eligible": true,
+      "exclusion_reason": null
+    },
+    {
+      "span_id": "source.nhanes_raw_codebook_surface.LBXGH",
+      "document_id": "nhanes_raw_codebook_surface",
+      "applies_to": [
+        "source"
+      ],
+      "location": "stage4_codebook_surface_corpus_v0.csv:row:2220:GHB_D",
+      "text": "raw_variable_name: LBXGH | codebook_label: Glycohemoglobin (%) | codebook_description: Glycohemoglobin (%) | unit: % | module: GHB_D",
+      "sha256": "5c33927aab8c33693404d597a132c19efca53dc83eb27ceb1d07f52c51c6f63f",
+      "candidate_eligible": true,
+      "exclusion_reason": null
+    },
+    {
+      "span_id": "source.nhanes_raw_codebook_surface.LBXGLU",
+      "document_id": "nhanes_raw_codebook_surface",
+      "applies_to": [
+        "source"
+      ],
+      "location": "stage4_codebook_surface_corpus_v0.csv:row:2222:GLU_D",
+      "text": "raw_variable_name: LBXGLU | codebook_label: Fasting Glucose (mg/dL) | codebook_description: Fasting Glucose (mg/dL) | unit: mg/dL | module: GLU_D",
+      "sha256": "92fb4d51caf88be78c77cc3afba35eb6a2c55d8b6fa7501fb5ef696340accfa3",
+      "candidate_eligible": true,
+      "exclusion_reason": null
+    },
+    {
+      "span_id": "source.nhanes_raw_codebook_surface.LBXHGB",
+      "document_id": "nhanes_raw_codebook_surface",
+      "applies_to": [
+        "source"
+      ],
+      "location": "stage4_codebook_surface_corpus_v0.csv:row:2228:CBC_D",
+      "text": "raw_variable_name: LBXHGB | codebook_label: Hemoglobin (g/dL) | codebook_description: Hemoglobin (g/dL) | unit: g | module: CBC_D",
+      "sha256": "ac3cf86e4f32035e3d273485f4b9473e1cd67ba624d84938783807c2f6cafa61",
+      "candidate_eligible": true,
+      "exclusion_reason": null
+    },
+    {
+      "span_id": "source.nhanes_raw_codebook_surface.LBXSCR",
+      "document_id": "nhanes_raw_codebook_surface",
+      "applies_to": [
+        "source"
+      ],
+      "location": "stage4_codebook_surface_corpus_v0.csv:row:2271:BIOPRO_D",
+      "text": "raw_variable_name: LBXSCR | codebook_label: Creatinine, refrigerated serum (mg/dL) | codebook_description: Creatinine, refrigerated serum (mg/dL) | unit: mg/dL | module: BIOPRO_D",
+      "sha256": "487f6770d42fc021d319cb8b932328ecedb9523d300ee1bd46a4e240d53ec99b",
+      "candidate_eligible": true,
+      "exclusion_reason": null
+    },
+    {
+      "span_id": "source.nhanes_raw_codebook_surface.LBXSTR",
+      "document_id": "nhanes_raw_codebook_surface",
+      "applies_to": [
+        "source"
+      ],
+      "location": "stage4_codebook_surface_corpus_v0.csv:row:2256:BIOPRO_D",
+      "text": "raw_variable_name: LBXSTR | codebook_label: Triglycerides, refrig serum (mg/dL) | codebook_description: Triglycerides, refrig serum (mg/dL) | unit: mg/dL | module: BIOPRO_D",
+      "sha256": "c18e4542c98753b800377d2b024c0b9e2cee68cdbabf9b09f57c04ff9dc73790",
+      "candidate_eligible": true,
+      "exclusion_reason": null
+    },
+    {
+      "span_id": "source.nhanes_raw_codebook_surface.LBXTC",
+      "document_id": "nhanes_raw_codebook_surface",
+      "applies_to": [
+        "source"
+      ],
+      "location": "stage4_codebook_surface_corpus_v0.csv:row:2257:L13_B",
+      "text": "raw_variable_name: LBXTC | codebook_label: Total Cholesterol (mg/dL) | codebook_description: Total Cholesterol (mg/dL) | unit: mg/dL | module: L13_B",
+      "sha256": "c8bfb4fab4eb9c647dc3b2033d734c178fab2a7160bb8e4f99a31d94cc43eb2d",
+      "candidate_eligible": true,
+      "exclusion_reason": null
+    },
+    {
+      "span_id": "source.nhanes_raw_codebook_surface.RIDAGEYR",
+      "document_id": "nhanes_raw_codebook_surface",
+      "applies_to": [
+        "source"
+      ],
+      "location": "stage4_codebook_surface_corpus_v0.csv:row:657:DEMO",
+      "text": "raw_variable_name: RIDAGEYR | codebook_label: Age in years at screening | codebook_description: Age in years at screening | unit: years | module: DEMO",
+      "sha256": "4c204d9f006651acea3c5a72f53bc0b715990185ec04e3abef38be944b38ffc2",
+      "candidate_eligible": true,
+      "exclusion_reason": null
+    },
+    {
+      "span_id": "target.knhanes_2020_2024_official_codebook.ALL__age",
+      "document_id": "knhanes_2020_2024_official_codebook",
+      "applies_to": [
+        "target"
+      ],
+      "location": "9_KHANES_codebook.csv:row:4",
+      "text": "변수명: age | 변수설명: 나이 | 내용: 1~79. 1~79세80. 80세이상",
+      "sha256": "2ccdc3c7f59423bb1d988fa77d4af5ddce1f133396f7b77c4ef56ce8addc4e02",
+      "candidate_eligible": true,
+      "exclusion_reason": null
+    },
+    {
+      "span_id": "target.knhanes_2020_2024_official_codebook.ALL__he_chol",
+      "document_id": "knhanes_2020_2024_official_codebook",
+      "applies_to": [
+        "target"
+      ],
+      "location": "9_KHANES_codebook.csv:row:279",
+      "text": "변수명: HE_chol | 변수설명: 총콜레스테롤 | 내용: □□□ mg/dL",
+      "sha256": "4949cea3204f3c64ddfda55d50fcd76cb4e379ee9eee160d30b4bef08e2df8b6",
+      "candidate_eligible": true,
+      "exclusion_reason": null
+    },
+    {
+      "span_id": "target.knhanes_2020_2024_official_codebook.ALL__he_crea",
+      "document_id": "knhanes_2020_2024_official_codebook",
+      "applies_to": [
+        "target"
+      ],
+      "location": "9_KHANES_codebook.csv:row:294",
+      "text": "변수명: HE_crea | 변수설명: 혈중크레아티닌 | 내용: □.□□ mg/dL",
+      "sha256": "c0cbc7ddcae38f77cf92380239f3b5daa90fb65a20acd3a8742fb4682ab07fde",
+      "candidate_eligible": true,
+      "exclusion_reason": null
+    },
+    {
+      "span_id": "target.knhanes_2020_2024_official_codebook.ALL__he_dbp1",
+      "document_id": "knhanes_2020_2024_official_codebook",
+      "applies_to": [
+        "target"
+      ],
+      "location": "9_KHANES_codebook.csv:row:260",
+      "text": "변수명: HE_dbp1 | 변수설명: 1차 이완기 혈압 | 내용: □□□ mmHg",
+      "sha256": "a2afa8b756f457ac660a51c41b32f70591b51dcec2a7f3378f6e6c4943c0fdbc",
+      "candidate_eligible": true,
+      "exclusion_reason": null
+    },
+    {
+      "span_id": "target.knhanes_2020_2024_official_codebook.ALL__he_glu",
+      "document_id": "knhanes_2020_2024_official_codebook",
+      "applies_to": [
+        "target"
+      ],
+      "location": "9_KHANES_codebook.csv:row:276",
+      "text": "변수명: HE_glu | 변수설명: 공복혈당 | 내용: □□□ mg/dL",
+      "sha256": "c3fb59a755af1b21eed39c61c9c20dab67005d4d97470600e4e4144c0744fdff",
+      "candidate_eligible": true,
+      "exclusion_reason": null
+    },
+    {
+      "span_id": "target.knhanes_2020_2024_official_codebook.ALL__he_hb",
+      "document_id": "knhanes_2020_2024_official_codebook",
+      "applies_to": [
+        "target"
+      ],
+      "location": "9_KHANES_codebook.csv:row:290",
+      "text": "변수명: HE_HB | 변수설명: 헤모글로빈 | 내용: □□.□ g/dL",
+      "sha256": "713c1111b55c4c88e6039b6a95bd590ea656b85a1a13d6a61fadb5bbd5e7a613",
+      "candidate_eligible": true,
+      "exclusion_reason": null
+    },
+    {
+      "span_id": "target.knhanes_2020_2024_official_codebook.ALL__he_hba1c",
+      "document_id": "knhanes_2020_2024_official_codebook",
+      "applies_to": [
+        "target"
+      ],
+      "location": "9_KHANES_codebook.csv:row:277",
+      "text": "변수명: HE_HbA1c | 변수설명: 당화혈색소 | 내용: □□.□ %",
+      "sha256": "55e6787cfe39127673373b6ef29cdbe1d33779714312cf1a92d9e2de45ef41cf",
+      "candidate_eligible": true,
+      "exclusion_reason": null
+    },
+    {
+      "span_id": "target.knhanes_2020_2024_official_codebook.ALL__he_ht",
+      "document_id": "knhanes_2020_2024_official_codebook",
+      "applies_to": [
+        "target"
+      ],
+      "location": "9_KHANES_codebook.csv:row:268",
+      "text": "변수명: HE_ht | 변수설명: 신장 | 내용: □□□.□ cm",
+      "sha256": "2ec1573e2ede5f739358e360fcb83c8aa7c43d28ad9b686407ba93894b8994ec",
+      "candidate_eligible": true,
+      "exclusion_reason": null
+    },
+    {
+      "span_id": "target.knhanes_2020_2024_official_codebook.ALL__he_sbp1",
+      "document_id": "knhanes_2020_2024_official_codebook",
+      "applies_to": [
+        "target"
+      ],
+      "location": "9_KHANES_codebook.csv:row:259",
+      "text": "변수명: HE_sbp1 | 변수설명: 1차 수축기 혈압 | 내용: □□□ mmHg",
+      "sha256": "b73db8d36fe616b7794416a757453b9cbc88da3cee0e6b748ec0d4dcdf243085",
+      "candidate_eligible": true,
+      "exclusion_reason": null
+    },
+    {
+      "span_id": "target.knhanes_2020_2024_official_codebook.ALL__he_tg",
+      "document_id": "knhanes_2020_2024_official_codebook",
+      "applies_to": [
+        "target"
+      ],
+      "location": "9_KHANES_codebook.csv:row:281",
+      "text": "변수명: HE_TG | 변수설명: 중성지방 | 내용: □□□□ mg/dL",
+      "sha256": "7d0aa30e70958937d24cba94669508efce6eb3360d03de1821d7d9bcbd4056e6",
+      "candidate_eligible": true,
+      "exclusion_reason": null
+    },
+    {
+      "span_id": "target.knhanes_2020_2024_official_codebook.ALL__he_wc",
+      "document_id": "knhanes_2020_2024_official_codebook",
+      "applies_to": [
+        "target"
+      ],
+      "location": "9_KHANES_codebook.csv:row:270",
+      "text": "변수명: HE_wc | 변수설명: 허리둘레 | 내용: □□□.□ cm",
+      "sha256": "42b6d7dd273176ca5c8610fecfd238a7d90e274d3e320417b4841699eddf5b78",
+      "candidate_eligible": true,
+      "exclusion_reason": null
+    },
+    {
+      "span_id": "target.knhanes_2020_2024_official_codebook.ALL__he_wt",
+      "document_id": "knhanes_2020_2024_official_codebook",
+      "applies_to": [
+        "target"
+      ],
+      "location": "9_KHANES_codebook.csv:row:269",
+      "text": "변수명: HE_wt | 변수설명: 체중 | 내용: □□□.□ kg",
+      "sha256": "4d5bf033ee6b436a5000e609470d0aa6c6355217f6fc07b131c2148b518eeba9",
+      "candidate_eligible": true,
+      "exclusion_reason": null
+    }
+  ]
+}

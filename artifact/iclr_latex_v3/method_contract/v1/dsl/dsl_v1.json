@@ -1,0 +1,97 @@
+{
+  "contract_version": "crta-1.0.0",
+  "dsl_version": "crta-dsl-1.0.0",
+  "max_runtime_missing_fraction": 0.5,
+  "operations": {
+    "difference": {
+      "arguments": ["lhs", "rhs"],
+      "argument_roles": {"lhs": "value", "rhs": "value"},
+      "direction": "ordered",
+      "semantic_types": ["measurement", "protocol", "compositional", "physical"],
+      "same_dimension_groups": [["lhs", "rhs"]],
+      "positive_arguments": [],
+      "parameters": {},
+      "expression": "lhs - rhs"
+    },
+    "absolute_difference": {
+      "arguments": ["lhs", "rhs"],
+      "argument_roles": {"lhs": "value", "rhs": "value"},
+      "direction": "symmetric",
+      "semantic_types": ["measurement", "protocol", "compositional", "physical"],
+      "same_dimension_groups": [["lhs", "rhs"]],
+      "positive_arguments": [],
+      "parameters": {},
+      "expression": "abs(lhs - rhs)"
+    },
+    "safe_ratio": {
+      "arguments": ["numerator", "denominator"],
+      "argument_roles": {"numerator": "value", "denominator": "value"},
+      "direction": "ordered",
+      "semantic_types": ["measurement", "protocol", "compositional", "physical"],
+      "same_dimension_groups": [],
+      "positive_arguments": [],
+      "parameters": {},
+      "expression": "numerator / denominator with denominator mask"
+    },
+    "normalized_difference": {
+      "arguments": ["lhs", "rhs"],
+      "argument_roles": {"lhs": "value", "rhs": "value"},
+      "direction": "ordered",
+      "semantic_types": ["measurement", "protocol", "compositional", "physical"],
+      "same_dimension_groups": [["lhs", "rhs"]],
+      "positive_arguments": [],
+      "parameters": {},
+      "expression": "(lhs - rhs) / (abs(lhs) + abs(rhs)) with denominator mask"
+    },
+    "product": {
+      "arguments": ["lhs", "rhs"],
+      "argument_roles": {"lhs": "value", "rhs": "value"},
+      "direction": "symmetric",
+      "semantic_types": ["compositional", "physical"],
+      "same_dimension_groups": [],
+      "positive_arguments": [],
+      "parameters": {},
+      "expression": "lhs * rhs"
+    },
+    "sum2": {
+      "arguments": ["lhs", "rhs"],
+      "argument_roles": {"lhs": "value", "rhs": "value"},
+      "direction": "set",
+      "semantic_types": ["measurement", "compositional", "physical"],
+      "same_dimension_groups": [["lhs", "rhs"]],
+      "positive_arguments": [],
+      "parameters": {},
+      "expression": "lhs + rhs"
+    },
+    "ratio_of_differences": {
+      "arguments": ["lhs_a", "lhs_b", "rhs_a", "rhs_b"],
+      "argument_roles": {"lhs_a": "value", "lhs_b": "value", "rhs_a": "value", "rhs_b": "value"},
+      "direction": "ordered",
+      "semantic_types": ["measurement", "compositional", "physical"],
+      "same_dimension_groups": [["lhs_a", "lhs_b"], ["rhs_a", "rhs_b"]],
+      "positive_arguments": [],
+      "parameters": {},
+      "expression": "(lhs_a - lhs_b) / (rhs_a - rhs_b) with denominator mask"
+    },
+    "lag_difference": {
+      "arguments": ["value", "group", "order"],
+      "argument_roles": {"value": "value", "group": "group_key", "order": "time_index"},
+      "direction": "temporal",
+      "semantic_types": ["temporal", "protocol"],
+      "same_dimension_groups": [],
+      "positive_arguments": [],
+      "parameters": {"lag": {"type": "integer", "minimum": 1, "maximum": 32}},
+      "expression": "value[t] - value[t-lag] within group after stable order sort"
+    },
+    "trailing_slope": {
+      "arguments": ["value", "group", "order"],
+      "argument_roles": {"value": "value", "group": "group_key", "order": "time_index"},
+      "direction": "temporal",
+      "semantic_types": ["temporal", "protocol"],
+      "same_dimension_groups": [],
+      "positive_arguments": [],
+      "parameters": {"window": {"type": "integer", "minimum": 2, "maximum": 32}},
+      "expression": "past-only least-squares slope over the current and previous window-1 observations within group"
+    }
+  }
+}

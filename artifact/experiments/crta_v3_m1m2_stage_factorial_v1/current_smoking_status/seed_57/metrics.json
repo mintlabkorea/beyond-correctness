@@ -1,0 +1,109 @@
+{
+ "arms": [
+  "a00_base",
+  "a01_columns",
+  "a10_stage",
+  "a11_stage_columns",
+  "a11r_stage_columns_relations",
+  "pl_stage_at_columns",
+  "pl_columns_at_stage",
+  "pl_relations_at_stage",
+  "is_target"
+ ],
+ "auroc": {
+  "1024": {
+   "a00_base": 0.38763694335076143,
+   "a01_columns": 0.39240364146240647,
+   "a10_stage": 0.7015646314118773,
+   "a11_stage_columns": 0.6738972203790242,
+   "a11r_stage_columns_relations": 0.6720281412000517,
+   "is_target": 0.6936021920098276,
+   "pl_columns_at_stage": 0.6736505470333831,
+   "pl_relations_at_stage": 0.6834368715335788,
+   "pl_stage_at_columns": 0.4709950027504078
+  },
+  "256": {
+   "a00_base": 0.43043591408860715,
+   "a01_columns": 0.43743271544009527,
+   "a10_stage": 0.7021378826476226,
+   "a11_stage_columns": 0.692377635043966,
+   "a11r_stage_columns_relations": 0.6959084115963254,
+   "is_target": 0.6953919833277009,
+   "pl_columns_at_stage": 0.6672158966170865,
+   "pl_relations_at_stage": 0.6952947235514195,
+   "pl_stage_at_columns": 0.48142946146627574
+  },
+  "64": {
+   "a00_base": 0.4692827373411643,
+   "a01_columns": 0.4388929335486674,
+   "a10_stage": 0.7012975194175972,
+   "a11_stage_columns": 0.7142864568228262,
+   "a11r_stage_columns_relations": 0.7138172488803673,
+   "is_target": 0.690470497691666,
+   "pl_columns_at_stage": 0.6639817447628605,
+   "pl_relations_at_stage": 0.712824036273668,
+   "pl_stage_at_columns": 0.4909778342855512
+  }
+ },
+ "backbone": "xgboost_hist_d6_n300_regression_ranked",
+ "benchmark_id": "std_cross_nh2kn_shared_anchorreset_fewshot_v1",
+ "feature_set": "stage_factorial_all_v1",
+ "metric": "auroc_vs_documented_target_binary (higher is better)",
+ "n_eval": 4767,
+ "n_pool": 7503,
+ "n_source": 17776,
+ "pl_columns_permutation": {
+  "dbp": "glucose",
+  "glucose": "weight_kg",
+  "hba1c": "dbp",
+  "height_cm": "waist_cm",
+  "sbp": "triglycerides",
+  "total_cholesterol": "hba1c",
+  "triglycerides": "height_cm",
+  "waist_cm": "sbp",
+  "weight_kg": "total_cholesterol"
+ },
+ "pl_relation_pairs": [
+  [
+   "rbc",
+   "dbp"
+  ],
+  [
+   "education_level",
+   "dbp"
+  ],
+  [
+   "total_cholesterol",
+   "triglycerides"
+  ],
+  [
+   "education_level",
+   "hypertension_history"
+  ],
+  [
+   "creatinine",
+   "hemoglobin"
+  ],
+  [
+   "weight_kg",
+   "waist_cm"
+  ]
+ ],
+ "primary_k": 256,
+ "seed": 57,
+ "target": "current_smoking_status",
+ "wall_seconds": 63.5,
+ "wrong_label_maps": {
+  "source": {
+   "2.0": 0.0,
+   "7.0": 1.0,
+   "9.0": 1.0
+  },
+  "target": {
+   "2.0": 0.0,
+   "3.0": 1.0,
+   "4.0": 1.0,
+   "9.0": 0.0
+  }
+ }
+}

@@ -1,0 +1,76 @@
+{
+ "arms": [
+  "a00_base",
+  "a01_columns",
+  "a10_stage",
+  "a11_stage_columns"
+ ],
+ "auroc": {
+  "256": {
+   "a00_base": 0.6242635472676119,
+   "a01_columns": 0.5000364686129236,
+   "a10_stage": 0.6658584603930714,
+   "a11_stage_columns": 0.7117460383156802
+  }
+ },
+ "backbone": "xgboost_hist_d6_n300_regression_ranked",
+ "benchmark_id": "std_cross_kn2nh_shared_anchorreset_fewshot_v1",
+ "feature_set": "stage_factorial_all_v1",
+ "m_axis": "source_only_fork_v1",
+ "metric": "auroc_vs_documented_target_binary (higher is better)",
+ "n_eval": 32620,
+ "n_pool": 3314,
+ "n_source": 151292,
+ "pl_columns_permutation": {
+  "dbp": "total_cholesterol",
+  "glucose": "waist_cm",
+  "hba1c": "glucose",
+  "height_cm": "triglycerides",
+  "sbp": "weight_kg",
+  "total_cholesterol": "height_cm",
+  "triglycerides": "dbp",
+  "waist_cm": "hba1c",
+  "weight_kg": "sbp"
+ },
+ "pl_relation_pairs": [
+  [
+   "diabetes_history",
+   "weight_kg"
+  ],
+  [
+   "age",
+   "sex"
+  ],
+  [
+   "hba1c",
+   "rbc"
+  ],
+  [
+   "wbc",
+   "diabetes_history"
+  ],
+  [
+   "triglycerides",
+   "hemoglobin"
+  ],
+  [
+   "age",
+   "weight_kg"
+  ]
+ ],
+ "primary_k": 256,
+ "seed": 57,
+ "target": "kidney_disease_history",
+ "target_cohort": "nhanes",
+ "wall_seconds": 39.6,
+ "wrong_label_maps": {
+  "source": {
+   "1.0": 0.0,
+   "8.0": 1.0
+  },
+  "target": {
+   "1.0": 1.0,
+   "2.0": 0.0
+  }
+ }
+}

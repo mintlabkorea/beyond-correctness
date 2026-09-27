@@ -1,0 +1,43 @@
+{
+  "status": "PASS",
+  "excluded_source_regression": "PASS: original excluded source is detected through statically reconstructed strings",
+  "independent_release_scan": {
+    "status": "PASS",
+    "scope": "Independent private-literal search plus safe AST folding of concatenation/join; nested XLSX XML and PDF text; no code execution",
+    "counts": {
+      "text_files": 11825,
+      "python_files": 227,
+      "folded_expressions": 0,
+      "xlsx_members": 68,
+      "pdf_texts": 12
+    },
+    "unresolved_findings": [],
+    "reviewed_third_party_bibliography_matches": [
+      {
+        "path": "generated/manuscript/main_new.pdf",
+        "representation": "PDF text",
+        "line": 1318
+      },
+      {
+        "path": "iclr_latex_v3/references_seed.bib",
+        "representation": "raw text",
+        "line": 898
+      },
+      {
+        "path": "reproducibility/manuscript_changes.diff",
+        "representation": "raw text",
+        "line": 226
+      }
+    ],
+    "private_patterns_distributed": false
+  },
+  "separate_ripgrep_search": {
+    "status": "PASS",
+    "matched_paths": [
+      "iclr_latex_v3/references_seed.bib",
+      "reproducibility/manuscript_changes.diff"
+    ],
+    "disposition": "Manually reviewed third-party bibliography author fields only; no identity claim about submission authors"
+  },
+  "private_patterns_distributed": false
+}

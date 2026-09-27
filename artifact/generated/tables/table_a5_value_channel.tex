@@ -1,0 +1,21 @@
+\begin{table}[t]
+\caption{Value-channel mechanism contrasts after the true-pair constituent columns are removed. The reduced free arm retains only the remaining base columns; the unconstrained value arm adds the true operation columns. Magnitude becomes nonredundant, whereas negating an operation value remains nearly invariant. All effects are on the controlled $\Delta Q$ scale.}
+\label{tab:app-relation-value-interface}
+\label{tab:app_value_channel}
+\centering\tiny
+\setlength{\tabcolsep}{2.5pt}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{lllP{0.19\linewidth}P{0.19\linewidth}P{0.19\linewidth}P{0.19\linewidth}P{0.19\linewidth}}
+\toprule Learner & $K$ & Family & Operation magnitude utility & Correct constraint vs. unconstrained values & Correct vs. flipped constraint & Flipped constraint vs. reduced free & Value-sign sensitivity \\
+\midrule
+XGB & 32 & Pairwise & \textbf{+.242 [+.227, +.257]} & \textbf{+.017 [+.012, +.022]} & \textbf{+.264 [+.249, +.280]} & -.005 [-.012, +.001] & +.000 [-.001, +.002] \\
+XGB & 32 & Sparse & \textbf{+.232 [+.213, +.251]} & \textbf{+.010 [+.007, +.013]} & \textbf{+.244 [+.222, +.265]} & -.001 [-.004, +.002] & +.001 [-.001, +.002] \\
+HISTGB & 32 & Pairwise & \textbf{+.241 [+.227, +.256]} & \textbf{+.018 [+.013, +.022]} & \textbf{+.266 [+.251, +.281]} & -.007 [-.015, +.000] & +.000 [-.002, +.002] \\
+HISTGB & 32 & Sparse & \textbf{+.233 [+.213, +.252]} & \textbf{+.009 [+.005, +.012]} & \textbf{+.242 [+.223, +.261]} & -.000 [-.004, +.003] & +.001 [-.000, +.003] \\
+\addlinespace[1pt]
+XGB & 512 & Pairwise & \textbf{+.237 [+.220, +.253]} & \textbf{+.017 [+.014, +.020]} & \textbf{+.259 [+.244, +.275]} & -.005 [-.011, +.001] & +.001 [-.001, +.002] \\
+XGB & 512 & Sparse & \textbf{+.227 [+.208, +.246]} & \textbf{+.010 [+.006, +.014]} & \textbf{+.234 [+.212, +.255]} & +.003 [+.000, +.006] & +.000 [-.001, +.002] \\
+HISTGB & 512 & Pairwise & \textbf{+.240 [+.224, +.255]} & \textbf{+.017 [+.013, +.021]} & \textbf{+.263 [+.249, +.278]} & -.006 [-.013, -.000] & -.001 [-.002, +.001] \\
+HISTGB & 512 & Sparse & \textbf{+.226 [+.207, +.246]} & \textbf{+.011 [+.008, +.014]} & \textbf{+.235 [+.215, +.255]} & +.002 [-.001, +.005] & -.000 [-.002, +.001] \\
+\bottomrule\end{tabular}}
+\end{table}

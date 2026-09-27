@@ -1,0 +1,124 @@
+{
+  "analysis_status": "frozen_reference_space_evidence",
+  "base_runner_sha256": "58697774da35b4d2ed573045618d66f557ebf29ffadbd269539862c2dc802b9a",
+  "canonical_reproduction_audit": {
+    "comparisons": {
+      "0": {
+        "absolute_auc_error": 0.0,
+        "frozen_auc": 0.4244667724308126,
+        "observed_auc": 0.4244667724308126
+      },
+      "1": {
+        "absolute_auc_error": 0.0,
+        "frozen_auc": 0.5724347991623834,
+        "observed_auc": 0.5724347991623834
+      },
+      "1024": {
+        "absolute_auc_error": 0.0,
+        "frozen_auc": 0.34888763197586725,
+        "observed_auc": 0.34888763197586725
+      },
+      "32": {
+        "absolute_auc_error": 0.0,
+        "frozen_auc": 0.5430865298840322,
+        "observed_auc": 0.5430865298840322
+      },
+      "42": {
+        "absolute_auc_error": 0.0,
+        "frozen_auc": 0.5240646258503401,
+        "observed_auc": 0.5240646258503401
+      }
+    },
+    "frozen_metrics_sha256": "56befd8cdc4c264d8b93e0b10b6b8bf53b1caa5de628d55f0b3abd7c3179502e",
+    "maximum_absolute_auc_error": 0.0,
+    "status": "canonical_reproduction_pass",
+    "tolerance": 1e-12
+  },
+  "checkpoint_audit": {
+    "checkpoint_key_count": 192,
+    "checkpoint_parameter_count": 1081344,
+    "missing_base_model_key_count": 752
+  },
+  "checkpoint_source_tfew_commit": "114deced63ae722a368e06cb08ea956b20c393a6",
+  "choices": [
+    "No",
+    "Yes"
+  ],
+  "dataset": "diabetes",
+  "ia3_checkpoint_sha256": "8fe7a00fb425dd331c7a021c9468d50a14ec2ca1998007e7ead5ce3111405729",
+  "metrics": {
+    "0": {
+      "accuracy": 0.3961038961038961,
+      "auc": 0.4244667724308126,
+      "n_test": 154
+    },
+    "1": {
+      "accuracy": 0.33766233766233766,
+      "auc": 0.5724347991623834,
+      "n_test": 154
+    },
+    "1024": {
+      "accuracy": 0.34415584415584416,
+      "auc": 0.34888763197586725,
+      "n_test": 154
+    },
+    "32": {
+      "accuracy": 0.38311688311688313,
+      "auc": 0.5430865298840322,
+      "n_test": 154
+    },
+    "42": {
+      "accuracy": 0.45454545454545453,
+      "auc": 0.5240646258503401,
+      "n_test": 154
+    },
+    "mean": {
+      "accuracy": 0.3831168831168831,
+      "auc": 0.48258807186068714,
+      "auc_sd_population": 0.08331469910369464
+    }
+  },
+  "model_path": "external/.cache/huggingface/hub/models--bigscience--T0/snapshots/1cfa27271f8085c29323c94bd659004b210f20b5",
+  "n_full": 768,
+  "n_scored_union": 513,
+  "permutation": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "protocol_sha256": "2ce490262b95ed7f70781f93386083cee252c6a54c89740942fe3c95bcfd8b09",
+  "reference_id": "ref_00",
+  "reference_manifest_sha256": "7fe208e544a954ebd2c15e273473d604107a22e49230631101466ab97097d8da",
+  "runner_sha256": "b616a0bd7d1a657981078bc1938bcc0fbb7d674a30770e7feb4cd7b11ad9a48a",
+  "scoring": {
+    "batch_size": 16,
+    "device": "cuda:1",
+    "length_normalization": 1,
+    "max_input_tokens": 1024,
+    "test_fraction": 0.2,
+    "test_split_seeds": [
+      42,
+      1024,
+      0,
+      1,
+      32
+    ]
+  },
+  "tabllm_commit": "71f6647c523aa6fd35df94ad76207c4377248c49",
+  "template_sha256": "e1d8bebc3b3c4717c3881e356bccf5a1890a26e6962a5a460afc68f62f4e6b29",
+  "tfew_execution_commit": "114deced63ae722a368e06cb08ea956b20c393a6",
+  "versions": {
+    "datasets": "2.14.7",
+    "numpy": "2.2.6",
+    "python": "3.10.20",
+    "scikit_learn": "1.7.2",
+    "torch": "2.12.0.dev20260408+cu128",
+    "transformers": "4.30.0"
+  },
+  "wall_seconds": 3.226
+}

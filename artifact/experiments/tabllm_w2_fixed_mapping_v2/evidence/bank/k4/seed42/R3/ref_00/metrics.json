@@ -1,0 +1,83 @@
+{
+  "audit_sha256": "44d8155f8300b1a4b142415092942838f8537ce93a3aff3dda7acc545a5864e2",
+  "cell": [
+    "bank",
+    4,
+    42,
+    "R3",
+    "ref_00"
+  ],
+  "checkpoint_sha256": "8fe7a00fb425dd331c7a021c9468d50a14ec2ca1998007e7ead5ce3111405729",
+  "completed_at_utc": "2026-09-10T15:05:27.803355+00:00",
+  "design_sha256": "5cdac31d67a015ebca58c1f61ac5f150b842e88eced1d18b254345199302899b",
+  "feature_to_identifier": {
+    "age": "Variable A",
+    "average yearly balance, in euros": "Variable F",
+    "contact communication type": "Variable I",
+    "education": "Variable D",
+    "has credit in default?": "Variable E",
+    "has housing loan?": "Variable G",
+    "has personal loan?": "Variable H",
+    "last contact day of the month": "Variable J",
+    "last contact duration, in seconds": "Variable L",
+    "last contact month of year": "Variable K",
+    "marital status": "Variable C",
+    "number of contacts performed before this campaign and for this client": "Variable O",
+    "number of contacts performed during this campaign and for this client": "Variable M",
+    "number of days that passed by after the client was last contacted from a previous campaign": "Variable N",
+    "outcome of the previous marketing campaign": "Variable P",
+    "type of job": "Variable B"
+  },
+  "gpu": 2,
+  "initial_trainable_state_sha256": "2b3e0be8998a1d12a84a7b358726205cce0c83973fb198a1c37bdac6aa3fbd0b",
+  "metrics": {
+    "accuracy": 0.21353533119539975,
+    "auc": 0.379096241379103
+  },
+  "model_audit": {
+    "checkpoint_key_count": 192,
+    "checkpoint_parameter_count": 1081344,
+    "frozen_parameter_count": 11136118784,
+    "initial_trainable_state_sha256": "2b3e0be8998a1d12a84a7b358726205cce0c83973fb198a1c37bdac6aa3fbd0b",
+    "missing_base_model_key_count": 752,
+    "parameter_dtype": "torch.bfloat16",
+    "precision_layout": "frozen=bfloat16, trainable_ia3=float32",
+    "trainable_parameter_count": 1081344,
+    "trainable_parameter_dtype": "torch.float32",
+    "trainable_tensor_count": 192
+  },
+  "model_files": {
+    ".gitattributes": "98ccb431c012ebfe976280fbd45aea4cec7409935868ccecf3954370f96732a1",
+    "README.md": "4d4029cb81f74695a450f4497dd12aa34f3e86bf98d3c480ed1231a015cebb45",
+    "config.json": "ef552104049013790961bd3624ac91cacdd8d9aabd09201f8b30e2f06693d97f",
+    "pytorch_model.bin": "806b1cfa7743d85fddc12bdba93b701c572816c7cc47108ee93fccffe4b6ee7f",
+    "special_tokens_map.json": "4720c0fddbe4c5991334f85ad7073d9bd0a294a8ba4641a2f8dab614ca825949",
+    "spiece.model": "d60acb128cf7b7f2536e8f38a5b18a05535c9e14c7a355904270e15b0945ea86",
+    "tokenizer_config.json": "b971dce1d2805c2a66da8657156e7114a30501c6ba602fc947c8bf607a3ead2d"
+  },
+  "prompt_audit_sha256": "da1f765405b99b6dfcaba4d8c8e1584f97582c78320d9ba44e989bc64dac996d",
+  "seconds": 50.506031786993844,
+  "split_sha256": "119e48aab7999475d82d4258dedb0875d54fa2613c8c31aae1dbda2a1942c831",
+  "trained_checkpoint_sha256": "b00c0fa51ed091bc20e8e19ae3ea69e8c0ebc59140023075caae809ae85539f2",
+  "training": {
+    "batch_order_sha256": "9b4a30b6271af3c73367d3b2056a9e5ffff49ffb75d6bf7ff0e6b8a70032b7e8",
+    "executed_steps": 30,
+    "loss_first": {
+      "gradient_norm_pre_clip": 0.9693756103515625,
+      "lm_loss": 0.6838553547859192,
+      "loss": 4.158354759216309,
+      "lr": 0.0016666666666666668,
+      "mc_loss": 0.8635265231132507,
+      "unlikely_loss": 2.6109728813171387
+    },
+    "loss_last": {
+      "gradient_norm_pre_clip": 0.9158967733383179,
+      "lm_loss": 0.404296875,
+      "loss": 1.1042741537094116,
+      "lr": 0.0,
+      "mc_loss": 0.30616092681884766,
+      "unlikely_loss": 0.39381635189056396
+    },
+    "planned_steps": 30
+  }
+}

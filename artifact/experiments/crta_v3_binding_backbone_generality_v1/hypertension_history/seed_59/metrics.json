@@ -1,0 +1,46 @@
+{
+ "arms": [
+  "a10_stage",
+  "a11_stage_columns",
+  "pl_columns_at_stage"
+ ],
+ "auroc": {
+  "1024": {
+   "a10_stage": 0.9001310279937003,
+   "a11_stage_columns": 0.9101643891882296,
+   "pl_columns_at_stage": 0.8692141538378978
+  },
+  "256": {
+   "a10_stage": 0.8815394729102015,
+   "a11_stage_columns": 0.9016332621589072,
+   "pl_columns_at_stage": 0.8582986100393561
+  },
+  "64": {
+   "a10_stage": 0.8936699762665391,
+   "a11_stage_columns": 0.9140865038070453,
+   "pl_columns_at_stage": 0.90277260338438
+  }
+ },
+ "backbone": "sklearn_histgb_d6_i300",
+ "benchmark_id": "std_cross_nh2kn_shared_anchorreset_fewshot_v1",
+ "feature_set": "stage_factorial_all_v1",
+ "metric": "auroc_vs_documented_target_binary (higher is better)",
+ "n_eval": 6640,
+ "n_pool": 15129,
+ "n_source": 44371,
+ "pl_columns_permutation": {
+  "dbp": "height_cm",
+  "glucose": "sbp",
+  "hba1c": "dbp",
+  "height_cm": "weight_kg",
+  "sbp": "waist_cm",
+  "total_cholesterol": "triglycerides",
+  "triglycerides": "hba1c",
+  "waist_cm": "total_cholesterol",
+  "weight_kg": "glucose"
+ },
+ "primary_k": 256,
+ "seed": 59,
+ "target": "hypertension_history",
+ "wall_seconds": 12.4
+}

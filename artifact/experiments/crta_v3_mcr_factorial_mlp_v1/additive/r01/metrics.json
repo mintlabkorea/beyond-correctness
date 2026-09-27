@@ -1,0 +1,87 @@
+{
+ "arms": [
+  "m0c0rf",
+  "m0c1rf",
+  "m1c0rf",
+  "m1c1rf"
+ ],
+ "backbone": "sklearn_mlp_32_relu_adam",
+ "family": "additive",
+ "input_sha256": "6af2215c72a65ecc306e5c4d3d9af5b61b16a073dd5aa4c0f33b178741245a25",
+ "mcr_runner_sha256": "c753e142f3af884a9f9b0d635e67465e8d8e0e20cefbb13f09006be56753e4a0",
+ "metric": "nmse = MSE/Var(y_query) (verdicts)",
+ "mode": "primary_mlp",
+ "prereg_sha256": "25387913d4fbc53d15360e7f54381e692e8756612833ab1a1971d96fcbb2fec4",
+ "realization": 1,
+ "recipe": {
+  "alpha": 0.01,
+  "hidden_layer_sizes": [
+   32
+  ],
+  "imputation": "mean_plus_missing_indicators",
+  "learning_rate_init": 0.001,
+  "max_iter": 500,
+  "scaling": "standard_x_and_y"
+ },
+ "results": {
+  "32": {
+   "m0c0rf": {
+    "n_features": 8,
+    "nan_fraction_fit": 0.06394230769230769,
+    "nmse": 3.791513906586309,
+    "nrmse": 1.9471810153620306
+   },
+   "m0c1rf": {
+    "n_features": 8,
+    "nan_fraction_fit": 0.06394230769230769,
+    "nmse": 3.624440753265524,
+    "nrmse": 1.9037964054135421
+   },
+   "m1c0rf": {
+    "n_features": 8,
+    "nan_fraction_fit": 0.35949519230769234,
+    "nmse": 1.3458387456731014,
+    "nrmse": 1.1601029030534753
+   },
+   "m1c1rf": {
+    "n_features": 8,
+    "nan_fraction_fit": 0.35949519230769234,
+    "nmse": 0.7740754326045477,
+    "nrmse": 0.8798155673802025
+   }
+  },
+  "512": {
+   "m0c0rf": {
+    "n_features": 8,
+    "nan_fraction_fit": 0.10361328125,
+    "nmse": 0.9574592377920215,
+    "nrmse": 0.9784984608020707
+   },
+   "m0c1rf": {
+    "n_features": 8,
+    "nan_fraction_fit": 0.10361328125,
+    "nmse": 0.9801020189779753,
+    "nrmse": 0.990001019685321
+   },
+   "m1c0rf": {
+    "n_features": 8,
+    "nan_fraction_fit": 0.34375,
+    "nmse": 0.988556244078526,
+    "nrmse": 0.9942616577533935
+   },
+   "m1c1rf": {
+    "n_features": 8,
+    "nan_fraction_fit": 0.34375,
+    "nmse": 0.7619503000360497,
+    "nrmse": 0.8728976457959144
+   }
+  }
+ },
+ "rng_namespace": "mcr_v1c",
+ "runner_sha256": "e326622548140a0d8805b788c283feae4041a3292fb31c14091f12a6f97a51c7",
+ "support_ks": [
+  32,
+  512
+ ],
+ "wall_seconds": 4.4
+}

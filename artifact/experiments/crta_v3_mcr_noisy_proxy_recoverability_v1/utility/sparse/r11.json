@@ -1,0 +1,423 @@
+{
+  "backbones": [
+    "xgb",
+    "histgb"
+  ],
+  "constituents": [
+    5,
+    6,
+    7
+  ],
+  "family": "sparse",
+  "gate_checks": {
+    "interface_expected_dimensions": true,
+    "interface_no_infinity": true,
+    "preservation_all_base_columns_present": true,
+    "preservation_missingness_unchanged": true,
+    "preservation_shared_noisy_base": true,
+    "removal_reference_has_no_relation_value": true
+  },
+  "input_sha256": "6af2215c72a65ecc306e5c4d3d9af5b61b16a073dd5aa4c0f33b178741245a25",
+  "manifest_sha256": "5708a690fd44107aac0a604dea262054756f21a0394b6cc2843fa3ca8eb3583c",
+  "mcr_runner_sha256": "c753e142f3af884a9f9b0d635e67465e8d8e0e20cefbb13f09006be56753e4a0",
+  "noise_namespace": "mcr_noisy_proxy_v1",
+  "noise_sigmas": [
+    0.0,
+    0.125,
+    0.25,
+    0.5,
+    1.0,
+    2.0,
+    4.0
+  ],
+  "phase": "utility",
+  "protocol_sha256": "e37f7439377620f7603513971b44c33efab2911e688a64ef2f071ec1be0d19cc",
+  "proxy_seal_sha256": "4600e3ea23683e5645abff90d3e2fd9fbdc4316077f1aba201af8012f6057a00",
+  "query_variance": 1.674656447485022,
+  "realization": 11,
+  "results": {
+    "32": {
+      "histgb": {
+        "0.0": {
+          "arms": {
+            "intended": {
+              "n_features": 10,
+              "nmse": 0.729190129500422
+            },
+            "reference": {
+              "n_features": 8,
+              "nmse": 0.7214410613821202
+            }
+          },
+          "utility": -0.007749068118301783
+        },
+        "0.125": {
+          "arms": {
+            "intended": {
+              "n_features": 10,
+              "nmse": 0.7311352988599968
+            },
+            "reference": {
+              "n_features": 8,
+              "nmse": 0.7386189071714697
+            }
+          },
+          "utility": 0.007483608311472878
+        },
+        "0.25": {
+          "arms": {
+            "intended": {
+              "n_features": 10,
+              "nmse": 0.7394719619938064
+            },
+            "reference": {
+              "n_features": 8,
+              "nmse": 0.7564265229689817
+            }
+          },
+          "utility": 0.016954560975175337
+        },
+        "0.5": {
+          "arms": {
+            "intended": {
+              "n_features": 10,
+              "nmse": 0.7425209731063969
+            },
+            "reference": {
+              "n_features": 8,
+              "nmse": 0.8201478625292733
+            }
+          },
+          "utility": 0.07762688942287643
+        },
+        "1.0": {
+          "arms": {
+            "intended": {
+              "n_features": 10,
+              "nmse": 0.7502175672243973
+            },
+            "reference": {
+              "n_features": 8,
+              "nmse": 0.8755255689071001
+            }
+          },
+          "utility": 0.12530800168270284
+        },
+        "2.0": {
+          "arms": {
+            "intended": {
+              "n_features": 10,
+              "nmse": 0.7530219819955875
+            },
+            "reference": {
+              "n_features": 8,
+              "nmse": 0.9152504665085731
+            }
+          },
+          "utility": 0.16222848451298566
+        },
+        "4.0": {
+          "arms": {
+            "intended": {
+              "n_features": 10,
+              "nmse": 0.7552784251536635
+            },
+            "reference": {
+              "n_features": 8,
+              "nmse": 0.9265503459918537
+            }
+          },
+          "utility": 0.1712719208381902
+        }
+      },
+      "xgb": {
+        "0.0": {
+          "arms": {
+            "intended": {
+              "n_features": 10,
+              "nmse": 0.7308659198348958
+            },
+            "reference": {
+              "n_features": 8,
+              "nmse": 0.7230535427917855
+            }
+          },
+          "utility": -0.00781237704311033
+        },
+        "0.125": {
+          "arms": {
+            "intended": {
+              "n_features": 10,
+              "nmse": 0.7364119066788531
+            },
+            "reference": {
+              "n_features": 8,
+              "nmse": 0.7310663641199068
+            }
+          },
+          "utility": -0.00534554255894637
+        },
+        "0.25": {
+          "arms": {
+            "intended": {
+              "n_features": 10,
+              "nmse": 0.7389516177578813
+            },
+            "reference": {
+              "n_features": 8,
+              "nmse": 0.7621491177970467
+            }
+          },
+          "utility": 0.02319750003916543
+        },
+        "0.5": {
+          "arms": {
+            "intended": {
+              "n_features": 10,
+              "nmse": 0.7489585223916314
+            },
+            "reference": {
+              "n_features": 8,
+              "nmse": 0.823247090396905
+            }
+          },
+          "utility": 0.07428856800527361
+        },
+        "1.0": {
+          "arms": {
+            "intended": {
+              "n_features": 10,
+              "nmse": 0.7495353547612041
+            },
+            "reference": {
+              "n_features": 8,
+              "nmse": 0.8836297018739753
+            }
+          },
+          "utility": 0.13409434711277113
+        },
+        "2.0": {
+          "arms": {
+            "intended": {
+              "n_features": 10,
+              "nmse": 0.7533500902144263
+            },
+            "reference": {
+              "n_features": 8,
+              "nmse": 0.9116976864607218
+            }
+          },
+          "utility": 0.15834759624629546
+        },
+        "4.0": {
+          "arms": {
+            "intended": {
+              "n_features": 10,
+              "nmse": 0.7523832632321237
+            },
+            "reference": {
+              "n_features": 8,
+              "nmse": 0.9244340020998533
+            }
+          },
+          "utility": 0.1720507388677296
+        }
+      }
+    },
+    "512": {
+      "histgb": {
+        "0.0": {
+          "arms": {
+            "intended": {
+              "n_features": 10,
+              "nmse": 0.7086433052650892
+            },
+            "reference": {
+              "n_features": 8,
+              "nmse": 0.7151205845320935
+            }
+          },
+          "utility": 0.0064772792670042545
+        },
+        "0.125": {
+          "arms": {
+            "intended": {
+              "n_features": 10,
+              "nmse": 0.7202634729934272
+            },
+            "reference": {
+              "n_features": 8,
+              "nmse": 0.7288968655829563
+            }
+          },
+          "utility": 0.00863339258952911
+        },
+        "0.25": {
+          "arms": {
+            "intended": {
+              "n_features": 10,
+              "nmse": 0.7213531600834245
+            },
+            "reference": {
+              "n_features": 8,
+              "nmse": 0.7522776826829108
+            }
+          },
+          "utility": 0.030924522599486304
+        },
+        "0.5": {
+          "arms": {
+            "intended": {
+              "n_features": 10,
+              "nmse": 0.7173731541641913
+            },
+            "reference": {
+              "n_features": 8,
+              "nmse": 0.8042722325885692
+            }
+          },
+          "utility": 0.08689907842437783
+        },
+        "1.0": {
+          "arms": {
+            "intended": {
+              "n_features": 10,
+              "nmse": 0.7204090714359463
+            },
+            "reference": {
+              "n_features": 8,
+              "nmse": 0.8718721148708147
+            }
+          },
+          "utility": 0.15146304343486838
+        },
+        "2.0": {
+          "arms": {
+            "intended": {
+              "n_features": 10,
+              "nmse": 0.7208394678132491
+            },
+            "reference": {
+              "n_features": 8,
+              "nmse": 0.8949209455135798
+            }
+          },
+          "utility": 0.17408147770033067
+        },
+        "4.0": {
+          "arms": {
+            "intended": {
+              "n_features": 10,
+              "nmse": 0.7326410923650473
+            },
+            "reference": {
+              "n_features": 8,
+              "nmse": 0.9195396923409005
+            }
+          },
+          "utility": 0.18689859997585323
+        }
+      },
+      "xgb": {
+        "0.0": {
+          "arms": {
+            "intended": {
+              "n_features": 10,
+              "nmse": 0.7085389683745742
+            },
+            "reference": {
+              "n_features": 8,
+              "nmse": 0.707619205403521
+            }
+          },
+          "utility": -0.0009197629710532285
+        },
+        "0.125": {
+          "arms": {
+            "intended": {
+              "n_features": 10,
+              "nmse": 0.723163551333247
+            },
+            "reference": {
+              "n_features": 8,
+              "nmse": 0.7307547118312403
+            }
+          },
+          "utility": 0.0075911604979933545
+        },
+        "0.25": {
+          "arms": {
+            "intended": {
+              "n_features": 10,
+              "nmse": 0.7240439729648016
+            },
+            "reference": {
+              "n_features": 8,
+              "nmse": 0.752874884535639
+            }
+          },
+          "utility": 0.028830911570837392
+        },
+        "0.5": {
+          "arms": {
+            "intended": {
+              "n_features": 10,
+              "nmse": 0.7225029137478803
+            },
+            "reference": {
+              "n_features": 8,
+              "nmse": 0.8075918512174581
+            }
+          },
+          "utility": 0.0850889374695778
+        },
+        "1.0": {
+          "arms": {
+            "intended": {
+              "n_features": 10,
+              "nmse": 0.7145672657024876
+            },
+            "reference": {
+              "n_features": 8,
+              "nmse": 0.8671287114759372
+            }
+          },
+          "utility": 0.15256144577344954
+        },
+        "2.0": {
+          "arms": {
+            "intended": {
+              "n_features": 10,
+              "nmse": 0.7213878399799983
+            },
+            "reference": {
+              "n_features": 8,
+              "nmse": 0.8923295777242413
+            }
+          },
+          "utility": 0.17094173774424293
+        },
+        "4.0": {
+          "arms": {
+            "intended": {
+              "n_features": 10,
+              "nmse": 0.7255568764518457
+            },
+            "reference": {
+              "n_features": 8,
+              "nmse": 0.9310303531791418
+            }
+          },
+          "utility": 0.2054734767272961
+        }
+      }
+    }
+  },
+  "runner_sha256": "463fc935966f20ad211d2cf29707681e56fe59a6212d2bf79769fa49cb5c207e",
+  "supports": [
+    32,
+    512
+  ],
+  "threads": 1,
+  "wall_seconds": 42.283
+}

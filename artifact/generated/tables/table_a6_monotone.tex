@@ -1,0 +1,18 @@
+\begin{table}[t]
+\caption{Partially monotone MLP probe. ``True utility'' compares correct constraints with the free model; ``direction content'' compares correct with flipped directions; the last column shows flipped constraints against free. The prespecified directional-utility verdict fails because correct direction does not dominate across families.}
+\label{tab:app-relation-monotone-mlp}
+\label{tab:app_monotone_mlp}
+\centering\scriptsize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{llP{0.23\linewidth}P{0.23\linewidth}P{0.23\linewidth}}
+\toprule $K$ & Family & True utility & Direction content & Flipped vs. free \\
+\midrule
+32 & Additive & +.005 [-.001, +.011] & \textbf{+.290 [+.270, +.313]} & -.286 [-.311, -.263] \\
+32 & Pairwise & \textbf{+.007 [+.002, +.013]} & -.006 [-.009, -.003] & \textbf{+.014 [+.010, +.017]} \\
+32 & Sparse & \textbf{+.013 [+.007, +.019]} & -.003 [-.006, -.000] & \textbf{+.016 [+.011, +.021]} \\
+\addlinespace[1pt]
+512 & Additive & +.001 [-.004, +.006] & \textbf{+.287 [+.267, +.309]} & -.286 [-.310, -.264] \\
+512 & Pairwise & \textbf{+.006 [+.002, +.009]} & -.003 [-.005, -.002] & \textbf{+.009 [+.006, +.013]} \\
+512 & Sparse & \textbf{+.007 [+.003, +.011]} & -.003 [-.005, +.000] & \textbf{+.009 [+.006, +.013]} \\
+\bottomrule\end{tabular}
+\end{table}

@@ -1,0 +1,117 @@
+{
+ "GC_P1_identification_flipped": {
+  "ci95": [
+   0.18323485033124057,
+   0.21206729147319425
+  ],
+  "drop_best_level_mean": 0.19776196045410507,
+  "mean_gain": 0.19877217992145488,
+  "n_cells": 30,
+  "n_levels_negative": 0,
+  "per_support_level_mean": {
+   "1": 0.19495266892409835,
+   "3": 0.20057125198411177,
+   "5": 0.20079261885615457
+  },
+  "separated": true,
+  "win_rate": 1.0
+ },
+ "GC_P1_pass": true,
+ "GC_P2_pass": false,
+ "GC_P2_utility_vs_free": {
+  "ci95": [
+   -0.0015270051804522873,
+   0.008026439772445033
+  ],
+  "drop_best_level_mean": 0.0012742130481996905,
+  "mean_gain": 0.003234412871677163,
+  "n_cells": 30,
+  "n_levels_negative": 0,
+  "per_support_level_mean": {
+   "1": 0.002105576835730083,
+   "3": 0.007154812518632109,
+   "5": 0.000442849260669298
+  },
+  "separated": false,
+  "win_rate": 0.7
+ },
+ "GC_P3_content_vs_random": {
+  "ci95": [
+   0.0009198580557772828,
+   0.014148385573773807
+  ],
+  "drop_best_level_mean": 0.0035155469192228866,
+  "mean_gain": 0.006435007018831212,
+  "n_cells": 30,
+  "n_levels_negative": 0,
+  "per_support_level_mean": {
+   "1": 0.012273927218047865,
+   "3": 0.005246694758369525,
+   "5": 0.001784399080076249
+  },
+  "separated": true,
+  "win_rate": 0.6333333333333333
+ },
+ "GC_P3_pass": true,
+ "bootstrap": {
+  "hierarchy": "support levels then seeds",
+  "reps": 10000,
+  "seed": 20260819
+ },
+ "primary_metric": "log1p_rmse (lower better); gain = lesion - documented",
+ "probe_root": "experiments/crta_v3_camels_sign_probe_v1",
+ "secondary_nse": {
+  "flipped_vs_documented": {
+   "ci95": [
+    0.29531525725392943,
+    0.6857148165568246
+   ],
+   "drop_best_level_mean": 0.3776563109619865,
+   "mean_gain": 0.46946812375677,
+   "n_cells": 30,
+   "n_levels_negative": 0,
+   "per_support_level_mean": {
+    "1": 0.6530917493463371,
+    "3": 0.3363969761944707,
+    "5": 0.4189156457295023
+   },
+   "separated": true,
+   "win_rate": 0.9
+  },
+  "free_vs_documented": {
+   "ci95": [
+    -0.03586560572156519,
+    0.07510463132704888
+   ],
+   "drop_best_level_mean": 0.0037509907922401004,
+   "mean_gain": 0.012869029267806264,
+   "n_cells": 30,
+   "n_levels_negative": 1,
+   "per_support_level_mean": {
+    "1": 0.031105106218938604,
+    "3": 0.012447087795129617,
+    "5": -0.0049451062106494175
+   },
+   "separated": false,
+   "win_rate": 0.5333333333333333
+  },
+  "random_vs_documented": {
+   "ci95": [
+    -0.08027551350468398,
+    0.06918992041508051
+   ],
+   "drop_best_level_mean": -0.023250014949294066,
+   "mean_gain": -0.013014710285384957,
+   "n_cells": 30,
+   "n_levels_negative": 2,
+   "per_support_level_mean": {
+    "1": 0.007455899042433272,
+    "3": -0.034338660888615744,
+    "5": -0.012161369009972393
+   },
+   "separated": false,
+   "win_rate": 0.5333333333333333
+  }
+ },
+ "task": "N1_camels_us2gb"
+}

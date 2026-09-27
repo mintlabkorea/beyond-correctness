@@ -1,0 +1,311 @@
+{
+  "contract_version": "crta-1.0.0",
+  "dsl_version": "crta-dsl-1.0.0",
+  "schema_pair_id": "nhanes_to_knhanes_shared_clinical_full_documents_v2",
+  "artifact_hashes": {
+    "proposer_input_sha256": "784e218c09b1615b2c7f052eb8e52b4b6d374243ea1fb08293f6cc7e02c667aa",
+    "raw_candidate_bank_sha256": "20423217d472382d747ea02ebfa7fb094730591af93bf54211f3194240830235",
+    "dsl_sha256": "e64459681e81fb3c9d9ba7b4ed2640d1d29353c98d91ad7a33e62d276a9c6f2b"
+  },
+  "accepted_bank": {
+    "concept_candidates": [
+      {
+        "candidate_id": "c_001",
+        "rank": 1,
+        "canonical_name": "body_measurements",
+        "description": "Documented body-size measurements comprising standing height, waist circumference, and weight in both schemas.",
+        "confidence": 0.99,
+        "members": {
+          "source": [
+            {
+              "column_id": "BMXHT",
+              "evidence_span_ids": [
+                "source.nhanes_raw_codebook_surface.BMXHT"
+              ]
+            },
+            {
+              "column_id": "BMXWAIST",
+              "evidence_span_ids": [
+                "source.nhanes_raw_codebook_surface.BMXWAIST"
+              ]
+            },
+            {
+              "column_id": "BMXWT",
+              "evidence_span_ids": [
+                "source.nhanes_raw_codebook_surface.BMXWT"
+              ]
+            }
+          ],
+          "target": [
+            {
+              "column_id": "ALL__he_ht",
+              "evidence_span_ids": [
+                "target.knhanes_2020_2024_official_codebook.ALL__he_ht"
+              ]
+            },
+            {
+              "column_id": "ALL__he_wc",
+              "evidence_span_ids": [
+                "target.knhanes_2020_2024_official_codebook.ALL__he_wc"
+              ]
+            },
+            {
+              "column_id": "ALL__he_wt",
+              "evidence_span_ids": [
+                "target.knhanes_2020_2024_official_codebook.ALL__he_wt"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "candidate_id": "c_002",
+        "rank": 2,
+        "canonical_name": "first_reading_blood_pressure",
+        "description": "Paired systolic and diastolic blood-pressure measurements from the first documented reading in both schemas.",
+        "confidence": 0.99,
+        "members": {
+          "source": [
+            {
+              "column_id": "BPXSY1",
+              "evidence_span_ids": [
+                "source.nhanes_raw_codebook_surface.BPXSY1"
+              ]
+            },
+            {
+              "column_id": "BPXDI1",
+              "evidence_span_ids": [
+                "source.nhanes_raw_codebook_surface.BPXDI1"
+              ]
+            }
+          ],
+          "target": [
+            {
+              "column_id": "ALL__he_sbp1",
+              "evidence_span_ids": [
+                "target.knhanes_2020_2024_official_codebook.ALL__he_sbp1"
+              ]
+            },
+            {
+              "column_id": "ALL__he_dbp1",
+              "evidence_span_ids": [
+                "target.knhanes_2020_2024_official_codebook.ALL__he_dbp1"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "candidate_id": "c_003",
+        "rank": 3,
+        "canonical_name": "diabetes_test_measurements",
+        "description": "Documented diabetes-test measurements comprising fasting glucose and glycohemoglobin or HbA1c in both schemas.",
+        "confidence": 0.98,
+        "members": {
+          "source": [
+            {
+              "column_id": "LBXGLU",
+              "evidence_span_ids": [
+                "source.nhanes_raw_codebook_surface.LBXGLU"
+              ]
+            },
+            {
+              "column_id": "LBXGH",
+              "evidence_span_ids": [
+                "source.nhanes_raw_codebook_surface.LBXGH"
+              ]
+            }
+          ],
+          "target": [
+            {
+              "column_id": "ALL__he_glu",
+              "evidence_span_ids": [
+                "target.knhanes_2020_2024_official_codebook.ALL__he_glu"
+              ]
+            },
+            {
+              "column_id": "ALL__he_hba1c",
+              "evidence_span_ids": [
+                "target.knhanes_2020_2024_official_codebook.ALL__he_hba1c"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "candidate_id": "c_004",
+        "rank": 4,
+        "canonical_name": "blood_lipid_measurements",
+        "description": "Documented blood-lipid measurements comprising total cholesterol and triglycerides in both schemas.",
+        "confidence": 0.9,
+        "members": {
+          "source": [
+            {
+              "column_id": "LBXTC",
+              "evidence_span_ids": [
+                "source.nhanes_raw_codebook_surface.LBXTC"
+              ]
+            },
+            {
+              "column_id": "LBXSTR",
+              "evidence_span_ids": [
+                "source.nhanes_raw_codebook_surface.LBXSTR"
+              ]
+            }
+          ],
+          "target": [
+            {
+              "column_id": "ALL__he_chol",
+              "evidence_span_ids": [
+                "target.knhanes_2020_2024_official_codebook.ALL__he_chol"
+              ]
+            },
+            {
+              "column_id": "ALL__he_tg",
+              "evidence_span_ids": [
+                "target.knhanes_2020_2024_official_codebook.ALL__he_tg"
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "relation_candidates": [
+      {
+        "candidate_id": "r_001",
+        "rank": 1,
+        "canonical_name": "first_reading_systolic_diastolic_difference",
+        "description": "Ordered difference between paired first-reading systolic and diastolic blood pressure; source documentation requires systolic pressure to exceed diastolic pressure, and target documentation records the two components together in the first-reading protocol.",
+        "confidence": 0.97,
+        "semantic_type": "measurement",
+        "direction": "ordered",
+        "operation": {
+          "name": "difference",
+          "parameters": {}
+        },
+        "bindings": {
+          "source": {
+            "arguments": {
+              "lhs": {
+                "kind": "column",
+                "id": "BPXSY1"
+              },
+              "rhs": {
+                "kind": "column",
+                "id": "BPXDI1"
+              }
+            },
+            "evidence_span_ids": [
+              "source.nhanes_bpx_d_native.chunk_0005",
+              "source.nhanes_bpx_d_native.chunk_0006"
+            ]
+          },
+          "target": {
+            "arguments": {
+              "lhs": {
+                "kind": "column",
+                "id": "ALL__he_sbp1"
+              },
+              "rhs": {
+                "kind": "column",
+                "id": "ALL__he_dbp1"
+              }
+            },
+            "evidence_span_ids": [
+              "target.knhanes_cycle8_manual_native.chunk_0001",
+              "target.knhanes_cycle9_manual_native.chunk_0001"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "decisions": [
+    {
+      "candidate_id": "c_001",
+      "kind": "concept",
+      "rank": 1,
+      "decision": "accepted",
+      "reason_codes": []
+    },
+    {
+      "candidate_id": "c_002",
+      "kind": "concept",
+      "rank": 2,
+      "decision": "accepted",
+      "reason_codes": []
+    },
+    {
+      "candidate_id": "c_003",
+      "kind": "concept",
+      "rank": 3,
+      "decision": "accepted",
+      "reason_codes": []
+    },
+    {
+      "candidate_id": "c_004",
+      "kind": "concept",
+      "rank": 4,
+      "decision": "accepted",
+      "reason_codes": []
+    },
+    {
+      "candidate_id": "r_001",
+      "kind": "relation",
+      "rank": 1,
+      "decision": "accepted",
+      "reason_codes": []
+    }
+  ],
+  "abstentions": [
+    {
+      "kind": "concept",
+      "reason": "no_cross_schema_binding",
+      "summary": "Age has only one eligible member in each schema, so it would be merely a one-to-one column match rather than a valid higher-level concept candidate.",
+      "evidence_span_ids": [
+        "source.nhanes_raw_codebook_surface.RIDAGEYR",
+        "target.knhanes_2020_2024_official_codebook.ALL__age"
+      ]
+    },
+    {
+      "kind": "relation",
+      "reason": "unsupported_operation",
+      "summary": "The body-measurement documentation mentions a body-mass index measure, but that measure is not an eligible schema endpoint and no supplied DSL operation directly represents it.",
+      "evidence_span_ids": [
+        "source.nhanes_bmx_d_native.chunk_0003",
+        "target.knhanes_cycle8_manual_native.chunk_0001",
+        "target.knhanes_cycle9_manual_native.chunk_0001"
+      ]
+    },
+    {
+      "kind": "relation",
+      "reason": "insufficient_evidence",
+      "summary": "The documentation groups fasting glucose and glycohemoglobin or HbA1c as diabetes-test measurements but does not document an executable relationship between them using any supplied DSL operation.",
+      "evidence_span_ids": [
+        "source.nhanes_ghb_d_native.chunk_0003",
+        "source.nhanes_glu_d_native.chunk_0003",
+        "target.knhanes_cycle8_manual_native.chunk_0002",
+        "target.knhanes_cycle9_manual_native.chunk_0002"
+      ]
+    },
+    {
+      "kind": "relation",
+      "reason": "insufficient_evidence",
+      "summary": "The documentation groups total cholesterol and triglycerides as lipid measurements but does not document an executable arithmetic relationship between them.",
+      "evidence_span_ids": [
+        "source.nhanes_l13_b_native.chunk_0003",
+        "source.nhanes_biopro_d_native.chunk_0003",
+        "target.knhanes_cycle8_manual_native.chunk_0002",
+        "target.knhanes_cycle9_manual_native.chunk_0002"
+      ]
+    }
+  ],
+  "summary": {
+    "proposed_concepts": 4,
+    "accepted_concepts": 4,
+    "proposed_relations": 1,
+    "accepted_relations": 1,
+    "abstentions": 4,
+    "rejection_reason_counts": {}
+  }
+}

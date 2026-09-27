@@ -1,0 +1,193 @@
+{
+ "arms": [
+  "rung0_base",
+  "rung1_columns",
+  "rung2_grouping",
+  "rung3_measurement",
+  "pl_columns",
+  "pl_grouping",
+  "pl_measurement",
+  "is_target",
+  "loo_columns",
+  "loo_grouping",
+  "loo_measurement (alias of rung2_grouping)"
+ ],
+ "backbone": "xgboost_hist_d6_n300",
+ "benchmark_id": "std_cross_nh2kn_shared_anchorreset_fewshot_v1",
+ "dropped_members_by_group": {
+  "blood_lipid_measurements": [],
+  "body_measurements": [],
+  "diabetes_test_measurements": [],
+  "first_reading_blood_pressure": [
+   "dbp"
+  ]
+ },
+ "feature_set": "ladder_all_slots_v1",
+ "member_slots": [
+  "height_cm",
+  "weight_kg",
+  "waist_cm",
+  "sbp",
+  "glucose",
+  "hba1c",
+  "total_cholesterol",
+  "triglycerides"
+ ],
+ "metric": "query_sd_normalized_rmse (lower is better)",
+ "n_pool": 7073,
+ "n_query": 13605,
+ "n_source": 47957,
+ "nrmse": {
+  "1024": {
+   "is_target": 0.9252994869291493,
+   "loo_columns": 0.6835352166884754,
+   "loo_grouping": 0.6876927996620279,
+   "loo_measurement": 0.6738555969192731,
+   "pl_columns": 0.6911886839698589,
+   "pl_grouping": 0.6747499279154193,
+   "pl_measurement": 0.6726276417379442,
+   "rung0_base": 0.9231882829636525,
+   "rung1_columns": 0.6750321427932208,
+   "rung2_grouping": 0.6738555969192731,
+   "rung3_measurement": 0.6795847754723614
+  },
+  "256": {
+   "is_target": 0.9159841324083492,
+   "loo_columns": 0.7268152925550011,
+   "loo_grouping": 0.7333405588529582,
+   "loo_measurement": 0.6971645750258437,
+   "pl_columns": 0.7153180579848171,
+   "pl_grouping": 0.6953659374666433,
+   "pl_measurement": 0.6935111200948898,
+   "rung0_base": 0.9148278104842621,
+   "rung1_columns": 0.7071514009805995,
+   "rung2_grouping": 0.6971645750258437,
+   "rung3_measurement": 0.7216235703580954
+  },
+  "64": {
+   "is_target": 1.030718456343776,
+   "loo_columns": 0.8357223694617526,
+   "loo_grouping": 0.8558937417623214,
+   "loo_measurement": 0.8207261639625301,
+   "pl_columns": 0.9080544750456226,
+   "pl_grouping": 0.8040980402998554,
+   "pl_measurement": 0.7949025409782996,
+   "rung0_base": 1.0165257991855703,
+   "rung1_columns": 0.8220343227788993,
+   "rung2_grouping": 0.8207261639625301,
+   "rung3_measurement": 0.8326735020099288
+  }
+ },
+ "pl_columns_permutation": {
+  "glucose": "triglycerides",
+  "hba1c": "sbp",
+  "height_cm": "waist_cm",
+  "sbp": "glucose",
+  "total_cholesterol": "height_cm",
+  "triglycerides": "hba1c",
+  "waist_cm": "weight_kg",
+  "weight_kg": "total_cholesterol"
+ },
+ "pl_grouping_partition": {
+  "blood_lipid_measurements": [
+   "height_cm",
+   "weight_kg"
+  ],
+  "body_measurements": [
+   "total_cholesterol",
+   "triglycerides",
+   "waist_cm"
+  ],
+  "diabetes_test_measurements": [
+   "glucose",
+   "sbp"
+  ],
+  "first_reading_blood_pressure": [
+   "hba1c"
+  ]
+ },
+ "pl_measurement_table": {
+  "knhanes/ALL__bs3_1": {
+   "kind": "map",
+   "map": {
+    "1.0": 1.0,
+    "2.0": 0.5,
+    "3.0": 0.0
+   }
+  },
+  "knhanes/ALL__de1_dg": {
+   "kind": "map",
+   "map": {
+    "8.0": 1.0,
+    "9.0": 0.0
+   }
+  },
+  "knhanes/ALL__di1_dg": {
+   "kind": "map",
+   "map": {
+    "0.0": 1.0,
+    "9.0": 0.0
+   }
+  },
+  "knhanes/ALL__educ": {
+   "kind": "map",
+   "map": {
+    "1.0": 0.0,
+    "2.0": 0.6666666666666666,
+    "3.0": 1.0,
+    "4.0": 0.3333333333333333
+   }
+  },
+  "knhanes/ALL__sex": {
+   "kind": "map",
+   "map": {
+    "1.0": 0.0,
+    "2.0": 1.0
+   }
+  },
+  "nhanes/BPQ020": {
+   "kind": "map",
+   "map": {
+    "1.0": 1.0,
+    "2.0": 0.0
+   }
+  },
+  "nhanes/DIQ010": {
+   "kind": "map",
+   "map": {
+    "1.0": 0.5,
+    "2.0": 1.0,
+    "9.0": 0.0
+   }
+  },
+  "nhanes/DMDEDUC2": {
+   "kind": "map",
+   "map": {
+    "1.0": 0.25,
+    "2.0": 0.5,
+    "3.0": 1.0,
+    "5.0": 0.0,
+    "9.0": 0.75
+   }
+  },
+  "nhanes/RIAGENDR": {
+   "kind": "map",
+   "map": {
+    "1.0": 0.0,
+    "2.0": 1.0
+   }
+  },
+  "nhanes/SMQ040": {
+   "kind": "map",
+   "map": {
+    "1.0": 1.0,
+    "2.0": 0.5,
+    "3.0": 0.0
+   }
+  }
+ },
+ "primary_k": 256,
+ "seed": 57,
+ "target": "dbp",
+ "wall_seconds": 91.2
+}

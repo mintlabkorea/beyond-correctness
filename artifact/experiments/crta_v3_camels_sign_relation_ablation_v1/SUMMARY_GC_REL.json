@@ -1,0 +1,457 @@
+{
+ "GC_REL_P0_pass": true,
+ "GC_REL_P0_pipeline_identity": {
+  "abs_delta": 4.007292062208068e-06,
+  "both_flip_mean_gain_log1p_rmse": 0.1842240072920622,
+  "reproduces_v2_within_tolerance": true,
+  "v2_cellwise_bit_identical": true,
+  "v2_cellwise_cells_compared": 2880,
+  "v2_cellwise_max_abs_delta": 0.0,
+  "v2_reference": 0.18422
+ },
+ "GC_REL_P1_pass": true,
+ "GC_REL_P1_pass_shapley": true,
+ "GC_REL_P2_case": "inert (interval contains zero)",
+ "GC_REL_P2_pass_no_pet_identification": true,
+ "GC_REL_P2_pet_inert_in_both_contexts": true,
+ "addendum": "GC-REL",
+ "attribution_note": "simple-effect shares are reported for continuity with the frozen preregistration but are NOT an identified decomposition; the Shapley effects are, and they sum exactly to the both-flip effect",
+ "bootstrap": {
+  "reps": 10000,
+  "seed": 20260819,
+  "win_threshold": 0.6
+ },
+ "both_flip_reference": {
+  "log1p_rmse": {
+   "ci95": [
+    0.13103804191814947,
+    0.24838888591384245
+   ],
+   "direction": "degrades (documented sign is better)",
+   "drop_best_basin_mean": 0.15885780483210843,
+   "mean_gain": 0.1842240072920622,
+   "n_basin_cells": 720,
+   "n_basins": 12,
+   "n_basins_negative": 0,
+   "robustness_basin_mean_bootstrap": {
+    "ci95": [
+     0.13012723744583773,
+     0.2492757855993458
+    ],
+    "direction": "degrades (documented sign is better)",
+    "mean_of_basin_means": 0.18422400729206223,
+    "n_basins": 12,
+    "n_basins_negative": 0
+   },
+   "separated": true,
+   "win_rate": 0.9611111111111111
+  },
+  "nse": {
+   "ci95": [
+    0.4329412259317995,
+    0.9815003681573203
+   ],
+   "direction": "degrades (documented sign is better)",
+   "drop_best_basin_mean": 0.4919712594050268,
+   "mean_gain": 0.6190597149944825,
+   "n_basin_cells": 720,
+   "n_basins": 12,
+   "n_basins_negative": 0,
+   "robustness_basin_mean_bootstrap": {
+    "ci95": [
+     0.43488379058851573,
+     0.907607720932583
+    ],
+    "direction": "degrades (documented sign is better)",
+    "mean_of_basin_means": 0.6190597149944825,
+    "n_basins": 12,
+    "n_basins_negative": 0
+   },
+   "separated": true,
+   "win_rate": 0.9569444444444445
+  }
+ },
+ "clustering": "query basin (independent population unit)",
+ "interaction_B_minus_P_minus_E_plus_D": {
+  "log1p_rmse": {
+   "ci95": [
+    -0.015385682435260511,
+    0.004549077234065865
+   ],
+   "direction": "inert (interval contains zero)",
+   "drop_best_basin_mean": -0.008606512046025517,
+   "mean_gain": -0.005745556759283934,
+   "n_basin_cells": 720,
+   "n_basins": 12,
+   "n_basins_negative": 8,
+   "robustness_basin_mean_bootstrap": {
+    "ci95": [
+     -0.015327068107596487,
+     0.004379988096539265
+    ],
+    "direction": "inert (interval contains zero)",
+    "mean_of_basin_means": -0.005745556759283933,
+    "n_basins": 12,
+    "n_basins_negative": 8
+   },
+   "separated": false,
+   "win_rate": 0.4375
+  },
+  "nse": {
+   "ci95": [
+    -0.6166208496590108,
+    -0.006272196120829474
+   ],
+   "direction": "improves (documented sign is WRONG for this relation)",
+   "drop_best_basin_mean": -0.23008620398081808,
+   "mean_gain": -0.2047569789765728,
+   "n_basin_cells": 720,
+   "n_basins": 12,
+   "n_basins_negative": 9,
+   "robustness_basin_mean_bootstrap": {
+    "ci95": [
+     -0.5468636813438263,
+     -0.005349350995657902
+    ],
+    "direction": "improves (documented sign is WRONG for this relation)",
+    "mean_of_basin_means": -0.20475697897657286,
+    "n_basins": 12,
+    "n_basins_negative": 9
+   },
+   "separated": false,
+   "win_rate": 0.4041666666666667
+  }
+ },
+ "opposite_conditional_effects": {
+  "pet_given_flipped_precip_B_minus_P": {
+   "log1p_rmse": {
+    "ci95": [
+     -0.016093527729225694,
+     0.003913167550752789
+    ],
+    "direction": "inert (interval contains zero)",
+    "drop_best_basin_mean": -0.008823940862035085,
+    "mean_gain": -0.006319072566908436,
+    "n_basin_cells": 720,
+    "n_basins": 12,
+    "n_basins_negative": 8,
+    "robustness_basin_mean_bootstrap": {
+     "ci95": [
+      -0.01598916413668861,
+      0.0037155538545557204
+     ],
+     "direction": "inert (interval contains zero)",
+     "mean_of_basin_means": -0.006319072566908436,
+     "n_basins": 12,
+     "n_basins_negative": 8
+    },
+    "separated": false,
+    "win_rate": 0.4736111111111111
+   },
+   "nse": {
+    "ci95": [
+     -0.6977912201760618,
+     -0.002064689889211292
+    ],
+    "direction": "improves (documented sign is WRONG for this relation)",
+    "drop_best_basin_mean": -0.2483921697192546,
+    "mean_gain": -0.22264243378775916,
+    "n_basin_cells": 720,
+    "n_basins": 12,
+    "n_basins_negative": 8,
+    "robustness_basin_mean_bootstrap": {
+     "ci95": [
+      -0.6115063998661748,
+      -0.0022083921486245415
+     ],
+     "direction": "improves (documented sign is WRONG for this relation)",
+     "mean_of_basin_means": -0.22264243378775914,
+     "n_basins": 12,
+     "n_basins_negative": 8
+    },
+    "separated": false,
+    "win_rate": 0.4777777777777778
+   }
+  },
+  "precip_given_flipped_pet_B_minus_E": {
+   "log1p_rmse": {
+    "ci95": [
+     0.1318340806739479,
+     0.24930176019194614
+    ],
+    "direction": "degrades (documented sign is better)",
+    "drop_best_basin_mean": 0.159075233648118,
+    "mean_gain": 0.18479752309968675,
+    "n_basin_cells": 720,
+    "n_basins": 12,
+    "n_basins_negative": 0,
+    "robustness_basin_mean_bootstrap": {
+     "ci95": [
+      0.13109507780890445,
+      0.25035254550679426
+     ],
+     "direction": "degrades (documented sign is better)",
+     "mean_of_basin_means": 0.18479752309968675,
+     "n_basins": 12,
+     "n_basins_negative": 0
+    },
+    "separated": true,
+    "win_rate": 0.9625
+   },
+   "nse": {
+    "ci95": [
+     0.42562597112542944,
+     1.0456076415687572
+    ],
+    "direction": "degrades (documented sign is better)",
+    "drop_best_basin_mean": 0.48535438490561744,
+    "mean_gain": 0.6369451698056688,
+    "n_basin_cells": 720,
+    "n_basins": 12,
+    "n_basins_negative": 0,
+    "robustness_basin_mean_bootstrap": {
+     "ci95": [
+      0.42560089828215675,
+      0.9773402867991342
+     ],
+     "direction": "degrades (documented sign is better)",
+     "mean_of_basin_means": 0.636945169805669,
+     "n_basins": 12,
+     "n_basins_negative": 0
+    },
+    "separated": true,
+    "win_rate": 0.9597222222222223
+   }
+  }
+ },
+ "probe_root": "experiments/crta_v3_camels_sign_relation_ablation_v1",
+ "shapley_effects": {
+  "flip_pet_only": {
+   "log1p_rmse": {
+    "ci95": [
+     -0.008580100398338118,
+     0.001881922404206059
+    ],
+    "direction": "inert (interval contains zero)",
+    "drop_best_basin_mean": -0.004800389351299935,
+    "mean_gain": -0.003446294187266469,
+    "n_basin_cells": 720,
+    "n_basins": 12,
+    "n_basins_negative": 8,
+    "robustness_basin_mean_bootstrap": {
+     "ci95": [
+      -0.008482714281188,
+      0.0016525623335793332
+     ],
+     "direction": "inert (interval contains zero)",
+     "mean_of_basin_means": -0.0034462941872664705,
+     "n_basins": 12,
+     "n_basins_negative": 8
+    },
+    "separated": false,
+    "win_rate": 0.48333333333333334
+   },
+   "nse": {
+    "ci95": [
+     -0.3875889539870163,
+     0.0015524586095875107
+    ],
+    "direction": "inert (interval contains zero)",
+    "drop_best_basin_mean": -0.13334906772884558,
+    "mean_gain": -0.12026394429947275,
+    "n_basin_cells": 720,
+    "n_basins": 12,
+    "n_basins_negative": 8,
+    "robustness_basin_mean_bootstrap": {
+     "ci95": [
+      -0.33812183241428256,
+      0.0012230463356812842
+     ],
+     "direction": "inert (interval contains zero)",
+     "mean_of_basin_means": -0.12026394429947274,
+     "n_basins": 12,
+     "n_basins_negative": 8
+    },
+    "separated": false,
+    "win_rate": 0.4722222222222222
+   }
+  },
+  "flip_precip_only": {
+   "log1p_rmse": {
+    "ci95": [
+     0.1377433918965602,
+     0.24858319344624105
+    ],
+    "direction": "degrades (documented sign is better)",
+    "drop_best_basin_mean": 0.16337848967113078,
+    "mean_gain": 0.18767030147932873,
+    "n_basin_cells": 720,
+    "n_basins": 12,
+    "n_basins_negative": 0,
+    "robustness_basin_mean_bootstrap": {
+     "ci95": [
+      0.13674258571935716,
+      0.2494615736901836
+     ],
+     "direction": "degrades (documented sign is better)",
+     "mean_of_basin_means": 0.1876703014793287,
+     "n_basins": 12,
+     "n_basins_negative": 0
+    },
+    "separated": true,
+    "win_rate": 0.9611111111111111
+   },
+   "nse": {
+    "ci95": [
+     0.4487352669172412,
+     1.3214730276685993
+    ],
+    "direction": "degrades (documented sign is better)",
+    "drop_best_basin_mean": 0.5077354653592815,
+    "mean_gain": 0.7393236592939553,
+    "n_basin_cells": 720,
+    "n_basins": 12,
+    "n_basins_negative": 0,
+    "robustness_basin_mean_bootstrap": {
+     "ci95": [
+      0.45008046841745325,
+      1.2363819974639747
+     ],
+     "direction": "degrades (documented sign is better)",
+     "mean_of_basin_means": 0.7393236592939553,
+     "n_basins": 12,
+     "n_basins_negative": 0
+    },
+    "separated": true,
+    "win_rate": 0.9583333333333334
+   }
+  }
+ },
+ "shapley_share_of_both_flip_log1p_rmse": {
+  "flip_pet_only": -0.018707085129262425,
+  "flip_precip_only": 1.0187070851292628
+ },
+ "shapley_sums_to_both_flip": {
+  "abs_delta": 5.551115123125783e-17,
+  "both_flip_mean_gain": 0.1842240072920622,
+  "exact_within_1e_12": true,
+  "sum_of_shapley_effects": 0.18422400729206226
+ },
+ "simple_effect_share_of_both_flip_log1p_rmse": {
+  "flip_pet_only": -0.0031131436996442692,
+  "flip_precip_only": 1.034301026558881
+ },
+ "single_flip": {
+  "flip_pet_only": {
+   "log1p_rmse": {
+    "ci95": [
+     -0.002595310559625337,
+     0.001300236642070446
+    ],
+    "direction": "inert (interval contains zero)",
+    "drop_best_basin_mean": -0.0009271025874136035,
+    "mean_gain": -0.0005735158076245033,
+    "n_basin_cells": 720,
+    "n_basins": 12,
+    "n_basins_negative": 5,
+    "robustness_basin_mean_bootstrap": {
+     "ci95": [
+      -0.0023635706571321067,
+      0.0010891025739933444
+     ],
+     "direction": "inert (interval contains zero)",
+     "mean_of_basin_means": -0.0005735158076245032,
+     "n_basins": 12,
+     "n_basins_negative": 5
+    },
+    "separated": false,
+    "win_rate": 0.5013888888888889
+   },
+   "nse": {
+    "ci95": [
+     -0.0812166203424206,
+     0.012965279274747984
+    ],
+    "direction": "inert (interval contains zero)",
+    "drop_best_basin_mean": -0.02205040003319644,
+    "mean_gain": -0.01788545481118631,
+    "n_basin_cells": 720,
+    "n_basins": 12,
+    "n_basins_negative": 5,
+    "robustness_basin_mean_bootstrap": {
+     "ci95": [
+      -0.07029090629592329,
+      0.012890008997401853
+     ],
+     "direction": "inert (interval contains zero)",
+     "mean_of_basin_means": -0.017885454811186318,
+     "n_basins": 12,
+     "n_basins_negative": 5
+    },
+    "separated": false,
+    "win_rate": 0.5777777777777777
+   }
+  },
+  "flip_precip_only": {
+   "log1p_rmse": {
+    "ci95": [
+     0.1429229748729817,
+     0.2475977334138885
+    ],
+    "direction": "degrades (documented sign is better)",
+    "drop_best_basin_mean": 0.1676817456941435,
+    "mean_gain": 0.1905430798589707,
+    "n_basin_cells": 720,
+    "n_basins": 12,
+    "n_basins_negative": 0,
+    "robustness_basin_mean_bootstrap": {
+     "ci95": [
+      0.14293387355321127,
+      0.24880364674319058
+     ],
+     "direction": "degrades (documented sign is better)",
+     "mean_of_basin_means": 0.1905430798589707,
+     "n_basins": 12,
+     "n_basins_negative": 0
+    },
+    "separated": true,
+    "win_rate": 0.9666666666666667
+   },
+   "nse": {
+    "ci95": [
+     0.46550161138638757,
+     1.6126375922543283
+    ],
+    "direction": "degrades (documented sign is better)",
+    "drop_best_basin_mean": 0.5301165458129456,
+    "mean_gain": 0.8417021487822416,
+    "n_basin_cells": 720,
+    "n_basins": 12,
+    "n_basins_negative": 0,
+    "robustness_basin_mean_bootstrap": {
+     "ci95": [
+      0.4665614799228798,
+      1.501278213202671
+     ],
+     "direction": "degrades (documented sign is better)",
+     "mean_of_basin_means": 0.8417021487822418,
+     "n_basins": 12,
+     "n_basins_negative": 0
+    },
+    "separated": true,
+    "win_rate": 0.9583333333333334
+   }
+  }
+ },
+ "task": "N1_camels_us2gb",
+ "validation": {
+  "arms": [
+   "flip_pet_only",
+   "flip_precip_only",
+   "sign_documented",
+   "sign_flipped"
+  ],
+  "n_basins": 12,
+  "n_cells": 60
+ }
+}

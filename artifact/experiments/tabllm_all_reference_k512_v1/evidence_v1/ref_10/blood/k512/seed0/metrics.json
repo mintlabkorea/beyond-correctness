@@ -1,0 +1,99 @@
+{
+  "analysis_status": "frozen_all_reference_k512_evidence",
+  "arm": "ref_10",
+  "base_runner_sha256": "796d0bb0d17950a771c5e18fe732f955a4307956192e7329de23683e411f9447",
+  "dataset": "blood",
+  "execution_device": "cuda:2",
+  "execution_num_shards": 3,
+  "execution_shard_index": 2,
+  "final_trainable_state_sha256": "18885aabc5946993052fef19da25816490ae0dfec4e7619cf6a8fe85e7127fee",
+  "ia3_checkpoint_sha256": "8fe7a00fb425dd331c7a021c9468d50a14ec2ca1998007e7ead5ce3111405729",
+  "initial_trainable_state_sha256": "2b3e0be8998a1d12a84a7b358726205cce0c83973fb198a1c37bdac6aa3fbd0b",
+  "metrics": {
+    "accuracy": 0.58,
+    "auc": 0.6401136363636364
+  },
+  "model_audit": {
+    "checkpoint_key_count": 192,
+    "checkpoint_parameter_count": 1081344,
+    "frozen_parameter_count": 11136118784,
+    "initial_trainable_state_sha256": "2b3e0be8998a1d12a84a7b358726205cce0c83973fb198a1c37bdac6aa3fbd0b",
+    "missing_base_model_key_count": 752,
+    "parameter_dtype": "torch.bfloat16",
+    "precision_layout": "frozen=bfloat16, trainable_ia3=float32",
+    "trainable_parameter_count": 1081344,
+    "trainable_parameter_dtype": "torch.float32",
+    "trainable_tensor_count": 192
+  },
+  "model_path": "external/.cache/huggingface/hub/models--bigscience--T0/snapshots/1cfa27271f8085c29323c94bd659004b210f20b5",
+  "n_test": 150,
+  "n_train": 512,
+  "n_train_unique": 309,
+  "prior_wrapper_sha256": "62a7d917cd5450bba2af3ff548c62f4a60790f1dfdf45048fb5088017e14182d",
+  "protobuf_python_implementation": "python",
+  "protocol_sha256": "5fee5e02c870da5205e59d8f53aeb834ae374ccb5ea28f30b8b2f68f036022b0",
+  "raw_and_serialization_tree_sha256": "383519d4b1efffe01c414c1f7b12db9c7abc04aefbde0e9957c44c5eaf038763",
+  "reference_id": "ref_10",
+  "reference_manifest_sha256": "7fe208e544a954ebd2c15e273473d604107a22e49230631101466ab97097d8da",
+  "reference_permutation": [
+    3,
+    2,
+    0,
+    1
+  ],
+  "reference_selection_role": "exhaustive_remaining_21",
+  "reference_template_sha256": "84b0d8daf8ecd62beee71aa4f7faec93dbbbd69b428d46983808a77ee859f789",
+  "runner_sha256": "b8e659230269249a502122b44aa58f402366660ea55ea644025d29c62759fd9b",
+  "seed": 0,
+  "shot": 512,
+  "tabllm_commit": "71f6647c523aa6fd35df94ad76207c4377248c49",
+  "test_prompt_sha256": "d1a3317c4253647d873b65c68baef4661b7b71bd3b5297dfba72c677d3248e0a",
+  "tfew_execution_commit": "114deced63ae722a368e06cb08ea956b20c393a6",
+  "train_membership_with_replacement": true,
+  "train_prompt_sha256": "e97ceaa415eb84b7ae5c5c1ecc4deb198cf92f5f60cac4bd929f368ed3fe3a09",
+  "trained_checkpoint_sha256": "5115d32c9a0539e8400645b76992313f9261802d916a1dc15c315b3f8278d836",
+  "training": {
+    "batch_order_sha256": "3c3b3dea2eeb4257dcd86e403d0c48e1ab2966b9413e89bb4aba3e0faac56d46",
+    "executed_steps": 3840,
+    "loss_first": {
+      "gradient_norm_pre_clip": 1.5160950422286987,
+      "lm_loss": 0.7215903997421265,
+      "loss": 4.556114196777344,
+      "lr": 1.3020833333333334e-05,
+      "mc_loss": 0.9479369521141052,
+      "unlikely_loss": 2.886587142944336
+    },
+    "loss_last": {
+      "gradient_norm_pre_clip": 0.29334282875061035,
+      "lm_loss": 0.1144256591796875,
+      "loss": 0.2341463565826416,
+      "lr": 0.0,
+      "mc_loss": 0.03644557297229767,
+      "unlikely_loss": 0.08327512443065643
+    },
+    "planned_steps": 3840
+  },
+  "training_contract": {
+    "batch_size": 4,
+    "compute_dtype": "bfloat16 base and autocast with FP32 IA3 master parameters; temporary bfloat16 IA3 evaluation copy",
+    "epochs": 30,
+    "gradient_clip": 1.0,
+    "length_norm": 1,
+    "loss": "lm + multiple_choice + unlikely",
+    "lr": 0.003,
+    "max_length": 1024,
+    "optimizer": "Adafactor(scale_parameter=True, relative_step=False)",
+    "scheduler": "linear_decay_with_warmup",
+    "warmup_ratio": 0.06
+  },
+  "versions": {
+    "datasets": "2.14.7",
+    "numpy": "2.2.6",
+    "pandas": "2.3.3",
+    "python": "3.10.20",
+    "scikit_learn": "1.7.2",
+    "torch": "2.12.0.dev20260408+cu128",
+    "transformers": "4.30.0"
+  },
+  "wall_seconds": 974.933
+}

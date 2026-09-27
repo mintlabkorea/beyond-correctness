@@ -1,0 +1,3017 @@
+{
+  "absolute_nrmse_trajectories": {
+    "all13": {
+      "R_domain_local": {
+        "1024": 0.6827273694047912,
+        "256": 0.7173664284211287,
+        "64": 0.7861983810957783
+      },
+      "S_shared_bridge": {
+        "1024": 0.6743754158648955,
+        "256": 0.7036747814651206,
+        "64": 0.7471170992134611
+      },
+      "W_deranged_bridge": {
+        "1024": 0.7060754666047997,
+        "256": 0.7606070168234692,
+        "64": 0.9367556550722025
+      }
+    },
+    "classA_primary": {
+      "R_domain_local": {
+        "1024": 0.6941275229161372,
+        "256": 0.7475872081903379,
+        "64": 0.8082162281979338
+      },
+      "S_shared_bridge": {
+        "1024": 0.6761385958587912,
+        "256": 0.7002421993391742,
+        "64": 0.7384739785089818
+      },
+      "W_deranged_bridge": {
+        "1024": 0.7043416613127512,
+        "256": 0.769811052234579,
+        "64": 0.9238173527004643
+      }
+    },
+    "classB": {
+      "R_domain_local": {
+        "1024": 0.9150853250245351,
+        "256": 0.9404304602485822,
+        "64": 0.9781126498142083
+      },
+      "S_shared_bridge": {
+        "1024": 0.9161858740260106,
+        "256": 0.9543648790181717,
+        "64": 1.0086321255329866
+      },
+      "W_deranged_bridge": {
+        "1024": 0.9357979986063839,
+        "256": 1.031662904525402,
+        "64": 1.2612841668329273
+      }
+    },
+    "classC": {
+      "R_domain_local": {
+        "1024": 0.5761040029432783,
+        "256": 0.5918758799670965,
+        "64": 0.6830112570858198
+      },
+      "S_shared_bridge": {
+        "1024": 0.5755354166077744,
+        "256": 0.6075178409950357,
+        "64": 0.6528828335310258
+      },
+      "W_deranged_bridge": {
+        "1024": 0.6162670201546242,
+        "256": 0.6411398192493641,
+        "64": 0.8224702132139986
+      }
+    }
+  },
+  "analysis_status": "post-result labeled-target-support ladder",
+  "bootstrap": {
+    "hierarchy": "endpoints then seeds",
+    "reps": 10000,
+    "seed_base": 20260828
+  },
+  "decays": {
+    "all13": {
+      "curvature_utility_descriptive": {
+        "ci95": [
+          -0.018486020511083973,
+          0.06502558897767287
+        ],
+        "drop_best_endpoint_mean": 0.002630955660741512,
+        "interval_sensitivities": {
+          "bca_cluster_mean": [
+            -0.008340430854346012,
+            0.07405458246034836
+          ],
+          "bootstrap_reps": 10000,
+          "seed": 20270885,
+          "student_t_cluster_mean": [
+            -0.024452545879008115,
+            0.06455242889940124
+          ],
+          "studentized_cluster_bootstrap": [
+            -0.011584504870236406,
+            0.07828582173707435
+          ],
+          "studentized_valid_fraction": 1.0
+        },
+        "mean": 0.02004994151019657,
+        "n_cells": 130,
+        "n_endpoints": 13,
+        "per_endpoint_mean": {
+          "alt": -0.003733473942263643,
+          "bun": -0.0037689004198864784,
+          "creatinine": 0.22907777170365726,
+          "dbp": 0.0037675814848971536,
+          "glucose": -0.11327197241584379,
+          "hematocrit": 0.0016145304314283183,
+          "hemoglobin": 0.011702374711602643,
+          "rbc": 0.017100978176077742,
+          "sbp": 0.01347706086947259,
+          "total_cholesterol": 0.02700760227474954,
+          "triglycerides": -0.005095290721641521,
+          "waist_cm": 0.03236197277218969,
+          "wbc": 0.05040900470811589
+        },
+        "separated": false,
+        "win": 0.6153846153846154
+      },
+      "decay_content_S_minus_W_64_minus_1024": {
+        "ci95": [
+          0.04899480819251965,
+          0.29533569493425094
+        ],
+        "drop_best_endpoint_mean": 0.11301396081677262,
+        "interval_sensitivities": {
+          "bca_cluster_mean": [
+            0.06757492666592296,
+            0.31571062301336383
+          ],
+          "bootstrap_reps": 10000,
+          "seed": 20270865,
+          "student_t_cluster_mean": [
+            0.02169853154300236,
+            0.29417847869467195
+          ],
+          "studentized_cluster_bootstrap": [
+            0.05281532596048505,
+            0.408468248903446
+          ],
+          "studentized_valid_fraction": 1.0
+        },
+        "mean": 0.15793850511883714,
+        "n_cells": 130,
+        "n_endpoints": 13,
+        "per_endpoint_mean": {
+          "alt": 0.42953142859144205,
+          "bun": 0.03654840484769215,
+          "creatinine": 0.6970330367436112,
+          "dbp": 0.0863164850747919,
+          "glucose": 0.433651995074842,
+          "hematocrit": -0.007129235232393072,
+          "hemoglobin": -0.0029458254682881825,
+          "rbc": 0.01616477772196311,
+          "sbp": 0.144903353822688,
+          "total_cholesterol": 0.031590900089535176,
+          "triglycerides": 0.04934341717860574,
+          "waist_cm": 0.19703570118467095,
+          "wbc": -0.05884387308427824
+        },
+        "separated": true,
+        "win": 0.8461538461538461
+      },
+      "decay_reference_minus_wrong_R_minus_W_64_minus_1024": {
+        "ci95": [
+          0.020688335824628763,
+          0.2557021200042612
+        ],
+        "drop_best_endpoint_mean": 0.08758508192284745,
+        "interval_sensitivities": {
+          "bca_cluster_mean": [
+            0.0357387308022234,
+            0.2736527225674822
+          ],
+          "bootstrap_reps": 10000,
+          "seed": 20270873,
+          "student_t_cluster_mean": [
+            -0.00464721004894561,
+            0.2590655636017771
+          ],
+          "studentized_cluster_bootstrap": [
+            0.023632569729894512,
+            0.4466386014390282
+          ],
+          "studentized_valid_fraction": 1.0
+        },
+        "mean": 0.1272091767764157,
+        "n_cells": 130,
+        "n_endpoints": 13,
+        "per_endpoint_mean": {
+          "alt": 0.5014663098462663,
+          "bun": 0.023451377027474296,
+          "creatinine": 0.6026983150192348,
+          "dbp": 0.07756167547446818,
+          "glucose": 0.35021950630234705,
+          "hematocrit": -0.001686125033943653,
+          "hemoglobin": -0.011807935935819091,
+          "rbc": 0.018132084341980548,
+          "sbp": 0.10641101339690424,
+          "total_cholesterol": -0.00741003416707664,
+          "triglycerides": -0.010702088563186163,
+          "waist_cm": 0.1162418441920422,
+          "wbc": -0.11085664380728777
+        },
+        "separated": true,
+        "win": 0.7615384615384615
+      },
+      "decay_utility_S_minus_R_256_minus_1024": {
+        "ci95": [
+          -0.014968746172924204,
+          0.02745000355116371
+        ],
+        "drop_best_endpoint_mean": -0.002411351348725644,
+        "interval_sensitivities": {
+          "bca_cluster_mean": [
+            -0.012097161158022927,
+            0.02784552511774842
+          ],
+          "bootstrap_reps": 10000,
+          "seed": 20270881,
+          "student_t_cluster_mean": [
+            -0.01742334025770347,
+            0.028102727089928333
+          ],
+          "studentized_cluster_bootstrap": [
+            -0.014028071889318223,
+            0.02935486761485965
+          ],
+          "studentized_valid_fraction": 1.0
+        },
+        "mean": 0.005339693416112431,
+        "n_cells": 130,
+        "n_endpoints": 13,
+        "per_endpoint_mean": {
+          "alt": -0.03410070365628026,
+          "bun": 0.008432964120052167,
+          "creatinine": -0.06737152498964039,
+          "dbp": 0.002493614057713278,
+          "glucose": 0.09835223059416934,
+          "hematocrit": -0.0035288203149388686,
+          "hemoglobin": -0.0014201321220358664,
+          "rbc": -0.00953414239804759,
+          "sbp": 0.0125076397781556,
+          "total_cholesterol": 0.005996665990931138,
+          "triglycerides": 0.032570398231716716,
+          "waist_cm": 0.02421594211021953,
+          "wbc": 0.0008018830074468242
+        },
+        "separated": false,
+        "win": 0.5923076923076923
+      },
+      "decay_utility_S_minus_R_64_minus_1024": {
+        "ci95": [
+          0.0028521623250469482,
+          0.05629956059878993
+        ],
+        "drop_best_endpoint_mean": 0.02542887889392518,
+        "interval_sensitivities": {
+          "bca_cluster_mean": [
+            0.003841314770424208,
+            0.052691707208044024
+          ],
+          "bootstrap_reps": 10000,
+          "seed": 20270869,
+          "student_t_cluster_mean": [
+            0.00316915068376623,
+            0.05828950600107663
+          ],
+          "studentized_cluster_bootstrap": [
+            -0.001177337745524032,
+            0.055844789052648794
+          ],
+          "studentized_valid_fraction": 1.0
+        },
+        "mean": 0.03072932834242144,
+        "n_cells": 130,
+        "n_endpoints": 13,
+        "per_endpoint_mean": {
+          "alt": -0.07193488125482417,
+          "bun": 0.013097027820217854,
+          "creatinine": 0.0943347217243765,
+          "dbp": 0.00875480960032371,
+          "glucose": 0.0834324887724949,
+          "hematocrit": -0.005443110198449419,
+          "hemoglobin": 0.00886211046753091,
+          "rbc": -0.0019673066200174396,
+          "sbp": 0.03849234042578379,
+          "total_cholesterol": 0.039000934256611816,
+          "triglycerides": 0.060045505741791905,
+          "waist_cm": 0.08079385699262875,
+          "wbc": 0.05201277072300954
+        },
+        "separated": true,
+        "win": 0.6307692307692307
+      },
+      "decay_utility_S_minus_R_64_minus_256": {
+        "ci95": [
+          -0.0005401491742197504,
+          0.05534747480543967
+        ],
+        "drop_best_endpoint_mean": 0.014029917277333345,
+        "interval_sensitivities": {
+          "bca_cluster_mean": [
+            0.007183105228403354,
+            0.061706186153409275
+          ],
+          "bootstrap_reps": 10000,
+          "seed": 20270877,
+          "student_t_cluster_mean": [
+            -0.0037970347392455514,
+            0.05457630459186356
+          ],
+          "studentized_cluster_bootstrap": [
+            0.00395690086732094,
+            0.07074650568658811
+          ],
+          "studentized_valid_fraction": 1.0
+        },
+        "mean": 0.025389634926309003,
+        "n_cells": 130,
+        "n_endpoints": 13,
+        "per_endpoint_mean": {
+          "alt": -0.037834177598543905,
+          "bun": 0.004664063700165688,
+          "creatinine": 0.16170624671401687,
+          "dbp": 0.006261195542610431,
+          "glucose": -0.014919741821674447,
+          "hematocrit": -0.0019142898835105503,
+          "hemoglobin": 0.010282242589566776,
+          "rbc": 0.007566835778030151,
+          "sbp": 0.02598470064762819,
+          "total_cholesterol": 0.03300426826568068,
+          "triglycerides": 0.027475107510075193,
+          "waist_cm": 0.05657791488240922,
+          "wbc": 0.05121088771556272
+        },
+        "separated": false,
+        "win": 0.5923076923076923
+      }
+    },
+    "classA_primary": {
+      "curvature_utility_descriptive": {
+        "ci95": [
+          -0.061210608494303646,
+          0.028866350849795008
+        ],
+        "drop_best_endpoint_mean": -0.014823003701673205,
+        "interval_sensitivities": {
+          "bca_cluster_mean": [
+            -0.0718625963517112,
+            0.018931729806072096
+          ],
+          "bootstrap_reps": 10000,
+          "seed": 20270884,
+          "student_t_cluster_mean": [
+            -0.06354762314134169,
+            0.04962994122928291
+          ],
+          "studentized_cluster_bootstrap": [
+            -0.14989888981271293,
+            0.028507947217655115
+          ],
+          "studentized_valid_fraction": 0.9999
+        },
+        "mean": -0.006958840956029389,
+        "n_cells": 60,
+        "n_endpoints": 6,
+        "per_endpoint_mean": {
+          "dbp": 0.0037675814848971536,
+          "glucose": -0.11327197241584379,
+          "sbp": 0.01347706086947259,
+          "total_cholesterol": 0.02700760227474954,
+          "triglycerides": -0.005095290721641521,
+          "waist_cm": 0.03236197277218969
+        },
+        "separated": false,
+        "win": 0.55
+      },
+      "decay_content_S_minus_W_64_minus_1024": {
+        "ci95": [
+          0.06536490324766495,
+          0.27922203702514375
+        ],
+        "drop_best_endpoint_mean": 0.10183797147005835,
+        "interval_sensitivities": {
+          "bca_cluster_mean": [
+            0.07759442925134817,
+            0.3156780137798647
+          ],
+          "bootstrap_reps": 10000,
+          "seed": 20270864,
+          "student_t_cluster_mean": [
+            0.0010606591564746581,
+            0.31321995831856997
+          ],
+          "studentized_cluster_bootstrap": [
+            0.050206489018888495,
+            0.4689193636727038
+          ],
+          "studentized_valid_fraction": 0.9997
+        },
+        "mean": 0.15714030873752233,
+        "n_cells": 60,
+        "n_endpoints": 6,
+        "per_endpoint_mean": {
+          "dbp": 0.0863164850747919,
+          "glucose": 0.433651995074842,
+          "sbp": 0.144903353822688,
+          "total_cholesterol": 0.031590900089535176,
+          "triglycerides": 0.04934341717860574,
+          "waist_cm": 0.19703570118467095
+        },
+        "separated": true,
+        "win": 0.9666666666666667
+      },
+      "decay_reference_minus_wrong_R_minus_W_64_minus_1024": {
+        "ci95": [
+          0.022228905099303427,
+          0.21557183624200035
+        ],
+        "drop_best_endpoint_mean": 0.05642048206663037,
+        "interval_sensitivities": {
+          "bca_cluster_mean": [
+            0.031071435354736804,
+            0.23323067524719462
+          ],
+          "bootstrap_reps": 10000,
+          "seed": 20270872,
+          "student_t_cluster_mean": [
+            -0.03307166309393973,
+            0.2438456353057727
+          ],
+          "studentized_cluster_bootstrap": [
+            0.015470267656522804,
+            0.3064712964147694
+          ],
+          "studentized_valid_fraction": 0.9998
+        },
+        "mean": 0.10538698610591647,
+        "n_cells": 60,
+        "n_endpoints": 6,
+        "per_endpoint_mean": {
+          "dbp": 0.07756167547446818,
+          "glucose": 0.35021950630234705,
+          "sbp": 0.10641101339690424,
+          "total_cholesterol": -0.00741003416707664,
+          "triglycerides": -0.010702088563186163,
+          "waist_cm": 0.1162418441920422
+        },
+        "separated": true,
+        "win": 0.8
+      },
+      "decay_utility_S_minus_R_256_minus_1024": {
+        "ci95": [
+          0.007706888046056321,
+          0.061074324277634394
+        ],
+        "drop_best_endpoint_mean": 0.015556852033747253,
+        "interval_sensitivities": {
+          "bca_cluster_mean": [
+            0.011485916041824293,
+            0.07060358841297133
+          ],
+          "bootstrap_reps": 10000,
+          "seed": 20270880,
+          "student_t_cluster_mean": [
+            -0.008037847092309553,
+            0.06675001067994475
+          ],
+          "studentized_cluster_bootstrap": [
+            0.005387234540592471,
+            0.11883770565800937
+          ],
+          "studentized_valid_fraction": 0.9999
+        },
+        "mean": 0.029356081793817598,
+        "n_cells": 60,
+        "n_endpoints": 6,
+        "per_endpoint_mean": {
+          "dbp": 0.002493614057713278,
+          "glucose": 0.09835223059416934,
+          "sbp": 0.0125076397781556,
+          "total_cholesterol": 0.005996665990931138,
+          "triglycerides": 0.032570398231716716,
+          "waist_cm": 0.02421594211021953
+        },
+        "separated": true,
+        "win": 0.85
+      },
+      "decay_utility_S_minus_R_64_minus_1024": {
+        "ci95": [
+          0.027930496877680646,
+          0.07656002671147666
+        ],
+        "drop_best_endpoint_mean": 0.04541748940342799,
+        "interval_sensitivities": {
+          "bca_cluster_mean": [
+            0.02883412706604444,
+            0.07116508961630384
+          ],
+          "bootstrap_reps": 10000,
+          "seed": 20270868,
+          "student_t_cluster_mean": [
+            0.021690950781154808,
+            0.08181569448205682
+          ],
+          "studentized_cluster_bootstrap": [
+            0.015072152580719068,
+            0.08296110896372696
+          ],
+          "studentized_valid_fraction": 0.9998
+        },
+        "mean": 0.05175332263160581,
+        "n_cells": 60,
+        "n_endpoints": 6,
+        "per_endpoint_mean": {
+          "dbp": 0.00875480960032371,
+          "glucose": 0.0834324887724949,
+          "sbp": 0.03849234042578379,
+          "total_cholesterol": 0.039000934256611816,
+          "triglycerides": 0.060045505741791905,
+          "waist_cm": 0.08079385699262875
+        },
+        "separated": true,
+        "win": 0.7833333333333333
+      },
+      "decay_utility_S_minus_R_64_minus_256": {
+        "ci95": [
+          -0.0037362110090618066,
+          0.04452032148900256
+        ],
+        "drop_best_endpoint_mean": 0.015561106028864008,
+        "interval_sensitivities": {
+          "bca_cluster_mean": [
+            0.002736535082426266,
+            0.03901909688605503
+          ],
+          "bootstrap_reps": 10000,
+          "seed": 20270876,
+          "student_t_cluster_mean": [
+            -0.003190105990380967,
+            0.047984587665957396
+          ],
+          "studentized_cluster_bootstrap": [
+            -0.010859594170402075,
+            0.0452969644731022
+          ],
+          "studentized_valid_fraction": 0.9997
+        },
+        "mean": 0.02239724083778821,
+        "n_cells": 60,
+        "n_endpoints": 6,
+        "per_endpoint_mean": {
+          "dbp": 0.006261195542610431,
+          "glucose": -0.014919741821674447,
+          "sbp": 0.02598470064762819,
+          "total_cholesterol": 0.03300426826568068,
+          "triglycerides": 0.027475107510075193,
+          "waist_cm": 0.05657791488240922
+        },
+        "separated": false,
+        "win": 0.6166666666666667
+      }
+    },
+    "classB": {
+      "curvature_utility_descriptive": {
+        "ci95": [
+          -0.07136744834972147,
+          0.058343219438095305
+        ],
+        "drop_best_endpoint_mean": -0.0037689004198864784,
+        "interval_sensitivities": {
+          "bca_cluster_mean": [
+            -0.0037689004198864784,
+            -0.0037511871810750608
+          ],
+          "bootstrap_reps": 10000,
+          "seed": 20270886,
+          "student_t_cluster_mean": [
+            -0.003976255219958248,
+            -0.0035261191421918736
+          ],
+          "studentized_cluster_bootstrap": [
+            -0.0037511871810750608,
+            -0.0037511871810750608
+          ],
+          "studentized_valid_fraction": 0.4968
+        },
+        "mean": -0.0037511871810750608,
+        "n_cells": 20,
+        "n_endpoints": 2,
+        "per_endpoint_mean": {
+          "alt": -0.003733473942263643,
+          "bun": -0.0037689004198864784
+        },
+        "separated": false,
+        "win": 0.5
+      },
+      "decay_content_S_minus_W_64_minus_1024": {
+        "ci95": [
+          0.027560664698512673,
+          0.5495174673065659
+        ],
+        "drop_best_endpoint_mean": 0.03654840484769215,
+        "interval_sensitivities": {
+          "bca_cluster_mean": [
+            0.03654840484769215,
+            0.23303991671956711
+          ],
+          "bootstrap_reps": 10000,
+          "seed": 20270866,
+          "student_t_cluster_mean": [
+            -2.263621462095554,
+            2.729701295534688
+          ],
+          "studentized_cluster_bootstrap": [
+            0.23303991671956711,
+            0.23303991671956711
+          ],
+          "studentized_valid_fraction": 0.4978
+        },
+        "mean": 0.2330399167195671,
+        "n_cells": 20,
+        "n_endpoints": 2,
+        "per_endpoint_mean": {
+          "alt": 0.42953142859144205,
+          "bun": 0.03654840484769215
+        },
+        "separated": true,
+        "win": 0.9
+      },
+      "decay_reference_minus_wrong_R_minus_W_64_minus_1024": {
+        "ci95": [
+          0.014937432969696164,
+          0.5937725101993488
+        ],
+        "drop_best_endpoint_mean": 0.023451377027474296,
+        "interval_sensitivities": {
+          "bca_cluster_mean": [
+            0.023451377027474296,
+            0.2624588434368703
+          ],
+          "bootstrap_reps": 10000,
+          "seed": 20270874,
+          "student_t_cluster_mean": [
+            -2.774418958296832,
+            3.2993366451705723
+          ],
+          "studentized_cluster_bootstrap": [
+            0.2624588434368703,
+            0.2624588434368703
+          ],
+          "studentized_valid_fraction": 0.5029
+        },
+        "mean": 0.2624588434368702,
+        "n_cells": 20,
+        "n_endpoints": 2,
+        "per_endpoint_mean": {
+          "alt": 0.5014663098462663,
+          "bun": 0.023451377027474296
+        },
+        "separated": true,
+        "win": 0.9
+      },
+      "decay_utility_S_minus_R_256_minus_1024": {
+        "ci95": [
+          -0.050206931986945466,
+          0.01236892914111903
+        ],
+        "drop_best_endpoint_mean": -0.03410070365628026,
+        "interval_sensitivities": {
+          "bca_cluster_mean": [
+            -0.03410070365628026,
+            -0.012833869768114048
+          ],
+          "bootstrap_reps": 10000,
+          "seed": 20270882,
+          "student_t_cluster_mean": [
+            -0.2830546152468462,
+            0.2573868757106181
+          ],
+          "studentized_cluster_bootstrap": [
+            -0.012833869768114048,
+            -0.012833869768114048
+          ],
+          "studentized_valid_fraction": 0.5037
+        },
+        "mean": -0.012833869768114048,
+        "n_cells": 20,
+        "n_endpoints": 2,
+        "per_endpoint_mean": {
+          "alt": -0.03410070365628026,
+          "bun": 0.008432964120052167
+        },
+        "separated": false,
+        "win": 0.5
+      },
+      "decay_utility_S_minus_R_64_minus_1024": {
+        "ci95": [
+          -0.12005951503763791,
+          0.018561277120973562
+        ],
+        "drop_best_endpoint_mean": -0.07193488125482417,
+        "interval_sensitivities": {
+          "bca_cluster_mean": [
+            -0.07193488125482417,
+            -0.029418926717303156
+          ],
+          "bootstrap_reps": 10000,
+          "seed": 20270870,
+          "student_t_cluster_mean": [
+            -0.5696353496358841,
+            0.5107974962012778
+          ],
+          "studentized_cluster_bootstrap": [
+            -0.029418926717303156,
+            -0.029418926717303156
+          ],
+          "studentized_valid_fraction": 0.4973
+        },
+        "mean": -0.029418926717303156,
+        "n_cells": 20,
+        "n_endpoints": 2,
+        "per_endpoint_mean": {
+          "alt": -0.07193488125482417,
+          "bun": 0.013097027820217854
+        },
+        "separated": false,
+        "win": 0.55
+      },
+      "decay_utility_S_minus_R_64_minus_256": {
+        "ci95": [
+          -0.09009614707772208,
+          0.026684365708501502
+        ],
+        "drop_best_endpoint_mean": -0.037834177598543905,
+        "interval_sensitivities": {
+          "bca_cluster_mean": [
+            -0.037834177598543905,
+            -0.01658505694918911
+          ],
+          "bootstrap_reps": 10000,
+          "seed": 20270878,
+          "student_t_cluster_mean": [
+            -0.286580734389038,
+            0.2534106204906598
+          ],
+          "studentized_cluster_bootstrap": [
+            -0.01658505694918911,
+            -0.01658505694918911
+          ],
+          "studentized_valid_fraction": 0.5057
+        },
+        "mean": -0.01658505694918911,
+        "n_cells": 20,
+        "n_endpoints": 2,
+        "per_endpoint_mean": {
+          "alt": -0.037834177598543905,
+          "bun": 0.004664063700165688
+        },
+        "separated": false,
+        "win": 0.5
+      }
+    },
+    "classC": {
+      "curvature_utility_descriptive": {
+        "ci95": [
+          0.007160700016555034,
+          0.152133571851957
+        ],
+        "drop_best_endpoint_mean": 0.02020672200680615,
+        "interval_sensitivities": {
+          "bca_cluster_mean": [
+            0.01184424724135782,
+            0.18358512344921146
+          ],
+          "bootstrap_reps": 10000,
+          "seed": 20270887,
+          "student_t_cluster_mean": [
+            -0.056208115278791146,
+            0.18016997917114386
+          ],
+          "studentized_cluster_bootstrap": [
+            -0.010639150832087357,
+            0.9288366988875385
+          ],
+          "studentized_valid_fraction": 0.9987
+        },
+        "mean": 0.061980931946176376,
+        "n_cells": 50,
+        "n_endpoints": 5,
+        "per_endpoint_mean": {
+          "creatinine": 0.22907777170365726,
+          "hematocrit": 0.0016145304314283183,
+          "hemoglobin": 0.011702374711602643,
+          "rbc": 0.017100978176077742,
+          "wbc": 0.05040900470811589
+        },
+        "separated": true,
+        "win": 0.74
+      },
+      "decay_content_S_minus_W_64_minus_1024": {
+        "ci95": [
+          -0.05146443799868938,
+          0.4387512497278342
+        ],
+        "drop_best_endpoint_mean": -0.013188539015749096,
+        "interval_sensitivities": {
+          "bca_cluster_mean": [
+            -0.026141726467505184,
+            0.5458576547780333
+          ],
+          "bootstrap_reps": 10000,
+          "seed": 20270867,
+          "student_t_cluster_mean": [
+            -0.267028400337858,
+            0.5247399526101039
+          ],
+          "studentized_cluster_bootstrap": [
+            -0.10939218299779241,
+            4.386112720076
+          ],
+          "studentized_valid_fraction": 0.9985
+        },
+        "mean": 0.12885577613612298,
+        "n_cells": 50,
+        "n_endpoints": 5,
+        "per_endpoint_mean": {
+          "creatinine": 0.6970330367436112,
+          "hematocrit": -0.007129235232393072,
+          "hemoglobin": -0.0029458254682881825,
+          "rbc": 0.01616477772196311,
+          "wbc": -0.05884387308427824
+        },
+        "separated": false,
+        "win": 0.68
+      },
+      "decay_reference_minus_wrong_R_minus_W_64_minus_1024": {
+        "ci95": [
+          -0.07470459469072774,
+          0.3687716740046525
+        ],
+        "drop_best_endpoint_mean": -0.026554655108767495,
+        "interval_sensitivities": {
+          "bca_cluster_mean": [
+            -0.04543941502884663,
+            0.479797064828224
+          ],
+          "bootstrap_reps": 10000,
+          "seed": 20270875,
+          "student_t_cluster_mean": [
+            -0.2555610526107592,
+            0.4541529304444251
+          ],
+          "studentized_cluster_bootstrap": [
+            -0.1265923889083192,
+            2.462352127310425
+          ],
+          "studentized_valid_fraction": 0.9983
+        },
+        "mean": 0.09929593891683293,
+        "n_cells": 50,
+        "n_endpoints": 5,
+        "per_endpoint_mean": {
+          "creatinine": 0.6026983150192348,
+          "hematocrit": -0.001686125033943653,
+          "hemoglobin": -0.011807935935819091,
+          "rbc": 0.018132084341980548,
+          "wbc": -0.11085664380728777
+        },
+        "separated": false,
+        "win": 0.66
+      },
+      "decay_utility_S_minus_R_256_minus_1024": {
+        "ci95": [
+          -0.046077876959431566,
+          0.0010232392202248095
+        ],
+        "drop_best_endpoint_mean": -0.02046365495616568,
+        "interval_sensitivities": {
+          "bca_cluster_mean": [
+            -0.05460298405470008,
+            -0.00224094201188113
+          ],
+          "bootstrap_reps": 10000,
+          "seed": 20270883,
+          "student_t_cluster_mean": [
+            -0.05204188857124555,
+            0.019620793844359198
+          ],
+          "studentized_cluster_bootstrap": [
+            -0.2953374667699851,
+            0.005376046526098133
+          ],
+          "studentized_valid_fraction": 0.9985
+        },
+        "mean": -0.016210547363443177,
+        "n_cells": 50,
+        "n_endpoints": 5,
+        "per_endpoint_mean": {
+          "creatinine": -0.06737152498964039,
+          "hematocrit": -0.0035288203149388686,
+          "hemoglobin": -0.0014201321220358664,
+          "rbc": -0.00953414239804759,
+          "wbc": 0.0008018830074468242
+        },
+        "separated": false,
+        "win": 0.32
+      },
+      "decay_utility_S_minus_R_64_minus_1024": {
+        "ci95": [
+          -0.0020257104301321803,
+          0.07516980363328316
+        ],
+        "drop_best_endpoint_mean": 0.0133661160930184,
+        "interval_sensitivities": {
+          "bca_cluster_mean": [
+            0.0009741387836291078,
+            0.06894155112355632
+          ],
+          "bootstrap_reps": 10000,
+          "seed": 20270871,
+          "student_t_cluster_mean": [
+            -0.023656304671112117,
+            0.08277597910969216
+          ],
+          "studentized_cluster_bootstrap": [
+            -0.007810981081578423,
+            0.2535968327087512
+          ],
+          "studentized_valid_fraction": 0.9984
+        },
+        "mean": 0.029559837219290012,
+        "n_cells": 50,
+        "n_endpoints": 5,
+        "per_endpoint_mean": {
+          "creatinine": 0.0943347217243765,
+          "hematocrit": -0.005443110198449419,
+          "hemoglobin": 0.00886211046753091,
+          "rbc": -0.0019673066200174396,
+          "wbc": 0.05201277072300954
+        },
+        "separated": false,
+        "win": 0.48
+      },
+      "decay_utility_S_minus_R_64_minus_256": {
+        "ci95": [
+          0.0029916063170042162,
+          0.11193049668736522
+        ],
+        "drop_best_endpoint_mean": 0.016786419049912273,
+        "interval_sensitivities": {
+          "bca_cluster_mean": [
+            0.00675677337033666,
+            0.1308783645268195
+          ],
+          "bootstrap_reps": 10000,
+          "seed": 20270879,
+          "student_t_cluster_mean": [
+            -0.03858848755335305,
+            0.13012925671881942
+          ],
+          "studentized_cluster_bootstrap": [
+            -0.00788435228037123,
+            0.5952025275719693
+          ],
+          "studentized_valid_fraction": 0.9982
+        },
+        "mean": 0.045770384582733206,
+        "n_cells": 50,
+        "n_endpoints": 5,
+        "per_endpoint_mean": {
+          "creatinine": 0.16170624671401687,
+          "hematocrit": -0.0019142898835105503,
+          "hemoglobin": 0.010282242589566776,
+          "rbc": 0.007566835778030151,
+          "wbc": 0.05121088771556272
+        },
+        "separated": true,
+        "win": 0.6
+      }
+    }
+  },
+  "decomposition_identity": "utility = content - reference_minus_wrong",
+  "diagnostic_min_child_weight_decays": {
+    "all13": {
+      "diag_mcw_curvature_utility_descriptive": {
+        "ci95": [
+          -0.012932227843897463,
+          0.02418006259308239
+        ],
+        "drop_best_endpoint_mean": 0.004239722502159191,
+        "interval_sensitivities": {
+          "bca_cluster_mean": [
+            0.0031364554651449107,
+            0.013084482133600084
+          ],
+          "bootstrap_reps": 10000,
+          "seed": 20270899,
+          "student_t_cluster_mean": [
+            -0.00025966870812634425,
+            0.013595364422838398
+          ],
+          "studentized_cluster_bootstrap": [
+            0.0020971280628583975,
+            0.016749866503378057
+          ],
+          "studentized_valid_fraction": 0.9996
+        },
+        "mean": 0.006667847857356027,
+        "n_cells": 60,
+        "n_endpoints": 6,
+        "per_endpoint_mean": {
+          "dbp": 0.004386992396445822,
+          "glucose": 0.0009684923419815527,
+          "sbp": 0.007527545974081717,
+          "total_cholesterol": 0.007276961463749088,
+          "triglycerides": 0.0010386203345377765,
+          "waist_cm": 0.018808474633340205
+        },
+        "separated": false,
+        "win": 0.5666666666666667
+      },
+      "diag_mcw_decay_content_S_minus_W_64_minus_1024": {
+        "ci95": [
+          0.034618151633278714,
+          0.10076602786384606
+        ],
+        "drop_best_endpoint_mean": 0.05281341403639681,
+        "interval_sensitivities": {
+          "bca_cluster_mean": [
+            0.03626995949534611,
+            0.09888951882748216
+          ],
+          "bootstrap_reps": 10000,
+          "seed": 20270889,
+          "student_t_cluster_mean": [
+            0.01986785436726162,
+            0.11073501115376408
+          ],
+          "studentized_cluster_bootstrap": [
+            0.028776113231435294,
+            0.15889570423830343
+          ],
+          "studentized_valid_fraction": 0.9999
+        },
+        "mean": 0.06530143276051285,
+        "n_cells": 60,
+        "n_endpoints": 6,
+        "per_endpoint_mean": {
+          "dbp": 0.0445094597138216,
+          "glucose": 0.12774152638109304,
+          "sbp": 0.05723194961992767,
+          "total_cholesterol": 0.03654018479623472,
+          "triglycerides": 0.01741435156413552,
+          "waist_cm": 0.10837112448786457
+        },
+        "separated": true,
+        "win": 0.9
+      },
+      "diag_mcw_decay_reference_minus_wrong_R_minus_W_64_minus_1024": {
+        "ci95": [
+          -0.019162184460547915,
+          0.028160118067740218
+        ],
+        "drop_best_endpoint_mean": -0.005360886263383593,
+        "interval_sensitivities": {
+          "bca_cluster_mean": [
+            -0.016729752418242625,
+            0.02632207241630863
+          ],
+          "bootstrap_reps": 10000,
+          "seed": 20270893,
+          "student_t_cluster_mean": [
+            -0.027212010805115216,
+            0.035025789157937325
+          ],
+          "studentized_cluster_bootstrap": [
+            -0.022612235447054693,
+            0.03795079977874673
+          ],
+          "studentized_valid_fraction": 0.9998
+        },
+        "mean": 0.003906889176411053,
+        "n_cells": 60,
+        "n_endpoints": 6,
+        "per_endpoint_mean": {
+          "dbp": 0.007543462095938735,
+          "glucose": -0.03907902193123978,
+          "sbp": 0.01720687800850339,
+          "total_cholesterol": -0.004583960669941778,
+          "triglycerides": -0.007891788820178536,
+          "waist_cm": 0.05024576637538428
+        },
+        "separated": false,
+        "win": 0.48333333333333334
+      },
+      "diag_mcw_decay_utility_S_minus_R_256_minus_1024": {
+        "ci95": [
+          0.012256231901948297,
+          0.05206889392510474
+        ],
+        "drop_best_endpoint_mean": 0.01625081183901234,
+        "interval_sensitivities": {
+          "bca_cluster_mean": [
+            0.015557846571317096,
+            0.060817008765898024
+          ],
+          "bootstrap_reps": 10000,
+          "seed": 20270897,
+          "student_t_cluster_mean": [
+            -0.0013139855898634256,
+            0.0560406813166092
+          ],
+          "studentized_cluster_bootstrap": [
+            0.010309216400057466,
+            0.24170977910090488
+          ],
+          "studentized_valid_fraction": 1.0
+        },
+        "mean": 0.02736334786337289,
+        "n_cells": 60,
+        "n_endpoints": 6,
+        "per_endpoint_mean": {
+          "dbp": 0.016289502610718522,
+          "glucose": 0.08292602798517563,
+          "sbp": 0.01624876281867128,
+          "total_cholesterol": 0.016923592001213704,
+          "triglycerides": 0.01213376002488814,
+          "waist_cm": 0.019658441739570036
+        },
+        "separated": true,
+        "win": 0.8833333333333333
+      },
+      "diag_mcw_decay_utility_S_minus_R_64_minus_1024": {
+        "ci95": [
+          0.032303688682740465,
+          0.10595738402673269
+        ],
+        "drop_best_endpoint_mean": 0.04030934263845559,
+        "interval_sensitivities": {
+          "bca_cluster_mean": [
+            0.03711578428804973,
+            0.12511894862435427
+          ],
+          "bootstrap_reps": 10000,
+          "seed": 20270891,
+          "student_t_cluster_mean": [
+            0.006078234290662933,
+            0.11671085287754066
+          ],
+          "studentized_cluster_bootstrap": [
+            0.028911477072566798,
+            0.2964256548166428
+          ],
+          "studentized_valid_fraction": 1.0
+        },
+        "mean": 0.0613945435841018,
+        "n_cells": 60,
+        "n_endpoints": 6,
+        "per_endpoint_mean": {
+          "dbp": 0.03696599761788286,
+          "glucose": 0.16682054831233284,
+          "sbp": 0.04002507161142428,
+          "total_cholesterol": 0.0411241454661765,
+          "triglycerides": 0.025306140384314058,
+          "waist_cm": 0.05812535811248028
+        },
+        "separated": true,
+        "win": 0.95
+      },
+      "diag_mcw_decay_utility_S_minus_R_64_minus_256": {
+        "ci95": [
+          0.01566374825312969,
+          0.05940253926983612
+        ],
+        "drop_best_endpoint_mean": 0.02405853079944326,
+        "interval_sensitivities": {
+          "bca_cluster_mean": [
+            0.021187838461440497,
+            0.06453622967349415
+          ],
+          "bootstrap_reps": 10000,
+          "seed": 20270895,
+          "student_t_cluster_mean": [
+            0.006983962482963079,
+            0.061078428958494746
+          ],
+          "studentized_cluster_bootstrap": [
+            0.016963963383521977,
+            0.12290356699935612
+          ],
+          "studentized_valid_fraction": 0.9999
+        },
+        "mean": 0.03403119572072891,
+        "n_cells": 60,
+        "n_endpoints": 6,
+        "per_endpoint_mean": {
+          "dbp": 0.02067649500716434,
+          "glucose": 0.08389452032715719,
+          "sbp": 0.023776308792752998,
+          "total_cholesterol": 0.024200553464962794,
+          "triglycerides": 0.013172380359425917,
+          "waist_cm": 0.03846691637291024
+        },
+        "separated": true,
+        "win": 0.7333333333333333
+      }
+    },
+    "classA_primary": {
+      "diag_mcw_curvature_utility_descriptive": {
+        "ci95": [
+          -0.013021296277098403,
+          0.024307508506830975
+        ],
+        "drop_best_endpoint_mean": 0.004239722502159191,
+        "interval_sensitivities": {
+          "bca_cluster_mean": [
+            0.00312476746638554,
+            0.013431563878631366
+          ],
+          "bootstrap_reps": 10000,
+          "seed": 20270898,
+          "student_t_cluster_mean": [
+            -0.00025966870812634425,
+            0.013595364422838398
+          ],
+          "studentized_cluster_bootstrap": [
+            0.0016587354613023476,
+            0.016749866503378057
+          ],
+          "studentized_valid_fraction": 0.9998
+        },
+        "mean": 0.006667847857356027,
+        "n_cells": 60,
+        "n_endpoints": 6,
+        "per_endpoint_mean": {
+          "dbp": 0.004386992396445822,
+          "glucose": 0.0009684923419815527,
+          "sbp": 0.007527545974081717,
+          "total_cholesterol": 0.007276961463749088,
+          "triglycerides": 0.0010386203345377765,
+          "waist_cm": 0.018808474633340205
+        },
+        "separated": false,
+        "win": 0.5666666666666667
+      },
+      "diag_mcw_decay_content_S_minus_W_64_minus_1024": {
+        "ci95": [
+          0.03394524134746576,
+          0.10066626092485144
+        ],
+        "drop_best_endpoint_mean": 0.05281341403639681,
+        "interval_sensitivities": {
+          "bca_cluster_mean": [
+            0.03708966507637137,
+            0.10100993381183317
+          ],
+          "bootstrap_reps": 10000,
+          "seed": 20270888,
+          "student_t_cluster_mean": [
+            0.01986785436726162,
+            0.11073501115376408
+          ],
+          "studentized_cluster_bootstrap": [
+            0.028776113231435294,
+            0.15744406860632545
+          ],
+          "studentized_valid_fraction": 0.9998
+        },
+        "mean": 0.06530143276051285,
+        "n_cells": 60,
+        "n_endpoints": 6,
+        "per_endpoint_mean": {
+          "dbp": 0.0445094597138216,
+          "glucose": 0.12774152638109304,
+          "sbp": 0.05723194961992767,
+          "total_cholesterol": 0.03654018479623472,
+          "triglycerides": 0.01741435156413552,
+          "waist_cm": 0.10837112448786457
+        },
+        "separated": true,
+        "win": 0.9
+      },
+      "diag_mcw_decay_reference_minus_wrong_R_minus_W_64_minus_1024": {
+        "ci95": [
+          -0.018960561228902,
+          0.027287872801195885
+        ],
+        "drop_best_endpoint_mean": -0.005360886263383593,
+        "interval_sensitivities": {
+          "bca_cluster_mean": [
+            -0.016729752418242625,
+            0.026322072416308632
+          ],
+          "bootstrap_reps": 10000,
+          "seed": 20270892,
+          "student_t_cluster_mean": [
+            -0.027212010805115216,
+            0.035025789157937325
+          ],
+          "studentized_cluster_bootstrap": [
+            -0.022612235447054693,
+            0.03795079977874672
+          ],
+          "studentized_valid_fraction": 0.9998
+        },
+        "mean": 0.003906889176411053,
+        "n_cells": 60,
+        "n_endpoints": 6,
+        "per_endpoint_mean": {
+          "dbp": 0.007543462095938735,
+          "glucose": -0.03907902193123978,
+          "sbp": 0.01720687800850339,
+          "total_cholesterol": -0.004583960669941778,
+          "triglycerides": -0.007891788820178536,
+          "waist_cm": 0.05024576637538428
+        },
+        "separated": false,
+        "win": 0.48333333333333334
+      },
+      "diag_mcw_decay_utility_S_minus_R_256_minus_1024": {
+        "ci95": [
+          0.012283740773190588,
+          0.051952102067990204
+        ],
+        "drop_best_endpoint_mean": 0.01625081183901234,
+        "interval_sensitivities": {
+          "bca_cluster_mean": [
+            0.015557846571317096,
+            0.06126855274982398
+          ],
+          "bootstrap_reps": 10000,
+          "seed": 20270896,
+          "student_t_cluster_mean": [
+            -0.0013139855898634256,
+            0.0560406813166092
+          ],
+          "studentized_cluster_bootstrap": [
+            0.010014878100558969,
+            0.2423713402451634
+          ],
+          "studentized_valid_fraction": 0.9996
+        },
+        "mean": 0.02736334786337289,
+        "n_cells": 60,
+        "n_endpoints": 6,
+        "per_endpoint_mean": {
+          "dbp": 0.016289502610718522,
+          "glucose": 0.08292602798517563,
+          "sbp": 0.01624876281867128,
+          "total_cholesterol": 0.016923592001213704,
+          "triglycerides": 0.01213376002488814,
+          "waist_cm": 0.019658441739570036
+        },
+        "separated": true,
+        "win": 0.8833333333333333
+      },
+      "diag_mcw_decay_utility_S_minus_R_64_minus_1024": {
+        "ci95": [
+          0.03241880837013482,
+          0.1066585146754414
+        ],
+        "drop_best_endpoint_mean": 0.04030934263845559,
+        "interval_sensitivities": {
+          "bca_cluster_mean": [
+            0.03711578428804973,
+            0.12496088336776709
+          ],
+          "bootstrap_reps": 10000,
+          "seed": 20270890,
+          "student_t_cluster_mean": [
+            0.006078234290662933,
+            0.11671085287754066
+          ],
+          "studentized_cluster_bootstrap": [
+            0.02640654603812733,
+            0.28613517172994357
+          ],
+          "studentized_valid_fraction": 0.9999
+        },
+        "mean": 0.0613945435841018,
+        "n_cells": 60,
+        "n_endpoints": 6,
+        "per_endpoint_mean": {
+          "dbp": 0.03696599761788286,
+          "glucose": 0.16682054831233284,
+          "sbp": 0.04002507161142428,
+          "total_cholesterol": 0.0411241454661765,
+          "triglycerides": 0.025306140384314058,
+          "waist_cm": 0.05812535811248028
+        },
+        "separated": true,
+        "win": 0.95
+      },
+      "diag_mcw_decay_utility_S_minus_R_64_minus_256": {
+        "ci95": [
+          0.015682878092321943,
+          0.058734466385986096
+        ],
+        "drop_best_endpoint_mean": 0.02405853079944326,
+        "interval_sensitivities": {
+          "bca_cluster_mean": [
+            0.021130629956300207,
+            0.06340918829679265
+          ],
+          "bootstrap_reps": 10000,
+          "seed": 20270894,
+          "student_t_cluster_mean": [
+            0.006983962482963079,
+            0.061078428958494746
+          ],
+          "studentized_cluster_bootstrap": [
+            0.016912814618370853,
+            0.12201419243799064
+          ],
+          "studentized_valid_fraction": 0.9997
+        },
+        "mean": 0.03403119572072891,
+        "n_cells": 60,
+        "n_endpoints": 6,
+        "per_endpoint_mean": {
+          "dbp": 0.02067649500716434,
+          "glucose": 0.08389452032715719,
+          "sbp": 0.023776308792752998,
+          "total_cholesterol": 0.024200553464962794,
+          "triglycerides": 0.013172380359425917,
+          "waist_cm": 0.03846691637291024
+        },
+        "separated": true,
+        "win": 0.7333333333333333
+      }
+    },
+    "classB": {},
+    "classC": {}
+  },
+  "hosts": "anonymous-compute-host",
+  "integrity": {
+    "k256_reproduces_published_v2": {
+      "comparisons_made": 390,
+      "comparisons_required": 390,
+      "criterion": "float equality",
+      "deviations": [],
+      "exactly_equal": 390,
+      "missing_baseline_files": [],
+      "pass": true,
+      "version_mismatch": [],
+      "worst_abs_delta_nrmse": 0.0
+    },
+    "pool_floor": {
+      "floor": 4096,
+      "min_observed_pool": 5988,
+      "pass": true
+    },
+    "support_rows_drawn": {
+      "1024": [
+        1024
+      ],
+      "256": [
+        256
+      ],
+      "64": [
+        64
+      ]
+    }
+  },
+  "ladder": [
+    64,
+    256,
+    1024
+  ],
+  "levels": {
+    "all13": {
+      "content_S_minus_W": {
+        "1024": {
+          "ci95": [
+            0.012139674931841163,
+            0.06452330369966289
+          ],
+          "drop_best_endpoint_mean": 0.021476476718584034,
+          "interval_sensitivities": {
+            "bca_cluster_mean": [
+              0.016177579579674844,
+              0.06709577236902368
+            ],
+            "bootstrap_reps": 10000,
+            "seed": 20270839,
+            "student_t_cluster_mean": [
+              0.005996486004580921,
+              0.05740361547522763
+            ],
+            "studentized_cluster_bootstrap": [
+              0.012989449005926544,
+              0.08040701539312989
+            ],
+            "studentized_valid_fraction": 1.0
+          },
+          "mean": 0.031700050739904284,
+          "n_cells": 130,
+          "n_endpoints": 13,
+          "per_endpoint_mean": {
+            "alt": 0.02863719480791784,
+            "bun": 0.01058705435282895,
+            "creatinine": 0.05393833726225,
+            "dbp": 0.003681928410931223,
+            "glucose": 0.06350803343842153,
+            "hematocrit": -0.002895192389869389,
+            "hemoglobin": -0.0028224855760219216,
+            "rbc": 0.0010544194421424236,
+            "sbp": 0.017745722192394543,
+            "total_cholesterol": 0.01292066406295953,
+            "triglycerides": 0.033924468638717044,
+            "waist_cm": 0.03743757598033662,
+            "wbc": 0.15438293899574726
+          },
+          "separated": true,
+          "win": 0.7769230769230769
+        },
+        "256": {
+          "ci95": [
+            0.024572520052235404,
+            0.09376097272570054
+          ],
+          "drop_best_endpoint_mean": 0.046297949580271176,
+          "interval_sensitivities": {
+            "bca_cluster_mean": [
+              0.02742921380789568,
+              0.09664569736215027
+            ],
+            "bootstrap_reps": 10000,
+            "seed": 20270838,
+            "student_t_cluster_mean": [
+              0.01793450104583314,
+              0.09592996967086415
+            ],
+            "studentized_cluster_bootstrap": [
+              0.02381397445060525,
+              0.11259652808385914
+            ],
+            "studentized_valid_fraction": 1.0
+          },
+          "mean": 0.05693223535834864,
+          "n_cells": 130,
+          "n_endpoints": 13,
+          "per_endpoint_mean": {
+            "alt": 0.13956798742601,
+            "bun": 0.015028063588450425,
+            "creatinine": 0.14869031069448807,
+            "dbp": 0.013283195584458085,
+            "glucose": 0.1845436646952782,
+            "hematocrit": -0.006157162756034801,
+            "hemoglobin": -0.0029867173779953016,
+            "rbc": -0.0052502444364548205,
+            "sbp": 0.05297104652125717,
+            "total_cholesterol": 0.018735692764096378,
+            "triglycerides": 0.054481016425714276,
+            "waist_cm": 0.09339850138162561,
+            "wbc": 0.033813705147639025
+          },
+          "separated": true,
+          "win": 0.7769230769230769
+        },
+        "64": {
+          "ci95": [
+            0.07737071065149163,
+            0.3293217737997886
+          ],
+          "drop_best_endpoint_mean": 0.1428608210131481,
+          "interval_sensitivities": {
+            "bca_cluster_mean": [
+              0.09605436141412908,
+              0.34842283637228716
+            ],
+            "bootstrap_reps": 10000,
+            "seed": 20270837,
+            "student_t_cluster_mean": [
+              0.04751647155698119,
+              0.3317606401605018
+            ],
+            "studentized_cluster_bootstrap": [
+              0.07987011646814049,
+              0.44772467003626015
+            ],
+            "studentized_valid_fraction": 1.0
+          },
+          "mean": 0.18963855585874143,
+          "n_cells": 130,
+          "n_endpoints": 13,
+          "per_endpoint_mean": {
+            "alt": 0.4581686233993598,
+            "bun": 0.047135459200521104,
+            "creatinine": 0.7509713740058611,
+            "dbp": 0.08999841348572311,
+            "glucose": 0.4971600285132635,
+            "hematocrit": -0.010024427622262461,
+            "hemoglobin": -0.005768311044310104,
+            "rbc": 0.017219197164105533,
+            "sbp": 0.16264907601508255,
+            "total_cholesterol": 0.04451156415249471,
+            "triglycerides": 0.08326788581732278,
+            "waist_cm": 0.2344732771650076,
+            "wbc": 0.09553906591146902
+          },
+          "separated": true,
+          "win": 0.8461538461538461
+        }
+      },
+      "reference_minus_wrong_R_minus_W": {
+        "1024": {
+          "ci95": [
+            0.005744127152782697,
+            0.05173828755431569
+          ],
+          "drop_best_endpoint_mean": 0.014669365832884425,
+          "interval_sensitivities": {
+            "bca_cluster_mean": [
+              0.009044949813498113,
+              0.05257382918887563
+            ],
+            "bootstrap_reps": 10000,
+            "seed": 20270845,
+            "student_t_cluster_mean": [
+              0.0004912492341204756,
+              0.0462049451658966
+            ],
+            "studentized_cluster_bootstrap": [
+              0.007104494238192729,
+              0.08897971962487092
+            ],
+            "studentized_valid_fraction": 1.0
+          },
+          "mean": 0.023348097200008536,
+          "n_cells": 130,
+          "n_endpoints": 13,
+          "per_endpoint_mean": {
+            "alt": 0.03484448617881488,
+            "bun": 0.006580860984882708,
+            "creatinine": 0.07232048078070089,
+            "dbp": 0.0055981170164984715,
+            "glucose": 0.03417307875913829,
+            "hematocrit": 0.0003841134788697853,
+            "hemoglobin": -0.000579567430384026,
+            "rbc": 0.0011971856220445165,
+            "sbp": 0.006968817209219569,
+            "total_cholesterol": -0.0005034482182934453,
+            "triglycerides": -0.0011193264212192022,
+            "waist_cm": 0.016167592034340688,
+            "wbc": 0.12749287360549783
+          },
+          "separated": true,
+          "win": 0.7
+        },
+        "256": {
+          "ci95": [
+            0.008890118216201615,
+            0.08764230039679756
+          ],
+          "drop_best_endpoint_mean": 0.027306972502320555,
+          "interval_sensitivities": {
+            "bca_cluster_mean": [
+              0.013670807720754618,
+              0.1014237927531688
+            ],
+            "bootstrap_reps": 10000,
+            "seed": 20270844,
+            "student_t_cluster_mean": [
+              -0.0028541491760624565,
+              0.08933532598074337
+            ],
+            "studentized_cluster_bootstrap": [
+              0.009395769021876471,
+              0.19340435641095202
+            ],
+            "studentized_valid_fraction": 1.0
+          },
+          "mean": 0.043240588402340456,
+          "n_cells": 130,
+          "n_endpoints": 13,
+          "per_endpoint_mean": {
+            "alt": 0.1798759824531873,
+            "bun": 0.0025889061004520154,
+            "creatinine": 0.23444397920257937,
+            "dbp": 0.012705770132312055,
+            "glucose": 0.05685647942182559,
+            "hematocrit": 0.0006509634276432418,
+            "hemoglobin": 0.0006763328896784604,
+            "rbc": 0.004426664141494863,
+            "sbp": 0.029686501759926598,
+            "total_cholesterol": -0.000685085508087735,
+            "triglycerides": -0.013133176865938678,
+            "waist_cm": 0.047912575325410156,
+            "wbc": 0.006121756749942786
+          },
+          "separated": true,
+          "win": 0.7307692307692307
+        },
+        "64": {
+          "ci95": [
+            0.041794271088846445,
+            0.28648643329137485
+          ],
+          "drop_best_endpoint_mean": 0.1068521471577983,
+          "interval_sensitivities": {
+            "bca_cluster_mean": [
+              0.05721224807707889,
+              0.31534488428683244
+            ],
+            "bootstrap_reps": 10000,
+            "seed": 20270843,
+            "student_t_cluster_mean": [
+              0.011485119238509228,
+              0.2896294287143393
+            ],
+            "studentized_cluster_bootstrap": [
+              0.04266309283662853,
+              0.5809936340045648
+            ],
+            "studentized_valid_fraction": 1.0
+          },
+          "mean": 0.15055727397642424,
+          "n_cells": 130,
+          "n_endpoints": 13,
+          "per_endpoint_mean": {
+            "alt": 0.536310796025081,
+            "bun": 0.030032238012357004,
+            "creatinine": 0.6750187957999356,
+            "dbp": 0.08315979249096665,
+            "glucose": 0.3843925850614854,
+            "hematocrit": -0.0013020115550738676,
+            "hemoglobin": -0.012387503366203118,
+            "rbc": 0.019329269964025064,
+            "sbp": 0.1133798306061238,
+            "total_cholesterol": -0.007913482385370086,
+            "triglycerides": -0.011821414984405365,
+            "waist_cm": 0.13240943622638293,
+            "wbc": 0.016636229798210066
+          },
+          "separated": true,
+          "win": 0.7615384615384615
+        }
+      },
+      "utility_S_minus_R": {
+        "1024": {
+          "ci95": [
+            -0.0005328988793695623,
+            0.01739956365450714
+          ],
+          "drop_best_endpoint_mean": 0.006127633413225705,
+          "interval_sensitivities": {
+            "bca_cluster_mean": [
+              0.000458078794482507,
+              0.01711110098590132
+            ],
+            "bootstrap_reps": 10000,
+            "seed": 20270842,
+            "student_t_cluster_mean": [
+              -0.0013066519591489693,
+              0.018010559038940464
+            ],
+            "studentized_cluster_bootstrap": [
+              -0.0005980638985509639,
+              0.01911466678822111
+            ],
+            "studentized_valid_fraction": 1.0
+          },
+          "mean": 0.008351953539895745,
+          "n_cells": 130,
+          "n_endpoints": 13,
+          "per_endpoint_mean": {
+            "alt": -0.006207291370897039,
+            "bun": 0.004006193367946243,
+            "creatinine": -0.018382143518450876,
+            "dbp": -0.0019161886055672483,
+            "glucose": 0.029334954679283244,
+            "hematocrit": -0.003279305868739174,
+            "hemoglobin": -0.0022429181456378954,
+            "rbc": -0.00014276617990209296,
+            "sbp": 0.010776904983174972,
+            "total_cholesterol": 0.013424112281252976,
+            "triglycerides": 0.035043795059936246,
+            "waist_cm": 0.02126998394599593,
+            "wbc": 0.026890065390249417
+          },
+          "separated": false,
+          "win": 0.6307692307692307
+        },
+        "256": {
+          "ci95": [
+            -0.012628134680582031,
+            0.041669403268221245
+          ],
+          "drop_best_endpoint_mean": 0.0041920187628878116,
+          "interval_sensitivities": {
+            "bca_cluster_mean": [
+              -0.011050601305039594,
+              0.04256306091824496
+            ],
+            "bootstrap_reps": 10000,
+            "seed": 20270841,
+            "student_t_cluster_mean": [
+              -0.01725974530627089,
+              0.04464303921828724
+            ],
+            "studentized_cluster_bootstrap": [
+              -0.014827016115754715,
+              0.046328609342262676
+            ],
+            "studentized_valid_fraction": 1.0
+          },
+          "mean": 0.013691646956008177,
+          "n_cells": 130,
+          "n_endpoints": 13,
+          "per_endpoint_mean": {
+            "alt": -0.0403079950271773,
+            "bun": 0.012439157487998408,
+            "creatinine": -0.08575366850809127,
+            "dbp": 0.0005774254521460298,
+            "glucose": 0.12768718527345257,
+            "hematocrit": -0.006808126183678043,
+            "hemoglobin": -0.003663050267673762,
+            "rbc": -0.009676908577949683,
+            "sbp": 0.023284544761330572,
+            "total_cholesterol": 0.019420778272184115,
+            "triglycerides": 0.06761419329165295,
+            "waist_cm": 0.04548592605621546,
+            "wbc": 0.02769194839769624
+          },
+          "separated": false,
+          "win": 0.6076923076923076
+        },
+        "64": {
+          "ci95": [
+            0.007267253544344599,
+            0.06887240024451087
+          ],
+          "drop_best_endpoint_mean": 0.03294076841819543,
+          "interval_sensitivities": {
+            "bca_cluster_mean": [
+              0.007862935874199102,
+              0.06451729864536059
+            ],
+            "bootstrap_reps": 10000,
+            "seed": 20270840,
+            "student_t_cluster_mean": [
+              0.005955112417844501,
+              0.07220745134678985
+            ],
+            "studentized_cluster_bootstrap": [
+              0.0028076966122283983,
+              0.06878753101340311
+            ],
+            "studentized_valid_fraction": 1.0
+          },
+          "mean": 0.03908128188231719,
+          "n_cells": 130,
+          "n_endpoints": 13,
+          "per_endpoint_mean": {
+            "alt": -0.0781421726257212,
+            "bun": 0.017103221188164097,
+            "creatinine": 0.07595257820592563,
+            "dbp": 0.006838620994756461,
+            "glucose": 0.11276744345177814,
+            "hematocrit": -0.008722416067188593,
+            "hemoglobin": 0.006619192321893013,
+            "rbc": -0.0021100727999195323,
+            "sbp": 0.04926924540895876,
+            "total_cholesterol": 0.0524250465378648,
+            "triglycerides": 0.09508930080172814,
+            "waist_cm": 0.10206384093862467,
+            "wbc": 0.07890283611325896
+          },
+          "separated": true,
+          "win": 0.6230769230769231
+        }
+      }
+    },
+    "classA_primary": {
+      "content_S_minus_W": {
+        "1024": {
+          "ci95": [
+            0.013252884714428743,
+            0.04528547122808286
+          ],
+          "drop_best_endpoint_mean": 0.021142071857067787,
+          "interval_sensitivities": {
+            "bca_cluster_mean": [
+              0.014731413853418777,
+              0.04638665272314956
+            ],
+            "bootstrap_reps": 10000,
+            "seed": 20270830,
+            "student_t_cluster_mean": [
+              0.005652916152437133,
+              0.05075321475548302
+            ],
+            "studentized_cluster_bootstrap": [
+              0.009402340350462602,
+              0.055236604736008894
+            ],
+            "studentized_valid_fraction": 0.9998
+          },
+          "mean": 0.028203065453960077,
+          "n_cells": 60,
+          "n_endpoints": 6,
+          "per_endpoint_mean": {
+            "dbp": 0.003681928410931223,
+            "glucose": 0.06350803343842153,
+            "sbp": 0.017745722192394543,
+            "total_cholesterol": 0.01292066406295953,
+            "triglycerides": 0.033924468638717044,
+            "waist_cm": 0.03743757598033662
+          },
+          "separated": true,
+          "win": 0.95
+        },
+        "256": {
+          "ci95": [
+            0.029271085502413578,
+            0.1210693510033981
+          ],
+          "drop_best_endpoint_mean": 0.046573890535430304,
+          "interval_sensitivities": {
+            "bca_cluster_mean": [
+              0.03506788743333195,
+              0.13498023301107773
+            ],
+            "bootstrap_reps": 10000,
+            "seed": 20270829,
+            "student_t_cluster_mean": [
+              0.0031266054922397396,
+              0.13601110029857016
+            ],
+            "studentized_cluster_bootstrap": [
+              0.02584091334684427,
+              0.2017332409592691
+            ],
+            "studentized_valid_fraction": 0.9999
+          },
+          "mean": 0.06956885289540496,
+          "n_cells": 60,
+          "n_endpoints": 6,
+          "per_endpoint_mean": {
+            "dbp": 0.013283195584458085,
+            "glucose": 0.1845436646952782,
+            "sbp": 0.05297104652125717,
+            "total_cholesterol": 0.018735692764096378,
+            "triglycerides": 0.054481016425714276,
+            "waist_cm": 0.09339850138162561
+          },
+          "separated": true,
+          "win": 0.95
+        },
+        "64": {
+          "ci95": [
+            0.08134580431848215,
+            0.3200599274276136
+          ],
+          "drop_best_endpoint_mean": 0.12298004332712616,
+          "interval_sensitivities": {
+            "bca_cluster_mean": [
+              0.09680950866163333,
+              0.36031773555935004
+            ],
+            "bootstrap_reps": 10000,
+            "seed": 20270828,
+            "student_t_cluster_mean": [
+              0.010051762932059394,
+              0.36063498545090533
+            ],
+            "studentized_cluster_bootstrap": [
+              0.07074104220717563,
+              0.5872986689856246
+            ],
+            "studentized_valid_fraction": 1.0
+          },
+          "mean": 0.1853433741914824,
+          "n_cells": 60,
+          "n_endpoints": 6,
+          "per_endpoint_mean": {
+            "dbp": 0.08999841348572311,
+            "glucose": 0.4971600285132635,
+            "sbp": 0.16264907601508255,
+            "total_cholesterol": 0.04451156415249471,
+            "triglycerides": 0.08326788581732278,
+            "waist_cm": 0.2344732771650076
+          },
+          "separated": true,
+          "win": 0.9833333333333333
+        }
+      },
+      "reference_minus_wrong_R_minus_W": {
+        "1024": {
+          "ci95": [
+            0.0016641292122957698,
+            0.02113675028605632
+          ],
+          "drop_best_endpoint_mean": 0.005422350324109216,
+          "interval_sensitivities": {
+            "bca_cluster_mean": [
+              0.002881400560993725,
+              0.023631163972459696
+            ],
+            "bootstrap_reps": 10000,
+            "seed": 20270836,
+            "student_t_cluster_mean": [
+              -0.0037447622928744803,
+              0.0241730390861026
+            ],
+            "studentized_cluster_bootstrap": [
+              0.0009283512058244122,
+              0.04108484984896538
+            ],
+            "studentized_valid_fraction": 0.9999
+          },
+          "mean": 0.010214138396614059,
+          "n_cells": 60,
+          "n_endpoints": 6,
+          "per_endpoint_mean": {
+            "dbp": 0.0055981170164984715,
+            "glucose": 0.03417307875913829,
+            "sbp": 0.006968817209219569,
+            "total_cholesterol": -0.0005034482182934453,
+            "triglycerides": -0.0011193264212192022,
+            "waist_cm": 0.016167592034340688
+          },
+          "separated": true,
+          "win": 0.7333333333333333
+        },
+        "256": {
+          "ci95": [
+            0.0019019335193912392,
+            0.04290144721168881
+          ],
+          "drop_best_endpoint_mean": 0.01529731696872448,
+          "interval_sensitivities": {
+            "bca_cluster_mean": [
+              0.00230216381027283,
+              0.0418227659950447
+            ],
+            "bootstrap_reps": 10000,
+            "seed": 20270835,
+            "student_t_cluster_mean": [
+              -0.006632977309576921,
+              0.05108066539805958
+            ],
+            "studentized_cluster_bootstrap": [
+              -0.008935110904430069,
+              0.05527011259543178
+            ],
+            "studentized_valid_fraction": 0.9999
+          },
+          "mean": 0.022223844044241336,
+          "n_cells": 60,
+          "n_endpoints": 6,
+          "per_endpoint_mean": {
+            "dbp": 0.012705770132312055,
+            "glucose": 0.05685647942182559,
+            "sbp": 0.029686501759926598,
+            "total_cholesterol": -0.000685085508087735,
+            "triglycerides": -0.013133176865938678,
+            "waist_cm": 0.047912575325410156
+          },
+          "separated": true,
+          "win": 0.75
+        },
+        "64": {
+          "ci95": [
+            0.0240663512527126,
+            0.23740927494505196
+          ],
+          "drop_best_endpoint_mean": 0.06184283239073959,
+          "interval_sensitivities": {
+            "bca_cluster_mean": [
+              0.03503790078199852,
+              0.2552294097072243
+            ],
+            "bootstrap_reps": 10000,
+            "seed": 20270834,
+            "student_t_cluster_mean": [
+              -0.03653527062865557,
+              0.26773751963371667
+            ],
+            "studentized_cluster_bootstrap": [
+              0.01683257755616667,
+              0.34431431725087647
+            ],
+            "studentized_valid_fraction": 0.9998
+          },
+          "mean": 0.11560112450253056,
+          "n_cells": 60,
+          "n_endpoints": 6,
+          "per_endpoint_mean": {
+            "dbp": 0.08315979249096665,
+            "glucose": 0.3843925850614854,
+            "sbp": 0.1133798306061238,
+            "total_cholesterol": -0.007913482385370086,
+            "triglycerides": -0.011821414984405365,
+            "waist_cm": 0.13240943622638293
+          },
+          "separated": true,
+          "win": 0.8
+        }
+      },
+      "utility_S_minus_R": {
+        "1024": {
+          "ci95": [
+            0.00789055279096893,
+            0.027955259927200354
+          ],
+          "drop_best_endpoint_mean": 0.014577953456827976,
+          "interval_sensitivities": {
+            "bca_cluster_mean": [
+              0.007869477435966566,
+              0.027241932617614647
+            ],
+            "bootstrap_reps": 10000,
+            "seed": 20270833,
+            "student_t_cluster_mean": [
+              0.003913724853637501,
+              0.032064129261054536
+            ],
+            "studentized_cluster_bootstrap": [
+              0.002780418475477591,
+              0.03184682082402391
+            ],
+            "studentized_valid_fraction": 0.9999
+          },
+          "mean": 0.01798892705734602,
+          "n_cells": 60,
+          "n_endpoints": 6,
+          "per_endpoint_mean": {
+            "dbp": -0.0019161886055672483,
+            "glucose": 0.029334954679283244,
+            "sbp": 0.010776904983174972,
+            "total_cholesterol": 0.013424112281252976,
+            "triglycerides": 0.035043795059936246,
+            "waist_cm": 0.02126998394599593
+          },
+          "separated": true,
+          "win": 0.8833333333333333
+        },
+        "256": {
+          "ci95": [
+            0.017531453233812583,
+            0.08422006844191114
+          ],
+          "drop_best_endpoint_mean": 0.03127657356670582,
+          "interval_sensitivities": {
+            "bca_cluster_mean": [
+              0.0218158575836073,
+              0.09027460020407362
+            ],
+            "bootstrap_reps": 10000,
+            "seed": 20270832,
+            "student_t_cluster_mean": [
+              -0.000551207958401155,
+              0.0952412256607284
+            ],
+            "studentized_cluster_bootstrap": [
+              0.01121952268153021,
+              0.12976806063450916
+            ],
+            "studentized_valid_fraction": 1.0
+          },
+          "mean": 0.04734500885116363,
+          "n_cells": 60,
+          "n_endpoints": 6,
+          "per_endpoint_mean": {
+            "dbp": 0.0005774254521460298,
+            "glucose": 0.12768718527345257,
+            "sbp": 0.023284544761330572,
+            "total_cholesterol": 0.019420778272184115,
+            "triglycerides": 0.06761419329165295,
+            "waist_cm": 0.04548592605621546
+          },
+          "separated": true,
+          "win": 0.9
+        },
+        "64": {
+          "ci95": [
+            0.03736637678153791,
+            0.10246439928555802
+          ],
+          "drop_best_endpoint_mean": 0.06113721093638657,
+          "interval_sensitivities": {
+            "bca_cluster_mean": [
+              0.036216575955470176,
+              0.0956701858319154
+            ],
+            "bootstrap_reps": 10000,
+            "seed": 20270831,
+            "student_t_cluster_mean": [
+              0.027206507835964552,
+              0.11227799154193908
+            ],
+            "studentized_cluster_bootstrap": [
+              0.022431758843030995,
+              0.10557483186253439
+            ],
+            "studentized_valid_fraction": 0.9999
+          },
+          "mean": 0.06974224968895185,
+          "n_cells": 60,
+          "n_endpoints": 6,
+          "per_endpoint_mean": {
+            "dbp": 0.006838620994756461,
+            "glucose": 0.11276744345177814,
+            "sbp": 0.04926924540895876,
+            "total_cholesterol": 0.0524250465378648,
+            "triglycerides": 0.09508930080172814,
+            "waist_cm": 0.10206384093862467
+          },
+          "separated": true,
+          "win": 0.85
+        }
+      }
+    },
+    "classB": {
+      "content_S_minus_W": {
+        "1024": {
+          "ci95": [
+            0.003129610347893585,
+            0.04870683903649391
+          ],
+          "drop_best_endpoint_mean": 0.01058705435282895,
+          "interval_sensitivities": {
+            "bca_cluster_mean": [
+              0.01058705435282895,
+              0.019612124580373397
+            ],
+            "bootstrap_reps": 10000,
+            "seed": 20270848,
+            "student_t_cluster_mean": [
+              -0.09506226549148411,
+              0.1342865146522309
+            ],
+            "studentized_cluster_bootstrap": [
+              0.019612124580373397,
+              0.019612124580373397
+            ],
+            "studentized_valid_fraction": 0.4994
+          },
+          "mean": 0.019612124580373397,
+          "n_cells": 20,
+          "n_endpoints": 2,
+          "per_endpoint_mean": {
+            "alt": 0.02863719480791784,
+            "bun": 0.01058705435282895
+          },
+          "separated": true,
+          "win": 0.85
+        },
+        "256": {
+          "ci95": [
+            0.012397559328591051,
+            0.1782980022441233
+          ],
+          "drop_best_endpoint_mean": 0.015028063588450425,
+          "interval_sensitivities": {
+            "bca_cluster_mean": [
+              0.015028063588450425,
+              0.07729802550723022
+            ],
+            "bootstrap_reps": 10000,
+            "seed": 20270847,
+            "student_t_cluster_mean": [
+              -0.7139168595626159,
+              0.8685129105770762
+            ],
+            "studentized_cluster_bootstrap": [
+              0.07729802550723022,
+              0.07729802550723022
+            ],
+            "studentized_valid_fraction": 0.5047
+          },
+          "mean": 0.07729802550723022,
+          "n_cells": 20,
+          "n_endpoints": 2,
+          "per_endpoint_mean": {
+            "alt": 0.13956798742601,
+            "bun": 0.015028063588450425
+          },
+          "separated": true,
+          "win": 0.9
+        },
+        "64": {
+          "ci95": [
+            0.03930193962084717,
+            0.5791740484120955
+          ],
+          "drop_best_endpoint_mean": 0.047135459200521104,
+          "interval_sensitivities": {
+            "bca_cluster_mean": [
+              0.047135459200521104,
+              0.25265204129994046
+            ],
+            "bootstrap_reps": 10000,
+            "seed": 20270846,
+            "student_t_cluster_mean": [
+              -2.358683727587038,
+              2.8639878101869183
+            ],
+            "studentized_cluster_bootstrap": [
+              0.25265204129994046,
+              0.25265204129994046
+            ],
+            "studentized_valid_fraction": 0.5028
+          },
+          "mean": 0.25265204129994046,
+          "n_cells": 20,
+          "n_endpoints": 2,
+          "per_endpoint_mean": {
+            "alt": 0.4581686233993598,
+            "bun": 0.047135459200521104
+          },
+          "separated": true,
+          "win": 0.95
+        }
+      },
+      "reference_minus_wrong_R_minus_W": {
+        "1024": {
+          "ci95": [
+            0.004322762535905971,
+            0.05621932148683502
+          ],
+          "drop_best_endpoint_mean": 0.006580860984882708,
+          "interval_sensitivities": {
+            "bca_cluster_mean": [
+              0.006580860984882708,
+              0.020712673581848796
+            ],
+            "bootstrap_reps": 10000,
+            "seed": 20270854,
+            "student_t_cluster_mean": [
+              -0.15884903057209243,
+              0.20027437773579004
+            ],
+            "studentized_cluster_bootstrap": [
+              0.020712673581848796,
+              0.020712673581848796
+            ],
+            "studentized_valid_fraction": 0.502
+          },
+          "mean": 0.020712673581848796,
+          "n_cells": 20,
+          "n_endpoints": 2,
+          "per_endpoint_mean": {
+            "alt": 0.03484448617881488,
+            "bun": 0.006580860984882708
+          },
+          "separated": true,
+          "win": 0.75
+        },
+        "256": {
+          "ci95": [
+            0.0005948779213485933,
+            0.22317422238596119
+          ],
+          "drop_best_endpoint_mean": 0.0025889061004520154,
+          "interval_sensitivities": {
+            "bca_cluster_mean": [
+              0.0025889061004520154,
+              0.09123244427681966
+            ],
+            "bootstrap_reps": 10000,
+            "seed": 20270853,
+            "student_t_cluster_mean": [
+              -1.035090500353842,
+              1.2175553889074815
+            ],
+            "studentized_cluster_bootstrap": [
+              0.09123244427681966,
+              0.09123244427681966
+            ],
+            "studentized_valid_fraction": 0.5081
+          },
+          "mean": 0.09123244427681965,
+          "n_cells": 20,
+          "n_endpoints": 2,
+          "per_endpoint_mean": {
+            "alt": 0.1798759824531873,
+            "bun": 0.0025889061004520154
+          },
+          "separated": true,
+          "win": 0.8
+        },
+        "64": {
+          "ci95": [
+            0.02188019526405166,
+            0.6429701306839949
+          ],
+          "drop_best_endpoint_mean": 0.030032238012357004,
+          "interval_sensitivities": {
+            "bca_cluster_mean": [
+              0.030032238012357004,
+              0.283171517018719
+            ],
+            "bootstrap_reps": 10000,
+            "seed": 20270852,
+            "student_t_cluster_mean": [
+              -2.9332679888689235,
+              3.499611022906362
+            ],
+            "studentized_cluster_bootstrap": [
+              0.283171517018719,
+              0.283171517018719
+            ],
+            "studentized_valid_fraction": 0.4899
+          },
+          "mean": 0.283171517018719,
+          "n_cells": 20,
+          "n_endpoints": 2,
+          "per_endpoint_mean": {
+            "alt": 0.536310796025081,
+            "bun": 0.030032238012357004
+          },
+          "separated": true,
+          "win": 0.9
+        }
+      },
+      "utility_S_minus_R": {
+        "1024": {
+          "ci95": [
+            -0.013628608472189049,
+            0.00757514232518908
+          ],
+          "drop_best_endpoint_mean": -0.006207291370897039,
+          "interval_sensitivities": {
+            "bca_cluster_mean": [
+              -0.006207291370897039,
+              -0.001100549001475398
+            ],
+            "bootstrap_reps": 10000,
+            "seed": 20270851,
+            "student_t_cluster_mean": [
+              -0.06598786308355911,
+              0.06378676508060832
+            ],
+            "studentized_cluster_bootstrap": [
+              -0.001100549001475398,
+              -0.001100549001475398
+            ],
+            "studentized_valid_fraction": 0.5035
+          },
+          "mean": -0.0011005490014753983,
+          "n_cells": 20,
+          "n_endpoints": 2,
+          "per_endpoint_mean": {
+            "alt": -0.006207291370897039,
+            "bun": 0.004006193367946243
+          },
+          "separated": false,
+          "win": 0.55
+        },
+        "256": {
+          "ci95": [
+            -0.05200584434281449,
+            0.015025255113615847
+          ],
+          "drop_best_endpoint_mean": -0.0403079950271773,
+          "interval_sensitivities": {
+            "bca_cluster_mean": [
+              -0.0403079950271773,
+              -0.013934418769589446
+            ],
+            "bootstrap_reps": 10000,
+            "seed": 20270850,
+            "student_t_cluster_mean": [
+              -0.3490424783304053,
+              0.3211736407912264
+            ],
+            "studentized_cluster_bootstrap": [
+              -0.013934418769589446,
+              -0.013934418769589446
+            ],
+            "studentized_valid_fraction": 0.492
+          },
+          "mean": -0.013934418769589446,
+          "n_cells": 20,
+          "n_endpoints": 2,
+          "per_endpoint_mean": {
+            "alt": -0.0403079950271773,
+            "bun": 0.012439157487998408
+          },
+          "separated": false,
+          "win": 0.6
+        },
+        "64": {
+          "ci95": [
+            -0.12417772899174988,
+            0.022680581626285615
+          ],
+          "drop_best_endpoint_mean": -0.0781421726257212,
+          "interval_sensitivities": {
+            "bca_cluster_mean": [
+              -0.0781421726257212,
+              -0.030519475718778555
+            ],
+            "bootstrap_reps": 10000,
+            "seed": 20270849,
+            "student_t_cluster_mean": [
+              -0.6356232127194433,
+              0.5745842612818862
+            ],
+            "studentized_cluster_bootstrap": [
+              -0.030519475718778555,
+              -0.030519475718778555
+            ],
+            "studentized_valid_fraction": 0.4977
+          },
+          "mean": -0.030519475718778555,
+          "n_cells": 20,
+          "n_endpoints": 2,
+          "per_endpoint_mean": {
+            "alt": -0.0781421726257212,
+            "bun": 0.017103221188164097
+          },
+          "separated": false,
+          "win": 0.5
+        }
+      }
+    },
+    "classC": {
+      "content_S_minus_W": {
+        "1024": {
+          "ci95": [
+            -0.002039768336734233,
+            0.11975909744603978
+          ],
+          "drop_best_endpoint_mean": 0.012318769684625279,
+          "interval_sensitivities": {
+            "bca_cluster_mean": [
+              -0.001286264931525677,
+              0.11420509830234837
+            ],
+            "bootstrap_reps": 10000,
+            "seed": 20270857,
+            "student_t_cluster_mean": [
+              -0.04363208427671207,
+              0.12509529137041142
+            ],
+            "studentized_cluster_bootstrap": [
+              -0.016770576340072722,
+              1.7023338737368114
+            ],
+            "studentized_valid_fraction": 0.9984
+          },
+          "mean": 0.040731603546849675,
+          "n_cells": 50,
+          "n_endpoints": 5,
+          "per_endpoint_mean": {
+            "creatinine": 0.05393833726225,
+            "hematocrit": -0.002895192389869389,
+            "hemoglobin": -0.0028224855760219216,
+            "rbc": 0.0010544194421424236,
+            "wbc": 0.15438293899574726
+          },
+          "separated": false,
+          "win": 0.54
+        },
+        "256": {
+          "ci95": [
+            -0.005224321252906824,
+            0.09595162578069519
+          ],
+          "drop_best_endpoint_mean": 0.004854895144288526,
+          "interval_sensitivities": {
+            "bca_cluster_mean": [
+              -0.004254895529211102,
+              0.11790219966829948
+            ],
+            "bootstrap_reps": 10000,
+            "seed": 20270856,
+            "student_t_cluster_mean": [
+              -0.04891455805731525,
+              0.1161585145659721
+            ],
+            "studentized_cluster_bootstrap": [
+              -0.02040295747020058,
+              2.0449848966117914
+            ],
+            "studentized_valid_fraction": 0.9987
+          },
+          "mean": 0.03362197825432843,
+          "n_cells": 50,
+          "n_endpoints": 5,
+          "per_endpoint_mean": {
+            "creatinine": 0.14869031069448807,
+            "hematocrit": -0.006157162756034801,
+            "hemoglobin": -0.0029867173779953016,
+            "rbc": -0.0052502444364548205,
+            "wbc": 0.033813705147639025
+          },
+          "separated": false,
+          "win": 0.52
+        },
+        "64": {
+          "ci95": [
+            -0.0025324552712923513,
+            0.4837572228761786
+          ],
+          "drop_best_endpoint_mean": 0.0242413811022505,
+          "interval_sensitivities": {
+            "bca_cluster_mean": [
+              0.011939494400074305,
+              0.6198849123869827
+            ],
+            "bootstrap_reps": 10000,
+            "seed": 20270855,
+            "student_t_cluster_mean": [
+              -0.2373852016761928,
+              0.576559961042138
+            ],
+            "studentized_cluster_bootstrap": [
+              -0.08113582788367676,
+              5.114229944213267
+            ],
+            "studentized_valid_fraction": 0.9989
+          },
+          "mean": 0.16958737968297263,
+          "n_cells": 50,
+          "n_endpoints": 5,
+          "per_endpoint_mean": {
+            "creatinine": 0.7509713740058611,
+            "hematocrit": -0.010024427622262461,
+            "hemoglobin": -0.005768311044310104,
+            "rbc": 0.017219197164105533,
+            "wbc": 0.09553906591146902
+          },
+          "separated": false,
+          "win": 0.64
+        }
+      },
+      "reference_minus_wrong_R_minus_W": {
+        "1024": {
+          "ci95": [
+            9.987086024053932e-05,
+            0.10825190120270078
+          ],
+          "drop_best_endpoint_mean": 0.01833055311280779,
+          "interval_sensitivities": {
+            "bca_cluster_mean": [
+              0.0003238699724381533,
+              0.09119925744384777
+            ],
+            "bootstrap_reps": 10000,
+            "seed": 20270863,
+            "student_t_cluster_mean": [
+              -0.0317604749140039,
+              0.11208650933669549
+            ],
+            "studentized_cluster_bootstrap": [
+              -0.012435683856746628,
+              3.163106057388222
+            ],
+            "studentized_valid_fraction": 0.9981
+          },
+          "mean": 0.0401630172113458,
+          "n_cells": 50,
+          "n_endpoints": 5,
+          "per_endpoint_mean": {
+            "creatinine": 0.07232048078070089,
+            "hematocrit": 0.0003841134788697853,
+            "hemoglobin": -0.000579567430384026,
+            "rbc": 0.0011971856220445165,
+            "wbc": 0.12749287360549783
+          },
+          "separated": true,
+          "win": 0.64
+        },
+        "256": {
+          "ci95": [
+            0.0009699603693097278,
+            0.14662162160164535
+          ],
+          "drop_best_endpoint_mean": 0.0029689293021898377,
+          "interval_sensitivities": {
+            "bca_cluster_mean": [
+              0.001760343769324282,
+              0.18844051619036248
+            ],
+            "bootstrap_reps": 10000,
+            "seed": 20270862,
+            "student_t_cluster_mean": [
+              -0.07930563609693447,
+              0.17783351466146996
+            ],
+            "studentized_cluster_bootstrap": [
+              -0.026628271175632268,
+              2.9979006934719927
+            ],
+            "studentized_valid_fraction": 0.9987
+          },
+          "mean": 0.04926393928226774,
+          "n_cells": 50,
+          "n_endpoints": 5,
+          "per_endpoint_mean": {
+            "creatinine": 0.23444397920257937,
+            "hematocrit": 0.0006509634276432418,
+            "hemoglobin": 0.0006763328896784604,
+            "rbc": 0.004426664141494863,
+            "wbc": 0.006121756749942786
+          },
+          "separated": true,
+          "win": 0.68
+        },
+        "64": {
+          "ci95": [
+            -0.004384395918182513,
+            0.4318180479222602
+          ],
+          "drop_best_endpoint_mean": 0.005568996210239536,
+          "interval_sensitivities": {
+            "bca_cluster_mean": [
+              6.853835335706923e-05,
+              0.5397546343289337
+            ],
+            "bootstrap_reps": 10000,
+            "seed": 20270861,
+            "student_t_cluster_mean": [
+              -0.23263228995150798,
+              0.5115502022078655
+            ],
+            "studentized_cluster_bootstrap": [
+              -0.08160974408330565,
+              4.62749394137856
+            ],
+            "studentized_valid_fraction": 0.9981
+          },
+          "mean": 0.13945895612817874,
+          "n_cells": 50,
+          "n_endpoints": 5,
+          "per_endpoint_mean": {
+            "creatinine": 0.6750187957999356,
+            "hematocrit": -0.0013020115550738676,
+            "hemoglobin": -0.012387503366203118,
+            "rbc": 0.019329269964025064,
+            "wbc": 0.016636229798210066
+          },
+          "separated": false,
+          "win": 0.66
+        }
+      },
+      "utility_S_minus_R": {
+        "1024": {
+          "ci95": [
+            -0.01435753335590021,
+            0.01578496399891648
+          ],
+          "drop_best_endpoint_mean": -0.00601178342818251,
+          "interval_sensitivities": {
+            "bca_cluster_mean": [
+              -0.008905885839383343,
+              0.016032096869403854
+            ],
+            "bootstrap_reps": 10000,
+            "seed": 20270860,
+            "student_t_cluster_mean": [
+              -0.01978833564414087,
+              0.020925508315148625
+            ],
+            "studentized_cluster_bootstrap": [
+              -0.014026057936839316,
+              0.03681849701850113
+            ],
+            "studentized_valid_fraction": 0.9991
+          },
+          "mean": 0.0005685863355038756,
+          "n_cells": 50,
+          "n_endpoints": 5,
+          "per_endpoint_mean": {
+            "creatinine": -0.018382143518450876,
+            "hematocrit": -0.003279305868739174,
+            "hemoglobin": -0.0022429181456378954,
+            "rbc": -0.00014276617990209296,
+            "wbc": 0.026890065390249417
+          },
+          "separated": false,
+          "win": 0.36
+        },
+        "256": {
+          "ci95": [
+            -0.05395804592363939,
+            0.011836783974244005
+          ],
+          "drop_best_endpoint_mean": -0.02647543838434819,
+          "interval_sensitivities": {
+            "bca_cluster_mean": [
+              -0.06306454512693377,
+              0.007620918832072528
+            ],
+            "bootstrap_reps": 10000,
+            "seed": 20270859,
+            "student_t_cluster_mean": [
+              -0.06777186033158625,
+              0.03648793827570765
+            ],
+            "studentized_cluster_bootstrap": [
+              -0.18386202589755218,
+              0.021608167582553035
+            ],
+            "studentized_valid_fraction": 0.9982
+          },
+          "mean": -0.0156419610279393,
+          "n_cells": 50,
+          "n_endpoints": 5,
+          "per_endpoint_mean": {
+            "creatinine": -0.08575366850809127,
+            "hematocrit": -0.006808126183678043,
+            "hemoglobin": -0.003663050267673762,
+            "rbc": -0.009676908577949683,
+            "wbc": 0.02769194839769624
+          },
+          "separated": false,
+          "win": 0.26
+        },
+        "64": {
+          "ci95": [
+            -0.003967491738888717,
+            0.07215451950609883
+          ],
+          "drop_best_endpoint_mean": 0.01793482041517763,
+          "interval_sensitivities": {
+            "bca_cluster_mean": [
+              -0.0016866884290108355,
+              0.06326600419205244
+            ],
+            "bootstrap_reps": 10000,
+            "seed": 20270858,
+            "student_t_cluster_mean": [
+              -0.02392386729717033,
+              0.08418071440675812
+            ],
+            "studentized_cluster_bootstrap": [
+              -0.01537663023550849,
+              0.25849801706381537
+            ],
+            "studentized_valid_fraction": 0.9985
+          },
+          "mean": 0.03012842355479389,
+          "n_cells": 50,
+          "n_endpoints": 5,
+          "per_endpoint_mean": {
+            "creatinine": 0.07595257820592563,
+            "hematocrit": -0.008722416067188593,
+            "hemoglobin": 0.006619192321893013,
+            "rbc": -0.0021100727999195323,
+            "wbc": 0.07890283611325896
+          },
+          "separated": false,
+          "win": 0.4
+        }
+      }
+    }
+  },
+  "metric": "query_sd_normalized_rmse (lower is better); gain = right arm minus left arm, positive favours the left",
+  "n_cells": 130,
+  "per_endpoint_descriptive": {
+    "alt": {
+      "class": "B",
+      "decay_64_minus_1024": -0.07193488125482417,
+      "utility_k1024": -0.006207291370897039,
+      "utility_k256": -0.0403079950271773,
+      "utility_k64": -0.0781421726257212
+    },
+    "bun": {
+      "class": "B",
+      "decay_64_minus_1024": 0.013097027820217854,
+      "utility_k1024": 0.004006193367946243,
+      "utility_k256": 0.012439157487998408,
+      "utility_k64": 0.017103221188164097
+    },
+    "creatinine": {
+      "class": "C",
+      "decay_64_minus_1024": 0.0943347217243765,
+      "utility_k1024": -0.018382143518450876,
+      "utility_k256": -0.08575366850809127,
+      "utility_k64": 0.07595257820592563
+    },
+    "dbp": {
+      "class": "A",
+      "decay_64_minus_1024": 0.00875480960032371,
+      "utility_k1024": -0.0019161886055672483,
+      "utility_k256": 0.0005774254521460298,
+      "utility_k64": 0.006838620994756461
+    },
+    "glucose": {
+      "class": "A",
+      "decay_64_minus_1024": 0.0834324887724949,
+      "utility_k1024": 0.029334954679283244,
+      "utility_k256": 0.12768718527345257,
+      "utility_k64": 0.11276744345177814
+    },
+    "hematocrit": {
+      "class": "C",
+      "decay_64_minus_1024": -0.005443110198449419,
+      "utility_k1024": -0.003279305868739174,
+      "utility_k256": -0.006808126183678043,
+      "utility_k64": -0.008722416067188593
+    },
+    "hemoglobin": {
+      "class": "C",
+      "decay_64_minus_1024": 0.00886211046753091,
+      "utility_k1024": -0.0022429181456378954,
+      "utility_k256": -0.003663050267673762,
+      "utility_k64": 0.006619192321893013
+    },
+    "rbc": {
+      "class": "C",
+      "decay_64_minus_1024": -0.0019673066200174396,
+      "utility_k1024": -0.00014276617990209296,
+      "utility_k256": -0.009676908577949683,
+      "utility_k64": -0.0021100727999195323
+    },
+    "sbp": {
+      "class": "A",
+      "decay_64_minus_1024": 0.03849234042578379,
+      "utility_k1024": 0.010776904983174972,
+      "utility_k256": 0.023284544761330572,
+      "utility_k64": 0.04926924540895876
+    },
+    "total_cholesterol": {
+      "class": "A",
+      "decay_64_minus_1024": 0.039000934256611816,
+      "utility_k1024": 0.013424112281252976,
+      "utility_k256": 0.019420778272184115,
+      "utility_k64": 0.0524250465378648
+    },
+    "triglycerides": {
+      "class": "A",
+      "decay_64_minus_1024": 0.060045505741791905,
+      "utility_k1024": 0.035043795059936246,
+      "utility_k256": 0.06761419329165295,
+      "utility_k64": 0.09508930080172814
+    },
+    "waist_cm": {
+      "class": "A",
+      "decay_64_minus_1024": 0.08079385699262875,
+      "utility_k1024": 0.02126998394599593,
+      "utility_k256": 0.04548592605621546,
+      "utility_k64": 0.10206384093862467
+    },
+    "wbc": {
+      "class": "C",
+      "decay_64_minus_1024": 0.05201277072300954,
+      "utility_k1024": 0.026890065390249417,
+      "utility_k256": 0.02769194839769624,
+      "utility_k64": 0.07890283611325896
+    }
+  },
+  "protocol": "experiments/crta_v3_exam_support_ladder_v1/PROTOCOL_V1.md",
+  "verdicts": {
+    "claim_ceiling": "No outcome licenses 'the controlled law extends to real data': this varies distinct-row count at fixed target-domain mass, the controlled benchmark varies count and mass together, and class A is an outcome-selected panel.",
+    "classA_utility_mean_by_k": {
+      "1024": 0.01798892705734602,
+      "256": 0.04734500885116363,
+      "64": 0.06974224968895185
+    },
+    "coherence_descriptive_by_k": {
+      "1024": true,
+      "256": true,
+      "64": true
+    },
+    "decay_inside_predicted_interval": true,
+    "mde80_frozen": [
+      0.066,
+      0.093
+    ],
+    "monotone_diagnostic_not_a_verdict_conjunct": true,
+    "predicted_decay_interval": [
+      0.049,
+      0.096
+    ],
+    "primary_decay": {
+      "bootstrap_ci95": [
+        0.027930496877680646,
+        0.07656002671147666
+      ],
+      "bootstrap_gate": true,
+      "drop_best_endpoint_mean": 0.04541748940342799,
+      "endpoint_student_t": [
+        0.021690950781154808,
+        0.08181569448205682
+      ],
+      "mean": 0.05175332263160581,
+      "meets_sesoi": true,
+      "name": "decay_utility_S_minus_R_64_minus_1024",
+      "sesoi": 0.02,
+      "win": 0.7833333333333333
+    },
+    "retention_classA": {
+      "ci95": [
+        0.1781310925547731,
+        0.346001752817671
+      ],
+      "controlled_law_retention_for_comparison": [
+        0.07,
+        0.14
+      ],
+      "draws_with_nonpositive_denominator": 0,
+      "note": "ratio of pooled means, paired resampling; the interval is meaningless if the denominator can cross zero",
+      "retention_point": 0.2579344247938093,
+      "unstable": false
+    },
+    "rule": "SUPPORTED requires bootstrap CI lower > 0 AND endpoint Student-t lower > 0 AND mean >= SESOI (.020). CONTRADICTED requires CI upper < 0, or the whole CI inside (-SESOI, +SESOI). Everything else is INCONCLUSIVE, including a noisy non-monotone reversal. Monotonicity and reference coherence are diagnostics, not gates. Class B, class C, and the pooled 13-endpoint ladder are non-verdict-bearing. Post-hoc selection of a K pair, endpoint subset, or weighting regime is inadmissible; hba1c must not be added in response.",
+    "scope": "class A (six cardiometabolic endpoints) only, per protocol",
+    "verdict": "SUPPORTED (within the selected panel) — the correspondence utility declines with the number of distinct labeled target rows at fixed target-domain mass"
+  },
+  "versions": [
+    "{\"numpy\": \"2.2.6\", \"pandas\": \"2.3.3\", \"python\": \"3.10.20\", \"sklearn\": \"1.7.2\", \"xgboost\": \"3.1.3\"}"
+  ],
+  "what_is_varied": "the number of distinct labeled target rows at fixed target-domain mass (per-row weight n_source/K), not the controlled benchmark's count-and-mass manipulation"
+}

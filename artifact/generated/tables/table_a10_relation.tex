@@ -1,0 +1,28 @@
+\begin{longtable}{P{0.07\linewidth}P{0.12\linewidth}P{0.06\linewidth}P{0.04\linewidth}P{0.08\linewidth}P{0.14\linewidth}P{0.14\linewidth}P{0.14\linewidth}P{0.14\linewidth}}
+\caption{Full relation summary. In real data, content compares declared with reversed directions; in the controlled benchmark, it compares correct with matched-wrong relations. Operation-value utility and executable utility use the same free reference. Increment versus value is the paired descriptive contrast $Q_R^{\mathrm{exec}}-Q_R^{\mathrm{value}}$; it and operation-value utility are not evaluated for the additive family because that family has no nontrivial operation-value arm. Real-data settings use their native metrics, so magnitudes are not comparable to controlled $\Delta Q$.}\label{tab:app-relation-full}\label{tab:app_relation_full}\\
+\toprule Scope & Setting / family & Learner & $K$ & Unit & Content & Value utility & Executable utility & Increment vs. value \\
+\midrule\endfirsthead
+\multicolumn{9}{c}{\tablename\ \thetable\ (continued)}\\
+\toprule Scope & Setting / family & Learner & $K$ & Unit & Content & Value utility & Executable utility & Increment vs. value \\
+\midrule\endhead
+\bottomrule\endfoot
+Real & NHANES--KNHANES & XGB & 256 & 6 endpoints & \textbf{+.183 [+.081, +.298]} & --- & -.002 [-.007, +.003] & --- \\
+Real & NHANES--KNHANES replication & XGB & 256 & 6 endpoints & \textbf{+.186 [+.084, +.299]} & --- & -.001 [-.007, +.003] & --- \\
+Real & NHANES/\newline KNHANES--HRS & XGB & var. & 7 endpoints & \textbf{+.266 [+.175, +.367]} & --- & +.002 [-.004, +.009] & --- \\
+Real & CAMELS keyed & XGB & var. & 12 basins & \textbf{+.184 [+.131, +.248]} & --- & +.001 [-.002, +.003] & --- \\
+Real & CAMELS extracted & XGB & var. & 12 basins & \textbf{+.148 [+.106, +.201]} & --- & +.001 [-.002, +.003] & --- \\
+Real & CAMELS extension & XGB & var. & 120 basins & \textbf{+.144 [+.127, +.163]} & --- & -.000 [-.001, +.001] & --- \\
+\addlinespace[2pt]
+Controlled & Additive & XGB & 32 & 20 realizations & \textbf{+.304 [+.284, +.326]} & --- & \textbf{+.024 [+.021, +.028]} & --- \\
+Controlled & Pairwise & XGB & 32 & 20 realizations & \textbf{+.013 [+.010, +.016]} & +.002 [-.002, +.006] & \textbf{+.010 [+.007, +.012]} & \textbf{+.007 [+.006, +.009]} \\
+Controlled & Sparse & XGB & 32 & 20 realizations & \textbf{+.010 [+.006, +.014]} & +.000 [-.003, +.003] & \textbf{+.007 [+.004, +.010]} & \textbf{+.007 [+.005, +.009]} \\
+Controlled & Additive & XGB & 512 & 20 realizations & \textbf{+.295 [+.274, +.316]} & --- & \textbf{+.021 [+.018, +.025]} & --- \\
+Controlled & Pairwise & XGB & 512 & 20 realizations & \textbf{+.014 [+.011, +.017]} & +.002 [-.001, +.006] & \textbf{+.010 [+.007, +.013]} & \textbf{+.008 [+.005, +.011]} \\
+Controlled & Sparse & XGB & 512 & 20 realizations & \textbf{+.010 [+.006, +.015]} & +.001 [-.003, +.005] & \textbf{+.007 [+.003, +.011]} & \textbf{+.006 [+.004, +.008]} \\
+Controlled & Additive & HistGB & 32 & 20 realizations & \textbf{+.306 [+.286, +.326]} & --- & \textbf{+.023 [+.020, +.027]} & --- \\
+Controlled & Pairwise & HistGB & 32 & 20 realizations & \textbf{+.014 [+.011, +.017]} & +.001 [-.003, +.004] & \textbf{+.010 [+.007, +.012]} & \textbf{+.009 [+.006, +.012]} \\
+Controlled & Sparse & HistGB & 32 & 20 realizations & \textbf{+.010 [+.006, +.014]} & +.000 [-.003, +.003] & \textbf{+.006 [+.003, +.009]} & \textbf{+.006 [+.004, +.008]} \\
+Controlled & Additive & HistGB & 512 & 20 realizations & \textbf{+.297 [+.279, +.317]} & --- & \textbf{+.021 [+.017, +.025]} & --- \\
+Controlled & Pairwise & HistGB & 512 & 20 realizations & \textbf{+.014 [+.010, +.017]} & +.002 [-.001, +.005] & \textbf{+.010 [+.007, +.013]} & \textbf{+.008 [+.006, +.011]} \\
+Controlled & Sparse & HistGB & 512 & 20 realizations & \textbf{+.007 [+.003, +.012]} & +.001 [-.003, +.005] & \textbf{+.005 [+.001, +.009]} & \textbf{+.004 [+.002, +.006]} \\
+\end{longtable}

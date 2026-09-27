@@ -1,0 +1,71 @@
+{
+ "arms": [
+  "free",
+  "sign_documented",
+  "pl_sign_flip"
+ ],
+ "backbone": "xgboost_hist_d6_n300",
+ "benchmark_id": "std_cross_nh2kn_shared_anchorreset_fewshot_v1",
+ "documented_signs": {
+  "hba1c": 1
+ },
+ "feature_set": "pam_constraint_all_v1",
+ "metric": "query_sd_normalized_rmse (lower is better)",
+ "n_pool": 6776,
+ "n_query": 12651,
+ "n_source": 22302,
+ "nrmse": {
+  "1024": {
+   "free": 0.6077955068612599,
+   "pl_sign_flip": 0.8502500027347004,
+   "sign_documented": 0.6168450292324372
+  },
+  "128": {
+   "free": 0.648900720648992,
+   "pl_sign_flip": 0.8748343467644811,
+   "sign_documented": 0.6642936296541196
+  },
+  "16": {
+   "free": 0.6853990279934343,
+   "pl_sign_flip": 1.007505648675663,
+   "sign_documented": 0.7962857272688687
+  },
+  "256": {
+   "free": 0.6223267043779789,
+   "pl_sign_flip": 0.8654435721599214,
+   "sign_documented": 0.6375948115566098
+  },
+  "32": {
+   "free": 0.7014640469366275,
+   "pl_sign_flip": 0.9568155529652732,
+   "sign_documented": 0.7148763466724355
+  },
+  "64": {
+   "free": 0.6713147828690085,
+   "pl_sign_flip": 0.8784480533279012,
+   "sign_documented": 0.7102991776584963
+  }
+ },
+ "pl_adj_partition": {
+  "blood_lipid_measurements": [
+   "weight_kg",
+   "total_cholesterol"
+  ],
+  "body_measurements": [
+   "height_cm",
+   "hba1c",
+   "sbp"
+  ],
+  "diabetes_test_measurements": [
+   "triglycerides"
+  ],
+  "first_reading_blood_pressure": [
+   "dbp",
+   "waist_cm"
+  ]
+ },
+ "primary_k": 256,
+ "seed": 55,
+ "target": "glucose",
+ "wall_seconds": 34.2
+}

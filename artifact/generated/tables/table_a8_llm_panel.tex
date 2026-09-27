@@ -1,0 +1,19 @@
+\begin{table}[t]
+\caption{Open-weight measurement-extraction panel. A materializable output can be converted into the frozen three-endpoint table; finite pooled contrasts additionally require evaluable mapped labels. Only Qwen3-8B separates from the matched-wrong condition.}
+\label{tab:app-extraction-model-panel}
+\label{tab:app_llm_panel}
+\centering\scriptsize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{P{0.23\linewidth}ccP{0.235\linewidth}P{0.235\linewidth}}
+\toprule Model & Materializable & Complete & LLM $-$ matched-wrong & LLM $-$ documented pipeline \\
+\midrule
+Qwen3-8B & yes & yes & \textbf{+.259 [+.179, +.345]} & -.033 [-.053, -.014] \\
+Qwen3-14B & no & no & not evaluable & not evaluable \\
+Qwen3-32B & yes & yes & -.253 [-.342, -.168] & -.545 [-.607, -.480] \\
+Gemma-3-27B-IT & yes & yes & -.295 [-.387, -.208] & -.586 [-.665, -.506] \\
+MedGemma-4B-IT & yes & yes & not evaluable & not evaluable \\
+MedGemma-27B-IT & yes & yes & -.096 [-.185, -.010] & -.387 [-.441, -.334] \\
+OLMo-3.1-32B-Instruct & no & no & not evaluable & not evaluable \\
+\bottomrule\end{tabular}
+\vspace{2pt}\parbox{0.96\linewidth}{\footnotesize \emph{Note.} ``Complete'' means that all 30 endpoint--seed cell files exist. MedGemma-4B-IT is nevertheless not evaluable: its materialized table assigns source valid-code sets that do not overlap the observed codes for smoking and hypertension, leaving no finite mapped source labels for those endpoints.}
+\end{table}

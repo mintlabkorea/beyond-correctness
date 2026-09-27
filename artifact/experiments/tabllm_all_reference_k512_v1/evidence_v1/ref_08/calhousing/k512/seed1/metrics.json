@@ -1,0 +1,103 @@
+{
+  "analysis_status": "frozen_all_reference_k512_evidence",
+  "arm": "ref_08",
+  "base_runner_sha256": "796d0bb0d17950a771c5e18fe732f955a4307956192e7329de23683e411f9447",
+  "dataset": "calhousing",
+  "execution_device": "cuda:0",
+  "execution_num_shards": 3,
+  "execution_shard_index": 0,
+  "final_trainable_state_sha256": "e52954a3b07242f2c10592a4cf8a01246f6a28eba94cbbcb50a80876696766cd",
+  "ia3_checkpoint_sha256": "8fe7a00fb425dd331c7a021c9468d50a14ec2ca1998007e7ead5ce3111405729",
+  "initial_trainable_state_sha256": "2b3e0be8998a1d12a84a7b358726205cce0c83973fb198a1c37bdac6aa3fbd0b",
+  "metrics": {
+    "accuracy": 0.7819767441860465,
+    "auc": 0.8638103460579292
+  },
+  "model_audit": {
+    "checkpoint_key_count": 192,
+    "checkpoint_parameter_count": 1081344,
+    "frozen_parameter_count": 11136118784,
+    "initial_trainable_state_sha256": "2b3e0be8998a1d12a84a7b358726205cce0c83973fb198a1c37bdac6aa3fbd0b",
+    "missing_base_model_key_count": 752,
+    "parameter_dtype": "torch.bfloat16",
+    "precision_layout": "frozen=bfloat16, trainable_ia3=float32",
+    "trainable_parameter_count": 1081344,
+    "trainable_parameter_dtype": "torch.float32",
+    "trainable_tensor_count": 192
+  },
+  "model_path": "external/.cache/huggingface/hub/models--bigscience--T0/snapshots/1cfa27271f8085c29323c94bd659004b210f20b5",
+  "n_test": 4128,
+  "n_train": 512,
+  "n_train_unique": 502,
+  "prior_wrapper_sha256": "62a7d917cd5450bba2af3ff548c62f4a60790f1dfdf45048fb5088017e14182d",
+  "protobuf_python_implementation": "python",
+  "protocol_sha256": "5fee5e02c870da5205e59d8f53aeb834ae374ccb5ea28f30b8b2f68f036022b0",
+  "raw_and_serialization_tree_sha256": "383519d4b1efffe01c414c1f7b12db9c7abc04aefbde0e9957c44c5eaf038763",
+  "reference_id": "ref_08",
+  "reference_manifest_sha256": "7fe208e544a954ebd2c15e273473d604107a22e49230631101466ab97097d8da",
+  "reference_permutation": [
+    7,
+    6,
+    1,
+    5,
+    3,
+    4,
+    0,
+    2
+  ],
+  "reference_selection_role": "exhaustive_remaining_21",
+  "reference_template_sha256": "d3569c0fcbdff8798b81a924c5443a26689f5180b41f5572e61de786dba9ca96",
+  "runner_sha256": "b8e659230269249a502122b44aa58f402366660ea55ea644025d29c62759fd9b",
+  "seed": 1,
+  "shot": 512,
+  "tabllm_commit": "71f6647c523aa6fd35df94ad76207c4377248c49",
+  "test_prompt_sha256": "01f212a2325fb05aa01f6805853127858b15d605d992900a06609787a289a60f",
+  "tfew_execution_commit": "114deced63ae722a368e06cb08ea956b20c393a6",
+  "train_membership_with_replacement": true,
+  "train_prompt_sha256": "0880884bd4a83b036e05bb4496a49a7e55ba4e37bb9b3b08a0fb7fc713e4e28d",
+  "trained_checkpoint_sha256": "712746cbeaf1bbae13d898f4ef09baa8ecf816f21e230581e5aa9bc8de0cf393",
+  "training": {
+    "batch_order_sha256": "5c7a960090bcbd22a63db3cc2ab5aa3271c8a28ccea5c526714a5f77348eac88",
+    "executed_steps": 3840,
+    "loss_first": {
+      "gradient_norm_pre_clip": 4.652068614959717,
+      "lm_loss": 0.32642242312431335,
+      "loss": 3.625288486480713,
+      "lr": 1.3020833333333334e-05,
+      "mc_loss": 0.6429539918899536,
+      "unlikely_loss": 2.655911922454834
+    },
+    "loss_last": {
+      "gradient_norm_pre_clip": 0.8334944248199463,
+      "lm_loss": 0.11193598806858063,
+      "loss": 0.38600361347198486,
+      "lr": 0.0,
+      "mc_loss": 0.08463295549154282,
+      "unlikely_loss": 0.1894346922636032
+    },
+    "planned_steps": 3840
+  },
+  "training_contract": {
+    "batch_size": 4,
+    "compute_dtype": "bfloat16 base and autocast with FP32 IA3 master parameters; temporary bfloat16 IA3 evaluation copy",
+    "epochs": 30,
+    "gradient_clip": 1.0,
+    "length_norm": 1,
+    "loss": "lm + multiple_choice + unlikely",
+    "lr": 0.003,
+    "max_length": 1024,
+    "optimizer": "Adafactor(scale_parameter=True, relative_step=False)",
+    "scheduler": "linear_decay_with_warmup",
+    "warmup_ratio": 0.06
+  },
+  "versions": {
+    "datasets": "2.14.7",
+    "numpy": "2.2.6",
+    "pandas": "2.3.3",
+    "python": "3.10.20",
+    "scikit_learn": "1.7.2",
+    "torch": "2.12.0.dev20260408+cu128",
+    "transformers": "4.30.0"
+  },
+  "wall_seconds": 782.407
+}

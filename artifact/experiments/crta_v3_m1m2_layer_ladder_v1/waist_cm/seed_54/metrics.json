@@ -1,0 +1,193 @@
+{
+ "arms": [
+  "rung0_base",
+  "rung1_columns",
+  "rung2_grouping",
+  "rung3_measurement",
+  "pl_columns",
+  "pl_grouping",
+  "pl_measurement",
+  "is_target",
+  "loo_columns",
+  "loo_grouping",
+  "loo_measurement (alias of rung2_grouping)"
+ ],
+ "backbone": "xgboost_hist_d6_n300",
+ "benchmark_id": "std_cross_nh2kn_shared_anchorreset_fewshot_v1",
+ "dropped_members_by_group": {
+  "blood_lipid_measurements": [],
+  "body_measurements": [
+   "waist_cm"
+  ],
+  "diabetes_test_measurements": [],
+  "first_reading_blood_pressure": []
+ },
+ "feature_set": "ladder_all_slots_v1",
+ "member_slots": [
+  "height_cm",
+  "weight_kg",
+  "sbp",
+  "dbp",
+  "glucose",
+  "hba1c",
+  "total_cholesterol",
+  "triglycerides"
+ ],
+ "metric": "query_sd_normalized_rmse (lower is better)",
+ "n_pool": 8078,
+ "n_query": 15325,
+ "n_source": 60124,
+ "nrmse": {
+  "1024": {
+   "is_target": 0.6637659610795915,
+   "loo_columns": 0.46683463278633947,
+   "loo_grouping": 0.3078795868391498,
+   "loo_measurement": 0.3170011591733698,
+   "pl_columns": 0.353543127356855,
+   "pl_grouping": 0.31694841452781036,
+   "pl_measurement": 0.3217210671993297,
+   "rung0_base": 0.6851780268471412,
+   "rung1_columns": 0.3115101264945847,
+   "rung2_grouping": 0.3170011591733698,
+   "rung3_measurement": 0.31513221404254926
+  },
+  "256": {
+   "is_target": 0.6626853961573436,
+   "loo_columns": 0.5931927121471074,
+   "loo_grouping": 0.32828019117139173,
+   "loo_measurement": 0.3424635128991211,
+   "pl_columns": 0.3920785356333646,
+   "pl_grouping": 0.34763274090941826,
+   "pl_measurement": 0.35943809099695556,
+   "rung0_base": 0.7072813921594501,
+   "rung1_columns": 0.3247694550754681,
+   "rung2_grouping": 0.3424635128991211,
+   "rung3_measurement": 0.34232336726689666
+  },
+  "64": {
+   "is_target": 0.6830372943161438,
+   "loo_columns": 0.6525273537518588,
+   "loo_grouping": 0.354490792762324,
+   "loo_measurement": 0.3756223043350703,
+   "pl_columns": 0.4798430679494614,
+   "pl_grouping": 0.37678286643957115,
+   "pl_measurement": 0.40110393094708396,
+   "rung0_base": 0.7945383388050786,
+   "rung1_columns": 0.3471784890015907,
+   "rung2_grouping": 0.3756223043350703,
+   "rung3_measurement": 0.3703723650635384
+  }
+ },
+ "pl_columns_permutation": {
+  "dbp": "height_cm",
+  "glucose": "triglycerides",
+  "hba1c": "total_cholesterol",
+  "height_cm": "sbp",
+  "sbp": "dbp",
+  "total_cholesterol": "weight_kg",
+  "triglycerides": "hba1c",
+  "weight_kg": "glucose"
+ },
+ "pl_grouping_partition": {
+  "blood_lipid_measurements": [
+   "total_cholesterol",
+   "triglycerides"
+  ],
+  "body_measurements": [
+   "height_cm",
+   "weight_kg"
+  ],
+  "diabetes_test_measurements": [
+   "dbp",
+   "hba1c"
+  ],
+  "first_reading_blood_pressure": [
+   "glucose",
+   "sbp"
+  ]
+ },
+ "pl_measurement_table": {
+  "knhanes/ALL__bs3_1": {
+   "kind": "map",
+   "map": {
+    "3.0": 1.0,
+    "8.0": 0.0,
+    "9.0": 0.5
+   }
+  },
+  "knhanes/ALL__de1_dg": {
+   "kind": "map",
+   "map": {
+    "8.0": 1.0,
+    "9.0": 0.0
+   }
+  },
+  "knhanes/ALL__di1_dg": {
+   "kind": "map",
+   "map": {
+    "0.0": 1.0,
+    "9.0": 0.0
+   }
+  },
+  "knhanes/ALL__educ": {
+   "kind": "map",
+   "map": {
+    "3.0": 1.0,
+    "4.0": 0.6666666666666666,
+    "8.0": 0.3333333333333333,
+    "9.0": 0.0
+   }
+  },
+  "knhanes/ALL__sex": {
+   "kind": "map",
+   "map": {
+    "1.0": 1.0,
+    "2.0": 0.0
+   }
+  },
+  "nhanes/BPQ020": {
+   "kind": "map",
+   "map": {
+    "2.0": 0.0,
+    "9.0": 1.0
+   }
+  },
+  "nhanes/DIQ010": {
+   "kind": "map",
+   "map": {
+    "1.0": 1.0,
+    "3.0": 0.0,
+    "9.0": 0.5
+   }
+  },
+  "nhanes/DMDEDUC2": {
+   "kind": "map",
+   "map": {
+    "1.0": 0.75,
+    "3.0": 0.25,
+    "5.0": 1.0,
+    "7.0": 0.5,
+    "9.0": 0.0
+   }
+  },
+  "nhanes/RIAGENDR": {
+   "kind": "map",
+   "map": {
+    "1.0": 1.0,
+    "2.0": 0.0
+   }
+  },
+  "nhanes/SMQ040": {
+   "kind": "map",
+   "map": {
+    "1.0": 0.5,
+    "3.0": 0.0,
+    "7.0": 1.0
+   }
+  }
+ },
+ "primary_k": 256,
+ "seed": 54,
+ "target": "waist_cm",
+ "wall_seconds": 103.6
+}

@@ -1,0 +1,252 @@
+[
+  {
+    "comparison_id": "C01-A",
+    "study": "LIFT",
+    "claim_content": "Yes",
+    "claim_text": "Third, if we use similar prompts with shuffled feature names (Shuffled-Names I, II), then the performance of LIFT drops by a significant margin. These results imply that the aforementioned performance improvements are indeed due to proper prompting with correct feature/value association.",
+    "claim_location": "C01-A-W3, p. 8, lines 454–462",
+    "linkage": "explicit_group",
+    "rationale": "The authors interpret the performance improvements as due to the correct feature/value association: the particular feature meaning must correspond to its value. The preceding sentence explicitly names Shuffled-Names I and II, linking this interpretation to this prompt-format comparison. The claim is qualified by the exception for CMC in the earlier benefit observation.",
+    "coder_id": "B"
+  },
+  {
+    "comparison_id": "C01-B",
+    "study": "LIFT",
+    "claim_content": "Yes",
+    "claim_text": "Third, if we use similar prompts with shuffled feature names (Shuffled-Names I, II), then the performance of LIFT drops by a significant margin. These results imply that the aforementioned performance improvements are indeed due to proper prompting with correct feature/value association.",
+    "claim_location": "C01-B-W3, p. 8, lines 454–462",
+    "linkage": "explicit_group",
+    "rationale": "The authors interpret the performance improvements as due to the correct feature/value association: the particular feature meaning must correspond to its value. The preceding sentence explicitly names Shuffled-Names I and II, linking this interpretation to this prompt-format comparison. The claim is qualified by the exception for CMC in the earlier benefit observation.",
+    "coder_id": "B"
+  },
+  {
+    "comparison_id": "C01-C",
+    "study": "LIFT",
+    "claim_content": "Yes",
+    "claim_text": "We compare classification accuracy (\") of LIFT/GPT[NUM] when feature names provided in the target dataset are and are not incorporated into the prompts. | Second, we observe that correctly incorporating feature names helps boost the performances of LIFT for datasets except for CMC. Third, if we use similar prompts with shuffled feature names (Shuffled-Names I, II), then the performance of LIFT drops by a significant margin. These results imply that the aforementioned performance improvements are indeed due to proper prompting with correct feature/value association.",
+    "claim_location": "C01-C-W2, p. 7, lines 435–444; C01-C-W3, p. 8, lines 454–462",
+    "linkage": "explicit_group",
+    "rationale": "The particular-content interpretation is that improvements come from correct feature/value association. The caption defines the comparison group as incorporating versus not incorporating feature names, and the interpretation first identifies improvements from correctly incorporating names, then attributes the aforementioned performance improvements to correct association. That explicit backward reference links the stronger interpretation to the named-versus-unnamed improvement as well as the shuffle comparisons, including this prompt format. The stated exception for CMC is retained.",
+    "coder_id": "B"
+  },
+  {
+    "comparison_id": "C01-D",
+    "study": "LIFT",
+    "claim_content": "Yes",
+    "claim_text": "We compare classification accuracy (\") of LIFT/GPT[NUM] when feature names provided in the target dataset are and are not incorporated into the prompts. | Second, we observe that correctly incorporating feature names helps boost the performances of LIFT for datasets except for CMC. Third, if we use similar prompts with shuffled feature names (Shuffled-Names I, II), then the performance of LIFT drops by a significant margin. These results imply that the aforementioned performance improvements are indeed due to proper prompting with correct feature/value association.",
+    "claim_location": "C01-D-W2, p. 7, lines 435–444; C01-D-W3, p. 8, lines 454–462",
+    "linkage": "explicit_group",
+    "rationale": "The particular-content interpretation is that improvements come from correct feature/value association. The caption defines the comparison group as incorporating versus not incorporating feature names, and the interpretation first identifies improvements from correctly incorporating names, then attributes the aforementioned performance improvements to correct association. That explicit backward reference links the stronger interpretation to the named-versus-unnamed improvement as well as the shuffle comparisons, including this prompt format. The stated exception for CMC is retained.",
+    "coder_id": "B"
+  },
+  {
+    "comparison_id": "C03-A",
+    "study": "TabLLM",
+    "claim_content": "Yes",
+    "claim_text": "The same applies to the list serialization with permuted feature names. This indicates that if enough training examples are available, the serialization approach does not matter, but that TabLLM relies on information from the feature names in the zero-shot and few-shot regime, and also relies on the association of the names with the correct values.",
+    "claim_location": "C03-A-W4, p. 6, lines 542–557",
+    "linkage": "explicit_comparison",
+    "rationale": "After naming permuted feature names, the authors explicitly interpret the result as reliance on the association of names with correct values. This is particular correspondence rather than merely having names, and directly addresses List Permuted Names. Dependence is limited to zero/few shots; with enough training examples the serialization approach does not matter.",
+    "coder_id": "B"
+  },
+  {
+    "comparison_id": "C03-B",
+    "study": "TabLLM",
+    "claim_content": "Unclear",
+    "claim_text": "Using only feature values had a poor performance for zero and very few shots, but the performance equalized with more training examples. The same applies to the list serialization with permuted feature names. This indicates that if enough training examples are available, the serialization approach does not matter, but that TabLLM relies on information from the feature names in the zero-shot and few-shot regime, and also relies on the association of the names with the correct values.",
+    "claim_location": "C03-B-W4, p. 6, lines 542–557",
+    "linkage": "ambiguous",
+    "rationale": "The paragraph clearly attributes weak reliance on feature-name information to the only-values comparison. The following and also relies on the association clause is a strict particular-correspondence claim, but follows the separate permuted-name observation as well. It is unresolved whether the compound inference is meant to attribute that strict claim to both comparisons or whether the association clause specifically interprets name permutation. I therefore do not transfer that clause to the only-values unit or declare it definitely absent.",
+    "coder_id": "B"
+  },
+  {
+    "comparison_id": "C03-C",
+    "study": "TabLLM",
+    "claim_content": "Yes",
+    "claim_text": "The discrepancy for zero and very few shots was even stronger for List Permuted Values, which suggests that TabLLM relies more on the correct values than feature names. Again, the performance equalized for more examples showing the ability of TabLLM to learn new associations if enough training data is available.",
+    "claim_location": "C03-C-W4, p. 6, lines 542–557",
+    "linkage": "explicit_comparison",
+    "rationale": "The authors specifically name List Permuted Values and infer reliance on correct values, followed by learning new associations with sufficient data. This is an interpretation about the particular value meanings/associations supplied rather than merely including a component. The inference explicitly belongs to the permuted-values comparison and is qualified to zero/very few shots.",
+    "coder_id": "B"
+  },
+  {
+    "comparison_id": "C04-A",
+    "study": "PLATO",
+    "claim_content": "No",
+    "claim_text": "We find that both the feature nodes and the broader knowledge nodes are important for PLATO’s performance. Using the “feature-only KG” configuration of PLATO improves performance vs the “no KG” configuration ([NUM] vs [NUM]). Using the “full KG” configuration further improves performance vs the “feature-only KG” configuration ([NUM] vs [NUM]). PLATO’s performance thus relies on both the feature information and the broader domain information in the KG.",
+    "claim_location": "C04-A-W3, p. 9, lines 509–513",
+    "linkage": "explicit_group",
+    "rationale": "The Table comparison group is interpreted as showing that feature information and broader domain information are important and improve performance. This is weak component/information dependence and broad domain benefit, without an interpretation that the particular supplied knowledge, meanings, or associations determine performance. The conclusion covers the full/feature-only/no-KG group.",
+    "coder_id": "B"
+  },
+  {
+    "comparison_id": "C04-B",
+    "study": "PLATO",
+    "claim_content": "No",
+    "claim_text": "We find that both the feature nodes and the broader knowledge nodes are important for PLATO’s performance. Using the “feature-only KG” configuration of PLATO improves performance vs the “no KG” configuration ([NUM] vs [NUM]). Using the “full KG” configuration further improves performance vs the “feature-only KG” configuration ([NUM] vs [NUM]). PLATO’s performance thus relies on both the feature information and the broader domain information in the KG.",
+    "claim_location": "C04-B-W3, p. 9, lines 509–513",
+    "linkage": "explicit_group",
+    "rationale": "The Table comparison group is interpreted as showing that feature information and broader domain information are important and improve performance. This is weak component/information dependence and broad domain benefit, without an interpretation that the particular supplied knowledge, meanings, or associations determine performance. The conclusion covers the full/feature-only/no-KG group.",
+    "coder_id": "B"
+  },
+  {
+    "comparison_id": "C04-C",
+    "study": "PLATO",
+    "claim_content": "No",
+    "claim_text": "We conduct an ablation study to assess PLATO’s robustness to missing edges in the KG. We randomly remove edges from the KG and measure PLATO’s performance on the BRCA dataset. We observe that with only [NUM]% of the KG’s edges, PLATO still has [NUM]% of the performance as PLATO with [NUM]% of the KG’s edges ([NUM] vs. [NUM]) (Table [NUM]).",
+    "claim_location": "C04-C-W2, p. 9, lines 514–520",
+    "linkage": "explicit_comparison",
+    "rationale": "The authors interpret this edge-removal experiment as robustness to missing edges and report retained performance. Neither that robustness statement nor the observation asserts dependence on particular edge meanings, semantic assignments, or correspondences; the other ablation summaries concern different components.",
+    "coder_id": "B"
+  },
+  {
+    "comparison_id": "C05-A",
+    "study": "CARTE",
+    "claim_content": "No",
+    "claim_text": "Moreover, the performance gap between CARTE and Minhash confirm that string-level models, that also capture semantic similarity, is important and the use of language models are pivotal for effectively using external information, especially when information given in the table is limited.",
+    "claim_location": "C05-A-W2, p. 21, lines 1358–1368",
+    "linkage": "explicit_comparison",
+    "rationale": "The named CARTE-versus-Minhash interpretation says semantic-similarity string models and language models are important for using external information. That is encoder importance and weak semantic use, not an interpretation about dependence on which particular meaning or semantic assignment is supplied.",
+    "coder_id": "B"
+  },
+  {
+    "comparison_id": "C05-B",
+    "study": "CARTE",
+    "claim_content": "No",
+    "claim_text": "In particular, it is interesting to observe the significant decrease with the exclusion of edge information and the attention layer. Since both are essential for leveraging context within a given table, it implies that capturing context is pivotal for attaining the strong performances in predictions.",
+    "claim_location": "C05-B-W2, p. 21, lines 1358–1368",
+    "linkage": "explicit_group",
+    "rationale": "The shared interpretation explicitly names edge information and attention and calls capturing table context pivotal. This is component/context utilization, without a claim that the particular column meanings or edge associations control the result. The separate Minhash language-model inference is not transferred to this edge-information unit.",
+    "coder_id": "B"
+  },
+  {
+    "comparison_id": "C05-C",
+    "study": "CARTE",
+    "claim_content": "No",
+    "claim_text": "In particular, it is interesting to observe the significant decrease with the exclusion of edge information and the attention layer. Since both are essential for leveraging context within a given table, it implies that capturing context is pivotal for attaining the strong performances in predictions.",
+    "claim_location": "C05-C-W2, p. 21, lines 1358–1368",
+    "linkage": "explicit_group",
+    "rationale": "The shared interpretation explicitly names edge information and attention and calls capturing table context pivotal. This is component/context utilization, without a claim that the particular column meanings or edge associations control the result. The separate Minhash language-model inference is not transferred to this edge-information unit.",
+    "coder_id": "B"
+  },
+  {
+    "comparison_id": "C06-A",
+    "study": "FeatLLM",
+    "claim_content": "No",
+    "claim_text": "On the other hand, the effect of feature descriptions and reasoning instructions are high when the number of shot is small. This suggests that the efficient utilization of the prior knowledge of LLM becomes crucial for performance improvements.",
+    "claim_location": "C06-A-W2, p. 8, lines 684–696",
+    "linkage": "explicit_group",
+    "rationale": "The description/reasoning group is interpreted as showing that efficient use of prior knowledge is crucial in low-shot settings. This is weak knowledge utilization and benefit language; it does not interpret this description comparison as dependence on particular description meanings or assignments.",
+    "coder_id": "B"
+  },
+  {
+    "comparison_id": "C07-A",
+    "study": "TabuLa-8B",
+    "claim_content": "No",
+    "claim_text": "First, for small number of shots, the semantically-meaningful headers provide a performance benefit: | We hypothesize that, as the number of shots grows, the model is increasingly utilizing the values provided in the shots (and their distribution) and is less reliant on the keys for providing information about the task. | Collectively, the results of this ablation study suggest that TABU L A [NUM]B is robust to the semantic content of the headers, and that TABU L A [NUM]B is capable of providing effective tabular data predictions even in the absence of rich column headers.",
+    "claim_location": "C07-A-W5, p. 26, lines 1655–1666; C07-A-W5, p. 26, lines 1655–1666; C07-A-W6, p. 26, lines 1667–1669",
+    "linkage": "explicit_comparison",
+    "rationale": "The authors claim a low-shot benefit from meaningful headers, a diminishing reliance on keys as shots increase, and robustness when rich headers are absent. These are benefit/use and robustness claims about providing informative headers, not dependence on the particular supplied meanings or assignments. The intervention description about replacing names does not itself create the stronger interpretation.",
+    "coder_id": "B"
+  },
+  {
+    "comparison_id": "C08-A",
+    "study": "ConTextTab",
+    "claim_content": "No",
+    "claim_text": "As expected, we observe a significant drop in performance when discarding semantics completely or when using the conventional string encoders from the skrub library. Hence, ConTextTab successfully leverages the semantic content of features.",
+    "claim_location": "C08-A-W2, p. 8, lines 471–479",
+    "linkage": "explicit_group",
+    "rationale": "The feature-encoder group explicitly includes this variant and concludes that the model leverages semantic content. This is the weaker semantic-use claim excluded by the strict definition. Neither the encoder replacement description nor the performance drop adds an author interpretation about dependence on the particular meanings, assignments, or correspondences supplied.",
+    "coder_id": "B"
+  },
+  {
+    "comparison_id": "C08-B",
+    "study": "ConTextTab",
+    "claim_content": "No",
+    "claim_text": "As expected, we observe a significant drop in performance when discarding semantics completely or when using the conventional string encoders from the skrub library. Hence, ConTextTab successfully leverages the semantic content of features.",
+    "claim_location": "C08-B-W2, p. 8, lines 471–479",
+    "linkage": "explicit_group",
+    "rationale": "The feature-encoder group explicitly includes this variant and concludes that the model leverages semantic content. This is the weaker semantic-use claim excluded by the strict definition. Neither the encoder replacement description nor the performance drop adds an author interpretation about dependence on the particular meanings, assignments, or correspondences supplied.",
+    "coder_id": "B"
+  },
+  {
+    "comparison_id": "C08-C",
+    "study": "ConTextTab",
+    "claim_content": "No",
+    "claim_text": "As expected, we observe a significant drop in performance when discarding semantics completely or when using the conventional string encoders from the skrub library. Hence, ConTextTab successfully leverages the semantic content of features.",
+    "claim_location": "C08-C-W2, p. 8, lines 471–479",
+    "linkage": "explicit_group",
+    "rationale": "The feature-encoder group explicitly includes this variant and concludes that the model leverages semantic content. This is the weaker semantic-use claim excluded by the strict definition. Neither the encoder replacement description nor the performance drop adds an author interpretation about dependence on the particular meanings, assignments, or correspondences supplied.",
+    "coder_id": "B"
+  },
+  {
+    "comparison_id": "C08-D",
+    "study": "ConTextTab",
+    "claim_content": "No",
+    "claim_text": "As expected, we observe a significant drop in performance when discarding semantics completely or when using the conventional string encoders from the skrub library. Hence, ConTextTab successfully leverages the semantic content of features.",
+    "claim_location": "C08-D-W2, p. 8, lines 471–479",
+    "linkage": "explicit_group",
+    "rationale": "The feature-encoder group explicitly includes this variant and concludes that the model leverages semantic content. This is the weaker semantic-use claim excluded by the strict definition. Neither the encoder replacement description nor the performance drop adds an author interpretation about dependence on the particular meanings, assignments, or correspondences supplied.",
+    "coder_id": "B"
+  },
+  {
+    "comparison_id": "C08-E",
+    "study": "ConTextTab",
+    "claim_content": "No",
+    "claim_text": "Dropping column name semantics indeed results in a performance loss of about [NUM]% in accuracy and [NUM]% in R[NUM] score. | Overall, ConTextTab successfully integrated and leverages semantics, both present in the table’s features as well as those potentially contained in the table column names.",
+    "claim_location": "C08-E-W3, p. 8, lines 480–489; C08-E-W4, p. 8, lines 490–491",
+    "linkage": "explicit_comparison",
+    "rationale": "The authors explicitly report a loss from dropping name semantics; the shared conclusion says semantics are integrated and leveraged. This is component benefit/weak use, without interpreting results as dependence on particular column meanings or their assignments.",
+    "coder_id": "B"
+  },
+  {
+    "comparison_id": "C08-F",
+    "study": "ConTextTab",
+    "claim_content": "No",
+    "claim_text": "Further enriching column header semantics slightly boosts performance, resulting in a slightly better rank, however with a win rate of [NUM]% at a p-value of [NUM] this is not statistically significant. | Overall, ConTextTab successfully integrated and leverages semantics, both present in the table’s features as well as those potentially contained in the table column names.",
+    "claim_location": "C08-F-W3, p. 8, lines 480–489; C08-F-W4, p. 8, lines 490–491",
+    "linkage": "explicit_comparison",
+    "rationale": "The enrichment interpretation is a slight, statistically nonsignificant benefit. The shared conclusion supplies only weak semantic-use wording, not an interpretation that the particular added description meanings determine the outcome. The feature-encoding interpretation is separate.",
+    "coder_id": "B"
+  },
+  {
+    "comparison_id": "C09-A",
+    "study": "TabSTAR",
+    "claim_content": "No",
+    "claim_text": "The addition of the quantile information on top of the bin seems to have limited impact, although marginally winning on the average performance.",
+    "claim_location": "C09-A-W4, p. 52, lines 3103–3107",
+    "linkage": "explicit_comparison",
+    "rationale": "For this exact quantile-versus-no-quantile comparison, the authors claim limited impact and a marginal average benefit. They do not interpret it as dependence on the particular quantile meaning. The stronger-sounding group discussion about including numerical information compares numerical variants with Name and does not establish a particular-content claim for this quantile increment.",
+    "coder_id": "B"
+  },
+  {
+    "comparison_id": "C09-B",
+    "study": "TabSTAR",
+    "claim_content": "No",
+    "claim_text": "As demonstrated in Table [NUM], our findings reveal that incorporating numerical information significantly enhances performance, highlighting the importance of balancing numerical precision with a representation format that aligns with the language model’s parametric knowledge. | highlighting the importance of incorporating richer numerical verbalizations beyond relying solely on the column name.",
+    "claim_location": "C09-B-W1, p. 9, lines 542–553; C09-B-W4, p. 52, lines 3103–3107",
+    "linkage": "explicit_group",
+    "rationale": "The numerical-variant versus Name group includes this comparison and is interpreted as benefit from numerical information and an appropriate representation format. Importance of incorporation/alignment is weak component or representation benefit, without an interpretation about dependence on a particular supplied numerical meaning, direction, or semantic assignment. Dataset qualifications do not change that claim strength.",
+    "coder_id": "B"
+  },
+  {
+    "comparison_id": "C10-A",
+    "study": "TARTE",
+    "claim_content": "Unclear",
+    "claim_text": "In addition, without datetime detection or column information, properly pre-trained weights still provide competitive representations. This suggests that TARTE can perform well even on tables without meaningful column names.",
+    "claim_location": "C10-A-W5, p. 10, lines 622–629",
+    "linkage": "explicit_comparison",
+    "rationale": "The supplied mirror explicitly interprets missing column information as compatible with competitive representations and good performance without meaningful names; this is robustness rather than the strict claim in the available text. However, the packet identifies the mirror as arXiv v2, not verified as the accepted published wording. That version gap prevents deciding the original publication claim and must not be converted into No.",
+    "coder_id": "B"
+  },
+  {
+    "comparison_id": "C10-B",
+    "study": "TARTE",
+    "claim_content": "Unclear",
+    "claim_text": "First, comparing MinHash to TARTE reveals the importance of FastText. A simple use of FastText with random (non pre-trained) weights already exhibit relatively strong performances. As FastText captures semantic similarities, its combination with a suitable transformer architecture (subsection [NUM] or CARTE) forms an inductive bias of smoothness: similar tables have similar representations.",
+    "claim_location": "C10-B-W3, p. 9, lines 590–593",
+    "linkage": "explicit_comparison",
+    "rationale": "The mirror directly names MinHash versus TARTE and interprets FastText importance through semantic similarity and smooth representations, which is encoder/semantic-use language rather than particular-content dependence. But this mirror is arXiv v2 and equivalence to the accepted published wording is unverified, so the original publication claim remains Unclear on source-version grounds.",
+    "coder_id": "B"
+  }
+]

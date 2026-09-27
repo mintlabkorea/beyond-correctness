@@ -1,0 +1,138 @@
+{
+ "all_new_groups_validated": true,
+ "base_runner_sha256": "58697774da35b4d2ed573045618d66f557ebf29ffadbd269539862c2dc802b9a",
+ "dataset_sign_change_count": 0,
+ "datasets": [
+  "bank",
+  "blood",
+  "calhousing",
+  "car",
+  "creditg",
+  "diabetes",
+  "heart",
+  "income",
+  "jungle"
+ ],
+ "macro": {
+  "absolute_delta": 0.0036713348215935784,
+  "bootstrap_draws": 10000,
+  "bootstrap_seed": 20260907,
+  "delta_u_generic_minus_anonymous": -0.0036713348215935784,
+  "materiality_scale": 0.02,
+  "paired_dataset_bootstrap_95pct": [
+   -0.031068089184564985,
+   0.027875637889287503
+  ],
+  "u_anonymous": 0.08836999289607618,
+  "u_generic_lexical": 0.08469865807448261
+ },
+ "new_evidence_group_count": 9,
+ "protocol": "iclr_latex_v3/TABLLM_GENERIC_LEXICAL_ZERO_SHOT_FREEZE_V1.md",
+ "protocol_sha256": "81c2ed91a4984f87cac19f75289e4ee9c8c64f0054f4fdfd4f65191167872f97",
+ "rows": [
+  {
+   "dataset": "bank",
+   "delta_u_generic_minus_anonymous": -0.03655374205175699,
+   "generic_lexical_auc": 0.556869538840604,
+   "intended_auc": 0.609694890988275,
+   "stable_anonymous_auc": 0.520315796788847,
+   "u_anonymous": 0.08937909419942802,
+   "u_generic": 0.052825352147671034,
+   "utility_sign_changed": false,
+   "wall_seconds": 151.632
+  },
+  {
+   "dataset": "blood",
+   "delta_u_generic_minus_anonymous": -0.006147682750154704,
+   "generic_lexical_auc": 0.45811439875837623,
+   "intended_auc": 0.566295176285481,
+   "stable_anonymous_auc": 0.4519667160082215,
+   "u_anonymous": 0.11432846027725946,
+   "u_generic": 0.10818077752710475,
+   "utility_sign_changed": false,
+   "wall_seconds": 2.353
+  },
+  {
+   "dataset": "calhousing",
+   "delta_u_generic_minus_anonymous": -0.003574922293541505,
+   "generic_lexical_auc": 0.5528247369975015,
+   "intended_auc": 0.6023841929628015,
+   "stable_anonymous_auc": 0.54924981470396,
+   "u_anonymous": 0.0531343782588416,
+   "u_generic": 0.04955945596530009,
+   "utility_sign_changed": false,
+   "wall_seconds": 59.983
+  },
+  {
+   "dataset": "car",
+   "delta_u_generic_minus_anonymous": 0.06674219477523102,
+   "generic_lexical_auc": 0.4211218871184301,
+   "intended_auc": 0.7882398759187097,
+   "stable_anonymous_auc": 0.48786408189366115,
+   "u_anonymous": 0.30037579402504855,
+   "u_generic": 0.36711798880027957,
+   "utility_sign_changed": false,
+   "wall_seconds": 5.215
+  },
+  {
+   "dataset": "creditg",
+   "delta_u_generic_minus_anonymous": -0.01883138480628599,
+   "generic_lexical_auc": 0.549999720145261,
+   "intended_auc": 0.527689005348808,
+   "stable_anonymous_auc": 0.531168335338975,
+   "u_anonymous": -0.0034793299901669794,
+   "u_generic": -0.02231071479645297,
+   "utility_sign_changed": false,
+   "wall_seconds": 4.55
+  },
+  {
+   "dataset": "diabetes",
+   "delta_u_generic_minus_anonymous": -0.025661433571036618,
+   "generic_lexical_auc": 0.5082495054317238,
+   "intended_auc": 0.6466331823695487,
+   "stable_anonymous_auc": 0.48258807186068714,
+   "u_anonymous": 0.16404511050886156,
+   "u_generic": 0.13838367693782494,
+   "utility_sign_changed": false,
+   "wall_seconds": 2.343
+  },
+  {
+   "dataset": "heart",
+   "delta_u_generic_minus_anonymous": -0.06525430040718394,
+   "generic_lexical_auc": 0.6280930516610439,
+   "intended_auc": 0.5420566924414825,
+   "stable_anonymous_auc": 0.56283875125386,
+   "u_anonymous": -0.02078205881237749,
+   "u_generic": -0.08603635921956143,
+   "utility_sign_changed": false,
+   "wall_seconds": 3.069
+  },
+  {
+   "dataset": "income",
+   "delta_u_generic_minus_anonymous": -0.026602279778647597,
+   "generic_lexical_auc": 0.7532188144875352,
+   "intended_auc": 0.8004329506126469,
+   "stable_anonymous_auc": 0.7266165347088877,
+   "u_anonymous": 0.0738164159037592,
+   "u_generic": 0.047214136125111605,
+   "utility_sign_changed": false,
+   "wall_seconds": 156.084
+  },
+  {
+   "dataset": "jungle",
+   "delta_u_generic_minus_anonymous": 0.08284153748903411,
+   "generic_lexical_auc": 0.5143732276755796,
+   "intended_auc": 0.6217268368586455,
+   "stable_anonymous_auc": 0.5972147651646137,
+   "u_anonymous": 0.0245120716940318,
+   "u_generic": 0.10735360918306591,
+   "utility_sign_changed": false,
+   "wall_seconds": 128.206
+  }
+ ],
+ "runner_sha256": "652192d843081a4a2442809ed33b787a1f80ddfe0c581b56e77f6915e99eaa9d",
+ "status": "complete_validated_generic_lexical_zero_shot_audit",
+ "summarizer_sha256": "94c7ff11026637376208c29423e6efc57b618cab07e84feb9982f8a3d0e0f038",
+ "total_scoring_wall_seconds": 513.4350000000001,
+ "verdict": "MACRO_STABLE_ACROSS_ANONYMOUS_AND_GENERIC_LEXICAL"
+}

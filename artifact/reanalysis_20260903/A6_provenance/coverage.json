@@ -1,0 +1,60 @@
+{
+  "adjudicator_lines": "15-22 (constants), 140-160 (finite count/gate), 161-168 (decision)",
+  "adjudicator_path": "scripts/summarize_crta_v3_survey_label_panel_endpoint_expansion_v1.py",
+  "cell_count": 200,
+  "coverage_by_endpoint_direction": {
+    "angina_history": {
+      "kn2nh": 9,
+      "nh2kn": 10
+    },
+    "arthritis_history": {
+      "kn2nh": 10,
+      "nh2kn": 10
+    },
+    "asthma_history": {
+      "kn2nh": 10,
+      "nh2kn": 10
+    },
+    "cancer_history": {
+      "kn2nh": 4,
+      "nh2kn": 9
+    },
+    "current_smoking_status": {
+      "kn2nh": 10,
+      "nh2kn": 10
+    },
+    "diabetes_history": {
+      "kn2nh": 10,
+      "nh2kn": 10
+    },
+    "heart_attack_history": {
+      "kn2nh": 8,
+      "nh2kn": 10
+    },
+    "hypertension_history": {
+      "kn2nh": 8,
+      "nh2kn": 10
+    },
+    "kidney_disease_history": {
+      "kn2nh": 9,
+      "nh2kn": 10
+    },
+    "stroke_history": {
+      "kn2nh": 10,
+      "nh2kn": 10
+    }
+  },
+  "coverage_gate_pass": false,
+  "exact_coverage_rule": "For every endpoint-direction unit, count finite paired pipeline_table/placebo_table K=256 seeds; require count >= 8 of 10. If any unit fails, the primary panel verdict is not evaluable.",
+  "exact_grid_rule": "exactly 10 endpoints x 2 directions x 10 seeds = 200 cells",
+  "failed_units": [
+    {
+      "direction": "kn2nh",
+      "endpoint": "cancer_history",
+      "finite_pairs": 4
+    }
+  ],
+  "formula": "coverage(e,d)=sum_s I[finite(AUC_pipeline(e,d,s)-AUC_placebo(e,d,s))] >= 8",
+  "protocol_lines": "49-54 (gate), 62-69 (estimand/inference), 71-76 (P1)",
+  "protocol_path": "iclr_latex_v3/SURVEY_LABEL_PANEL_ENDPOINT_EXPANSION_PREREGISTRATION_V1.md"
+}

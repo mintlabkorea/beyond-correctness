@@ -1,0 +1,121 @@
+{
+  "audit_sha256": "44d8155f8300b1a4b142415092942838f8537ce93a3aff3dda7acc545a5864e2",
+  "cell": [
+    "blood",
+    4,
+    1024,
+    "R1",
+    "ref_00"
+  ],
+  "checkpoint_sha256": "8fe7a00fb425dd331c7a021c9468d50a14ec2ca1998007e7ead5ce3111405729",
+  "completed_at_utc": "2026-09-10T15:12:08.155431+00:00",
+  "design_sha256": "5cdac31d67a015ebca58c1f61ac5f150b842e88eced1d18b254345199302899b",
+  "feature_to_identifier": {
+    "Frequency - total number of donation": "feature_002",
+    "Monetary - total blood donated in c.c.": "feature_003",
+    "Recency - months since last donation": "feature_001",
+    "Time - months since first donation": "feature_004"
+  },
+  "gpu": 2,
+  "metrics": {
+    "accuracy": 0.29333333333333333,
+    "auc": 0.474708686440678
+  },
+  "model_files": {
+    ".gitattributes": "98ccb431c012ebfe976280fbd45aea4cec7409935868ccecf3954370f96732a1",
+    "README.md": "4d4029cb81f74695a450f4497dd12aa34f3e86bf98d3c480ed1231a015cebb45",
+    "config.json": "ef552104049013790961bd3624ac91cacdd8d9aabd09201f8b30e2f06693d97f",
+    "pytorch_model.bin": "806b1cfa7743d85fddc12bdba93b701c572816c7cc47108ee93fccffe4b6ee7f",
+    "special_tokens_map.json": "4720c0fddbe4c5991334f85ad7073d9bd0a294a8ba4641a2f8dab614ca825949",
+    "spiece.model": "d60acb128cf7b7f2536e8f38a5b18a05535c9e14c7a355904270e15b0945ea86",
+    "tokenizer_config.json": "b971dce1d2805c2a66da8657156e7114a30501c6ba602fc947c8bf607a3ead2d"
+  },
+  "original_provenance": {
+    "analysis_status": "frozen_ranon_support_ladder_evidence",
+    "arm": "list_stable_anonymous",
+    "dataset": "blood",
+    "final_trainable_state_sha256": "250f9b7b7ac7ce261540ac716fa68d46b028c8656411bf3932574d5e96c80ba2",
+    "ia3_checkpoint_sha256": "8fe7a00fb425dd331c7a021c9468d50a14ec2ca1998007e7ead5ce3111405729",
+    "initial_trainable_state_sha256": "2b3e0be8998a1d12a84a7b358726205cce0c83973fb198a1c37bdac6aa3fbd0b",
+    "metrics": {
+      "accuracy": 0.29333333333333333,
+      "auc": 0.474708686440678
+    },
+    "model_audit": {
+      "checkpoint_key_count": 192,
+      "checkpoint_parameter_count": 1081344,
+      "frozen_parameter_count": 11136118784,
+      "initial_trainable_state_sha256": "2b3e0be8998a1d12a84a7b358726205cce0c83973fb198a1c37bdac6aa3fbd0b",
+      "missing_base_model_key_count": 752,
+      "parameter_dtype": "torch.bfloat16",
+      "precision_layout": "frozen=bfloat16, trainable_ia3=float32",
+      "trainable_parameter_count": 1081344,
+      "trainable_parameter_dtype": "torch.float32",
+      "trainable_tensor_count": 192
+    },
+    "model_path": "external/.cache/huggingface/hub/models--bigscience--T0/snapshots/1cfa27271f8085c29323c94bd659004b210f20b5",
+    "n_test": 150,
+    "n_train": 4,
+    "n_train_unique": 4,
+    "protocol_sha256": "915adb519be2159cb90fee6734bc872ef7449c409267f47ace105d5588b68a83",
+    "raw_and_serialization_tree_sha256": "383519d4b1efffe01c414c1f7b12db9c7abc04aefbde0e9957c44c5eaf038763",
+    "runner_sha256": "796d0bb0d17950a771c5e18fe732f955a4307956192e7329de23683e411f9447",
+    "seed": 1024,
+    "shot": 4,
+    "tabllm_commit": "71f6647c523aa6fd35df94ad76207c4377248c49",
+    "test_prompt_sha256": "8ba25f3b0b13a61a351d4915b00ca526aa20ada8aa5b4b73de22e9e1ffddfbdd",
+    "tfew_execution_commit": "114deced63ae722a368e06cb08ea956b20c393a6",
+    "train_membership_with_replacement": false,
+    "train_prompt_sha256": "b33d894c25326a91438495245f53259e6a4c10e4e3ac9e9c6c3a2f91f86e7a46",
+    "trained_checkpoint_sha256": "b66689af0ae6788cf7edde93ea58084f99235092019220b9cd2e7c989bac3d20",
+    "training": {
+      "batch_order_sha256": "0537cbbd9c0677002159a5d4264977f39f3df6928149347bafc4063db91eead9",
+      "executed_steps": 30,
+      "loss_first": {
+        "gradient_norm_pre_clip": 0.9254390001296997,
+        "lm_loss": 0.4291223883628845,
+        "loss": 3.602903127670288,
+        "lr": 0.0016666666666666668,
+        "mc_loss": 0.6329867839813232,
+        "unlikely_loss": 2.5407938957214355
+      },
+      "loss_last": {
+        "gradient_norm_pre_clip": 0.8037573099136353,
+        "lm_loss": 0.58544921875,
+        "loss": 1.6700600385665894,
+        "lr": 0.0,
+        "mc_loss": 0.5437934994697571,
+        "unlikely_loss": 0.540817379951477
+      },
+      "planned_steps": 30
+    },
+    "training_contract": {
+      "batch_size": 4,
+      "compute_dtype": "bfloat16 base and autocast with FP32 IA3 master parameters; temporary bfloat16 IA3 evaluation copy",
+      "epochs": 30,
+      "gradient_clip": 1.0,
+      "length_norm": 1,
+      "loss": "lm + multiple_choice + unlikely",
+      "lr": 0.003,
+      "max_length": 1024,
+      "optimizer": "Adafactor(scale_parameter=True, relative_step=False)",
+      "scheduler": "linear_decay_with_warmup",
+      "warmup_ratio": 0.06
+    },
+    "versions": {
+      "datasets": "2.14.7",
+      "numpy": "2.2.6",
+      "pandas": "2.3.3",
+      "python": "3.10.20",
+      "scikit_learn": "1.7.2",
+      "torch": "2.12.0.dev20260408+cu128",
+      "transformers": "4.30.0"
+    },
+    "wall_seconds": 7.48
+  },
+  "prompt_audit_sha256": "e782b3978e5cf72bfbf01a2d27b24bf115534c2d2e4a0852a3e5c4861d02b917",
+  "reused_from": "external/tabllm_ranon_support_ladder_v1/evidence_v1/list_stable_anonymous/blood/k4/seed1024",
+  "seconds": 0.015849545001401566,
+  "source_metrics_sha256": "b994bb6da3c983ca19ca895b989767c857ce027f111fefc5a5b2e2011f0ee19d",
+  "split_sha256": "119e48aab7999475d82d4258dedb0875d54fa2613c8c31aae1dbda2a1942c831"
+}

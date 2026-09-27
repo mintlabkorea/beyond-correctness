@@ -1,0 +1,314 @@
+version: v1
+
+feature_sets:
+  anchor_core_v1:
+    description: >
+      Minimal safe anchor feature set for cross-cohort anchor-only benchmark.
+      Shared, low-risk anthropometric and vital slots only.
+    feature_mode: explicit_slots
+    slots:
+      - age
+      - height_cm
+      - weight_kg
+      - waist_cm
+      - sbp
+      - dbp
+
+  shared_clinical_v1:
+    description: >
+      Shared clinical feature set for cross-cohort baseline without serialization.
+      Includes anchor core plus common lab slots that exist in both cohorts.
+    feature_mode: explicit_slots
+    slots:
+      - age
+      - height_cm
+      - weight_kg
+      - waist_cm
+      - sbp
+      - dbp
+      - glucose
+      - hba1c
+      - creatinine
+      - hemoglobin
+      - total_cholesterol
+      - triglycerides
+
+  anchor_core_plus_survey_v1:
+    description: >
+      Post-freeze exploratory anchor feature set.
+      Uses the original anchor core plus a small set of shared survey-style slots
+      that are available in both cohorts and numerically encoded.
+    feature_mode: explicit_slots
+    slots:
+      - age
+      - height_cm
+      - weight_kg
+      - waist_cm
+      - sbp
+      - dbp
+      - sex
+      - education_level
+      - diabetes_history
+
+  shared_clinical_plus_survey_v1:
+    description: >
+      Post-freeze exploratory shared clinical feature set.
+      Uses the benchmark shared clinical slots plus a small shared survey block.
+      This is for follow-up experiments and must not overwrite frozen benchmark-v1 comparisons.
+    feature_mode: explicit_slots
+    slots:
+      - age
+      - height_cm
+      - weight_kg
+      - waist_cm
+      - sbp
+      - dbp
+      - glucose
+      - hba1c
+      - creatinine
+      - hemoglobin
+      - total_cholesterol
+      - triglycerides
+      - sex
+      - education_level
+      - diabetes_history
+
+  anchor_core_plus_exact_questionnaire_v1:
+    description: >
+      Exploratory anchor feature set using exact and executable stage-1B questionnaire seeds
+      that are available in the current processed parquets.
+      Alcohol is intentionally excluded until its cross-cohort harmonization is fixed.
+      Lifetime smoking is also excluded at runtime because the exact KNHANES source item is not present in the processed parquet.
+    feature_mode: explicit_slots
+    slots:
+      - age
+      - height_cm
+      - weight_kg
+      - waist_cm
+      - sbp
+      - dbp
+      - sex
+      - education_level
+      - diabetes_history
+      - hypertension_history
+      - current_smoking_status
+
+  shared_clinical_plus_exact_questionnaire_v1:
+    description: >
+      Exploratory shared clinical feature set plus exact and executable stage-1B questionnaire seeds
+      that are available in the current processed parquets.
+      Alcohol is intentionally excluded until its cross-cohort harmonization is fixed.
+      Lifetime smoking is also excluded at runtime because the exact KNHANES source item is not present in the processed parquet.
+    feature_mode: explicit_slots
+    slots:
+      - age
+      - height_cm
+      - weight_kg
+      - waist_cm
+      - sbp
+      - dbp
+      - glucose
+      - hba1c
+      - creatinine
+      - hemoglobin
+      - total_cholesterol
+      - triglycerides
+      - sex
+      - education_level
+      - diabetes_history
+      - hypertension_history
+      - current_smoking_status
+
+  shared_clinical_plus_questionnaire_week1_structured_yes_v1:
+    description: >
+      Week-1 questionnaire sanity-ablation setting.
+      Uses shared clinical features plus the strict exact/low-risk structured questionnaire seed set.
+      This is the operational approximation of `structured_yes_only` for the first boundary sanity check.
+    feature_mode: explicit_slots
+    slots:
+      - age
+      - height_cm
+      - weight_kg
+      - waist_cm
+      - sbp
+      - dbp
+      - glucose
+      - hba1c
+      - creatinine
+      - hemoglobin
+      - total_cholesterol
+      - triglycerides
+      - sex
+      - education_level
+      - diabetes_history
+      - hypertension_history
+      - current_smoking_status
+
+  shared_clinical_plus_questionnaire_week1_structured_yes_plus_review_v1:
+    description: >
+      Week-1 questionnaire sanity-ablation expansion setting.
+      Uses the strict structured questionnaire seed set plus current portable/proxy health-history additions
+      available in the processed parquets. This is the operational approximation of
+      `structured_yes_plus_review` for week-1 sanity checking.
+    feature_mode: explicit_slots
+    slots:
+      - age
+      - height_cm
+      - weight_kg
+      - waist_cm
+      - sbp
+      - dbp
+      - glucose
+      - hba1c
+      - creatinine
+      - hemoglobin
+      - total_cholesterol
+      - triglycerides
+      - sex
+      - education_level
+      - diabetes_history
+      - hypertension_history
+      - current_smoking_status
+      - arthritis_history
+      - hospitalization
+      - kidney_disease_history
+      - stroke_history
+
+  shared_clinical_plus_questionnaire_mainline_shared_v1:
+    description: >
+      Week-1 questionnaire mainline shared setting.
+      Uses the shared clinical backbone plus structured questionnaire constructs
+      that are currently executable in both NHANES and KNHANES.
+      This is the cross-cohort-safe questionnaire expansion candidate.
+    feature_mode: explicit_slots
+    slots:
+      - age
+      - height_cm
+      - weight_kg
+      - waist_cm
+      - sbp
+      - dbp
+      - glucose
+      - hba1c
+      - creatinine
+      - hemoglobin
+      - total_cholesterol
+      - triglycerides
+      - sex
+      - education_level
+      - diabetes_history
+      - hypertension_history
+      - current_smoking_status
+      - kidney_disease_history
+      - stroke_history
+      - heart_disease_history
+      - respiratory_disease_history
+      - arthritis_history
+      - thyroid_disease_history
+
+  nhanes_clinical_plus_questionnaire_mainline_structured_v1:
+    description: >
+      NHANES-only structured questionnaire expansion setting.
+      Adds currently approved NHANES questionnaire constructs that do not yet
+      have KNHANES-shared executable mappings, so this should be used only for
+      same-cohort or source-side studies.
+    feature_mode: explicit_slots
+    slots:
+      - age
+      - height_cm
+      - weight_kg
+      - waist_cm
+      - sbp
+      - dbp
+      - glucose
+      - hba1c
+      - creatinine
+      - hemoglobin
+      - total_cholesterol
+      - triglycerides
+      - sex
+      - education_level
+      - diabetes_history
+      - hypertension_history
+      - current_smoking_status
+      - kidney_disease_history
+      - stroke_history
+      - heart_disease_history
+      - respiratory_disease_history
+      - arthritis_history
+      - thyroid_disease_history
+      - self_rated_health
+      - hypertension_treatment
+      - diabetes_treatment
+      - functional_limitation_general
+
+  full_numeric_samecohort_v1:
+    description: >
+      Same-cohort upper-bound setting.
+      Use full numeric table from the cohort-specific current parquet, after benchmark-side
+      exclusion rules are applied (ID/split/meta removal, target leakage removal).
+    feature_mode: cohort_full_numeric
+    include_numeric_columns: true
+    exclude_prefixes:
+      - target__
+      - slot__
+      - ser_
+      - y_
+      - ALL__y_
+    exclude_columns:
+      - subject_id
+      - split
+      - cohort
+      - SEQN
+
+  scenario_a_contract_exact_v0:
+    description: >
+      Exact executable subset of `benchmark_core_v0` for Scenario-A downstream runs.
+      This keeps only the contract constructs that already exist as explicit
+      manifest slots in both NHANES and KNHANES. It is an execution-safe
+      approximation, not a replacement for the full benchmark_core_v0 contract.
+    feature_mode: explicit_slots
+    slots:
+      - age
+      - sex
+      - waist_cm
+      - diabetes_history
+      - hypertension_history
+      - creatinine
+      - total_cholesterol
+      - triglycerides
+      - wbc
+      - rbc
+
+  scenario_a_contract_exact_v1:
+    description: >
+      Scenario-A executable contract v1 with the peer variables needed for
+      `K15` calibration. Compared with v0, this adds `dbp`, `hemoglobin`, and
+      `hematocrit` so blood-pressure and red-cell structural relations can
+      actually activate.
+    feature_mode: explicit_slots
+    slots:
+      - age
+      - sex
+      - waist_cm
+      - dbp
+      - diabetes_history
+      - hypertension_history
+      - creatinine
+      - hemoglobin
+      - hematocrit
+      - total_cholesterol
+      - triglycerides
+      - wbc
+      - rbc
+
+  scenario_a_portability_exact_v0:
+    description: >
+      Exact executable reduced subset for Scenario-A portability checks.
+      This uses only explicit slots currently available in both NHANES and KNHANES.
+    feature_mode: explicit_slots
+    slots:
+      - age
+      - sex
+      - diabetes_history
+      - hypertension_history

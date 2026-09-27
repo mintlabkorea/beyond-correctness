@@ -1,0 +1,41 @@
+{
+  "status": "FROZEN_ELIGIBLE_STUDY_SET",
+  "date": "2026-09-08",
+  "rule_file": "INCLUSION_RULE_FREEZE_V1.md",
+  "rule_sha256": "4aa554d7c9af13ecf3626e933c64562dc18cb656d04335b9fa5b15f446fbd961",
+  "candidate_file": "CANDIDATES_V1.md",
+  "candidate_sha256": "44f655f8ced57e1d3c3f75bcc0b0d2f3c494e68ae104c9fe7b700c8068fa1838",
+  "screening_file": "ELIGIBILITY_SCREEN_V1.md",
+  "screening_sha256": "d1be45c93b16b029c1ff468a835eac46a374f006c1d9451ab4892185e6746949",
+  "included": [
+    "C01",
+    "C03",
+    "C04",
+    "C05",
+    "C06",
+    "C07",
+    "C08",
+    "C09",
+    "C10"
+  ],
+  "excluded": [
+    {
+      "id": "C02",
+      "study": "TransTab",
+      "reason": "E4: no explicit semantic-information intervention located in published experiments and official appendix"
+    }
+  ],
+  "counts": {
+    "screened": 10,
+    "included": 9,
+    "excluded": 1,
+    "eligibility_unresolved": 0
+  },
+  "requested_yield_note": "6\u20138 was anticipated; v1 retains every eligible study; no quota-based exclusion",
+  "source_access_caveats": [
+    "C10 published PDF not locally archived; official indexed excerpt establishes eligibility"
+  ],
+  "control_coding_status": "NOT_STARTED",
+  "outcome_extraction_status": "NOT_STARTED",
+  "manuscript_integration_status": "NOT_STARTED"
+}

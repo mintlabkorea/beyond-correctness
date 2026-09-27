@@ -1,0 +1,149 @@
+{
+ "analysis_status": "retrospective_audit_of_published_rounded_table",
+ "arms": {
+  "R_pub": "TabLLM List Only Values",
+  "S": "TabLLM List Template",
+  "W": "TabLLM List Permuted Names"
+ },
+ "macro_nine_datasets": {
+  "R_pub": 0.5544444444444445,
+  "S": 0.63,
+  "W": 0.5233333333333334,
+  "content_S_minus_W": 0.10666666666666658,
+  "identity_residual": 0.0,
+  "utility_S_minus_R_pub": 0.07555555555555549,
+  "utility_share_of_positive_content": 0.7083333333333333,
+  "wrong_harm_R_pub_minus_W": 0.03111111111111109,
+  "wrong_harm_share_of_positive_content": 0.2916666666666667
+ },
+ "metric": "test AUROC; macro one-versus-rest for Car",
+ "per_dataset": {
+  "bank": {
+   "R_pub": 0.56,
+   "S": 0.6,
+   "W": 0.64,
+   "content_S_minus_W": -0.040000000000000036,
+   "harm_share_given_positive_content": null,
+   "identity_residual": 0.0,
+   "utility_S_minus_R_pub": 0.039999999999999925,
+   "wrong_harm_R_pub_minus_W": -0.07999999999999996
+  },
+  "blood": {
+   "R_pub": 0.45,
+   "S": 0.56,
+   "W": 0.52,
+   "content_S_minus_W": 0.040000000000000036,
+   "harm_share_given_positive_content": -1.7499999999999987,
+   "identity_residual": 0.0,
+   "utility_S_minus_R_pub": 0.11000000000000004,
+   "wrong_harm_R_pub_minus_W": -0.07
+  },
+  "california": {
+   "R_pub": 0.58,
+   "S": 0.61,
+   "W": 0.54,
+   "content_S_minus_W": 0.06999999999999995,
+   "harm_share_given_positive_content": 0.5714285714285707,
+   "identity_residual": 0.0,
+   "utility_S_minus_R_pub": 0.030000000000000027,
+   "wrong_harm_R_pub_minus_W": 0.039999999999999925
+  },
+  "car": {
+   "R_pub": 0.48,
+   "S": 0.79,
+   "W": 0.39,
+   "content_S_minus_W": 0.4,
+   "harm_share_given_positive_content": 0.22499999999999992,
+   "identity_residual": 0.0,
+   "utility_S_minus_R_pub": 0.31000000000000005,
+   "wrong_harm_R_pub_minus_W": 0.08999999999999997
+  },
+  "credit-g": {
+   "R_pub": 0.66,
+   "S": 0.53,
+   "W": 0.44,
+   "content_S_minus_W": 0.09000000000000002,
+   "harm_share_given_positive_content": 2.444444444444444,
+   "identity_residual": 0.0,
+   "utility_S_minus_R_pub": -0.13,
+   "wrong_harm_R_pub_minus_W": 0.22000000000000003
+  },
+  "diabetes": {
+   "R_pub": 0.55,
+   "S": 0.64,
+   "W": 0.56,
+   "content_S_minus_W": 0.07999999999999996,
+   "harm_share_given_positive_content": -0.12500000000000017,
+   "identity_residual": 0.0,
+   "utility_S_minus_R_pub": 0.08999999999999997,
+   "wrong_harm_R_pub_minus_W": -0.010000000000000009
+  },
+  "heart": {
+   "R_pub": 0.4,
+   "S": 0.52,
+   "W": 0.57,
+   "content_S_minus_W": -0.04999999999999993,
+   "harm_share_given_positive_content": null,
+   "identity_residual": 0.0,
+   "utility_S_minus_R_pub": 0.12,
+   "wrong_harm_R_pub_minus_W": -0.16999999999999993
+  },
+  "income": {
+   "R_pub": 0.73,
+   "S": 0.79,
+   "W": 0.65,
+   "content_S_minus_W": 0.14,
+   "harm_share_given_positive_content": 0.5714285714285711,
+   "identity_residual": 0.0,
+   "utility_S_minus_R_pub": 0.06000000000000005,
+   "wrong_harm_R_pub_minus_W": 0.07999999999999996
+  },
+  "jungle": {
+   "R_pub": 0.58,
+   "S": 0.63,
+   "W": 0.4,
+   "content_S_minus_W": 0.22999999999999998,
+   "harm_share_given_positive_content": 0.7826086956521737,
+   "identity_residual": 0.0,
+   "utility_S_minus_R_pub": 0.050000000000000044,
+   "wrong_harm_R_pub_minus_W": 0.17999999999999994
+  }
+ },
+ "prespecified_heterogeneity_descriptives": {
+  "harm_dominant_count": 4,
+  "harm_dominant_datasets": [
+   "california",
+   "credit-g",
+   "income",
+   "jungle"
+  ],
+  "harm_share_median": 0.5714285714285707,
+  "harm_share_range": [
+   -1.7499999999999987,
+   2.444444444444444
+  ],
+  "positive_content_dataset_count": 7,
+  "utility_dominant_count": 3,
+  "utility_dominant_datasets": [
+   "blood",
+   "car",
+   "diabetes"
+  ],
+  "utility_sign_reversal_count": 1,
+  "utility_sign_reversal_datasets": [
+   "credit-g"
+  ],
+  "wrong_better_than_reference_count": 4,
+  "wrong_better_than_reference_datasets": [
+   "bank",
+   "blood",
+   "diabetes",
+   "heart"
+  ]
+ },
+ "provenance": {
+  "summarizer_sha256": "c48958cbdf54a133bc4bc345e93494d3972da0f14ce99f4fcab3e706718c90a1"
+ },
+ "rounding_caveat": "Inputs are the paper's two-decimal printed means. Exact-score reproduction and paired example bootstrap are a separate frozen run.",
+ "source": "Hegselmann et al. (2023), Tables 12--14, zero-shot columns"
+}

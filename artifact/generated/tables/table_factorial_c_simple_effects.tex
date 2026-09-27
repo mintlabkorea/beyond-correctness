@@ -1,0 +1,35 @@
+\begin{table}[H]
+\caption{Complete XGB four-arm transparency for the pre-existing ten-endpoint survey factorial at $K=256$. The upper panel reports endpoint means of the raw arm AUROCs after averaging seeds within direction and then directions. The lower panel reports the two correspondence simple effects on raw AUROC and on the prespecified polarity-invariant score $f(A)=\max(A,1-A)$, applied per cell before differencing. These are point estimates; the text reports the endpoint-cluster Student-$t$ intervals.}
+\label{tab:app-factorial-c-simple-effects}
+\centering\scriptsize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{P{0.27\linewidth}rrrr}
+\toprule Endpoint & $A_{00}$ & $A_{01}$ & $A_{10}$ & $A_{11}$ \\
+\midrule
+Angina & 0.727 & 0.704 & 0.751 & 0.737 \\
+Arthritis & 0.594 & 0.598 & 0.790 & 0.795 \\
+Asthma & 0.603 & 0.601 & 0.566 & 0.588 \\
+Cancer & 0.583 & 0.579 & 0.681 & 0.713 \\
+Smoking & 0.371 & 0.375 & 0.689 & 0.697 \\
+Diabetes & 0.737 & 0.557 & 0.865 & 0.940 \\
+Heart attack & 0.708 & 0.683 & 0.756 & 0.775 \\
+Hypertension & 0.554 & 0.522 & 0.833 & 0.847 \\
+Kidney disease & 0.686 & 0.672 & 0.771 & 0.794 \\
+Stroke & 0.716 & 0.710 & 0.777 & 0.790 \\
+\bottomrule\end{tabular}
+\vspace{4pt}
+\begin{tabular}{P{0.27\linewidth}rrrr}
+\toprule Endpoint & raw $A_{01}-A_{00}$ & raw $A_{11}-A_{10}$ & $f(A_{01})-f(A_{00})$ & $f(A_{11})-f(A_{10})$ \\
+\midrule
+Angina & -.023 & -.014 & -.023 & -.014 \\
+Arthritis & +.004 & +.006 & +.020 & +.006 \\
+Asthma & -.002 & +.022 & +.001 & +.022 \\
+Cancer & -.004 & +.032 & +.006 & +.032 \\
+Smoking & +.004 & +.008 & -.004 & +.008 \\
+Diabetes & -.180 & +.075 & -.105 & +.075 \\
+Heart attack & -.025 & +.019 & -.025 & +.019 \\
+Hypertension & -.032 & +.014 & +.034 & +.014 \\
+Kidney disease & -.014 & +.023 & -.014 & +.023 \\
+Stroke & -.005 & +.012 & -.005 & +.012 \\
+\bottomrule\end{tabular}
+\end{table}

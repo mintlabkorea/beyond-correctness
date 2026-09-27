@@ -1,0 +1,16 @@
+\begin{table}[H]
+\caption{Correspondence contrasts by interface. Content sensitivity compares supplied binding or grouping with a capacity-matched wrong assignment; utility compares supplied correspondence with the component-specific no-correspondence reference. Positive values favor the supplied arm. Examination rows use query-SD-normalized RMSE gains; survey rows use AUROC gains, so their magnitudes are not compared.}
+\label{tab:app-correspondence-interfaces}
+\centering\scriptsize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{P{0.27\linewidth}P{0.15\linewidth}P{0.31\linewidth}P{0.21\linewidth}}
+\toprule Interface & Estimand & Contrast & Mean [95\% CI] \\
+\midrule
+Examination columns / explicit binding & Content sensitivity & correct binding $-$ deranged binding & \textbf{+.065 [+.029, +.108]} \\
+Examination columns / canonical aggregation & Content sensitivity & declared grouping $-$ matched random partition & -.000 [-.004, +.003] \\
+Survey columns / XGB binding & Content sensitivity & correct binding $-$ deranged binding & \textbf{+.045 [+.022, +.071]} \\
+Survey columns / XGB binding & Utility & correct binding $-$ no added bound columns & +.027 [-.009, +.075] \\
+Survey columns / HistGB binding & Content sensitivity & correct binding $-$ deranged binding & \textbf{+.051 [+.024, +.087]} \\
+Survey columns / HistGB binding & Utility & correct binding $-$ no added bound columns & +.020 [-.022, +.072] \\
+\bottomrule\end{tabular}
+\end{table}

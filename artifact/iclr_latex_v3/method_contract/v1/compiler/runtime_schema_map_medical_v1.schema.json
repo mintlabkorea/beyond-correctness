@@ -1,0 +1,88 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://coret.local/schemas/crta-runtime-schema-map-medical-1.0.0.json",
+  "title": "CRTA v3 medical runtime schema map",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "runtime_map_version",
+    "map_id",
+    "task_id",
+    "schema_pair_id",
+    "protocol_scope_id",
+    "payload",
+    "status",
+    "artifacts",
+    "source",
+    "target",
+    "fail_closed",
+    "audit"
+  ],
+  "properties": {
+    "$schema": {"type": "string"},
+    "runtime_map_version": {"const": "crta-runtime-schema-map-medical-1.0.0"},
+    "map_id": {"type": "string", "minLength": 1},
+    "task_id": {"enum": ["M4", "M5", "M6"]},
+    "schema_pair_id": {"type": "string", "minLength": 1},
+    "protocol_scope_id": {"type": "string", "minLength": 1},
+    "payload": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "sha256"],
+      "properties": {
+        "path": {"type": "string", "minLength": 1},
+        "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+      }
+    },
+    "status": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["runtime_state", "compiler_ready", "blockers"],
+      "properties": {
+        "runtime_state": {"enum": ["ready", "blocked"]},
+        "compiler_ready": {"type": "boolean"},
+        "blockers": {"type": "array", "items": {"type": "string"}, "uniqueItems": true}
+      }
+    },
+    "artifacts": {"type": "object"},
+    "source": {"$ref": "#/definitions/side"},
+    "target": {"$ref": "#/definitions/side"},
+    "fail_closed": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "audit": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["person_level_rows_read", "mapping_basis", "gpu_policy"],
+      "properties": {
+        "person_level_rows_read": {"const": false},
+        "mapping_basis": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+        "gpu_policy": {"type": "string", "minLength": 1}
+      }
+    }
+  },
+  "definitions": {
+    "side": {
+      "type": "object",
+      "required": ["column_map", "binding_groups"],
+      "properties": {
+        "column_map": {
+          "type": "object",
+          "additionalProperties": {"type": ["string", "null"]}
+        },
+        "binding_groups": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {"type": "string", "minLength": 1}
+          }
+        }
+      },
+      "additionalProperties": true
+    }
+  }
+}

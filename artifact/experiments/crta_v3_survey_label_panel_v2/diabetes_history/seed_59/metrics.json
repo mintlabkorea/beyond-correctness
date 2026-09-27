@@ -1,0 +1,52 @@
+{
+ "arms": [
+  "raw",
+  "pipeline_table",
+  "llm_table",
+  "placebo_table"
+ ],
+ "auroc": {
+  "1024": {
+   "llm_table": 0.9099808453450412,
+   "pipeline_table": 0.9494602271194802,
+   "placebo_table": 0.74106220309917,
+   "raw": 0.44795411513683614
+  },
+  "256": {
+   "llm_table": 0.9237355647411154,
+   "pipeline_table": 0.9574890238334712,
+   "placebo_table": 0.8467305784499832,
+   "raw": 0.42132100426100355
+  },
+  "64": {
+   "llm_table": 0.9317688975677119,
+   "pipeline_table": 0.9610936395855023,
+   "placebo_table": 0.9077815050184118,
+   "raw": 0.2828222074342227
+  }
+ },
+ "backbone": "xgboost_hist_d6_n300_regression_ranked",
+ "benchmark_id": "std_cross_nh2kn_shared_anchorreset_fewshot_v1",
+ "eval_prevalence": 0.10804347826086956,
+ "feature_set": "shared_clinical_plus_survey_v1",
+ "metric": "auroc_vs_documented_target_binary (higher is better)",
+ "n_eval": 9200,
+ "n_pool": 15492,
+ "n_source": 68561,
+ "placebo_label_maps": {
+  "source": {
+   "1.0": 1.0,
+   "2.0": 0.5,
+   "7.0": 0.0
+  },
+  "target": {
+   "0.0": 1.0,
+   "9.0": 0.0
+  }
+ },
+ "primary_k": 256,
+ "seed": 59,
+ "target": "diabetes_history",
+ "target_set": "survey_label_panel_v1",
+ "wall_seconds": 35.8
+}

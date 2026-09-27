@@ -1,0 +1,76 @@
+{
+ "arms": [
+  "a00_base",
+  "a01_columns",
+  "a10_stage",
+  "a11_stage_columns"
+ ],
+ "auroc": {
+  "256": {
+   "a00_base": 0.6260620207719347,
+   "a01_columns": 0.574535452476163,
+   "a10_stage": 0.7176276726940611,
+   "a11_stage_columns": 0.6850789760779114
+  }
+ },
+ "backbone": "xgboost_hist_d6_n300_regression_ranked",
+ "benchmark_id": "std_cross_kn2nh_shared_anchorreset_fewshot_v1",
+ "feature_set": "stage_factorial_all_v1",
+ "m_axis": "source_only_fork_v1",
+ "metric": "auroc_vs_documented_target_binary (higher is better)",
+ "n_eval": 37484,
+ "n_pool": 3314,
+ "n_source": 151295,
+ "pl_columns_permutation": {
+  "dbp": "waist_cm",
+  "glucose": "dbp",
+  "hba1c": "glucose",
+  "height_cm": "total_cholesterol",
+  "sbp": "triglycerides",
+  "total_cholesterol": "height_cm",
+  "triglycerides": "weight_kg",
+  "waist_cm": "sbp",
+  "weight_kg": "hba1c"
+ },
+ "pl_relation_pairs": [
+  [
+   "waist_cm",
+   "weight_kg"
+  ],
+  [
+   "triglycerides",
+   "rbc"
+  ],
+  [
+   "education_level",
+   "hemoglobin"
+  ],
+  [
+   "creatinine",
+   "hba1c"
+  ],
+  [
+   "hematocrit",
+   "creatinine"
+  ],
+  [
+   "hba1c",
+   "current_smoking_status"
+  ]
+ ],
+ "primary_k": 256,
+ "seed": 55,
+ "target": "stroke_history",
+ "target_cohort": "nhanes",
+ "wall_seconds": 33.2,
+ "wrong_label_maps": {
+  "source": {
+   "0.0": 0.0,
+   "1.0": 1.0
+  },
+  "target": {
+   "1.0": 1.0,
+   "7.0": 0.0
+  }
+ }
+}

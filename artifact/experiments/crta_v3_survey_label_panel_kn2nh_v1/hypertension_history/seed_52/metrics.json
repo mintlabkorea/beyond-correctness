@@ -1,0 +1,51 @@
+{
+ "arms": [
+  "raw",
+  "pipeline_table",
+  "llm_table",
+  "placebo_table"
+ ],
+ "auroc": {
+  "1024": {
+   "llm_table": 0.7987103687540543,
+   "pipeline_table": 0.7987103687540543,
+   "placebo_table": 0.572181559395939,
+   "raw": 0.39953894204066864
+  },
+  "256": {
+   "llm_table": 0.7991135220327792,
+   "pipeline_table": 0.7991135220327792,
+   "placebo_table": 0.6023602745800235,
+   "raw": 0.43033558144460093
+  },
+  "64": {
+   "llm_table": 0.770428867754514,
+   "pipeline_table": 0.770428867754514,
+   "placebo_table": 0.6856601712672039,
+   "raw": 0.43216224003630427
+  }
+ },
+ "backbone": "xgboost_hist_d6_n300_regression_ranked",
+ "benchmark_id": "std_cross_kn2nh_shared_anchorreset_fewshot_v1",
+ "eval_prevalence": 0.3314852431592783,
+ "feature_set": "shared_clinical_plus_survey_v1",
+ "metric": "auroc_vs_documented_target_binary (higher is better)",
+ "n_eval": 41845,
+ "n_pool": 3842,
+ "n_source": 151292,
+ "placebo_label_maps": {
+  "source": {
+   "0.0": 0.0,
+   "1.0": 1.0
+  },
+  "target": {
+   "2.0": 1.0,
+   "9.0": 0.0
+  }
+ },
+ "primary_k": 256,
+ "seed": 52,
+ "target": "hypertension_history",
+ "target_set": "survey_label_panel_v1",
+ "wall_seconds": 41.7
+}

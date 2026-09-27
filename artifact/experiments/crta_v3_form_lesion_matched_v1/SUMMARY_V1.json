@@ -1,0 +1,124 @@
+{
+ "F_C1a_value_content_neutral_lesion": {
+  "ci95": [
+   0.0008557702233654633,
+   0.0055773110947503705
+  ],
+  "drop_best_target_mean": 0.0022534553813967485,
+  "mean_gain": 0.003078399017722613,
+  "per_target_mean": {
+   "dbp": 0.0014704259984394507,
+   "glucose": 0.007203117199351938,
+   "sbp": 0.00012251571969427167,
+   "total_cholesterol": 0.003907311026846394,
+   "triglycerides": 0.0051508688057343545,
+   "waist_cm": 0.0006161553562692712
+  },
+  "separated": true,
+  "win_rate": 0.6833333333333333
+ },
+ "F_C1b_constraint_content_matched_neutral_lesion": {
+  "ci95": [
+   -0.0045792946066245226,
+   0.014529263740982132
+  ],
+  "drop_best_target_mean": 0.0013566199235621656,
+  "mean_gain": 0.0038133341461403197,
+  "per_target_mean": {
+   "dbp": 0.014926072190667949,
+   "glucose": -0.011338638171908355,
+   "sbp": 0.01609690525903109,
+   "total_cholesterol": -0.0032473320332870982,
+   "triglycerides": 0.0019516603208106665,
+   "waist_cm": 0.004491337311527665
+  },
+  "separated": false,
+  "win_rate": 0.5666666666666667
+ },
+ "F_C2_constraint_content_adversarial_lesion": {
+  "ci95": [
+   0.08064145873778034,
+   0.29753601333008994
+  ],
+  "drop_best_target_mean": 0.13116001249713483,
+  "mean_gain": 0.18339184012361803,
+  "per_target_mean": {
+   "dbp": 0.18318498175378176,
+   "glucose": 0.21838216541322825,
+   "sbp": 0.19276553453583384,
+   "total_cholesterol": 0.010389203301499218,
+   "triglycerides": 0.0510781774813312,
+   "waist_cm": 0.44455097825603385
+  },
+  "separated": true,
+  "win_rate": 0.9833333333333333
+ },
+ "F_C3_value_direction_expressibility": {
+  "ci95": [
+   -0.00043727292442917725,
+   0.001508816009879895
+  ],
+  "drop_best_target_mean": 0.00023971591334250974,
+  "mean_gain": 0.0004896237019207967,
+  "per_target_mean": {
+   "dbp": -5.893132110743604e-05,
+   "glucose": 0.0005947680053311033,
+   "sbp": 0.0004742869535243943,
+   "total_cholesterol": -3.8877017540495105e-05,
+   "triglycerides": 0.001739162644812231,
+   "waist_cm": 0.00022733294650498226
+  },
+  "win_rate": 0.5833333333333334
+ },
+ "F_P1_direction_inexpressible_in_value_form": true,
+ "F_P2_constraint_expresses_more_at_matched_severity": {
+  "paired_difference": {
+   "ci95": [
+    -0.009392197235295684,
+    0.01258452083130147
+   ],
+   "drop_best_target_mean": -0.002312955753766116,
+   "mean_gain": 0.0007349351284177065,
+   "per_target_mean": {
+    "dbp": 0.013455646192228499,
+    "glucose": -0.018541755371260293,
+    "sbp": 0.01597438953933682,
+    "total_cholesterol": -0.007154643060133492,
+    "triglycerides": -0.003199208484923688,
+    "waist_cm": 0.003875181955258394
+   },
+   "separated": false,
+   "win_rate": 0.4
+  },
+  "pass": false
+ },
+ "F_P3_adversarial_worse_than_neutral": {
+  "paired_difference": {
+   "ci95": [
+    0.07753401661522714,
+    0.29581456840283715
+   ],
+   "drop_best_target_mean": 0.127482278984072,
+   "mean_gain": 0.17957850597747768,
+   "per_target_mean": {
+    "dbp": 0.1682589095631138,
+    "glucose": 0.22972080358513663,
+    "sbp": 0.1766686292768027,
+    "total_cholesterol": 0.013636535334786315,
+    "triglycerides": 0.049126517160520536,
+    "waist_cm": 0.4400596409445062
+   },
+   "win_rate": 0.9833333333333333
+  },
+  "pass": true
+ },
+ "bootstrap": {
+  "hierarchy": "targets then seeds",
+  "reps": 10000,
+  "seed": 20260819
+ },
+ "experiment_root": "experiments/crta_v3_form_lesion_matched_v1",
+ "metric": "query_sd_normalized_rmse (lower is better); gain = lesion - documented",
+ "n_cells": 60,
+ "primary_k": 256
+}

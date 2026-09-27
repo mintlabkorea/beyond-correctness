@@ -1,0 +1,727 @@
+[
+  {
+    "Comparison ID": "C01-A",
+    "Study": "LIFT",
+    "Tested semantic use": "Feature-name meanings in the name/value associations of prompt format I.",
+    "Protected observations": "All observed feature values and target labels, row/sample identities, feature cardinality and missingness; reversible fixed recoding is permitted.",
+    "Protected metadata": "Feature identity/position, type and category-domain information, and target/task identity, except the explicitly tested semantic channel.",
+    "Protected representation": "A stable field/value association and distinct feature slots; numerical and missing-value information remain representable. Exact semantic token strings or semantic embedding coordinates are not protected. Retain the within-format presentation scaffold and output-label mapping outside removed names/context.",
+    "Protected predictive setup": "Same data/split/shot regime, learner and fitting recipe outside the tested channel; ordinary fitted-state changes caused by the intervention are permitted.",
+    "Scope evidence": "Official C01 main §4.1/Table 9, PDF p.8; official supplement D.2.1, printed pp.42–44 (PDF pp.20–22); supplied LIFT.pdf also contains these examples.",
+    "Removal": {
+      "value": "Fail",
+      "evidence": "packet/sources/C01_main.pdf §4.1/Table 9 p.8; C01_supp.pdf D.2.1 printed pp.42–44 (PDF pp.20–22), five printed prompt examples.",
+      "rationale": "Feature-name semantic tokens remain and are misassigned, rather than withdrawn. Correct association is not redefined as absence of semantic use."
+    },
+    "Preservation": {
+      "value": "Unclear",
+      "evidence": "packet/sources/C01_main.pdf §4.1/Table 9 p.8; C01_supp.pdf D.2.1 printed pp.42–44 (PDF pp.20–22), five printed prompt examples.",
+      "rationale": "The claimed shuffle suggests inventory preservation, but example I duplicates semester and example II changes values. Executed templates are not established, so neither exact preservation nor actual data loss is verified."
+    },
+    "Interface": {
+      "value": "Unclear",
+      "evidence": "packet/sources/C01_main.pdf §4.1/Table 9 p.8; C01_supp.pdf D.2.1 printed pp.42–44 (PDF pp.20–22), five printed prompt examples.",
+      "rationale": "Free-text semantic oddity is acceptable, but the inconsistent printed field/value inventories prevent establishing stable routing/cardinality for the executed variant."
+    },
+    "Admissible reference": {
+      "value": "No",
+      "rationale": "Removal=Fail; Preservation=Unclear; Interface=Unclear; frozen rule therefore yields No."
+    }
+  },
+  {
+    "Comparison ID": "C01-B",
+    "Study": "LIFT",
+    "Tested semantic use": "Feature-name meanings in the name/value associations of prompt format II.",
+    "Protected observations": "All observed feature values and target labels, row/sample identities, feature cardinality and missingness; reversible fixed recoding is permitted.",
+    "Protected metadata": "Feature identity/position, type and category-domain information, and target/task identity, except the explicitly tested semantic channel.",
+    "Protected representation": "A stable field/value association and distinct feature slots; numerical and missing-value information remain representable. Exact semantic token strings or semantic embedding coordinates are not protected. Retain the within-format presentation scaffold and output-label mapping outside removed names/context.",
+    "Protected predictive setup": "Same data/split/shot regime, learner and fitting recipe outside the tested channel; ordinary fitted-state changes caused by the intervention are permitted.",
+    "Scope evidence": "Official C01 main §4.1/Table 9, PDF p.8; official supplement D.2.1, printed pp.42–44 (PDF pp.20–22); supplied LIFT.pdf also contains these examples.",
+    "Removal": {
+      "value": "Fail",
+      "evidence": "packet/sources/C01_main.pdf §4.1/Table 9 p.8; C01_supp.pdf D.2.1 printed pp.42–44 (PDF pp.20–22), five printed prompt examples.",
+      "rationale": "Feature-name semantic tokens remain and are misassigned, rather than withdrawn. Correct association is not redefined as absence of semantic use."
+    },
+    "Preservation": {
+      "value": "Unclear",
+      "evidence": "packet/sources/C01_main.pdf §4.1/Table 9 p.8; C01_supp.pdf D.2.1 printed pp.42–44 (PDF pp.20–22), five printed prompt examples.",
+      "rationale": "The claimed shuffle suggests inventory preservation, but example I duplicates semester and example II changes values. Executed templates are not established, so neither exact preservation nor actual data loss is verified."
+    },
+    "Interface": {
+      "value": "Unclear",
+      "evidence": "packet/sources/C01_main.pdf §4.1/Table 9 p.8; C01_supp.pdf D.2.1 printed pp.42–44 (PDF pp.20–22), five printed prompt examples.",
+      "rationale": "Free-text semantic oddity is acceptable, but the inconsistent printed field/value inventories prevent establishing stable routing/cardinality for the executed variant."
+    },
+    "Admissible reference": {
+      "value": "No",
+      "rationale": "Removal=Fail; Preservation=Unclear; Interface=Unclear; frozen rule therefore yields No."
+    }
+  },
+  {
+    "Comparison ID": "C01-C",
+    "Study": "LIFT",
+    "Tested semantic use": "Named feature and task context in prompt format I, including informative target question; categorical observation identities remain protected even if recoded.",
+    "Protected observations": "All observed feature values and target labels, row/sample identities, feature cardinality and missingness; reversible fixed recoding is permitted.",
+    "Protected metadata": "Feature identity/position, type and category-domain information, and target/task identity, except the explicitly tested semantic channel.",
+    "Protected representation": "A stable field/value association and distinct feature slots; numerical and missing-value information remain representable. Exact semantic token strings or semantic embedding coordinates are not protected. Retain the within-format presentation scaffold and output-label mapping outside removed names/context.",
+    "Protected predictive setup": "Same data/split/shot regime, learner and fitting recipe outside the tested channel; ordinary fitted-state changes caused by the intervention are permitted.",
+    "Scope evidence": "Official C01 main §4.1/Table 9, PDF p.8; official supplement D.2.1, printed pp.42–44 (PDF pp.20–22); supplied LIFT.pdf also contains these examples.",
+    "Removal": {
+      "value": "Pass",
+      "evidence": "packet/sources/C01_main.pdf §4.1/Table 9 p.8; C01_supp.pdf D.2.1 printed pp.42–44 (PDF pp.20–22), five printed prompt examples.",
+      "rationale": "Generic indexed fields and generic y withdraw the declared named feature/task context."
+    },
+    "Preservation": {
+      "value": "Unclear",
+      "evidence": "packet/sources/C01_main.pdf §4.1/Table 9 p.8; C01_supp.pdf D.2.1 printed pp.42–44 (PDF pp.20–22), five printed prompt examples.",
+      "rationale": "The lone unnamed example changes category words to numeric codes; a complete fixed coding map is not documented. Two table variants are not separately specified. Format-II correct example also omits class size, making preservation across the worked examples unresolved."
+    },
+    "Interface": {
+      "value": "Unclear",
+      "evidence": "packet/sources/C01_main.pdf §4.1/Table 9 p.8; C01_supp.pdf D.2.1 printed pp.42–44 (PDF pp.20–22), five printed prompt examples.",
+      "rationale": "Common LM input/output alone does not settle the altered target/category coding and correspondence of both unnamed variants."
+    },
+    "Admissible reference": {
+      "value": "Unclear",
+      "rationale": "Removal=Pass; Preservation=Unclear; Interface=Unclear; frozen rule therefore yields Unclear."
+    }
+  },
+  {
+    "Comparison ID": "C01-D",
+    "Study": "LIFT",
+    "Tested semantic use": "Named feature and task context in prompt format II, including informative target question; categorical observation identities remain protected even if recoded.",
+    "Protected observations": "All observed feature values and target labels, row/sample identities, feature cardinality and missingness; reversible fixed recoding is permitted.",
+    "Protected metadata": "Feature identity/position, type and category-domain information, and target/task identity, except the explicitly tested semantic channel.",
+    "Protected representation": "A stable field/value association and distinct feature slots; numerical and missing-value information remain representable. Exact semantic token strings or semantic embedding coordinates are not protected. Retain the within-format presentation scaffold and output-label mapping outside removed names/context.",
+    "Protected predictive setup": "Same data/split/shot regime, learner and fitting recipe outside the tested channel; ordinary fitted-state changes caused by the intervention are permitted.",
+    "Scope evidence": "Official C01 main §4.1/Table 9, PDF p.8; official supplement D.2.1, printed pp.42–44 (PDF pp.20–22); supplied LIFT.pdf also contains these examples.",
+    "Removal": {
+      "value": "Pass",
+      "evidence": "packet/sources/C01_main.pdf §4.1/Table 9 p.8; C01_supp.pdf D.2.1 printed pp.42–44 (PDF pp.20–22), five printed prompt examples.",
+      "rationale": "Generic indexed fields and generic y withdraw the declared named feature/task context."
+    },
+    "Preservation": {
+      "value": "Unclear",
+      "evidence": "packet/sources/C01_main.pdf §4.1/Table 9 p.8; C01_supp.pdf D.2.1 printed pp.42–44 (PDF pp.20–22), five printed prompt examples.",
+      "rationale": "The lone unnamed example changes category words to numeric codes; a complete fixed coding map is not documented. Two table variants are not separately specified. Format-II correct example also omits class size, making preservation across the worked examples unresolved."
+    },
+    "Interface": {
+      "value": "Unclear",
+      "evidence": "packet/sources/C01_main.pdf §4.1/Table 9 p.8; C01_supp.pdf D.2.1 printed pp.42–44 (PDF pp.20–22), five printed prompt examples.",
+      "rationale": "Common LM input/output alone does not settle the altered target/category coding and correspondence of both unnamed variants."
+    },
+    "Admissible reference": {
+      "value": "Unclear",
+      "rationale": "Removal=Pass; Preservation=Unclear; Interface=Unclear; frozen rule therefore yields Unclear."
+    }
+  },
+  {
+    "Comparison ID": "C03-A",
+    "Study": "TabLLM",
+    "Tested semantic use": "Column-name meanings as supplied in the list name/value associations.",
+    "Protected observations": "All observed feature values and target labels, row/sample identities, feature cardinality and missingness; reversible fixed recoding is permitted.",
+    "Protected metadata": "Feature identity/position, type and category-domain information, and target/task identity, except the explicitly tested semantic channel.",
+    "Protected representation": "Ordered feature-value slots, value boundaries and task prompt/verbalizer; field-name text may be absent when that is the tested channel. For value permutations, continuous precision is protected as observation information.",
+    "Protected predictive setup": "Same data/split/shot regime, learner and fitting recipe outside the tested channel; ordinary fitted-state changes caused by the intervention are permitted.",
+    "Scope evidence": "Official C03 §3, PDF pp.3–4; §5.1/Figure 2, p.6; supplement Tables 12–14 and §9; supplied tabllm.pdf corroborates definitions.",
+    "Removal": {
+      "value": "Fail",
+      "evidence": "packet/sources/C03_main.pdf §3.1–3.2 pp.3–4, serialization definitions; §5.1/Figure 2; Supplement §9 examples.",
+      "rationale": "Meaningful names are permuted and retained. Misassignment is not withdrawal, regardless of fixed points."
+    },
+    "Preservation": {
+      "value": "Pass",
+      "evidence": "packet/sources/C03_main.pdf §3.1–3.2 pp.3–4, serialization definitions; §5.1/Figure 2; Supplement §9 examples.",
+      "rationale": "A single fixed name permutation across examples retains values, positions, boundaries and task prompt/verbalizer under the same recipe."
+    },
+    "Interface": {
+      "value": "Pass",
+      "evidence": "packet/sources/C03_main.pdf §3.1–3.2 pp.3–4, serialization definitions; §5.1/Figure 2; Supplement §9 examples.",
+      "rationale": "Permuted strings remain valid name slots in the same list/text-to-label interface."
+    },
+    "Admissible reference": {
+      "value": "No",
+      "rationale": "Removal=Fail; Preservation=Pass; Interface=Pass; frozen rule therefore yields No."
+    }
+  },
+  {
+    "Comparison ID": "C03-B",
+    "Study": "TabLLM",
+    "Tested semantic use": "Column-name text as semantic annotation of a fixed ordered value list.",
+    "Protected observations": "All observed feature values and target labels, row/sample identities, feature cardinality and missingness; reversible fixed recoding is permitted.",
+    "Protected metadata": "Feature identity/position, type and category-domain information, and target/task identity, except the explicitly tested semantic channel.",
+    "Protected representation": "Ordered feature-value slots, value boundaries and task prompt/verbalizer; field-name text may be absent when that is the tested channel. For value permutations, continuous precision is protected as observation information.",
+    "Protected predictive setup": "Same data/split/shot regime, learner and fitting recipe outside the tested channel; ordinary fitted-state changes caused by the intervention are permitted.",
+    "Scope evidence": "Official C03 §3, PDF pp.3–4; §5.1/Figure 2, p.6; supplement Tables 12–14 and §9; supplied tabllm.pdf corroborates definitions.",
+    "Removal": {
+      "value": "Pass",
+      "evidence": "packet/sources/C03_main.pdf §3.1–3.2 pp.3–4, serialization definitions; §5.1/Figure 2; Supplement §9 examples.",
+      "rationale": "Feature-name annotations are omitted from the ordered list."
+    },
+    "Preservation": {
+      "value": "Pass",
+      "evidence": "packet/sources/C03_main.pdf §3.1–3.2 pp.3–4, serialization definitions; §5.1/Figure 2; Supplement §9 examples.",
+      "rationale": "The defined operation retains the feature values in their fixed arbitrary order and the separate task prompt. Explicit name prefixes are the tested annotation channel, not an independently protected scaffold; ordered slots and boundaries suffice here."
+    },
+    "Interface": {
+      "value": "Pass",
+      "evidence": "packet/sources/C03_main.pdf §3.1–3.2 pp.3–4, serialization definitions; §5.1/Figure 2; Supplement §9 examples.",
+      "rationale": "A list of values is valid text for the same LM and manually specified class verbalizer; no additional parsing or cardinality violation is evidenced."
+    },
+    "Admissible reference": {
+      "value": "Yes",
+      "rationale": "Removal=Pass; Preservation=Pass; Interface=Pass; frozen rule therefore yields Yes."
+    }
+  },
+  {
+    "Comparison ID": "C03-C",
+    "Study": "TabLLM",
+    "Tested semantic use": "Semantic meanings of supplied feature-value tokens, including continuous-value magnitude.",
+    "Protected observations": "All observed feature values and target labels, row/sample identities, feature cardinality and missingness; reversible fixed recoding is permitted.",
+    "Protected metadata": "Feature identity/position, type and category-domain information, and target/task identity, except the explicitly tested semantic channel.",
+    "Protected representation": "Ordered feature-value slots, value boundaries and task prompt/verbalizer; field-name text may be absent when that is the tested channel. For value permutations, continuous precision is protected as observation information.",
+    "Protected predictive setup": "Same data/split/shot regime, learner and fitting recipe outside the tested channel; ordinary fitted-state changes caused by the intervention are permitted.",
+    "Scope evidence": "Official C03 §3, PDF pp.3–4; §5.1/Figure 2, p.6; supplement Tables 12–14 and §9; supplied tabllm.pdf corroborates definitions.",
+    "Removal": {
+      "value": "Fail",
+      "evidence": "packet/sources/C03_main.pdf §3.1–3.2 pp.3–4, serialization definitions; §5.1/Figure 2; Supplement §9 examples.",
+      "rationale": "Permuted value tokens retain supplied semantic meanings but associate them with different observations; this is not a no-meaning input."
+    },
+    "Preservation": {
+      "value": "Fail",
+      "evidence": "packet/sources/C03_main.pdf §3.1–3.2 pp.3–4, serialization definitions; §5.1/Figure 2; Supplement §9 examples.",
+      "rationale": "Ten uniform bins collapse continuous observations before permutation; the fixed mapping does not recover original continuous precision."
+    },
+    "Interface": {
+      "value": "Pass",
+      "evidence": "packet/sources/C03_main.pdf §3.1–3.2 pp.3–4, serialization definitions; §5.1/Figure 2; Supplement §9 examples.",
+      "rationale": "Changed value strings remain valid inputs in the same serialized slots and target interface."
+    },
+    "Admissible reference": {
+      "value": "No",
+      "rationale": "Removal=Fail; Preservation=Fail; Interface=Pass; frozen rule therefore yields No."
+    }
+  },
+  {
+    "Comparison ID": "C04-A",
+    "Study": "PLATO",
+    "Tested semantic use": "Broader-domain KG information conveyed by non-feature nodes, including through pretrained embeddings and message passing. Feature-node information is protected.",
+    "Protected observations": "All observed feature values and target labels, row/sample identities, feature cardinality and missingness; reversible fixed recoding is permitted.",
+    "Protected metadata": "Feature identity/position, type and category-domain information, and target/task identity, except the explicitly tested semantic channel.",
+    "Protected representation": "Feature-node correspondence and the PLATO first-layer weight-inference scaffold, MLP downstream layers, observed-feature routing; changing KG neighborhoods is intrinsic to the intervention. Semantic embedding coordinates may change under the same recipe.",
+    "Protected predictive setup": "Same data/split/shot regime, learner and fitting recipe outside the tested channel; ordinary fitted-state changes caused by the intervention are permitted.",
+    "Scope evidence": "Official C04 (Ruiz et al., not supplied plato.pdf): §3.1–3.2, Table 3 p.7, §4.1 p.9.",
+    "Removal": {
+      "value": "Unclear",
+      "evidence": "packet/sources/C04_main.pdf (Ruiz et al.), §§3.1–3.6 pp.4–6, Eq.(1) and Algorithm 1; §4.1 p.9, Tables 3–4.",
+      "rationale": "The induced subgraph removes broader-domain nodes from message passing, but the contrast does not specify whether fixed pretrained embeddings were recomputed. Broader-domain information could remain in those embeddings."
+    },
+    "Preservation": {
+      "value": "Pass",
+      "evidence": "packet/sources/C04_main.pdf (Ruiz et al.), §§3.1–3.6 pp.4–6, Eq.(1) and Algorithm 1; §4.1 p.9, Tables 3–4.",
+      "rationale": "Feature nodes and observations remain; neighborhood changes are intrinsic to withdrawing broader nodes. The described PLATO recipe retains the protected inference scaffold, and no extra change is established."
+    },
+    "Interface": {
+      "value": "Pass",
+      "evidence": "packet/sources/C04_main.pdf (Ruiz et al.), §§3.1–3.6 pp.4–6, Eq.(1) and Algorithm 1; §4.1 p.9, Tables 3–4.",
+      "rationale": "An induced feature subgraph retains feature-node correspondence and feeds the same graph-to-weight predictor. Graph-size change is compatible with that interface."
+    },
+    "Admissible reference": {
+      "value": "Unclear",
+      "rationale": "Removal=Unclear; Preservation=Pass; Interface=Pass; frozen rule therefore yields Unclear."
+    }
+  },
+  {
+    "Comparison ID": "C04-B",
+    "Study": "PLATO",
+    "Tested semantic use": "Auxiliary KG information used for feature embeddings and first-layer weight inference.",
+    "Protected observations": "All observed feature values and target labels, row/sample identities, feature cardinality and missingness; reversible fixed recoding is permitted.",
+    "Protected metadata": "Feature identity/position, type and category-domain information, and target/task identity, except the explicitly tested semantic channel.",
+    "Protected representation": "Feature-node correspondence and the PLATO first-layer weight-inference scaffold, MLP downstream layers, observed-feature routing; changing KG neighborhoods is intrinsic to the intervention. Semantic embedding coordinates may change under the same recipe.",
+    "Protected predictive setup": "Same data/split/shot regime, learner and fitting recipe outside the tested channel; ordinary fitted-state changes caused by the intervention are permitted.",
+    "Scope evidence": "Official C04 (Ruiz et al., not supplied plato.pdf): §3.1–3.2, Table 3 p.7, §4.1 p.9.",
+    "Removal": {
+      "value": "Pass",
+      "evidence": "packet/sources/C04_main.pdf (Ruiz et al.), §§3.1–3.6 pp.4–6, Eq.(1) and Algorithm 1; §4.1 p.9, Tables 3–4.",
+      "rationale": "No KG explicitly means no auxiliary information or feature embeddings, yielding an ordinary MLP."
+    },
+    "Preservation": {
+      "value": "Fail",
+      "evidence": "packet/sources/C04_main.pdf (Ruiz et al.), §§3.1–3.6 pp.4–6, Eq.(1) and Algorithm 1; §4.1 p.9, Tables 3–4.",
+      "rationale": "The first-layer weight-inference scaffold is replaced by directly fitted MLP weights. This changes the protected parameterization as well as removing KG information."
+    },
+    "Interface": {
+      "value": "Pass",
+      "evidence": "packet/sources/C04_main.pdf (Ruiz et al.), §§3.1–3.6 pp.4–6, Eq.(1) and Algorithm 1; §4.1 p.9, Tables 3–4.",
+      "rationale": "The replacement is an explicitly defined standard MLP with the same observed feature/target interface; architecture change does not itself create a routing or shape violation."
+    },
+    "Admissible reference": {
+      "value": "No",
+      "rationale": "Removal=Pass; Preservation=Fail; Interface=Pass; frozen rule therefore yields No."
+    }
+  },
+  {
+    "Comparison ID": "C04-C",
+    "Study": "PLATO",
+    "Tested semantic use": "KG edge information as a whole, including its encoding in pretrained node embeddings and message passing; a 50% deletion is a partial intervention on this use.",
+    "Protected observations": "All observed feature values and target labels, row/sample identities, feature cardinality and missingness; reversible fixed recoding is permitted.",
+    "Protected metadata": "Feature identity/position, type and category-domain information, and target/task identity, except the explicitly tested semantic channel.",
+    "Protected representation": "Feature-node correspondence and the PLATO first-layer weight-inference scaffold, MLP downstream layers, observed-feature routing; changing KG neighborhoods is intrinsic to the intervention. Semantic embedding coordinates may change under the same recipe.",
+    "Protected predictive setup": "Same data/split/shot regime, learner and fitting recipe outside the tested channel; ordinary fitted-state changes caused by the intervention are permitted.",
+    "Scope evidence": "Official C04 §4.1 p.9, Table 4.",
+    "Removal": {
+      "value": "Fail",
+      "evidence": "packet/sources/C04_main.pdf (Ruiz et al.), §§3.1–3.6 pp.4–6, Eq.(1) and Algorithm 1; §4.1 p.9, Tables 3–4.",
+      "rationale": "Half of the edge information remains available; the declared use is KG edges as a whole, not only the realized deleted subset. Potential retained pretrained information does not weaken this failure."
+    },
+    "Preservation": {
+      "value": "Pass",
+      "evidence": "packet/sources/C04_main.pdf (Ruiz et al.), §§3.1–3.6 pp.4–6, Eq.(1) and Algorithm 1; §4.1 p.9, Tables 3–4.",
+      "rationale": "Edge deletion changes tested connectivity while preserving feature nodes and the common PLATO prediction scaffold. No evidenced extra alteration is specified."
+    },
+    "Interface": {
+      "value": "Pass",
+      "evidence": "packet/sources/C04_main.pdf (Ruiz et al.), §§3.1–3.6 pp.4–6, Eq.(1) and Algorithm 1; §4.1 p.9, Tables 3–4.",
+      "rationale": "The model accepts a sparser KG with the same feature-node mapping; sparsity is the declared graph intervention, not evidence of an unintended missing-value or cardinality violation."
+    },
+    "Admissible reference": {
+      "value": "No",
+      "rationale": "Removal=Fail; Preservation=Pass; Interface=Pass; frozen rule therefore yields No."
+    }
+  },
+  {
+    "Comparison ID": "C05-A",
+    "Study": "CARTE",
+    "Tested semantic use": "External pretrained linguistic meaning in string feature initialization.",
+    "Protected observations": "All observed feature values and target labels, row/sample identities, feature cardinality and missingness; reversible fixed recoding is permitted.",
+    "Protected metadata": "Feature identity/position, type and category-domain information, and target/task identity, except the explicitly tested semantic channel.",
+    "Protected representation": "Graphlet feature slots, numeric-value and missing-value representation, central readout and attention scaffold; encoder coordinates may change but nonsemantic identity/routing must survive.",
+    "Protected predictive setup": "Same data/split/shot regime, learner and fitting recipe outside the tested channel; ordinary fitted-state changes caused by the intervention are permitted.",
+    "Scope evidence": "Official C05 §3 and Appendix C.3/Figure 10, PDF p.21; supplied carte.pdf corroborates component labels. Figure arms expanded against CARTE baseline; no separate pairwise test is implied.",
+    "Removal": {
+      "value": "Pass",
+      "evidence": "packet/sources/C05_main.pdf §3.1/Figure 1 (numerical node initialization), §3 architecture; Appendix C.3/Figure 10 p.21.",
+      "rationale": "The string-language-model initialization is replaced by n-gram MinHash encoding, removing the declared externally pretrained linguistic initialization. Lexical n-gram overlap is not the tested pretrained semantic use."
+    },
+    "Preservation": {
+      "value": "Unclear",
+      "evidence": "packet/sources/C05_main.pdf §3.1/Figure 1 (numerical node initialization), §3 architecture; Appendix C.3/Figure 10 p.21.",
+      "rationale": "Numeric initialization, nonsemantic string distinctions and encoder/training alignment after replacement are not documented sufficiently to establish protected information/scaffold preservation. Encoder replacement alone is not a failure."
+    },
+    "Interface": {
+      "value": "Unclear",
+      "evidence": "packet/sources/C05_main.pdf §3.1/Figure 1 (numerical node initialization), §3 architecture; Appendix C.3/Figure 10 p.21.",
+      "rationale": "C.3 does not specify dimensional or numerical-node adaptation; a compatible implementation is possible but not established by the curve label."
+    },
+    "Admissible reference": {
+      "value": "Unclear",
+      "rationale": "Removal=Pass; Preservation=Unclear; Interface=Unclear; frozen rule therefore yields Unclear."
+    }
+  },
+  {
+    "Comparison ID": "C05-B",
+    "Study": "CARTE",
+    "Tested semantic use": "Column-name semantic information in CARTE, including edge encodings and any propagation through numerical-node initialization.",
+    "Protected observations": "All observed feature values and target labels, row/sample identities, feature cardinality and missingness; reversible fixed recoding is permitted.",
+    "Protected metadata": "Feature identity/position, type and category-domain information, and target/task identity, except the explicitly tested semantic channel.",
+    "Protected representation": "Graphlet feature slots, numeric-value and missing-value representation, central readout and attention scaffold; encoder coordinates may change but nonsemantic identity/routing must survive.",
+    "Protected predictive setup": "Same data/split/shot regime, learner and fitting recipe outside the tested channel; ordinary fitted-state changes caused by the intervention are permitted.",
+    "Scope evidence": "Official C05 §3 and Appendix C.3/Figure 10, PDF p.21; supplied carte.pdf corroborates component labels. Figure arms expanded against CARTE baseline; no separate pairwise test is implied.",
+    "Removal": {
+      "value": "Unclear",
+      "evidence": "packet/sources/C05_main.pdf §3.1/Figure 1 (numerical node initialization), §3 architecture; Appendix C.3/Figure 10 p.21.",
+      "rationale": "Edge-info exclusion does not establish removal of column meaning from numerical nodes, which also use column embeddings. The exact operation is not reported."
+    },
+    "Preservation": {
+      "value": "Unclear",
+      "evidence": "packet/sources/C05_main.pdf §3.1/Figure 1 (numerical node initialization), §3 architecture; Appendix C.3/Figure 10 p.21.",
+      "rationale": "Cannot determine whether a neutral edge vector, edge removal or deleted computation preserves feature routing and the numerical representation."
+    },
+    "Interface": {
+      "value": "Unclear",
+      "evidence": "packet/sources/C05_main.pdf §3.1/Figure 1 (numerical node initialization), §3 architecture; Appendix C.3/Figure 10 p.21.",
+      "rationale": "The label alone does not establish tensor/routing handling; no actual interface failure is demonstrated."
+    },
+    "Admissible reference": {
+      "value": "Unclear",
+      "rationale": "Removal=Unclear; Preservation=Unclear; Interface=Unclear; frozen rule therefore yields Unclear."
+    }
+  },
+  {
+    "Comparison ID": "C05-C",
+    "Study": "CARTE",
+    "Tested semantic use": "Column-name semantic information in CARTE, including edge encodings and any propagation through numerical-node initialization.",
+    "Protected observations": "All observed feature values and target labels, row/sample identities, feature cardinality and missingness; reversible fixed recoding is permitted.",
+    "Protected metadata": "Feature identity/position, type and category-domain information, and target/task identity, except the explicitly tested semantic channel.",
+    "Protected representation": "Graphlet feature slots, numeric-value and missing-value representation, central readout and attention scaffold; encoder coordinates may change but nonsemantic identity/routing must survive.",
+    "Protected predictive setup": "Same data/split/shot regime, learner and fitting recipe outside the tested channel; ordinary fitted-state changes caused by the intervention are permitted.",
+    "Scope evidence": "Official C05 §3 and Appendix C.3/Figure 10, PDF p.21; supplied carte.pdf corroborates component labels. Figure arms expanded against CARTE baseline; no separate pairwise test is implied.",
+    "Removal": {
+      "value": "Unclear",
+      "evidence": "packet/sources/C05_main.pdf §3.1/Figure 1 (numerical node initialization), §3 architecture; Appendix C.3/Figure 10 p.21.",
+      "rationale": "Column information may survive in numeric initialization, and edge exclusion is not operationally specified."
+    },
+    "Preservation": {
+      "value": "Fail",
+      "evidence": "packet/sources/C05_main.pdf §3.1/Figure 1 (numerical node initialization), §3 architecture; Appendix C.3/Figure 10 p.21.",
+      "rationale": "The named attention-layer exclusion additionally changes the protected attention scaffold, beyond the tested column-name information."
+    },
+    "Interface": {
+      "value": "Unclear",
+      "evidence": "packet/sources/C05_main.pdf §3.1/Figure 1 (numerical node initialization), §3 architecture; Appendix C.3/Figure 10 p.21.",
+      "rationale": "Architecture removal is not automatically an interface failure, but the replacement routing/aggregation is unspecified."
+    },
+    "Admissible reference": {
+      "value": "No",
+      "rationale": "Removal=Unclear; Preservation=Fail; Interface=Unclear; frozen rule therefore yields No."
+    }
+  },
+  {
+    "Comparison ID": "C06-A",
+    "Study": "FeatLLM",
+    "Tested semantic use": "Explanatory semantic definitions in the feature-description block used to generate rules.",
+    "Protected observations": "All observed feature values and target labels, row/sample identities, feature cardinality and missingness; reversible fixed recoding is permitted.",
+    "Protected metadata": "Feature identity, explicit value types, categorical domains/examples and task/answer-class definition; these structural facts are protected separately from explanatory meaning.",
+    "Protected representation": "Generate/parse/binary-feature interface and parser rules; newly generated rules and binary features are allowed consequences.",
+    "Protected predictive setup": "Same data/split/shot regime, learner and fitting recipe outside the tested channel; ordinary fitted-state changes caused by the intervention are permitted.",
+    "Scope evidence": "Official C06 §3.1/Figure 2 pp.3–4, §4.2/Table 4 pp.7–8, Appendix A.2 and K.2/Table 18; supplied featllm.pdf corroborates prompt components.",
+    "Removal": {
+      "value": "Pass",
+      "evidence": "packet/sources/C06_main.pdf §3.1/Figure 2 pp.3–4, §4.2/Table 4 pp.7–8, Appendix A.2 and K.2/Table 18.",
+      "rationale": "Omitting the feature-description block removes its explanatory definitions from rule generation; example-derived rules are allowed consequences."
+    },
+    "Preservation": {
+      "value": "Fail",
+      "evidence": "packet/sources/C06_main.pdf §3.1/Figure 2 pp.3–4, §4.2/Table 4 pp.7–8, Appendix A.2 and K.2/Table 18.",
+      "rationale": "The same block explicitly conveys types and possible categories, which are protected metadata in this scope. Those explicit facts are withdrawn together with definitions; examples alone do not document a lossless replacement for category/type information."
+    },
+    "Interface": {
+      "value": "Unclear",
+      "evidence": "packet/sources/C06_main.pdf §3.1/Figure 2 pp.3–4, §4.2/Table 4 pp.7–8, Appendix A.2 and K.2/Table 18.",
+      "rationale": "The shared generation/parser recipe is described, but the ablated prompt and type/error handling do not establish compatible rule parsing after explicit schema information disappears."
+    },
+    "Admissible reference": {
+      "value": "No",
+      "rationale": "Removal=Pass; Preservation=Fail; Interface=Unclear; frozen rule therefore yields No."
+    }
+  },
+  {
+    "Comparison ID": "C07-A",
+    "Study": "TabuLa-8B",
+    "Tested semantic use": "Informative feature headers and informative target header jointly, as opposed to indexed headers.",
+    "Protected observations": "All observed feature values and target labels, row/sample identities, feature cardinality and missingness; reversible fixed recoding is permitted.",
+    "Protected metadata": "Feature identity/position, type and category-domain information, and target/task identity, except the explicitly tested semantic channel.",
+    "Protected representation": "A stable field/value association and distinct feature slots; numerical and missing-value information remain representable. Exact semantic token strings or semantic embedding coordinates are not protected.",
+    "Protected predictive setup": "Same data/split/shot regime, learner and fitting recipe outside the tested channel; ordinary fitted-state changes caused by the intervention are permitted.",
+    "Scope evidence": "Official C07 §5.5, Appendix F.2 p.26/Figure 12 p.27; supplied tabula.pdf has different pagination.",
+    "Removal": {
+      "value": "Pass",
+      "evidence": "packet/sources/C07_main.pdf §5.5; Appendix F.2 p.26 and Figure 12 p.27.",
+      "rationale": "Replacing feature and target headers with indexed X names and Y withdraws the jointly declared informative header channel."
+    },
+    "Preservation": {
+      "value": "Pass",
+      "evidence": "packet/sources/C07_main.pdf §5.5; Appendix F.2 p.26 and Figure 12 p.27.",
+      "rationale": "F.2 explicitly preserves the data, and indexed headers retain feature slots and target role. Target-header change is inside the declared scope."
+    },
+    "Interface": {
+      "value": "Pass",
+      "evidence": "packet/sources/C07_main.pdf §5.5; Appendix F.2 p.26 and Figure 12 p.27.",
+      "rationale": "Replacement strings occupy the same header positions and preserve the tabular LM evaluation interface."
+    },
+    "Admissible reference": {
+      "value": "Yes",
+      "rationale": "Removal=Pass; Preservation=Pass; Interface=Pass; frozen rule therefore yields Yes."
+    }
+  },
+  {
+    "Comparison ID": "C08-A",
+    "Study": "ConTextTab",
+    "Tested semantic use": "Pretrained linguistic meaning in categorical/string cell encodings; column-header semantic meaning remains protected.",
+    "Protected observations": "All observed feature values and target labels, row/sample identities, feature cardinality and missingness; reversible fixed recoding is permitted.",
+    "Protected metadata": "Feature identity/position, type and category-domain information, and target/task identity, except the explicitly tested semantic channel.",
+    "Protected representation": "Distinct cell/column identity, numeric/date/missingness paths and the column-plus-cell backbone interface. A compatible change of cell encoder is allowed; loss of observational distinctions is not.",
+    "Protected predictive setup": "Same data/split/shot regime, learner and fitting recipe outside the tested channel; ordinary fitted-state changes caused by the intervention are permitted.",
+    "Scope evidence": "Official C08 §5.1 p.8, Table 2 bottom semantic block p.9, Appendix A.4/Figures 9–10 pp.27–28; supplied contextab.pdf has different pagination.",
+    "Removal": {
+      "value": "Pass",
+      "evidence": "packet/sources/C08_main.pdf §3.1 pp.3–4 (modality encoders and projection), §5.1 p.8, Table 2 semantic block p.9; Appendix A.4 pp.27–28.",
+      "rationale": "Replacement of pretrained cell-language embeddings by ordinal encodings removes the declared pretrained linguistic cell encoding. Any lexical structure retained by string encoders is outside this narrower use."
+    },
+    "Preservation": {
+      "value": "Unclear",
+      "evidence": "packet/sources/C08_main.pdf §3.1 pp.3–4 (modality encoders and projection), §5.1 p.8, Table 2 semantic block p.9; Appendix A.4 pp.27–28.",
+      "rationale": "The ordinal replacement is stated, but the per-arm handling of free text, unseen/missing categories, retained distinctions and fitting/pretraining alignment is materially underspecified. This is uncertainty, not an assumed failure from changing geometry."
+    },
+    "Interface": {
+      "value": "Unclear",
+      "evidence": "packet/sources/C08_main.pdf §3.1 pp.3–4 (modality encoders and projection), §5.1 p.8, Table 2 semantic block p.9; Appendix A.4 pp.27–28.",
+      "rationale": "The architecture has a learned dimensional projection, so dimension changes can be valid. Per-encoder routing and compatibility are not specified sufficiently to certify the variant, particularly when replacing the text path by a different representation."
+    },
+    "Admissible reference": {
+      "value": "Unclear",
+      "rationale": "Removal=Pass; Preservation=Unclear; Interface=Unclear; frozen rule therefore yields Unclear."
+    }
+  },
+  {
+    "Comparison ID": "C08-B",
+    "Study": "ConTextTab",
+    "Tested semantic use": "Pretrained linguistic meaning in categorical/string cell encodings; column-header semantic meaning remains protected.",
+    "Protected observations": "All observed feature values and target labels, row/sample identities, feature cardinality and missingness; reversible fixed recoding is permitted.",
+    "Protected metadata": "Feature identity/position, type and category-domain information, and target/task identity, except the explicitly tested semantic channel.",
+    "Protected representation": "Distinct cell/column identity, numeric/date/missingness paths and the column-plus-cell backbone interface. A compatible change of cell encoder is allowed; loss of observational distinctions is not.",
+    "Protected predictive setup": "Same data/split/shot regime, learner and fitting recipe outside the tested channel; ordinary fitted-state changes caused by the intervention are permitted.",
+    "Scope evidence": "Official C08 §5.1 p.8, Table 2 bottom semantic block p.9, Appendix A.4/Figures 9–10 pp.27–28; supplied contextab.pdf has different pagination.",
+    "Removal": {
+      "value": "Pass",
+      "evidence": "packet/sources/C08_main.pdf §3.1 pp.3–4 (modality encoders and projection), §5.1 p.8, Table 2 semantic block p.9; Appendix A.4 pp.27–28.",
+      "rationale": "Replacement of pretrained cell-language embeddings by MinHash encodings removes the declared pretrained linguistic cell encoding. Any lexical structure retained by string encoders is outside this narrower use."
+    },
+    "Preservation": {
+      "value": "Unclear",
+      "evidence": "packet/sources/C08_main.pdf §3.1 pp.3–4 (modality encoders and projection), §5.1 p.8, Table 2 semantic block p.9; Appendix A.4 pp.27–28.",
+      "rationale": "The MinHash replacement is stated, but the per-arm handling of free text, unseen/missing categories, retained distinctions and fitting/pretraining alignment is materially underspecified. This is uncertainty, not an assumed failure from changing geometry."
+    },
+    "Interface": {
+      "value": "Unclear",
+      "evidence": "packet/sources/C08_main.pdf §3.1 pp.3–4 (modality encoders and projection), §5.1 p.8, Table 2 semantic block p.9; Appendix A.4 pp.27–28.",
+      "rationale": "The architecture has a learned dimensional projection, so dimension changes can be valid. Per-encoder routing and compatibility are not specified sufficiently to certify the variant, particularly when replacing the text path by a different representation."
+    },
+    "Admissible reference": {
+      "value": "Unclear",
+      "rationale": "Removal=Pass; Preservation=Unclear; Interface=Unclear; frozen rule therefore yields Unclear."
+    }
+  },
+  {
+    "Comparison ID": "C08-C",
+    "Study": "ConTextTab",
+    "Tested semantic use": "Pretrained linguistic meaning in categorical/string cell encodings; column-header semantic meaning remains protected.",
+    "Protected observations": "All observed feature values and target labels, row/sample identities, feature cardinality and missingness; reversible fixed recoding is permitted.",
+    "Protected metadata": "Feature identity/position, type and category-domain information, and target/task identity, except the explicitly tested semantic channel.",
+    "Protected representation": "Distinct cell/column identity, numeric/date/missingness paths and the column-plus-cell backbone interface. A compatible change of cell encoder is allowed; loss of observational distinctions is not.",
+    "Protected predictive setup": "Same data/split/shot regime, learner and fitting recipe outside the tested channel; ordinary fitted-state changes caused by the intervention are permitted.",
+    "Scope evidence": "Official C08 §5.1 p.8, Table 2 bottom semantic block p.9, Appendix A.4/Figures 9–10 pp.27–28; supplied contextab.pdf has different pagination.",
+    "Removal": {
+      "value": "Unclear",
+      "evidence": "packet/sources/C08_main.pdf §3.1 pp.3–4 (modality encoders and projection), §5.1 p.8, Table 2 semantic block p.9; Appendix A.4 pp.27–28.",
+      "rationale": "The named AutoGluon feature encoder does not specify the configured string/text transformations, so complete removal of the pretrained linguistic pathway cannot be independently established."
+    },
+    "Preservation": {
+      "value": "Unclear",
+      "evidence": "packet/sources/C08_main.pdf §3.1 pp.3–4 (modality encoders and projection), §5.1 p.8, Table 2 semantic block p.9; Appendix A.4 pp.27–28.",
+      "rationale": "The AutoGluon replacement is stated, but the per-arm handling of free text, unseen/missing categories, retained distinctions and fitting/pretraining alignment is materially underspecified. This is uncertainty, not an assumed failure from changing geometry."
+    },
+    "Interface": {
+      "value": "Unclear",
+      "evidence": "packet/sources/C08_main.pdf §3.1 pp.3–4 (modality encoders and projection), §5.1 p.8, Table 2 semantic block p.9; Appendix A.4 pp.27–28.",
+      "rationale": "The architecture has a learned dimensional projection, so dimension changes can be valid. Per-encoder routing and compatibility are not specified sufficiently to certify the variant, particularly when replacing the text path by a different representation."
+    },
+    "Admissible reference": {
+      "value": "Unclear",
+      "rationale": "Removal=Unclear; Preservation=Unclear; Interface=Unclear; frozen rule therefore yields Unclear."
+    }
+  },
+  {
+    "Comparison ID": "C08-D",
+    "Study": "ConTextTab",
+    "Tested semantic use": "Pretrained linguistic meaning in categorical/string cell encodings; column-header semantic meaning remains protected.",
+    "Protected observations": "All observed feature values and target labels, row/sample identities, feature cardinality and missingness; reversible fixed recoding is permitted.",
+    "Protected metadata": "Feature identity/position, type and category-domain information, and target/task identity, except the explicitly tested semantic channel.",
+    "Protected representation": "Distinct cell/column identity, numeric/date/missingness paths and the column-plus-cell backbone interface. A compatible change of cell encoder is allowed; loss of observational distinctions is not.",
+    "Protected predictive setup": "Same data/split/shot regime, learner and fitting recipe outside the tested channel; ordinary fitted-state changes caused by the intervention are permitted.",
+    "Scope evidence": "Official C08 §5.1 p.8, Table 2 bottom semantic block p.9, Appendix A.4/Figures 9–10 pp.27–28; supplied contextab.pdf has different pagination.",
+    "Removal": {
+      "value": "Pass",
+      "evidence": "packet/sources/C08_main.pdf §3.1 pp.3–4 (modality encoders and projection), §5.1 p.8, Table 2 semantic block p.9; Appendix A.4 pp.27–28.",
+      "rationale": "Replacement of pretrained cell-language embeddings by Gap encodings removes the declared pretrained linguistic cell encoding. Any lexical structure retained by string encoders is outside this narrower use."
+    },
+    "Preservation": {
+      "value": "Unclear",
+      "evidence": "packet/sources/C08_main.pdf §3.1 pp.3–4 (modality encoders and projection), §5.1 p.8, Table 2 semantic block p.9; Appendix A.4 pp.27–28.",
+      "rationale": "The Gap replacement is stated, but the per-arm handling of free text, unseen/missing categories, retained distinctions and fitting/pretraining alignment is materially underspecified. This is uncertainty, not an assumed failure from changing geometry."
+    },
+    "Interface": {
+      "value": "Unclear",
+      "evidence": "packet/sources/C08_main.pdf §3.1 pp.3–4 (modality encoders and projection), §5.1 p.8, Table 2 semantic block p.9; Appendix A.4 pp.27–28.",
+      "rationale": "The architecture has a learned dimensional projection, so dimension changes can be valid. Per-encoder routing and compatibility are not specified sufficiently to certify the variant, particularly when replacing the text path by a different representation."
+    },
+    "Admissible reference": {
+      "value": "Unclear",
+      "rationale": "Removal=Pass; Preservation=Unclear; Interface=Unclear; frozen rule therefore yields Unclear."
+    }
+  },
+  {
+    "Comparison ID": "C08-E",
+    "Study": "ConTextTab",
+    "Tested semantic use": "Informative original column-header meanings; indexed header strings are a neutral replacement.",
+    "Protected observations": "All observed feature values and target labels, row/sample identities, feature cardinality and missingness; reversible fixed recoding is permitted.",
+    "Protected metadata": "Feature identity/position, type and category-domain information, and target/task identity, except the explicitly tested semantic channel.",
+    "Protected representation": "Distinct cell/column identity, numeric/date/missingness paths and the column-plus-cell backbone interface. A compatible change of cell encoder is allowed; loss of observational distinctions is not.",
+    "Protected predictive setup": "Same data/split/shot regime, learner and fitting recipe outside the tested channel; ordinary fitted-state changes caused by the intervention are permitted.",
+    "Scope evidence": "Official C08 §5.1 p.8, Table 2 bottom semantic block p.9, Appendix A.4/Figures 9–10 pp.27–28; supplied contextab.pdf has different pagination.",
+    "Removal": {
+      "value": "Pass",
+      "evidence": "packet/sources/C08_main.pdf §3.1 pp.3–4 (modality encoders and projection), §5.1 p.8, Table 2 semantic block p.9; Appendix A.4 pp.27–28.",
+      "rationale": "col1 through colN replace informative header meaning."
+    },
+    "Preservation": {
+      "value": "Pass",
+      "evidence": "packet/sources/C08_main.pdf §3.1 pp.3–4 (modality encoders and projection), §5.1 p.8, Table 2 semantic block p.9; Appendix A.4 pp.27–28.",
+      "rationale": "Indexed strings preserve distinct column positions; observations, modality encoders and predictor are unchanged by the defined header-only operation."
+    },
+    "Interface": {
+      "value": "Pass",
+      "evidence": "packet/sources/C08_main.pdf §3.1 pp.3–4 (modality encoders and projection), §5.1 p.8, Table 2 semantic block p.9; Appendix A.4 pp.27–28.",
+      "rationale": "The replacement remains a string in the existing header encoder and projection path."
+    },
+    "Admissible reference": {
+      "value": "Yes",
+      "rationale": "Removal=Pass; Preservation=Pass; Interface=Pass; frozen rule therefore yields Yes."
+    }
+  },
+  {
+    "Comparison ID": "C08-F",
+    "Study": "ConTextTab",
+    "Tested semantic use": "Additional contextual descriptions appended to original column names, beyond the original name meaning.",
+    "Protected observations": "All observed feature values and target labels, row/sample identities, feature cardinality and missingness; reversible fixed recoding is permitted.",
+    "Protected metadata": "Feature identity/position, type and category-domain information, and target/task identity, except the explicitly tested semantic channel.",
+    "Protected representation": "Distinct cell/column identity, numeric/date/missingness paths and the column-plus-cell backbone interface. A compatible change of cell encoder is allowed; loss of observational distinctions is not.",
+    "Protected predictive setup": "Same data/split/shot regime, learner and fitting recipe outside the tested channel; ordinary fitted-state changes caused by the intervention are permitted. Description generation may transform available training observations but must not acquire additional held-out or target information relative to the comparator.",
+    "Scope evidence": "Official C08 §5.1 p.8, Table 2 bottom semantic block p.9, Appendix A.4/Figures 9–10 pp.27–28; supplied contextab.pdf has different pagination.",
+    "Removal": {
+      "value": "Pass",
+      "evidence": "packet/sources/C08_main.pdf §3.1 pp.3–4 (modality encoders and projection), §5.1 p.8, Table 2 semantic block p.9; Appendix A.4 pp.27–28.",
+      "rationale": "Original-name-only base lacks the additional descriptions; original name semantics are deliberately outside the tested increment."
+    },
+    "Preservation": {
+      "value": "Unclear",
+      "evidence": "packet/sources/C08_main.pdf §3.1 pp.3–4 (modality encoders and projection), §5.1 p.8, Table 2 semantic block p.9; Appendix A.4 pp.27–28.",
+      "rationale": "The generator sees five sampled rows, but their split and target access are unspecified. Matching the information available to the two arms cannot be established; no leakage is asserted."
+    },
+    "Interface": {
+      "value": "Pass",
+      "evidence": "packet/sources/C08_main.pdf §3.1 pp.3–4 (modality encoders and projection), §5.1 p.8, Table 2 semantic block p.9; Appendix A.4 pp.27–28.",
+      "rationale": "Both original names and enriched name:description strings are compatible inputs to the same header encoder; provenance uncertainty belongs to Preservation."
+    },
+    "Admissible reference": {
+      "value": "Unclear",
+      "rationale": "Removal=Pass; Preservation=Unclear; Interface=Pass; frozen rule therefore yields Unclear."
+    }
+  },
+  {
+    "Comparison ID": "C09-A",
+    "Study": "TabSTAR",
+    "Tested semantic use": "Explicit quantile wording in numerical-feature verbalization.",
+    "Protected observations": "All observed feature values and target labels, row/sample identities, feature cardinality and missingness; reversible fixed recoding is permitted.",
+    "Protected metadata": "Feature identity/position, type and category-domain information, and target/task identity, except the explicitly tested semantic channel.",
+    "Protected representation": "Separate standardized numerical-input branch, feature name/slot and missing-value markers, text encoder and numerical/semantic fusion scaffold. Numerical facts remain allowed through the numeric branch.",
+    "Protected predictive setup": "Same data/split/shot regime, learner and fitting recipe outside the tested channel; ordinary fitted-state changes caused by the intervention are permitted.",
+    "Scope evidence": "Official C09 §4/A.1, §6 Q3 p.9/Table 4 p.10, Appendix G.4/Tables 31–32 pp.53–54; supplied tabstar.pdf has different pagination.",
+    "Removal": {
+      "value": "Pass",
+      "evidence": "packet/sources/C09_main.pdf §4 Encoding/Fusion and Appendix A.1; §6 setup and Q3 p.9, Table 4 p.10; Appendix G.4/Table 31 p.53 and Table 32 p.54.",
+      "rationale": "Name + Bin removes explicit quantile wording from the semantic branch. Quantile-related information inferable elsewhere is not the tested explicit wording."
+    },
+    "Preservation": {
+      "value": "Pass",
+      "evidence": "packet/sources/C09_main.pdf §4 Encoding/Fusion and Appendix A.1; §6 setup and Q3 p.9, Table 4 p.10; Appendix G.4/Table 31 p.53 and Table 32 p.54.",
+      "rationale": "Name/bin text and separate numerical input persist. §6 defines a common pretraining/evaluation setup for variants. Retraining under that recipe is allowed, not a checkpoint-equality requirement."
+    },
+    "Interface": {
+      "value": "Pass",
+      "evidence": "packet/sources/C09_main.pdf §4 Encoding/Fusion and Appendix A.1; §6 setup and Q3 p.9, Table 4 p.10; Appendix G.4/Table 31 p.53 and Table 32 p.54.",
+      "rationale": "Shorter valid text enters the same semantic encoder and is fused with the same numerical-input branch."
+    },
+    "Admissible reference": {
+      "value": "Yes",
+      "rationale": "Removal=Pass; Preservation=Pass; Interface=Pass; frozen rule therefore yields Yes."
+    }
+  },
+  {
+    "Comparison ID": "C09-B",
+    "Study": "TabSTAR",
+    "Tested semantic use": "Numeric bin/magnitude and quantile wording in the semantic verbalization branch only.",
+    "Protected observations": "All observed feature values and target labels, row/sample identities, feature cardinality and missingness; reversible fixed recoding is permitted.",
+    "Protected metadata": "Feature identity/position, type and category-domain information, and target/task identity, except the explicitly tested semantic channel.",
+    "Protected representation": "Separate standardized numerical-input branch, feature name/slot and missing-value markers, text encoder and numerical/semantic fusion scaffold. Numerical facts remain allowed through the numeric branch.",
+    "Protected predictive setup": "Same data/split/shot regime, learner and fitting recipe outside the tested channel; ordinary fitted-state changes caused by the intervention are permitted.",
+    "Scope evidence": "Official C09 §4/A.1, §6 Q3 p.9/Table 4 p.10, Appendix G.4/Tables 31–32 pp.53–54; supplied tabstar.pdf has different pagination.",
+    "Removal": {
+      "value": "Pass",
+      "evidence": "packet/sources/C09_main.pdf §4 Encoding/Fusion and Appendix A.1; §6 setup and Q3 p.9, Table 4 p.10; Appendix G.4/Table 31 p.53 and Table 32 p.54.",
+      "rationale": "Name removes numeric bin and quantile content from the verbalization; the illustrated generic Numeric marker carries type rather than numeric magnitude."
+    },
+    "Preservation": {
+      "value": "Pass",
+      "evidence": "packet/sources/C09_main.pdf §4 Encoding/Fusion and Appendix A.1; §6 setup and Q3 p.9, Table 4 p.10; Appendix G.4/Table 31 p.53 and Table 32 p.54.",
+      "rationale": "Raw numeric information remains in the separate standardized numerical branch, while names and missing markers remain. The shared variant recipe is stated in §6."
+    },
+    "Interface": {
+      "value": "Pass",
+      "evidence": "packet/sources/C09_main.pdf §4 Encoding/Fusion and Appendix A.1; §6 setup and Q3 p.9, Table 4 p.10; Appendix G.4/Table 31 p.53 and Table 32 p.54.",
+      "rationale": "Generic name/type text is compatible with the existing text/numeric fusion, with no deletion of the numerical branch stated."
+    },
+    "Admissible reference": {
+      "value": "Yes",
+      "rationale": "Removal=Pass; Preservation=Pass; Interface=Pass; frozen rule therefore yields Yes."
+    }
+  },
+  {
+    "Comparison ID": "C10-A",
+    "Study": "TARTE",
+    "Tested semantic use": "Column-name semantics across table-representation paths, including any numeric initialization use.",
+    "Protected observations": "All observed feature values and target labels, row/sample identities, feature cardinality and missingness; reversible fixed recoding is permitted.",
+    "Protected metadata": "Feature identity/position, type and category-domain information, and target/task identity, except the explicitly tested semantic channel.",
+    "Protected representation": "Feature slots, numeric/date/missingness handling and fixed representation-to-Ridge interface; compatible string-encoder replacement is allowed.",
+    "Protected predictive setup": "Same data/split/shot regime, learner and fitting recipe outside the tested channel; ordinary fitted-state changes caused by the intervention are permitted. Table-model pretraining regime and downstream Ridge fitting recipe are protected independently of the tested channel.",
+    "Scope evidence": "C10 official indexed published Figure 6 p.10/§4.3 from eligibility screening; supplied tarte.pdf is arXiv v2 corroboration, not the accepted PDF. Conditions known, implementation details not fully established from published source.",
+    "Removal": {
+      "value": "Unclear",
+      "evidence": "CONTROL_CONSTRUCTION_V1_1.json C10-A/B, citing published §4.3/Figure 6 p.10; packet/sources/C10_author_mirror.pdf Figure 6 is preacceptance corroboration only, not authoritative published implementation evidence.",
+      "rationale": "The published condition label specifies removal of column names but not its implementation across all paths; complete semantic withdrawal including numerical initialization is unresolved."
+    },
+    "Preservation": {
+      "value": "Unclear",
+      "evidence": "CONTROL_CONSTRUCTION_V1_1.json C10-A/B, citing published §4.3/Figure 6 p.10; packet/sources/C10_author_mirror.pdf Figure 6 is preacceptance corroboration only, not authoritative published implementation evidence.",
+      "rationale": "Neither published construction nor permissible corroboration establishes numerical/value routing and representation preservation for the name-removal operation."
+    },
+    "Interface": {
+      "value": "Unclear",
+      "evidence": "CONTROL_CONSTRUCTION_V1_1.json C10-A/B, citing published §4.3/Figure 6 p.10; packet/sources/C10_author_mirror.pdf Figure 6 is preacceptance corroboration only, not authoritative published implementation evidence.",
+      "rationale": "Name replacement, zeroing and pathway omission imply different interfaces; the published implementation is not accessible in this packet."
+    },
+    "Admissible reference": {
+      "value": "Unclear",
+      "rationale": "Removal=Unclear; Preservation=Unclear; Interface=Unclear; frozen rule therefore yields Unclear."
+    }
+  },
+  {
+    "Comparison ID": "C10-B",
+    "Study": "TARTE",
+    "Tested semantic use": "External linguistic meaning provided by the string encoder; table-level Enriched YAGO4.5 pretraining is protected as a distinct component.",
+    "Protected observations": "All observed feature values and target labels, row/sample identities, feature cardinality and missingness; reversible fixed recoding is permitted.",
+    "Protected metadata": "Feature identity/position, type and category-domain information, and target/task identity, except the explicitly tested semantic channel.",
+    "Protected representation": "Feature slots, numeric/date/missingness handling and fixed representation-to-Ridge interface; compatible string-encoder replacement is allowed.",
+    "Protected predictive setup": "Same data/split/shot regime, learner and fitting recipe outside the tested channel; ordinary fitted-state changes caused by the intervention are permitted. Table-model pretraining regime and downstream Ridge fitting recipe are protected independently of the tested channel.",
+    "Scope evidence": "C10 official indexed published Figure 6 p.10/§4.3 from eligibility screening; supplied tarte.pdf is arXiv v2 corroboration, not the accepted PDF. Conditions known, implementation details not fully established from published source.",
+    "Removal": {
+      "value": "Pass",
+      "evidence": "CONTROL_CONSTRUCTION_V1_1.json C10-A/B, citing published §4.3/Figure 6 p.10; packet/sources/C10_author_mirror.pdf Figure 6 is preacceptance corroboration only, not authoritative published implementation evidence.",
+      "rationale": "The published MinHash string-encoder condition replaces the externally pretrained linguistic encoder with a lexical encoding."
+    },
+    "Preservation": {
+      "value": "Fail",
+      "evidence": "CONTROL_CONSTRUCTION_V1_1.json C10-A/B, citing published §4.3/Figure 6 p.10; packet/sources/C10_author_mirror.pdf Figure 6 is preacceptance corroboration only, not authoritative published implementation evidence.",
+      "rationale": "Random table-model weights replace Enriched YAGO4.5 table pretraining, an explicitly protected distinct component. The row therefore changes more than the tested string-encoder semantic use."
+    },
+    "Interface": {
+      "value": "Unclear",
+      "evidence": "CONTROL_CONSTRUCTION_V1_1.json C10-A/B, citing published §4.3/Figure 6 p.10; packet/sources/C10_author_mirror.pdf Figure 6 is preacceptance corroboration only, not authoritative published implementation evidence.",
+      "rationale": "The Ridge-on-embeddings output is named, but encoder dimension and numeric routing compatibility are not specified in authoritative published material available here."
+    },
+    "Admissible reference": {
+      "value": "No",
+      "rationale": "Removal=Pass; Preservation=Fail; Interface=Unclear; frozen rule therefore yields No."
+    }
+  }
+]

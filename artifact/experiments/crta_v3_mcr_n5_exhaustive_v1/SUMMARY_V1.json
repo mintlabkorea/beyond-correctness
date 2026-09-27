@@ -1,0 +1,185 @@
+{
+ "complete": true,
+ "monte_carlo_reps": 100000,
+ "n_cells": 60,
+ "results": {
+  "histgb": {
+   "additive": {
+    "P2_correct_vs_lesion_average": {
+     "ci95": [
+      0.25384978021353527,
+      0.3154597695177627
+     ],
+     "mean": 0.28524456702903217,
+     "n": 20,
+     "separated": true,
+     "win": 1.0
+    },
+    "two_draw_calibration": {
+     "absolute_q95_q99": [
+      0.048215923882020346,
+      0.06293924925430561
+     ],
+     "mean_cell_lesion_sd": 0.07327376554540962,
+     "original_two_draw_mean": -0.038773548594552884,
+     "signed_quantiles": [
+      -0.06308077821837103,
+      -0.04837393372302395,
+      0.048024324306631894,
+      0.06275360793023019
+     ],
+     "two_sided_tail_probability": 0.11632,
+     "within_preregistered_margin_0p05": true
+    }
+   },
+   "all_families_P2_separated": true,
+   "pairwise": {
+    "P2_correct_vs_lesion_average": {
+     "ci95": [
+      0.45214100241716393,
+      0.5436996941554603
+     ],
+     "mean": 0.4999822467390146,
+     "n": 20,
+     "separated": true,
+     "win": 1.0
+    },
+    "two_draw_calibration": {
+     "absolute_q95_q99": [
+      0.10488829017613384,
+      0.13659347218917497
+     ],
+     "mean_cell_lesion_sd": 0.1561590486185143,
+     "original_two_draw_mean": 0.10761400421481344,
+     "signed_quantiles": [
+      -0.13682858336966397,
+      -0.10536913746154286,
+      0.10429700901139137,
+      0.13631674298614158
+     ],
+     "two_sided_tail_probability": 0.04396,
+     "within_preregistered_margin_0p05": false
+    }
+   },
+   "sparse": {
+    "P2_correct_vs_lesion_average": {
+     "ci95": [
+      0.41662336201738254,
+      0.5206140049622314
+     ],
+     "mean": 0.4677550915831673,
+     "n": 20,
+     "separated": true,
+     "win": 1.0
+    },
+    "two_draw_calibration": {
+     "absolute_q95_q99": [
+      0.09269334895620877,
+      0.121333682768482
+     ],
+     "mean_cell_lesion_sd": 0.13681826676247336,
+     "original_two_draw_mean": -0.03288752221372067,
+     "signed_quantiles": [
+      -0.1207453267893494,
+      -0.09284382455951239,
+      0.09255997571892083,
+      0.12165076042480687
+     ],
+     "two_sided_tail_probability": 0.49047,
+     "within_preregistered_margin_0p05": true
+    }
+   }
+  },
+  "xgb": {
+   "additive": {
+    "P2_correct_vs_lesion_average": {
+     "ci95": [
+      0.2548609990651099,
+      0.3172094443701623
+     ],
+     "mean": 0.28597551308417374,
+     "n": 20,
+     "separated": true,
+     "win": 1.0
+    },
+    "two_draw_calibration": {
+     "absolute_q95_q99": [
+      0.048981834218120524,
+      0.06391043101190352
+     ],
+     "mean_cell_lesion_sd": 0.07403180948064256,
+     "original_two_draw_mean": -0.029670283608081473,
+     "signed_quantiles": [
+      -0.0639260253865845,
+      -0.04921779582482335,
+      0.048628442240677985,
+      0.0638791914718641
+     ],
+     "two_sided_tail_probability": 0.23617,
+     "within_preregistered_margin_0p05": true
+    }
+   },
+   "all_families_P2_separated": true,
+   "pairwise": {
+    "P2_correct_vs_lesion_average": {
+     "ci95": [
+      0.4516887331675865,
+      0.5429920465403784
+     ],
+     "mean": 0.4994522185865047,
+     "n": 20,
+     "separated": true,
+     "win": 1.0
+    },
+    "two_draw_calibration": {
+     "absolute_q95_q99": [
+      0.10377308038090001,
+      0.1353891575004223
+     ],
+     "mean_cell_lesion_sd": 0.15525575749873655,
+     "original_two_draw_mean": 0.10487630708918241,
+     "signed_quantiles": [
+      -0.13469654274692597,
+      -0.10406943247886993,
+      0.10349380177292182,
+      0.13571718512034614
+     ],
+     "two_sided_tail_probability": 0.04761,
+     "within_preregistered_margin_0p05": false
+    }
+   },
+   "sparse": {
+    "P2_correct_vs_lesion_average": {
+     "ci95": [
+      0.4182330601189765,
+      0.5205417978186527
+     ],
+     "mean": 0.4693722262635361,
+     "n": 20,
+     "separated": true,
+     "win": 1.0
+    },
+    "two_draw_calibration": {
+     "absolute_q95_q99": [
+      0.09258417378724201,
+      0.12185132044224022
+     ],
+     "mean_cell_lesion_sd": 0.1374016593042828,
+     "original_two_draw_mean": -0.02733169177922461,
+     "signed_quantiles": [
+      -0.12247315527417522,
+      -0.09275702572510304,
+      0.09239452605250292,
+      0.12118138308734636
+     ],
+     "two_sided_tail_probability": 0.56725,
+     "within_preregistered_margin_0p05": true
+    }
+   }
+  }
+ },
+ "verdicts": {
+  "N5_P1_correct_beats_finite_lesion_average_both_backbones": true,
+  "N5_P2_original_draws_within_margin_all": false
+ }
+}

@@ -1,0 +1,76 @@
+{
+ "arms": [
+  "a00_base",
+  "a01_columns",
+  "a10_stage",
+  "a11_stage_columns"
+ ],
+ "auroc": {
+  "256": {
+   "a00_base": 0.6792474126802244,
+   "a01_columns": 0.6775334500227393,
+   "a10_stage": 0.5799003340880851,
+   "a11_stage_columns": 0.6089351582483752
+  }
+ },
+ "backbone": "xgboost_hist_d6_n300_regression_ranked",
+ "benchmark_id": "std_cross_nh2kn_shared_anchorreset_fewshot_v1",
+ "feature_set": "stage_factorial_all_v1",
+ "m_axis": "source_only_fork_v1",
+ "metric": "auroc_vs_documented_target_binary (higher is better)",
+ "n_eval": 8864,
+ "n_pool": 15492,
+ "n_source": 68567,
+ "pl_columns_permutation": {
+  "dbp": "weight_kg",
+  "glucose": "hba1c",
+  "hba1c": "waist_cm",
+  "height_cm": "total_cholesterol",
+  "sbp": "height_cm",
+  "total_cholesterol": "glucose",
+  "triglycerides": "dbp",
+  "waist_cm": "triglycerides",
+  "weight_kg": "sbp"
+ },
+ "pl_relation_pairs": [
+  [
+   "wbc",
+   "creatinine"
+  ],
+  [
+   "rbc",
+   "current_smoking_status"
+  ],
+  [
+   "dbp",
+   "sex"
+  ],
+  [
+   "wbc",
+   "total_cholesterol"
+  ],
+  [
+   "education_level",
+   "age"
+  ],
+  [
+   "current_smoking_status",
+   "height_cm"
+  ]
+ ],
+ "primary_k": 256,
+ "seed": 57,
+ "target": "asthma_history",
+ "target_cohort": "knhanes",
+ "wall_seconds": 31.0,
+ "wrong_label_maps": {
+  "source": {
+   "2.0": 0.0,
+   "7.0": 1.0
+  },
+  "target": {
+   "0.0": 1.0,
+   "1.0": 0.0
+  }
+ }
+}

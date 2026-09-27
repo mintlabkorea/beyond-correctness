@@ -1,0 +1,270 @@
+# W5 strict-content recoding v2
+
+Only content claims were recoded. Source windows, utility claims and original support codes are unchanged. Strict No means no claim of dependence on PARTICULAR supplied semantic content; it does not deny a weaker use claim.
+
+| Claim | Supported | None | Unclear |
+|---|---:|---:|---:|
+| Yes | 1 | 2 | 3 |
+| No | 0 | 16 | 0 |
+| Unclear | 0 | 3 | 0 |
+
+Pre-adjudication agreement: 25/25; unweighted Cohen kappa: 1.0.
+
+No independence-based confidence interval is claimed. Separate fresh same-model AI contexts are not human raters. Adjudication was performed before support merge. TARTE publication-version uncertainty remains unresolved.
+
+Utility remains: 11 explicit claims, 2 Matched, 6 Mismatch, 3 support-Indeterminate; 10 Not claimed and 4 claim-Unclear.
+
+The main claim_text/rationale columns now concern STRICT CONTENT ONLY. Original v1 evidence is retained in legacy_claim_text/legacy_claim_location/legacy_rationale for the unchanged utility coding. Historical utility coder columns are not results from the new content-only coders.
+
+## Comparison-level evidence
+
+### C01-A — LIFT
+
+Old weak claim: Yes; new strict claim: Yes; original support: Unclear; match: Indeterminate.
+
+> Third, if we use similar prompts with shuffled feature names (Shuffled-Names I, II), then the performance of LIFT drops by a significant margin. These results imply that the aforementioned performance improvements are indeed due to proper prompting with correct feature/value association.
+
+C01-A-W3, PDF p. 8, lines 454–462
+
+The interpretation expressly attributes improvements to correct feature/value association, specifying the particular correspondence of supplied names and values. The immediately preceding reference to Shuffled-Names I, II includes format I, and “These results” links the joint interpretation to it. The stated benefit excludes CMC. This decision follows the interpretation, not the fact that names were shuffled.
+
+### C01-B — LIFT
+
+Old weak claim: Yes; new strict claim: Yes; original support: Unclear; match: Indeterminate.
+
+> Third, if we use similar prompts with shuffled feature names (Shuffled-Names I, II), then the performance of LIFT drops by a significant margin. These results imply that the aforementioned performance improvements are indeed due to proper prompting with correct feature/value association.
+
+C01-B-W3, PDF p. 8, lines 454–462
+
+The interpretation expressly attributes improvements to correct feature/value association, specifying the particular correspondence of supplied names and values. The immediately preceding reference to Shuffled-Names I, II includes format II, and “These results” links the joint interpretation to it. The stated benefit excludes CMC. This decision follows the interpretation, not the fact that names were shuffled.
+
+### C01-C — LIFT
+
+Old weak claim: Yes; new strict claim: Yes; original support: None; match: Mismatch.
+
+> We compare classification accuracy (") of LIFT/GPT[NUM] when feature names provided in the target dataset are and are not incorporated into the prompts. | Second, we observe that correctly incorporating feature names helps boost the performances of LIFT for datasets except for CMC. Third, if we use similar prompts with shuffled feature names (Shuffled-Names I, II), then the performance of LIFT drops by a significant margin. These results imply that the aforementioned performance improvements are indeed due to proper prompting with correct feature/value association.
+
+C01-C-W2, PDF p. 7, lines 435–444; C01-C-W3, PDF p. 8, lines 454–462
+
+The caption explicitly includes incorporating versus not incorporating names. The paragraph then identifies improvements from correctly incorporating names and attributes the “aforementioned performance improvements” to “correct feature/value association.” That explicit backward reference makes the particular-correspondence interpretation a group claim encompassing the format I names-versus-no-names comparison. The qualification except for CMC remains. The removal operation itself is not the basis for Yes.
+
+### C01-D — LIFT
+
+Old weak claim: Yes; new strict claim: Yes; original support: None; match: Mismatch.
+
+> We compare classification accuracy (") of LIFT/GPT[NUM] when feature names provided in the target dataset are and are not incorporated into the prompts. | Second, we observe that correctly incorporating feature names helps boost the performances of LIFT for datasets except for CMC. Third, if we use similar prompts with shuffled feature names (Shuffled-Names I, II), then the performance of LIFT drops by a significant margin. These results imply that the aforementioned performance improvements are indeed due to proper prompting with correct feature/value association.
+
+C01-D-W2, PDF p. 7, lines 435–444; C01-D-W3, PDF p. 8, lines 454–462
+
+The caption explicitly includes incorporating versus not incorporating names. The paragraph then identifies improvements from correctly incorporating names and attributes the “aforementioned performance improvements” to “correct feature/value association.” That explicit backward reference makes the particular-correspondence interpretation a group claim encompassing the format II names-versus-no-names comparison. The qualification except for CMC remains. The removal operation itself is not the basis for Yes.
+
+### C03-A — TabLLM
+
+Old weak claim: Yes; new strict claim: Yes; original support: Supported; match: Matched.
+
+> The same applies to the list serialization with permuted feature names. This indicates that if enough training examples are available, the serialization approach does not matter, but that TabLLM relies on information from the feature names in the zero-shot and few-shot regime, and also relies on the association of the names with the correct values.
+
+C03-A-W4, PDF p. 6, lines 542–557
+
+The named permuted-feature-name observation is followed by the explicit inference that TabLLM relies on the association of names with correct values. This is a claim about the particular supplied name/value correspondence in the zero/few-shot regime, with adaptation possible given more examples. Attribution to the named permutation is clear even though attribution of this association clause to the earlier values-only comparison is not.
+
+### C03-B — TabLLM
+
+Old weak claim: Yes; new strict claim: Unclear; original support: None; match: Indeterminate.
+
+> Using only feature values had a poor performance for zero and very few shots, but the performance equalized with more training examples. The same applies to the list serialization with permuted feature names. This indicates that if enough training examples are available, the serialization approach does not matter, but that TabLLM relies on information from the feature names in the zero-shot and few-shot regime, and also relies on the association of the names with the correct values.
+
+C03-B-W4, PDF p. 6, lines 542–557
+
+The values-only result clearly participates in an inference about reliance on information from feature names, which is only weak use under this codebook. The stronger correct-name/value-association clause follows a separately named permutation result. “This indicates” could group both results, while “and also” could introduce the distinct inference specifically licensed by permutation. The wording does not settle whether the particular-correspondence claim is attributed to this values-only unit. Retain Unclear for attribution, rather than infer Yes from neighboring content or No from removal.
+
+### C03-C — TabLLM
+
+Old weak claim: Yes; new strict claim: Yes; original support: Unclear; match: Indeterminate.
+
+> The discrepancy for zero and very few shots was even stronger for List Permuted Values, which suggests that TabLLM relies more on the correct values than feature names. Again, the performance equalized for more examples showing the ability of TabLLM to learn new associations if enough training data is available.
+
+C03-C-W4, PDF p. 6, lines 542–557
+
+The authors name List Permuted Values and expressly infer greater reliance on correct values than feature names, then interpret equalization with more training examples as learning new associations. The linked interpretation concerns the particular supplied value associations, not just availability of a value component. Its scope is zero/very few shots and is qualified by adaptation with more examples.
+
+### C04-A — PLATO
+
+Old weak claim: Yes; new strict claim: No; original support: None; match: Not claimed.
+
+> We find that both the feature nodes and the broader knowledge nodes are important for PLATO’s performance. Using the “feature-only KG” configuration of PLATO improves performance vs the “no KG” configuration ([NUM] vs [NUM]). Using the “full KG” configuration further improves performance vs the “feature-only KG” configuration ([NUM] vs [NUM]). PLATO’s performance thus relies on both the feature information and the broader domain information in the KG.
+
+C04-A-W3, PDF p. 9, lines 509–513
+
+The caption and full/feature-only/no-KG paragraph claim importance of, and reliance on, feature information and broader domain information. The supplied linked summaries also concern component importance. These are weak information-use and benefit interpretations; none identifies dependence on the particular supplied meanings or associations. The group wording is explicit, but its strength does not meet the strict definition.
+
+### C04-B — PLATO
+
+Old weak claim: Yes; new strict claim: No; original support: None; match: Not claimed.
+
+> We find that both the feature nodes and the broader knowledge nodes are important for PLATO’s performance. Using the “feature-only KG” configuration of PLATO improves performance vs the “no KG” configuration ([NUM] vs [NUM]). Using the “full KG” configuration further improves performance vs the “feature-only KG” configuration ([NUM] vs [NUM]). PLATO’s performance thus relies on both the feature information and the broader domain information in the KG.
+
+C04-B-W3, PDF p. 9, lines 509–513
+
+The caption and full/feature-only/no-KG paragraph claim importance of, and reliance on, feature information and broader domain information. The supplied linked summaries also concern component importance. These are weak information-use and benefit interpretations; none identifies dependence on the particular supplied meanings or associations. The group wording is explicit, but its strength does not meet the strict definition.
+
+### C04-C — PLATO
+
+Old weak claim: No; new strict claim: No; original support: None; match: Not claimed.
+
+> We conduct an ablation study to assess PLATO’s robustness to missing edges in the KG. We randomly remove edges from the KG and measure PLATO’s performance on the BRCA dataset. We observe that with only [NUM]% of the KG’s edges, PLATO still has [NUM]% of the performance as PLATO with [NUM]% of the KG’s edges ([NUM] vs. [NUM]) (Table [NUM]).
+
+C04-C-W2, PDF p. 9, lines 514–520
+
+The local paragraph and linked summaries interpret the edge-removal result as robustness to missing information and retained performance. They do not assert that particular edge meanings or semantic relations determine the effect. Neighboring conclusions about non-feature nodes or trainable components belong to different interventions.
+
+### C05-A — CARTE
+
+Old weak claim: Yes; new strict claim: No; original support: None; match: Not claimed.
+
+> Moreover, the performance gap between CARTE and Minhash confirm that string-level models, that also capture semantic similarity, is important and the use of language models are pivotal for effectively using external information, especially when information given in the table is limited.
+
+C05-A-W2, PDF p. 21, lines 1358–1368
+
+The explicit CARTE/Minhash interpretation concerns the importance of string encoders capturing semantic similarity and language models for effective use of external information, especially when table information is limited. This is encoder-importance and weak-use language. The authors do not interpret dependence on which particular meaning or semantic assignment is supplied; replacing an encoder does not itself establish that stronger claim.
+
+### C05-B — CARTE
+
+Old weak claim: Unclear; new strict claim: No; original support: None; match: Not claimed.
+
+> In particular, it is interesting to observe the significant decrease with the exclusion of edge information and the attention layer. Since both are essential for leveraging context within a given table, it implies that capturing context is pivotal for attaining the strong performances in predictions.
+
+C05-B-W2, PDF p. 21, lines 1358–1368
+
+The common paragraph expressly groups edge information with attention and interprets their contribution as capturing within-table context. That is component/context-use language, without a particular semantic meaning, assignment, or correspondence determining the result. The separately worded Minhash inference cannot be transferred to this unit.
+
+### C05-C — CARTE
+
+Old weak claim: Unclear; new strict claim: No; original support: None; match: Not claimed.
+
+> In particular, it is interesting to observe the significant decrease with the exclusion of edge information and the attention layer. Since both are essential for leveraging context within a given table, it implies that capturing context is pivotal for attaining the strong performances in predictions.
+
+C05-C-W2, PDF p. 21, lines 1358–1368
+
+The common paragraph expressly groups edge information with attention and interprets their contribution as capturing within-table context. That is component/context-use language, without a particular semantic meaning, assignment, or correspondence determining the result. The separately worded Minhash inference cannot be transferred to this unit.
+
+### C06-A — FeatLLM
+
+Old weak claim: Yes; new strict claim: No; original support: None; match: Not claimed.
+
+> On the other hand, the effect of feature descriptions and reasoning instructions are high when the number of shot is small. This suggests that the efficient utilization of the prior knowledge of LLM becomes crucial for performance improvements.
+
+C06-A-W2, PDF p. 8, lines 684–696
+
+The interpretation groups feature descriptions and reasoning instructions and explains their low-shot benefit as efficient utilization of prior LLM knowledge. This is weak knowledge use and component benefit. It does not assert that the effect depends on the particular feature-description meanings or their assignments; the tuning and ensemble interpretations concern other components.
+
+### C07-A — TabuLa-8B
+
+Old weak claim: Yes; new strict claim: No; original support: None; match: Not claimed.
+
+> First, for small number of shots, the semantically-meaningful headers provide a performance benefit: | We hypothesize that, as the number of shots grows, the model is increasingly utilizing the values provided in the shots (and their distribution) and is less reliant on the keys for providing information about the task. | Collectively, the results of this ablation study suggest that TABU L A [NUM]B is robust to the semantic content of the headers, and that TABU L A [NUM]B is capable of providing effective tabular data predictions even in the absence of rich column headers.
+
+C07-A-W5, PDF p. 26, lines 1655–1666; C07-A-W5, PDF p. 26, lines 1655–1666; C07-A-W6, PDF p. 26, lines 1667–1669
+
+The complete local and linked main windows interpret the ablation as low-shot benefit from informative headers, less reliance on keys with additional shots, and robustness without rich headers. Even the conclusion mentioning “semantic content” asserts robustness, not dependence on which particular meaning is supplied. The intervention description and loss-of-information attribution do not add a particular-content interpretation.
+
+### C08-A — ConTextTab
+
+Old weak claim: Yes; new strict claim: No; original support: None; match: Not claimed.
+
+> As expected, we observe a significant drop in performance when discarding semantics completely or when using the conventional string encoders from the skrub library. Hence, ConTextTab successfully leverages the semantic content of features.
+
+C08-A-W2, PDF p. 8, lines 471–479
+
+The CARTE-only feature-encoding paragraph explicitly includes the ordinal variant in the group and concludes that ConTextTab leverages semantic content of features. Under the strict codebook this is a weak semantic-use claim, even with a reported performance drop. The group conclusion does not interpret dependence on particular supplied meanings, semantic assignments, or correct correspondences. The separate column-name interventions do not change this scope.
+
+### C08-B — ConTextTab
+
+Old weak claim: Yes; new strict claim: No; original support: None; match: Not claimed.
+
+> As expected, we observe a significant drop in performance when discarding semantics completely or when using the conventional string encoders from the skrub library. Hence, ConTextTab successfully leverages the semantic content of features.
+
+C08-B-W2, PDF p. 8, lines 471–479
+
+The CARTE-only feature-encoding paragraph explicitly includes the MinHash variant in the group and concludes that ConTextTab leverages semantic content of features. Under the strict codebook this is a weak semantic-use claim, even with a reported performance drop. The group conclusion does not interpret dependence on particular supplied meanings, semantic assignments, or correct correspondences. The separate column-name interventions do not change this scope.
+
+### C08-C — ConTextTab
+
+Old weak claim: Yes; new strict claim: No; original support: None; match: Not claimed.
+
+> As expected, we observe a significant drop in performance when discarding semantics completely or when using the conventional string encoders from the skrub library. Hence, ConTextTab successfully leverages the semantic content of features.
+
+C08-C-W2, PDF p. 8, lines 471–479
+
+The CARTE-only feature-encoding paragraph explicitly includes the AutoGluon variant in the group and concludes that ConTextTab leverages semantic content of features. Under the strict codebook this is a weak semantic-use claim, even with a reported performance drop. The group conclusion does not interpret dependence on particular supplied meanings, semantic assignments, or correct correspondences. The separate column-name interventions do not change this scope.
+
+### C08-D — ConTextTab
+
+Old weak claim: Yes; new strict claim: No; original support: None; match: Not claimed.
+
+> As expected, we observe a significant drop in performance when discarding semantics completely or when using the conventional string encoders from the skrub library. Hence, ConTextTab successfully leverages the semantic content of features.
+
+C08-D-W2, PDF p. 8, lines 471–479
+
+The CARTE-only feature-encoding paragraph explicitly includes the Gap variant in the group and concludes that ConTextTab leverages semantic content of features. Under the strict codebook this is a weak semantic-use claim, even with a reported performance drop. The group conclusion does not interpret dependence on particular supplied meanings, semantic assignments, or correct correspondences. The separate column-name interventions do not change this scope.
+
+### C08-E — ConTextTab
+
+Old weak claim: Yes; new strict claim: No; original support: None; match: Not claimed.
+
+> Dropping column name semantics indeed results in a performance loss of about [NUM]% in accuracy and [NUM]% in R[NUM] score. | Overall, ConTextTab successfully integrated and leverages semantics, both present in the table’s features as well as those potentially contained in the table column names.
+
+C08-E-W3, PDF p. 8, lines 480–489; C08-E-W4, PDF p. 8, lines 490–491
+
+The name-removal sentence reports a performance loss; the shared closing paragraph says the model integrates and leverages semantics in names and features. These are component benefit and weak semantic-use interpretations. No linked text states that this comparison shows dependence on the particular meaning of a header or its correct association with values.
+
+### C08-F — ConTextTab
+
+Old weak claim: Yes; new strict claim: No; original support: None; match: Not claimed.
+
+> Further enriching column header semantics slightly boosts performance, resulting in a slightly better rank, however with a win rate of [NUM]% at a p-value of [NUM] this is not statistically significant. | Overall, ConTextTab successfully integrated and leverages semantics, both present in the table’s features as well as those potentially contained in the table column names.
+
+C08-F-W3, PDF p. 8, lines 480–489; C08-F-W4, PDF p. 8, lines 490–491
+
+The specific enrichment interpretation is a slight benefit expressly qualified as not statistically significant. The common conclusion adds only that semantics are integrated and leveraged. Neither interprets dependence on the particular contextual-description content supplied. The stronger-sounding feature-encoder discussion is a separate intervention group and is also only semantic-use wording.
+
+### C09-A — TabSTAR
+
+Old weak claim: No; new strict claim: No; original support: None; match: Not claimed.
+
+> The addition of the quantile information on top of the bin seems to have limited impact, although marginally winning on the average performance.
+
+C09-A-W4, PDF p. 52, lines 3103–3107
+
+The exact quantile increment is interpreted as having limited impact and a marginal average advantage. No particular quantile meaning or semantic assignment is claimed to determine the effect. The broader numerical-information conclusion primarily contrasts the two numerical variants with Name and cannot replace this unit-specific interpretation.
+
+### C09-B — TabSTAR
+
+Old weak claim: No; new strict claim: No; original support: None; match: Not claimed.
+
+> As demonstrated in Table [NUM], our findings reveal that incorporating numerical information significantly enhances performance, highlighting the importance of balancing numerical precision with a representation format that aligns with the language model’s parametric knowledge. | highlighting the importance of incorporating richer numerical verbalizations beyond relying solely on the column name.
+
+C09-B-W1, PDF p. 9, lines 542–553; C09-B-W4, PDF p. 52, lines 3103–3107
+
+The two numerical variants versus Name are explicitly grouped, and the authors interpret the results as benefit from numerical information and a representation format aligned with model knowledge. This concerns inclusion and representation quality, not dependence on a particular supplied numerical meaning, direction, or correspondence. Appendix qualifications about marginal gains and failure on some datasets are retained; they do not convert the claim into particular-content dependence.
+
+### C10-A — TARTE
+
+Old weak claim: Unclear; new strict claim: Unclear; original support: None; match: Indeterminate.
+
+> In addition, without datetime detection or column information, properly pre-trained weights still provide competitive representations. This suggests that TARTE can perform well even on tables without meaningful column names.
+
+C10-A-W5, PDF p. 10, lines 622–629
+
+In the supplied mirror, the directly linked column-information passage asserts competitive representations and good performance without meaningful names: a robustness claim, not particular-content dependence. However, the packet identifies this text as arXiv:2505.14415v2 dated 30 June 2025, with accepted-publication wording equivalence unverified. Thus the original publication claim cannot be decided from these windows. Retain source-version Unclear, not an absent published claim; broader pretraining conclusions are not transferred to column removal.
+
+### C10-B — TARTE
+
+Old weak claim: Unclear; new strict claim: Unclear; original support: None; match: Indeterminate.
+
+> First, comparing MinHash to TARTE reveals the importance of FastText. A simple use of FastText with random (non pre-trained) weights already exhibit relatively strong performances. As FastText captures semantic similarities, its combination with a suitable transformer architecture (subsection [NUM] or CARTE) forms an inductive bias of smoothness: similar tables have similar representations.
+
+C10-B-W3, PDF p. 9, lines 590–593
+
+The supplied mirror explicitly compares MinHash with TARTE and interprets FastText importance via semantic similarity and smooth representations. This is encoder/semantic-use language, while the broader figure also discusses pretraining benefits; neither explicitly makes a particular-content interpretation for the fixed composite comparison. More decisively, this is arXiv:2505.14415v2 dated 30 June 2025, not verified as the accepted publication wording. Retain source-version Unclear without asserting absence of a published strict claim or isolating an encoder effect from this composite comparison.
+

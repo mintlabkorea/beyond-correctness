@@ -1,0 +1,324 @@
+{
+ "D1_columns_vs_is_target": {
+  "best_target": "waist_cm",
+  "ci95": [
+   0.12666227245979847,
+   0.29178251638937686
+  ],
+  "drop_best_target_mean": 0.17924308685935197,
+  "mean_gain": 0.21029078599453402,
+  "n_pairs": 60,
+  "per_target_mean": {
+   "dbp": 0.22706222840920515,
+   "glucose": 0.2920536982226331,
+   "sbp": 0.21650887986621906,
+   "total_cholesterol": 0.05961428766650787,
+   "triglycerides": 0.10097634013219477,
+   "waist_cm": 0.3655292816704441
+  },
+  "separated": true,
+  "win_rate": 1.0
+ },
+ "D2_grouping_vs_is_target": {
+  "best_target": "waist_cm",
+  "ci95": [
+   0.12242742043257286,
+   0.28847290929501107
+  ],
+  "drop_best_target_mean": 0.18036932620251103,
+  "mean_gain": 0.20828629738415128,
+  "n_pairs": 60,
+  "per_target_mean": {
+   "dbp": 0.23585348660488376,
+   "glucose": 0.2997449842288308,
+   "sbp": 0.2227654944246741,
+   "total_cholesterol": 0.05861021220018593,
+   "triglycerides": 0.08487245355398082,
+   "waist_cm": 0.34787115329235246
+  },
+  "separated": true,
+  "win_rate": 1.0
+ },
+ "D3_measurement_vs_is_target": {
+  "best_target": "waist_cm",
+  "ci95": [
+   0.12225931870267716,
+   0.28655805743855894
+  ],
+  "drop_best_target_mean": 0.17892177316145755,
+  "mean_gain": 0.2072013561871745,
+  "n_pairs": 60,
+  "per_target_mean": {
+   "dbp": 0.22287264451165778,
+   "glucose": 0.299176558634794,
+   "sbp": 0.22557764759019144,
+   "total_cholesterol": 0.05941785121713165,
+   "triglycerides": 0.08756416385351293,
+   "waist_cm": 0.34859927131575935
+  },
+  "separated": true,
+  "win_rate": 1.0
+ },
+ "R1_columns_vs_placebo": {
+  "best_target": "glucose",
+  "ci95": [
+   0.028501820082445097,
+   0.10799204555489215
+  ],
+  "drop_best_target_mean": 0.045247499229177056,
+  "mean_gain": 0.0646480490073551,
+  "n_pairs": 60,
+  "per_target_mean": {
+   "dbp": 0.010801598549524116,
+   "glucose": 0.16165079789824532,
+   "sbp": 0.05427834241189492,
+   "total_cholesterol": 0.020336551528781534,
+   "triglycerides": 0.05107800624120101,
+   "waist_cm": 0.08974299741448372
+  },
+  "separated": true,
+  "win_rate": 0.9666666666666667
+ },
+ "R2_grouping_vs_placebo": {
+  "best_target": "sbp",
+  "ci95": [
+   -0.003848396989993944,
+   0.0027978130024848475
+  ],
+  "drop_best_target_mean": -0.0011522391589991355,
+  "mean_gain": -0.00048215787584714637,
+  "n_pairs": 60,
+  "per_target_mean": {
+   "dbp": -0.0003221180904773191,
+   "glucose": 0.0011943275269555077,
+   "sbp": 0.002868248539912799,
+   "total_cholesterol": 0.0020219760021092047,
+   "triglycerides": -0.002338734720485236,
+   "waist_cm": -0.006316646513097835
+  },
+  "separated": false,
+  "win_rate": 0.48333333333333334
+ },
+ "R3_measurement_vs_placebo": {
+  "best_target": "waist_cm",
+  "ci95": [
+   -0.005328444512366421,
+   0.007201261484485482
+  ],
+  "drop_best_target_mean": 0.0004400412105865592,
+  "mean_gain": 0.0016790467196180537,
+  "n_pairs": 60,
+  "per_target_mean": {
+   "dbp": -0.006750099935168108,
+   "glucose": -0.009504161608039996,
+   "sbp": 0.00660584536090435,
+   "total_cholesterol": 0.0060181232691864485,
+   "triglycerides": 0.005830498966050102,
+   "waist_cm": 0.007874074264775526
+  },
+  "separated": false,
+  "win_rate": 0.6333333333333333
+ },
+ "ablation_gate_fired": false,
+ "bootstrap": {
+  "hierarchy": "targets then seeds",
+  "reps": 10000,
+  "seed": 20260819
+ },
+ "experiment_root": "experiments/crta_v3_m1m2_layer_ladder_v1",
+ "is_target_vs_base": {
+  "best_target": "waist_cm",
+  "ci95": [
+   -0.005591581764025372,
+   0.018382904541124002
+  ],
+  "drop_best_target_mean": -0.0017210301695196484,
+  "mean_gain": 0.0045913511995868996,
+  "n_pairs": 60,
+  "per_target_mean": {
+   "dbp": 0.003477857513400062,
+   "glucose": 9.137545708082229e-05,
+   "sbp": -0.005811072016121721,
+   "total_cholesterol": -0.0064373308794897,
+   "triglycerides": 7.401907753229464e-05,
+   "waist_cm": 0.03615325804511964
+  },
+  "win_rate": 0.48333333333333334
+ },
+ "loo_columns_vs_full": {
+  "best_target": "waist_cm",
+  "ci95": [
+   0.0027026829530159774,
+   0.12255584000267096
+  ],
+  "drop_best_target_mean": 0.010284006560427161,
+  "mean_gain": 0.04695243912039589,
+  "n_pairs": 60,
+  "per_target_mean": {
+   "dbp": 0.009665468260880961,
+   "glucose": 0.022030228034320986,
+   "sbp": -0.0012213944803078137,
+   "total_cholesterol": -0.005227811074214783,
+   "triglycerides": 0.026173542061456456,
+   "waist_cm": 0.23029460192023957
+  },
+  "win_rate": 0.7333333333333333
+ },
+ "loo_grouping_vs_full": {
+  "best_target": "glucose",
+  "ci95": [
+   -0.007862100057390421,
+   0.013074598488533672
+  ],
+  "drop_best_target_mean": -0.0006921313210682023,
+  "mean_gain": 0.0028820626942540977,
+  "n_pairs": 60,
+  "per_target_mean": {
+   "dbp": 0.012985837797375166,
+   "glucose": 0.020753032770865598,
+   "sbp": 0.00854170820181167,
+   "total_cholesterol": 0.00025250807721571844,
+   "triglycerides": -0.008182557222720165,
+   "waist_cm": -0.017058153459023402
+  },
+  "win_rate": 0.5666666666666667
+ },
+ "loo_measurement_vs_full": {
+  "best_target": "sbp",
+  "ci95": [
+   -0.007143475244664808,
+   0.002767511350078139
+  ],
+  "drop_best_target_mean": -0.0018643600694756045,
+  "mean_gain": -0.001084941196976786,
+  "n_pairs": 60,
+  "per_target_mean": {
+   "dbp": -0.012980842093225965,
+   "glucose": -0.0005684255940367588,
+   "sbp": 0.002812153165517306,
+   "total_cholesterol": 0.000807639016945716,
+   "triglycerides": 0.0026917102995321017,
+   "waist_cm": 0.0007281180234068818
+  },
+  "win_rate": 0.5166666666666667
+ },
+ "marginal_columns": {
+  "best_target": "waist_cm",
+  "ci95": [
+   0.12360871248826778,
+   0.30814873909360485
+  ],
+  "drop_best_target_mean": 0.17752205668983234,
+  "mean_gain": 0.2148821371941209,
+  "n_pairs": 60,
+  "per_target_mean": {
+   "dbp": 0.23054008592260522,
+   "glucose": 0.29214507367971404,
+   "sbp": 0.21069780785009734,
+   "total_cholesterol": 0.05317695678701817,
+   "triglycerides": 0.10105035920972708,
+   "waist_cm": 0.4016825397155637
+  },
+  "win_rate": 1.0
+ },
+ "marginal_grouping": {
+  "best_target": "dbp",
+  "ci95": [
+   -0.011565364552516487,
+   0.006618010982616267
+  ],
+  "drop_best_target_mean": -0.004163637971594969,
+  "mean_gain": -0.0020044886103827097,
+  "n_pairs": 60,
+  "per_target_mean": {
+   "dbp": 0.008791258195678586,
+   "glucose": 0.007691286006197617,
+   "sbp": 0.006256614558455042,
+   "total_cholesterol": -0.0010040754663219408,
+   "triglycerides": -0.016103886578213943,
+   "waist_cm": -0.01765812837809162
+  },
+  "win_rate": 0.5
+ },
+ "marginal_measurement": {
+  "best_target": "sbp",
+  "ci95": [
+   -0.007143475244664808,
+   0.002767511350078139
+  ],
+  "drop_best_target_mean": -0.0018643600694756045,
+  "mean_gain": -0.001084941196976786,
+  "n_pairs": 60,
+  "per_target_mean": {
+   "dbp": -0.012980842093225965,
+   "glucose": -0.0005684255940367588,
+   "sbp": 0.002812153165517306,
+   "total_cholesterol": 0.000807639016945716,
+   "triglycerides": 0.0026917102995321017,
+   "waist_cm": 0.0007281180234068818
+  },
+  "win_rate": 0.5166666666666667
+ },
+ "member_drop_by_target": {
+  "dbp": {
+   "blood_lipid_measurements": [],
+   "body_measurements": [],
+   "diabetes_test_measurements": [],
+   "first_reading_blood_pressure": [
+    "dbp"
+   ]
+  },
+  "glucose": {
+   "blood_lipid_measurements": [],
+   "body_measurements": [],
+   "diabetes_test_measurements": [
+    "glucose"
+   ],
+   "first_reading_blood_pressure": []
+  },
+  "sbp": {
+   "blood_lipid_measurements": [],
+   "body_measurements": [],
+   "diabetes_test_measurements": [],
+   "first_reading_blood_pressure": [
+    "sbp"
+   ]
+  },
+  "total_cholesterol": {
+   "blood_lipid_measurements": [
+    "total_cholesterol"
+   ],
+   "body_measurements": [],
+   "diabetes_test_measurements": [],
+   "first_reading_blood_pressure": []
+  },
+  "triglycerides": {
+   "blood_lipid_measurements": [
+    "triglycerides"
+   ],
+   "body_measurements": [],
+   "diabetes_test_measurements": [],
+   "first_reading_blood_pressure": []
+  },
+  "waist_cm": {
+   "blood_lipid_measurements": [],
+   "body_measurements": [
+    "waist_cm"
+   ],
+   "diabetes_test_measurements": [],
+   "first_reading_blood_pressure": []
+  }
+ },
+ "metric": "query_sd_normalized_rmse (lower is better); gain = reference - arm",
+ "n_cells": 60,
+ "primary_k": 256,
+ "relation_layer": "not evaluable on these corpora -- declared boundary, see preregistration section 0",
+ "targets_present": [
+  "dbp",
+  "glucose",
+  "sbp",
+  "total_cholesterol",
+  "triglycerides",
+  "waist_cm"
+ ]
+}

@@ -1,0 +1,95 @@
+{
+  "bootstrap": {
+    "extension": "endpoint clusters, paired directions, then seeds; base seed 20260820",
+    "focused": "targets then seeds; base seed 20260819",
+    "reps": 10000
+  },
+  "coverage_note": "Extension content contrasts use finite intended/wrong pairs; the frozen exact coverage gate still fails at cancer_history/kn2nh (4/10). Utility contrasts are finite.",
+  "folding": "Each arm AUROC A is transformed to max(A, 1-A) before contrasts.",
+  "machine_readable_outputs": [
+    "measurement_folded_sensitivity.csv",
+    "endpoint_arm_aurocs.csv",
+    "endpoint_contrasts.csv"
+  ],
+  "max_raw_parent_point_error": 0.0,
+  "results": [
+    {
+      "ci95_high": 0.43140215050565706,
+      "ci95_low": 0.144812973513346,
+      "estimand": "intended_minus_wrong_content",
+      "estimate": 0.2915328684575781,
+      "n_seed_cells": 30,
+      "panel": "focused_3_endpoint",
+      "scale": "raw"
+    },
+    {
+      "ci95_high": 0.5530443869958723,
+      "ci95_low": 0.20249609808284305,
+      "estimand": "intended_minus_reference_utility",
+      "estimate": 0.38448125473696143,
+      "n_seed_cells": 30,
+      "panel": "focused_3_endpoint",
+      "scale": "raw"
+    },
+    {
+      "ci95_high": 0.24949341703223915,
+      "ci95_low": 0.07275295030131157,
+      "estimand": "intended_minus_wrong_content",
+      "estimate": 0.1629826039295147,
+      "n_seed_cells": 30,
+      "panel": "focused_3_endpoint",
+      "scale": "folded_cellwise"
+    },
+    {
+      "ci95_high": 0.3845524386474351,
+      "ci95_low": 0.09003051562188175,
+      "estimand": "intended_minus_reference_utility",
+      "estimate": 0.2757304914019866,
+      "n_seed_cells": 30,
+      "panel": "focused_3_endpoint",
+      "scale": "folded_cellwise"
+    },
+    {
+      "ci95_high": 0.3086711548182616,
+      "ci95_low": 0.18240808666115557,
+      "estimand": "intended_minus_wrong_content",
+      "estimate": 0.24940841380427212,
+      "n_seed_cells": 187,
+      "panel": "extension_10_endpoint_bidirectional",
+      "scale": "raw"
+    },
+    {
+      "ci95_high": 0.2939073411068459,
+      "ci95_low": 0.1101766149508187,
+      "estimand": "intended_minus_reference_utility",
+      "estimate": 0.19734726316652948,
+      "n_seed_cells": 200,
+      "panel": "extension_10_endpoint_bidirectional",
+      "scale": "raw"
+    },
+    {
+      "ci95_high": 0.17031799344336132,
+      "ci95_low": 0.09440574999932365,
+      "estimand": "intended_minus_wrong_content",
+      "estimate": 0.13349656038605134,
+      "n_seed_cells": 187,
+      "panel": "extension_10_endpoint_bidirectional",
+      "scale": "folded_cellwise"
+    },
+    {
+      "ci95_high": 0.22492077666497037,
+      "ci95_low": 0.08930402218359795,
+      "estimand": "intended_minus_reference_utility",
+      "estimate": 0.15596064043401073,
+      "n_seed_cells": 200,
+      "panel": "extension_10_endpoint_bidirectional",
+      "scale": "folded_cellwise"
+    }
+  ],
+  "sources": [
+    "experiments/crta_v3_survey_label_panel_v1",
+    "experiments/crta_v3_survey_label_panel_endpoint_expansion_nh2kn_v1",
+    "experiments/crta_v3_survey_label_panel_endpoint_expansion_kn2nh_v1"
+  ],
+  "status": "complete"
+}

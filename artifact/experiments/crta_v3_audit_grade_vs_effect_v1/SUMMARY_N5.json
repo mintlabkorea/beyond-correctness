@@ -1,0 +1,394 @@
+{
+ "analysis": "N5_audit_grade_vs_effect_size",
+ "audit_table_rows": [
+  {
+   "audit_status": "Direct, qualified",
+   "limitation": "Age-related SBP trends are marginal population statements and do not establish a universal conditional constraint.",
+   "prior": "+",
+   "relation": "Age -> SBP"
+  },
+  {
+   "audit_status": "Direct, qualified",
+   "limitation": "Observed population correlation is positive, but the DBP trajectory changes with age.",
+   "prior": "+",
+   "relation": "SBP <-> DBP"
+  },
+  {
+   "audit_status": "Indirect",
+   "limitation": "The cited equation relates HbA1c to average glucose, whereas the experimental slot is fasting glucose.",
+   "prior": "+",
+   "relation": "Fasting glucose <-> HbA1c"
+  },
+  {
+   "audit_status": "Constructive, indirect",
+   "limitation": "The biomarkers occur jointly in LDL-cholesterol calculations; this is not direct evidence of a general population correlation.",
+   "prior": "+",
+   "relation": "Total cholesterol <-> triglycerides"
+  },
+  {
+   "audit_status": "Indirect",
+   "limitation": "The strongest cited evidence is for BMI--waist association, not weight alone.",
+   "prior": "+",
+   "relation": "Weight -> waist circumference"
+  },
+  {
+   "audit_status": "Mixed",
+   "limitation": "Both reflect renal filtration and an expected ratio is described in renal impairment, but counterevidence reports no useful relation in unselected patients.",
+   "prior": "+",
+   "relation": "BUN <-> creatinine"
+  },
+  {
+   "audit_status": "Conditional",
+   "limitation": "The rule of three is conditional on normal red-cell indices; reported correlations are population-specific.",
+   "prior": "+",
+   "relation": "Hemoglobin <-> hematocrit/RBC"
+  },
+  {
+   "audit_status": "Indirect; scale mismatch",
+   "limitation": "The cited relations are annual or long-term water-balance statements, whereas the experimental constraint is applied at daily resolution.",
+   "prior": "+",
+   "relation": "Precipitation -> discharge"
+  },
+  {
+   "audit_status": "Weak/mixed; scale mismatch",
+   "limitation": "The annual relation is weak, not uniformly negative, and transferred to a daily constraint.",
+   "prior": "-",
+   "relation": "PET -> discharge"
+  }
+ ],
+ "camels_per_relation": {
+  "note": "log1p RMSE; not comparable to the medical settings' sd-normalized RMSE, so reported separately",
+  "relations": {
+   "PET -> discharge": {
+    "audit_status": "Weak/mixed; scale mismatch",
+    "direction": "inert (interval contains zero)",
+    "share_of_both_flip": -0.0031131436996442692,
+    "single_flip_mean_gain": -0.0005735158076245033
+   },
+   "Precipitation -> discharge": {
+    "audit_status": "Indirect; scale mismatch",
+    "direction": "degrades (documented sign is better)",
+    "share_of_both_flip": 1.034301026558881,
+    "single_flip_mean_gain": 0.1905430798589707
+   }
+  }
+ },
+ "endpoint_level": {
+  "content": {
+   "kendall_tau_b": 0.05661385170722978,
+   "ordering_envelope": {
+    "best_ordering": {
+     "Conditional": 5,
+     "Constructive, indirect": 1,
+     "Direct, qualified": 3,
+     "Indirect": 2,
+     "Mixed": 4
+    },
+    "best_tau": 0.5661385170722978,
+    "n_distinct_grades": 5,
+    "n_orderings_tried": 120,
+    "worst_ordering": {
+     "Conditional": 1,
+     "Constructive, indirect": 5,
+     "Direct, qualified": 2,
+     "Indirect": 3,
+     "Mixed": 4
+    },
+    "worst_tau": -0.5661385170722978
+   }
+  },
+  "utility": {
+   "kendall_tau_b": -0.08492077756084468,
+   "ordering_envelope": {
+    "best_ordering": {
+     "Conditional": 2,
+     "Constructive, indirect": 1,
+     "Direct, qualified": 3,
+     "Indirect": 4,
+     "Mixed": 5
+    },
+    "best_tau": 0.3679900360969936,
+    "n_distinct_grades": 5,
+    "n_orderings_tried": 120,
+    "worst_ordering": {
+     "Conditional": 3,
+     "Constructive, indirect": 5,
+     "Direct, qualified": 4,
+     "Indirect": 2,
+     "Mixed": 1
+    },
+    "worst_tau": -0.3679900360969936
+   }
+  }
+ },
+ "grade_rank_scale": {
+  "Conditional": 2,
+  "Constructive, indirect": 3,
+  "Direct, qualified": 5,
+  "Indirect": 4,
+  "Mixed": 1
+ },
+ "metric": "query_sd_normalized_rmse for both medical settings (comparable); CAMELS log1p RMSE reported separately",
+ "relation_level": {
+  "content": {
+   "exact_permutation_p_two_sided": 0.7682539682539683,
+   "kendall_tau_b": 0.15018785229652767,
+   "n_permutations": 5040,
+   "ordering_envelope": {
+    "best_exact_permutation_p_two_sided": 0.12698412698412698,
+    "best_ordering": {
+     "Conditional": 4,
+     "Constructive, indirect": 1,
+     "Direct, qualified": 3,
+     "Indirect": 5,
+     "Mixed": 2
+    },
+    "best_p_is_invalid_because_selected": true,
+    "best_tau": 0.5506887917539348,
+    "n_distinct_grades": 5,
+    "n_orderings_tried": 120,
+    "worst_ordering": {
+     "Conditional": 1,
+     "Constructive, indirect": 5,
+     "Direct, qualified": 2,
+     "Indirect": 3,
+     "Mixed": 4
+    },
+    "worst_tau": -0.5506887917539348
+   },
+   "per_relation_mean": {
+    "Age -> SBP": 0.2525742928491845,
+    "BUN <-> creatinine": 0.2095601630580571,
+    "Fasting glucose <-> HbA1c": 0.15465580521652667,
+    "Hemoglobin <-> hematocrit/RBC": 0.409456844590237,
+    "SBP <-> DBP": 0.24097568522395746,
+    "Total cholesterol <-> triglycerides": 0.030733690391415207,
+    "Weight -> waist circumference": 0.44455097825603385
+   }
+  },
+  "utility": {
+   "exact_permutation_p_two_sided": 0.22857142857142856,
+   "kendall_tau_b": -0.450563556889583,
+   "n_permutations": 5040,
+   "ordering_envelope": {
+    "best_exact_permutation_p_two_sided": 0.007936507936507936,
+    "best_ordering": {
+     "Conditional": 3,
+     "Constructive, indirect": 1,
+     "Direct, qualified": 2,
+     "Indirect": 4,
+     "Mixed": 5
+    },
+    "best_p_is_invalid_because_selected": true,
+    "best_tau": 0.8510644963469901,
+    "n_distinct_grades": 5,
+    "n_orderings_tried": 120,
+    "worst_ordering": {
+     "Conditional": 3,
+     "Constructive, indirect": 4,
+     "Direct, qualified": 5,
+     "Indirect": 2,
+     "Mixed": 1
+    },
+    "worst_tau": -0.8510644963469901
+   },
+   "per_relation_mean": {
+    "Age -> SBP": -0.007957866434509544,
+    "BUN <-> creatinine": 0.00405035305964044,
+    "Fasting glucose <-> HbA1c": 0.0033896588590888884,
+    "Hemoglobin <-> hematocrit/RBC": 0.0005794456500453876,
+    "SBP <-> DBP": -0.0017141802201587647,
+    "Total cholesterol <-> triglycerides": -0.002786465095261581,
+    "Weight -> waist circumference": 0.0016371917286958804
+   }
+  }
+ },
+ "sign_convention": "positive tau = audit grade predicts effect size (stronger external evidence -> larger measured effect)",
+ "status": "post-hoc on frozen data; grade ordering fixed before computing, and reported against its full ordering envelope",
+ "units": [
+  {
+   "audit_status": [
+    "Direct, qualified"
+   ],
+   "content": 0.18318498175378176,
+   "endpoint": "dbp",
+   "grade_ambiguous": false,
+   "grade_rank": 5,
+   "relations": [
+    "SBP <-> DBP"
+   ],
+   "setting": "NHANES-KNHANES",
+   "utility": 0.007164639263761485
+  },
+  {
+   "audit_status": [
+    "Indirect"
+   ],
+   "content": 0.21838216541322825,
+   "endpoint": "glucose",
+   "grade_ambiguous": false,
+   "grade_rank": 4,
+   "relations": [
+    "Fasting glucose <-> HbA1c"
+   ],
+   "setting": "NHANES-KNHANES",
+   "utility": -0.012702482954323713
+  },
+  {
+   "audit_status": [
+    "Direct, qualified"
+   ],
+   "content": 0.19276553453583384,
+   "endpoint": "sbp",
+   "grade_ambiguous": false,
+   "grade_rank": 5,
+   "relations": [
+    "Age -> SBP",
+    "SBP <-> DBP"
+   ],
+   "setting": "NHANES-KNHANES",
+   "utility": -0.0023313535963170096
+  },
+  {
+   "audit_status": [
+    "Constructive, indirect"
+   ],
+   "content": 0.010389203301499218,
+   "endpoint": "total_cholesterol",
+   "grade_ambiguous": false,
+   "grade_rank": 3,
+   "relations": [
+    "Total cholesterol <-> triglycerides"
+   ],
+   "setting": "NHANES-KNHANES",
+   "utility": -0.004384540963212879
+  },
+  {
+   "audit_status": [
+    "Constructive, indirect"
+   ],
+   "content": 0.0510781774813312,
+   "endpoint": "triglycerides",
+   "grade_ambiguous": false,
+   "grade_rank": 3,
+   "relations": [
+    "Total cholesterol <-> triglycerides"
+   ],
+   "setting": "NHANES-KNHANES",
+   "utility": -0.0011883892273102826
+  },
+  {
+   "audit_status": [
+    "Indirect"
+   ],
+   "content": 0.44455097825603385,
+   "endpoint": "waist_cm",
+   "grade_ambiguous": false,
+   "grade_rank": 4,
+   "relations": [
+    "Weight -> waist circumference"
+   ],
+   "setting": "NHANES-KNHANES",
+   "utility": 0.0016371917286958804
+  },
+  {
+   "audit_status": [
+    "Mixed"
+   ],
+   "content": 0.2095601630580571,
+   "endpoint": "bun",
+   "grade_ambiguous": false,
+   "grade_rank": 1,
+   "relations": [
+    "BUN <-> creatinine"
+   ],
+   "setting": "NHANES/KNHANES-HRS",
+   "utility": 0.00405035305964044
+  },
+  {
+   "audit_status": [
+    "Direct, qualified"
+   ],
+   "content": 0.27556917344367915,
+   "endpoint": "dbp",
+   "grade_ambiguous": false,
+   "grade_rank": 5,
+   "relations": [
+    "SBP <-> DBP"
+   ],
+   "setting": "NHANES/KNHANES-HRS",
+   "utility": 0.0018943727246225432
+  },
+  {
+   "audit_status": [
+    "Indirect"
+   ],
+   "content": 0.0681008613115002,
+   "endpoint": "glucose",
+   "grade_ambiguous": false,
+   "grade_rank": 4,
+   "relations": [
+    "Fasting glucose <-> HbA1c"
+   ],
+   "setting": "NHANES/KNHANES-HRS",
+   "utility": 0.003590243500230117
+  },
+  {
+   "audit_status": [
+    "Indirect"
+   ],
+   "content": 0.17748438892485155,
+   "endpoint": "hba1c",
+   "grade_ambiguous": false,
+   "grade_rank": 4,
+   "relations": [
+    "Fasting glucose <-> HbA1c"
+   ],
+   "setting": "NHANES/KNHANES-HRS",
+   "utility": 0.019281216031360262
+  },
+  {
+   "audit_status": [
+    "Conditional"
+   ],
+   "content": 0.5310768687561376,
+   "endpoint": "hematocrit",
+   "grade_ambiguous": false,
+   "grade_rank": 2,
+   "relations": [
+    "Hemoglobin <-> hematocrit/RBC"
+   ],
+   "setting": "NHANES/KNHANES-HRS",
+   "utility": 0.0008464894272987151
+  },
+  {
+   "audit_status": [
+    "Conditional"
+   ],
+   "content": 0.2878368204243364,
+   "endpoint": "rbc",
+   "grade_ambiguous": false,
+   "grade_rank": 2,
+   "relations": [
+    "Hemoglobin <-> hematocrit/RBC"
+   ],
+   "setting": "NHANES/KNHANES-HRS",
+   "utility": 0.00031240187279206005
+  },
+  {
+   "audit_status": [
+    "Direct, qualified"
+   ],
+   "content": 0.3123830511625351,
+   "endpoint": "sbp",
+   "grade_ambiguous": false,
+   "grade_rank": 5,
+   "relations": [
+    "Age -> SBP",
+    "SBP <-> DBP"
+   ],
+   "setting": "NHANES/KNHANES-HRS",
+   "utility": -0.013584379272702079
+  }
+ ]
+}
