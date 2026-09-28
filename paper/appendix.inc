@@ -203,11 +203,10 @@ Realization within family \\
 \end{tabular}
 \end{table}
 
-For the pooled NHANES/KNHANES--HRS relation experiments, the source
-sample is not capped at 4,096 rows.
-All eligible pooled source rows are used, with endpoint-specific source
-sizes of 113,229 (BUN), 122,588 (DBP), 90,060 (glucose), 87,466
-(HbA1c), 58,737 (hematocrit), 126,500 (RBC), and 122,615 (SBP).
+For the pooled NHANES/KNHANES--HRS relation experiments, all eligible
+pooled source rows are used, with endpoint-specific source sizes of
+113,229 (BUN), 122,588 (DBP), 90,060 (glucose), 87,466 (HbA1c),
+58,737 (hematocrit), 126,500 (RBC), and 122,615 (SBP).
 The corresponding HRS eligible totals before the 1/5/10\% labeled-target
 split are 9,853, 26,932, 9,817, 6,486, 9,612, 9,615, and 26,932,
 respectively.
