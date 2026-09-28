@@ -297,7 +297,11 @@ The supplement provides prompts, schemas, validation rules, and execution record
 \label{sec:exp_setup}
 
 Our quantitative evaluation spans three settings summarized in Table~\ref{tab:experimental_settings}: the TabLLM reanalysis, real cross-table transfer, and the controlled benchmark.
-Clinical experiments use NHANES (NH), KNHANES (KN), and HRS \citep{johnson2013nhanes,kweon2014knhanes,sonnega2014hrs}, and hydrological experiments use CAMELS-US and CAMELS-GB \citep{addor2017camels,coxon2020camelsgb}.
+Clinical experiments use NHANES (NH), KNHANES (KN), and HRS
+\citep{johnson2013nhanes,kweon2014knhanes,sonnega2014hrs}.
+Hydrological experiments use CAMELS-US hydrometeorological time series and
+catchment attributes \citep{newman2014camelsdata,addor2017camelsattributes}
+and CAMELS-GB v2 \citep{coxon2025camelsgbv2}.
 Clinical tasks include binary questionnaire endpoints and continuous laboratory or anthropometric endpoints.
 The TabLLM reanalysis examines a semantic ablation in an existing model, while the clinical, hydrological, and controlled experiments evaluate cross-table transfer directly.
 
@@ -328,7 +332,7 @@ AUROC (binary); \newline negative SD-normalized RMSE (continuous) \\
 \addlinespace
 
 Hydrological &
-CAMELS-US to CAMELS-GB; \newline 120 basins (CAMELS-120) &
+CAMELS-US to CAMELS-GB v2; \newline 120 basins (CAMELS-120) &
 XGB &
 Negative log-RMSE \\
 
@@ -615,11 +619,54 @@ Altered controls remain informative: they can show whether prediction depends on
 Our bounded audit shows that this distinction also matters in published practice, where many reported controls do not by themselves isolate the claimed predictive utility.
 These results support claim-matched evaluation: controls should be chosen for the predictive claim they support, with predictive-utility claims requiring a suitable reference and reference sensitivity reported when several are available.
 
+\section*{Data Use and Availability}
+
+This study uses secondary data from NHANES, KNHANES, the Health and
+Retirement Study (HRS), CAMELS-US, CAMELS-GB v2, and the nine public
+tabular benchmark datasets used in the TabLLM reanalysis.
+
+The controlled benchmark uses an eight-variable NHANES panel with source
+cycles from 2001--2002 through 2013--2014 and target data from
+2015--2016, 2017--2018, and the August 2021--August 2023 release; the
+latter is labeled 2023 in our local preprocessing
+\citep{cdcnhanesdata}. The real clinical-transfer experiments use
+separately prepared NHANES and KNHANES inputs, so these cycle ranges
+should not be interpreted as their participant-year ranges.
+
+For KNHANES, the exact raw release and participant-year composition of
+the frozen prepared input could not be fully reconstructed
+\citep{kweon2014knhanes}.
+
+For HRS, the associated preparation chain identifies the RAND HRS
+Longitudinal File 2022 (V1), the 2016 Biomarker Data (Early v1.0), and
+the 2016 Venous Blood Study (Final V3.0)
+\citep{hrs2025randpublic,rand2025hrslong,hrs2020biomarker2016,hrs2025vbs2016};
+exact byte-level lineage from these products to the frozen analysis
+snapshot could not be fully reconstructed.
+
+The hydrological experiments use CAMELS-US hydrometeorological time
+series and catchment attributes
+\citep{newman2014camelsdata,addor2017camelsattributes} and CAMELS-GB v2
+\citep{coxon2025camelsgbv2}.
+
+The accompanying repository does not redistribute participant-level
+clinical source data, model weights, or row-level predictions.
+Data requiring registration or supplemental authorization must be
+obtained independently from the respective providers under their
+applicable terms.
+
 \section*{Reproducibility Statement}
 
-The supplementary material provides the experimental settings, inference procedures, analysis provenance, reference constructions, and robustness analyses required to reproduce the reported comparisons.
-The public repository contains code, frozen semantic records and reference libraries, analysis manifests, environment information, and mappings from reported tables and figures to their generating scripts and outputs.
-Public datasets can be obtained from their original sources; data requiring registration or license, including KNHANES and HRS, are not redistributed, and their access boundaries and reproducible derived outputs are documented in the supplement.
+The supplementary material provides the experimental settings, inference
+procedures, analysis provenance, reference constructions, and robustness
+analyses required to reproduce the reported comparisons.
+The accompanying artifact contains code, frozen semantic records and
+reference libraries, analysis manifests, environment information, and
+mappings from reported tables and figures to their generating scripts
+and outputs.
+Data-access boundaries, product identifiers, provenance limitations, and
+reproducible derived outputs are documented in the supplement and public
+repository.
 
 \section*{AI Use Statement}
 
@@ -630,6 +677,24 @@ Second, generative AI tools were used during research development to provide fee
 They were also used during manuscript preparation for drafting, editing, organization, and formatting.
 All experimental decisions, analyses, numerical results, references, and claims were reviewed and verified by the authors, who take responsibility for the final content of the work.
 Generative AI tools were also used to assist with software organization, validation, and preparation of the supplementary reproducibility artifact; all AI-assisted code and artifact contents were reviewed and verified by the authors.
+
+\section*{Acknowledgments}
+
+This work was supported by the Korean ARPA-H Project through the Korea
+Health Industry Development Institute (KHIDI), funded by the Ministry of
+Health \& Welfare, Republic of Korea (No. RS-2025-25455839).
+
+The HRS (Health and Retirement Study) is sponsored by the National
+Institute on Aging (grant numbers NIA U01AG009740 and NIA R01AG073289);
+the study is conducted at the University of Michigan.
+RAND HRS Data Products are produced by the RAND Center for the Study of
+Aging with support from the National Institute on Aging and the Social
+Security Administration.
+
+Contains data supplied by UK Centre for Ecology \& Hydrology, British
+Geological Survey, Environment Agency, Natural Resources Wales and
+Scottish Environmental Protection Agency.
+
 \bibliography{references_seed}
 \bibliographystyle{iclr2027_conference}
 

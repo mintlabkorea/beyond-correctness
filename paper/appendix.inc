@@ -177,14 +177,14 @@ Endpoint \\
 \midrule
 
 NHANES/\newline KNHANES--HRS &
-4,096 capped source rows; 1/5/10\% labeled target rows &
+All eligible source rows (endpoint-specific); 1/5/10\% labeled target rows &
 XGB &
 300 trees, depth 5, learning rate .05; target weight 10 &
 10 seeds (40--49) per labeled-target fraction &
 Endpoint \\
 \midrule
 
-CAMELS-US--\newline CAMELS-GB &
+CAMELS-US--\newline CAMELS-GB v2 &
 1/3/5 labeled target basins; fixed disjoint query basins &
 XGB &
 300 trees, depth 6, learning rate .05; log-target regression; target weight 10 &
@@ -202,6 +202,16 @@ Realization within family \\
 \bottomrule
 \end{tabular}
 \end{table}
+
+For the pooled NHANES/KNHANES--HRS relation experiments, the source
+sample is not capped at 4,096 rows.
+All eligible pooled source rows are used, with endpoint-specific source
+sizes of 113,229 (BUN), 122,588 (DBP), 90,060 (glucose), 87,466
+(HbA1c), 58,737 (hematocrit), 126,500 (RBC), and 122,615 (SBP).
+The corresponding HRS eligible totals before the 1/5/10\% labeled-target
+split are 9,853, 26,932, 9,817, 6,486, 9,612, 9,615, and 26,932,
+respectively.
+
 Model-specific procedures for the retrospective TabLLM experiments and the
 TransTab/CARTE learner-coverage extensions are reported in
 Sections~\ref{sec:app-tabllm-reproduction} and
@@ -285,11 +295,37 @@ TabLLM reference-space audit
 \end{tabular}
 \end{table}
 
+\paragraph{Data products and provenance.}
+
+The controlled benchmark and the real clinical-transfer experiments use
+separate NHANES preparation paths; the controlled-benchmark cycle ranges
+therefore do not describe the real-transfer input.
+
+For KNHANES, linked metadata cover 1998, 2001, 2005, and 2007--2015,
+but the exact raw release and participant-year composition of the frozen
+prepared input could not be fully reconstructed.
+
+For HRS, the associated preparation chain identifies the RAND HRS
+Longitudinal File 2022 (V1), the 2016 Biomarker Data (Early v1.0), and
+the 2016 Venous Blood Study (Final V3.0), but exact byte-level lineage
+from these products to the frozen analysis snapshot could not be fully
+reconstructed. The associated HRS preparation selects variable-specific
+latest available values, so the HRS features and endpoints should not be
+interpreted as measurements from a single visit.
+
+The hydrological experiments use CAMELS-US hydrometeorological time
+series and catchment attributes and CAMELS-GB v2 over the evaluated
+period 1981-01-01 through 2008-09-30.
+
 \subsection{Controlled benchmark construction}
 
 \paragraph{Data and outcomes.}
-The controlled benchmark uses an eight-feature NHANES panel while preserving the observed feature values and missingness patterns.
-Source participants are drawn from the 2001--2014 cycles and target participants from the 2015--2018 and 2023 cycles, with no participant overlap between the two groups.
+The controlled benchmark uses an eight-feature NHANES panel while
+preserving the observed feature values and missingness patterns.
+Source participants are drawn from the 2001--2002 through 2013--2014
+cycles and target participants from 2015--2016, 2017--2018, and the
+August 2021--August 2023 release, which is labeled 2023 in local
+preprocessing, with no participant overlap between the two groups.
 
 Missing entries are filled only for synthetic-outcome construction using draws based on the observed source distribution; the learner continues to receive the original inputs with their original missingness.
 

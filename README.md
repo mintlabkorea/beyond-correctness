@@ -1,5 +1,8 @@
 # Beyond Correctness: Evaluating Semantic Knowledge in Cross-Table Transfer
 
+> **Data provenance update (2026-09-28):**
+> See [DATA_PROVENANCE_CORRECTIONS.md](DATA_PROVENANCE_CORRECTIONS.md).
+
 Code and reproducibility artifacts for the paper by **Seokyong Sheem, Hochang Lee, Suyeong Lee, and Daekyum Kim**.
 
 Semantic-content sensitivity and predictive utility answer different questions. This repository provides experiment and analysis code, frozen aggregate results, semantic records, the 24-reference library, and the human audit of 25 comparisons across nine studies.
